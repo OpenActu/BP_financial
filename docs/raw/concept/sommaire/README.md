@@ -1,6 +1,6 @@
-# Concepts — les mathématiques derrière `historique_sbf250.py`
+# Concepts — les mathématiques derrière `import_societe.py`
 
-Cinq cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
+Huit cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
 répondent, dans l'ordre, aux questions que pose une droite de régression tracée sur une série de
 cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
@@ -10,19 +10,27 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Comment **dérive**-t-on et **intègre**-t-on ces quantités ? | [Analyse](analyse.md) | 20 h |
 | Le résultat est-il **réel**, ou du hasard d'échantillonnage ? | [Statistique](statistique.md) | 56 h |
 | Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../finance/README.md) | 12 h 15 |
+| De combien le cours **s'écarte**-t-il de sa tendance ? | [Canal de régression](../canal/README.md) | 6 h |
+| Entre quelles **bornes** le cours évolue-t-il ? | [Encadrement](../encadrement/README.md) | 4 h |
+| Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../alpha/README.md) | 5 h |
 
 ## Arborescence
 
 ```
-investissement/
+concept/
 ├── sommaire/                            les index
 │   ├── README.md                        ← ce fichier
 │   ├── analyse.md                       sommaire de la partie analyse
 │   └── statistique.md                   sommaire de la partie statistique
 │
-├── modele/                              le document de référence : variance résiduelle minimale
-│   ├── modele.md                        énoncé, théorème et plan de la preuve
-│   └── 01..09-*.md                      une page par étape de la démonstration
+├── modele/                              la démonstration : variance résiduelle minimale
+│   └── 01..09-*.md                      une page par étape (l'énoncé est dans docs/raw/modele.md)
+│
+├── canal/                               6 modules — largeurs, levier, sorties, canal glissant
+│
+├── encadrement/                         4 modules — enveloppe convexe, portée, segmentation
+│
+├── alpha/                               5 modules — modèle de marché, horizon de mesure, pièges
 │
 ├── algebre/                             8 modules — produit scalaire, projection, dimension
 │
