@@ -1,6 +1,6 @@
 # Variance résiduelle minimale de la régression linéaire simple
 
-Document de référence du dépôt : il démontre ce que calcule `historique_sbf250.py` (colonnes
+Document de référence du dépôt : il démontre ce que calcule `import_societe.py` (colonnes
 `E_20`, `VAR_20`, `CORR_20`, `VAL_20`), puis en tire un test de tendance.
 
 La démonstration est découpée en **neuf pages, une par étape** ; cette page porte l'énoncé, les
@@ -61,6 +61,12 @@ La minimisation se fait en deux temps : $$\min_{v_0,r} S(v_0,r) \;=\; \min_r\Big
 | [Dérivation et intégration](concept/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) | Les équations normales $\hat\beta=(X^\top X)^{-1}X^\top y$, Hessienne comprise |
 | [Algèbre linéaire](concept/algebre/04-projection-orthogonale.md) | La projection orthogonale et Pythagore, derrière la lecture géométrique de l'étape 5 |
 | [Loi de Student](concept/statistique/loi-de-student/07-student-en-regression.md) | La loi exacte de la statistique de l'étape 8 |
+
+## Ce que cette preuve alimente
+
+| Cours | Ce qu'il en fait |
+|---|---|
+| [Canal de régression](concept/canal/README.md) | Reprend la droite de l'étape 7 et exploite ce qu'elle laisse de côté — **les résidus** : trois conventions de largeur, l'épaisseur variable due au levier, le comptage des sorties sous $H_0$, le canal glissant |
 
 ---
 

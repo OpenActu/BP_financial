@@ -148,7 +148,7 @@ pip install numpy matplotlib yfinance
 
 Les simulations n'utilisent que `numpy` (la fonction de répartition normale est écrite à la main
 avec `math.erf`) ; `yfinance` sert uniquement au module 1, pour alimenter le cours avec vos
-propres données via [`historique_sbf250.py`](../../../../../historique_sbf250.py).
+propres données via [`import_societe.py`](../../../../python/import_societe.py).
 
 **Tous les tableaux numériques de ce cours ont été produits par le code qui les accompagne.**
 
