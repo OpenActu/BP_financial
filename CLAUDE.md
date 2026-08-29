@@ -8,16 +8,35 @@ Répondre à l'utilisateur en français. Cela s'applique à tous les échanges (
 
 ## Overview
 
-Single-file Python utility (`historique_sbf250.py`) that fetches stock price history for SBF 250 (Paris stock exchange) companies via Yahoo Finance using the `yfinance` library. CLI-driven, no package structure, no tests.
+Single-file Python utility (`python/historique_sbf250.py`) that fetches stock price history for SBF 250 (Paris stock exchange) companies via Yahoo Finance using the `yfinance` library. CLI-driven, no package structure, no tests.
 
 User-facing messages and CLI help are in French — keep that convention in any edits. Paris tickers carry the `.PA` suffix (e.g. `AIR.PA`, `MC.PA`).
+
+## Règle : miroir Markdown des scripts Python
+
+Tout fichier `.py` doit être accompagné d'un fichier `.md` **du même nom**, placé
+à côté de lui (ex. `python/historique_sbf250.py` ⇔ `python/historique_sbf250.md`).
+
+Ce markdown est le **miroir de l'exécution** du script : il décrit, dans l'ordre
+du déroulement, ce que le script fait réellement — arguments CLI et valeurs par
+défaut, étapes de traitement, formules exactes, colonnes produites, affichage
+console, fichiers écrits, codes de sortie, cas limites. Il décrit le
+comportement, pas le code.
+
+Le markdown fait autorité : lorsqu'une évolution demande un arbitrage (nom d'une
+colonne ou d'un argument, valeur par défaut, gestion des `NaN`, format de sortie,
+comportement en cas d'erreur…), **mettre le markdown à jour d'abord**, puis
+aligner le script dessus. Jamais l'inverse.
+
+La skill `/python-sync` détecte les markdown modifiés et répercute les
+changements dans les scripts correspondants.
 
 ## Setup & run
 
 ```bash
 pip install yfinance
-python historique_sbf250.py AIR.PA --periode 5y
-python historique_sbf250.py AIR.PA --debut 2023-01-01 --fin 2023-12-31 --csv airbus.csv
+python python/historique_sbf250.py AIR.PA --periode 5y
+python python/historique_sbf250.py AIR.PA --debut 2023-01-01 --fin 2023-12-31 --csv airbus.csv
 ```
 
 Running with no ticker argument drops into an interactive prompt.
