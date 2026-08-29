@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Obsidian (état local du coffre)
+**/.obsidian/workspace.json
+
+# Divers
+.DS_Store
