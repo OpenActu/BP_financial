@@ -277,7 +277,7 @@ doit-il être **fait avant** de voir les données ?
 **E5.4.** Reprendre E5.3 et calculer la puissance du test bilatéral pour détecter un écart réel
 de 4 g. Combien de paquets faudrait-il pour atteindre 90 % de puissance ?
 
-**E5.5 — orientée finance.** Avec `historique_sbf250.py`, extraire les rendements mensuels d'un
+**E5.5 — orientée finance.** Avec `import_societe.py`, extraire les rendements mensuels d'un
 titre sur 5 ans ($n=60$). Tester $H_0$ : rendement moyen nul. Donner l'IC. Puis répondre : sur
 combien d'années faudrait-il observer ce titre pour détecter une surperformance annuelle réelle
 de 3 % ? *(L'ordre de grandeur obtenu — plusieurs décennies — est le vrai enseignement de

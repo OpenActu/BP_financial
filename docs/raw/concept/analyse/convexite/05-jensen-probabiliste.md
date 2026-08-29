@@ -143,7 +143,7 @@ $c_4(n)=\sqrt{\frac{2}{n-1}}\cdot\frac{\Gamma(n/2)}{\Gamma((n-1)/2)}$ :
 > prudent du tout), mais il est **petit** dès que $n$ dépasse quelques dizaines.
 
 ⚠️ **Sur une volatilité annualisée à partir de 20 séances** ($n=20$, cas de la colonne `VAR_20` de
-`historique_sbf250.py`), le biais est de $-1{,}3\,\%$ environ. Il s'ajoute au fait, bien plus
+`import_societe.py`), le biais est de $-1{,}3\,\%$ environ. Il s'ajoute au fait, bien plus
 grave, que l'annualisation par $\sqrt{252}$ suppose l'indépendance
 ([module 14 de statistique](../../statistique/mathematique/14-dependance-et-echec-du-tcl.md)).
 
@@ -285,7 +285,7 @@ $\{x_1,\dots,x_n\}$. *Que constate-t-on sur le lien entre les modules 4 et 5 ?*
 multiplié par 2,3. Ces deux affirmations sont-elles compatibles ? *Calculer la volatilité annuelle
 implicite par le drag.*
 
-**E5.6 — orientée finance.** Avec `historique_sbf250.py` :
+**E5.6 — orientée finance.** Avec `import_societe.py` :
 1. estimer $\mu$ et $\sigma$ quotidiens sur 5 ans ;
 2. prédire la performance totale par $(1+\mu)^n$, puis par $e^{n(\mu-\sigma^2/2)}$ ;
 3. comparer à la performance réellement observée. *Laquelle des deux formules tombe juste, et

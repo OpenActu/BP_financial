@@ -288,7 +288,7 @@ convexe. *Combien de contraintes convexes y a-t-il empilées, et quelle proprié
 [§ 1.3](01-ensembles-convexes.md) autorise l'empilement ?*
 
 **E7.7 — orientée finance.** Construire $\Sigma$ sur 5 titres du SBF 250 avec
-`historique_sbf250.py`, calculer $w^\star$, et vérifier : (a) que $\Sigma\succeq0$ ; (b) que
+`import_societe.py`, calculer $w^\star$, et vérifier : (a) que $\Sigma\succeq0$ ; (b) que
 $\sigma(w^\star)$ est inférieur à la moyenne pondérée des $\sigma_i$ ; (c) si $w^\star$ contient
 des poids négatifs — et ce que cela signifie.
 

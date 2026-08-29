@@ -137,7 +137,7 @@ mémoriser : $\rho=1\to 0°$, $\rho=0\to 90°$, $\rho=-1\to 180°$, et $\rho=0{,
 **E7.1.** Démontrer chaque ligne du dictionnaire du § 7.2 à partir des définitions statistiques
 usuelles. *Aucune ne demande plus de deux lignes.*
 
-**E7.2 — orientée finance.** Le script `historique_sbf250.py` calcule `CORR_20`, corrélation
+**E7.2 — orientée finance.** Le script `import_societe.py` calcule `CORR_20`, corrélation
 glissante entre la colonne `Close` et le compteur `INDICE` sur 20 séances.
 1. Montrer que `CORR_20` est le **cosinus de l'angle** entre le vecteur des 20 cours **centrés**
    et le vecteur $(1,\dots,20)$ **centré**.

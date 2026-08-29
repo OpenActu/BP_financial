@@ -6,7 +6,7 @@ Niveau **bac+2**.
 
 ## Pourquoi ce cours dans ce dépôt
 
-Le document [`modele.md`](../../../modele.md) et le script `historique_sbf250.py` produisent des
+Le document [`modele.md`](../../../modele.md) et le script `import_societe.py` produisent des
 quantités purement **descriptives** : une moyenne, une variance, une corrélation, une pente. Le
 [cours d'algèbre linéaire](../../algebre/README.md) montre que ce sont des objets **géométriques**,
 vrais sur n'importe quels $n$ points.

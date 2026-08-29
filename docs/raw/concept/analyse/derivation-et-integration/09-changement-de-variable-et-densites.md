@@ -280,7 +280,7 @@ quelle affirmation du [§ 9.4 de statistique](../../statistique/mathematique/09-
 justifie-t-il ?*
 
 **E9.6.** Démontrer la PIT, puis l'utiliser pour construire un test graphique de normalité sur
-une série de rendements obtenue avec `historique_sbf250.py`. *(Tracer $F(x_i)$ trié contre
+une série de rendements obtenue avec `import_societe.py`. *(Tracer $F(x_i)$ trié contre
 $i/n$ : la droite $y=x$ est l'hypothèse.)*
 
 **E9.7.** Montrer que $(X,Y)$ de Box–Muller sont **indépendantes**, en constatant que la densité

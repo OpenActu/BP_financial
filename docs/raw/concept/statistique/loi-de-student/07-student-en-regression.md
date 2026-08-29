@@ -414,7 +414,7 @@ statistique $F$ du tableau d'ANOVA **est** le carré de la statistique de Studen
 **E7.5.** Reprendre l'exemple du § 7.8 en ajoutant une 12ᵉ observation $V_{12}=11{,}5$.
 Recalculer $t$, $p$ et l'IC. La conclusion se renforce-t-elle ? De combien l'IC se resserre-t-il ?
 
-**E7.6 — orientée finance.** Sur un cours de clôture du SBF 250 (via `historique_sbf250.py`),
+**E7.6 — orientée finance.** Sur un cours de clôture du SBF 250 (via `import_societe.py`),
 appliquer ce test de tendance sur des fenêtres de 20, 60 et 250 séances. Combien de fenêtres sont
 « significatives » à 5 % ?
 

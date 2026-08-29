@@ -276,7 +276,7 @@ défaut : (a) températures quotidiennes d'une même ville ; (b) tailles d'élè
 terminale mélangés ; (c) résultats de 100 lancers d'une même pièce ; (d) cours de clôture d'une
 action.
 
-**E1.7 — orientée finance.** Sur une série obtenue avec `historique_sbf250.py` :
+**E1.7 — orientée finance.** Sur une série obtenue avec `import_societe.py` :
 1. tracer la fonction de répartition empirique des rendements quotidiens ;
 2. la comparer à celle d'une normale de mêmes espérance et écart-type ;
 3. lire sur le graphique le quantile d'ordre $0{,}01$ — la VaR à 99 % — dans les deux cas.

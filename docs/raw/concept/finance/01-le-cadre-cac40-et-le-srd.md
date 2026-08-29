@@ -21,7 +21,7 @@ de ces frottements ; ce module dit lesquels.
 
 ## 1.1 L'univers : ce que le script télécharge
 
-`historique_sbf250.py` récupère des cours de clôture ajustés pour des tickers `.PA`. Trois
+`import_societe.py` récupère des cours de clôture ajustés pour des tickers `.PA`. Trois
 remarques, dont deux coûtent de l'argent.
 
 | Point                                                                                                                | Conséquence                                                                                                                                                                       |

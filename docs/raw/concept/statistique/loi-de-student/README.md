@@ -91,7 +91,7 @@ ce cours-ci les utilise sans les redémontrer :
 ## Outillage
 
 R (`t.test`, `lm`, `qt`) ou Python (`scipy.stats`, `statsmodels`). Les corrigés de ce cours sont
-en **Python**, pour rester cohérents avec `historique_sbf250.py`.
+en **Python**, pour rester cohérents avec `import_societe.py`.
 
 ```bash
 pip install numpy scipy statsmodels matplotlib

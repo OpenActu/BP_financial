@@ -384,7 +384,7 @@ $\rho$ minimal possible pour $p$ actifs.* **(Réponse : $\rho\sigma^2$, et $\rho
 $p>n-1$ ? *(Piste : $\dim H$.) Quelle conséquence pour une régression à plus de prédicteurs que
 d'observations ?*
 
-**E8.9 — orientée finance.** À partir de trois séries obtenues avec `historique_sbf250.py` :
+**E8.9 — orientée finance.** À partir de trois séries obtenues avec `import_societe.py` :
 1. construire $\Sigma$ et $R$ à la main par produits scalaires, et vérifier avec `np.cov` /
    `np.corrcoef` ;
 2. vérifier que les valeurs propres de $R$ sont toutes positives ;

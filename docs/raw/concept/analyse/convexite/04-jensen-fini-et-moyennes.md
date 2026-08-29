@@ -215,7 +215,7 @@ est un problème convexe, alors que « au plus $k$ variables non nulles » ne l'
 [E1.5](01-ensembles-convexes.md).)*
 
 **E4.6 — orientée finance.** Sur une série de rendements quotidiens obtenue avec
-`historique_sbf250.py` :
+`import_societe.py` :
 1. calculer AM et GM des facteurs $1+r_t$ et vérifier l'ordre ;
 2. comparer $\text{GM}^n$ au rapport $P_{\text{fin}}/P_{\text{début}}$ — que constatez-vous ?
 3. vérifier que $\log(\text{AM})-\log(\text{GM})\approx\hat\sigma^2/2$.

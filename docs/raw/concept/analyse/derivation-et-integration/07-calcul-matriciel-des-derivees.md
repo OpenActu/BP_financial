@@ -280,7 +280,7 @@ déduire $\frac{\partial}{\partial A}\big(x^{\top}A^{-1}x\big)$.*
 Calculer le gradient, résoudre, et montrer que la solution existe **même si $X^{\top}X$ est
 singulière**. *Quelle propriété de la Hessienne a été achetée par le terme en $\lambda$ ?*
 
-**E7.7 — orientée finance.** Avec `historique_sbf250.py`, construire $X=[\mathbf 1\ \ t]$ sur une
+**E7.7 — orientée finance.** Avec `import_societe.py`, construire $X=[\mathbf 1\ \ t]$ sur une
 série de prix, calculer $\hat\beta$ par la formule matricielle, et comparer aux
 $v_{0,\min}$ et $r_{\min}$ de [`modele.md`](../../../modele.md).
 

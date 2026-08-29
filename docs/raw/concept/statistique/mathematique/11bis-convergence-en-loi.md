@@ -542,7 +542,7 @@ mise en garde d'une phrase sur l'estimation d'une variance asymptotique.*
    correction de continuité. Commenter les trois chiffres à la lumière du § 11bis.9.
 3. La direction demande le quantile à 99,9 %. Que répondez-vous, et avec quelle réserve ?
 
-**E11bis.7 — orientée finance.** Sur une série obtenue avec `historique_sbf250.py` :
+**E11bis.7 — orientée finance.** Sur une série obtenue avec `import_societe.py` :
 1. compter les séances de baisse supérieure à 3 % par mois, et ajuster une $\mathcal P(\lambda)$ ;
 2. tester la signature $E=\operatorname{Var}$ ([§ 6c.3](06c-loi-de-poisson.md)) ;
 3. si elle échoue, dire laquelle des hypothèses de la limite binomiale $\to$ Poisson est

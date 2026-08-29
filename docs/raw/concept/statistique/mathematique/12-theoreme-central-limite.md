@@ -343,7 +343,7 @@ lourde de mêmes moyenne et variance ne convergent pas à la même vitesse. *Que
 de l'énoncé, fait la différence ?*
 
 **E12.6 — orientée finance.** Sur une série de rendements quotidiens obtenue avec
-`historique_sbf250.py` :
+`import_societe.py` :
 1. tracer l'histogramme des rendements, puis celui des moyennes sur 5, 20 et 60 séances ;
 2. estimer l'asymétrie et le kurtosis de chacun, et vérifier la règle en $1/\sqrt n$ ;
 3. dire lequel des deux histogrammes le TCL prétend normaliser.

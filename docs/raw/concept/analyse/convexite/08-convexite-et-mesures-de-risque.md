@@ -288,7 +288,7 @@ en ES est **toujours** plus contraignante qu'à VaR égale.
 **E8.6.** Vérifier la formule de Rockafellar–Uryasev à la main sur la loi discrète du § 8.3 : poser
 $\tau$ variable, calculer l'objectif pour $\tau\in\{0,50,100\}$, et constater où est le minimum.
 
-**E8.7 — orientée finance.** Sur une série de rendements obtenue avec `historique_sbf250.py` :
+**E8.7 — orientée finance.** Sur une série de rendements obtenue avec `import_societe.py` :
 1. estimer VaR et ES empiriques à $95\,\%$ et $99\,\%$ ;
 2. comparer avec les valeurs **gaussiennes** $\mu+z_\alpha\sigma$ ;
 3. quel est le sens de l'écart, et lequel des deux modules — [13](../../statistique/mathematique/13-portee-et-limites-du-tcl.md)

@@ -46,7 +46,7 @@ Ce modèle **produit** la corrélation au lieu de la postuler : $\rho_{ij}=\beta
 > ⚠️ **Ces $\beta$ et ces $\sigma$ sont des ordres de grandeur plausibles, pas des mesures.**
 > Aucun cours n'a été téléchargé pour les produire. La simulation
 > [S10.1](#1010-simulation) montre comment les remplacer par les vôtres via
-> `historique_sbf250.py` ; le [§ 10.9](#109-réserves) dit ce qui change quand on le fait.
+> `import_societe.py` ; le [§ 10.9](#109-réserves) dit ce qui change quand on le fait.
 > Les $\mu_i$, eux, sont **construits** par le MEDAF — ce n'est pas une prévision, c'est une
 > hypothèse de neutralité assumée, dont le § 10.4 montre l'effet radical.
 

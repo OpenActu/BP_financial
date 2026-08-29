@@ -6,12 +6,12 @@ Dépendance :
     pip install yfinance
 
 Utilisation :
-    python python/historique_sbf250.py                       # mode interactif
-    python python/historique_sbf250.py AIR.PA                 # ticker Yahoo Finance
-    python python/historique_sbf250.py AIR.PA --periode 5y    # période
-    python python/historique_sbf250.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
-    python python/historique_sbf250.py AIR.PA --csv airbus.csv
-    python python/historique_sbf250.py AIR.PA --alpha 0.01  # test plus exigeant
+    python python/import_societe.py                       # mode interactif
+    python python/import_societe.py AIR.PA                # ticker Yahoo Finance
+    python python/import_societe.py AIR.PA --periode 5y   # période
+    python python/import_societe.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
+    python python/import_societe.py AIR.PA --csv airbus.csv
+    python python/import_societe.py AIR.PA --alpha 0.01   # test plus exigeant
 
 L'historique est toujours enregistré en CSV. Sans --csv, le fichier
 est écrit dans docs/raw/quotes/, sous un nom dérivé du ticker et de la
@@ -187,16 +187,6 @@ def main():
             significatif & (rho < 0)
         ).astype(int)
 
-    hist["CURR"] = 100.0 * hist["Close"] / hist["Close"].iloc[0]
-
-    ratio = hist["Close"] / hist["Close"].shift(1)
-    # Investi si la référence longue passe sous la courte ET si le test de
-    # tendance de la fenêtre courte rejette H0 dans le sens haussier.
-    achete = (hist["VAL_120"] < hist["VAL_20"]) & (hist["TEND_20"] == 1)
-    multiplicateur = ratio.where(achete, 1.0)
-    multiplicateur.iloc[0] = 1.0
-    hist["BUY_120"] = 100.0 * multiplicateur.cumprod()
-
     cols = [
         c
         for c in [
@@ -220,8 +210,6 @@ def main():
             "T_120",
             "P_120",
             "TEND_120",
-            "CURR",
-            "BUY_120",
         ]
         if c in hist.columns
     ]

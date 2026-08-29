@@ -83,7 +83,7 @@ arbitrages tranchés et comment, écarts laissés de côté et pourquoi.
 
 ## Format attendu d'un markdown miroir
 
-Reprendre la structure de `python/historique_sbf250.md` :
+Reprendre la structure de `python/import_societe.md` :
 
 1. Titre `# <nom>.py — miroir d'exécution` et rôle en une ou deux phrases.
 2. Dépendances.

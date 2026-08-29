@@ -158,7 +158,7 @@ grand alors que la dépendance forte est « aggravée ». *Relier au tableau du 
 marche aléatoire ? *(Piste : $\operatorname{Cov}(V_i,V_j)=\sigma^2\min(i,j)$ — elle ne décroît
 même pas.)*
 
-**E14.6 — orientée finance.** Sur une série obtenue avec `historique_sbf250.py` :
+**E14.6 — orientée finance.** Sur une série obtenue avec `import_societe.py` :
 1. estimer l'autocorrélation d'ordre 1 des **rendements**, en déduire $n_{\text{eff}}$ pour un an
    de données ;
 2. refaire l'estimation sur les **prix** (colonne `Close` brute) ;

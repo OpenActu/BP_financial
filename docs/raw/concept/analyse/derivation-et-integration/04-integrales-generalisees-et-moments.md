@@ -220,7 +220,7 @@ $\Gamma$ après le changement de variable $u=x/2$.
 **E4.5.** Pour une loi de Pareto de densité $f(x)=\frac{\alpha}{x^{\alpha+1}}$ sur $[1,+\infty[$,
 calculer $E(X)$ et $E(X^2)$ **quand ils existent**, et retrouver la règle $p<\alpha$.
 
-**E4.6 — orientée finance.** Sur une série de rendements obtenue avec `historique_sbf250.py` :
+**E4.6 — orientée finance.** Sur une série de rendements obtenue avec `import_societe.py` :
 1. tracer $\frac1n\sum_{i\le n}r_i^2$ en fonction de $n$ ;
 2. la courbe se stabilise-t-elle ? Comparer avec la même courbe sur des tirages gaussiens de même
    écart type ;

@@ -263,7 +263,7 @@ croissante. *Pourquoi cette invariance est-elle indispensable pour comparer deux
 ([§ 7.4](07-loi-normale-et-ses-transformees.md)). *Que vaut son kurtosis excédentaire ?*
 
 **E3.7 — orientée finance.** Sur les rendements quotidiens d'un titre obtenus avec
-`historique_sbf250.py` :
+`import_societe.py` :
 1. estimer $\gamma_1$ et $\beta_2$ ;
 2. comparer aux valeurs gaussiennes (0 et 3) ;
 3. calculer la proportion de jours à plus de 3 écarts-types, et la comparer à la valeur

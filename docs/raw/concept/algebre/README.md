@@ -7,7 +7,7 @@ n'y intervient.
 ## Pourquoi ce cours dans ce dépôt
 
 Toutes les quantités manipulées par [`modele.md`](../../modele.md) et par
-`historique_sbf250.py` — moyenne, variance, covariance, corrélation — sont des **objets
+`import_societe.py` — moyenne, variance, covariance, corrélation — sont des **objets
 géométriques déguisés** :
 
 | Ce que le code calcule | Ce que c'est réellement |

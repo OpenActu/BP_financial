@@ -178,7 +178,7 @@ couverture bilatérale masque des erreurs qui se compensent — voir
 [module 13 du cours de statistique](../mathematique/13-portee-et-limites-du-tcl.md), § 9.2.
 
 **E1.4 — orientée finance.** Prendre une série de rendements quotidiens (via
-`historique_sbf250.py`) et calculer, sur des fenêtres glissantes de 5, 20 et 60 séances, le
+`import_societe.py`) et calculer, sur des fenêtres glissantes de 5, 20 et 60 séances, le
 rapport $\bar X/(S/\sqrt n)$. Sur quelle fenêtre l'écart entre quantile normal et quantile de
 Student change-t-il matériellement la conclusion ?
 

@@ -267,7 +267,7 @@ la démonstration exacte du [§ 2.1 du cours d'algèbre](../../algebre/02-cauchy
 **E4.7.** Une corrélation vaut $0{,}7$. Quelle **part de la variance** est expliquée ? Quel angle
 géométrique cela représente-t-il ? *(Réponses : $49\,\%$ et $45{,}6°$.)*
 
-**E4.8 — orientée finance.** Sur trois séries obtenues avec `historique_sbf250.py` :
+**E4.8 — orientée finance.** Sur trois séries obtenues avec `import_societe.py` :
 1. calculer $\Sigma$ et la matrice de corrélation des rendements quotidiens ;
 2. calculer la volatilité du portefeuille équipondéré par $w^{\top}\Sigma w$, et la comparer à la
    moyenne des volatilités individuelles ;

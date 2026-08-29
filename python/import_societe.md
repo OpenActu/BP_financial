@@ -1,6 +1,6 @@
-# historique_sbf250.py — miroir d'exécution
+# import_societe.py — miroir d'exécution
 
-Ce document décrit **exactement** ce que fait `historique_sbf250.py`, étape par
+Ce document décrit **exactement** ce que fait `import_societe.py`, étape par
 étape, dans l'ordre du déroulement. Il fait autorité : toute évolution du script
 doit d'abord être décrite ici (voir `/python-sync`).
 
@@ -18,12 +18,12 @@ Student), afficher un résumé en console et enregistrer le tout en CSV.
 ## Invocation
 
 ```bash
-python python/historique_sbf250.py                       # mode interactif
-python python/historique_sbf250.py AIR.PA
-python python/historique_sbf250.py AIR.PA --periode 5y
-python python/historique_sbf250.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
-python python/historique_sbf250.py AIR.PA --csv airbus.csv
-python python/historique_sbf250.py AIR.PA --alpha 0.01        # test plus exigeant
+python python/import_societe.py                           # mode interactif
+python python/import_societe.py AIR.PA
+python python/import_societe.py AIR.PA --periode 5y
+python python/import_societe.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
+python python/import_societe.py AIR.PA --csv airbus.csv
+python python/import_societe.py AIR.PA --alpha 0.01       # test plus exigeant
 ```
 
 ### Arguments
@@ -150,34 +150,7 @@ chaque fenêtre sont `NaN` pour `T_n` et `P_n` ; `TEND_n` y vaut `0`.
 > le seuil nominal (§ *Portée et limites* de l'étape 8). `TEND_n` est un
 > indicateur descriptif, pas un test valide de la tendance d'un cours.
 
-### 5. Colonne `CURR` — buy & hold, base 100
-
-`CURR = 100 · Close / Close[première séance]`.
-Performance d'une détention passive depuis le début de la période, base 100.
-
-### 6. Colonne `BUY_120` — backtest de la stratégie, base 100
-
-1. `ratio = Close / Close.shift(1)` — rendement brut d'une séance à l'autre.
-2. `achete = (VAL_120 < VAL_20) & (TEND_20 == 1)` — on est investi une séance
-   donnée si **les deux** conditions sont réunies :
-   - la valeur de référence longue passe sous la valeur de référence courte
-     (tendance courte plus favorable que la tendance longue) ;
-   - le test de tendance sur la fenêtre courte rejette $H_0$ **dans le sens
-     haussier** au seuil `alpha` (cf. `TEND_20`, étape 4).
-3. `multiplicateur = ratio` si `achete`, sinon `1.0` (hors marché : capital figé).
-4. `multiplicateur[première séance] = 1.0`.
-5. `BUY_120 = 100 · cumprod(multiplicateur)`.
-
-Le filtre de significativité écarte les séances où la configuration
-`VAL_120 < VAL_20` n'est pas adossée à une tendance courte statistiquement
-distinguable du bruit. Il rend donc la stratégie **dépendante de `--alpha`** :
-un seuil plus exigeant réduit mécaniquement le nombre de séances investies.
-
-Tant que `VAL_120` est `NaN` (les 119 premières séances), la comparaison est
-fausse ; `TEND_20` y vaut `0` sur les 19 premières. Dans les deux cas le capital
-reste hors marché, à 100.
-
-### 7. Affichage console
+### 5. Affichage console
 
 Dans l'ordre :
 
@@ -196,12 +169,11 @@ Variation        : {+/- x.xx} %
 Colonnes affichées (celles réellement présentes, dans cet ordre) :
 `INDICE`, `Open`, `High`, `Low`, `Close`, `Volume`,
 `E_20`, `VAR_20`, `CORR_20`, `VAL_20`, `T_20`, `P_20`, `TEND_20`,
-`E_120`, `VAR_120`, `CORR_120`, `VAL_120`, `T_120`, `P_120`, `TEND_120`,
-`CURR`, `BUY_120`.
+`E_120`, `VAR_120`, `CORR_120`, `VAL_120`, `T_120`, `P_120`, `TEND_120`.
 
 `Variation` = `(Close[-1] / Close[0] - 1) · 100`.
 
-### 8. Export CSV
+### 6. Export CSV
 
 L'export est **toujours** effectué.
 
@@ -221,10 +193,10 @@ sorties régénérables, pas des sources.
 
 ## Codes de sortie
 
-| Code | Cause |
-|---|---|
-| `0` | Exécution complète, CSV écrit. |
-| `1` | Aucun ticker fourni, ou échec de récupération (ticker inconnu, période vide, erreur réseau). |
+| Code | Cause                                                                                        |
+| ---- | -------------------------------------------------------------------------------------------- |
+| `0`  | Exécution complète, CSV écrit.                                                               |
+| `1`  | Aucun ticker fourni, ou échec de récupération (ticker inconnu, période vide, erreur réseau). |
 
 ## Fonctions internes
 
