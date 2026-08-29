@@ -216,6 +216,9 @@ non arrondies, l'index de dates en première colonne, les `NaN` en cellules vide
 
 Dernière ligne affichée : `Historique enregistré dans : {chemin}`.
 
+`docs/raw/quotes/` est exclu du suivi git (`.gitignore`) : les CSV sont des
+sorties régénérables, pas des sources.
+
 ## Codes de sortie
 
 | Code | Cause |

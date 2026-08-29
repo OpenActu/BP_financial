@@ -12,3 +12,6 @@ venv/
 
 # Divers
 .DS_Store
+
+# Historiques de cours (régénérables via python/historique_sbf250.py)
+docs/raw/quotes/
