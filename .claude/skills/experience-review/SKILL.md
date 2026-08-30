@@ -1,6 +1,6 @@
 ---
 name: experience-review
-description: Passe une expérience de docs/done/experimentation/ en revue par les trois agents du dépôt — chartiste, trading, sorosien. Chacun étudie les paramètres d'entrée, les rapports mensuels, les graphiques et le bilan, puis propose cinq pistes d'amélioration. Le résultat est écrit dans review.md, à la racine de l'expérience. Utiliser quand l'utilisateur invoque /experience-review, ou demande de relire, critiquer ou améliorer une expérience.
+description: Passe une expérience de docs/done/experimentation/ en revue par les trois agents du dépôt — chartiste, trading, sorosien. Chacun étudie les paramètres d'entrée, les rapports mensuels, les graphiques et le bilan, puis propose cinq pistes d'amélioration. Les trois agents relisent ensuite l'ensemble des quinze pistes et votent pour en retenir cinq. Le résultat est écrit dans review.md, à la racine de l'expérience. Utiliser quand l'utilisateur invoque /experience-review, ou demande de relire, critiquer ou améliorer une expérience.
 ---
 
 # experience-review
@@ -103,7 +103,9 @@ porte sur le protocole, jamais sur un titre à acheter.
 4. **La synthèse** — les quinze pistes en un tableau, triées par catégorie puis
    par ce qu'elles coûtent ; le décompte A/B ; et les convergences entre agents,
    qui valent plus qu'une piste isolée.
-5. **Ce que cette revue ne peut pas établir** — au minimum : qu'une piste
+5. **Le vote** — les trois bulletins, le classement des quinze, et les **cinq
+   pistes retenues** (§ 4 ci-dessous).
+6. **Ce que cette revue ne peut pas établir** — au minimum : qu'une piste
    appliquée aurait amélioré le résultat, ce qui demanderait de rejouer l'année
    en la connaissant.
 
@@ -111,16 +113,77 @@ Les chiffres cités doivent venir des fichiers de l'expérience, jamais d'une
 mémoire d'agent. En cas de désaccord entre deux agents sur un nombre, **le
 signaler plutôt que de trancher** : un désaccord chiffré est une information.
 
-### 4. Vérifier
+### 4. Le vote — les trois agents relisent ensemble et retiennent cinq pistes
+
+Une revue qui rend quinze pistes ne hiérarchise rien. Cette étape fait relire
+**l'ensemble des quinze** par les trois agents, chacun découvrant les dix qu'il
+n'a pas écrites, et en retient cinq.
+
+**Reprendre les agents déjà lancés** (`SendMessage` sur leur identifiant), et non
+en relancer de neufs : ils ont en tête l'expérience et leur propre analyse, ce
+qui est exactement ce qu'il faut pour juger celles des autres.
+
+#### Le critère de vote, déclaré avant le dépouillement
+
+> **On ne vote pas sur le gain espéré.** Personne ne connaît le gain d'une piste
+> non testée, et voter dessus réintroduirait le rétro-ajustement par la porte de
+> la synthèse — ce que le § « Ce que cette skill ne fait pas » interdit.
+>
+> Le critère est : **quelle piste rend l'expérience suivante la plus capable de
+> démontrer quelque chose ?** Une piste qui ferme une faille de déclaration, qui
+> rend une quantité mesurable, ou qui empêche une conclusion abusive, l'emporte
+> sur une piste qui promet un meilleur résultat.
+
+#### Le décompte, déclaré lui aussi
+
+- Chaque agent classe **exactement cinq** pistes parmi les quinze, de la première
+  à la cinquième ; elles reçoivent **5, 4, 3, 2 et 1 point**. Trois bulletins,
+  45 points distribués.
+- Un agent **peut** voter pour ses propres pistes — l'interdire fabriquerait une
+  fausse modestie —, mais le bulletin doit le montrer, et la synthèse publie
+  le **nombre d'agents distincts** qui ont soutenu chaque piste.
+- **Départage**, dans cet ordre : total des points, puis nombre d'agents
+  distincts l'ayant classée, puis **A avant B**, puis identifiant alphabétique.
+- Chaque agent joint **une phrase par piste votée** — pourquoi elle, au regard du
+  critère ci-dessus — et signale s'il juge que deux pistes se recouvrent au point
+  de devoir fusionner.
+
+#### Ce qui va dans `review.md`
+
+Une section finale, **avant** le § « Ce que cette revue ne peut pas établir » :
+
+1. le critère de vote et le barème, recopiés ;
+2. les trois bulletins, en clair ;
+3. le tableau des quinze avec leur total, leur nombre de soutiens et leur rang ;
+4. **les cinq pistes retenues**, chacune avec ce qu'elle change et pourquoi elle
+   a été retenue ;
+5. les pistes que les agents proposent de fusionner, s'il y en a.
+
+### 5. Vérifier
 
 - Les liens relatifs de `review.md` résolvent (`README.md`, `bilan-*.md`,
   `rapports/*.md`) ;
 - aucun chiffre du bilan n'est recopié de travers — les recouper une fois ;
 - le décompte A/B annoncé correspond aux pistes listées ;
+- les trois bulletins totalisent bien 45 points, et le tableau du vote les
+  reporte sans erreur ;
 - la revue ne contient **aucune recommandation d'achat ou de vente**.
 
-Puis le dire à l'utilisateur : le chemin du fichier, le décompte A/B, et les
-deux ou trois pistes sur lesquelles les agents convergent.
+### 6. Le prompt de sortie
+
+Ce qui est dit à l'utilisateur, dans cet ordre :
+
+1. le chemin de `review.md` ;
+2. le décompte A/B ;
+3. les constats sur lesquels **plusieurs agents convergent**, avec leurs chiffres ;
+4. **les cinq pistes retenues par le vote**, dans l'ordre du classement, chacune
+   en une ligne : son identifiant, son titre, son total de points, le nombre
+   d'agents qui l'ont soutenue, et sa catégorie A ou B ;
+5. ce que la revue n'établit pas — en une phrase, sans la noyer.
+
+Le point 4 est la conclusion utile de toute la skill : c'est la seule liste
+courte que l'utilisateur emportera. Ne pas la remplacer par un résumé narratif,
+ne pas la réordonner, et ne pas y glisser une piste qui n'a pas été votée.
 
 ## Ce que cette skill ne fait pas
 

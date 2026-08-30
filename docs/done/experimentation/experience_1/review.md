@@ -306,7 +306,129 @@ il se corrige en un mot — celui qu'emploie déjà la section 2022-07.
 
 ---
 
-## 7. Ce que cette revue ne peut pas établir
+## 7. Le vote — les trois agents relisent les quinze et en retiennent cinq
+
+Les trois agents ont relu **l'ensemble des quinze pistes**, chacun découvrant les
+dix qu'il n'avait pas écrites.
+
+### Le critère et le barème, déclarés avant le dépouillement
+
+> **On ne vote pas sur le gain espéré.** Personne ne connaît le gain d'une piste
+> non testée, et voter dessus réintroduirait le rétro-ajustement par la porte de
+> la synthèse.
+>
+> Le critère est : **quelle piste rend l'expérience suivante la plus capable de
+> démontrer quelque chose ?** Une piste qui ferme une faille de déclaration, qui
+> rend une quantité mesurable, ou qui empêche une conclusion abusive, l'emporte
+> sur une piste qui promet un meilleur résultat.
+
+Chaque agent classe **exactement cinq** pistes : **5, 4, 3, 2, 1 point**. Trois
+bulletins, 45 points. Un agent peut voter pour les siennes, à condition de le
+dire. **Départage** : total, puis nombre d'agents distincts, puis A avant B, puis
+identifiant alphabétique.
+
+### Les trois bulletins
+
+| Rang | `chartiste` | `trading` | `sorosien` |
+|---|---|---|---|
+| 1 (5 pts) | T1 | T1 *(la sienne)* | T1 |
+| 2 (4 pts) | T3 | C3 | T3 |
+| 3 (3 pts) | C1 *(la sienne)* | S4 | S4 *(la sienne)* |
+| 4 (2 pts) | S4 | T2 *(la sienne)* | S1 *(la sienne)* |
+| 5 (1 pt) | C4 *(la sienne)* | C4 | C4 |
+
+Fait notable : **le `chartiste` a voté contre sa propre C3**, au motif que T3 la
+contient et couvre en plus les vetos et les poids effectifs.
+
+### Le classement des quinze
+
+| Rang | Piste | Cat. | `chartiste` | `trading` | `sorosien` | **Total** | Soutiens |
+|---|---|---|---|---|---|---|---|
+| **1** | **T1** Dimensionner l'expérience avant de la lancer | A | 5 | 5 | 5 | **15** | **3** |
+| **2** | **S4** Registre de thèses réfutables, dépouillé chaque mois | A | 2 | 3 | 3 | **8** | **3** |
+| **3** | **T3** Déclarer que le score n'est pas la règle du module 3 | A | 4 | — | 4 | **8** | 2 |
+| **4** | **C3** Déclarer le sens de `s3`, ou l'aligner | A | — | 4 | — | **4** | 1 |
+| **5** | **C4** Durée de vie de l'encadrement contre cadence | A | 1 | 1 | 1 | **3** | **3** |
+| 6 | C1 Déclarer et consigner l'objet géométrique | A | 3 | — | — | 3 | 1 |
+| 7 | S1 Fiche de canal par ticker, déclaration de portée | A | — | — | 2 | 2 | 1 |
+| 8 | T2 Mesurer l'écart comme un alpha | A | — | 2 | — | 2 | 1 |
+| 9-12 | C2 · S2 · S3 · T4 | A | — | — | — | 0 | 0 |
+| 13-15 | C5 · S5 · T5 | **B** | — | — | — | 0 | 0 |
+
+**Les trois pistes de catégorie B n'ont recueilli aucune voix.** Appliquant le
+critère déclaré, les agents n'ont donné aucun poids aux pistes que le résultat
+avait suggérées. Les cinq retenues sont toutes des **A**.
+
+### Les cinq pistes retenues
+
+**1. `T1` — Dimensionner l'expérience avant de la lancer** · 15 pts, 3 soutiens
+
+Publier, avant la première séance, la tracking error attendue, l'**effet minimal
+détectable** et l'horizon qu'il faudrait. Ici : TE 8,17 %/an, MDE **±16,0 points
+sur un an** quand l'écart observé vaut 4,50 — et **187 ans** pour établir que la
+règle couvre ses propres frais. *Retenue à l'unanimité et en tête des trois
+bulletins* : sans ce chiffre, aucune des quatorze autres pistes ne permet de
+conclure quoi que ce soit, et l'expérience suivante rejouerait le même
+non-résultat sans savoir qu'elle était incapable de voir.
+
+**2. `S4` — Un registre daté de thèses réfutables, dépouillé chaque mois**
+· 8 pts, 3 soutiens
+
+Chaque mois, un énoncé réfutable daté — biais dominant contre tendance
+sous-jacente — et le **dépouillement** de ceux du mois précédent, verdict
+confirmé / démenti / non tranché. *Retenue par les trois* comme la seule sortie
+du mur chiffré par T1 : là où douze mois ne fournissent qu'**un point** d'alpha,
+ils fournissent **144 énoncés datés et vérifiables**, déjà écrits, que
+l'expérience jette.
+
+**3. `T3` — Déclarer que le score n'est pas la règle du module 3** · 8 pts,
+2 soutiens
+
+Nommer le score « règle dérivée », déclarer l'inversion de `s3`, publier les
+quatre vetos non appliqués avec leurs taux (**`ATTENTE` aux 144 évaluations**) et
+les **poids effectifs** du score (45 / 12 / 8 / 35 / 0 % de la variance).
+*Retenue* parce qu'une expérience qui annonce dériver d'une règle dont elle
+inverse un critère et jette les vetos ne démontre rien sur cette règle.
+
+**4. `C3` — Déclarer le sens de `s3`, ou l'aligner sur la règle citée**
+· 4 pts, 1 soutien
+
+Le versant chiffré du même défaut : la règle achète sous 35 %, le score donne
+`+1` au-dessus de 50 %, et **12 achats sur 14** ont eu lieu dans la zone d'achat
+interdite par la règle citée en source, **4 ventes sur 9** sur un support.
+
+**5. `C4` — Confronter la durée de vie de l'encadrement à la cadence** · 3 pts,
+**3 soutiens**
+
+Publier τ, l'exigence du support, et le taux de survie des droites. *Classée
+cinquième par les trois agents* — le plus large consensus après T1. Une
+composante qui bascule **20 fois sur 144** en décalant la décision d'une seule
+séance, et un encadrement dont **88 clôtures sur 132** sortent d'un mois sur
+l'autre, ne sont pas un critère : c'est du bruit, et le savoir d'avance
+conditionne toute la construction du score.
+
+### Les fusions proposées
+
+**`C3` et `T3` doivent fusionner** — proposé par **les trois agents**, seul point
+d'unanimité de cette étape. C'est le même constat vu depuis la géométrie et
+depuis la règle ; les publier séparément laisserait croire à deux défauts
+distincts.
+
+> Le barème déclaré n'ayant pas prévu de fusion, **le classement ci-dessus reste
+> celui qui fait foi** : changer la règle après avoir vu les bulletins serait
+> exactement la faute que toute cette revue s'emploie à éviter. Pour information,
+> fusionnées, `C3 + T3` totaliseraient **12 points et 3 soutiens**, prendraient le
+> deuxième rang, et libéreraient la cinquième place au profit de `C1`.
+
+Autres fusions proposées, sans unanimité : `T4` dans `T3` (`chartiste`,
+`trading`), `C2` dans `C1` (`chartiste`) ou dans `C4` (`trading`), `C4` dans `S4`
+(`chartiste`), `S2` sous `S4` (`sorosien`), `T1` avec `T2` (`sorosien`) — que le
+`trading` refuse explicitement, l'une étant le dimensionnement *avant* et l'autre
+la mesure *après*.
+
+---
+
+## 8. Ce que cette revue ne peut pas établir
 
 - **Qu'une piste appliquée aurait amélioré le résultat.** Cela demanderait de
   rejouer 2022 en la connaissant, ce qui est exactement l'erreur que le protocole

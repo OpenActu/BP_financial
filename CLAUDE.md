@@ -159,6 +159,23 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
 - `experience_1/` — un portefeuille de 10 000 € sur l'année 2022, douze journaux
   mensuels, univers de douze valeurs du CAC 40 déclaré à l'avance. Le protocole
   est dans son [`README.md`](docs/done/experimentation/experience_1/README.md).
+- `experience_2/` — la **même règle sur 2025, mais auditée** : les cinq pistes
+  retenues par le vote de
+  [`experience_1/review.md`](docs/done/experimentation/experience_1/review.md) y
+  sont appliquées. Les quatre vetos de la règle du module 3 sont **appliqués**,
+  `s3` est **aligné** sur les seuils qu'elle cite (avec un portefeuille fantôme
+  gardant l'ancien sens), et un **registre de thèses réfutables** est engendré
+  puis dépouillé chaque mois. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_2/README.md).
+
+⚠️ **Le dimensionnement se publie avant la première séance, pas après.** Une
+expérience d'un an sur ce dispositif a une tracking error de l'ordre de 8 %/an,
+donc un effet minimal détectable de **± 16 points d'alpha annuel** : sa
+performance ne tranche rien, et il faudrait près de deux siècles pour établir
+qu'une telle règle couvre ses propres frais. Les taux, eux, se mesurent — 432
+évaluations donnent une proportion à ± 5 points près. Une expérience nouvelle
+doit donc porter son objet déclaré sur ce qu'elle peut établir, et le dire
+**avant**.
 
 ⚠️ **Une expérience porte sur une année passée, donc tout y est décidé
 mécaniquement** : le classement, les ordres et les dates sortent d'un score écrit
@@ -176,9 +193,9 @@ avant la première séance) ou **B** (suggérée par le résultat, donc recevabl
 seulement si elle est nommée comme telle). Une revue qui ne rend que des pistes B
 a relu le résultat, pas le protocole.
 
-`docs/done/experimentation/experience_1/journal.py` est le seul script du dépôt
-hors de `python/`. La règle du miroir markdown s'y applique comme partout
-ailleurs (`journal.py` ⇔ `journal.md`), et il est couvert par le lint :
+Les `journal.py` des expériences sont les seuls scripts du dépôt hors de
+`python/`. La règle du miroir markdown s'y applique comme partout ailleurs
+(`journal.py` ⇔ `journal.md`), et ils sont couverts par le lint :
 
 ```bash
 python -m ruff check python/ docs/done/
