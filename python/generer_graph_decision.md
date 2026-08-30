@@ -288,7 +288,7 @@ Graphique écrit dans : {chemin}
 
 ### 9. Résultat sur AIR.PA au 31 décembre 2020
 
-C'est la figure du cours trading, module 5. Fenêtre active du 2020-07-16 au
+C'est la figure du README du cours trading. Fenêtre active du 2020-07-16 au
 2020-12-31, $\varepsilon = 2{,}62$ € :
 
 | | Ancre | Pente | Portée | Épisodes | Valeur au 2020-12-31 |

@@ -21,7 +21,7 @@ Ce n'est pas un détail administratif : c'est la formulation même de la contrai
 de causalité. Une décision datée du jour $J$ ne peut utiliser que des données de
 séances $\le J$, et si $J$ n'est pas une séance, la dernière séance strictement
 antérieure fait foi. Le verdict du
-[module 5](05-exemple-date-1er-janvier-2021.md) est donc, littéralement, *le
+[module 6](06-cas-pratique.md) est donc, littéralement, *le
 verdict du 31 décembre 2020 publié le 1er janvier 2021*.
 
 ### b. `--fin` est exclusif
@@ -188,4 +188,4 @@ partie du résultat.**
 ---
 
 ⬅️ [Module 3 — La règle écrite à l'avance](03-la-regle-ecrite-a-l-avance.md) ·
-➡️ [Module 5 — Exemple daté : 1er janvier 2021](05-exemple-date-1er-janvier-2021.md)
+➡️ [Module 6 — Cas pratique : un cycle `ACHAT` → `VENTE`, 2021-2025](06-cas-pratique.md)

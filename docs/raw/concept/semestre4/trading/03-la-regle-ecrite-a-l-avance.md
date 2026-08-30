@@ -73,7 +73,7 @@ six mois, la fenêtre courte une pente réelle sur un mois. Il n'y a pas de
 contradiction logique, seulement **deux échelles de temps qui divergent**. Aucun
 critère de ce cours ne permet d'arbitrer entre elles ; la règle refuse donc de
 choisir. C'est le cas d'Airbus au 31 décembre 2020
-([module 5](05-exemple-date-1er-janvier-2021.md)).
+([module 6](06-cas-pratique.md)).
 
 ## 3.4 — L'asymétrie achat / vente est délibérée
 
