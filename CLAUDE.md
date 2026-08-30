@@ -168,6 +168,14 @@ notes chartistes — est rangé dans des fichiers séparés (`actualites.md`,
 `chartiste.md`) dont le moteur ne fait que la mise en page : **aucun chiffre du
 journal n'est saisi à la main.**
 
+**La skill `/experience-review`** fait relire une expérience par les trois agents
+— `chartiste`, `trading`, `sorosien` — et rassemble leurs quinze pistes
+d'amélioration dans un `review.md` posé à la racine de l'expérience. Elle impose
+à chaque piste d'être classée **A** (indépendante du résultat, donc proposable
+avant la première séance) ou **B** (suggérée par le résultat, donc recevable
+seulement si elle est nommée comme telle). Une revue qui ne rend que des pistes B
+a relu le résultat, pas le protocole.
+
 `docs/done/experimentation/experience_1/journal.py` est le seul script du dépôt
 hors de `python/`. La règle du miroir markdown s'y applique comme partout
 ailleurs (`journal.py` ⇔ `journal.md`), et il est couvert par le lint :
