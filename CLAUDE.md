@@ -151,6 +151,31 @@ Un répertoire contient **soit** des sous-répertoires, **soit** des fichiers.
 Les liens entre cours sont **relatifs** ; après tout déplacement, vérifier qu'ils
 résolvent tous.
 
+## Les expériences
+
+`docs/done/experimentation/` consigne des **expériences datées**, inspirées du
+journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
+
+- `experience_1/` — un portefeuille de 10 000 € sur l'année 2022, douze journaux
+  mensuels, univers de douze valeurs du CAC 40 déclaré à l'avance. Le protocole
+  est dans son [`README.md`](docs/done/experimentation/experience_1/README.md).
+
+⚠️ **Une expérience porte sur une année passée, donc tout y est décidé
+mécaniquement** : le classement, les ordres et les dates sortent d'un score écrit
+avant la première séance, jamais d'un choix rétrospectif. C'est la seule parade
+au premier des cinq pièges de l'alpha. Le texte rédigé à la main — actualités,
+notes chartistes — est rangé dans des fichiers séparés (`actualites.md`,
+`chartiste.md`) dont le moteur ne fait que la mise en page : **aucun chiffre du
+journal n'est saisi à la main.**
+
+`docs/done/experimentation/experience_1/journal.py` est le seul script du dépôt
+hors de `python/`. La règle du miroir markdown s'y applique comme partout
+ailleurs (`journal.py` ⇔ `journal.md`), et il est couvert par le lint :
+
+```bash
+python -m ruff check python/ docs/done/
+```
+
 ## Agents
 
 - `chartiste` (`.claude/agents/chartiste.md`) — lit la tendance d'une valeur à

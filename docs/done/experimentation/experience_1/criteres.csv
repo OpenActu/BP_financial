@@ -1,0 +1,145 @@
+DATE,TICKER,CLOSE,TEND_120,TEND_20,POSITION,ALPHA,ALPHA_BAS,ALPHA_HAUT,MOMENTUM,VETOS,VERDICT
+2021-12-31,AIR.PA,103.0830078125,-1.0,1.0,93.1,-20.6,-72.7,31.51,12.61,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,MC.PA,662.712158203125,1.0,1.0,74.0,15.9,-8.24,40.04,32.85,aucun,ATTENTE
+2021-12-31,OR.PA,384.5305480957031,1.0,0.0,24.5,14.6,-9.17,38.37,32.04,aucun,ATTENTE
+2021-12-31,SAN.PA,71.49210357666016,0.0,1.0,81.7,-3.01,-28.89,22.87,10.33,aucun,ATTENTE
+2021-12-31,BNP.PA,43.76030349731445,1.0,1.0,97.7,-5.55,-41.08,29.98,31.64,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,TTE.PA,34.003055572509766,1.0,1.0,75.3,-11.38,-44.84,22.08,19.78,aucun,ATTENTE
+2021-12-31,SU.PA,157.42971801757812,1.0,1.0,87.5,20.46,-3.29,44.22,29.58,aucun,ATTENTE
+2021-12-31,AI.PA,104.99873352050781,1.0,0.0,42.1,1.94,-18.77,22.65,9.24,aucun,ATTENTE
+2021-12-31,DG.PA,77.42694854736328,0.0,1.0,100.0,-16.67,-45.62,12.28,8.29,aucun,ATTENTE
+2021-12-31,CAP.PA,194.02125549316406,1.0,1.0,41.8,23.35,-9.97,56.68,67.92,aucun,ATTENTE
+2021-12-31,RI.PA,176.52908325195312,1.0,1.0,21.2,7.2,-15.46,29.85,31.71,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,ORA.PA,7.10178804397583,0.0,1.0,66.8,-17.54,-43.46,8.39,-2.94,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,AIR.PA,102.8628158569336,-1.0,-1.0,34.0,-19.19,-69.49,31.1,21.51,aucun,ATTENTE
+2022-01-31,MC.PA,658.7012939453125,1.0,-1.0,55.4,15.32,-8.79,39.43,36.84,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,OR.PA,347.5484924316406,1.0,-1.0,16.4,9.45,-14.13,33.03,34.87,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,SAN.PA,74.857666015625,1.0,1.0,61.0,-0.58,-26.0,24.84,14.16,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,BNP.PA,45.36611557006836,1.0,0.0,52.0,-2.98,-37.72,31.77,45.13,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,TTE.PA,38.83634567260742,1.0,1.0,75.1,-4.11,-36.82,28.61,35.85,aucun,ATTENTE
+2022-01-31,SU.PA,136.34292602539062,1.0,-1.0,11.6,13.18,-10.48,36.85,42.79,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,AI.PA,103.67015838623047,1.0,-1.0,13.4,1.46,-18.63,21.54,13.71,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,DG.PA,80.55203247070312,1.0,1.0,28.4,-13.42,-41.86,15.02,11.38,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 12.9 séances,ATTENTE
+2022-01-31,CAP.PA,177.7703094482422,1.0,-1.0,28.6,18.58,-14.12,51.28,64.19,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,RI.PA,157.7494354248047,1.0,-1.0,1.2,1.81,-20.56,24.19,31.21,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,ORA.PA,7.861536026000977,1.0,1.0,93.3,-11.58,-37.08,13.92,5.0,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,AIR.PA,105.41329193115234,0.0,0.0,62.6,-14.1,-62.81,34.62,11.09,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,MC.PA,601.5457153320312,1.0,-1.0,22.1,12.48,-11.09,36.05,33.92,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,OR.PA,327.39739990234375,0.0,-1.0,95.0,7.73,-15.46,30.92,19.72,veto 2 : canal se refermant en 16.1 séances,ATTENTE
+2022-02-28,SAN.PA,75.43878173828125,1.0,0.0,59.7,0.62,-24.28,25.52,23.2,aucun,ATTENTE
+2022-02-28,BNP.PA,37.812294006347656,1.0,-1.0,5.1,-8.41,-42.61,25.8,25.21,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,TTE.PA,35.25585174560547,1.0,-1.0,8.2,-5.81,-38.01,26.39,34.56,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,SU.PA,127.59783935546875,1.0,-1.0,74.9,11.6,-11.65,34.85,20.13,veto 2 : canal se refermant en 14.8 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,AI.PA,101.83480072021484,1.0,0.0,37.1,2.02,-18.05,22.1,18.1,aucun,ATTENTE
+2022-02-28,DG.PA,78.76864624023438,1.0,0.0,19.1,-11.17,-38.95,16.61,11.35,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,CAP.PA,169.5322723388672,1.0,-1.0,26.7,17.72,-14.4,49.84,35.86,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,RI.PA,163.29983520507812,0.0,0.0,89.6,4.41,-17.58,26.4,23.31,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.2 séances,ATTENTE
+2022-02-28,ORA.PA,8.158794403076172,1.0,1.0,82.3,-8.2,-33.05,16.65,14.62,aucun,ATTENTE
+2022-03-31,AIR.PA,101.24813079833984,0.0,1.0,69.9,-15.98,-63.11,31.14,11.46,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,MC.PA,591.9743041992188,-1.0,1.0,84.4,10.5,-13.12,34.11,8.42,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,OR.PA,335.55926513671875,-1.0,1.0,82.3,7.86,-15.52,31.23,3.7,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,SAN.PA,74.66397094726562,1.0,0.0,61.4,0.02,-24.55,24.58,12.94,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,BNP.PA,37.3946418762207,-1.0,1.0,83.8,-9.23,-42.94,24.47,1.49,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,TTE.PA,36.116859436035156,1.0,1.0,50.0,-4.49,-37.44,28.47,33.04,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,SU.PA,138.89889526367188,-1.0,1.0,92.2,14.14,-8.87,37.15,4.89,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,AI.PA,108.83380126953125,0.0,1.0,90.4,4.45,-15.5,24.4,7.25,aucun,ATTENTE
+2022-03-31,DG.PA,77.49361419677734,1.0,1.0,46.2,-12.03,-39.16,15.1,5.45,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,CAP.PA,182.3169708251953,-1.0,1.0,95.0,19.54,-11.7,50.78,21.75,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,RI.PA,166.34634399414062,-1.0,1.0,91.3,4.52,-17.41,26.44,14.78,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,ORA.PA,8.075803756713867,1.0,1.0,32.2,-8.42,-32.74,15.91,14.6,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,AIR.PA,98.21434783935547,-1.0,0.0,59.5,-16.74,-62.52,29.05,15.45,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.4 séances,ATTENTE
+2022-04-29,MC.PA,571.2135620117188,-1.0,-1.0,35.7,8.65,-14.63,31.93,7.95,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 10.7 séances,ATTENTE
+2022-04-29,OR.PA,326.404296875,-1.0,-1.0,64.2,6.4,-16.6,29.41,4.78,veto 2 : canal se refermant en 19.0 séances,ATTENTE
+2022-04-29,SAN.PA,81.66144561767578,1.0,1.0,67.6,3.86,-20.63,28.35,6.52,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,BNP.PA,35.79242706298828,-1.0,0.0,90.0,-10.76,-43.73,22.21,2.11,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,TTE.PA,37.05449295043945,1.0,0.0,84.5,-3.23,-35.51,29.05,24.1,aucun,ATTENTE
+2022-04-29,SU.PA,125.6991195678711,-1.0,-1.0,30.2,9.44,-13.33,32.2,18.21,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,AI.PA,113.23043060302734,1.0,1.0,87.0,5.96,-13.46,25.38,13.13,veto 2 : canal se refermant en 10.5 séances,ATTENTE
+2022-04-29,DG.PA,79.26386260986328,1.0,1.0,91.4,-10.63,-37.42,16.15,1.28,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,CAP.PA,176.5548553466797,-1.0,-1.0,65.8,17.56,-13.18,48.3,31.85,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,RI.PA,164.9691162109375,-1.0,-1.0,69.8,4.04,-17.7,25.79,12.64,veto 2 : canal se refermant en 11.9 séances,ATTENTE
+2022-04-29,ORA.PA,8.539044380187988,1.0,1.0,71.5,-5.72,-29.51,18.08,10.32,veto 2 : canal se refermant en 9.5 séances,ATTENTE
+2022-05-31,AIR.PA,101.22946166992188,-1.0,1.0,53.4,-15.32,-59.92,29.28,-4.64,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,MC.PA,550.6516723632812,-1.0,0.0,76.8,6.49,-16.67,29.64,-6.98,aucun,ATTENTE
+2022-05-31,OR.PA,307.3663635253906,-1.0,0.0,77.0,3.38,-19.66,26.41,-9.69,aucun,ATTENTE
+2022-05-31,SAN.PA,83.44003295898438,1.0,1.0,18.1,4.49,-19.46,28.45,16.79,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,BNP.PA,41.049251556396484,-1.0,1.0,78.7,-5.17,-37.36,27.02,-10.76,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,TTE.PA,43.61798858642578,1.0,1.0,96.5,3.2,-28.46,34.86,25.12,aucun,ATTENTE
+2022-05-31,SU.PA,120.53280639648438,-1.0,1.0,77.0,7.03,-15.46,29.52,0.9,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,AI.PA,113.54595184326172,1.0,1.0,57.8,5.55,-13.34,24.44,14.82,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,DG.PA,76.56597137451172,0.0,0.0,42.3,-12.01,-38.21,14.19,-1.77,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.7 séances,ATTENTE
+2022-05-31,CAP.PA,162.50970458984375,-1.0,0.0,21.3,13.18,-16.67,43.02,27.31,aucun,ATTENTE
+2022-05-31,RI.PA,152.32418823242188,-1.0,0.0,33.4,0.3,-21.52,22.13,10.6,aucun,ATTENTE
+2022-05-31,ORA.PA,8.788019180297852,1.0,0.0,74.5,-4.39,-27.67,18.89,15.47,aucun,ATTENTE
+2022-06-30,AIR.PA,86.0329360961914,-1.0,-1.0,10.8,-15.91,-59.41,27.58,-2.61,aucun,ATTENTE
+2022-06-30,MC.PA,536.3598022460938,-1.0,0.0,73.0,8.56,-14.13,31.25,-8.32,aucun,ATTENTE
+2022-06-30,OR.PA,308.0680236816406,-1.0,0.0,74.3,5.78,-16.88,28.43,-12.16,aucun,ATTENTE
+2022-06-30,SAN.PA,80.88763427734375,1.0,0.0,17.1,4.6,-19.03,28.23,18.62,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,BNP.PA,35.06306076049805,-1.0,-1.0,13.6,-6.74,-38.22,24.74,14.5,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,TTE.PA,40.048194885253906,1.0,-1.0,25.7,3.51,-27.72,34.74,51.47,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,SU.PA,105.45687866210938,-1.0,-1.0,25.6,4.82,-17.12,26.76,-4.74,aucun,ATTENTE
+2022-06-30,AI.PA,98.26982879638672,1.0,-1.0,2.5,1.89,-16.85,20.63,9.94,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,DG.PA,72.53617095947266,-1.0,-1.0,26.8,-9.5,-35.07,16.07,0.43,aucun,ATTENTE
+2022-06-30,CAP.PA,149.14212036132812,-1.0,0.0,3.6,12.52,-16.74,41.77,6.84,aucun,ATTENTE
+2022-06-30,RI.PA,146.3146514892578,-1.0,0.0,65.2,0.8,-20.7,22.3,0.4,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,ORA.PA,8.770543098449707,1.0,1.0,54.6,-2.46,-25.23,20.32,26.74,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,AIR.PA,97.60015869140625,-1.0,1.0,90.3,-14.28,-56.76,28.2,-18.29,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,MC.PA,622.3876953125,-1.0,1.0,96.5,11.53,-10.91,33.96,-15.27,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,OR.PA,344.3663635253906,-1.0,1.0,94.5,8.06,-14.55,30.68,-16.3,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,SAN.PA,81.61809539794922,1.0,0.0,3.2,3.68,-19.45,26.8,15.13,veto 2 : canal se refermant en 16.2 séances,ATTENTE
+2022-07-29,BNP.PA,35.553855895996094,-1.0,0.0,90.0,-9.17,-40.06,21.73,-7.65,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,TTE.PA,39.56318664550781,1.0,0.0,94.5,0.37,-30.79,31.53,41.47,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 16.2 séances,ATTENTE
+2022-07-29,SU.PA,125.67019653320312,-1.0,1.0,94.7,8.99,-13.19,31.17,-21.84,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,AI.PA,102.87190246582031,0.0,1.0,92.7,1.81,-16.69,20.31,-2.5,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,DG.PA,79.72490692138672,-1.0,1.0,94.1,-8.7,-33.56,16.16,-2.13,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,CAP.PA,169.12506103515625,-1.0,1.0,98.7,14.64,-14.44,43.72,-12.93,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,RI.PA,161.2617645263672,-1.0,1.0,92.5,2.95,-18.22,24.12,-5.41,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,ORA.PA,7.814537048339844,1.0,-1.0,11.4,-7.98,-30.47,14.51,26.0,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,AIR.PA,91.09535217285156,-1.0,-1.0,0.4,-13.15,-54.26,27.96,-9.54,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,MC.PA,597.0311279296875,1.0,-1.0,0.0,11.7,-10.23,33.63,4.77,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,OR.PA,321.1185607910156,0.0,-1.0,12.3,6.8,-15.35,28.95,-7.21,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,SAN.PA,68.99880981445312,-1.0,-1.0,30.1,-1.4,-25.38,22.57,21.06,aucun,ATTENTE
+2022-08-31,BNP.PA,35.9287223815918,-1.0,-1.0,25.5,-5.7,-35.82,24.42,-4.71,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,TTE.PA,40.302616119384766,1.0,1.0,45.8,3.45,-27.28,34.19,38.68,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,SU.PA,110.94921875,-1.0,-1.0,1.2,6.19,-15.58,27.97,-11.18,aucun,ATTENTE
+2022-08-31,AI.PA,96.03014373779297,-1.0,-1.0,0.0,0.66,-17.4,18.73,-1.61,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,DG.PA,78.76014709472656,0.0,0.0,31.0,-6.24,-30.38,17.9,4.79,aucun,ATTENTE
+2022-08-31,CAP.PA,157.85614013671875,-1.0,-1.0,0.0,13.59,-14.66,41.84,-0.79,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,RI.PA,154.5670928955078,0.0,-1.0,0.0,2.64,-18.04,23.32,2.78,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,ORA.PA,7.89348840713501,-1.0,0.0,76.7,-6.21,-28.2,15.78,14.0,aucun,ATTENTE
+2022-09-30,AIR.PA,82.72005462646484,-1.0,-1.0,9.4,-12.82,-52.86,27.22,-15.36,aucun,ATTENTE
+2022-09-30,MC.PA,562.8229370117188,1.0,-1.0,9.9,11.4,-10.04,32.84,1.76,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,OR.PA,308.956787109375,1.0,-1.0,27.2,6.8,-14.81,28.41,-3.56,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,SAN.PA,65.82510375976562,-1.0,-1.0,64.4,-2.03,-25.43,21.37,-0.32,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 4.1 séances,ATTENTE
+2022-09-30,BNP.PA,33.70274353027344,-1.0,-1.0,18.2,-4.9,-34.45,24.64,-13.92,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,TTE.PA,38.93218231201172,0.0,-1.0,28.8,4.6,-25.8,34.99,18.49,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,SU.PA,109.23053741455078,-1.0,-1.0,24.5,7.63,-13.77,29.03,-13.02,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,AI.PA,90.17015838623047,-1.0,-1.0,21.6,-0.08,-17.98,17.82,0.02,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,DG.PA,71.0079345703125,0.0,-1.0,11.4,-7.03,-30.6,16.55,4.27,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,CAP.PA,151.0126495361328,-1.0,-1.0,34.5,13.67,-14.07,41.42,-1.55,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,RI.PA,159.03021240234375,1.0,0.0,52.7,4.94,-15.27,25.15,-5.14,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,ORA.PA,7.229053497314453,-1.0,-1.0,2.5,-8.03,-29.52,13.46,14.91,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,AIR.PA,101.97393035888672,-1.0,1.0,98.3,-9.49,-48.53,29.56,-22.49,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,MC.PA,589.193603515625,1.0,1.0,60.9,9.82,-11.37,31.02,-12.33,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,OR.PA,297.59014892578125,0.0,-1.0,30.5,3.24,-18.3,24.78,-19.19,aucun,ATTENTE
+2022-10-31,SAN.PA,73.32279205322266,-1.0,1.0,93.1,0.5,-22.5,23.51,-7.96,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,BNP.PA,36.709354400634766,-1.0,1.0,96.1,-5.48,-34.38,23.43,-20.5,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,TTE.PA,44.43632125854492,0.0,1.0,92.5,6.06,-23.97,36.09,17.38,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,SU.PA,119.80422973632812,0.0,1.0,76.5,7.74,-13.49,28.97,-22.44,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,AI.PA,101.47594451904297,-1.0,1.0,92.0,1.97,-15.94,19.88,-12.75,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,DG.PA,79.55415344238281,0.0,1.0,97.4,-6.38,-29.54,16.77,-9.15,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,CAP.PA,151.697021484375,-1.0,0.0,64.1,10.69,-16.59,37.97,-20.96,aucun,ATTENTE
+2022-10-31,RI.PA,149.64080810546875,1.0,-1.0,20.6,0.9,-19.27,21.08,-6.4,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,ORA.PA,7.528439044952393,-1.0,1.0,95.1,-7.82,-28.9,13.26,2.6,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,AIR.PA,101.62030029296875,1.0,0.0,10.7,-12.66,-50.81,25.49,8.18,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,MC.PA,679.8317260742188,1.0,1.0,100.0,12.09,-8.98,33.16,-7.93,aucun,ATTENTE
+2022-11-30,OR.PA,331.9238586425781,0.0,1.0,96.9,5.14,-16.34,26.63,-23.15,aucun,ATTENTE
+2022-11-30,SAN.PA,72.60912322998047,-1.0,0.0,77.0,-0.76,-23.56,22.04,7.44,aucun,ATTENTE
+2022-11-30,BNP.PA,41.29658126831055,1.0,1.0,43.6,-4.22,-32.52,24.07,-10.57,veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 3.7 séances,ATTENTE
+2022-11-30,TTE.PA,48.63801193237305,1.0,1.0,95.9,6.59,-22.98,36.17,36.06,veto 2 : canal se refermant en 17.9 séances,ATTENTE
+2022-11-30,SU.PA,129.76145935058594,1.0,1.0,83.4,7.9,-12.94,28.74,-20.95,aucun,ATTENTE
+2022-11-30,AI.PA,106.01667022705078,0.0,1.0,0.0,1.77,-15.83,19.37,-4.66,veto 2 : canal se refermant en 6.2 séances,ATTENTE
+2022-11-30,DG.PA,83.36737823486328,1.0,1.0,95.5,-7.38,-29.97,15.22,11.88,aucun,ATTENTE
+2022-11-30,CAP.PA,156.0312042236328,0.0,1.0,65.3,9.21,-17.81,36.22,-18.45,aucun,ATTENTE
+2022-11-30,RI.PA,161.280029296875,1.0,1.0,99.2,1.92,-17.88,21.73,-13.99,aucun,ATTENTE
+2022-11-30,ORA.PA,7.635530471801758,-1.0,1.0,86.4,-8.23,-28.77,12.3,13.27,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
