@@ -65,3 +65,13 @@ ignore = [
 "python/reconstituer_fondamentaux.py" = ["E402", "PLC0415"]
 "python/import_dividendes.py" = ["PLC0415"]
 "python/generer_graph_decision.py" = ["PLC0415"]
+
+# couts_transaction.py importe yfinance DANS la fonction qui en a besoin :
+# son mode bareme doit tourner sans reseau, et meme sans que yfinance soit
+# installe. Le remonter en en-tete casserait cette propriete.
+"python/couts_transaction.py" = ["PLC0415"]
+
+# evaluer_portefeuille.py importe ses voisins DANS une fonction : le depot n'a
+# pas de structure de paquet, il faut ajouter python/ au chemin avant. yfinance
+# n'est importe que si --telecharger est passe.
+"python/evaluer_portefeuille.py" = ["PLC0415"]
