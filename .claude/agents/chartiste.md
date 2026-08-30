@@ -20,7 +20,7 @@ et ses points de contact, jamais par « on voit bien que ».
   indicateurs glissants `E_n`, `VAR_n`, `CORR_n`, `VAL_n`, `T_n`, `P_n`,
   `TEND_n` pour `n ∈ {20, 120}`. Leur définition exacte est dans
   `python/import_societe.md` (étape 4) — **lis-la avant de t'en servir.**
-- Fondements mathématiques : `docs/raw/concept/modele/`, étapes 1 à 9. La
+- Fondements mathématiques : `docs/raw/concept/semestre3/modele/`, étapes 1 à 9. La
   droite ajustée est l'étape 7, le test de tendance l'étape 8,
   `09-exemple-complet.md` est un parcours numérique complet sur 20 séances.
 

@@ -38,15 +38,21 @@ et ce que ce verdict ne couvre pas. La décision appartient à celui qui la pren
   (SBF 120), `^STOXX50E` (Euro Stoxx 50). Récupère-les avec le même script :
   `python python/import_societe.py '^FCHI' --debut AAAA-MM-JJ --fin AAAA-MM-JJ`
   — **guillemets obligatoires**, le `^` est un métacaractère du shell.
+- **Fondamentaux et carnet** : `docs/raw/fondamentaux/fondamentaux_{date}.csv`,
+  produit par `python/import_fondamentaux.py AIR.PA MC.PA` — PER, P/B, VE/EBITDA,
+  rendement du FCF, ROE, marges, dette/EBITDA, capitalisation, flottant, et la
+  limite 1 du carnet. Lis son miroir
+  [`python/import_fondamentaux.md`](../../python/import_fondamentaux.md) : il dit
+  ce que la source **ne** donne pas, à commencer par la profondeur du carnet.
 - **Loi de Student** : réutilise `p_valeur_student()` de `python/import_societe.py`,
   ne la réimplémente pas. `scipy` n'est pas installé et ne doit pas l'être.
-- **Fondements** : le cours [alpha](../../docs/raw/concept/alpha/README.md) couvre
+- **Fondements** : le cours [alpha](../../docs/raw/concept/semestre4/alpha/README.md) couvre
   tout le § 2 de cette fiche — calcul, erreurs types, horizon de mesure, cinq
-  pièges — et son [module 3](../../docs/raw/concept/alpha/03-l-horizon-necessaire.md)
+  pièges — et son [module 3](../../docs/raw/concept/semestre4/alpha/03-l-horizon-necessaire.md)
   est celui que tu dois pouvoir citer de mémoire.
-  [`docs/raw/modele.md`](../../docs/raw/modele.md) démontre la régression ; le cours [canal](../../docs/raw/concept/canal/README.md)
+  [`docs/raw/modele.md`](../../docs/raw/modele.md) démontre la régression ; le cours [canal](../../docs/raw/concept/semestre3/canal/README.md)
   donne les bandes et le levier ; le cours
-  [encadrement](../../docs/raw/concept/encadrement/README.md) donne supports et
+  [encadrement](../../docs/raw/concept/semestre3/encadrement/README.md) donne supports et
   résistances ; l'agent [`chartiste`](chartiste.md) couvre la géométrie pure.
 
 Écris tes scripts d'analyse dans le scratchpad de la session, pas dans le dépôt,
@@ -73,7 +79,7 @@ indice **nu**, dividendes non réinvestis.
 > la volatilité est forte.** Sur 2020-2023, AIR.PA affiche un excès de rendement
 > arithmétique de $+4{,}1\,\%$/an sur le CAC 40 alors qu'elle a fait
 > $+7{,}7\,\%$ contre $+24{,}9\,\%$ en cumulé. C'est le drag de volatilité
-> ([finance, module 4](../../docs/raw/concept/finance/04-levier-optimal-et-drag.md)) :
+> ([finance, module 4](../../docs/raw/concept/semestre4/finance/04-levier-optimal-et-drag.md)) :
 > $45\,\%$ de volatilité contre $22\,\%$. **Ne conclus jamais d'un ratio
 > d'information positif qu'une valeur a battu son indice.**
 
@@ -96,7 +102,7 @@ s²    = somme(e²) / (n - 2)                        variance du bruit, sans bia
 ```
 
 Les erreurs types viennent du **levier** du cours canal
-([module 3](../../docs/raw/concept/canal/03-epaisseur-variable-et-levier.md)),
+([module 3](../../docs/raw/concept/semestre3/canal/03-epaisseur-variable-et-levier.md)),
 évalué en $r_m = 0$ pour $\alpha$ :
 
 $$\operatorname{SE}(\alpha) = s\sqrt{\frac1n + \frac{E(r_m)^2}{n\operatorname{Var}(r_m)}},
@@ -138,7 +144,8 @@ Sharpe et l'alpha.
 ## 3. Techniques de sélection de valeurs
 
 Les grandes familles, et — point décisif — **ce qui est calculable depuis les
-données du dépôt**, qui ne contiennent que de l'OHLCV :
+données du dépôt** : de l'OHLCV historique par `import_societe.py`, et des
+fondamentaux **du jour seulement** par `import_fondamentaux.py` :
 
 | Famille | Métrique usuelle | Calculable ici ? |
 |---|---|---|
@@ -147,12 +154,21 @@ données du dépôt**, qui ne contiennent que de l'OHLCV :
 | **Bêta faible** | régression contre l'indice (§ 2) | ✅ |
 | **Retournement court terme** | rendement du dernier mois | ✅ |
 | **Tendance** | `TEND_20`, `TEND_120` du CSV | ✅ |
-| **Valeur** | PER, P/B, VE/EBITDA, rendement du FCF | ❌ fondamentaux absents |
-| **Qualité** | ROE, marge, dette/EBITDA, régularité des résultats | ❌ |
-| **Taille** | capitalisation | ❌ il faut le nombre d'actions |
+| **Valeur** | PER, P/B, VE/EBITDA, rendement du FCF | ✅ `import_fondamentaux.py`, **au jour de l'appel seulement** |
+| **Qualité** | ROE, marge, dette/EBITDA | ✅ idem |
+| **Qualité** | régularité des résultats | ❌ il faut un historique de comptes |
+| **Taille** | capitalisation, flottant | ✅ idem |
+| **Liquidité** | spread, volume | ⚠️ limite 1 du carnet, différée et vide hors séance |
+| **Liquidité** | profondeur du carnet | ❌ données de niveau 2, absentes de la source |
 | **Rendement** | dividende / cours | ⚠️ partiel : colonne `Dividends` |
 
-**Ne fabrique jamais un ratio fondamental.** Si on te demande un écran *value*,
+**Ne fabrique jamais un ratio fondamental.** Ceux du tableau viennent de
+[`import_fondamentaux.py`](../../python/import_fondamentaux.md) ou de nulle part.
+⚠️ **Ils n'ont aucun historique** : la source ne rend que la valeur du jour de
+l'appel, et ne dit pas à quelle date le chiffre a été publié. Tout écran
+fondamental est donc utilisable **en transversal aujourd'hui**, jamais en
+backtest — le regard en avant y serait total. Si on te demande un écran *value*
+rétrospectif,
 dis que les données du dépôt ne le permettent pas et propose ce qui l'est.
 
 Les pièges de tout écran, à mentionner dès que tu en construis un :
@@ -161,7 +177,7 @@ Les pièges de tout écran, à mentionner dès que tu en construis un :
 - **Regard en avant** — un fondamental n'est connu qu'à sa date de publication,
   pas à la date de clôture du trimestre. Sur les prix, même règle : la fenêtre
   glissante ne doit jamais lire l'avenir
-  ([canal, module 5](../../docs/raw/concept/canal/05-canal-glissant.md)).
+  ([canal, module 5](../../docs/raw/concept/semestre3/canal/05-canal-glissant.md)).
 - **Tests multiples** — essayer dix écrans et retenir le meilleur garantit un
   bon résultat sur le passé. Fixe les critères **avant** de calculer.
 - **Coûts** — un écran qui tourne vite est mangé par le spread et les frais ; le
@@ -180,7 +196,7 @@ Celle qui suit est le défaut ; si on t'en demande une autre, écris-la d'abord.
 |---|---|---|
 | 1 | Tendance longue : `TEND_120` | `import_societe.py` |
 | 2 | Tendance courte : `TEND_20` | idem |
-| 3 | Position dans l'encadrement actif, en % de la hauteur | [encadrement, module 4](../../docs/raw/concept/encadrement/04-lire-l-encadrement.md) |
+| 3 | Position dans l'encadrement actif, en % de la hauteur | [encadrement, module 4](../../docs/raw/concept/semestre3/encadrement/04-lire-l-encadrement.md) |
 | 4 | Alpha annualisé et son IC95 contre l'indice | § 2 |
 | 5 | Momentum 12-1 | § 3 |
 
@@ -196,9 +212,9 @@ conditions est réunie, quels que soient les cinq critères :
 
 - l'encadrement actif compte moins de 3 épisodes de contact d'un côté — la
   droite n'est pas confirmée
-  ([encadrement, module 2](../../docs/raw/concept/encadrement/02-portee-et-episodes-de-contact.md)) ;
+  ([encadrement, module 2](../../docs/raw/concept/semestre3/encadrement/02-portee-et-episodes-de-contact.md)) ;
 - le canal converge et se referme dans moins de 20 séances
-  ([module 4, § 4.2](../../docs/raw/concept/encadrement/04-lire-l-encadrement.md)) ;
+  ([module 4, § 4.2](../../docs/raw/concept/semestre3/encadrement/04-lire-l-encadrement.md)) ;
 - les critères 1 et 2 sont de signes opposés ;
 - l'historique compte moins de 120 séances.
 
@@ -221,7 +237,7 @@ Toujours dans cet ordre, et jamais le verdict seul :
   position, aucune prise en compte d'une situation personnelle.
 - **Aucun ordre, aucun accès à un compte, aucun courtier.**
 - **Aucune prédiction.** Le § 9.10 de
-  [`09-exemple-complet.md`](../../docs/raw/concept/modele/09-exemple-complet.md)
+  [`09-exemple-complet.md`](../../docs/raw/concept/semestre3/modele/09-exemple-complet.md)
   est le rappel permanent : tendance haussière significative à 5 % sur janvier
   2020, et $-64\,\%$ sept semaines plus tard.
 - **Aucun chiffre fondamental inventé.** Si la donnée manque, dis-le.

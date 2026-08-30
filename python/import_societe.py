@@ -171,17 +171,17 @@ def main():
         hist[f"CORR_{n}"] = fenetre.corr(hist["INDICE"])
         # Droite ajustée f(t) = E(V) + phi(V)(2t - n - 1) évaluée à t = n,
         # avec phi(V) = CORR * sqrt(3 * VAR / (n^2 - 1)) — cf. le modèle,
-        # docs/raw/concept/modele/07-droite-ajustee.md.
+        # docs/raw/concept/semestre3/modele/07-droite-ajustee.md.
         hist[f"VAL_{n}"] = hist[f"E_{n}"] + hist[f"CORR_{n}"] * (n - 1) * (
             3 * hist[f"VAR_{n}"] / (n**2 - 1)
         ) ** 0.5
 
         # Test bilatéral de tendance H0 : r = 0, statistique de Student à n-2
-        # degrés de liberté — docs/raw/concept/modele/08-test-de-tendance.md.
+        # degrés de liberté — docs/raw/concept/semestre3/modele/08-test-de-tendance.md.
         ddl = n - 2
         rho = hist[f"CORR_{n}"]
         hist[f"T_{n}"] = rho * (ddl / (1.0 - rho**2)) ** 0.5
-        hist[f"P_{n}"] = hist[f"T_{n}"].map(lambda t: p_valeur_student(t, ddl))
+        hist[f"P_{n}"] = hist[f"T_{n}"].map(lambda t, ddl=ddl: p_valeur_student(t, ddl))
         significatif = hist[f"P_{n}"] < args.alpha
         hist[f"TEND_{n}"] = (significatif & (rho > 0)).astype(int) - (
             significatif & (rho < 0)

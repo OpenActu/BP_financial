@@ -99,12 +99,12 @@ de te servir d'une colonne :
 
 - tendance et sa significativité : `TEND_20`, `TEND_120`, `T_n`, `P_n` ;
 - écart à la tendance longue et sorties de canal
-  ([cours canal](../../docs/raw/concept/canal/README.md)) ;
+  ([cours canal](../../docs/raw/concept/semestre3/canal/README.md)) ;
 - supports, résistances, ruptures
-  ([cours encadrement](../../docs/raw/concept/encadrement/README.md)) ;
+  ([cours encadrement](../../docs/raw/concept/semestre3/encadrement/README.md)) ;
 - **volume relatif** — moyenne 20 séances rapportée à la moyenne 250 ;
 - replis, durées de récupération, asymétrie des vitesses ;
-- $\beta$ et $\alpha$ contre l'indice ([cours alpha](../../docs/raw/concept/alpha/README.md)).
+- $\beta$ et $\alpha$ contre l'indice ([cours alpha](../../docs/raw/concept/semestre4/alpha/README.md)).
 
 **Non calculable ici, et c'est l'essentiel du modèle :** le biais dominant
 (récit, estimations d'analystes, presse), la tendance fondamentale (résultats,

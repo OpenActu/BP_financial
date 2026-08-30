@@ -13,7 +13,7 @@ et au critère $$S(v_0,r) \;=\; \frac1n\sum_{i=1}^n \bigl(V_i - v_0 - r T_i\bigr
 $$\operatorname{Var}(T)=\frac1n\sum_i\bigl(T_i-E(T)\bigr)^2,\qquad \operatorname{Var}(V)=\frac1n\sum_i\bigl(V_i-E(V)\bigr)^2,$$
 $$\operatorname{Cov}(V,T)=\frac1n\sum_i\bigl(T_i-E(T)\bigr)\bigl(V_i-E(V)\bigr),\qquad \rho_{V,T}=\frac{\operatorname{Cov}(V,T)}{\sqrt{\operatorname{Var}(V)\operatorname{Var}(T)}} .$$
 
-> **Note de notation.** $S(v_0,r)$ est un **moment d'ordre 2 non centré** des résidus. Il ne coïncide avec leur *variance* que si $\frac1n\sum_i \hat e_i = 0$ — ce que l'[étape 1](concept/modele/01-elimination-de-l-ordonnee.md) établira pour tout couple optimal $(v_0(r), r)$. L'écriture $\operatorname{Var}(\hat e)$ est donc légitime **le long de la trajectoire d'optimisation**, et en particulier au minimum ; c'est en ce sens qu'elle est employée ci-après.
+> **Note de notation.** $S(v_0,r)$ est un **moment d'ordre 2 non centré** des résidus. Il ne coïncide avec leur *variance* que si $\frac1n\sum_i \hat e_i = 0$ — ce que l'[étape 1](concept/semestre3/modele/01-elimination-de-l-ordonnee.md) établira pour tout couple optimal $(v_0(r), r)$. L'écriture $\operatorname{Var}(\hat e)$ est donc légitime **le long de la trajectoire d'optimisation**, et en particulier au minimum ; c'est en ce sens qu'elle est employée ci-après.
 
 **Hypothèses.** $\operatorname{Var}(T)>0$ (les $T_i$ ne sont pas tous égaux) et $\operatorname{Var}(V)>0$ — cette seconde hypothèse n'est requise que pour que $\rho_{V,T}$ soit défini ; si $\operatorname{Var}(V)=0$ le minimum vaut trivialement $0$.
 
@@ -23,31 +23,31 @@ $$\boxed{\operatorname{Var}(\hat e)_{\min} \;=\; \min_{v_0,r} S(v_0,r) \;=\; \op
 
 ## Plan de la preuve
 
-La minimisation se fait en deux temps : $$\min_{v_0,r} S(v_0,r) \;=\; \min_r\Bigl(\min_{v_0} S(v_0,r)\Bigr),$$ égalité licite car, à $r$ fixé, l'infimum intérieur est **atteint** ([étape 1](concept/modele/01-elimination-de-l-ordonnee.md)).
+La minimisation se fait en deux temps : $$\min_{v_0,r} S(v_0,r) \;=\; \min_r\Bigl(\min_{v_0} S(v_0,r)\Bigr),$$ égalité licite car, à $r$ fixé, l'infimum intérieur est **atteint** ([étape 1](concept/semestre3/modele/01-elimination-de-l-ordonnee.md)).
 
 ### Partie déterministe — aucune hypothèse probabiliste
 
 | # | Étape | Ce qu'elle établit |
 |---|---|---|
-| 1 | [Élimination de l'ordonnée à l'origine](concept/modele/01-elimination-de-l-ordonnee.md) | $v_0(r)=E(V)-r\,E(T)$ ; les résidus sont **centrés**, d'où la notation $\operatorname{Var}(\hat e)$ |
-| 2 | [Centrage](concept/modele/02-centrage.md) | $\hat e_i(r)=v_i-r\,t_i$ : le problème n'a plus qu'une variable |
-| 3 | [Développement du carré](concept/modele/03-developpement-du-carre.md) | $\varphi(r)=\operatorname{Var}(V)-2r\operatorname{Cov}(V,T)+r^2\operatorname{Var}(T)$, trinôme strictement convexe |
-| 4 | [**Mise sous forme canonique**](concept/modele/04-forme-canonique.md) ⭐ | $r_{\min}=\operatorname{Cov}(V,T)/\operatorname{Var}(T)$, $v_{0,\min}$, et la valeur minimale — **sans dériver** |
-| 5 | [**Réécriture avec $\rho_{V,T}$**](concept/modele/05-coefficient-de-correlation.md) ⭐ | $\operatorname{Var}(\hat e)_{\min}=\operatorname{Var}(V)(1-\rho^2)$ ; Cauchy–Schwarz ; le $R^2$ comme $\cos^2\theta$ |
+| 1 | [Élimination de l'ordonnée à l'origine](concept/semestre3/modele/01-elimination-de-l-ordonnee.md) | $v_0(r)=E(V)-r\,E(T)$ ; les résidus sont **centrés**, d'où la notation $\operatorname{Var}(\hat e)$ |
+| 2 | [Centrage](concept/semestre3/modele/02-centrage.md) | $\hat e_i(r)=v_i-r\,t_i$ : le problème n'a plus qu'une variable |
+| 3 | [Développement du carré](concept/semestre3/modele/03-developpement-du-carre.md) | $\varphi(r)=\operatorname{Var}(V)-2r\operatorname{Cov}(V,T)+r^2\operatorname{Var}(T)$, trinôme strictement convexe |
+| 4 | [**Mise sous forme canonique**](concept/semestre3/modele/04-forme-canonique.md) ⭐ | $r_{\min}=\operatorname{Cov}(V,T)/\operatorname{Var}(T)$, $v_{0,\min}$, et la valeur minimale — **sans dériver** |
+| 5 | [**Réécriture avec $\rho_{V,T}$**](concept/semestre3/modele/05-coefficient-de-correlation.md) ⭐ | $\operatorname{Var}(\hat e)_{\min}=\operatorname{Var}(V)(1-\rho^2)$ ; Cauchy–Schwarz ; le $R^2$ comme $\cos^2\theta$ |
 
 ### Cas $T_i = i$ — instants régulièrement espacés
 
 | # | Étape | Ce qu'elle établit |
 |---|---|---|
-| 6 | [Instants régulièrement espacés](concept/modele/06-instants-regulierement-espaces.md) | $\operatorname{Var}(T)=\frac{n^2-1}{12}$, $r_{\min}=2\phi(V)$, $v_{0,\min}=E(V)-\phi(V)(n+1)$ |
-| 7 | [Droite ajustée](concept/modele/07-droite-ajustee.md) | $f(t)=E(V)+\phi(V)(2t-n-1)$, symétrique autour du point moyen |
+| 6 | [Instants régulièrement espacés](concept/semestre3/modele/06-instants-regulierement-espaces.md) | $\operatorname{Var}(T)=\frac{n^2-1}{12}$, $r_{\min}=2\phi(V)$, $v_{0,\min}=E(V)-\phi(V)(n+1)$ |
+| 7 | [Droite ajustée](concept/semestre3/modele/07-droite-ajustee.md) | $f(t)=E(V)+\phi(V)(2t-n-1)$, symétrique autour du point moyen |
 
 ### Partie probabiliste — un modèle génératif est ajouté
 
 | # | Étape | Ce qu'elle établit |
 |---|---|---|
-| 8 | [**Position du problème et statistique de test**](concept/modele/08-test-de-tendance.md) ⭐ | $H_0:r=0$ ; $t=\rho\sqrt{(n-2)/(1-\rho^2)}\sim\mathcal T_{n-2}$ ; IC sur la pente ; **portée et limites** |
-| 9 | [Exemple complet d'évaluation](concept/modele/09-exemple-complet.md) | Les huit étapes sur $n=11$ points, diagnostics et analyse de sensibilité |
+| 8 | [**Position du problème et statistique de test**](concept/semestre3/modele/08-test-de-tendance.md) ⭐ | $H_0:r=0$ ; $t=\rho\sqrt{(n-2)/(1-\rho^2)}\sim\mathcal T_{n-2}$ ; IC sur la pente ; **portée et limites** |
+| 9 | [Exemple complet d'évaluation](concept/semestre3/modele/09-exemple-complet.md) | Les huit étapes sur $n=11$ points, diagnostics et analyse de sensibilité |
 
 > ⚠️  **La ligne de partage est entre les étapes 7 et 8.** Les étapes 1 à 7 sont des identités
 > algébriques sur $n$ points, vraies sans aucun modèle ; $\rho_{V,T}$ y est une mesure
@@ -57,17 +57,17 @@ La minimisation se fait en deux temps : $$\min_{v_0,r} S(v_0,r) \;=\; \min_r\Big
 
 | Cours | Ce qu'il fournit |
 |---|---|
-| [Convexité](concept/analyse/convexite/06-minimisation-convexe.md) | Les trois théorèmes admis à l'étape 1 : local $=$ global, unicité, point critique suffisant (le § 6.6 relit la preuve entière) |
-| [Dérivation et intégration](concept/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) | Les équations normales $\hat\beta=(X^\top X)^{-1}X^\top y$, Hessienne comprise |
-| [Algèbre linéaire](concept/algebre/04-projection-orthogonale.md) | La projection orthogonale et Pythagore, derrière la lecture géométrique de l'étape 5 |
-| [Loi de Student](concept/statistique/loi-de-student/07-student-en-regression.md) | La loi exacte de la statistique de l'étape 8 |
+| [Convexité](concept/semestre1/analyse/convexite/06-minimisation-convexe.md) | Les trois théorèmes admis à l'étape 1 : local $=$ global, unicité, point critique suffisant (le § 6.6 relit la preuve entière) |
+| [Dérivation et intégration](concept/semestre1/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) | Les équations normales $\hat\beta=(X^\top X)^{-1}X^\top y$, Hessienne comprise |
+| [Algèbre linéaire](concept/semestre1/algebre/04-projection-orthogonale.md) | La projection orthogonale et Pythagore, derrière la lecture géométrique de l'étape 5 |
+| [Loi de Student](concept/semestre3/statistique/loi-de-student/07-student-en-regression.md) | La loi exacte de la statistique de l'étape 8 |
 
 ## Ce que cette preuve alimente
 
 | Cours | Ce qu'il en fait |
 |---|---|
-| [Canal de régression](concept/canal/README.md) | Reprend la droite de l'étape 7 et exploite ce qu'elle laisse de côté — **les résidus** : trois conventions de largeur, l'épaisseur variable due au levier, le comptage des sorties sous $H_0$, le canal glissant |
+| [Canal de régression](concept/semestre3/canal/README.md) | Reprend la droite de l'étape 7 et exploite ce qu'elle laisse de côté — **les résidus** : trois conventions de largeur, l'épaisseur variable due au levier, le comptage des sorties sous $H_0$, le canal glissant |
 
 ---
 
-➡️ Commencer par l'[étape 1 — Élimination de l'ordonnée à l'origine](concept/modele/01-elimination-de-l-ordonnee.md)
+➡️ Commencer par l'[étape 1 — Élimination de l'ordonnée à l'origine](concept/semestre3/modele/01-elimination-de-l-ordonnee.md)

@@ -71,7 +71,7 @@ Fenêtre `rolling(window=n, min_periods=n)` sur `Close` — donc les `n-1`
 premières lignes valent `NaN` (cellules vides dans le CSV).
 
 Ces indicateurs transposent à une fenêtre glissante le modèle de droite ajustée
-décrit dans `docs/raw/concept/modele/` (étapes 6 et 7). Sur chaque fenêtre de `n`
+décrit dans `docs/raw/concept/semestre3/modele/` (étapes 6 et 7). Sur chaque fenêtre de `n`
 séances, les observations sont $V_i = \text{Close}$ aux instants régulièrement
 espacés $T_i = i$, $i = 1,\dots,n$.
 
@@ -91,8 +91,8 @@ $\rho_{V,T}$ avec $T_i = i$.
 
 #### `VAL_n` — la droite ajustée évaluée en `t = n`
 
-Le modèle ([étape 6](../docs/raw/concept/modele/06-instants-regulierement-espaces.md),
-[étape 7](../docs/raw/concept/modele/07-droite-ajustee.md)) pose
+Le modèle ([étape 6](../docs/raw/concept/semestre3/modele/06-instants-regulierement-espaces.md),
+[étape 7](../docs/raw/concept/semestre3/modele/07-droite-ajustee.md)) pose
 
 $$\phi(V) = \rho_{V,T}\sqrt{\frac{3\operatorname{Var}(V)}{n^2-1}},
 \qquad f(t) = E(V) + \phi(V)\,(2t-n-1).$$
@@ -111,7 +111,7 @@ vaut $\approx 0{,}951$ pour $n = 20$ et $\approx 0{,}992$ pour $n = 120$.
 
 #### `T_n`, `P_n`, `TEND_n` — test de tendance de Student
 
-Transposition de l'[étape 8](../docs/raw/concept/modele/08-test-de-tendance.md).
+Transposition de l'[étape 8](../docs/raw/concept/semestre3/modele/08-test-de-tendance.md).
 On teste, sur chaque fenêtre, l'hypothèse nulle $H_0 : r = 0$ (le niveau ne
 dépend pas du temps) contre $H_1 : r \ne 0$, test **bilatéral**.
 

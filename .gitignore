@@ -18,3 +18,6 @@ docs/raw/quotes/
 
 # Graphiques générés (régénérables via python/generer_graph_supp_resistance.py)
 docs/raw/graphs/
+
+# Fondamentaux (régénérables via python/import_fondamentaux.py, datés du jour)
+docs/raw/fondamentaux/
