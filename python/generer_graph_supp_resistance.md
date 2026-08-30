@@ -9,7 +9,7 @@ du script doit d'abord être décrite ici (voir `/python-sync`).
 Tracer un cours de bourse et son encadrement par droites de support et de
 résistance, dans un fichier **SVG**. Les droites sont construites par enveloppe
 convexe selon la méthode du cours
-[`docs/raw/concept/encadrement/`](../docs/raw/concept/encadrement/README.md).
+[`docs/raw/concept/semestre3/encadrement/`](../docs/raw/concept/semestre3/encadrement/README.md).
 
 > **La seule donnée utilisée est la clôture** (`Close`). Ni `High`, ni `Low`, ni
 > `Open`, ni `Volume`. Le cours d'encadrement, lui, construit ses chaînes sur les
@@ -74,7 +74,7 @@ Balayage de Andrew sur les points $(i, \texttt{Close}_i)$, en $O(n\log n)$ :
   **résistance**.
 
 Chaque arête de chaîne est une droite qui touche exactement deux clôtures sans en
-traverser aucune ([module 1](../docs/raw/concept/encadrement/01-la-droite-qui-ne-coupe-rien.md)).
+traverser aucune ([module 1](../docs/raw/concept/semestre3/encadrement/01-la-droite-qui-ne-coupe-rien.md)).
 
 ### 3. L'arête retenue et les épisodes de contact
 
@@ -88,7 +88,7 @@ traverser aucune ([module 1](../docs/raw/concept/encadrement/01-la-droite-qui-ne
 - **Épisodes** — `episodes(indices, ecart=3)` regroupe les séances de contact
   distantes de moins de 3 séances. Le nombre d'épisodes est le nombre de
   contacts ; le nombre de jours ne l'est pas
-  ([module 2](../docs/raw/concept/encadrement/02-portee-et-episodes-de-contact.md)).
+  ([module 2](../docs/raw/concept/semestre3/encadrement/02-portee-et-episodes-de-contact.md)).
 
 ### 4. Segmentation en blocs
 
@@ -114,7 +114,7 @@ cours à 128 €. Le segment tracé va donc du 2023-10-20 au 2023-12-29.
 Recalcul sur les `--fenetre` **dernières** séances, indépendamment de la
 partition en blocs — le dernier bloc n'est pas le canal courant, sa découpe étant
 un artefact du point de départ
-([module 3](../docs/raw/concept/encadrement/03-segmenter-un-historique-long.md)).
+([module 3](../docs/raw/concept/semestre3/encadrement/03-segmenter-un-historique-long.md)).
 
 Le canal actif est tracé en trait plein plus épais, de l'ancre de chaque droite
 à la dernière séance, selon la même règle d'étendue qu'au § 4.

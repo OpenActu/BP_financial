@@ -6,8 +6,8 @@ pour démontrer des inégalités et garantir des minima.
 
 | # | Cours | Modules | Volume | Ce qu'on en sort |
 |---|---|---|---|---|
-| 1 | [**Dérivation et intégration, jusqu'au jacobien**](../analyse/derivation-et-integration/README.md) | 9 | 10 h | Taylor, TFA, **matrice jacobienne**, calcul matriciel, changement de variable |
-| 2 | [**La convexité**](../analyse/convexite/README.md) | 9 | 10 h | Jensen, minimisation convexe, $H_f\succeq0$, mesures de risque |
+| 1 | [**Dérivation et intégration, jusqu'au jacobien**](../semestre1/analyse/derivation-et-integration/README.md) | 9 | 10 h | Taylor, TFA, **matrice jacobienne**, calcul matriciel, changement de variable |
+| 2 | [**La convexité**](../semestre1/analyse/convexite/README.md) | 9 | 10 h | Jensen, minimisation convexe, $H_f\succeq0$, mesures de risque |
 
 **Volume total** : ≈ 20 h.
 
@@ -24,18 +24,18 @@ Ils répondent à deux questions différentes, et l'un peut se lire sans l'autre
 
 ## Ce qui circule entre eux
 
-- La **tangente sous le graphe** ([convexité § 3.3](../analyse/convexite/03-criteres-differentiels.md)) est
+- La **tangente sous le graphe** ([convexité § 3.3](../semestre1/analyse/convexite/03-criteres-differentiels.md)) est
   une inégalité sur le reste de Taylor d'ordre 1
-  ([dérivation § 2.1](../analyse/derivation-et-integration/02-taylor-et-approximations.md)).
-- La **Hessienne** ([dérivation § 6.4](../analyse/derivation-et-integration/06-la-matrice-jacobienne.md)) est
+  ([dérivation § 2.1](../semestre1/analyse/derivation-et-integration/02-taylor-et-approximations.md)).
+- La **Hessienne** ([dérivation § 6.4](../semestre1/analyse/derivation-et-integration/06-la-matrice-jacobienne.md)) est
   l'objet dont la convexité teste la positivité
-  ([convexité § 7.2](../analyse/convexite/07-convexite-en-dimension-n.md)).
+  ([convexité § 7.2](../semestre1/analyse/convexite/07-convexite-en-dimension-n.md)).
 - Le $\sigma^2/2$ du **drag de volatilité** est un développement d'ordre 2
-  ([dérivation § 2.3](../analyse/derivation-et-integration/02-taylor-et-approximations.md)) dont la convexité
-  donne le **signe** ([convexité § 5.3](../analyse/convexite/05-jensen-probabiliste.md)).
+  ([dérivation § 2.3](../semestre1/analyse/derivation-et-integration/02-taylor-et-approximations.md)) dont la convexité
+  donne le **signe** ([convexité § 5.3](../semestre1/analyse/convexite/05-jensen-probabiliste.md)).
 - Les **moindres carrés** sont dérivés au
-  [§ 7.5 de dérivation](../analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) et
-  **prouvés minimaux** au [§ 6.4 de convexité](../analyse/convexite/06-minimisation-convexe.md).
+  [§ 7.5 de dérivation](../semestre1/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) et
+  **prouvés minimaux** au [§ 6.4 de convexité](../semestre1/analyse/convexite/06-minimisation-convexe.md).
 
 ## Parcours courts
 
@@ -50,7 +50,7 @@ Ils répondent à deux questions différentes, et l'un peut se lire sans l'autre
 
 | Cours | Ce qu'il fournit |
 |---|---|
-| [Algèbre linéaire](../algebre/README.md) | Produit scalaire, projection, **déterminant comme volume**, $\Sigma$ matrice de Gram |
-| [Statistique](../statistique/mathematique/README.md) | L'espérance et ses règles, la loi normale — empruntées à partir de Jensen probabiliste |
+| [Algèbre linéaire](../semestre1/algebre/README.md) | Produit scalaire, projection, **déterminant comme volume**, $\Sigma$ matrice de Gram |
+| [Statistique](../semestre2/statistique/mathematique/README.md) | L'espérance et ses règles, la loi normale — empruntées à partir de Jensen probabiliste |
 
 🏠 [Sommaire général](README.md)

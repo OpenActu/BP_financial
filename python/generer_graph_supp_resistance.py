@@ -13,7 +13,7 @@ Utilisation :
 
 Seule la colonne Close est utilisée. Les droites sont les arêtes de l'enveloppe
 convexe des clôtures, sélectionnées par portée minimale — méthode décrite dans
-docs/raw/concept/encadrement/.
+docs/raw/concept/semestre3/encadrement/.
 """
 
 import argparse
@@ -142,13 +142,19 @@ def svg(dates, closes, blocs, actif, titre, largeur=1200, hauteur=620):
         return mh + ph - ((v - y0) / (y1 - y0)) * ph
 
     o = [
-        f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {largeur} {hauteur}" '
-        f'width="{largeur}" height="{hauteur}" font-family="ui-monospace,Consolas,monospace">',
+        (
+            f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {largeur} {hauteur}" '
+            f'width="{largeur}" height="{hauteur}" font-family="ui-monospace,Consolas,monospace">'
+        ),
         f'<rect width="{largeur}" height="{hauteur}" fill="{COULEUR_FOND}"/>',
-        f'<text x="{mg}" y="34" font-size="19" font-weight="600" '
-        f'fill="{COULEUR_ENCRE}" font-family="Georgia,serif">{titre}</text>',
-        f'<text x="{mg}" y="54" font-size="12" fill="{COULEUR_ENCRE_2}">'
-        f"{n} séances · {dates[0]} → {dates[-1]} · clôtures uniquement</text>",
+        (
+            f'<text x="{mg}" y="34" font-size="19" font-weight="600" '
+            f'fill="{COULEUR_ENCRE}" font-family="Georgia,serif">{titre}</text>'
+        ),
+        (
+            f'<text x="{mg}" y="54" font-size="12" fill="{COULEUR_ENCRE_2}">'
+            f"{n} séances · {dates[0]} → {dates[-1]} · clôtures uniquement</text>"
+        ),
     ]
 
     for v in range(y0, y1 + 1, 20):
@@ -218,10 +224,14 @@ def svg(dates, closes, blocs, actif, titre, largeur=1200, hauteur=620):
         a = actif
         lignes = [
             f"canal actif · {dates[a['a']]} → {dates[a['b'] - 1]} · {a['b'] - a['a']} séances",
-            f"résistance  pente {a['resistance']['pente']:+.4f} €/séance · "
-            f"portée {a['resistance']['portee']} · {len(a['resistance']['episodes'])} épisodes",
-            f"support     pente {a['support']['pente']:+.4f} €/séance · "
-            f"portée {a['support']['portee']} · {len(a['support']['episodes'])} épisodes",
+            (
+                f"résistance  pente {a['resistance']['pente']:+.4f} €/séance · "
+                f"portée {a['resistance']['portee']} · {len(a['resistance']['episodes'])} épisodes"
+            ),
+            (
+                f"support     pente {a['support']['pente']:+.4f} €/séance · "
+                f"portée {a['support']['portee']} · {len(a['support']['episodes'])} épisodes"
+            ),
         ]
         for k, texte in enumerate(lignes):
             o.append(

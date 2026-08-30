@@ -1,51 +1,55 @@
 # Concepts — les mathématiques derrière `import_societe.py`
 
-Neuf cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
+Dix cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
 répondent, dans l'ordre, aux questions que pose une droite de régression tracée sur une série de
 cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
 | Question | Cours | Volume |
 |---|---|---|
-| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../algebre/README.md) | 7 h 30 |
+| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 7 h 30 |
 | Comment **dérive**-t-on et **intègre**-t-on ces quantités ? | [Analyse](analyse.md) | 20 h |
 | Le résultat est-il **réel**, ou du hasard d'échantillonnage ? | [Statistique](statistique.md) | 56 h |
-| Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../finance/README.md) | 12 h 15 |
-| De combien le cours **s'écarte**-t-il de sa tendance ? | [Canal de régression](../canal/README.md) | 6 h |
-| Entre quelles **bornes** le cours évolue-t-il ? | [Encadrement](../encadrement/README.md) | 4 h |
-| Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../alpha/README.md) | 5 h |
-| Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../trading/README.md) | 5 h |
+| Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../semestre4/finance/README.md) | 12 h 15 |
+| De combien le cours **s'écarte**-t-il de sa tendance ? | [Canal de régression](../semestre3/canal/README.md) | 6 h |
+| Entre quelles **bornes** le cours évolue-t-il ? | [Encadrement](../semestre3/encadrement/README.md) | 4 h |
+| Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../semestre4/alpha/README.md) | 5 h |
+| Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 5 h |
+| Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
+
+> 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les dix cours en quatre
+> semestres. L'arborescence ci-dessous porte ce découpage.
 
 ## Arborescence
 
 ```
 concept/
-├── sommaire/                            les index
-│   ├── README.md                        ← ce fichier
-│   ├── analyse.md                       sommaire de la partie analyse
-│   └── statistique.md                   sommaire de la partie statistique
+├── semestre1/                           les outils mathématiques
+│   ├── algebre/                         8 modules — produit scalaire, projection, dimension
+│   └── analyse/
+│       ├── derivation-et-integration/   9 modules — Taylor, intégrale, jacobien
+│       └── convexite/                   9 modules — Jensen, minimisation, mesures de risque
 │
-├── modele/                              la démonstration : variance résiduelle minimale
-│   └── 01..09-*.md                      une page par étape (l'énoncé est dans docs/raw/modele.md)
+├── semestre2/                           l'aléatoire
+│   └── statistique/
+│       └── mathematique/                26 modules — loi, moments, TCL, χ², inférence
 │
-├── canal/                               6 modules — largeurs, levier, sorties, canal glissant
+├── semestre3/                           l'inférence et le modèle
+│   ├── statistique/
+│   │   └── loi-de-student/              8 modules — le cours dédié, à σ inconnu
+│   ├── modele/                          9 étapes — la démonstration (l'énoncé est dans docs/raw/modele.md)
+│   ├── canal/                           6 modules — largeurs, levier, sorties, canal glissant
+│   └── encadrement/                     4 modules — enveloppe convexe, portée, segmentation
 │
-├── encadrement/                         4 modules — enveloppe convexe, portée, segmentation
+├── semestre4/                           la décision
+│   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
+│   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
+│   ├── trading/                         5 modules — des objets du chartiste à la règle écrite et son verdict
+│   └── finance/                         10 modules — levier, couverture, portefeuille optimal
 │
-├── alpha/                               5 modules — modèle de marché, horizon de mesure, pièges
-│
-├── trading/                             5 modules — des objets du chartiste à la règle écrite et son verdict
-│
-├── algebre/                             8 modules — produit scalaire, projection, dimension
-│
-├── analyse/
-│   ├── convexite/                       9 modules — Jensen, minimisation, mesures de risque
-│   └── derivation-et-integration/       9 modules — Taylor, intégrale, jacobien
-│
-├── statistique/
-│   ├── mathematique/                    25 modules — loi, moments, TCL, χ², inférence
-│   └── loi-de-student/                  8 modules — le cours dédié, à σ inconnu
-│
-└── finance/                             10 modules — levier, couverture, portefeuille optimal
+└── sommaire/                            les index, hors parcours
+    ├── README.md                        ← ce fichier
+    ├── analyse.md                       sommaire de la partie analyse
+    └── statistique.md                   sommaire de la partie statistique
 ```
 
 > ℹ️ **Règle d'arborescence.** Un répertoire contient **soit** des sous-répertoires, **soit** des
@@ -87,18 +91,18 @@ modele.md  →  finance 1→4 (levier)  →  finance 5→7 (couverture)  →  fi
 
 | Ce que vous cherchez | Où aller |
 |---|---|
-| Pourquoi le diviseur $n-1$ | [Algèbre § 5](../algebre/05-supplementaire-orthogonal-et-dimension.md) puis [Statistique § 16](../statistique/mathematique/16-theoreme-de-fisher-cochran.md) |
-| D'où vient le $1{,}96$ | [Statistique § 18](../statistique/mathematique/18-intervalle-de-confiance.md) |
-| Quand l'approximation normale tient | [Statistique § 11 bis](../statistique/mathematique/11bis-convergence-en-loi.md) et [§ 13](../statistique/mathematique/13-portee-et-limites-du-tcl.md) |
-| Pourquoi la moyenne des rendements ment | [Analyse/convexité § 5](../analyse/convexite/05-jensen-probabiliste.md) |
-| Pourquoi la VaR est une mauvaise mesure | [Analyse/convexité § 8](../analyse/convexite/08-convexite-et-mesures-de-risque.md) |
-| D'où vient une densité | [Analyse/dérivation § 9](../analyse/derivation-et-integration/09-changement-de-variable-et-densites.md) |
-| Comment dériver en notation matricielle | [Analyse/dérivation § 7](../analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) |
-| Quelle taille de position prendre | [Finance § 3](../finance/03-marge-appel-de-marge-et-ruine.md) et [§ 4](../finance/04-levier-optimal-et-drag.md) |
-| Comment couvrir un portefeuille, et avec quoi | [Finance § 6](../finance/06-la-couverture-optimale.md) et [§ 7](../finance/07-couvrir-en-pratique.md) |
-| Ce que le SRD, le PEA et la VAD autorisent | [Finance § 1](../finance/01-le-cadre-cac40-et-le-srd.md) |
-| Pourquoi $1/N$ bat l'optimisation | [Finance § 9](../finance/09-contraintes-reelles-et-estimation.md) |
-| Un portefeuille complet, chiffré de bout en bout | [Finance § 10](../finance/10-exemple-de-portefeuille.md) |
+| Pourquoi le diviseur $n-1$ | [Algèbre § 5](../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) puis [Statistique § 16](../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md) |
+| D'où vient le $1{,}96$ | [Statistique § 18](../semestre2/statistique/mathematique/18-intervalle-de-confiance.md) |
+| Quand l'approximation normale tient | [Statistique § 11 bis](../semestre2/statistique/mathematique/11bis-convergence-en-loi.md) et [§ 13](../semestre2/statistique/mathematique/13-portee-et-limites-du-tcl.md) |
+| Pourquoi la moyenne des rendements ment | [Analyse/convexité § 5](../semestre1/analyse/convexite/05-jensen-probabiliste.md) |
+| Pourquoi la VaR est une mauvaise mesure | [Analyse/convexité § 8](../semestre1/analyse/convexite/08-convexite-et-mesures-de-risque.md) |
+| D'où vient une densité | [Analyse/dérivation § 9](../semestre1/analyse/derivation-et-integration/09-changement-de-variable-et-densites.md) |
+| Comment dériver en notation matricielle | [Analyse/dérivation § 7](../semestre1/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) |
+| Quelle taille de position prendre | [Finance § 3](../semestre4/finance/03-marge-appel-de-marge-et-ruine.md) et [§ 4](../semestre4/finance/04-levier-optimal-et-drag.md) |
+| Comment couvrir un portefeuille, et avec quoi | [Finance § 6](../semestre4/finance/06-la-couverture-optimale.md) et [§ 7](../semestre4/finance/07-couvrir-en-pratique.md) |
+| Ce que le SRD, le PEA et la VAD autorisent | [Finance § 1](../semestre4/finance/01-le-cadre-cac40-et-le-srd.md) |
+| Pourquoi $1/N$ bat l'optimisation | [Finance § 9](../semestre4/finance/09-contraintes-reelles-et-estimation.md) |
+| Un portefeuille complet, chiffré de bout en bout | [Finance § 10](../semestre4/finance/10-exemple-de-portefeuille.md) |
 
 ## Ce que les cours se doivent les uns aux autres
 
@@ -115,6 +119,7 @@ modele.md  →  finance 1→4 (levier)  →  finance 5→7 (couverture)  →  fi
 | Algèbre | Finance | Projection orthogonale → couvrir, c'est projeter |
 | Loi de Student | Finance | L'incertitude sur $\beta$ et sur $\mu$ → demi-Kelly, échec de Markowitz estimé |
 | Canal · Encadrement · Alpha | Trading | Objets graphiques, position dans le canal et IC de l'alpha → les cinq critères de la règle |
+| Modèle · Alpha | Fondamentaux | La régression de l'étape 7 → $P/B$ contre ROE ; les tests multiples → les réserves sur un échantillon de huit valeurs |
 
 ## Conventions communes
 
@@ -135,6 +140,6 @@ pip install numpy scipy matplotlib
 
 [`modele.md`](../../modele.md) normalise les moments par $n$ ; le cours de statistique utilise $n-1$ pour
 la variance d'échantillon. Ce n'est pas une incohérence : $n$ est l'estimateur du **maximum de
-vraisemblance** ([Analyse/dérivation § 7.4](../analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md)),
-$n-1$ est celui **sans biais** ([Statistique § 16](../statistique/mathematique/16-theoreme-de-fisher-cochran.md)).
+vraisemblance** ([Analyse/dérivation § 7.4](../semestre1/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md)),
+$n-1$ est celui **sans biais** ([Statistique § 16](../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md)).
 Deux critères, deux diviseurs.
