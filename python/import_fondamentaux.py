@@ -35,6 +35,7 @@ from pathlib import Path
 import yfinance as yf
 
 REPERTOIRE_DEFAUT = Path("docs/raw/fondamentaux")
+ARCHIVE = REPERTOIRE_DEFAUT / "archive.csv"
 TYPES_SANS_FONDAMENTAUX = {"INDEX", "ETF", "CURRENCY", "MUTUALFUND"}
 
 COLONNES = [
@@ -213,6 +214,35 @@ def recuperer_fondamentaux(ticker, avec_carnet=True):
     return colonnes, composants, avertissements
 
 
+def archiver(lignes):
+    """Ajoute les lignes du jour a l'archive, sans jamais dupliquer (TICKER, DATE).
+
+    L'archive est le seul fichier regenerable de nulle part : on n'y ecrase rien.
+    """
+    deja = set()
+    if ARCHIVE.exists():
+        with ARCHIVE.open(encoding="utf-8-sig", newline="") as f:
+            for ligne in csv.DictReader(f):
+                deja.add((ligne.get("TICKER"), ligne.get("DATE")))
+
+    nouvelles = [l for l in lignes if (l.get("TICKER"), l.get("DATE")) not in deja]
+    for l in lignes:
+        if (l.get("TICKER"), l.get("DATE")) in deja:
+            print(f"{l.get('TICKER')} : deja archive au {l.get('DATE')}, ignore")
+
+    if not nouvelles:
+        return 0
+    ARCHIVE.parent.mkdir(parents=True, exist_ok=True)
+    premiere = not ARCHIVE.exists()
+    with ARCHIVE.open("a", encoding="utf-8-sig", newline="") as f:
+        redacteur = csv.writer(f)
+        if premiere:
+            redacteur.writerow(COLONNES)
+        for ligne in nouvelles:
+            redacteur.writerow([formater(ligne.get(c), c) for c in COLONNES])
+    return len(nouvelles)
+
+
 def formater(valeur, colonne):
     """Arrondi à l'écriture. Chaîne vide si la valeur manque — jamais nan ni 0."""
     if valeur is None:
@@ -259,6 +289,11 @@ def main():
         "--sans-carnet",
         action="store_true",
         help="N'interroge pas la limite 1 du carnet d'ordres",
+    )
+    parser.add_argument(
+        "--archiver",
+        action="store_true",
+        help="Ajoute les lignes du jour a docs/raw/fondamentaux/archive.csv",
     )
     args = parser.parse_args()
 
@@ -329,6 +364,11 @@ def main():
             "Profondeur du carnet : non fournie par Yahoo Finance "
             "(données de niveau 2, payantes chez Euronext ou un courtier)."
         )
+
+    if args.archiver:
+        n = archiver(lignes)
+        etat = f"{n} ligne(s) ajoutée(s)" if n else "rien à ajouter"
+        print(f"\nArchive                  : {etat} dans {ARCHIVE}")
 
     if args.json:
         chemin_json = chemin.with_suffix(".json")
