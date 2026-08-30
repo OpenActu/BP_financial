@@ -1,6 +1,6 @@
 # Concepts — les mathématiques derrière `import_societe.py`
 
-Huit cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
+Neuf cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
 répondent, dans l'ordre, aux questions que pose une droite de régression tracée sur une série de
 cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
@@ -13,6 +13,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | De combien le cours **s'écarte**-t-il de sa tendance ? | [Canal de régression](../canal/README.md) | 6 h |
 | Entre quelles **bornes** le cours évolue-t-il ? | [Encadrement](../encadrement/README.md) | 4 h |
 | Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../alpha/README.md) | 5 h |
+| Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../trading/README.md) | 5 h |
 
 ## Arborescence
 
@@ -31,6 +32,8 @@ concept/
 ├── encadrement/                         4 modules — enveloppe convexe, portée, segmentation
 │
 ├── alpha/                               5 modules — modèle de marché, horizon de mesure, pièges
+│
+├── trading/                             5 modules — des objets du chartiste à la règle écrite et son verdict
 │
 ├── algebre/                             8 modules — produit scalaire, projection, dimension
 │
@@ -111,6 +114,7 @@ modele.md  →  finance 1→4 (levier)  →  finance 5→7 (couverture)  →  fi
 | Analyse/convexité | Finance | Jensen → le drag de volatilité ; $w^{\top}\Sigma w$ convexe → Markowitz |
 | Algèbre | Finance | Projection orthogonale → couvrir, c'est projeter |
 | Loi de Student | Finance | L'incertitude sur $\beta$ et sur $\mu$ → demi-Kelly, échec de Markowitz estimé |
+| Canal · Encadrement · Alpha | Trading | Objets graphiques, position dans le canal et IC de l'alpha → les cinq critères de la règle |
 
 ## Conventions communes
 
