@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="Segoe UI, Helvetica, sans-serif">
+<rect width="900" height="420" fill="#ffffff"/>
+<text x="62" y="24" font-size="15" font-weight="600" fill="#1a1a1a">Experience 2 &#8212; portefeuille contre TR12, base 100 au 2025-01-02</text>
+<text x="62" y="40" font-size="11" fill="#666666">2025-01-02 &#8594; 2025-01-31 &#183; 22 seances &#183; traits verticaux : les executions</text>
+<line x1="62" y1="306.1" x2="882" y2="306.1" stroke="#c0c0c0" stroke-width="1"/>
+<text x="54" y="310.1" font-size="10.5" fill="#666666" text-anchor="end">100</text>
+<line x1="62" y1="237.4" x2="882" y2="237.4" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="241.4" font-size="10.5" fill="#666666" text-anchor="end">102</text>
+<line x1="62" y1="168.7" x2="882" y2="168.7" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="172.7" font-size="10.5" fill="#666666" text-anchor="end">104</text>
+<line x1="62" y1="100.1" x2="882" y2="100.1" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="104.1" font-size="10.5" fill="#666666" text-anchor="end">106</text>
+<line x1="62.0" y1="46" x2="62.0" y2="374" stroke="#ded5c4" stroke-width="1" stroke-dasharray="2 3"/>
+<polyline points="62.0,306.1 101.0,351.4 140.1,278.7 179.1,261.1 218.2,285.7 257.2,271.7 296.3,302.8 335.3,303.7 374.4,302.7 413.4,282.3 452.5,206.8 491.5,171.6 530.6,158.9 569.6,150.5 608.7,136.8 647.7,112.8 686.8,87.2 725.8,92.9 764.9,86.7 803.9,107.8 843.0,69.2 882.0,68.6" fill="none" stroke="#9aa5b1" stroke-width="1.6" stroke-dasharray="5 4"/>
+<polyline points="62.0,306.1 101.0,306.1 140.1,306.1 179.1,306.1 218.2,306.1 257.2,306.1 296.3,306.1 335.3,306.1 374.4,306.1 413.4,306.1 452.5,306.1 491.5,306.1 530.6,306.1 569.6,306.1 608.7,306.1 647.7,306.1 686.8,306.1 725.8,306.1 764.9,306.1 803.9,306.1 843.0,306.1 882.0,306.1" fill="none" stroke="#1f5f8b" stroke-width="2.1"/>
+<text x="62" y="404" font-size="10.5" fill="#666666">2025-01-02</text>
+<text x="882" y="404" font-size="10.5" fill="#666666" text-anchor="end">2025-01-31</text>
+<line x1="650" y1="389" x2="676" y2="389" stroke="#1f5f8b" stroke-width="2.1"/><text x="682" y="393" font-size="10.5" fill="#444444">portefeuille 100,0</text>
+<line x1="650" y1="405" x2="676" y2="405" stroke="#9aa5b1" stroke-width="1.6" stroke-dasharray="5 4"/><text x="682" y="409" font-size="10.5" fill="#444444">TR12 106,9</text>
+</svg>

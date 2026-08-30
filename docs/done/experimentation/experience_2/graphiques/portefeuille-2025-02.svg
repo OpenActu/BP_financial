@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="Segoe UI, Helvetica, sans-serif">
+<rect width="900" height="420" fill="#ffffff"/>
+<text x="62" y="24" font-size="15" font-weight="600" fill="#1a1a1a">Experience 2 &#8212; portefeuille contre TR12, base 100 au 2025-01-02</text>
+<text x="62" y="40" font-size="11" fill="#666666">2025-01-02 &#8594; 2025-02-28 &#183; 42 seances &#183; traits verticaux : les executions</text>
+<line x1="62" y1="371.0" x2="882" y2="371.0" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="375.0" font-size="10.5" fill="#666666" text-anchor="end">98</text>
+<line x1="62" y1="313.5" x2="882" y2="313.5" stroke="#c0c0c0" stroke-width="1"/>
+<text x="54" y="317.5" font-size="10.5" fill="#666666" text-anchor="end">100</text>
+<line x1="62" y1="255.9" x2="882" y2="255.9" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="259.9" font-size="10.5" fill="#666666" text-anchor="end">102</text>
+<line x1="62" y1="198.3" x2="882" y2="198.3" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="202.3" font-size="10.5" fill="#666666" text-anchor="end">104</text>
+<line x1="62" y1="140.7" x2="882" y2="140.7" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="144.7" font-size="10.5" fill="#666666" text-anchor="end">106</text>
+<line x1="62" y1="83.2" x2="882" y2="83.2" stroke="#ececec" stroke-width="1"/>
+<text x="54" y="87.2" font-size="10.5" fill="#666666" text-anchor="end">108</text>
+<line x1="62.0" y1="46" x2="62.0" y2="374" stroke="#ded5c4" stroke-width="1" stroke-dasharray="2 3"/>
+<line x1="502.0" y1="46" x2="502.0" y2="374" stroke="#ded5c4" stroke-width="1" stroke-dasharray="2 3"/>
+<polyline points="62.0,313.5 82.0,351.4 102.0,290.5 122.0,275.7 142.0,296.3 162.0,284.6 182.0,310.7 202.0,311.4 222.0,310.6 242.0,293.4 262.0,230.2 282.0,200.7 302.0,190.0 322.0,183.0 342.0,171.5 362.0,151.4 382.0,130.0 402.0,134.7 422.0,129.5 442.0,147.2 462.0,114.8 482.0,114.4 502.0,146.4 522.0,132.0 542.0,146.3 562.0,102.0 582.0,124.5 602.0,117.9 622.0,114.4 642.0,105.9 662.0,68.6 682.0,70.5 702.0,68.8 722.0,85.0 742.0,127.4 762.0,120.3 782.0,93.9 802.0,113.3 822.0,121.5 842.0,93.1 862.0,111.2 882.0,99.2" fill="none" stroke="#9aa5b1" stroke-width="1.6" stroke-dasharray="5 4"/>
+<polyline points="62.0,313.5 82.0,313.5 102.0,313.5 122.0,313.5 142.0,313.5 162.0,313.5 182.0,313.5 202.0,313.5 222.0,313.5 242.0,313.5 262.0,313.5 282.0,313.5 302.0,313.5 322.0,313.5 342.0,313.5 362.0,313.5 382.0,313.5 402.0,313.5 422.0,313.5 442.0,313.5 462.0,313.5 482.0,313.5 502.0,313.5 522.0,313.5 542.0,313.5 562.0,313.5 582.0,313.5 602.0,313.5 622.0,313.5 642.0,313.5 662.0,313.5 682.0,313.5 702.0,313.5 722.0,313.5 742.0,313.5 762.0,313.5 782.0,313.5 802.0,313.5 822.0,313.5 842.0,313.5 862.0,313.5 882.0,313.5" fill="none" stroke="#1f5f8b" stroke-width="2.1"/>
+<text x="62" y="404" font-size="10.5" fill="#666666">2025-01-02</text>
+<text x="882" y="404" font-size="10.5" fill="#666666" text-anchor="end">2025-02-28</text>
+<line x1="650" y1="389" x2="676" y2="389" stroke="#1f5f8b" stroke-width="2.1"/><text x="682" y="393" font-size="10.5" fill="#444444">portefeuille 100,0</text>
+<line x1="650" y1="405" x2="676" y2="405" stroke="#9aa5b1" stroke-width="1.6" stroke-dasharray="5 4"/><text x="682" y="409" font-size="10.5" fill="#444444">TR12 107,4</text>
+</svg>
