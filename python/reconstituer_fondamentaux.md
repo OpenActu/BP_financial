@@ -26,9 +26,10 @@ dater correctement chaque valeur comptable.
 > ⚠️ **Trois biais survivent à la reconstruction. Il faut les annoncer avec toute
 > série produite ici.**
 >
-> - **Les retraitements.** La source sert la version **actuelle** des comptes
->   passés, pas celle qui avait été publiée. La reconstruction corrige le regard
->   en avant sur la *date*, pas sur le *contenu*.
+> - **Le chiffre servi n'est pas toujours celui qui fut publié.** La
+>   reconstruction corrige le regard en avant sur la *date*, pas sur le
+>   *contenu* — mais l'ampleur du problème dépend du poste, et se mesure
+>   (§ 10).
 > - **Le biais du survivant**, entier : un ticker radié a disparu de la source,
 >   donc de tout univers construit aujourd'hui.
 > - **La profondeur**, plafonnée par la source : 4 à 5 exercices annuels. Assez
@@ -195,6 +196,11 @@ AIR.PA   1 148 séances du 2023-02-16 au 2026-08-28
 
 - **Aucune publication trouvée et `--decalage` inutilisable** (pas de comptes du
   tout) : le ticker est ignoré, message sur `stderr`, les autres sont traités.
+- **Échec d'un appel à la source** — réseau, ticker sans comptes, réponse
+  illisible : **chacun des cinq appels du § 1 signale son échec sur `stderr`**,
+  en nommant l'appel et le type d'erreur. Aucun n'est avalé en silence : sans
+  cela, une panne réseau se confondrait avec une absence de donnée, et la
+  série basculerait sur le repli du § 3 sans que rien ne l'indique.
 - **Ticker sans comptes** (indice, ETF) : ignoré de la même façon.
 - **Bénéfice, fonds propres ou EBITDA négatifs** : le ratio correspondant reste
   vide, comme dans `import_fondamentaux.py`. Un PER négatif ne se compare à rien.
@@ -240,6 +246,40 @@ de l'exercice. C'est la signature d'une série *point-in-time* correcte.
 > compris) de l'autre. Aucune des deux valeurs n'est fausse ; les comparer
 > revient à comparer deux définitions. Avec `--trimestriel`, l'écart se réduit
 > sans disparaître.
+
+### 10. Ce que vaut le contenu, poste par poste
+
+Réserve vérifiable, donc vérifiée. Le communiqué de résultats d'Airbus du
+**20 février 2025** — le document d'origine, archivé par `bnains.org` — confronté
+à ce que la source sert aujourd'hui pour le même exercice 2024 :
+
+| Poste | Publié | Servi aujourd'hui | Écart |
+|---|---|---|---|
+| Chiffre d'affaires | 69 230 M | 69 230 M | **0,00 %** |
+| Résultat net | 4 232 M | 4 232 M | **0,00 %** |
+| BPA | 5,36 | 5,36 | **0,00 %** |
+| **EBIT** | **5 304 M** | **6 325 M** | **19,3 %** |
+| **Flux de trésorerie disponible** | **4 461 M** | **3 733 M** | **16,3 %** |
+
+> 🔑 **Deux causes distinctes, qu'il ne faut pas confondre.** Le *retraitement*
+> vient de l'entreprise, qui corrige un exercice clos ; la *normalisation* vient
+> du fournisseur, qui recalcule un agrégat à sa façon. Ici, rien n'indique un
+> retraitement — chiffre d'affaires, résultat net et BPA tombent au centime. En
+> revanche l'`EBIT` servi ne vaut ni l'EBIT publié (5 304) ni l'EBIT ajusté
+> (5 354), et l'`Operating Income` (4 804) non plus : **c'est une définition
+> différente**, pas une histoire réécrite.
+
+Conséquence pratique, et c'est elle qu'il faut retenir :
+
+| Ratios | Dénominateur | Confiance |
+|---|---|---|
+| `PER`, `MARGE_NETTE`, `P_B` | résultat net, chiffre d'affaires, fonds propres | ✅ le chiffre servi est celui qui fut publié |
+| `VE_EBITDA`, `DETTE_EBITDA`, `REND_FCF` | EBITDA, FCF | ⚠️ **le chiffre servi n'est pas celui que le marché a lu** |
+
+⚠️ **Portée de ce contrôle : une société, un exercice, cinq postes.** Il établit
+que le problème existe et qu'il est inégal selon le poste ; il n'établit pas de
+taux d'erreur général. Refaire la mesure sur une autre valeur avant de
+généraliser.
 
 ## Codes de sortie
 

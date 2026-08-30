@@ -232,7 +232,7 @@ def controler(lignes, ticker):
 
     try:
         serie = yf.Ticker(ticker).dividends
-    except Exception as erreur:
+    except Exception as erreur:  # noqa: BLE001 — controle facultatif : on signale et on continue
         print(f"{ticker} : controle impossible ({erreur.__class__.__name__})", file=sys.stderr)
         return None
     if serie is None or len(serie) == 0:

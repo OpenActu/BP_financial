@@ -188,8 +188,12 @@ rend que la valeur du jour de l'appel. Un écran fondamental y est donc utilisab
 Pour une étude rétrospective, passe par `reconstituer_fondamentaux.py`, qui date
 chaque exercice par sa publication réelle — mais annonce alors ses trois limites,
 sans quoi le résultat n'est pas publiable : couverture inégale des dates
-d'annonce, profondeur d'environ trois ans et demi, et comptes servis dans leur
-version **retraitée** et non telle que publiée. Au-delà de cette profondeur, dis
+d'annonce, profondeur d'environ trois ans et demi, et **contenu des comptes non
+garanti conforme au publié**. Sur ce dernier point, sois précis : mesuré contre
+le communiqué d'origine d'Airbus, chiffre d'affaires, résultat net et BPA
+concordent exactement, mais l'EBIT s'écarte de 19,3 % et le FCF de 16,3 % — une
+normalisation du fournisseur, pas un retraitement. Un écran sur le `PER` est donc
+défendable, un écran sur `VE/EBITDA` ne l'est pas. Au-delà de cette profondeur, dis
 que les données du dépôt ne le permettent pas et propose ce qui l'est.
 
 Les pièges de tout écran, à mentionner dès que tu en construis un :

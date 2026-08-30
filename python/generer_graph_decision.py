@@ -184,8 +184,8 @@ def alpha_beta(dates_v, closes_v, dates_i, closes_i):
     Rend alpha et beta quotidiens, l'alpha annualisé, son IC95 annualisé, R² et
     le nombre de rendements. Taux sans risque nul.
     """
-    serie_v = dict(zip(dates_v, closes_v))
-    serie_i = dict(zip(dates_i, closes_i))
+    serie_v = dict(zip(dates_v, closes_v, strict=True))
+    serie_i = dict(zip(dates_i, closes_i, strict=True))
     communes = sorted(set(serie_v) & set(serie_i))
     if len(communes) < 3:
         return None
@@ -196,11 +196,11 @@ def alpha_beta(dates_v, closes_v, dates_i, closes_i):
 
     e_i, e_m = statistics.fmean(ri), statistics.fmean(rm)
     var_m = statistics.pvariance(rm, e_m)
-    cov = sum((x - e_m) * (y - e_i) for x, y in zip(rm, ri)) / n
+    cov = sum((x - e_m) * (y - e_i) for x, y in zip(rm, ri, strict=True)) / n
     beta = cov / var_m
     alpha = e_i - beta * e_m
 
-    residus = [y - (alpha + beta * x) for x, y in zip(rm, ri)]
+    residus = [y - (alpha + beta * x) for x, y in zip(rm, ri, strict=True)]
     sce = sum(r * r for r in residus)
     s = math.sqrt(sce / (n - 2))
     se_alpha = s * math.sqrt(1 / n + e_m**2 / (n * var_m))
@@ -444,7 +444,9 @@ def main():
         description="Trace la figure de décision du cours trading : encadrement actif, "
         "cinq critères et verdict de la règle."
     )
-    parser.add_argument("--csv", help="CSV de la valeur (défaut : le plus récent de docs/raw/quotes/)")
+    parser.add_argument(
+        "--csv", help="CSV de la valeur (défaut : le plus récent de docs/raw/quotes/)"
+    )
     parser.add_argument("--indice", help="CSV de l'indice de référence, pour le critère 4")
     parser.add_argument("--sans-indice", action="store_true", help="Ne pas calculer le critère 4")
     parser.add_argument("--date", help="Séance de décision AAAA-MM-JJ (défaut : dernière séance)")
@@ -493,7 +495,10 @@ def main():
     n = len(closes)
 
     if n < args.fenetre:
-        print(f"Historique de {n} séances, plus court que la fenêtre {args.fenetre}.", file=sys.stderr)
+        print(
+            f"Historique de {n} séances, plus court que la fenêtre {args.fenetre}.",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     actif = encadrement(hauts, bas, closes, n - args.fenetre, n, args.tolerance)
@@ -531,7 +536,10 @@ def main():
     tau = largeur_canal / ecart_pentes if ecart_pentes > 0 else float("inf")
 
     vetos = []
-    if min(len(actif["resistance"]["episodes"]), len(actif["support"]["episodes"])) < EPISODES_MINIMAUX:
+    episodes_min = min(
+        len(actif["resistance"]["episodes"]), len(actif["support"]["episodes"])
+    )
+    if episodes_min < EPISODES_MINIMAUX:
         vetos.append(f"veto 1 : moins de {EPISODES_MINIMAUX} épisodes de contact d'un côté")
     if tau < TAU_MINIMAL:
         vetos.append(f"veto 2 : canal se refermant en {tau:.1f} séances")
@@ -553,7 +561,8 @@ def main():
     if alpha:
         zero = alpha["ic_bas"] <= 0 <= alpha["ic_haut"]
         texte_alpha = (
-            f"{signe(alpha['alpha_an'])} %/an · IC95 [{signe(alpha['ic_bas'])} ; {signe(alpha['ic_haut'])}] %"
+            f"{signe(alpha['alpha_an'])} %/an · IC95 "
+            f"[{signe(alpha['ic_bas'])} ; {signe(alpha['ic_haut'])}] %"
             + (" · indiscernable de zéro" if zero else "")
         )
     texte_position = f"{fr(position, 1)} % de la hauteur" + (
@@ -577,7 +586,8 @@ def main():
         f"→ {dates[-1]} · ε = {fr(actif['eps'])} €"
         + (f" · décision demandée au {ferie}, jour non coté" if ferie else "")
     )
-    sortie = Path(args.sortie) if args.sortie else REPERTOIRE_GRAPHS / f"{chemin_csv.stem}_decision.svg"
+    defaut = REPERTOIRE_GRAPHS / f"{chemin_csv.stem}_decision.svg"
+    sortie = Path(args.sortie) if args.sortie else defaut
     sortie.parent.mkdir(parents=True, exist_ok=True)
     sortie.write_text(
         svg(dates, closes, actif, lignes_criteres, mot, vetos, meta, titre),
@@ -593,7 +603,8 @@ def main():
     for nom, valeur in (("Résistance", r_fin), ("Support", s_fin)):
         b = actif[nom.lower().replace("é", "e")]
         print(
-            f"{nom:<17}: pente {'+' if b['pente'] >= 0 else ''}{fr(b['pente'], 4)} €/séance · portée {b['portee']} · "
+            f"{nom:<17}: pente {'+' if b['pente'] >= 0 else ''}{fr(b['pente'], 4)}"
+            f" €/séance · portée {b['portee']} · "
             f"{len(b['episodes'])} épisodes · {fr(valeur)} €"
         )
     print(f"Largeur          : {fr(largeur_canal)} € ({fr(100 * largeur_canal / closes[-1], 1)} %)"

@@ -1,0 +1,67 @@
+# Configuration ruff du dépôt.
+#
+# Objectif : que `python -m ruff check python/` sorte SANS AUCUN signalement.
+# Un lint qui rend toujours onze lignes n'est plus un signal, c'est un bruit de
+# fond qu'on cesse de lire — et c'est ainsi qu'on manque le douzième.
+#
+# Les exemptions sont donc de deux natures, jamais mélangées :
+#   - une règle contraire à une convention du dépôt est écartée ICI, motif à
+#     l'appui ;
+#   - un cas particulier justifié porte un `# noqa: RÈGLE` sur sa ligne, avec sa
+#     raison en commentaire.
+#
+# Toute nouvelle occurrence est donc visible, et doit être traitée ou justifiée.
+
+line-length = 100  # la ligne la plus longue du dépôt fait 118 ; 100 est l'objectif
+
+[lint]
+select = [
+    "E",      # pycodestyle — erreurs
+    "F",      # pyflakes — noms non définis, imports inutilisés
+    "B",      # flake8-bugbear — pièges réels ; a trouvé les fermetures sur
+              # variable de boucle dans import_societe.py et import_fondamentaux.py
+    "BLE",    # blind-except — a fait trouver quatre `except` qui avalaient
+              # l'erreur en silence dans reconstituer_fondamentaux.py
+    "ISC",    # concaténations implicites de chaînes — « virgule oubliée ? »
+    "PL",     # pylint
+    "RUF",    # règles propres à ruff, dont RUF100 : les `noqa` devenus inutiles
+    "FURB",   # modernisations sûres
+    "SIM",    # simplifications
+    "UP",     # pyupgrade
+]
+
+ignore = [
+    # `date.today()` sans fuseau horaire. Le dépôt travaille en dates
+    # CALENDAIRES locales — date de lecture d'un relevé, date de séance, date de
+    # publication. Un instant tz-aware y serait faux, pas plus juste.
+    "DTZ011",
+
+    # Nombre d'arguments ou de branches. Les scripts sont des CLI : leur `main()`
+    # a autant de paramètres que la ligne de commande a d'options, et une
+    # fonction de tracé autant que la figure a de couches. Les découper en
+    # sous-fonctions artificielles ne rendrait rien plus lisible.
+    "PLR0912",
+    "PLR0913",
+    "PLR0915",
+    "PLR0917",
+
+    # Caractères Unicode « ambigus » dans les chaînes. Ils sont ici DÉLIBÉRÉS :
+    # espace insécable étroite comme séparateur de milliers français, espace
+    # insécable à neutraliser dans le HTML aspiré, tiret demi-cadratin dans les
+    # libellés. Les remplacer par leurs équivalents ASCII abîmerait la
+    # typographie française que tout le dépôt applique.
+    "RUF001",
+
+    # Valeur littérale utilisée telle quelle. Les seuils du dépôt sont déjà des
+    # constantes nommées là où ils font sens ; les 252 séances, les 100 des
+    # pourcentages et les 0.5 des tolérances n'ont pas besoin d'un nom.
+    "PLR2004",
+]
+
+[lint.per-file-ignores]
+# Les scripts sont exécutés depuis la racine, jamais importés comme paquet :
+# reconstituer_fondamentaux.py doit ajouter python/ au chemin avant d'importer
+# son voisin, ce qui impose un import hors de l'en-tête.
+"python/reconstituer_fondamentaux.py" = ["E402", "PLC0415"]
+"python/import_dividendes.py" = ["PLC0415"]
+"python/generer_graph_decision.py" = ["PLC0415"]
