@@ -45,7 +45,7 @@ remarques, dont deux coûtent de l'argent.
 | **PEA-PME**                       | ❌                                              | ❌                           | ❌                                              | PME/ETI éligibles       |
 | **Compte-titres ordinaire (CTO)** | ✅ SRD, ou marge selon le courtier              | ✅ Sur les valeurs éligibles | ✅ Futures, options, warrants, turbos           | Mondial                 |
 
-**Conséquence structurante pour tout le cours.** L'investisseur en PEA est **contraint long-only et sans levier** : pour lui, le portefeuille optimal est celui du [§ 9.2](09-contraintes-reelles-et-estimation.md) (frontière contrainte), la couverture ne peut passer que par des ETF inverses ([§ 7.4](07-couvrir-en-pratique.md)), et le [module 4](04-levier-optimal-et-drag.md) ne lui sert qu'à savoir **ce qu'il perd** à ne pas pouvoir lever — ou ce qu'il gagne à ne pas pouvoir le faire.
+**Conséquence structurante pour tout le cours.** L'investisseur en PEA est **contraint long-only et sans levier** : pour lui, le portefeuille optimal est celui du [§ 9.2](09-contraintes-reelles-et-estimation.md) (frontière contrainte), la couverture ne peut passer que par des ETF inverses ([§ 7.5](07-couvrir-en-pratique.md)), et le [module 4](04-levier-optimal-et-drag.md) ne lui sert qu'à savoir **ce qu'il perd** à ne pas pouvoir lever — ou ce qu'il gagne à ne pas pouvoir le faire.
 
 ---
 

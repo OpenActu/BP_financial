@@ -118,27 +118,88 @@ soir** — donc ils subissent le drag du [module 4](04-levier-optimal-et-drag.md
 
 ---
 
-## 7.6 Tableau de synthèse
+## 7.6 L'ordre stop — la couverture qui ne coûte rien et ne garantit rien
 
-|                         | Future CAC 40             | VAD SRD    | Put               | ETF $\times(-2)$                   |
-| ----------------------- | ------------------------- | ---------- | ----------------- | ---------------------------------- |
-| Éligible PEA            | ❌                         | ❌          | ❌                 | ✅                                  |
-| Corrélation à l'indice  | Quasi parfaite            | Élevée     | Non linéaire      | Élevée à 1 jour, dérive ensuite    |
-| Granularité             | Grossière (78 000 €)      | Fine       | Moyenne           | **Fine**                           |
-| Coût de portage         | Prime de risque seule     | 7 à 9 %/an | 2,5 à 14 %/an     | Drag $\propto L^2\sigma^2$ + frais |
-| Appel de marge          | **Quotidien, en espèces** | Oui        | Non (prime payée) | Non                                |
-| Perte maximale          | Non bornée                | Non bornée | **Prime**         | Montant investi                    |
-| Résiliable par un tiers | Non                       | **Oui**    | Non               | Non                                |
-| Conserve la hausse      | ❌                         | ❌          | **✅**             | ❌                                  |
+Les quatre instruments précédents **ajoutent** une position qui compense la première. L'ordre stop
+fait autre chose : il **ferme** la position. Ce n'est donc pas une couverture au sens du
+[§ 6.1](06-la-couverture-optimale.md) — il n'y a ni $h$, ni $\rho$, ni variance résiduelle — mais
+c'est l'instrument que le particulier utilise le plus, et le seul disponible dans **toutes** les
+enveloppes, PEA compris. Il mérite d'être chiffré avec les autres.
+
+### Les deux ordres d'Euronext Paris
+
+|                                            | Ordre **à seuil** de déclenchement | Ordre **à plage** de déclenchement |
+| ------------------------------------------ | ---------------------------------- | ---------------------------------- |
+| Ce qu'il devient une fois le seuil franchi | un ordre **au marché**             | un ordre **à cours limité**        |
+| Exécution                                  | certaine si une contrepartie existe | **incertaine** : rien sous la limite |
+| Prix obtenu                                | inconnu                            | borné par le bas                   |
+| Le risque assumé                           | **le prix**                        | **l'exécution**                    |
+
+> 🔑 **Les deux ordres échangent le même risque de place.** Le seuil garantit la sortie et pas le
+> prix ; la plage garantit le prix et pas la sortie. **Aucun des deux ne garantit les deux**, et
+> c'est une propriété du carnet d'ordres, pas une lacune du courtier : un ordre ne peut être servi
+> qu'à un cours effectivement coté, par une contrepartie effectivement présente.
+
+### Le gap, c'est-à-dire le cas pour lequel on avait posé le stop
+
+Un seuil est franchi par un **cours coté**. Si le titre ouvre sous le seuil, celui-ci n'est jamais
+touché : il est **enjambé**, et l'ordre au marché s'exécute au premier cours de la séance. Deux
+mesures sur Airbus, tirées du [module 7 du cours trading](../trading/07-le-stop-une-sortie-sans-verdict.md) :
+
+| Date       | Seuil posé | Clôture de la veille | Ouverture              | Prix obtenu | Écart au seuil     |
+| ---------- | ---------- | -------------------- | ---------------------- | ----------- | ------------------ |
+| 2021-11-26 | 92,02 €    | 102,99 €             | 91,28 € ($-11{,}37\,\%$) | 91,28 €     | $-0{,}80\,\%$      |
+| **2022-03-07** | 88,37 € | 89,08 €             | 83,95 € ($-5{,}77\,\%$)  | **83,95 €** | **$-5{,}00\,\%$**  |
+
+⚠️ **C'est exactement le défaut signalé au [§ 3.2](03-marge-appel-de-marge-et-ruine.md)**, et il se
+dit en une phrase : *un gap franchit une barrière sans la toucher*. La barrière de l'appel de marge
+et celle du stop sont le même objet mathématique — probabilité de franchissement et coût de la
+barrière sont établis au [§ 3.5](03-marge-appel-de-marge-et-ruine.md).
+
+### Ce que le stop coûte, comparé au put
+
+Le put et le stop répondent à la même demande — *limiter la baisse* — et le contraste est net :
+
+|                                                    | Put $-10\,\%$, 1 an        | Stop à seuil $-10\,\%$        |
+| -------------------------------------------------- | -------------------------- | ----------------------------- |
+| Prime payée d'avance                               | $2{,}77\,\%$ du notionnel (§ 7.4) | **rien**               |
+| Prix plancher                                      | **garanti** au strike      | **non garanti** (gap)         |
+| Si le seuil est touché puis que le cours remonte   | la position est **toujours là** | la position est **fermée** |
+| Ce qu'il advient de la hausse                      | **intégralement conservée** | perdue dès le déclenchement   |
+| Coût quand rien n'arrive                           | la prime, entièrement      | rien                          |
+| Éligible PEA                                       | ❌                          | ✅                             |
+
+> ⭐ **Le stop n'est pas un put gratuit, c'est une renonciation gratuite.** Le put achète le droit
+> de vendre à un prix ; le stop **vend** effectivement, au prix qu'il trouve, et supprime la
+> trajectoire ultérieure. Les deux coupent la même queue gauche — l'un en payant une prime, l'autre
+> en abandonnant la queue droite. Ce que cet abandon coûte est mesuré au
+> [module 7 du cours trading](../trading/07-le-stop-une-sortie-sans-verdict.md) : sur cinq ans,
+> **93 points** d'écart entre la même règle avec et sans stop suiveur.
+
+---
+
+## 7.7 Tableau de synthèse
+
+|                         | Future CAC 40             | VAD SRD    | Put               | ETF $\times(-2)$                   | Stop à seuil      |
+| ----------------------- | ------------------------- | ---------- | ----------------- | ---------------------------------- | ----------------- |
+| Éligible PEA            | ❌                         | ❌          | ❌                 | ✅                                  | **✅**            |
+| Corrélation à l'indice  | Quasi parfaite            | Élevée     | Non linéaire      | Élevée à 1 jour, dérive ensuite    | *sans objet*      |
+| Granularité             | Grossière (78 000 €)      | Fine       | Moyenne           | **Fine**                           | **Totale**        |
+| Coût de portage         | Prime de risque seule     | 7 à 9 %/an | 2,5 à 14 %/an     | Drag $\propto L^2\sigma^2$ + frais | **Nul**           |
+| Appel de marge          | **Quotidien, en espèces** | Oui        | Non (prime payée) | Non                                | Non               |
+| Perte maximale          | Non bornée                | Non bornée | **Prime**         | Montant investi                    | **Non garantie**  |
+| Résiliable par un tiers | Non                       | **Oui**    | Non               | Non                                | Non               |
+| Conserve la hausse      | ❌                         | ❌          | **✅**             | ❌                                  | ❌                 |
 
 > 🔑 **Aucune ligne « meilleur choix ».** Le future est le plus propre et le plus exigeant en
 > trésorerie ; le put est le seul qui garde la hausse et le plus cher ; l'ETF inverse est le seul
 > accessible en PEA et le seul qui se dégrade tout seul ; la VAD est la seule qui couvre un risque
-> **spécifique** et la seule qu'un tiers peut fermer.
+> **spécifique** et la seule qu'un tiers peut fermer ; le stop est le seul gratuit, le
+> seul universel — et le seul dont la ligne « perte maximale » ne contient **aucun nombre**.
 
 ---
 
-## 7.7 Et la couverture partielle ?
+## 7.8 Et la couverture partielle ?
 
 Rien n'oblige à prendre $h=h^\star$. La forme canonique du [§ 6.1](06-la-couverture-optimale.md)
 chiffre exactement ce que coûte un $h$ plus faible :
@@ -157,7 +218,7 @@ soit **75 % de la réduction de variance** obtenue pour la moitié du coût.
 
 ---
 
-## 7.8 Simulation
+## 7.9 Simulation
 
 ### S7.1 — Le prix de l'assurance et le drag de l'ETF inverse
 
@@ -200,7 +261,7 @@ départ » où l'ETF perd 5 à 7 % pour un indice inchangé.
 
 ---
 
-## 7.9 Exercices
+## 7.10 Exercices
 
 **E7.1.** Vérifier que $F=Se^{(r-q)T}$ implique qu'une couverture par future ne coûte **pas** le
 dividende. *Où est-il passé ?*
@@ -210,7 +271,7 @@ un mois. *Quelle marge de variation faut-il avoir provisionnée ? Le portefeuill
 est-ce un problème ?*
 
 **E7.3.** Comparer, sur une baisse de 25 % puis un retour au point de départ en un an, les quatre
-instruments du § 7.6. *Lequel a le meilleur résultat final ? Lequel a le meilleur résultat au
+instruments du § 7.7. *Lequel a le meilleur résultat final ? Lequel a le meilleur résultat au
 creux ?*
 
 **E7.4.** Montrer que le coût annualisé d'un put à la monnaie roulé varie comme $1/\sqrt T$.
@@ -225,7 +286,7 @@ continu. *Comparer à $-2$ fois la performance de l'indice, et décomposer l'éc
 
 ---
 
-## 7.10 À retenir
+## 7.11 À retenir
 
 - **Le future est l'instrument de référence** : corrélation quasi parfaite, pas de dividende à
   payer, **non résiliable par un tiers**. Ses défauts sont la granularité (78 000 €) et la marge
@@ -238,6 +299,9 @@ continu. *Comparer à $-2$ fois la performance de l'indice, et décomposer l'éc
 - ⭐ **L'ETF inverse est le seul outil de couverture en PEA**, et sa mécanique de rebalancement
   quotidien lui fait perdre 5 à 7 % sur un aller-retour d'indice. Instrument **tactique**, jamais
   permanent.
+- ⭐ **Le stop ne coûte rien et ne garantit rien** : il déclenche à un seuil et s'exécute au
+  premier cours coté — jusqu'à $5\,\%$ plus bas sur les cas mesurés. Il ne couvre pas la
+  position, il la **ferme**, et abandonne la hausse avec elle.
 - **Aucun instrument n'est neutre** : chacun échange le risque couvert contre un risque de
   trésorerie, de contrepartie, de chemin, ou de prime payée.
 - **La couverture partielle est souvent le bon compromis** : coût linéaire, risque quadratique.

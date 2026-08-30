@@ -52,10 +52,10 @@ Deux conséquences qu'il faut accepter d'emblée :
 | **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 26 | ≈ 27 h 30 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, modèle, canal, encadrement | 27 | ≈ 38 h |
-| **4** | La décision | alpha, fondamentaux, trading, finance | 25 | ≈ 27 h 15 |
-| | | **10 cours** | **104** | **≈ 125 h** |
+| **4** | La décision | alpha, fondamentaux, trading, finance | 27 | ≈ 29 h 45 |
+| | | **10 cours** | **106** | **≈ 127 h** |
 
-> ℹ️ **Le nombre de modules est presque constant — 26, 26, 27, 25 — mais pas le
+> ℹ️ **Le nombre de modules est presque constant — 26, 26, 27, 27 — mais pas le
 > volume.** Le semestre 3 est le plus dense, parce que la loi de Student pèse
 > 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
@@ -140,8 +140,8 @@ longue, de ce qu'on n'a pas le droit de conclure.
 |---|---|---|---|
 | 1 | [L'alpha](concept/semestre4/alpha/README.md) | 5 | 5 h |
 | 2 | [Les fondamentaux](concept/semestre4/fondamentaux/README.md) | 5 | 5 h |
-| 3 | [De la figure à la décision](concept/semestre4/trading/README.md) | 5 | 5 h |
-| 4 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 15 |
+| 3 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
+| 4 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
 
 L'alpha d'abord : le cours fondamentaux s'appuie sur son module 4, et le cours
 trading sur ses modules 2 à 4. La finance en dernier — c'est le seul cours qui

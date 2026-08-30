@@ -107,6 +107,11 @@ elles sont procédurales, pas mathématiques :
 3. **Ne jamais réajuster un seuil après avoir vu le verdict** — un seuil déplacé
    pour changer un verdict n'est plus une règle, c'est une opinion habillée.
 
+> ⚠️ **Un degré de liberté manque à ce compte : la cadence**, c'est-à-dire la
+> suite des dates auxquelles la règle est évaluée. Elle n'apparaît nulle part au
+> § 3.2, et le [module 5](05-la-cadence-fait-partie-de-la-regle.md) la chiffre : à règle strictement identique, huit
+> cadences séparent leurs résultats de **122 points**.
+
 ## 3.6 — Ce que la règle donne appliquée tous les jours
 
 Une règle ne se juge pas sur une date. Appliquons-la à Airbus contre le CAC 40 à
