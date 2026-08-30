@@ -32,7 +32,7 @@ from pathlib import Path
 import pandas as pd
 import yfinance as yf
 
-REPERTOIRE_DEFAUT = Path("docs/raw/fondamentaux")
+REPERTOIRE_DEFAUT = Path("docs/raw/data/fondamentaux")
 DECALAGE_DEFAUT = 75
 LIMITE_ANNONCES = 100  # plafond impose par la source : au-dela, ValueError
 

@@ -79,7 +79,7 @@ python python/evaluer_portefeuille.py AIR.PA OR.PA MC.PA --indice TR10
 
 Mêmes règles que
 [`evaluer_portefeuille.py`](evaluer_portefeuille.md) § 1 : lecture depuis
-`docs/raw/quotes/`, **contrôle de couverture** de la période demandée, et
+`docs/raw/data/quotes/`, **contrôle de couverture** de la période demandée, et
 alignement sur les dates communes. Une valeur dont le CSV est trop court est
 traitée comme manquante, avec la commande à lancer.
 
@@ -131,7 +131,7 @@ dividende.
 
 ### 5. Écriture
 
-Un CSV dans `docs/raw/quotes/{nom}_{debut}_{fin}.csv`, colonnes `Date` et
+Un CSV dans `docs/raw/data/quotes/{nom}_{debut}_{fin}.csv`, colonnes `Date` et
 `Close`, afin que
 [`evaluer_portefeuille.py`](evaluer_portefeuille.md) et
 [`import_societe.py`](import_societe.md) le lisent sans modification. Le
@@ -152,7 +152,7 @@ Indice TR10 · 10 valeurs · ponderation egale · rebalancement annuel
   ^FCHI  (nu)               CAGR mesure a l'execution
   ecart                     dividendes + composition + ponderation
 
-  Ecrit dans : docs/raw/quotes/TR10_2001-09-04_2025-12-31.csv
+  Ecrit dans : docs/raw/data/quotes/TR10_2001-09-04_2025-12-31.csv
 ```
 
 ### 7. Cas limites
@@ -186,7 +186,7 @@ Indice TR10 · 10 valeurs · ponderation egale · rebalancement annuel
 
 - `BASE = 1000.0` — valeur initiale de l'indice.
 - `SEANCES_MINIMALES = 250`, `VALEURS_MINIMALES = 2`.
-- `REPERTOIRE_QUOTES = Path("docs/raw/quotes")`.
+- `REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")`.
 - `JOURS_AN = 252`.
 
 Chemins **relatifs** au répertoire courant : lancer le script depuis la racine du

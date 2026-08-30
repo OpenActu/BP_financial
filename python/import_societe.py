@@ -14,7 +14,7 @@ Utilisation :
     python python/import_societe.py AIR.PA --alpha 0.01   # test plus exigeant
 
 L'historique est toujours enregistré en CSV. Sans --csv, le fichier
-est écrit dans docs/raw/quotes/, sous un nom dérivé du ticker et de la
+est écrit dans docs/raw/data/quotes/, sous un nom dérivé du ticker et de la
 plage de dates (le répertoire est créé si besoin).
 
 Les valeurs françaises de la place de Paris se terminent par le suffixe ".PA".
@@ -29,7 +29,7 @@ from pathlib import Path
 
 import yfinance as yf
 
-REPERTOIRE_CSV_DEFAUT = Path("docs/raw/quotes")
+REPERTOIRE_CSV_DEFAUT = Path("docs/raw/data/quotes")
 
 
 def _beta_incomplete_reg(x, a, b):
@@ -140,7 +140,7 @@ def main():
         "--csv",
         help=(
             "Chemin du fichier CSV de sortie. Par défaut : "
-            "docs/raw/quotes/{ticker}_{debut}_{fin}.csv"
+            "docs/raw/data/quotes/{ticker}_{debut}_{fin}.csv"
         ),
     )
     args = parser.parse_args()

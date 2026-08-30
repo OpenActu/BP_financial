@@ -93,7 +93,7 @@ tard. C'est un test réussi au sens strict. (Le repli de 2020, $-64{,}7\,\%$, a 
 
 ## 4. Ce que tu peux mesurer, et ce que tu ne peux pas
 
-**Calculable depuis `docs/raw/quotes/`** — produit par
+**Calculable depuis `docs/raw/data/quotes/`** — produit par
 [`python/import_societe.py`](../../python/import_societe.md), lis son miroir avant
 de te servir d'une colonne :
 

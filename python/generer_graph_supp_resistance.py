@@ -23,8 +23,8 @@ from pathlib import Path
 
 import pandas as pd
 
-REPERTOIRE_QUOTES = Path("docs/raw/quotes")
-REPERTOIRE_GRAPHS = Path("docs/raw/graphs")
+REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")
+REPERTOIRE_GRAPHS = Path("docs/raw/data/graphs")
 ECART_EPISODE = 3
 BLOC_MINIMAL = 40
 
@@ -265,7 +265,9 @@ def main():
         description="Trace un cours et son encadrement support/résistance en SVG "
         "(clôtures uniquement)."
     )
-    parser.add_argument("--csv", help="CSV d'entrée (défaut : le plus récent de docs/raw/quotes/)")
+    parser.add_argument(
+        "--csv", help="CSV d'entrée (défaut : le plus récent de docs/raw/data/quotes/)"
+    )
     parser.add_argument("--bloc", type=int, default=120, help="Longueur des blocs (défaut : 120)")
     parser.add_argument(
         "--fenetre", type=int, default=120, help="Fenêtre active ancrée à droite (défaut : 120)"

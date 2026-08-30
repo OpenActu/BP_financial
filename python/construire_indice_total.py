@@ -27,7 +27,7 @@ import statistics
 import sys
 from pathlib import Path
 
-REPERTOIRE_QUOTES = Path("docs/raw/quotes")
+REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")
 BASE = 1000.0
 SEANCES_MINIMALES = 250
 VALEURS_MINIMALES = 2
@@ -163,7 +163,7 @@ def main():
         manquants.remove(args.comparer)
         series.pop(args.comparer, None)
     if manquants:
-        print("Series absentes de docs/raw/quotes/ :", file=sys.stderr)
+        print("Series absentes de docs/raw/data/quotes/ :", file=sys.stderr)
         for t in manquants:
             g = "'" if t.startswith("^") else ""
             print(f"  python python/import_societe.py {g}{t}{g}", file=sys.stderr)

@@ -30,7 +30,7 @@ et ce que ce verdict ne couvre pas. La décision appartient à celui qui la pren
 
 ## Sources et outillage
 
-- **Données** : `docs/raw/quotes/{TICKER}_{debut}_{fin}.csv`, produits par
+- **Données** : `docs/raw/data/quotes/{TICKER}_{debut}_{fin}.csv`, produits par
   `python/import_societe.py` — lis son miroir
   [`python/import_societe.md`](../../python/import_societe.md) avant de te servir
   d'une colonne.
@@ -38,7 +38,7 @@ et ce que ce verdict ne couvre pas. La décision appartient à celui qui la pren
   (SBF 120), `^STOXX50E` (Euro Stoxx 50). Récupère-les avec le même script :
   `python python/import_societe.py '^FCHI' --debut AAAA-MM-JJ --fin AAAA-MM-JJ`
   — **guillemets obligatoires**, le `^` est un métacaractère du shell.
-- **Fondamentaux et carnet** : `docs/raw/fondamentaux/fondamentaux_{date}.csv`,
+- **Fondamentaux et carnet** : `docs/raw/data/fondamentaux/fondamentaux_{date}.csv`,
   produit par `python/import_fondamentaux.py AIR.PA MC.PA` — PER, P/B, VE/EBITDA,
   rendement du FCF, ROE, marges, dette/EBITDA, capitalisation, flottant, et la
   limite 1 du carnet. Lis son miroir
@@ -46,7 +46,7 @@ et ce que ce verdict ne couvre pas. La décision appartient à celui qui la pren
   ce que la source **ne** donne pas, à commencer par la profondeur du carnet.
 - **Historique des fondamentaux** : deux voies, et il faut dire laquelle tu
   utilises. `import_fondamentaux.py --archiver` empile les relevés du jour dans
-  `docs/raw/fondamentaux/archive.csv` — dates **observées**, mais série qui part
+  `docs/raw/data/fondamentaux/archive.csv` — dates **observées**, mais série qui part
   de zéro. `python/reconstituer_fondamentaux.py AIR.PA` reconstitue **3 à 4 ans**
   en datant chaque exercice par sa publication réelle
   ([`miroir`](../../python/reconstituer_fondamentaux.md)) — vérifie toujours la

@@ -27,7 +27,7 @@ convexe selon la méthode du cours
 
 ```bash
 python python/generer_graph_supp_resistance.py
-python python/generer_graph_supp_resistance.py --csv docs/raw/quotes/AIR_PA_2020-01-02_2023-12-29.csv
+python python/generer_graph_supp_resistance.py --csv docs/raw/data/quotes/AIR_PA_2020-01-02_2023-12-29.csv
 python python/generer_graph_supp_resistance.py --bloc 60 --fenetre 60
 python python/generer_graph_supp_resistance.py --sans-blocs --sortie /tmp/airbus.svg
 ```
@@ -36,12 +36,12 @@ python python/generer_graph_supp_resistance.py --sans-blocs --sortie /tmp/airbus
 
 | Argument | Défaut | Rôle |
 |---|---|---|
-| `--csv` | le fichier le plus récent de `docs/raw/quotes/` | Chemin du CSV d'entrée. Doit contenir les colonnes `Date` et `Close`. |
+| `--csv` | le fichier le plus récent de `docs/raw/data/quotes/` | Chemin du CSV d'entrée. Doit contenir les colonnes `Date` et `Close`. |
 | `--bloc` | `120` | Longueur des blocs de segmentation, en séances (§ 4). |
 | `--fenetre` | `120` | Longueur de la fenêtre active, ancrée à droite (§ 5). |
 | `--tolerance` | `0.25` | Tolérance de contact, en multiples de $\sigma_{\text{Close}}$ de la fenêtre (§ 3). |
 | `--sans-blocs` | — | Ne trace que le canal actif, sans les droites par bloc. |
-| `--sortie` | `docs/raw/graphs/{nom_du_csv}_supp_resistance.svg` | Chemin du SVG produit (répertoire créé si besoin). |
+| `--sortie` | `docs/raw/data/graphs/{nom_du_csv}_supp_resistance.svg` | Chemin du SVG produit (répertoire créé si besoin). |
 | `--titre` | le ticker, dérivé du nom du CSV | Titre inscrit dans le SVG. Par défaut, la partie du nom de fichier précédant la première date, `_` remplacé par `.` : `AIR_PA_2020-01-02_2023-12-29.csv` donne `AIR.PA`. |
 
 ## Déroulé d'exécution
@@ -49,8 +49,8 @@ python python/generer_graph_supp_resistance.py --sans-blocs --sortie /tmp/airbus
 ### 1. Lecture des arguments et du CSV
 
 `argparse` analyse la ligne de commande. Sans `--csv`, le script prend le fichier
-`*.csv` le plus récemment modifié de `docs/raw/quotes/` ; s'il n'y en a aucun :
-message `Aucun CSV dans docs/raw/quotes/.` sur `stderr` et **sortie 1**.
+`*.csv` le plus récemment modifié de `docs/raw/data/quotes/` ; s'il n'y en a aucun :
+message `Aucun CSV dans docs/raw/data/quotes/.` sur `stderr` et **sortie 1**.
 
 Le CSV est lu avec `pandas`, seules les colonnes `Date` et `Close` sont
 conservées. Les dates sont tronquées au jour (`AAAA-MM-JJ`), le fuseau horaire de
@@ -209,8 +209,8 @@ Largeur $3{,}39$ € soit $2{,}6\,\%$ ; contrôle de non-traversée : 0 des deux
 
 ## Constantes
 
-- `REPERTOIRE_QUOTES = Path("docs/raw/quotes")` — source par défaut.
-- `REPERTOIRE_GRAPHS = Path("docs/raw/graphs")` — destination par défaut, exclue
+- `REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")` — source par défaut.
+- `REPERTOIRE_GRAPHS = Path("docs/raw/data/graphs")` — destination par défaut, exclue
   du suivi git : un SVG est une sortie régénérable, pas une source.
 - `ECART_EPISODE = 3` — séances séparant deux épisodes de contact.
 - `BLOC_MINIMAL = 40` — en deçà, le dernier bloc est fusionné avec le précédent.

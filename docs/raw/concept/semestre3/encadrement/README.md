@@ -83,7 +83,7 @@ support y passe exactement par la dernière clôture, artefact décrit au
 ## Le fil rouge chiffré
 
 Tous les modules travaillent sur la même série : les **1027 clôtures d'Airbus**
-de janvier 2020 à décembre 2023, `docs/raw/quotes/AIR_PA_2020-01-02_2023-12-29.csv`.
+de janvier 2020 à décembre 2023, `docs/raw/data/quotes/AIR_PA_2020-01-02_2023-12-29.csv`.
 Contrairement au cours canal, on utilise ici `High` et `Low`, pas seulement `Close` :
 une résistance se construit sur les plus-hauts de séance. La figure ci-dessus fait
 exception — le script ne lit que les clôtures — d'où l'écart chiffré au § précédent.

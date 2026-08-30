@@ -33,8 +33,8 @@ python python/import_societe.py AIR.PA  --debut 2019-01-02 --fin 2021-01-01
 python python/import_societe.py '^FCHI' --debut 2019-01-02 --fin 2021-01-01
 
 python python/generer_graph_decision.py \
-  --csv docs/raw/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
-  --indice 'docs/raw/quotes/^FCHI_2019-01-02_2020-12-31.csv' \
+  --csv docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
+  --indice 'docs/raw/data/quotes/^FCHI_2019-01-02_2020-12-31.csv' \
   --date 2021-01-01
 ```
 

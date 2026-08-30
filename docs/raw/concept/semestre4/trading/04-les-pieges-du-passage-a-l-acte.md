@@ -30,10 +30,10 @@ Deuxième porte, purement technique et redoutablement efficace :
 
 ```bash
 python python/import_societe.py AIR.PA --debut 2019-01-02 --fin 2020-12-31
-# -> docs/raw/quotes/AIR_PA_2019-01-02_2020-12-30.csv     512 séances
+# -> docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-30.csv     512 séances
 
 python python/import_societe.py AIR.PA --debut 2019-01-02 --fin 2021-01-01
-# -> docs/raw/quotes/AIR_PA_2019-01-02_2020-12-31.csv     513 séances
+# -> docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-31.csv     513 séances
 ```
 
 `--fin` est transmis à `history(end=...)` de yfinance, où la borne est
