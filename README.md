@@ -19,7 +19,7 @@ Les tickers de la place de Paris se terminent par `.PA` :
 | Sanofi        | `SAN.PA` |
 | BNP Paribas   | `BNP.PA` |
 
-Le script affiche les séances (Open / High / Low / Close / Volume) ainsi que la variation sur la période, puis enregistre systématiquement l'historique en CSV. Sans `--csv`, le fichier est écrit dans `docs/raw/quotes/` sous un nom dérivé du ticker et de la plage de dates (le répertoire est créé automatiquement).
+Le script affiche les séances (Open / High / Low / Close / Volume) ainsi que la variation sur la période, puis enregistre systématiquement l'historique en CSV. Sans `--csv`, le fichier est écrit dans `docs/raw/data/quotes/` sous un nom dérivé du ticker et de la plage de dates (le répertoire est créé automatiquement).
 
 Pour une plage de dates précise, utiliser `--debut` et `--fin` (format `AAAA-MM-JJ`) à la place de `--periode` :
 

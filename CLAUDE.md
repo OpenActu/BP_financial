@@ -13,7 +13,7 @@ convention dans toute modification.
 
 Deux choses, également importantes :
 
-1. **Neuf utilitaires Python en ligne de commande** qui récupèrent et analysent
+1. **Dix utilitaires Python en ligne de commande** qui récupèrent et analysent
    des données de la Bourse de Paris. Pas de paquet, pas de tests, pas de
    `__init__.py` — chaque script se lance depuis la racine du dépôt.
 2. **Un cours en quatre semestres**, dans `docs/raw/concept/`, qui démontre tout
@@ -42,11 +42,11 @@ aligner le script dessus. Jamais l'inverse.
 La skill `/python-sync` détecte les markdown modifiés et répercute les
 changements dans les scripts correspondants.
 
-## Les neuf scripts
+## Les dix scripts
 
 | Script | Ce qu'il produit |
 |---|---|
-| `import_societe.py` | OHLCV + indicateurs glissants + test de tendance → `docs/raw/quotes/` |
+| `import_societe.py` | OHLCV + indicateurs glissants + test de tendance → `docs/raw/data/quotes/` |
 | `import_fondamentaux.py` | ratios **du jour** + limite 1 du carnet ; `--archiver` empile dans `archive.csv` |
 | `reconstituer_fondamentaux.py` | ratios **point-in-time** sur 3 à 4 ans, chaque exercice daté par sa publication |
 | `import_dividendes.py` | dividendes et divisions depuis `bnains.org`, confrontés à yfinance |
@@ -55,6 +55,7 @@ changements dans les scripts correspondants.
 | `couts_transaction.py` | coût d'exécution d'une règle, et l'alpha qu'il faudrait pour le couvrir |
 | `evaluer_portefeuille.py` | alpha d'un **panier** contre son indice, coûts et biais d'indice nu compris |
 | `construire_indice_total.py` | un indice de référence **en rendement total**, à partir de composants déclarés |
+| `dimensionner_exposition.py` | levier admissible, drag et barrière — et **le rendement qu'il faudrait** pour justifier chaque levier |
 
 **Lire le miroir avant de modifier un script.** Il contient les formules, les
 conventions et les pièges déjà rencontrés.
@@ -121,11 +122,15 @@ coup, pour un gain nul.
 
 ### Ce qui est suivi par git, et ce qui ne l'est pas
 
-`docs/raw/quotes/`, `docs/raw/graphs/`, les CSV du jour de `docs/raw/fondamentaux/`
-et le cache HTML de `docs/raw/dividendes/` sont **exclus** : ils se régénèrent
-d'un appel.
+**Toutes les données produites par les scripts vivent sous `docs/raw/data/`** —
+`quotes/`, `graphs/`, `fondamentaux/`, `dividendes/`. `docs/raw/` ne contient donc
+plus que le cours (`concept/`, `planning.md`, `modele.md`) et ce répertoire.
 
-> ⚠️ **`docs/raw/fondamentaux/archive.csv` est la seule donnée du dépôt qui ne se
+`docs/raw/data/quotes/`, `docs/raw/data/graphs/`, les CSV du jour de
+`docs/raw/data/fondamentaux/` et le cache HTML de `docs/raw/data/dividendes/` sont
+**exclus** : ils se régénèrent d'un appel.
+
+> ⚠️ **`docs/raw/data/fondamentaux/archive.csv` est la seule donnée du dépôt qui ne se
 > régénère pas.** Le `.gitignore` l'excepte explicitement. Ne jamais l'écraser :
 > le script n'y ajoute que des lignes, et refuse les doublons `(TICKER, DATE)`.
 
@@ -149,7 +154,7 @@ résolvent tous.
 ## Agents
 
 - `chartiste` (`.claude/agents/chartiste.md`) — lit la tendance d'une valeur à
-  partir d'un CSV de `docs/raw/quotes/` : droite ajustée, canal de régression,
+  partir d'un CSV de `docs/raw/data/quotes/` : droite ajustée, canal de régression,
   encadrement par enveloppe convexe, test de significativité, ruptures.
 - `trading` (`.claude/agents/trading.md`) — performance, alpha et bêta contre un
   indice de référence, techniques de sélection et ce qui est calculable ici,

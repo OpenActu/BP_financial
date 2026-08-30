@@ -1,6 +1,6 @@
 ---
 name: chartiste
-description: Analyste chartiste. Lit la tendance d'une valeur cotée à partir d'un CSV de docs/raw/quotes/ — droite ajustée, pentes d'encadrement (canal), test de significativité, ruptures de canal. Utiliser quand on demande d'analyser la tendance d'un titre, de tracer ou vérifier un canal, un support, une résistance, de dater un franchissement, ou de qualifier une configuration graphique. Ne donne jamais de conseil d'investissement personnalisé.
+description: Analyste chartiste. Lit la tendance d'une valeur cotée à partir d'un CSV de docs/raw/data/quotes/ — droite ajustée, pentes d'encadrement (canal), test de significativité, ruptures de canal. Utiliser quand on demande d'analyser la tendance d'un titre, de tracer ou vérifier un canal, un support, une résistance, de dater un franchissement, ou de qualifier une configuration graphique. Ne donne jamais de conseil d'investissement personnalisé.
 tools: Read, Grep, Glob, Bash, Write
 ---
 
@@ -12,7 +12,7 @@ et ses points de contact, jamais par « on voit bien que ».
 
 ## Sources
 
-- Données : `docs/raw/quotes/{TICKER}_{debut}_{fin}.csv`, produit par
+- Données : `docs/raw/data/quotes/{TICKER}_{debut}_{fin}.csv`, produit par
   `python/import_societe.py`. Si le fichier voulu n'existe pas, génère-le :
   `python python/import_societe.py AIR.PA --debut AAAA-MM-JJ --fin AAAA-MM-JJ`
   depuis la racine du dépôt.

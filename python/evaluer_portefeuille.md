@@ -62,7 +62,7 @@ python python/evaluer_portefeuille.py AIR.PA OR.PA --telecharger --csv resultat.
 
 ### 1. Les séries
 
-Chaque valeur est lue dans `docs/raw/quotes/{TICKER}_*.csv`, le fichier le plus
+Chaque valeur est lue dans `docs/raw/data/quotes/{TICKER}_*.csv`, le fichier le plus
 récent couvrant la période. **Aucune série n'est téléchargée par défaut** : si une
 manque, le script affiche la commande `import_societe.py` exacte qui la produit,
 puis **sort en 1**. `--telecharger` lève cette exigence.
@@ -240,7 +240,7 @@ Panier equipondere
 
 ## Fonctions internes
 
-- `charger(ticker, telecharger)` — la série de clôtures, depuis `docs/raw/quotes/`
+- `charger(ticker, telecharger)` — la série de clôtures, depuis `docs/raw/data/quotes/`
   ou téléchargée.
 - `aligner(series)` — l'intersection des dates.
 - `serie_panier(rendements, rebalancements, couts_unitaires)` — le § 2 et le § 3 ;
@@ -256,7 +256,7 @@ Panier equipondere
 - `SEANCES_MINIMALES = 60`.
 - `JOURS_AN = 252`.
 - `REBALANCEMENTS` — la correspondance nom → périodicité.
-- `REPERTOIRE_QUOTES = Path("docs/raw/quotes")`.
+- `REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")`.
 
 Chemins **relatifs** au répertoire courant : lancer le script depuis la racine du
 dépôt.

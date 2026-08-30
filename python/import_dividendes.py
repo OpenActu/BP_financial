@@ -40,7 +40,7 @@ from pathlib import Path
 BASE = "https://www.bnains.org/archives/action.php"
 AGENT = "BP_financial/1.0 (script de recherche personnel)"
 DELAI_MINIMAL = 1.0
-REPERTOIRE_DEFAUT = Path("docs/raw/dividendes")
+REPERTOIRE_DEFAUT = Path("docs/raw/data/dividendes")
 
 ENTETE_ATTENDUE = [
     "Date annonce",

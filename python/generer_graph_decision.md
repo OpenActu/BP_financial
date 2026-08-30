@@ -39,8 +39,8 @@ est calculé par le script, jamais saisi à la main.
 
 ```bash
 python python/generer_graph_decision.py
-python python/generer_graph_decision.py --csv docs/raw/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
-                                        --indice docs/raw/quotes/^FCHI_2019-01-02_2020-12-31.csv
+python python/generer_graph_decision.py --csv docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
+                                        --indice docs/raw/data/quotes/^FCHI_2019-01-02_2020-12-31.csv
 python python/generer_graph_decision.py --date 2020-12-31 --fenetre 120
 python python/generer_graph_decision.py --sans-indice --sortie /tmp/decision.svg
 ```
@@ -49,13 +49,13 @@ python python/generer_graph_decision.py --sans-indice --sortie /tmp/decision.svg
 
 | Argument | Défaut | Rôle |
 |---|---|---|
-| `--csv` | le fichier le plus récent de `docs/raw/quotes/` dont le nom ne commence pas par `^` | CSV de la valeur. Colonnes requises : `Date`, `High`, `Low`, `Close`, `TEND_20`, `TEND_120`. |
+| `--csv` | le fichier le plus récent de `docs/raw/data/quotes/` dont le nom ne commence pas par `^` | CSV de la valeur. Colonnes requises : `Date`, `High`, `Low`, `Close`, `TEND_20`, `TEND_120`. |
 | `--indice` | — | CSV de l'indice de référence, pour le critère 4. |
 | `--sans-indice` | — | Ne pas calculer le critère 4. Incompatible avec `--indice`. |
 | `--date` | la dernière séance du CSV | Séance de décision `AAAA-MM-JJ`. Si la date n'est pas une séance, le script recule à la dernière séance disponible **avant ou à** cette date, et le signale (§ 2). |
 | `--fenetre` | `120` | Longueur de la fenêtre active, ancrée à la séance de décision (§ 3). |
 | `--tolerance` | `0.25` | Tolérance de contact, en multiples de $\sigma_{\text{Close}}$ de la fenêtre. |
-| `--sortie` | `docs/raw/graphs/{nom_du_csv}_decision.svg` | Chemin du SVG produit (répertoire créé si besoin). |
+| `--sortie` | `docs/raw/data/graphs/{nom_du_csv}_decision.svg` | Chemin du SVG produit (répertoire créé si besoin). |
 | `--titre` | `{ticker} — les cinq critères au {date de décision}` | Titre inscrit dans le SVG. Le ticker est dérivé du nom de fichier, `_` remplacé par `.`. |
 
 ## Déroulé d'exécution
@@ -63,7 +63,7 @@ python python/generer_graph_decision.py --sans-indice --sortie /tmp/decision.svg
 ### 1. Lecture des arguments et des CSV
 
 `argparse` analyse la ligne de commande. Sans `--csv`, le script prend le fichier
-`*.csv` le plus récemment modifié de `docs/raw/quotes/` **dont le nom ne commence
+`*.csv` le plus récemment modifié de `docs/raw/data/quotes/` **dont le nom ne commence
 pas par `^`** — sans quoi le CSV d'un indice serait pris pour une valeur.
 
 Chaque CSV est lu avec `pandas`. Les dates sont tronquées au jour (`AAAA-MM-JJ`),
@@ -328,8 +328,8 @@ veto 3.
 
 ## Constantes
 
-- `REPERTOIRE_QUOTES = Path("docs/raw/quotes")` — source par défaut.
-- `REPERTOIRE_GRAPHS = Path("docs/raw/graphs")` — destination par défaut, exclue
+- `REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")` — source par défaut.
+- `REPERTOIRE_GRAPHS = Path("docs/raw/data/graphs")` — destination par défaut, exclue
   du suivi git : un SVG est une sortie régénérable, pas une source. La figure du
   cours, elle, est écrite explicitement dans
   `docs/raw/concept/semestre4/trading/figures/` et **est** suivie.

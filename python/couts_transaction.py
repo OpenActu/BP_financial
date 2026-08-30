@@ -29,7 +29,7 @@ import statistics
 import sys
 from pathlib import Path
 
-REPERTOIRE_QUOTES = Path("docs/raw/quotes")
+REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")
 SEUIL_TTF_MDS = 1.0
 PAYS_TTF = "France"
 COEFFICIENT_IMPACT = 0.5
@@ -80,7 +80,7 @@ def assujetti_ttf(ticker):
 
 
 def _csv_du_ticker(ticker):
-    """Le CSV le plus recent de docs/raw/quotes/ pour ce ticker, ou None."""
+    """Le CSV le plus recent de docs/raw/data/quotes/ pour ce ticker, ou None."""
     motif = f"{ticker.replace('.', '_')}_*.csv"
     fichiers = sorted(REPERTOIRE_QUOTES.glob(motif), key=lambda p: p.stat().st_mtime)
     return fichiers[-1] if fichiers else None
@@ -94,7 +94,7 @@ def impact_marche(ticker, montant, coefficient=COEFFICIENT_IMPACT):
     """
     chemin = _csv_du_ticker(ticker)
     if chemin is None:
-        return None, "aucun CSV dans docs/raw/quotes/"
+        return None, "aucun CSV dans docs/raw/data/quotes/"
 
     with chemin.open(encoding="utf-8") as f:
         lignes = list(csv.DictReader(f))

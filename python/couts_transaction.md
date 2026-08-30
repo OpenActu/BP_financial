@@ -112,7 +112,7 @@ où $Q$ est la taille de l'ordre en titres, $V$ le volume quotidien médian sur 
 an, $\sigma_{\text{jour}}$ la volatilité quotidienne des rendements, et $Y = 0{,}5$
 un coefficient conventionnel.
 
-$Q/V$ est lu depuis le CSV de `docs/raw/quotes/` s'il existe pour le ticker ;
+$Q/V$ est lu depuis le CSV de `docs/raw/data/quotes/` s'il existe pour le ticker ;
 sinon l'impact est **non calculé** et la colonne reste vide plutôt que d'être
 posée à zéro — un impact inconnu n'est pas un impact nul.
 
@@ -191,12 +191,12 @@ AIR.PA
 
 OR.PA
   TTF               : assujettie (France, capitalisation 206,9 Md)
-  Impact de marche  : non calcule — aucun CSV dans docs/raw/quotes/
+  Impact de marche  : non calcule — aucun CSV dans docs/raw/data/quotes/
   Aller-retour      : 0,530 % pour un ordre de 50 000 €
 
 ATO.PA
   TTF               : exemptee (capitalisation 0,6 Md < 1,0 Md)
-  Impact de marche  : non calcule — aucun CSV dans docs/raw/quotes/
+  Impact de marche  : non calcule — aucun CSV dans docs/raw/data/quotes/
   Aller-retour      : 0,230 % pour un ordre de 50 000 €
 ```
 
@@ -209,7 +209,7 @@ ATO.PA
 ### 7. Cas limites
 
 - **Aucun ticker** : mode barème, aucun appel réseau, aucun CSV lu.
-- **Ticker sans CSV dans `docs/raw/quotes/`** : impact non calculé, colonne vide,
+- **Ticker sans CSV dans `docs/raw/data/quotes/`** : impact non calculé, colonne vide,
   message sur `stderr`. Les autres termes restent valables.
 - **`country` ou `marketCap` absents** : assujettissement **indéterminé**, signalé
   comme tel. Le script ne tranche pas à la place de l'utilisateur, et retient la
@@ -239,7 +239,7 @@ ATO.PA
 - `SEUIL_TTF_MDS = 1.0` — le seuil de capitalisation, en milliards d'euros.
 - `PAYS_TTF = "France"` — le pays d'immatriculation assujetti.
 - `COEFFICIENT_IMPACT = 0.5` — le $Y$ de la loi en racine carrée.
-- `REPERTOIRE_QUOTES = Path("docs/raw/quotes")`.
+- `REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")`.
 
 Chemins **relatifs** au répertoire courant : lancer le script depuis la racine du
 dépôt.

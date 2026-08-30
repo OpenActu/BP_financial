@@ -7,7 +7,7 @@
 
 ## 9.0 — Les données
 
-Clôtures d'**Airbus (AIR.PA)** sur les 20 premières séances de 2020, colonne `Close` du fichier `docs/raw/quotes/AIR_PA_2020-01-02_2023-12-29.csv` produit par [`python/import_societe.py`](../../../../../python/import_societe.md). Les instants sont les rangs de séance, $T_i = i$ pour $i = 1,\dots,20$ — c'est bien le cas de l'[étape 6](06-instants-regulierement-espaces.md), et non les dates calendaires : les week-ends ne comptent pas.
+Clôtures d'**Airbus (AIR.PA)** sur les 20 premières séances de 2020, colonne `Close` du fichier `docs/raw/data/quotes/AIR_PA_2020-01-02_2023-12-29.csv` produit par [`python/import_societe.py`](../../../../../python/import_societe.md). Les instants sont les rangs de séance, $T_i = i$ pour $i = 1,\dots,20$ — c'est bien le cas de l'[étape 6](06-instants-regulierement-espaces.md), et non les dates calendaires : les week-ends ne comptent pas.
 
 > **Convention de l'exemple.** Les cours sont **arrondis au centime**, et *tous* les calculs ci-dessous portent sur ces valeurs arrondies, de sorte que chaque nombre soit reproductible à partir du tableau. Le § 9.9 mesure l'écart avec les colonnes que le script calcule sur les cours non arrondis.
 

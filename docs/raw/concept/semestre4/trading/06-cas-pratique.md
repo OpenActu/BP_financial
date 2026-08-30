@@ -17,9 +17,9 @@ python python/construire_indice_total.py AIR.PA MC.PA OR.PA SAN.PA TTE.PA \
 
 | Fichier produit | Séances | Plage |
 |---|---|---|
-| `docs/raw/quotes/AIR_PA_2019-01-02_2025-12-31.csv` | 1794 | 2019-01-02 → 2025-12-31 |
-| `docs/raw/quotes/^FCHI_2019-01-02_2025-12-31.csv` | 1793 | idem |
-| `docs/raw/quotes/TR10_2019-01-02_2025-12-30.csv` | 1792 | 2019-01-02 → 2025-12-30 |
+| `docs/raw/data/quotes/AIR_PA_2019-01-02_2025-12-31.csv` | 1794 | 2019-01-02 → 2025-12-31 |
+| `docs/raw/data/quotes/^FCHI_2019-01-02_2025-12-31.csv` | 1793 | idem |
+| `docs/raw/data/quotes/TR10_2019-01-02_2025-12-30.csv` | 1792 | 2019-01-02 → 2025-12-30 |
 
 **L'historique démarre en 2019 alors que la période de décision démarre en 2021**,
 et ce n'est pas un excès de zèle : le premier verdict du 4 janvier 2021 a besoin de
@@ -86,8 +86,8 @@ une date donnée, répété séance par séance :
 
 ```bash
 python python/generer_graph_decision.py \
-  --csv docs/raw/quotes/AIR_PA_2019-01-02_2025-12-31.csv \
-  --indice 'docs/raw/quotes/^FCHI_2019-01-02_2025-12-31.csv' \
+  --csv docs/raw/data/quotes/AIR_PA_2019-01-02_2025-12-31.csv \
+  --indice 'docs/raw/data/quotes/^FCHI_2019-01-02_2025-12-31.csv' \
   --date 2021-03-05
 ```
 

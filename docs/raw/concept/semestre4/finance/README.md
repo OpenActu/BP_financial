@@ -94,6 +94,7 @@ l'ordre** : chacun n'utilise que les précédents, et le module 6 exige d'avoir 
 | Le minimum vital, en 3 h | 3 → 4 → 6 |
 | Lire ce cours depuis un PEA | 1 → 4 → 8 → 9, puis § 7.5 |
 | **Voir à quoi tout cela sert** | **10 seul**, puis remonter aux modules qu'il cite |
+| Dimensionner sur une série réelle | § 3.5 → § 4.5, puis [`dimensionner_exposition.py`](../../../../../python/dimensionner_exposition.md) |
 | Poser un stop, et savoir ce qu'il coûte | § 3.5 → § 7.6, puis le [module 7 du cours trading](../trading/07-le-stop-une-sortie-sans-verdict.md) |
 
 ## Les six modules décisifs

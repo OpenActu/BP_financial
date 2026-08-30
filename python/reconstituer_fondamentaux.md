@@ -60,7 +60,7 @@ python python/reconstituer_fondamentaux.py AIR.PA --decalage 90
 | `--trimestriel` | — | Utilise les comptes **trimestriels** (6 périodes) au lieu des annuels (4 à 5). |
 | `--mensuel` | — | Ne garde que la **dernière séance de chaque mois**. Divise le volume par ~21. |
 | `--decalage` | `75` | Décalage de repli, en jours, quand aucune date de publication réelle n'est trouvée (§ 3). |
-| `--csv` | `docs/raw/fondamentaux/historique_{ticker}_{debut}_{fin}.csv` | Chemin de sortie (un fichier par ticker). |
+| `--csv` | `docs/raw/data/fondamentaux/historique_{ticker}_{debut}_{fin}.csv` | Chemin de sortie (un fichier par ticker). |
 
 ## Déroulé d'exécution
 
@@ -302,7 +302,7 @@ généraliser.
 
 ## Constantes
 
-- `REPERTOIRE_DEFAUT = Path("docs/raw/fondamentaux")`.
+- `REPERTOIRE_DEFAUT = Path("docs/raw/data/fondamentaux")`.
 - `DECALAGE_DEFAUT = 75` — jours, repli du § 3.
 - `LIMITE_ANNONCES = 100` — plafond imposé par la source à `get_earnings_dates`.
 - `POSTES` — la correspondance entre colonnes produites et libellés de lignes

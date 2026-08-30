@@ -105,8 +105,8 @@ Elle est produite par [`python/generer_graph_decision.py`](../../../../../python
 
 ```bash
 python python/generer_graph_decision.py \
-  --csv docs/raw/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
-  --indice 'docs/raw/quotes/^FCHI_2019-01-02_2020-12-31.csv' \
+  --csv docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
+  --indice 'docs/raw/data/quotes/^FCHI_2019-01-02_2020-12-31.csv' \
   --date 2021-01-01 \
   --sortie docs/raw/concept/semestre4/trading/figures/airbus-decision-2021-01-01.svg \
   --titre "Airbus — les cinq critères au 1er janvier 2021"

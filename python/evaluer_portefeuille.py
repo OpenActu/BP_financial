@@ -33,7 +33,7 @@ import statistics
 import sys
 from pathlib import Path
 
-REPERTOIRE_QUOTES = Path("docs/raw/quotes")
+REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")
 INDICE_DEFAUT = "^FCHI"
 SEANCES_MINIMALES = 60
 JOURS_AN = 252
@@ -73,7 +73,7 @@ def _csv_du_ticker(ticker):
 
 
 def _lire(chemin):
-    """Le dictionnaire {date: (cloture, dividende)} d'un CSV de docs/raw/quotes/."""
+    """Le dictionnaire {date: (cloture, dividende)} d'un CSV de docs/raw/data/quotes/."""
     with chemin.open(encoding="utf-8") as f:
         lignes = list(csv.DictReader(f))
     if not lignes:
@@ -94,7 +94,7 @@ def _lire(chemin):
 
 
 def charger(ticker, telecharger, debut, fin):
-    """La serie de clotures {date: cours}, depuis docs/raw/quotes/ ou telechargee.
+    """La serie de clotures {date: cours}, depuis docs/raw/data/quotes/ ou telechargee.
 
     Un CSV qui ne COUVRE PAS la periode demandee est traite comme manquant :
     sans ce controle, un fichier plus court tronquerait l'echantillon commun en
@@ -278,7 +278,7 @@ def main():
         else:
             series[t] = s
     if manquants:
-        print("Series absentes de docs/raw/quotes/ :", file=sys.stderr)
+        print("Series absentes de docs/raw/data/quotes/ :", file=sys.stderr)
         for t in manquants:
             guillemets = "'" if t.startswith("^") else ""
             print(

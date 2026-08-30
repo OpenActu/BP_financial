@@ -178,7 +178,7 @@ Colonnes affichées (celles réellement présentes, dans cet ordre) :
 L'export est **toujours** effectué.
 
 - Avec `--csv` : le chemin fourni est utilisé tel quel.
-- Sans `--csv` : `docs/raw/quotes/{ticker}_{debut}_{fin}.csv`, où les `.` du
+- Sans `--csv` : `docs/raw/data/quotes/{ticker}_{debut}_{fin}.csv`, où les `.` du
   ticker sont remplacés par `_` et où `debut`/`fin` sont les dates **réellement
   présentes** dans les données (`AAAA-MM-JJ`). Exemple : `AIR_PA_2023-01-03_2023-12-29.csv`.
 
@@ -188,7 +188,7 @@ non arrondies, l'index de dates en première colonne, les `NaN` en cellules vide
 
 Dernière ligne affichée : `Historique enregistré dans : {chemin}`.
 
-`docs/raw/quotes/` est exclu du suivi git (`.gitignore`) : les CSV sont des
+`docs/raw/data/quotes/` est exclu du suivi git (`.gitignore`) : les CSV sont des
 sorties régénérables, pas des sources.
 
 ## Codes de sortie
@@ -213,5 +213,5 @@ nécessaire pour la loi de Student, afin de ne dépendre que de `yfinance` :
 
 ## Constantes
 
-- `REPERTOIRE_CSV_DEFAUT = Path("docs/raw/quotes")` — chemin **relatif** au
+- `REPERTOIRE_CSV_DEFAUT = Path("docs/raw/data/quotes")` — chemin **relatif** au
   répertoire courant : lancer le script depuis la racine du dépôt.

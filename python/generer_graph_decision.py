@@ -9,8 +9,9 @@ Dépendances :
 
 Utilisation :
     python python/generer_graph_decision.py
-    python python/generer_graph_decision.py --csv docs/raw/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
-                                            --indice docs/raw/quotes/^FCHI_2019-01-02_2020-12-31.csv
+    python python/generer_graph_decision.py \
+        --csv docs/raw/data/quotes/AIR_PA_2019-01-02_2020-12-31.csv \
+        --indice docs/raw/data/quotes/^FCHI_2019-01-02_2020-12-31.csv
     python python/generer_graph_decision.py --date 2020-12-31 --fenetre 120
     python python/generer_graph_decision.py --sans-indice --sortie /tmp/decision.svg
 
@@ -29,8 +30,8 @@ from pathlib import Path
 
 import pandas as pd
 
-REPERTOIRE_QUOTES = Path("docs/raw/quotes")
-REPERTOIRE_GRAPHS = Path("docs/raw/graphs")
+REPERTOIRE_QUOTES = Path("docs/raw/data/quotes")
+REPERTOIRE_GRAPHS = Path("docs/raw/data/graphs")
 ECART_EPISODE = 3
 JOURS_AN = 252
 SEUIL_ACHAT = 35
@@ -423,7 +424,7 @@ def svg(dates, closes, actif, criteres, mot, vetos, meta, titre, largeur=1200, h
 
 
 def charger(chemin, colonnes):
-    """Lit un CSV de docs/raw/quotes/ et rend (dates AAAA-MM-JJ, colonnes demandées)."""
+    """Lit un CSV de docs/raw/data/quotes/ et rend (dates AAAA-MM-JJ, colonnes demandées)."""
     try:
         df = pd.read_csv(chemin)
     except OSError:
@@ -445,7 +446,7 @@ def main():
         "cinq critères et verdict de la règle."
     )
     parser.add_argument(
-        "--csv", help="CSV de la valeur (défaut : le plus récent de docs/raw/quotes/)"
+        "--csv", help="CSV de la valeur (défaut : le plus récent de docs/raw/data/quotes/)"
     )
     parser.add_argument("--indice", help="CSV de l'indice de référence, pour le critère 4")
     parser.add_argument("--sans-indice", action="store_true", help="Ne pas calculer le critère 4")
@@ -470,7 +471,7 @@ def main():
     else:
         candidats = [p for p in REPERTOIRE_QUOTES.glob("*.csv") if not p.name.startswith("^")]
         if not candidats:
-            print("Aucun CSV de valeur dans docs/raw/quotes/.", file=sys.stderr)
+            print("Aucun CSV de valeur dans docs/raw/data/quotes/.", file=sys.stderr)
             sys.exit(1)
         chemin_csv = max(candidats, key=lambda p: p.stat().st_mtime)
 

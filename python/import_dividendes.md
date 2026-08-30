@@ -72,7 +72,7 @@ python python/import_dividendes.py --toutes --delai 2
 | `--divisions` | — | Écrit aussi le tableau des divisions du nominal. |
 | `--delai` | `1.5` | Secondes d'attente entre deux requêtes. **Ne pas descendre en dessous de 1.** |
 | `--rafraichir` | — | Ignore le cache local et réinterroge la source. |
-| `--csv` | `docs/raw/dividendes/dividendes_{AAAA-MM-JJ}.csv` | Chemin de sortie. |
+| `--csv` | `docs/raw/data/dividendes/dividendes_{AAAA-MM-JJ}.csv` | Chemin de sortie. |
 
 ## Déroulé d'exécution
 
@@ -85,7 +85,7 @@ Le script interroge le serveur d'un tiers. Trois règles, non désactivables :
 - **un `User-Agent` explicite**, `BP_financial/1.0 (script de recherche
   personnel)`, qui identifie l'appelant au lieu de se faire passer pour un
   navigateur ;
-- **un cache local** dans `docs/raw/dividendes/cache/{codeISIN}.html`. Une page
+- **un cache local** dans `docs/raw/data/dividendes/cache/{codeISIN}.html`. Une page
   déjà téléchargée n'est **pas** redemandée, sauf `--rafraichir`. Le cache est
   exclu du suivi git ; les CSV produits, eux, sont suivis — ils évitent d'avoir
   à réinterroger la source.
@@ -190,7 +190,7 @@ Airbus Group (ex-EADS)                NL0000235190
       2005-05-16  source       —  yfinance   0.500  presente d'un seul cote
       2025-04-22  source   4.000  yfinance   3.000  ECART rapport 1.3333
 
-28 dividendes ecrits dans : docs/raw/dividendes/dividendes_2026-08-30.csv
+28 dividendes ecrits dans : docs/raw/data/dividendes/dividendes_2026-08-30.csv
 ```
 
 Sur une ancienne composante, le gain se voit d'un coup d'oeil :
@@ -240,7 +240,7 @@ avait effacés.
 - `BASE = "https://www.bnains.org/archives/action.php"`.
 - `AGENT = "BP_financial/1.0 (script de recherche personnel)"`.
 - `DELAI_MINIMAL = 1.0` — secondes, plancher non contournable.
-- `REPERTOIRE_DEFAUT = Path("docs/raw/dividendes")`, son sous-répertoire
+- `REPERTOIRE_DEFAUT = Path("docs/raw/data/dividendes")`, son sous-répertoire
   `cache/` étant exclu du suivi git.
 - `ENTETE_ATTENDUE` — les 9 libellés du § 2, source de vérité du contrôle.
 

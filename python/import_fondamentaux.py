@@ -34,7 +34,7 @@ from pathlib import Path
 
 import yfinance as yf
 
-REPERTOIRE_DEFAUT = Path("docs/raw/fondamentaux")
+REPERTOIRE_DEFAUT = Path("docs/raw/data/fondamentaux")
 ARCHIVE = REPERTOIRE_DEFAUT / "archive.csv"
 TYPES_SANS_FONDAMENTAUX = {"INDEX", "ETF", "CURRENCY", "MUTUALFUND"}
 
@@ -277,7 +277,7 @@ def main():
         "--csv",
         help=(
             "Chemin du fichier CSV de sortie. Par défaut : "
-            "docs/raw/fondamentaux/fondamentaux_{AAAA-MM-JJ}.csv"
+            "docs/raw/data/fondamentaux/fondamentaux_{AAAA-MM-JJ}.csv"
         ),
     )
     parser.add_argument(
@@ -293,7 +293,7 @@ def main():
     parser.add_argument(
         "--archiver",
         action="store_true",
-        help="Ajoute les lignes du jour a docs/raw/fondamentaux/archive.csv",
+        help="Ajoute les lignes du jour a docs/raw/data/fondamentaux/archive.csv",
     )
     args = parser.parse_args()
 

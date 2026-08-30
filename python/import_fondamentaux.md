@@ -67,10 +67,10 @@ comportement que `import_societe.py`, séparateur espace ou virgule.
 | Argument | Défaut | Rôle |
 |---|---|---|
 | `tickers` | — | Un ou plusieurs tickers Yahoo. Les valeurs de Paris portent le suffixe `.PA` (`AIR.PA`, `MC.PA`). |
-| `--csv` | `docs/raw/fondamentaux/fondamentaux_{AAAA-MM-JJ}.csv` | Chemin du CSV produit (répertoire créé si besoin). |
+| `--csv` | `docs/raw/data/fondamentaux/fondamentaux_{AAAA-MM-JJ}.csv` | Chemin du CSV produit (répertoire créé si besoin). |
 | `--json` | — | Écrit en plus un `.json` de même nom, contenant les valeurs **non arrondies** et les composants ayant servi aux calculs. |
 | `--sans-carnet` | — | N'interroge pas la limite 1 du carnet ; les six colonnes correspondantes restent vides. |
-| `--archiver` | — | Ajoute les lignes du jour a **l'archive** `docs/raw/fondamentaux/archive.csv` (§ 5.1). |
+| `--archiver` | — | Ajoute les lignes du jour a **l'archive** `docs/raw/data/fondamentaux/archive.csv` (§ 5.1). |
 
 ## Déroulé d'exécution
 
@@ -182,13 +182,13 @@ accents), séparateur virgule, une ligne par ticker, colonnes dans l'ordre des
 tableaux du § 3. Les valeurs manquantes sont écrites **vides**, jamais `nan`,
 `None` ou `0`.
 
-Le répertoire par défaut `docs/raw/fondamentaux/` est **exclu du suivi git**, au
-même titre que `docs/raw/quotes/` : ces données sont régénérables et datées du
+Le répertoire par défaut `docs/raw/data/fondamentaux/` est **exclu du suivi git**, au
+même titre que `docs/raw/data/quotes/` : ces données sont régénérables et datées du
 jour de l'appel.
 
 ### 5.1 — L'archive, la seule donnée qui ne se régénère pas
 
-`--archiver` **ajoute** les lignes du jour à `docs/raw/fondamentaux/archive.csv`,
+`--archiver` **ajoute** les lignes du jour à `docs/raw/data/fondamentaux/archive.csv`,
 mêmes colonnes que le CSV du jour. Le fichier est créé avec son en-tête s'il
 n'existe pas.
 
@@ -203,7 +203,7 @@ non une date reconstituée — contrairement à celles de
 > le seul qui soit suivi par git.** Tout le reste — cours, graphiques, CSV du
 > jour — se reconstruit d'un appel. Une archive perdue est perdue pour de bon :
 > c'est pourquoi `.gitignore` l'excepte explicitement de l'exclusion de
-> `docs/raw/fondamentaux/`.
+> `docs/raw/data/fondamentaux/`.
 
 **Doublons.** Le script refuse d'écrire une ligne dont le couple
 `(TICKER, DATE)` figure déjà dans l'archive, et le signale sans erreur :
@@ -295,7 +295,7 @@ entier dans le CSV.
 
 ## Constantes
 
-- `REPERTOIRE_DEFAUT = Path("docs/raw/fondamentaux")` — destination par défaut,
+- `REPERTOIRE_DEFAUT = Path("docs/raw/data/fondamentaux")` — destination par défaut,
   exclue du suivi git.
 - `TYPES_SANS_FONDAMENTAUX = {"INDEX", "ETF", "CURRENCY", "MUTUALFUND"}`.
 - `COLONNES` — l'ordre exact des colonnes du CSV, unique source de vérité pour
