@@ -55,6 +55,7 @@ python python/evaluer_portefeuille.py AIR.PA OR.PA --telecharger --csv resultat.
 | `--rebalancement` | `mensuel` | `quotidien`, `mensuel`, `trimestriel`, `annuel` ou `aucun`. |
 | `--telecharger` | — | Récupère les séries manquantes au lieu d'échouer (§ 1). |
 | `--sans-couts` | — | N'applique aucun coût. Le résultat est alors **brut**, et dit comme tel. |
+| `--indice-total` | — | Déclare que l'indice est **en rendement total** : la correction du § 4bis est désactivée. |
 | `--csv` | — | Écrit le tableau titre par titre et la ligne du panier. |
 
 ## Déroulé d'exécution
@@ -144,6 +145,21 @@ veut : **si l'alpha prudent reste significatif, la conclusion est robuste** ; s'
 ne l'est pas — cas le plus fréquent — on n'a rien démontré.
 
 Le **verdict du § 5 porte sur l'alpha prudent**, jamais sur le brut.
+
+#### Quand l'indice est déjà en rendement total
+
+`--indice-total` **désactive** la correction : elle n'a plus lieu d'être, et
+l'appliquer retrancherait un biais inexistant — sur le fil rouge, cela ferait
+passer un alpha de $+0{,}37\,\%$ à $-5{,}85\,\%$, « distinguable de zéro » dans le
+mauvais sens.
+
+> ⚠️ **La convention d'un indice ne se devine pas depuis ses nombres.** Un indice
+> nu et un indice en rendement total sont deux séries de niveaux, rien ne les
+> distingue formellement. Le script **ne tente donc aucune détection** : il
+> exige que l'utilisateur la déclare, et affiche la convention retenue dans son
+> résumé. Un indice produit par
+> [`construire_indice_total.py`](construire_indice_total.md) est en rendement
+> total et appelle toujours ce drapeau.
 
 Un indice en rendement total lèverait cette approximation, mais `^FCHIGR` n'est
 pas servi par yfinance. À noter pour qui voudrait comparer : `^GDAXI`, le DAX,

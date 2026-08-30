@@ -75,3 +75,8 @@ ignore = [
 # pas de structure de paquet, il faut ajouter python/ au chemin avant. yfinance
 # n'est importe que si --telecharger est passe.
 "python/evaluer_portefeuille.py" = ["PLC0415"]
+
+# construire_indice_total.py reutilise evaluer_portefeuille.py par un import
+# local (pas de structure de paquet), et n'importe yfinance que si la
+# ponderation par capitalisation ou --telecharger le demandent.
+"python/construire_indice_total.py" = ["PLC0415"]

@@ -242,6 +242,11 @@ def main():
         "--telecharger", action="store_true", help="Recuperer les series manquantes"
     )
     parser.add_argument("--sans-couts", action="store_true", help="N'appliquer aucun cout")
+    parser.add_argument(
+        "--indice-total",
+        action="store_true",
+        help="Declarer que l'indice est en rendement total (desactive la correction)",
+    )
     parser.add_argument("--ttf", type=float, default=0.30, help="TTF en %% (defaut : 0.30)")
     parser.add_argument(
         "--courtage", type=float, default=0.10, help="Courtage en %% par sens"
@@ -379,20 +384,29 @@ def main():
         freinage = gb["alpha_an"] - gn["alpha_an"]
         print(f"  couts       {fr(-freinage, 2):>7} %/an   aller-retour {fr(cout_ar, 3)} %")
 
-    alpha_prudent = gn["alpha_an"] - dividende_panier
-    ic_bas_prudent = gn["ic_bas"] - dividende_panier
-    ic_haut_prudent = gn["ic_haut"] - dividende_panier
+    # la convention d'un indice ne se devine pas depuis ses nombres : elle se declare
+    correction = 0.0 if args.indice_total else dividende_panier
+    alpha_prudent = gn["alpha_an"] - correction
+    ic_bas_prudent = gn["ic_bas"] - correction
+    ic_haut_prudent = gn["ic_haut"] - correction
     prudent_zero = ic_bas_prudent <= 0 <= ic_haut_prudent
     print(
         f"  alpha prudent {fr(alpha_prudent, 2):>7} %/an   "
         f"IC95 [{fr(ic_bas_prudent, 2)} ; {fr(ic_haut_prudent, 2)}]   "
         + ("indiscernable de zero" if prudent_zero else "distinguable de zero")
     )
-    print(
-        f"    dont {fr(dividende_panier, 2)} %/an d'ecart de traitement des dividendes :"
-        f"\n    le panier est ajuste, l'indice {args.indice} est nu. Borne basse,"
-        f" volontairement sur-corrigee."
-    )
+    if args.indice_total:
+        print(
+            f"    {args.indice} declare en rendement total : aucune correction appliquee."
+            f"\n    (le panier rend {fr(dividende_panier, 2)} %/an de dividende, deja"
+            f" integre des deux cotes)"
+        )
+    else:
+        print(
+            f"    dont {fr(dividende_panier, 2)} %/an d'ecart de traitement des dividendes :"
+            f"\n    le panier est ajuste, l'indice {args.indice} est nu. Borne basse,"
+            f" volontairement sur-corrigee."
+        )
 
     moyenne = statistics.fmean(individuels)
     print(

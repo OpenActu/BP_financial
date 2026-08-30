@@ -13,7 +13,7 @@ convention dans toute modification.
 
 Deux choses, également importantes :
 
-1. **Huit utilitaires Python en ligne de commande** qui récupèrent et analysent
+1. **Neuf utilitaires Python en ligne de commande** qui récupèrent et analysent
    des données de la Bourse de Paris. Pas de paquet, pas de tests, pas de
    `__init__.py` — chaque script se lance depuis la racine du dépôt.
 2. **Un cours en quatre semestres**, dans `docs/raw/concept/`, qui démontre tout
@@ -42,7 +42,7 @@ aligner le script dessus. Jamais l'inverse.
 La skill `/python-sync` détecte les markdown modifiés et répercute les
 changements dans les scripts correspondants.
 
-## Les huit scripts
+## Les neuf scripts
 
 | Script | Ce qu'il produit |
 |---|---|
@@ -54,6 +54,7 @@ changements dans les scripts correspondants.
 | `generer_graph_decision.py` | SVG : encadrement sur **High/Low**, cinq critères et verdict |
 | `couts_transaction.py` | coût d'exécution d'une règle, et l'alpha qu'il faudrait pour le couvrir |
 | `evaluer_portefeuille.py` | alpha d'un **panier** contre son indice, coûts et biais d'indice nu compris |
+| `construire_indice_total.py` | un indice de référence **en rendement total**, à partir de composants déclarés |
 
 **Lire le miroir avant de modifier un script.** Il contient les formules, les
 conventions et les pièges déjà rencontrés.
@@ -73,10 +74,14 @@ conventions et les pièges déjà rencontrés.
 - **Jamais de regard en avant.** Aucune quantité datée du jour `d` ne peut
   dépendre d'une séance postérieure, échelles de graphique comprises.
 - ⚠️ **`Close` est ajustée des dividendes, `^FCHI` ne l'est pas.** Comparer les
-  deux fabrique de l'alpha à partir de rien : mesuré à **4,6 points par an** sur
-  un panier de dix valeurs du CAC 40. Toute comparaison titre/indice doit
-  corriger ce biais ou le chiffrer — le signaler en note de bas de page ne
-  suffit pas, il renverse les verdicts.
+  deux fabrique de l'alpha à partir de rien : **7,9 points par an** mesurés sur
+  24 ans. La sortie propre est `construire_indice_total.py`, qui fabrique un
+  indice de même convention. Le signaler en note de bas de page ne suffit pas,
+  ce biais renverse les verdicts.
+- **Une convention ne se devine pas depuis des nombres.** Un indice nu et un
+  indice en rendement total sont deux séries de niveaux, formellement
+  indiscernables. Quand une convention change un résultat, la faire **déclarer**
+  plutôt que tenter de la détecter.
 - **Fins de ligne : `.gitattributes` s'en charge, ne rien convertir à la main.**
   La règle est **LF partout**, sauf deux exceptions imposées par leurs
   producteurs : les `.csv` (`csv.writer` émet du CRLF, RFC 4180, Excel) et les
