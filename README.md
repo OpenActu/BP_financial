@@ -1,4 +1,4 @@
-# historique_sbf250
+# import_societe
 
 Script Python qui récupère l'historique d'un cours de bourse d'une société du SBF 250. Il s'appuie sur [`yfinance`](https://pypi.org/project/yfinance/) (Yahoo Finance), qui couvre l'ensemble des valeurs du SBF 250.
 
@@ -6,7 +6,7 @@ Script Python qui récupère l'historique d'un cours de bourse d'une société d
 
 ```bash
 pip install yfinance
-python historique_sbf250.py AIR.PA --periode 5y --csv airbus.csv
+python import_societe.py AIR.PA --periode 5y --csv airbus.csv
 ```
 
 Les tickers de la place de Paris se terminent par `.PA` :
@@ -24,7 +24,7 @@ Le script affiche les séances (Open / High / Low / Close / Volume) ainsi que la
 Pour une plage de dates précise, utiliser `--debut` et `--fin` (format `AAAA-MM-JJ`) à la place de `--periode` :
 
 ```bash
-python historique_sbf250.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
+python import_societe.py AIR.PA --debut 2023-01-01 --fin 2023-12-31
 ```
 
 ## Note

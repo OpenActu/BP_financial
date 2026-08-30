@@ -12,3 +12,9 @@ venv/
 
 # Divers
 .DS_Store
+
+# Historiques de cours (régénérables via python/import_societe.py)
+docs/raw/quotes/
+
+# Graphiques générés (régénérables via python/generer_graph_supp_resistance.py)
+docs/raw/graphs/
