@@ -20,7 +20,7 @@ l'arithmétique d'environ $\sigma^2/2$ — c'est l'inégalité de Jensen, démon
 [module 5 du cours convexité](../analyse/convexite/05-jensen-probabiliste.md) et
 exploitée au [module 4 du cours finance](../finance/04-levier-optimal-et-drag.md).
 
-**En grandeur nature.** AIR.PA contre le CAC 40, 2020-2023 :
+**En grandeur nature.** Airbus contre le CAC 40, 2020-2023 :
 
 | | Valeur |
 |---|---|
@@ -44,15 +44,15 @@ qui ne l'est pas.
 
 **Pourquoi il mord.** La colonne `Close` de `import_societe.py` vient de yfinance
 et est ajustée des dividendes et des divisions du nominal : c'est une performance
-*totale*, dividendes réinvestis. Or `^FCHI` est le **CAC 40 nu**, un indice de
-prix : ses dividendes ne sont pas réintégrés. La version rendement total est un
+*totale*, dividendes réinvestis. Or le CAC 40 est un indice de prix **nu** :
+ses dividendes ne sont pas réintégrés. La version rendement total est un
 indice distinct.
 
 Comparer les deux attribue au titre un avantage égal au rendement du dividende de
 l'indice, de l'ordre de 3 %/an sur le CAC 40 — un biais **systématiquement
 favorable** à l'alpha mesuré, et qui n'a rien à voir avec le titre.
 
-> ⚠️ Ce biais n'est pas corrigé dans les chiffres de ce cours. L'alpha d'AIR.PA
+> ⚠️ Ce biais n'est pas corrigé dans les chiffres de ce cours. L'alpha d'Airbus
 > y est donc surestimé d'environ 3 points par an — ce qui, l'intervalle de
 > confiance faisant 58 points de large, ne change aucune conclusion, mais devrait
 > être corrigé sur une comparaison qui prétendrait trancher.

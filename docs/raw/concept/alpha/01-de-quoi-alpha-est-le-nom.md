@@ -57,7 +57,7 @@ C'est le point que la pratique oublie le plus souvent. $\alpha$ n'est pas une
 propriété du titre : c'est l'écart entre le titre et **un modèle qu'on a choisi**.
 Changez le modèle, l'alpha change.
 
-**L'indice de référence.** Mesurer AIR.PA contre le CAC 40, contre le SBF 120, ou
+**L'indice de référence.** Mesurer Airbus contre le CAC 40, contre le SBF 120, ou
 contre un indice aéronautique mondial donne trois alphas différents. Aucun n'est
 « le bon » : chacun répond à la question *que reste-t-il une fois retiré ce que
 cette référence-là explique ?*
@@ -85,7 +85,7 @@ Deux grandeurs distinctes, souvent confondues :
 | **Surperformance** | $r_i - r_m$, l'écart brut | ❌ non |
 | **Alpha** | $r_i - \beta\,r_m$ (avec $r_f = 0$) | ✅ oui |
 
-Elles ne coïncident que si $\beta = 1$. Sur AIR.PA, $\beta = 1{,}53$ : sur une
+Elles ne coïncident que si $\beta = 1$. Sur Airbus, $\beta = 1{,}53$ : sur une
 année où le CAC monte de 10 %, le titre est *attendu* à 15,3 %, et faire 12 %
 serait un **alpha négatif** malgré une surperformance apparente de $+2$ points.
 

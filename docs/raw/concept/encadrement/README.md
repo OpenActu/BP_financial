@@ -41,7 +41,7 @@ quatre façons distinctes, et que chacune se corrige par un calcul précis :
 
 ## La figure du cours
 
-![Encadrement d'AIR.PA par support et résistance, 2020-2023](figures/airbus-encadrement.svg)
+![Encadrement d'Airbus par support et résistance, 2020-2023](figures/airbus-encadrement.svg)
 
 Les quatre modules se lisent sur cette figure :
 
@@ -60,7 +60,7 @@ Elle est produite par [`python/generer_graph_supp_resistance.py`](../../../../py
 ```bash
 python python/generer_graph_supp_resistance.py \
   --sortie docs/raw/concept/encadrement/figures/airbus-encadrement.svg \
-  --titre "AIR.PA — encadrement par support et résistance"
+  --titre "Airbus — encadrement par support et résistance"
 ```
 
 > ⚠️ **La figure ne montre pas les mêmes droites que les tableaux du cours.** Le

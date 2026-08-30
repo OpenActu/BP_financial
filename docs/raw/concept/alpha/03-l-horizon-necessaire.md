@@ -25,7 +25,7 @@ $$\boxed{\;\operatorname{SE}(\alpha_{\text{an}}) \;=\; \frac{\sigma_\varepsilon}
 Trois symboles, et tout est dit : **la précision d'un alpha ne dépend que de la
 volatilité résiduelle et du nombre d'années.**
 
-*Vérification sur AIR.PA* : $\sigma_\varepsilon = 29{,}98\,\%$ et
+*Vérification sur Airbus* : $\sigma_\varepsilon = 29{,}98\,\%$ et
 $Y = 1026/252 = 4{,}071$ ans donnent $29{,}98/\sqrt{4{,}071} = 14{,}86\,\%$ — la
 valeur exacte obtenue par le calcul complet du
 [module 5](05-exemple-chiffre-airbus.md), au centième près.
@@ -100,7 +100,7 @@ $$\alpha_{\min} = \frac{1{,}96\,\sigma_\varepsilon}{\sqrt Y}$$
 | 20 ans | 4,4 % | 6,6 % | 8,8 % | 13,1 % |
 | 30 ans | 3,6 % | 5,4 % | 7,2 % | 10,7 % |
 
-La case en gras est celle d'AIR.PA : quatre ans, 30 % de volatilité résiduelle.
+La case en gras est celle d'Airbus : quatre ans, 30 % de volatilité résiduelle.
 **Seul un alpha dépassant 29,4 %/an aurait pu y être établi.** Autant dire qu'on
 n'a rien mesuré — et c'est bien ce que dit l'intervalle $[-29{,}3\ ;\ +29{,}1]\,\%$.
 

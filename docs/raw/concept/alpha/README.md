@@ -20,7 +20,7 @@ souvent accompagnée de son incertitude. Ce cours établit quatre choses :
 |---|---|---|
 | « Ce fonds fait 2 % d'alpha. » | Il faudrait **216 ans** de données pour distinguer 2 % de zéro à volatilité résiduelle de 15 % | [03](03-l-horizon-necessaire.md) |
 | « Prenons des données horaires, on aura plus de points. » | La précision de l'alpha **ne dépend pas** de la fréquence d'échantillonnage, seulement du nombre d'années | [03](03-l-horizon-necessaire.md) |
-| « Son excès de rendement moyen est positif, donc elle bat l'indice. » | Faux dès que la volatilité diffère : AIR.PA affiche $+4{,}1\,\%$ d'excès arithmétique annuel et $+7{,}7\,\%$ contre $+24{,}9\,\%$ en cumulé | [04](04-cinq-pieges.md) |
+| « Son excès de rendement moyen est positif, donc elle bat l'indice. » | Faux dès que la volatilité diffère : Airbus affiche $+4{,}1\,\%$ d'excès arithmétique annuel et $+7{,}7\,\%$ contre $+24{,}9\,\%$ en cumulé | [04](04-cinq-pieges.md) |
 | « L'alpha mesure le talent. » | Il mesure l'écart à **un modèle donné** : changez d'indice ou ajoutez un facteur, l'alpha change | [01](01-de-quoi-alpha-est-le-nom.md) |
 
 ## Le fil directeur
@@ -43,7 +43,7 @@ souvent accompagnée de son incertitude. Ce cours établit quatre choses :
 
 ## Le fil rouge chiffré
 
-**AIR.PA contre `^FCHI` (CAC 40), du 2 janvier 2020 au 29 décembre 2023**,
+**Airbus contre le CAC 40, du 2 janvier 2020 au 29 décembre 2023**,
 1027 séances communes donc 1026 rendements quotidiens. Les deux séries sont
 produites par [`python/import_societe.py`](../../../../python/import_societe.md) :
 
