@@ -70,11 +70,13 @@ conventions et les pièges déjà rencontrés.
   d'EBITDA négatif ne se compare à rien.
 - **Jamais de regard en avant.** Aucune quantité datée du jour `d` ne peut
   dépendre d'une séance postérieure, échelles de graphique comprises.
-- **Fins de ligne : ne pas y toucher.** Le dépôt est mélangé — 85 fichiers en
-  LF, 53 en CRLF — parce que l'éditeur normalise à l'enregistrement. Ne
-  convertir **aucun** fichier qu'on ne modifie pas par ailleurs : cela produit
-  des diffs de plusieurs centaines de lignes pour zéro changement de contenu.
-  Un `.gitattributes` trancherait la question ; il n'existe pas encore.
+- **Fins de ligne : `.gitattributes` s'en charge, ne rien convertir à la main.**
+  La règle est **LF partout**, sauf deux exceptions imposées par leurs
+  producteurs : les `.csv` (`csv.writer` émet du CRLF, RFC 4180, Excel) et les
+  `.svg` (les générateurs les écrivent ainsi sous Windows). Écrire un fichier
+  sans se soucier de ses fins de ligne est donc désormais sans conséquence — et
+  un script qui en convertirait d'autorité produirait des diffs de centaines de
+  lignes pour zéro changement de contenu.
 
 ### Lint
 
