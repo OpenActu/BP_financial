@@ -149,10 +149,31 @@ Compléments : $R^2 = 0{,}571$ ; volatilité résiduelle $\sigma_\varepsilon =
    $\sigma_\varepsilon/\sqrt Y = 35{,}60/\sqrt{2{,}028} = 25{,}00\,\%$, soit
    exactement l'erreur type obtenue. Le plus petit alpha détectable ici vaut
    $1{,}96 \times 25{,}0 = \mathbf{49{,}0\,\%}$ par an. **Aucun alpha réaliste ne
-   pouvait être établi sur deux ans.**
+   pouvait être établi sur deux ans** — *sur un titre isolé*. La sortie existe et
+   elle est constructive : mesurer l'alpha d'un **panier** au lieu d'un titre fait
+   tomber $\sigma_\varepsilon$ de $35{,}6\,\%$ à $1{,}6\,\%$/an
+   ([`evaluer_portefeuille.py`](../../../../../python/evaluer_portefeuille.md)).
+   Ce n'est pas un changement d'outillage, c'est un changement de question.
 3. Le critère 4 se réduit donc à sa forme utilisable : **borne haute de l'IC
    $= +48{,}85\,\% > 0$** — condition satisfaite, et qui l'aurait été pour presque
    n'importe quel titre.
+
+> ⚠️ **Cet alpha est biaisé, et le mesurer ne change rien — ce qui est
+> l'enseignement.** `Close` est ajustée des dividendes, `^FCHI` est un indice
+> **nu**. Le biais vaut ici
+> $\text{rdt}_{\text{AIR}} - \beta\,\text{rdt}_{\text{indice}}$. Airbus n'a versé
+> qu'**un seul dividende dans la fenêtre** — 1,65 € le 15 avril 2019, celui de
+> 2020 ayant été annulé pour cause de Covid — soit $0{,}89\,\%$/an sur un cours
+> moyen de 91,36 €. Avec $\beta = 1{,}66$ et un indice rendant 2 à 3 %/an, le
+> biais vaut **$-2{,}4$ à $-4{,}1$ points** : l'alpha est **sous-estimé**, et
+> vaudrait entre $+2{,}1$ et $+3{,}8\,\%$/an une fois corrigé.
+>
+> Déplacer un point de 3 points dans un intervalle large de **98** ne modifie ni
+> la condition retenue, ni le verdict, ni la conclusion du § 2. C'est la
+> démonstration la plus parlante de ce que « l'alpha ne se mesure pas » veut
+> dire : **un biais de plusieurs points est ici invisible.** Sur un panier, où
+> l'intervalle se resserre, le même biais deviendrait décisif — d'où
+> [`construire_indice_total.py`](../../../../../python/construire_indice_total.md).
 
 ### Critère 5 — momentum 12-1
 
@@ -202,8 +223,14 @@ est faite pour couvrir.
 
 ## 5.6 — Ce que ce verdict ne couvre pas
 
-- **Frais et exécution** : ni spread, ni commission, ni impact de marché — le CSV
-  n'en contient aucun.
+- **Frais et exécution** : absents du CSV, mais **désormais chiffrables**
+  ([`couts_transaction.py`](../../../../../python/couts_transaction.md)). Airbus
+  SE étant de droit néerlandais, elle échappe à la taxe sur les transactions
+  financières : l'aller-retour lui coûte $0{,}268\,\%$ contre $0{,}530\,\%$ pour
+  une société française de plus d'un milliard. Le chiffre **renforce** le verdict
+  plutôt qu'il ne le nuance : une règle qui basculerait au gré de `TEND_20`
+  paierait ce péage à chaque bascule, et une rotation mensuelle coûte
+  $6{,}4\,\%$/an — davantage que tout alpha mesurable ici.
 - **Fiscalité et enveloppe** : PEA, CTO, durée de détention, prélèvements —
   totalement hors champ.
 - **Liquidité** : le volume moyen n'a pas été utilisé comme contrainte.
