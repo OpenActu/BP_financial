@@ -22,7 +22,7 @@ couverture espèces $m=20\,\%$.
 
 | Ticker | Secteur | $\beta_i$ | $\sigma_{\varepsilon_i}$ | $\sigma_i$ | $\mu_i=r_f+\beta_i\times4{,}5\,\%$ |
 |---|---|---|---|---|---|
-| AIR.PA | Aéronautique | 1,05 | 22 % | 30,4 % | 7,72 % |
+| Airbus | Aéronautique | 1,05 | 22 % | 30,4 % | 7,72 % |
 | MC.PA | Luxe | 1,15 | 20 % | 30,5 % | 8,17 % |
 | OR.PA | Cosmétique | 0,85 | 16 % | 23,3 % | 6,83 % |
 | SAN.PA | Pharmacie | 0,65 | 17 % | 21,4 % | 5,92 % |
@@ -407,7 +407,7 @@ for nom, w, L in (("1/N, L=1", w_eq, 1.0), ("var. min., L=1", w_mv, 1.0), ("1/N,
 ```
 
 > 💡 **Pour brancher vos propres données**, remplacez le bloc `beta`/`idio` par une régression des
-> rendements de chaque ligne sur ceux de `^FCHI` — c'est exactement le calcul de
+> rendements de chaque ligne sur ceux du CAC 40 — c'est exactement le calcul de
 > [`modele.md`](../../modele.md), et la simulation
 > [S1.1](01-le-cadre-cac40-et-le-srd.md) en donne le code. Tout le reste du script est inchangé.
 

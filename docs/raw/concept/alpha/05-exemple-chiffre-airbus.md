@@ -21,7 +21,7 @@ comme réserve ([module 2](02-le-calcul-et-ses-erreurs-types.md#21--préparer-le
 
 ## 5.2 — Les deux performances, séparément
 
-| | CAC 40 | AIR.PA |
+| | CAC 40 | Airbus |
 |---|---|---|
 | Performance totale | $+24{,}86\,\%$ | $+7{,}70\,\%$ |
 | CAGR | $+5{,}60\,\%$ | $+1{,}84\,\%$ |
@@ -92,7 +92,7 @@ défaut de rendement moyen.
 | Piège du [module 4](04-cinq-pieges.md) | S'applique ici ? |
 |---|---|
 | Drag de volatilité | ✅ **au premier chef** — c'est l'explication du § 5.4 |
-| Indice nu | ✅ `^FCHI` est un indice de prix, `Close` est ajustée : l'alpha est surestimé d'environ 3 points/an |
+| Indice nu | ✅ le CAC 40 est un indice de prix, `Close` est ajustée : l'alpha est surestimé d'environ 3 points/an |
 | Bêta instable | ✅ la période contient un krach, une reprise et un cycle de taux |
 | Erreurs non i.i.d. | ✅ l'IC de 58 points est en réalité plus large encore |
 | Tests multiples | ❌ un seul titre testé, sur une période fixée d'avance |

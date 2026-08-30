@@ -154,7 +154,7 @@ valeurs de référence utilisées ici ($\sigma=28\,\%$ pour une ligne, $\bar\rho
 
 ## 1.7 Exercices
 
-**E1.1.** Télécharger le CAC 40 *price* (`^FCHI`) et les cours **ajustés** d'un panier de 20 valeurs sur 10 ans. Comparer la performance annualisée du panier équipondéré à celle de l'indice nu. *Quelle part de l'écart est attribuable aux dividendes, et non à la sélection ?*
+**E1.1.** Télécharger le CAC 40 *price* (CAC 40) et les cours **ajustés** d'un panier de 20 valeurs sur 10 ans. Comparer la performance annualisée du panier équipondéré à celle de l'indice nu. *Quelle part de l'écart est attribuable aux dividendes, et non à la sélection ?*
 
 **E1.2.** Un compte dispose de 20 000 € en espèces. Calculer l'exposition SRD maximale, puis la
 recalculer si la couverture est constituée d'actions déjà détenues pour 20 000 €. *Pourquoi le

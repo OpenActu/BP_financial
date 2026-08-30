@@ -116,7 +116,7 @@ main. Le balayage de Andrew la donne en $O(n\log n)$.
 
 > ⚠️ **Le piège de la dernière arête.** La chaîne se termine souvent par une
 > arête très courte, de pente aberrante. Sur les 20 premières séances 2020
-> d'AIR.PA, la dernière arête haute n'enjambe que 3 séances et donne $-0{,}74$
+> d'Airbus, la dernière arête haute n'enjambe que 3 séances et donne $-0{,}74$
 > €/séance, soit $-0{,}6\,\%$ par jour extrapolé sur rien. **Exiger une portée
 > d'au moins $n/4$ séances, et toujours citer la portée retenue.**
 

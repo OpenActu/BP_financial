@@ -12,7 +12,7 @@ Trois précautions, chacune source d'erreurs silencieuses.
 **Aligner les calendriers.** Un titre et son indice n'ont pas nécessairement les
 mêmes séances : jours fériés locaux, suspensions de cotation. Il faut prendre
 l'**intersection des dates**, jamais supposer que les deux fichiers ont la même
-longueur. Sur AIR.PA et `^FCHI` en 2020-2023, les deux séries font 1027 séances
+longueur. Sur Airbus et le CAC 40 en 2020-2023, les deux séries font 1027 séances
 et l'intersection en fait 1027 — mais c'est à vérifier, pas à postuler.
 
 **Choisir les rendements.** Arithmétiques, $r_t = P_t/P_{t-1} - 1$. Les rendements
@@ -90,7 +90,7 @@ celle de l'[étape 8](../modele/08-test-de-tendance.md) :
 > action cotée, et qui rejette toujours. La question utile est $\beta = 1$ :
 > le titre suit-il son indice, ou l'amplifie-t-il ?
 
-Sur AIR.PA : $t_\beta = +12{,}46$ ($p < 10^{-4}$) contre $t_\alpha = -0{,}006$
+Sur Airbus : $t_\beta = +12{,}46$ ($p < 10^{-4}$) contre $t_\alpha = -0{,}006$
 ($p = 0{,}996$). **Le même jeu de données tranche complètement sur $\beta$ et pas
 du tout sur $\alpha$** — le [module 3](03-l-horizon-necessaire.md) explique
 pourquoi c'est structurel.
@@ -107,7 +107,7 @@ $$\alpha_{\text{an}} = 252\,\alpha, \qquad
 $\beta$ est un rapport de rendements : il **ne s'annualise pas**.
 
 Le multiplicateur 252 est le nombre conventionnel de séances par an ; sur les
-1027 séances d'AIR.PA, le compte réel donne $1026/252 = 4{,}07$ ans.
+1027 séances d'Airbus, le compte réel donne $1026/252 = 4{,}07$ ans.
 
 ## 2.6 — Les compléments à publier
 
@@ -122,7 +122,7 @@ Un alpha seul est incomplet. Cinq grandeurs l'accompagnent :
 | Nombre d'observations | $n$, et $Y = n/252$ | sans quoi rien n'est interprétable |
 
 > ⚠️ Le ratio d'information porte sur la surperformance **brute**, non corrigée du
-> bêta : ce n'est pas un alpha rapporté à son risque. Sur AIR.PA il vaut $+0{,}128$
+> bêta : ce n'est pas un alpha rapporté à son risque. Sur Airbus il vaut $+0{,}128$
 > alors que l'alpha est nul et que le titre a fait trois fois moins bien que
 > l'indice en cumulé — voir le [module 4](04-cinq-pieges.md#41--le-drag-de-volatilité).
 
