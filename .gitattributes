@@ -1,0 +1,35 @@
+# Fins de ligne — tranché une fois pour toutes.
+#
+# Le dépôt était mélangé (85 fichiers en LF, 53 en CRLF) parce que l'éditeur
+# normalise à l'enregistrement pendant que d'autres outils écrivaient du CRLF.
+# Résultat : des diffs de plusieurs centaines de lignes pour zéro changement de
+# contenu, et des fichiers qui « changeaient » sans qu'on les touche.
+#
+# Règle : LF partout, sauf là où un producteur impose autre chose.
+
+* text=auto eol=lf
+
+# --- Exceptions, chacune parce qu'un outil l'exige ---
+
+# CSV : `csv.writer` émet du CRLF, c'est la RFC 4180 et c'est ce qu'Excel attend.
+# Les forcer en LF ferait réécrire le fichier à chaque exécution d'un script.
+*.csv text eol=crlf
+
+# SVG : les deux générateurs les écrivent via Path.write_text(), qui traduit en
+# CRLF sous Windows. Les figurer en CRLF garde une régénération sans diff.
+# (Écrire ces fichiers avec newline="\n" dans les scripts permettrait de repasser
+#  cette ligne à LF et de rendre la sortie indépendante du système.)
+*.svg text eol=crlf
+
+# --- Binaires : jamais de conversion, jamais de diff textuel ---
+
+*.pdf   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.woff  binary
+*.woff2 binary
+*.zip   binary
+*.xlsx  binary

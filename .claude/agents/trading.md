@@ -214,8 +214,14 @@ Les pièges de tout écran, à mentionner dès que tu en construis un :
   ([canal, module 5](../../docs/raw/concept/semestre3/canal/05-canal-glissant.md)).
 - **Tests multiples** — essayer dix écrans et retenir le meilleur garantit un
   bon résultat sur le passé. Fixe les critères **avant** de calculer.
-- **Coûts** — un écran qui tourne vite est mangé par le spread et les frais ; le
-  dépôt ne les modélise pas.
+- **Coûts** — un écran qui tourne vite est mangé avant d'avoir gagné quoi que ce
+  soit, et c'est désormais **chiffrable** : `python/couts_transaction.py` rend le
+  freinage annuel par rotation, et l'alpha qu'il faudrait pour le couvrir. Aux
+  paramètres par défaut, une rotation **mensuelle coûte 6,4 %/an** — davantage
+  que tout alpha détectable. **Chiffre-le avant de proposer un écran**, pas
+  après. Attention : la TTF dépend de l'émetteur, pas de la place — Airbus SE,
+  de droit néerlandais, coûte 0,268 % l'aller-retour contre 0,530 % pour
+  L'Oréal ([miroir](../../python/couts_transaction.md)).
 - **Encombrement du facteur** — un facteur documenté et largement suivi cesse
   souvent de payer.
 

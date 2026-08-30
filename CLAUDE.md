@@ -13,7 +13,7 @@ convention dans toute modification.
 
 Deux choses, également importantes :
 
-1. **Six utilitaires Python en ligne de commande** qui récupèrent et analysent
+1. **Neuf utilitaires Python en ligne de commande** qui récupèrent et analysent
    des données de la Bourse de Paris. Pas de paquet, pas de tests, pas de
    `__init__.py` — chaque script se lance depuis la racine du dépôt.
 2. **Un cours en quatre semestres**, dans `docs/raw/concept/`, qui démontre tout
@@ -42,7 +42,7 @@ aligner le script dessus. Jamais l'inverse.
 La skill `/python-sync` détecte les markdown modifiés et répercute les
 changements dans les scripts correspondants.
 
-## Les six scripts
+## Les neuf scripts
 
 | Script | Ce qu'il produit |
 |---|---|
@@ -52,6 +52,9 @@ changements dans les scripts correspondants.
 | `import_dividendes.py` | dividendes et divisions depuis `bnains.org`, confrontés à yfinance |
 | `generer_graph_supp_resistance.py` | SVG : encadrement support/résistance sur les **clôtures** |
 | `generer_graph_decision.py` | SVG : encadrement sur **High/Low**, cinq critères et verdict |
+| `couts_transaction.py` | coût d'exécution d'une règle, et l'alpha qu'il faudrait pour le couvrir |
+| `evaluer_portefeuille.py` | alpha d'un **panier** contre son indice, coûts et biais d'indice nu compris |
+| `construire_indice_total.py` | un indice de référence **en rendement total**, à partir de composants déclarés |
 
 **Lire le miroir avant de modifier un script.** Il contient les formules, les
 conventions et les pièges déjà rencontrés.
@@ -70,11 +73,22 @@ conventions et les pièges déjà rencontrés.
   d'EBITDA négatif ne se compare à rien.
 - **Jamais de regard en avant.** Aucune quantité datée du jour `d` ne peut
   dépendre d'une séance postérieure, échelles de graphique comprises.
-- **Fins de ligne : ne pas y toucher.** Le dépôt est mélangé — 85 fichiers en
-  LF, 53 en CRLF — parce que l'éditeur normalise à l'enregistrement. Ne
-  convertir **aucun** fichier qu'on ne modifie pas par ailleurs : cela produit
-  des diffs de plusieurs centaines de lignes pour zéro changement de contenu.
-  Un `.gitattributes` trancherait la question ; il n'existe pas encore.
+- ⚠️ **`Close` est ajustée des dividendes, `^FCHI` ne l'est pas.** Comparer les
+  deux fabrique de l'alpha à partir de rien : **7,9 points par an** mesurés sur
+  24 ans. La sortie propre est `construire_indice_total.py`, qui fabrique un
+  indice de même convention. Le signaler en note de bas de page ne suffit pas,
+  ce biais renverse les verdicts.
+- **Une convention ne se devine pas depuis des nombres.** Un indice nu et un
+  indice en rendement total sont deux séries de niveaux, formellement
+  indiscernables. Quand une convention change un résultat, la faire **déclarer**
+  plutôt que tenter de la détecter.
+- **Fins de ligne : `.gitattributes` s'en charge, ne rien convertir à la main.**
+  La règle est **LF partout**, sauf deux exceptions imposées par leurs
+  producteurs : les `.csv` (`csv.writer` émet du CRLF, RFC 4180, Excel) et les
+  `.svg` (les générateurs les écrivent ainsi sous Windows). Écrire un fichier
+  sans se soucier de ses fins de ligne est donc désormais sans conséquence — et
+  un script qui en convertirait d'autorité produirait des diffs de centaines de
+  lignes pour zéro changement de contenu.
 
 ### Lint
 
