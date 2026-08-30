@@ -13,7 +13,7 @@ convention dans toute modification.
 
 Deux choses, également importantes :
 
-1. **Neuf utilitaires Python en ligne de commande** qui récupèrent et analysent
+1. **Dix utilitaires Python en ligne de commande** qui récupèrent et analysent
    des données de la Bourse de Paris. Pas de paquet, pas de tests, pas de
    `__init__.py` — chaque script se lance depuis la racine du dépôt.
 2. **Un cours en quatre semestres**, dans `docs/raw/concept/`, qui démontre tout
@@ -42,7 +42,7 @@ aligner le script dessus. Jamais l'inverse.
 La skill `/python-sync` détecte les markdown modifiés et répercute les
 changements dans les scripts correspondants.
 
-## Les neuf scripts
+## Les dix scripts
 
 | Script | Ce qu'il produit |
 |---|---|
@@ -55,6 +55,7 @@ changements dans les scripts correspondants.
 | `couts_transaction.py` | coût d'exécution d'une règle, et l'alpha qu'il faudrait pour le couvrir |
 | `evaluer_portefeuille.py` | alpha d'un **panier** contre son indice, coûts et biais d'indice nu compris |
 | `construire_indice_total.py` | un indice de référence **en rendement total**, à partir de composants déclarés |
+| `dimensionner_exposition.py` | levier admissible, drag et barrière — et **le rendement qu'il faudrait** pour justifier chaque levier |
 
 **Lire le miroir avant de modifier un script.** Il contient les formules, les
 conventions et les pièges déjà rencontrés.

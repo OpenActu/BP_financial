@@ -142,6 +142,11 @@ de toute la finance : sur $T$ années, $\operatorname{SE}(\hat\mu)=\sigma/\sqrt 
 | $2\,L^\star$ | 5,000 % | −1,125 pt |
 | $3\,L^\star$ | 1,625 % | **−4,500 pt** |
 
+> ℹ️ **Ce paragraphe est outillé.** [`dimensionner_exposition.py`](../../../../../python/dimensionner_exposition.md) mesure $\sigma$ sur une série, publie l'IC95 de $\hat\mu$, et **renverse la
+> question** : plutôt que de supposer $\mu$ pour en déduire $L^\star$, il donne pour chaque
+> levier le $\mu$ qu'il faudrait — $\mu > c+(L+1)\sigma^2/2$ — puis dit si l'intervalle mesuré
+> permet de trancher. Sur le CAC 40 2019-2025, il ne le permet pour aucun levier.
+
 > ⭐ **Se tromper par le bas coûte peu, se tromper par le haut coûte tout.** Sous-lever de moitié
 > coûte 0,28 point de croissance annuelle ; sur-lever d'un facteur 3 en coûte 4,5. C'est la
 > justification, en une ligne, du **demi-Kelly** : puisque $L^\star$ est incertain d'un facteur 2

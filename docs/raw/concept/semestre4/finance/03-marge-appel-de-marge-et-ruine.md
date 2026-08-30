@@ -140,6 +140,11 @@ $$\boxed{\;L\;\le\;\frac{1}{m+(1-m)\,d}\;}$$
 
 *(inverse exact de la formule du § 3.1 ; se vérifie en une ligne)*
 
+Cette borne, la probabilité d'appel du § 3.2 et le drag du module 4 sont calculés sur une série
+réelle par [`dimensionner_exposition.py`](../../../../../python/dimensionner_exposition.md) — c'est la
+seule des trois qui ne dépende **d'aucun** rendement espéré, et donc la seule qui se pose sans
+hypothèse.
+
 > ⭐ **C'est la seule façon correcte de choisir un levier à ce stade du cours.** Non pas « quel
 > rendement je vise » mais « quelle baisse je dois pouvoir traverser sans être liquidé ». Le
 > [module 4](04-levier-optimal-et-drag.md) donnera l'autre critère — la croissance à long terme — et les deux convergeront vers des valeurs étonnamment proches, toutes deux bien en dessous des plafonds réglementaires.
