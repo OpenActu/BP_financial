@@ -124,7 +124,7 @@ def svg(dates, closes, blocs, actif, titre, largeur=1200, hauteur=620):
 
     bas = min(closes)
     haut = max(closes)
-    for c in blocs + [actif]:
+    for c in [*blocs, actif]:
         if c is None:
             continue
         for nom in ("resistance", "support"):
@@ -320,7 +320,7 @@ def main():
     actif = analyser(closes, max(0, n - args.fenetre), n, args.tolerance)
 
     traversees = sum(
-        c[nom]["traversees"] for c in blocs + [actif] for nom in ("resistance", "support")
+        c[nom]["traversees"] for c in [*blocs, actif] for nom in ("resistance", "support")
     )
     if traversees:
         print(

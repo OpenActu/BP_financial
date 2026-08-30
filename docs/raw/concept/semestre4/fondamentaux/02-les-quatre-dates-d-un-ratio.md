@@ -136,9 +136,14 @@ Trois limites, à publier avec toute série ainsi reconstituée :
   conventionnel, et le signale dans une colonne dédiée.
 - **La profondeur reste celle des comptes** : 4 exercices annuels, soit environ
   trois ans et demi de série.
-- **Les retraitements survivent.** La source sert la version *actuelle* des
-  comptes passés. La reconstruction corrige le regard en avant sur la **date**,
-  pas sur le **contenu** — et le biais du survivant reste entier.
+- **Le contenu n'est pas garanti conforme à ce qui fut publié**, et l'écart
+  dépend du poste. Confronté au communiqué d'origine d'Airbus du 20 février 2025,
+  le chiffre d'affaires, le résultat net et le BPA tombent **au centime** ;
+  l'EBIT servi s'en écarte de **19,3 %** et le flux de trésorerie disponible de
+  **16,3 %**. La cause n'est d'ailleurs pas un retraitement de l'entreprise mais
+  une **normalisation du fournisseur**, qui recalcule ces agrégats à sa façon.
+  Un `PER` reconstitué est donc solide, un `VE/EBITDA` beaucoup moins. Le biais
+  du survivant, lui, reste entier.
 
 > 🔑 **Deux voies, à mener ensemble.** L'archivage horodate le présent, sans
 > aucune approximation mais sans rien donner avant des années. La reconstruction

@@ -119,7 +119,7 @@ def recuperer_fondamentaux(ticker, avec_carnet=True):
     avertissements = []
     try:
         info = yf.Ticker(ticker).info or {}
-    except Exception as erreur:  # réseau, ticker rejeté, réponse illisible
+    except Exception as erreur:  # noqa: BLE001 — echec isole par ticker, rendu en avertissement
         return (
             {"TICKER": ticker, "DATE": date.today().isoformat()},
             {},
@@ -225,10 +225,10 @@ def archiver(lignes):
             for ligne in csv.DictReader(f):
                 deja.add((ligne.get("TICKER"), ligne.get("DATE")))
 
-    nouvelles = [l for l in lignes if (l.get("TICKER"), l.get("DATE")) not in deja]
-    for l in lignes:
-        if (l.get("TICKER"), l.get("DATE")) in deja:
-            print(f"{l.get('TICKER')} : deja archive au {l.get('DATE')}, ignore")
+    nouvelles = [x for x in lignes if (x.get("TICKER"), x.get("DATE")) not in deja]
+    for x in lignes:
+        if (x.get("TICKER"), x.get("DATE")) in deja:
+            print(f"{x.get('TICKER')} : deja archive au {x.get('DATE')}, ignore")
 
     if not nouvelles:
         return 0
@@ -342,11 +342,13 @@ def main():
         return "—" if valeur is None else f"{valeur:.{decimales}f}"
 
     for ligne in lignes:
+        flottant = ligne.get("FLOTTANT_PCT") is not None
         print(
             f"{ligne['TICKER']:<10}{q(ligne, 'COURS'):>10}{q(ligne, 'PER'):>9}{q(ligne, 'P_B'):>7}"
-            f"{q(ligne, 'VE_EBITDA'):>11}{q(ligne, 'REND_FCF'):>9}{q(ligne, 'ROE'):>8}{q(ligne, 'MARGE_OP'):>11}"
+            f"{q(ligne, 'VE_EBITDA'):>11}{q(ligne, 'REND_FCF'):>9}"
+            f"{q(ligne, 'ROE'):>8}{q(ligne, 'MARGE_OP'):>11}"
             f"{q(ligne, 'DETTE_EBITDA'):>14}{abreger(ligne.get('CAPI')):>14}"
-            f"{(q(ligne, 'FLOTTANT_PCT', 1) + ' %') if ligne.get('FLOTTANT_PCT') is not None else '—':>11}"
+            f"{(q(ligne, 'FLOTTANT_PCT', 1) + ' %') if flottant else '—':>11}"
         )
 
     devises = {ligne.get("DEVISE") for ligne in lignes if ligne.get("DEVISE")}

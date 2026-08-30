@@ -16,8 +16,10 @@ Utilisation :
     python python/reconstituer_fondamentaux.py AIR.PA --decalage 90
 
 Trois biais survivent à la reconstruction et doivent accompagner toute série
-produite ici : les retraitements (la source sert la version actuelle des comptes
-passés), le biais du survivant, et une profondeur plafonnée à 4-5 exercices.
+produite ici : le contenu des comptes n'est pas garanti conforme au publié (voir
+le § 10 du miroir : chiffre d'affaires et résultat net concordent au centime,
+l'EBIT s'écarte de 19,3 %), le biais du survivant, et une profondeur plafonnée à
+4-5 exercices.
 """
 
 import argparse
@@ -95,7 +97,14 @@ def comptes(ticker, trimestriel=False):
     ):
         try:
             tables[cle] = getattr(t, prefixe + attribut)
-        except Exception:  # reseau, ticker sans comptes, reponse illisible
+        except Exception as erreur:  # noqa: BLE001 — signale, puis poste laisse vide
+            # ne jamais avaler : une panne reseau se confondrait avec une
+            # absence de donnee, et la serie basculerait sur le repli du § 3
+            print(
+                f"{ticker} : {prefixe + attribut} a echoue "
+                f"({erreur.__class__.__name__}: {erreur})",
+                file=sys.stderr,
+            )
             tables[cle] = None
 
     periodes = {}
@@ -127,7 +136,7 @@ def publications(ticker):
     """
     try:
         table = yf.Ticker(ticker).get_earnings_dates(limit=LIMITE_ANNONCES)
-    except Exception as erreur:
+    except Exception as erreur:  # noqa: BLE001 — signale, puis repli du § 3
         # ne jamais avaler : sans ce message, toutes les dates basculeraient
         # silencieusement sur le repli, et la serie perdrait son interet
         print(
@@ -164,7 +173,12 @@ def serie_actions(ticker, calendrier):
         brute = yf.Ticker(ticker).get_shares_full(
             start=(calendrier.min() - timedelta(days=400)).date().isoformat()
         )
-    except Exception:
+    except Exception as erreur:  # noqa: BLE001 — signale, puis colonne ACTIONS vide
+        print(
+            f"{ticker} : get_shares_full a echoue "
+            f"({erreur.__class__.__name__}: {erreur}) — colonne ACTIONS vide",
+            file=sys.stderr,
+        )
         return pd.Series(index=calendrier, dtype="float64")
     if brute is None or len(brute) == 0:
         return pd.Series(index=calendrier, dtype="float64")
@@ -372,9 +386,9 @@ def main():
         sys.exit(1)
 
     print(
-        "\nReserves : les comptes sont servis dans leur version actuelle (retraitements "
-        "non visibles),\nl'univers exclut les valeurs radiees, et la profondeur est "
-        "plafonnee par la source."
+        "\nReserves : le contenu des comptes n'est pas garanti conforme au publie "
+        "(PER et marges solides,\nmultiples d'EBITDA et FCF beaucoup moins), l'univers "
+        "exclut les valeurs radiees,\net la profondeur est plafonnee par la source."
     )
 
 

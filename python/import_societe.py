@@ -158,7 +158,7 @@ def main():
             fin=args.fin,
             intervalle=args.intervalle,
         )
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001 — yfinance leve trop de types ; on rend le message
         print(f"Erreur : {e}", file=sys.stderr)
         sys.exit(1)
 
