@@ -1,7 +1,7 @@
-# Module 5 — Exemple daté : 1er janvier 2021 ⭐
+# Module 5 — Exemple daté du 1er janvier 2021, puis six mois de rejeu ⭐
 
 **Prérequis :** modules [1](01-ce-que-le-chartiste-produit.md) à [4](04-les-pieges-du-passage-a-l-acte.md).
-**Ce qu'on établit ici :** rien de nouveau — la règle du module 3 exécutée une fois, de bout en bout, sur Airbus contre le CAC 40, sans une seule donnée postérieure au 31 décembre 2020.
+**Ce qu'on établit ici :** la règle du module 3 exécutée de bout en bout sur Airbus contre le CAC 40 au 1er janvier 2021, sans une seule donnée postérieure au 31 décembre 2020 (§§ 5.0 à 5.6) — puis **rejouée aux sept fins de mois du premier semestre 2021** (§ 5.8). Sept exécutions, sept fois `ATTENTE`, jamais tout à fait pour la même raison. Et deux `ACHAT` que cette cadence rate.
 
 ---
 
@@ -305,6 +305,195 @@ règle rend `ATTENTE` **512 fois**, `ACHAT` 3 fois (2021-03-05, 2021-04-20,
 ([module 3 § 3.6](03-la-regle-ecrite-a-l-avance.md#36--ce-que-la-règle-donne-appliquée-tous-les-jours)).
 Le verdict du 1er janvier 2021 n'a donc rien d'exceptionnel : c'est le verdict
 ordinaire d'une règle qui exige beaucoup avant de parler.
+
+
+---
+
+## 5.8 — La même règle, rejouée pendant six mois
+
+> ℹ️ **Chacune des sept dates est une décision à part entière.** Le § 5.7 était un
+> contrepoint, qui regardait l'avenir depuis le 31 décembre. Ici, rien de tel :
+> chaque analyse s'arrête à sa propre séance et n'utilise aucune donnée
+> postérieure. Ce sont sept exécutions légitimes de la règle, séparées d'un mois.
+
+```bash
+python python/import_societe.py AIR.PA  --debut 2019-01-02 --fin 2021-07-01
+python python/import_societe.py '^FCHI' --debut 2019-01-02 --fin 2021-07-01
+python python/generer_graph_decision.py --date 2021-01-31 ...   # puis 02-28, 03-31…
+```
+
+**Les trois premières dates sont des jours non cotés** — le 1ᵉʳ janvier férié,
+les 31 janvier et 28 février dimanches — et les quatre suivantes sont des
+séances. La règle du
+[§ 4.1a](04-les-pieges-du-passage-a-l-acte.md#a-la-date-demandée-nest-pas-une-séance)
+s'applique donc trois fois sur sept : **une date de décision choisie par le
+calendrier tombe hors séance près d'une fois sur deux.**
+
+### 5.8.1 — Les sept analyses côte à côte
+
+| | 1ᵉʳ janv. | 31 janv. | 28 févr. | 31 mars | 30 avr. | 31 mai | 30 juin |
+|---|---|---|---|---|---|---|---|
+| **Séance retenue** | 12-31 | 01-29 | 02-26 | 03-31 | 04-30 | 05-31 | 06-30 |
+| Clôture | 82,37 | 76,33 | 87,99 | 88,57 | 91,69 | 97,85 | 99,49 |
+| **1 — `TEND_120`** | $+1$ | $+1$ | $+1$ | $+1$ | $+1$ | $+1$ | $+1$ |
+| **2 — `TEND_20`** | $-1$ | $-1$ | $+1$ | $-1$ | $0$ | $+1$ | $0$ |
+| **3 — position** | 18,0 | 12,4 | 46,1 | 14,4 | 31,8 | **79,1** | 28,2 |
+| **4 — alpha** | $-0{,}29$ | $-1{,}56$ | $+1{,}06$ | $-3{,}09$ | $-3{,}75$ | $-2{,}68$ | $-2{,}46$ |
+| **5 — momentum** | $-33{,}5$ | $-33{,}3$ | $-23{,}3$ | **$+85{,}1$** | $+75{,}3$ | $+23{,}4$ | $+61{,}6$ |
+| Pente résistance | $+0{,}231$ | **$-0{,}103$** | $+0{,}112$ | $+0{,}112$ | $+0{,}015$ | $+0{,}082$ | $+0{,}142$ |
+| Pente support | $+0{,}582$ | $+0{,}323$ | $+0{,}323$ | $+0{,}305$ | $+0{,}231$ | $+0{,}142$ | $+0{,}347$ |
+| Épisodes rés./sup. | 6/3 | 4/**2** | 3/3 | 4/3 | 4/**2** | **2**/3 | **2**/3 |
+| Largeur | 16,0 % | 13,1 % | 15,9 % | 12,5 % | **7,0 %** | 14,1 % | 11,6 % |
+| **$\tau$** | 37,5 | **23,5** | 65,9 | 57,6 | **29,7** | **231,3** | 56,1 |
+| **Vetos** | 3 | 1 et 3 | — | 3 | **1** | **1** | **1** |
+| **VERDICT** | `ATTENTE` | `ATTENTE` | `ATTENTE` | `ATTENTE` | `ATTENTE` | `ATTENTE` | `ATTENTE` |
+
+*Alpha et momentum en % annualisés ; pentes en €/séance ; position en % de la
+hauteur du canal ; $\tau$ en séances. Toutes les dates sont de 2021 sauf la
+première.*
+
+### 5.8.2 — Sept fois `ATTENTE`, jamais tout à fait pour la même raison
+
+C'est le point du module, et il n'apparaît qu'en rejouant la règle.
+
+| Date | Ce qui bloque |
+|---|---|
+| 31 déc. | **veto 3** — les deux tendances se contredisent |
+| 29 janv. | **vetos 1 et 3** — le support tombe à 2 épisodes, et la contradiction demeure |
+| 26 févr. | **aucun veto** — échec des conditions : position 46,1 % et momentum négatif |
+| 31 mars | **veto 3** — `TEND_20` est repassé à $-1$ |
+| 30 avr. | **veto 1** — le support retombe à 2 épisodes |
+| 31 mai | **veto 1** — c'est la résistance, cette fois, qui n'a plus que 2 épisodes |
+| 30 juin | **veto 1** — la résistance reste à 2 épisodes |
+
+Le **veto 1 mord quatre fois sur sept**, et devient de loin le plus fréquent. Il
+ne dit rien du marché : il dit que la droite d'encadrement **n'est pas
+confirmée**, faute d'assez d'épisodes de contact dans la fenêtre glissante.
+
+> 🔑 **Un verdict identique n'est pas une analyse identique.** Sept `ATTENTE`
+> d'affilée masquent quatre situations sans rapport : contradiction des tendances,
+> droite non confirmée d'un côté puis de l'autre, et simple insuffisance des
+> critères. **Publier le verdict seul, sans la condition qui l'a déclenché, perd
+> toute l'information** — c'est pourquoi le
+> [§ 3 du module 3](03-la-regle-ecrite-a-l-avance.md) l'interdit.
+
+### 5.8.3 — La géométrie se repeint en permanence
+
+La pente de la résistance parcourt $+0{,}231 \to -0{,}103 \to +0{,}112 \to +0{,}112
+\to +0{,}015 \to +0{,}082 \to +0{,}142$. Elle **change de signe**, s'aplatit
+presque à zéro fin avril, puis remonte.
+
+$\tau$, la date de péremption du canal, est encore plus instable : **23,5** séances
+fin janvier — à trois séances et demie du veto 2 — puis **231,3** fin mai, un
+canal devenu quasi parallèle, puis 56,1 un mois plus tard.
+
+Et la largeur du canal tombe à **7,0 %** fin avril contre 16,0 % au départ.
+
+Rien de tout cela n'est un événement de marché : la fenêtre ancrée à droite glisse
+de 20 séances chaque mois, les arêtes de l'enveloppe convexe changent, et la
+droite retenue avec elles. **C'est la repeinture du canal**, décrite en théorie au
+[module 5 du cours canal](../../semestre3/canal/05-canal-glissant.md) et mesurée
+ici sur sept relevés.
+
+Le § 5.7 annonçait la disparition du canal du 31 décembre vers le **2021-02-24**,
+d'après $\tau = 37{,}5$. La mesure du 26 février le confirme sans l'avoir
+cherché : ancres, pentes et portées sont **toutes différentes**. Ce n'est pas le
+même canal élargi, c'en est un autre.
+
+### 5.8.4 — `TEND_20` bascule six fois en trois mois
+
+| Date | Bascule |
+|---|---|
+| 2020-12-16 | $+1 \to 0$ |
+| 2020-12-30 | $0 \to -1$ |
+| 2021-01-07 | $-1 \to 0$ |
+| 2021-01-27 | $0 \to -1$ |
+| 2021-02-04 | $-1 \to 0$ |
+| 2021-02-15 | $0 \to +1$ |
+
+> ⚠️ **Six changements d'état en 55 séances**, et le critère prend les trois
+> valeurs $-1$, $0$ et $+1$ aux sept relevés. `TEND_120`, lui, vaut $+1$ **aux
+> sept dates sans exception**. Une règle qui déclencherait sur `TEND_20` seul
+> négocierait plus souvent que l'hebdomadaire : **plus de 27 % par an de frais**
+> ([`couts_transaction.py`](../../../../../python/couts_transaction.md)). Le
+> veto 3, qui exige l'accord des deux tendances, n'est pas une prudence
+> esthétique : c'est ce qui empêche la règle de payer ce prix.
+
+### 5.8.5 — Le momentum passe de $-33\,\%$ à $+85\,\%$ sans que rien n'arrive
+
+C'est l'observation la plus contre-intuitive des sept relevés.
+
+| Date de décision | Fenêtre 12-1 | Clôtures | Momentum |
+|---|---|---|---|
+| 2020-12-31 | 2020-01-08 → 2020-12-01 | 123,28 → 82,02 € | $\mathbf{-33{,}47\,\%}$ |
+| **2021-03-31** | **2020-04-06** → 2021-03-02 | **49,11** → 90,92 € | $\mathbf{+85{,}13\,\%}$ |
+| 2021-06-30 | 2020-07-07 → 2021-06-01 | 61,74 → 99,78 € | $+61{,}60\,\%$ |
+
+Le momentum gagne **118 points en trois mois** alors que le titre n'a progressé
+que de $+7{,}5\,\%$ sur la période. L'explication tient entièrement au
+**dénominateur** : au 31 mars, la fenêtre 12-1 démarre le **6 avril 2020**, trois
+semaines après le creux du krach, à **49,11 €**. Le momentum ne mesure pas la
+force du titre, il mesure **ce qui vient de sortir de la fenêtre par la gauche**.
+
+> ⚠️ **Un critère peut tripler de valeur sans qu'aucune information nouvelle
+> n'apparaisse.** C'est un artefact de calendrier, pas un signal. Toute règle qui
+> emploie une fenêtre glissante hérite de ce défaut, et il faut le nommer chaque
+> fois qu'on publie un momentum au voisinage d'un krach.
+
+### 5.8.6 — Ce que la cadence mensuelle a raté
+
+Les sept relevés donnent sept `ATTENTE`. Pourtant, le
+[§ 3.6 du module 3](03-la-regle-ecrite-a-l-avance.md#36--ce-que-la-règle-donne-appliquée-tous-les-jours)
+établit que la règle rend `ACHAT` trois fois en 2020-2021. Deux de ces trois
+signaux tombent **dans la période couverte ici** :
+
+| Date | Verdict | Position de la date |
+|---|---|---|
+| **2021-03-05** | **`ACHAT`** | entre les relevés du 26 février et du 31 mars |
+| **2021-04-20** | **`ACHAT`** | entre les relevés du 31 mars et du 30 avril |
+
+Vérification au 5 mars : `TEND_120` $= +1$, `TEND_20` $= +1$, position
+$33{,}9\,\%$ — sous le seuil de 35 —, momentum $+8{,}63\,\%$, borne haute de l'IC
+$+46{,}29\,\%$. Aucun veto. **Les cinq conditions d'`ACHAT` sont réunies**, pour
+la seule et unique fois de tout le cours.
+
+![Airbus, le 5 mars 2021 : le seul ACHAT du cours](figures/airbus-decision-2021-03-05-achat.svg)
+
+> 🔑 **La cadence d'échantillonnage change le résultat.** Un lecteur qui
+> n'interrogerait la règle qu'en fin de mois n'aurait vu que des `ATTENTE` et
+> conclu qu'elle ne parle jamais. Elle a parlé deux fois, entre ses relevés.
+> **La fréquence d'application fait partie de la règle** et doit être écrite avec
+> elle — le [module 3](03-la-regle-ecrite-a-l-avance.md) l'omettait, et ces sept
+> relevés le rendent visible.
+
+Noter au passage que la position à $33{,}9\,\%$ passe le seuil de $35\,\%$ **de
+1,1 point**. Le signal le plus rare du cours tient à un dixième de la hauteur du
+canal.
+
+### 5.8.7 — Et le cours, pendant ce temps
+
+| Période | Variation |
+|---|---|
+| 2020-12-31 → 2021-01-29 | $82{,}37 \to 76{,}33$ €, **$-7{,}33\,\%$** |
+| 2021-01-29 → 2021-02-26 | $76{,}33 \to 87{,}99$ €, **$+15{,}28\,\%$** |
+| 2021-02-26 → 2021-06-30 | $87{,}99 \to 99{,}49$ €, $+13{,}07\,\%$ |
+| **2020-12-31 → 2021-06-30** | $82{,}37 \to 99{,}49$ €, **$+20{,}78\,\%$** |
+
+Le titre a gagné 20,8 % en six mois, et la règle a rendu `ATTENTE` à chacune des
+sept fins de mois. Ce n'est **pas** un défaut à corriger : c'est ce que fait une
+règle qui exige beaucoup avant de parler, et le
+[module 3](03-la-regle-ecrite-a-l-avance.md) mesure qu'elle rend `ATTENTE`
+512 fois sur 515. Corriger les seuils au vu de ces six mois serait exactement
+l'ajustement après coup que le
+[§ 3.5](03-la-regle-ecrite-a-l-avance.md) interdit.
+
+![Airbus, les cinq critères au 31 janvier 2021](figures/airbus-decision-2021-01-31.svg)
+
+![Airbus, les cinq critères au 28 février 2021](figures/airbus-decision-2021-02-28.svg)
+
+Les deux figures se lisent contre celle du § 5.5 : l'aplat de la fenêtre active se
+déplace vers la droite, et les deux droites sont **retracées** à chaque fois —
+mêmes données à gauche, géométrie différente.
 
 ---
 
