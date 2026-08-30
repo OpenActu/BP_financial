@@ -1,0 +1,29 @@
+﻿ISIN,SOCIETE,ANNONCE,DETACHEMENT,VERSEMENT,ANNEE_REF,TYPE,MONTANT,MONTANT_BRUT,RETENUE_PCT,NORMALISE,RENDEMENT,COMMENTAIRE
+NL0000235190,Airbus Group (ex-EADS),2026-02-19,2026-04-21,2026-04-23,2025,Solde,3.2,3.2,,3.2,1.81,
+NL0000235190,Airbus Group (ex-EADS),2025-02-20,2025-04-22,2025-04-24,2024,Exceptionnel,2.0,2.0,,2.0,,Dividende exceptionnel
+NL0000235190,Airbus Group (ex-EADS),2025-02-20,2025-04-22,2025-04-24,2024,Solde,2.0,2.0,,2.0,1.47,Dividende 2024 : 3€ dont dividende exceptionnel de 1€
+NL0000235190,Airbus Group (ex-EADS),2024-02-15,2024-04-16,2024-04-18,2023,Exceptionnel,1.0,1.0,,1.0,,Dividende exceptionnel
+NL0000235190,Airbus Group (ex-EADS),2024-02-15,2024-04-16,2024-04-18,2023,Solde,1.8,1.8,,1.8,1.32,
+NL0000235190,Airbus Group (ex-EADS),2023-02-16,2023-04-25,2023-04-27,2022,Solde,1.8,1.8,,1.8,1.4,
+NL0000235190,Airbus Group (ex-EADS),2022-02-17,2022-04-19,2022-04-21,2021,Solde,1.5,1.5,,1.5,1.41,
+NL0000235190,Airbus Group (ex-EADS),2020-03-23,,,2019,Solde,0.0,0.0,,0.0,0.0,"Dividende de 1,80 euros prévu initialement. Annulé le 23/03/2020 suite à la crise liée au Coronavirus."
+NL0000235190,Airbus Group (ex-EADS),2019-02-14,2019-04-15,2019-04-17,2018,Solde,1.65,1.65,,1.65,1.39,
+NL0000235190,Airbus Group (ex-EADS),2018-02-15,2018-04-16,2018-04-18,2017,Solde,1.5,1.5,,1.5,1.64,
+NL0000235190,Airbus Group (ex-EADS),2017-02-22,2017-04-18,2017-04-20,2016,Solde,1.35,1.35,,1.35,1.94,
+NL0000235190,Airbus Group (ex-EADS),2016-02-24,2016-05-02,2016-05-04,2015,Solde,1.3,1.3,,1.3,2.43,
+NL0000235190,Airbus Group (ex-EADS),2015-02-27,2015-06-01,2015-06-03,2014,Solde,1.2,1.2,,1.2,1.95,
+NL0000235190,Airbus Group (ex-EADS),2014-02-26,2014-05-29,2014-06-03,2013,Solde,0.75,0.75,,0.75,1.41,
+NL0000235190,Airbus Group (ex-EADS),2013-02-27,2013-05-31,2013-06-05,2012,Solde,0.6,0.6,,0.6,1.36,
+NL0000235190,Airbus Group (ex-EADS),2012-03-08,2012-06-04,2012-06-07,2011,Solde,0.45,0.45,,0.45,1.7,
+NL0000235190,Airbus Group (ex-EADS),2011-03-09,2011-06-01,2011-06-06,2010,Solde,0.22,0.22,,0.22,1.03,
+NL0000235190,Airbus Group (ex-EADS),2010-03-09,,,2009,Solde,0.0,0.0,,0.0,0.0,Pas de dividende en 2010 pour 2009.
+NL0000235190,Airbus Group (ex-EADS),2009-03-10,2009-06-03,2009-06-08,2008,Solde,0.17,0.2,15,0.17,1.44,"Dividende brut = 0,2 €. Le dividende pris en compte intègre les 15% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2008-03-11,2008-05-30,2008-06-04,2007,Solde,0.102,0.12,15,0.102,0.68,"Dividende brut = 0,12 €. Le dividende pris en compte intègre les 15% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),,2007-05-11,2007-05-16,2006,Solde,0.102,0.12,15,0.102,0.45,"Dividende brut = 0,12 €. Le dividende pris en compte intègre les 15% de retenue à la source. 15% de prélevement à la source à partir du 01/01/2007 au lieu de 25%."
+NL0000235190,Airbus Group (ex-EADS),2006-03-08,2006-05-10,2006-06-01,2005,Solde,0.488,0.65,25,0.488,1.77,"Dividende brut = 0,65 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2005-03-09,,2005-06-08,2004,Solde,0.375,0.5,25,0.375,1.61,"Dividende brut = 0,5 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2004-03-08,2004-05-11,2004-06-04,2003,Solde,0.3,0.4,25,0.3,1.49,"Dividende brut = 0,4 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2003-03-10,,2003-06-12,2002,Solde,0.225,0.3,25,0.225,2.15,"Dividende brut = 0,3 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2002-03-18,2002-05-22,2002-06-28,2001,Solde,0.375,0.5,25,0.375,2.48,"Dividende brut = 0,5 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),,,2001-06-27,2000,Solde,0.375,0.5,25,0.375,1.71,"Dividende brut = 0,5 €. Le dividende pris en compte intègre les 25% de retenue à la source."
+NL0000235190,Airbus Group (ex-EADS),2000-03-09,,2000-06-06,1999,Solde,0.114,0.114,,0.114,0.52,ATTENTION : ce dividende concerne Aérospatiale Matra devenu EADS en juillet 2000 par fusion avec DASA et CASA.

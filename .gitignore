@@ -20,4 +20,9 @@ docs/raw/quotes/
 docs/raw/graphs/
 
 # Fondamentaux (régénérables via python/import_fondamentaux.py, datés du jour)
-docs/raw/fondamentaux/
+docs/raw/fondamentaux/*
+# ...sauf l'archive : c'est la seule donnee du depot qui ne se regenere pas.
+!docs/raw/fondamentaux/archive.csv
+
+# Cache HTML des fiches bnains.org (regenerable, mais on evite de le refaire)
+docs/raw/dividendes/cache/

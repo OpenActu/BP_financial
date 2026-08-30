@@ -70,6 +70,7 @@ comportement que `import_societe.py`, séparateur espace ou virgule.
 | `--csv` | `docs/raw/fondamentaux/fondamentaux_{AAAA-MM-JJ}.csv` | Chemin du CSV produit (répertoire créé si besoin). |
 | `--json` | — | Écrit en plus un `.json` de même nom, contenant les valeurs **non arrondies** et les composants ayant servi aux calculs. |
 | `--sans-carnet` | — | N'interroge pas la limite 1 du carnet ; les six colonnes correspondantes restent vides. |
+| `--archiver` | — | Ajoute les lignes du jour a **l'archive** `docs/raw/fondamentaux/archive.csv` (§ 5.1). |
 
 ## Déroulé d'exécution
 
@@ -185,6 +186,35 @@ Le répertoire par défaut `docs/raw/fondamentaux/` est **exclu du suivi git**, 
 même titre que `docs/raw/quotes/` : ces données sont régénérables et datées du
 jour de l'appel.
 
+### 5.1 — L'archive, la seule donnée qui ne se régénère pas
+
+`--archiver` **ajoute** les lignes du jour à `docs/raw/fondamentaux/archive.csv`,
+mêmes colonnes que le CSV du jour. Le fichier est créé avec son en-tête s'il
+n'existe pas.
+
+C'est la réponse au manque décrit au
+[module 2 du cours fondamentaux](../docs/raw/concept/semestre4/fondamentaux/02-les-quatre-dates-d-un-ratio.md) :
+on ne peut pas reconstituer le passé, mais on peut **commencer à horodater le
+présent**. Chaque ligne porte sa `DATE` de lecture, qui est un fait observé et
+non une date reconstituée — contrairement à celles de
+[`reconstituer_fondamentaux.py`](reconstituer_fondamentaux.md), qui les déduit.
+
+> 🔑 **L'archive est le seul fichier de `docs/raw/` qui n'est pas régénérable, et
+> le seul qui soit suivi par git.** Tout le reste — cours, graphiques, CSV du
+> jour — se reconstruit d'un appel. Une archive perdue est perdue pour de bon :
+> c'est pourquoi `.gitignore` l'excepte explicitement de l'exclusion de
+> `docs/raw/fondamentaux/`.
+
+**Doublons.** Le script refuse d'écrire une ligne dont le couple
+`(TICKER, DATE)` figure déjà dans l'archive, et le signale sans erreur :
+`{ticker} : deja archive au {date}, ignore`. Relancer deux fois le même jour est
+donc sans effet — utile si l'appel est planifié et rejoué.
+
+**Ce que l'archive permet, et quand.** Rien le premier jour. Une série
+exploitable après quelques trimestres. Un historique comparable à celui d'un
+fournisseur de données après des années. C'est lent, et c'est la seule méthode
+dont la date n'est pas une hypothèse.
+
 ### 6. Résumé console
 
 Une ligne d'en-tête, puis une ligne par ticker avec les colonnes les plus lues,
@@ -232,9 +262,11 @@ entier dans le CSV.
 
 ## Ce que ces données ne disent pas
 
-- Elles sont **datées du jour de l'appel** et n'ont pas d'historique : le script
-  ne permet pas de reconstituer un PER passé, donc pas de backtest de sélection
-  *value*. Le [piège du regard en avant](../docs/raw/concept/semestre4/trading/04-les-pieges-du-passage-a-l-acte.md)
+- Elles sont **datées du jour de l'appel**. Sans `--archiver`, rien ne s'accumule
+  et aucun PER passé n'est reconstituable ; deux réponses partielles existent,
+  l'archive du § 5.1 pour l'avenir et
+  [`reconstituer_fondamentaux.py`](reconstituer_fondamentaux.md) pour les quatre
+  ou cinq exercices que la source expose. Le [piège du regard en avant](../docs/raw/concept/semestre4/trading/04-les-pieges-du-passage-a-l-acte.md)
   s'applique intégralement — un fondamental n'est connu qu'à sa date de
   publication, et Yahoo ne dit pas laquelle.
 - Le **biais du survivant** n'est pas corrigé : un univers construit aujourd'hui

@@ -44,6 +44,22 @@ et ce que ce verdict ne couvre pas. La décision appartient à celui qui la pren
   limite 1 du carnet. Lis son miroir
   [`python/import_fondamentaux.md`](../../python/import_fondamentaux.md) : il dit
   ce que la source **ne** donne pas, à commencer par la profondeur du carnet.
+- **Historique des fondamentaux** : deux voies, et il faut dire laquelle tu
+  utilises. `import_fondamentaux.py --archiver` empile les relevés du jour dans
+  `docs/raw/fondamentaux/archive.csv` — dates **observées**, mais série qui part
+  de zéro. `python/reconstituer_fondamentaux.py AIR.PA` reconstitue **3 à 4 ans**
+  en datant chaque exercice par sa publication réelle
+  ([`miroir`](../../python/reconstituer_fondamentaux.md)) — vérifie toujours la
+  colonne `PUBLICATION_ESTIMEE` avant d'exploiter une ligne.
+- **Dividendes et univers historique** : `python/import_dividendes.py --index`
+  liste **63 valeurs**, anciennes composantes du CAC 40 comprises ;
+  `python/import_dividendes.py NL0000235190 --ticker AIR.PA` récupère l'historique
+  d'une valeur et le **confronte** à yfinance. Apports propres : la **date
+  d'annonce**, la ventilation **acompte / solde / exceptionnel**, et une
+  profondeur supérieure (Saint-Gobain 1988 contre 2000 chez yfinance). Lis son
+  miroir [`python/import_dividendes.md`](../../python/import_dividendes.md) —
+  en particulier le piège de la colonne « Dividende brut », qui porte un montant
+  **net** de retenue à la source.
 - **Loi de Student** : réutilise `p_valeur_student()` de `python/import_societe.py`,
   ne la réimplémente pas. `scipy` n'est pas installé et ne doit pas l'être.
 - **Fondements** : le cours [alpha](../../docs/raw/concept/semestre4/alpha/README.md) couvre
@@ -160,20 +176,34 @@ fondamentaux **du jour seulement** par `import_fondamentaux.py` :
 | **Taille** | capitalisation, flottant | ✅ idem |
 | **Liquidité** | spread, volume | ⚠️ limite 1 du carnet, différée et vide hors séance |
 | **Liquidité** | profondeur du carnet | ❌ données de niveau 2, absentes de la source |
-| **Rendement** | dividende / cours | ⚠️ partiel : colonne `Dividends` |
+| **Rendement** | dividende / cours | ✅ `import_dividendes.py` — avec la date d'annonce et le type ; exclus les exceptionnels d'un facteur rendement |
+| **Univers historique** | composition passée de l'indice | ⚠️ les 63 valeurs de `import_dividendes.py`, dividendes seuls — voir le piège du survivant ci-dessous |
 
 **Ne fabrique jamais un ratio fondamental.** Ceux du tableau viennent de
 [`import_fondamentaux.py`](../../python/import_fondamentaux.md) ou de nulle part.
-⚠️ **Ils n'ont aucun historique** : la source ne rend que la valeur du jour de
-l'appel, et ne dit pas à quelle date le chiffre a été publié. Tout écran
-fondamental est donc utilisable **en transversal aujourd'hui**, jamais en
-backtest — le regard en avant y serait total. Si on te demande un écran *value*
-rétrospectif,
-dis que les données du dépôt ne le permettent pas et propose ce qui l'est.
+⚠️ **Pris tels quels ils n'ont aucun historique** : `import_fondamentaux.py` ne
+rend que la valeur du jour de l'appel. Un écran fondamental y est donc utilisable
+**en transversal aujourd'hui**, jamais en backtest.
+
+Pour une étude rétrospective, passe par `reconstituer_fondamentaux.py`, qui date
+chaque exercice par sa publication réelle — mais annonce alors ses trois limites,
+sans quoi le résultat n'est pas publiable : couverture inégale des dates
+d'annonce, profondeur d'environ trois ans et demi, et comptes servis dans leur
+version **retraitée** et non telle que publiée. Au-delà de cette profondeur, dis
+que les données du dépôt ne le permettent pas et propose ce qui l'est.
 
 Les pièges de tout écran, à mentionner dès que tu en construis un :
 
 - **Biais du survivant** — un univers constitué aujourd'hui exclut les faillites.
+  `import_dividendes.py` l'**atténue sans le supprimer**, et la distinction est à
+  faire à chaque fois :
+  - sortie de l'indice mais **toujours cotée** (Atos, Air France-KLM : 6849
+    séances chacune chez yfinance) — rien ne manque, il suffisait de penser à
+    l'inclure ;
+  - **réellement radiée** (Alcatel, absorbée en 2016) — la source donne ses
+    28 dividendes de 1988 à 2015, mais yfinance rend **0 séance** de cours. On
+    peut donc nommer la valeur et connaître ses dividendes, **pas calculer sa
+    performance**. Le biais reste entier sur les rendements.
 - **Regard en avant** — un fondamental n'est connu qu'à sa date de publication,
   pas à la date de clôture du trimestre. Sur les prix, même règle : la fenêtre
   glissante ne doit jamais lire l'avenir

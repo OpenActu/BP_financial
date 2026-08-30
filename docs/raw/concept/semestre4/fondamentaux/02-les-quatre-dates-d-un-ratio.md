@@ -102,15 +102,49 @@ Tout n'est pas perdu — mais le domaine du licite est étroit et il faut le dir
 |---|---|
 | Décrire une entreprise **aujourd'hui** | ✅ |
 | Comparer plusieurs entreprises **au même instant** (§ [module 4](04-un-ratio-n-existe-que-relatif.md)) | ✅ — c'est le seul usage vraiment solide |
-| Construire une série et **la constituer soi-même**, appel après appel, en horodatant | ✅ mais il faut commencer aujourd'hui et attendre des années |
-| Reconstituer un ratio passé | ❌ |
-| Backtester un écran fondamental | ❌ |
-| Dater un franchissement de seuil de valorisation | ❌ |
+| Construire une série et **la constituer soi-même**, appel après appel, en horodatant | ✅ `import_fondamentaux.py --archiver` — mais il faut commencer aujourd'hui |
+| Reconstituer un ratio passé | ⚠️ § 2.6 — possible sur **3 à 4 ans**, là où la couverture existe |
+| Backtester un écran fondamental | ⚠️ sur cette profondeur seulement : de quoi illustrer une méthode, pas valider un facteur |
+| Dater un franchissement de seuil de valorisation | ⚠️ idem |
 
 La troisième ligne est la seule voie honnête vers un historique : **archiver**
 les appels au fil du temps, chacun daté de son $t_{\text{lecture}}$. C'est
 laborieux et lent, et cela ne donne rien avant plusieurs années — mais c'est la
 différence entre une base de données et une illusion.
+
+
+## 2.6 — Aller chercher la troisième date
+
+La conclusion du § 2.3 mérite d'être nuancée : la source en dit plus qu'il n'y
+paraît. `get_earnings_dates()` rend les **dates d'annonce réelles** des
+résultats — c'est exactement la troisième date, celle qui manquait.
+
+[`reconstituer_fondamentaux.py`](../../../../../python/reconstituer_fondamentaux.md)
+s'en sert pour apparier chaque exercice à sa publication, puis n'utilise à chaque
+séance que le dernier exercice **déjà public**. Sur Airbus, le basculement tombe
+le jour même de l'annonce, et non à la clôture de l'exercice :
+
+| Séance | PER | Exercice utilisé |
+|---|---|---|
+| 2025-02-19 | 33,76 | 2023-12-31 |
+| **2025-02-20** | **30,25** | **2024-12-31** |
+
+Trois limites, à publier avec toute série ainsi reconstituée :
+
+- **La couverture est inégale.** Airbus a 88 publications depuis 2004, BNP
+  Paribas 87 — **LVMH aucune**. Sans elles, le script retombe sur un décalage
+  conventionnel, et le signale dans une colonne dédiée.
+- **La profondeur reste celle des comptes** : 4 exercices annuels, soit environ
+  trois ans et demi de série.
+- **Les retraitements survivent.** La source sert la version *actuelle* des
+  comptes passés. La reconstruction corrige le regard en avant sur la **date**,
+  pas sur le **contenu** — et le biais du survivant reste entier.
+
+> 🔑 **Deux voies, à mener ensemble.** L'archivage horodate le présent, sans
+> aucune approximation mais sans rien donner avant des années. La reconstruction
+> donne trois ans tout de suite, au prix d'hypothèses qu'il faut nommer. Aucune
+> ne remplace une base *point-in-time* professionnelle ; ensemble, elles font
+> passer le sujet de « impossible » à « possible, et daté ».
 
 ## Ce qu'il faut retenir
 
