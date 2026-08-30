@@ -188,4 +188,4 @@ partie du résultat.**
 ---
 
 ⬅️ [Module 3 — La règle écrite à l'avance](03-la-regle-ecrite-a-l-avance.md) ·
-➡️ [Module 6 — Cas pratique : un cycle `ACHAT` → `VENTE`, 2021-2025](06-cas-pratique.md)
+➡️ [Module 5 — La cadence d'application fait partie de la règle](05-la-cadence-fait-partie-de-la-regle.md)

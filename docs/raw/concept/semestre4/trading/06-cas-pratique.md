@@ -1,6 +1,6 @@
 # Module 6 — Cas pratique : un cycle `ACHAT` → `VENTE`, 2021-2025 ⭐
 
-**Prérequis :** modules [1](01-ce-que-le-chartiste-produit.md) à [4](04-les-pieges-du-passage-a-l-acte.md).
+**Prérequis :** modules [1](01-ce-que-le-chartiste-produit.md) à [5](05-la-cadence-fait-partie-de-la-regle.md).
 **Ce qu'on établit ici :** la règle du [module 3](03-la-regle-ecrite-a-l-avance.md) exécutée aux **1 281 séances** de 2021 à 2025 sur Airbus contre le CAC 40, et le **seul cycle complet** qu'elle produit sur ces cinq ans — `ACHAT` le 5 mars 2021 à 87,54 €, `VENTE` le 4 octobre 2022 à 88,13 €. Dix-neuf mois de détention, un repli de $-25{,}8\,\%$ traversé sans broncher, **$+0{,}67\,\%$** brut et **$+0{,}42\,\%$** net — pendant que le même titre, conservé de bout en bout, gagnait **$+136\,\%$**. Et une hypothèse d'exécution décalée d'une seule séance qui **change le signe** du résultat.
 
 ---
@@ -60,6 +60,12 @@ Indice de référence du critère 4 : CAC 40 (`^FCHI`). Taux sans risque : $r_f 
 > de l'un à l'autre demande une convention supplémentaire — et cette convention
 > pèse sur le résultat autant que la règle elle-même. Elle se publie donc au même
 > endroit et dans les mêmes termes : **avant tout chiffre**.
+
+**La cadence d'abord** : la règle est évaluée **à chaque séance cotée** de la
+période, et rien ne se passe entre deux séances. C'est le premier paramètre à
+déclarer, et le [module 5](05-la-cadence-fait-partie-de-la-regle.md) montre ce
+que d'autres choix auraient donné. Viennent ensuite les sept conventions qui
+font le passage du verdict à la position :
 
 | # | Convention déclarée |
 |---|---|
@@ -191,7 +197,9 @@ Ce que la règle a dit pendant ces 408 séances :
 > couvrant toute la baisse. Le dimensionnement et le stop relèvent du
 > [cours finance](../finance/README.md) ; une règle de verdict ne les remplace
 > pas, et croire le contraire est exactement le piège du
-> [§ 3.7](03-la-regle-ecrite-a-l-avance.md#37--ce-quun-verdict-nest-pas).
+> [§ 3.7](03-la-regle-ecrite-a-l-avance.md#37--ce-quun-verdict-nest-pas). **Ce que ce silence
+> aurait coûté, ou rapporté, si un stop l'avait interrompu est mesuré au
+> [module 7](07-le-stop-une-sortie-sans-verdict.md).**
 
 ## 6.5 — La sortie : mardi 4 octobre 2022
 
@@ -352,8 +360,9 @@ $r_f = 0$ :
   chiffre plutôt que de la mentionner.
 - **Les coûts sont déclarés**, l'impact de marché est estimé sur le volume du jour
   de l'appel et non sur celui de 2021 ou 2022.
-- **Fiscalité, enveloppe, liquidité, taille de position, levier, stop** : hors
-  champ, comme au [§ 3.7](03-la-regle-ecrite-a-l-avance.md#37--ce-quun-verdict-nest-pas).
+- **Fiscalité, enveloppe, liquidité, taille de position et levier** : hors champ, comme au
+  [§ 3.7](03-la-regle-ecrite-a-l-avance.md#37--ce-quun-verdict-nest-pas). Le **stop**, lui, sort
+  du hors-champ au [module 7](07-le-stop-une-sortie-sans-verdict.md).
 - **Les erreurs ne sont pas i.i.d.** La volatilité est en grappes ; les $p$-valeurs
   de `TEND_20`, `TEND_120` et des régressions sont **optimistes**
   ([alpha 04](../alpha/04-cinq-pieges.md)).
@@ -384,5 +393,6 @@ $r_f = 0$ :
 
 ---
 
-⬅️ [Module 4 — Les pièges du passage à l'acte](04-les-pieges-du-passage-a-l-acte.md) ·
+⬅️ [Module 5 — La cadence d'application fait partie de la règle](05-la-cadence-fait-partie-de-la-regle.md) ·
+➡️ [Module 7 — Le stop, une sortie qui n'attend pas de verdict](07-le-stop-une-sortie-sans-verdict.md) ·
 🏠 [README du cours](README.md)

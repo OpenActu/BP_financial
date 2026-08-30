@@ -55,7 +55,7 @@ général **puis** le corrige de ces frottements.
 | # | Module | Durée | Sortie attendue |
 |---|---|---|---|
 | 2 | [L'effet de levier](02-l-effet-de-levier.md) | 1 h | $R_L=LR-(L-1)c$ ; le Sharpe est invariant ; le levier dérive tout seul |
-| 3 | [**Marge, appel de marge et ruine**](03-marge-appel-de-marge-et-ruine.md) ⭐ | 1 h 15 | $x^\star=\frac{1/L-m}{1-m}$ ; l'espérance ment, la médiane s'effondre |
+| 3 | [**Marge, appel de marge et ruine**](03-marge-appel-de-marge-et-ruine.md) ⭐ | 1 h 30 | $x^\star=\frac{1/L-m}{1-m}$ ; l'espérance ment, la médiane s'effondre ; **le stop est la même barrière, choisie** |
 | 4 | [**Levier optimal et drag de volatilité**](04-levier-optimal-et-drag.md) ⭐ | 1 h 15 | $L^\star=\frac{\mu-c}{\sigma^2}$, le demi-Kelly, et pourquoi $L^\star<1$ au SRD |
 
 ### Partie II — La couverture
@@ -64,7 +64,7 @@ général **puis** le corrige de ces frottements.
 |---|---|---|---|
 | 5 | [La vente à découvert](05-la-vente-a-decouvert.md) | 1 h | Seuil de rentabilité $-k$ ; espérance nue négative ; le squeeze est mécanique |
 | 6 | [**La couverture optimale**](06-la-couverture-optimale.md) ⭐ | 1 h 15 | $h^\star=\beta$, efficacité $\rho^2$ — `modele.md` appliqué tel quel |
-| 7 | [Couvrir en pratique](07-couvrir-en-pratique.md) | 1 h 15 | Future, VAD, put, ETF inverse : quatre instruments, quatre défauts |
+| 7 | [Couvrir en pratique](07-couvrir-en-pratique.md) | 1 h 30 | Future, VAD, put, ETF inverse, **ordre stop** : cinq instruments, cinq défauts |
 
 ### Partie III — Le portefeuille
 
@@ -79,7 +79,7 @@ général **puis** le corrige de ces frottements.
 |---|---|---|---|
 | 10 | [**Un portefeuille complet, chiffré**](10-exemple-de-portefeuille.md) ⭐ | 1 h 30 | 60 000 €, 10 valeurs : les neuf modules exécutés, tous les nombres publiés |
 
-**Volume total** : ≈ 12 h 15, à répartir sur 3 à 4 semaines. Les modules se lisent **dans
+**Volume total** : ≈ 12 h 45, à répartir sur 3 à 4 semaines. Les modules se lisent **dans
 l'ordre** : chacun n'utilise que les précédents, et le module 6 exige d'avoir lu
 [`modele.md`](../../../modele.md).
 
@@ -94,12 +94,14 @@ l'ordre** : chacun n'utilise que les précédents, et le module 6 exige d'avoir 
 | Le minimum vital, en 3 h | 3 → 4 → 6 |
 | Lire ce cours depuis un PEA | 1 → 4 → 8 → 9, puis § 7.5 |
 | **Voir à quoi tout cela sert** | **10 seul**, puis remonter aux modules qu'il cite |
+| Poser un stop, et savoir ce qu'il coûte | § 3.5 → § 7.6, puis le [module 7 du cours trading](../trading/07-le-stop-une-sortie-sans-verdict.md) |
 
 ## Les six modules décisifs
 
 - **Module 3 — L'appel de marge.** Celui qui montre que le risque du levier n'est pas dans les
   formules du module 2 : il est dans la **barrière**, qui rend le résultat dépendant du chemin et
-  liquide plus d'une position sur deux **à tort**.
+  liquide plus d'une position sur deux **à tort**. Le § 3.5 montre qu'un **stop-loss** est la même
+  barrière, posée volontairement, et qu'elle se paie de 1 à 4 points d'espérance par an.
 - **Module 4 — Le levier optimal.** Celui qui explique pourquoi l'espérance monte pendant que la
   médiane s'effondre, et pourquoi, avec un portage à 5 %, le levier optimal sur des actions
   parisiennes est **inférieur à 1**.

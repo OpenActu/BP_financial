@@ -25,7 +25,9 @@ accumulée par les quatre cours précédents se perd habituellement en une phras
 | « Une bonne règle donne souvent un signal. » | Appliquée jour après jour à Airbus sur 2020-2021, la règle de ce cours rend **ATTENTE 512 fois sur 515** | [03](03-la-regle-ecrite-a-l-avance.md) |
 | « Son excès de rendement est positif, donc elle a battu l'indice. » | Sur 2019-2020, Airbus affiche $+7{,}2\,\%$ d'excès arithmétique annuel, un ratio d'information de $+0{,}19$ — et $+8{,}2\,\%$ contre $+18{,}4\,\%$ en cumulé | [04](04-les-pieges-du-passage-a-l-acte.md) |
 | « Le 1er janvier, je regarde les cours du 1er janvier. » | Le 1er janvier est férié, `--fin` est **exclusif**, et les deux séries n'ont pas le même calendrier — trois façons de fabriquer un regard en avant sans le vouloir | [04](04-les-pieges-du-passage-a-l-acte.md) |
+| « Peu importe le jour où j'applique la règle, elle est ce qu'elle est. » | Cinq variantes d'une **même** cadence hebdomadaire donnent cinq histoires : de « jamais acheté avant 2023 » à « acheté en mars 2021 et jamais ressorti » | [05](05-la-cadence-fait-partie-de-la-regle.md) |
 | « Une règle correcte finit par payer. » | Sur 2021-2025, elle produit **un seul cycle complet** : $+0{,}67\,\%$ brut en dix-neuf mois, $-1{,}26\,\%$ à l'exécution réaliste, contre $+136\,\%$ pour le titre conservé | [06](06-cas-pratique.md) |
+| « Un stop, ça ne peut pas nuire. » | Sur cinq ans, la même règle rend $+79{,}82\,\%$ nette sans stop et $-13{,}76\,\%$ avec un stop suiveur à $10\,\%$ — les cinq réentrées se sont faites plus haut que la sortie | [07](07-le-stop-une-sortie-sans-verdict.md) |
 
 ## Le fil directeur
 
@@ -33,8 +35,10 @@ accumulée par les quatre cours précédents se perd habituellement en une phras
 > règle publiée avant d'avoir vu les données.** Tout ce cours consiste à rendre
 > cette phrase opérationnelle : nommer les objets (module 1), les transformer en
 > critères sans dimension et datés (module 2), figer la règle et ses vetos
-> (module 3), énumérer ce qui la corrompt (module 4), puis l'exécuter de bout en
-> bout sur cinq années jusqu'au compte final d'un aller-retour (module 6). Le
+> (module 3), énumérer ce qui la corrompt (module 4), lui donner la cadence qui
+> lui manquait (module 5), puis l'exécuter de bout en bout sur cinq années
+> jusqu'au compte final d'un aller-retour (module 6), et enfin lui adjoindre le stop que tout
+> lecteur réclame en cours de route (module 7). Le
 > verdict lui-même n'occupe qu'une ligne — et il ne vaut que par les modules qui
 > le précèdent.
 
@@ -46,7 +50,9 @@ accumulée par les quatre cours précédents se perd habituellement en une phras
 | 2 | [D'un objet à un critère](02-d-un-objet-a-un-critere.md) ⭐ | Rendre un objet décidable : sans dimension, daté, borné ; la généalogie des cinq critères |
 | 3 | [La règle écrite à l'avance](03-la-regle-ecrite-a-l-avance.md) ⭐ | Verdict ternaire, asymétrie achat/vente, les quatre vetos, `ATTENTE` par défaut ; le comptage 2020-2021 |
 | 4 | [Les pièges du passage à l'acte](04-les-pieges-du-passage-a-l-acte.md) | Regard en avant, repeinture, tests multiples, drag de volatilité, coûts, périmètre du verdict |
+| 5 | [La cadence d'application fait partie de la règle](05-la-cadence-fait-partie-de-la-regle.md) ⭐ | Une exécution complète à une date, puis la question que le module 3 laissait ouverte : **quand** évalue-t-on la règle ? Quatre cadences, cinq jours de la semaine, et jusqu'à **122 points** d'écart à règle identique |
 | 6 | [Cas pratique : un cycle `ACHAT` → `VENTE`, 2021-2025](06-cas-pratique.md) ⭐ | La règle exécutée aux **1 281 séances** de cinq années, la convention de cycle déclarée avant tout chiffre, et le **seul aller-retour complet** qu'elle produit — coûts, alpha de même convention, et l'hypothèse d'exécution qui change le signe du résultat |
+| 7 | [Le stop, une sortie qui n'attend pas de verdict](07-le-stop-une-sortie-sans-verdict.md) ⭐ | Un canal de décision parallèle à la règle : ce qu'il faut en déclarer, et ce que dix variantes auraient donné sur le fil rouge — **93 points** d'écart entre la même règle avec et sans stop suiveur |
 
 ## Le fil rouge chiffré
 

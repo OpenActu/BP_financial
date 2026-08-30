@@ -86,7 +86,7 @@ Simulation honnête : 10 actifs, $\sigma=28\,\%$, $\bar\rho=0{,}45$, rendements 
 | 3   | **Quelle échelle**        | $L^\star=\frac{\mu-c}{\sigma^2}$, appliqué **de moitié**                     | [§ 4.3](04-levier-optimal-et-drag.md) — souvent $L<1$ |
 | 4   | **Quelle baisse tolérer** | $L\le\frac1{m+(1-m)d}$                                                       | [§ 3.5](03-marge-appel-de-marge-et-ruine.md)          |
 | 5   | **Couvrir ?**             | $h^\star=\beta$, efficacité $\rho^2$ — et seulement si vendre est impossible | [§ 6.4](06-la-couverture-optimale.md)                 |
-| 6   | **Avec quoi**             | Future si le montant le permet ; ETF inverse en PEA, tactique seulement      | [§ 7.6](07-couvrir-en-pratique.md)                    |
+| 6   | **Avec quoi**             | Future si le montant le permet ; ETF inverse en PEA, tactique seulement      | [§ 7.7](07-couvrir-en-pratique.md)                    |
 
 > 📄 **Cette chaîne est exécutée de bout en bout, avec tous les nombres, au
 > [module 10](10-exemple-de-portefeuille.md)** : 60 000 €, dix valeurs du CAC 40, et les six

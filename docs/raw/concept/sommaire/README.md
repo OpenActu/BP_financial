@@ -9,11 +9,11 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 7 h 30 |
 | Comment **dérive**-t-on et **intègre**-t-on ces quantités ? | [Analyse](analyse.md) | 20 h |
 | Le résultat est-il **réel**, ou du hasard d'échantillonnage ? | [Statistique](statistique.md) | 56 h |
-| Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../semestre4/finance/README.md) | 12 h 15 |
+| Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../semestre4/finance/README.md) | 12 h 45 |
 | De combien le cours **s'écarte**-t-il de sa tendance ? | [Canal de régression](../semestre3/canal/README.md) | 6 h |
 | Entre quelles **bornes** le cours évolue-t-il ? | [Encadrement](../semestre3/encadrement/README.md) | 4 h |
 | Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../semestre4/alpha/README.md) | 5 h |
-| Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 5 h |
+| Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 7 h |
 | Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
 
 > 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les dix cours en quatre
@@ -43,7 +43,7 @@ concept/
 ├── semestre4/                           la décision
 │   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
 │   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
-│   ├── trading/                         5 modules — des objets du chartiste à la règle écrite et son verdict
+│   ├── trading/                         7 modules — des objets du chartiste à la règle écrite et son verdict
 │   └── finance/                         10 modules — levier, couverture, portefeuille optimal
 │
 └── sommaire/                            les index, hors parcours

@@ -144,6 +144,66 @@ $$\boxed{\;L\;\le\;\frac{1}{m+(1-m)\,d}\;}$$
 > rendement je vise » mais « quelle baisse je dois pouvoir traverser sans être liquidé ». Le
 > [module 4](04-levier-optimal-et-drag.md) donnera l'autre critère — la croissance à long terme — et les deux convergeront vers des valeurs étonnamment proches, toutes deux bien en dessous des plafonds réglementaires.
 
+### Le stop-loss : la même barrière, choisie
+
+Un ordre stop **pose volontairement** la barrière que l'appel de marge impose. L'objet
+mathématique est le même — celui du § 3.2 —, il ne dépend d'aucun levier, et les conclusions se
+transposent mot pour mot. C'est ce qui autorise à le traiter ici plutôt qu'ailleurs.
+
+**Probabilité de toucher le stop avant un an**, formule du § 3.2, $\mu=7\,\%$, sans levier :
+
+| Stop           | $\sigma=20\,\%$ (indice) | $\sigma=30\,\%$ (ligne unique) | $\sigma=35\,\%$ (ligne agitée) |
+| -------------- | ------------------------ | ------------------------------ | ------------------------------ |
+| $-5\,\%$       | 74,4 %                   | 85,2 %                         | 88,0 %                         |
+| **$-10\,\%$**  | 51,9 %                   | **70,4 %**                     | **75,8 %**                     |
+| $-15\,\%$      | 33,5 %                   | 56,1 %                         | 63,5 %                         |
+| $-20\,\%$      | 19,7 %                   | 42,9 %                         | 51,5 %                         |
+| $-25\,\%$      | 10,3 %                   | 31,1 %                         | 40,3 %                         |
+
+> 🔑 **Le stop à $-10\,\%$ — le plus posé de tous — est touché sept fois sur dix en un an** sur une
+> ligne unique du CAC 40, alors même que la trajectoire a une espérance **positive**. Ce n'est pas
+> un accident rare contre lequel on s'assure : c'est le régime ordinaire du titre. Poser un stop
+> sans regarder cette table, c'est choisir une fréquence de déclenchement sans le savoir.
+
+Simulation, 200 000 trajectoires journalières, $\sigma=30\,\%$, $\mu=7\,\%$, un an ; la position
+est fermée au seuil et **n'est pas rouverte** :
+
+| Stop      | $P(\text{touché})$ | dont **finissent au-dessus** du seuil | $E[R]$ sans stop | $E[R]$ avec stop | Médiane avec |
+| --------- | ------------------ | ------------------------------------- | ---------------- | ---------------- | ------------ |
+| $-5\,\%$  | 82,0 %             | **51,4 %**                            | +7,35 %          | **+3,43 %**      | −5,00 %      |
+| $-10\,\%$ | 67,3 %             | **50,7 %**                            | +7,35 %          | +4,87 %          | −10,00 %     |
+| $-15\,\%$ | 53,5 %             | **50,3 %**                            | +7,35 %          | +5,80 %          | −15,00 %     |
+| $-20\,\%$ | 40,7 %             | **49,7 %**                            | +7,35 %          | +6,44 %          | −2,96 %      |
+
+> ⭐ **Une sortie sur deux est une erreur *ex post*.** C'est le résultat du § 3.3, à la virgule
+> près, et pour la même raison : **une barrière ne distingue pas un repli passager d'une baisse
+> durable**, elle ne regarde que le minimum atteint en chemin. Le stop achète donc la même chose
+> que l'appel de marge fait subir — la perte du droit d'attendre — sauf qu'ici on la paie
+> volontairement, et qu'elle coûte de 1 à 4 points d'espérance annuelle.
+
+**Le stop dimensionne, et c'est son seul usage indiscutable.** Si l'on accepte de perdre au plus
+une fraction $\lambda$ du portefeuille sur une ligne dont le stop est à $-d$, alors le poids de
+cette ligne est borné :
+
+$$\boxed{\;w\;\le\;\frac{\lambda}{d}\;}$$
+
+| Perte acceptée $\lambda$ | Stop à $-5\,\%$ | Stop à $-10\,\%$ | Stop à $-20\,\%$ |
+| ------------------------ | --------------- | ---------------- | ---------------- |
+| 1 % du portefeuille      | 20 %            | 10 %             | 5 %              |
+| 2 %                      | 40 %            | **20 %**         | 10 %             |
+| 5 %                      | 100 %           | 50 %             | 25 %             |
+
+C'est le **pendant exact** de la formule $L\le\frac1{m+(1-m)d}$ ci-dessus : dans les deux cas, on
+part de la baisse qu'on doit pouvoir traverser et on en déduit une taille, jamais l'inverse.
+
+⚠️ **Les trois réserves du § 3.2 valent ici aussi, et une quatrième s'y ajoute.** Le brownien
+ignore les sauts ; un **gap** d'ouverture franchit le seuil sans le toucher, et l'ordre est alors
+exécuté au premier cours coté, jusqu'à $5\,\%$ sous le seuil demandé sur les cas mesurés du
+[§ 7.6](07-couvrir-en-pratique.md). Les probabilités ci-dessus sont donc des **planchers**, et le
+prix obtenu n'est **pas** celui du tableau. La mesure sur données réelles — dix variantes de stop
+sur cinq ans — est au
+[module 7 du cours trading](../trading/07-le-stop-une-sortie-sans-verdict.md).
+
 ---
 
 ## 3.6 Simulation
@@ -190,12 +250,50 @@ Sortie attendue : la table du § 3.3, une part de liquidations « inutiles » su
 des probabilités analytiques **au-dessus** des probabilités simulées — l'écart entre surveillance
 continue et surveillance journalière.
 
+### S3.2 — Le stop est la même barrière
+
+```python
+import numpy as np, math
+
+rng = np.random.default_rng(1)
+mu, sig, T, n, B = 0.07, 0.30, 1.0, 252, 200_000
+dt = T / n
+
+Z = rng.standard_normal((B, n))
+S = np.exp(np.cumsum((mu - sig ** 2 / 2) * dt + sig * math.sqrt(dt) * Z, axis=1))
+mini = np.minimum.accumulate(S, axis=1)
+
+print(f"{'stop':>7}{'P(touche)':>11}{'finit au-dessus':>17}{'E sans':>9}{'E avec':>9}{'mediane':>10}")
+for x in (0.05, 0.10, 0.15, 0.20):
+    bar = 1 - x
+    touche = mini[:, -1] <= bar
+    R0 = S[:, -1] - 1                      # sans stop
+    R1 = np.where(touche, -x, R0)          # ferme au seuil, jamais rouverte
+    print(f"{-x:>7.0%}{touche.mean():>11.1%}{(S[touche, -1] > bar).mean():>17.1%}"
+          f"{R0.mean():>+9.2%}{R1.mean():>+9.2%}{np.median(R1):>+10.2%}")
+
+# la formule du paragraphe 3.2, appliquee telle quelle a un stop
+Phi = lambda z: 0.5 * (1 + math.erf(z / math.sqrt(2)))
+nu = mu - sig ** 2 / 2
+for x in (0.05, 0.10, 0.15, 0.20, 0.25):
+    a = math.log(1 - x)
+    p = Phi((a - nu * T) / (sig * math.sqrt(T))) + math.exp(2 * nu * a / sig ** 2) * Phi(
+        (a + nu * T) / (sig * math.sqrt(T)))
+    print(f"stop {-x:.0%} : P analytique (continu) = {p:.1%}")
+```
+
+Sortie attendue : la table du § 3.5, une part de sorties « inutiles » voisine de 50 % **quel que
+soit le seuil**, et des probabilités analytiques au-dessus des probabilités simulées — le même
+écart entre surveillance continue et surveillance journalière qu'en S3.1.
+
 ---
 
 ## 3.7 Exercices
 
 **E3.1.** Démontrer $x^\star=\frac{1/L-m}{1-m}$ et vérifier qu'il s'annule en $L=1/m$. *Que vaut
 $x^\star$ pour $L>1/m$, et qu'est-ce que cela signifie ?*
+
+**E3.1bis.** Un titre de volatilité $35\,\%$ porte un stop à $-15\,\%$. Quelle est la probabilité qu'il soit touché en un an ? *Comparer au même stop sur un indice à $20\,\%$, et en déduire pourquoi un stop se choisit en multiples de volatilité plutôt qu'en pourcentage rond.*
 
 **E3.2.** Inverser la relation pour obtenir $L\le\frac{1}{m+(1-m)d}$ du § 3.5, et retrouver la
 table.
@@ -232,6 +330,11 @@ brownienne du § 3.2.*
   cessent de valoir.
 - **Dimensionner par la baisse tolérée** : $L\le\frac{1}{m+(1-m)d}$. Supporter −30 % avec une
   couverture espèces, c'est $L\le2{,}27$.
+- ⭐ **Un stop est un appel de marge qu'on se donne à soi-même** : même barrière, même formule.
+  À $-10\,\%$ sur une ligne à $30\,\%$ de volatilité, il est touché **7 fois sur 10 en un an**,
+  et **une sortie sur deux** est démentie par la suite — exactement comme une liquidation forcée.
+- **Dimensionner par le stop** : $w\le\lambda/d$. Accepter 2 % de perte avec un stop à
+  $-10\,\%$, c'est $w\le20\,\%$ sur cette ligne.
 - ⚠️ **La couverture en actions est un levier caché** : collatéral et position partagent le même
   facteur de risque.
 
