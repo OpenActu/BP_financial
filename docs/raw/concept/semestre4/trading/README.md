@@ -44,7 +44,7 @@ accumulée par les quatre cours précédents se perd habituellement en une phras
 | 2 | [D'un objet à un critère](02-d-un-objet-a-un-critere.md) ⭐ | Rendre un objet décidable : sans dimension, daté, borné ; la généalogie des cinq critères |
 | 3 | [La règle écrite à l'avance](03-la-regle-ecrite-a-l-avance.md) ⭐ | Verdict ternaire, asymétrie achat/vente, les quatre vetos, `ATTENTE` par défaut ; le comptage 2020-2021 |
 | 4 | [Les pièges du passage à l'acte](04-les-pieges-du-passage-a-l-acte.md) | Regard en avant, repeinture, tests multiples, drag de volatilité, coûts, périmètre du verdict |
-| 5 | [Exemple daté — 1er janvier 2021](05-exemple-date-1er-janvier-2021.md) ⭐ | La règle exécutée sur Airbus contre le CAC 40, sans une donnée postérieure au 31/12/2020 |
+| 5 | [Exemple daté du 1er janvier 2021, puis six mois de rejeu](05-exemple-date-1er-janvier-2021.md) ⭐ | La règle exécutée sur Airbus contre le CAC 40, puis **rejouée aux sept fins de mois du semestre** : sept `ATTENTE`, jamais pour la même raison — et deux `ACHAT` que cette cadence rate |
 
 ## Le fil rouge chiffré
 

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" font-family="ui-monospace,Consolas,monospace">
+<rect width="1200" height="700" fill="#fcfcfb"/>
+<text x="62" y="34" font-size="19" font-weight="600" fill="#0b0b0b" font-family="Georgia,serif">Airbus — les cinq critères au 31 janvier 2021</text>
+<text x="62" y="54" font-size="12" fill="#52514e">533 séances · 2019-01-02 → 2021-01-29 · fenêtre active 2020-08-13 → 2021-01-29 · ε = 2,72 € · décision demandée au 2021-01-31, jour non coté</text>
+<rect x="870.9" y="74" width="233.1" height="340" fill="#f2efe4"/>
+<line x1="62" y1="414.0" x2="1104" y2="414.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="418.0" text-anchor="end" font-size="11" fill="#52514e">40</text>
+<line x1="62" y1="346.0" x2="1104" y2="346.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="350.0" text-anchor="end" font-size="11" fill="#52514e">60</text>
+<line x1="62" y1="278.0" x2="1104" y2="278.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="282.0" text-anchor="end" font-size="11" fill="#52514e">80</text>
+<line x1="62" y1="210.0" x2="1104" y2="210.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="214.0" text-anchor="end" font-size="11" fill="#52514e">100</text>
+<line x1="62" y1="142.0" x2="1104" y2="142.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="146.0" text-anchor="end" font-size="11" fill="#52514e">120</text>
+<line x1="62" y1="74.0" x2="1104" y2="74.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="52" y="78.0" text-anchor="end" font-size="11" fill="#52514e">140</text>
+<line x1="563.4" y1="74" x2="563.4" y2="414" stroke="#e1e0d9" stroke-width="1"/>
+<text x="563.4" y="434" text-anchor="middle" font-size="11" fill="#52514e">2020</text>
+<line x1="1066.8" y1="74" x2="1066.8" y2="414" stroke="#e1e0d9" stroke-width="1"/>
+<text x="1066.8" y="434" text-anchor="middle" font-size="11" fill="#52514e">2021</text>
+<line x1="62" y1="414" x2="1104" y2="414" stroke="#c3c2b7" stroke-width="1"/>
+<text x="876.9" y="90" font-size="11" fill="#52514e">fenêtre active · 120 séances</text>
+<path d="M62.0 291.1L64.0 300.2L65.9 288.2L67.9 293.0L69.8 283.5L71.8 274.2L73.8 274.4L75.7 278.2L77.7 273.4L79.6 266.1L81.6 265.4L83.5 267.8L85.5 261.9L87.5 259.3L89.4 258.6L91.4 261.5L93.3 255.0L95.3 253.1L97.3 256.5L99.2 254.6L101.2 245.5L103.1 241.7L105.1 239.0L107.0 238.1L109.0 236.3L111.0 236.0L112.9 242.9L114.9 242.6L116.8 236.3L118.8 233.9L120.8 228.9L122.7 220.3L124.7 208.6L126.6 207.8L128.6 208.1L130.6 208.2L132.5 207.5L134.5 200.3L136.4 201.4L138.4 202.1L140.3 201.0L142.3 200.6L144.3 199.7L146.2 199.3L148.2 201.7L150.1 200.2L152.1 203.2L154.1 207.0L156.0 202.5L158.0 197.6L159.9 190.5L161.9 190.1L163.8 188.0L165.8 187.0L167.8 184.0L169.7 187.5L171.7 185.3L173.6 197.5L175.6 199.2L177.6 192.2L179.5 194.8L181.5 192.4L183.4 187.4L185.4 187.8L187.4 189.4L189.3 185.4L191.3 187.6L193.2 185.0L195.2 178.6L197.1 185.5L199.1 191.7L201.1 188.6L203.0 185.2L205.0 184.3L206.9 182.2L208.9 178.7L210.9 174.9L212.8 167.0L214.8 168.8L216.7 169.8L218.7 169.9L220.7 166.3L222.6 169.8L224.6 175.7L226.5 177.1L228.5 176.6L230.4 183.4L232.4 179.4L234.4 185.7L236.3 183.5L238.3 189.7L240.2 178.8L242.2 172.9L244.2 167.9L246.1 172.6L248.1 178.6L250.0 181.1L252.0 181.2L253.9 191.7L255.9 186.5L257.9 185.5L259.8 187.2L261.8 193.2L263.7 190.5L265.7 191.7L267.7 184.5L269.6 180.4L271.6 179.7L273.5 182.0L275.5 172.8L277.5 172.4L279.4 165.1L281.4 168.6L283.3 167.4L285.3 168.1L287.2 160.1L289.2 158.7L291.2 166.3L293.1 164.9L295.1 167.0L297.0 165.5L299.0 159.5L301.0 158.4L302.9 163.6L304.9 161.1L306.8 162.3L308.8 163.3L310.7 158.1L312.7 158.9L314.7 161.4L316.6 163.5L318.6 162.9L320.5 157.5L322.5 157.0L324.5 151.7L326.4 147.0L328.4 140.9L330.3 138.4L332.3 137.9L334.3 139.8L336.2 142.1L338.2 136.3L340.1 138.4L342.1 142.9L344.0 141.4L346.0 144.2L348.0 151.6L349.9 150.5L351.9 146.3L353.8 165.3L355.8 173.5L357.8 175.9L359.7 169.4L361.7 153.4L363.6 159.7L365.6 159.5L367.5 155.2L369.5 169.9L371.5 168.2L373.4 166.3L375.4 160.8L377.3 156.3L379.3 150.7L381.3 161.9L383.2 167.5L385.2 166.8L387.1 167.7L389.1 170.7L391.1 159.2L393.0 159.0L395.0 157.0L396.9 161.3L398.9 156.3L400.8 152.9L402.8 155.1L404.8 154.4L406.7 168.5L408.7 164.8L410.6 160.7L412.6 158.5L414.6 171.8L416.5 169.6L418.5 166.9L420.4 163.0L422.4 175.4L424.3 176.3L426.3 179.4L428.3 172.7L430.2 177.1L432.2 178.8L434.1 178.2L436.1 185.9L438.1 193.3L440.0 178.1L442.0 182.6L443.9 184.4L445.9 182.9L447.9 183.9L449.8 182.2L451.8 179.2L453.7 181.0L455.7 177.4L457.6 177.8L459.6 176.2L461.6 174.4L463.5 169.4L465.5 169.9L467.4 175.2L469.4 168.6L471.4 164.7L473.3 161.1L475.3 157.7L477.2 144.6L479.2 149.4L481.2 144.6L483.1 141.9L485.1 144.1L487.0 141.2L489.0 137.4L490.9 135.3L492.9 135.6L494.9 129.9L496.8 127.3L498.8 126.2L500.7 124.5L502.7 130.8L504.7 128.0L506.6 128.6L508.6 131.9L510.5 133.0L512.5 130.2L514.4 126.8L516.4 132.2L518.4 133.2L520.3 133.9L522.3 145.2L524.2 163.0L526.2 150.8L528.2 153.9L530.1 153.7L532.1 160.3L534.0 162.5L536.0 163.2L538.0 162.7L539.9 157.3L541.9 146.9L543.8 139.8L545.8 142.2L547.7 141.9L549.7 138.6L551.7 135.8L553.6 134.7L555.6 134.7L557.5 134.3L559.5 144.5L561.5 143.0L563.4 133.5L565.4 131.9L567.3 133.7L569.3 138.3L571.2 130.8L573.2 129.1L575.2 130.7L577.1 128.5L579.1 128.6L581.0 131.2L583.0 133.9L585.0 123.3L586.9 119.9L588.9 124.5L590.8 119.6L592.8 126.4L594.8 116.4L596.7 135.4L598.7 131.3L600.6 124.0L602.6 130.5L604.5 134.4L606.5 133.0L608.5 119.5L610.4 123.0L612.4 122.7L614.3 123.3L616.3 123.8L618.3 119.5L620.2 123.9L622.2 135.8L624.1 144.9L626.1 141.4L628.0 143.7L630.0 138.9L632.0 138.9L633.9 141.9L635.9 162.0L637.8 164.6L639.8 173.9L641.8 191.3L643.7 212.8L645.7 214.3L647.6 200.3L649.6 203.9L651.6 214.0L653.5 239.6L655.5 269.3L657.4 270.5L659.4 282.7L661.3 327.4L663.3 318.1L665.3 334.8L667.2 353.4L669.2 397.0L671.1 382.4L673.1 351.1L675.1 378.4L677.0 375.4L679.0 362.8L680.9 324.5L682.9 337.4L684.8 359.9L686.8 364.9L688.8 387.2L690.7 393.2L692.7 395.6L694.6 383.0L696.6 372.1L698.6 363.4L700.5 359.7L702.5 362.8L704.4 379.1L706.4 384.1L708.4 372.8L710.3 376.5L712.3 387.9L714.2 383.0L716.2 380.8L718.1 386.7L720.1 390.7L722.1 385.1L724.0 367.9L726.0 369.5L727.9 378.4L729.9 373.9L731.9 382.5L733.8 376.1L735.8 375.1L737.7 380.0L739.7 390.2L741.7 395.3L743.6 394.4L745.6 396.2L747.5 377.4L749.5 380.8L751.4 378.3L753.4 379.5L755.4 381.4L757.3 367.1L759.3 354.1L761.2 359.3L763.2 362.5L765.2 373.1L767.1 364.6L769.1 351.3L771.0 336.6L773.0 325.5L774.9 297.4L776.9 294.5L778.9 314.0L780.8 316.2L782.8 340.8L784.7 341.2L786.7 337.9L788.7 332.2L790.6 332.4L792.6 338.5L794.5 335.2L796.5 340.2L798.5 341.8L800.4 353.6L802.4 350.6L804.3 357.0L806.3 352.4L808.2 351.9L810.2 349.8L812.2 342.8L814.1 345.3L816.1 338.8L818.0 340.1L820.0 344.7L822.0 352.8L823.9 345.8L825.9 338.4L827.8 343.6L829.8 334.1L831.7 341.0L833.7 344.4L835.7 345.0L837.6 337.7L839.6 340.7L841.5 346.4L843.5 350.6L845.5 356.9L847.4 350.8L849.4 356.0L851.3 352.4L853.3 356.6L855.3 351.2L857.2 345.1L859.2 338.0L861.1 336.9L863.1 333.8L865.0 325.2L867.0 312.4L869.0 316.3L870.9 321.4L872.9 325.1L874.8 327.2L876.8 334.1L878.8 330.9L880.7 334.2L882.7 334.5L884.6 325.1L886.6 326.8L888.5 330.9L890.5 325.1L892.5 327.2L894.4 335.3L896.4 333.0L898.3 325.2L900.3 327.0L902.3 332.3L904.2 319.9L906.2 329.2L908.1 333.6L910.1 333.4L912.1 335.3L914.0 327.5L916.0 333.3L917.9 329.2L919.9 328.2L921.8 336.0L923.8 350.1L925.8 355.5L927.7 357.3L929.7 363.9L931.6 362.8L933.6 355.6L935.6 354.8L937.5 356.4L939.5 347.6L941.4 348.4L943.4 344.8L945.3 338.6L947.3 341.9L949.3 341.3L951.2 341.7L953.2 344.2L955.1 351.4L957.1 356.1L959.1 357.3L961.0 349.3L963.0 345.0L964.9 341.2L966.9 350.2L968.9 349.0L970.8 337.8L972.8 344.6L974.7 350.4L976.7 357.3L978.6 358.2L980.6 354.8L982.6 353.2L984.5 343.3L986.5 336.1L988.4 330.5L990.4 331.7L992.4 291.1L994.3 275.8L996.3 278.6L998.2 286.1L1000.2 283.1L1002.2 269.3L1004.1 269.0L1006.1 269.3L1008.0 271.4L1010.0 273.5L1011.9 268.8L1013.9 258.3L1015.9 264.6L1017.8 269.9L1019.8 269.3L1021.7 276.3L1023.7 271.1L1025.7 265.1L1027.6 253.7L1029.6 249.8L1031.5 253.0L1033.5 254.5L1035.4 258.1L1037.4 257.7L1039.4 262.4L1041.3 262.9L1043.3 265.0L1045.2 267.1L1047.2 268.1L1049.2 272.4L1051.1 280.1L1053.1 275.7L1055.0 263.2L1057.0 262.9L1059.0 263.1L1060.9 259.7L1062.9 265.4L1064.8 270.0L1066.8 269.6L1068.7 269.8L1070.7 268.7L1072.7 270.5L1074.6 269.0L1076.6 270.0L1078.5 269.4L1080.5 272.0L1082.5 259.1L1084.4 261.3L1086.4 265.6L1088.3 265.2L1090.3 261.7L1092.2 271.3L1094.2 272.9L1096.2 285.3L1098.1 284.0L1100.1 286.9L1102.0 284.4L1104.0 290.5" fill="none" stroke="#2a78d6" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="1029.6" y1="247.3" x2="1104.0" y2="260.6" stroke="#eb6834" stroke-width="2.2"/>
+<circle cx="1027.6" cy="253.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1029.6" cy="247.3" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1031.5" cy="251.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1033.5" cy="251.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1035.4" cy="249.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1037.4" cy="255.3" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1039.4" cy="257.5" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1041.3" cy="256.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1057.0" cy="259.7" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1059.0" cy="259.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1060.9" cy="258.5" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1062.9" cy="260.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1066.8" cy="255.0" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1076.6" cy="263.7" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1082.5" cy="259.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1084.4" cy="260.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1086.4" cy="263.6" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1088.3" cy="262.1" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1090.3" cy="258.4" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1092.2" cy="258.5" r="3" fill="#eb6834" stroke="#fcfcfb" stroke-width="1.5"/>
+<text x="1112" y="264.6" font-size="12" font-weight="600" fill="#eb6834">85,12 €</text>
+<line x1="978.6" y1="365.1" x2="1104.0" y2="294.7" stroke="#1baf7a" stroke-width="2.2"/>
+<circle cx="976.7" cy="362.6" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="978.6" cy="365.1" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="980.6" cy="361.3" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="982.6" cy="357.6" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1098.1" cy="288.9" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1100.1" cy="290.1" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1102.0" cy="292.7" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<circle cx="1104.0" cy="294.7" r="3" fill="#1baf7a" stroke="#fcfcfb" stroke-width="1.5"/>
+<text x="1112" y="298.7" font-size="12" font-weight="600" fill="#1baf7a">75,08 €</text>
+<line x1="1104.0" y1="74" x2="1104.0" y2="414" stroke="#8b5cd6" stroke-width="1.2" stroke-dasharray="4 3"/>
+<circle cx="1104.0" cy="290.5" r="4.5" fill="#8b5cd6" stroke="#fcfcfb" stroke-width="1.8"/>
+<text x="1096.0" y="108" text-anchor="end" font-size="12" font-weight="600" fill="#8b5cd6">décision 2021-01-29 · 76,33 €</text>
+<text x="62" y="476" font-size="12.5" font-weight="600" fill="#0b0b0b">Les cinq critères</text>
+<text x="62" y="500" font-size="12" fill="#52514e">1</text>
+<text x="88" y="500" font-size="12" fill="#52514e">tendance longue — TEND_120</text>
+<text x="362" y="500" font-size="12.5" font-weight="600" fill="#0b0b0b">+1</text>
+<text x="1104" y="500" text-anchor="end" font-size="13" fill="#1baf7a">↑</text>
+<text x="62" y="521" font-size="12" fill="#52514e">2</text>
+<text x="88" y="521" font-size="12" fill="#52514e">tendance courte — TEND_20</text>
+<text x="362" y="521" font-size="12.5" font-weight="600" fill="#0b0b0b">-1</text>
+<text x="1104" y="521" text-anchor="end" font-size="13" fill="#eb6834">↓</text>
+<text x="62" y="542" font-size="12" fill="#52514e">3</text>
+<text x="88" y="542" font-size="12" fill="#52514e">position dans l'encadrement actif</text>
+<text x="362" y="542" font-size="12.5" font-weight="600" fill="#0b0b0b">12,4 % de la hauteur</text>
+<text x="1104" y="542" text-anchor="end" font-size="13" fill="#1baf7a">↑</text>
+<text x="62" y="563" font-size="12" fill="#52514e">4</text>
+<text x="88" y="563" font-size="12" fill="#52514e">alpha annualisé contre l'indice</text>
+<text x="362" y="563" font-size="12.5" font-weight="600" fill="#0b0b0b">-1,56 %/an · IC95 [-49,24 ; +46,12] % · indiscernable de zéro</text>
+<text x="1104" y="563" text-anchor="end" font-size="13" fill="#1baf7a">↑</text>
+<text x="62" y="584" font-size="12" fill="#52514e">5</text>
+<text x="88" y="584" font-size="12" fill="#52514e">momentum 12-1</text>
+<text x="362" y="584" font-size="12.5" font-weight="600" fill="#0b0b0b">-33,34 %</text>
+<text x="1104" y="584" text-anchor="end" font-size="13" fill="#eb6834">↓</text>
+<rect x="62" y="626" width="1042" height="40" rx="4" fill="#5c6670" opacity="0.09"/>
+<text x="76" y="652" font-size="17" font-weight="700" fill="#5c6670" font-family="Georgia,serif">ATTENTE</text>
+<text x="182" y="652" font-size="12" fill="#52514e">veto 1 : moins de 3 épisodes de contact d'un côté · veto 3 : critères 1 et 2 de signes opposés</text>
+<text x="62" y="684" font-size="11" fill="#52514e">Sortie d'une règle écrite à l'avance appliquée à des données passées. Ni prédiction, ni recommandation d'investissement.</text>
+</svg>
