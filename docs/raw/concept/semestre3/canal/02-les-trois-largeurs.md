@@ -40,6 +40,17 @@ for i in range(0, 100, 2):             # Box-Muller : deux normales par paire
 Repères de contrôle : $V_1 = 98{,}8432$, $V_{50} = 96{,}6119$,
 $V_{100} = 103{,}2872$.
 
+Les trois figures elles-mêmes se refont d'un appel, sans dépendance :
+
+```bash
+python docs/raw/concept/semestre3/canal/figures/generer_figures.py
+python docs/raw/concept/semestre3/canal/figures/generer_figures.py --stats
+```
+
+Le second appel imprime tous les nombres cités dans ce module — ce sont eux qu'il
+faut revérifier, pas les dessins. Le script est décrit par son miroir
+[`generer_figures.md`](figures/generer_figures.md).
+
 La droite ajustée sur ces 100 points a une pente de $+0{,}1265$ par pas et laisse
 $s = 2{,}612$. **Cette pente n'existe pas** — le processus n'en a aucune. Les
 figures la tracent quand même, parce que c'est ce que fait un canal ; savoir
