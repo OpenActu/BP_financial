@@ -15,10 +15,14 @@
 # Les forcer en LF ferait réécrire le fichier à chaque exécution d'un script.
 *.csv text eol=crlf
 
-# SVG : les deux générateurs les écrivent via Path.write_text(), qui traduit en
-# CRLF sous Windows. Les figurer en CRLF garde une régénération sans diff.
-# (Écrire ces fichiers avec newline="\n" dans les scripts permettrait de repasser
-#  cette ligne à LF et de rendre la sortie indépendante du système.)
+# SVG : les deux générateurs de python/ les écrivent via Path.write_text(), qui
+# traduit en CRLF sous Windows. Les figurer en CRLF garde une régénération sans
+# diff.
+#
+# Le troisième générateur — concept/semestre3/canal/figures/generer_figures.py —
+# n'en dépend plus : il ouvre en newline="" et écrit des \r\n explicites, donc sa
+# sortie est la MÊME sur tout système. C'est la forme à reprendre. Le jour où les
+# deux autres l'adoptent, cette ligne peut repasser à LF d'un coup.
 *.svg text eol=crlf
 
 # --- Binaires : jamais de conversion, jamais de diff textuel ---

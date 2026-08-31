@@ -95,7 +95,7 @@ conventions et les pièges déjà rencontrés.
 
 ```bash
 pip install ruff
-python -m ruff check python/     # doit sortir « All checks passed! »
+python -m ruff check python/ docs/     # doit sortir « All checks passed! »
 ```
 
 `ruff.toml` fige le jeu de règles à la racine. **L'objectif est zéro
@@ -221,13 +221,20 @@ avant la première séance) ou **B** (suggérée par le résultat, donc recevabl
 seulement si elle est nommée comme telle). Une revue qui ne rend que des pistes B
 a relu le résultat, pas le protocole.
 
-Les `journal.py` des expériences sont les seuls scripts du dépôt hors de
-`python/`. La règle du miroir markdown s'y applique comme partout ailleurs
-(`journal.py` ⇔ `journal.md`), et ils sont couverts par le lint :
+Les `journal.py` des expériences sont des scripts du dépôt hors de `python/`. La
+règle du miroir markdown s'y applique comme partout ailleurs (`journal.py` ⇔
+`journal.md`), et ils sont couverts par le lint :
 
 ```bash
-python -m ruff check python/ docs/done/
+python -m ruff check python/ docs/
 ```
+
+L'autre script hors `python/` est
+[`concept/semestre3/canal/figures/generer_figures.py`](docs/raw/concept/semestre3/canal/figures/generer_figures.md),
+qui trace les trois figures du module 2 sur le canal. Même principe que les
+`journal.py` : **le générateur est versionné à côté de ce qu'il produit**, parce
+qu'une figure de cours qu'on ne peut pas refaire ne peut pas être corrigée. Il ne
+lit aucune donnée de marché et ne compte pas parmi les dix utilitaires.
 
 ## Agents
 
