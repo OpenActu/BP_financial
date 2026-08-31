@@ -167,15 +167,43 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   gardant l'ancien sens), et un **registre de thèses réfutables** est engendré
   puis dépouillé chaque mois. Le protocole est dans son
   [`README.md`](docs/done/experimentation/experience_2/README.md).
+- `experience_3/` — **2022 rejouée sur tout le CAC 40**, à sa composition réelle
+  à chaque date de décision, lue dans
+  [`univers.csv`](docs/done/experimentation/experience_3/univers.csv). C'est la
+  correction du **biais du survivant** que les deux premières déclaraient sans le
+  corriger, et les cinq pistes retenues par
+  [`experience_2/review.md`](docs/done/experimentation/experience_2/review.md) y
+  sont appliquées. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_3/README.md).
+
+⚠️ **L'univers d'une expérience est le CAC 40 entier, en composition
+point-in-time.** Une liste de valeurs choisies aujourd'hui parmi celles qui
+étaient à l'indice dans l'année jouée est un biais du survivant, quoi qu'en dise
+la note de bas de page. La composition historique se reconstruit depuis
+[`bnains.org/archives/histocac/compocac.php`](https://www.bnains.org/archives/histocac/compocac.php),
+qui rend exactement quarante valeurs par date, alias déjà résolus — le rejeu des
+mouvements depuis 1987 par `histocac.php` échoue sur les changements de nom.
 
 ⚠️ **Le dimensionnement se publie avant la première séance, pas après.** Une
-expérience d'un an sur ce dispositif a une tracking error de l'ordre de 8 %/an,
-donc un effet minimal détectable de **± 16 points d'alpha annuel** : sa
-performance ne tranche rien, et il faudrait près de deux siècles pour établir
-qu'une telle règle couvre ses propres frais. Les taux, eux, se mesurent — 432
-évaluations donnent une proportion à ± 5 points près. Une expérience nouvelle
+expérience d'un an sur ce dispositif a une tracking error de **8 à 16 %/an**
+selon l'année, donc un effet minimal détectable de **± 16 à ± 30 points d'alpha
+annuel** : sa performance ne tranche rien, et il faudrait des siècles pour
+établir qu'une telle règle couvre ses propres frais. Les taux, eux, se mesurent —
+923 évaluations donnent une proportion à ± 3 points près. Une expérience nouvelle
 doit donc porter son objet déclaré sur ce qu'elle peut établir, et le dire
 **avant**.
+
+> L'expérience 3 a mesuré 15,6 %/an là où elle en déclarait 8,2 : **le
+> dimensionnement publié avant peut être trop optimiste d'un facteur deux.** Le
+> publier reste ce qui permet de s'en apercevoir.
+
+⚠️ **Une série ajustée peut porter une opération postérieure à la fenêtre.** Les
+divisions et regroupements d'actions sont répercutés rétroactivement par le
+fournisseur : tout ce que la règle calcule reste invariant d'échelle, mais **le
+nombre de titres achetables ne l'est pas**, et acheter sur un cours rétro-ajusté
+laisserait une opération future façonner le portefeuille. Déclarer les valeurs
+concernées et **refuser tout ordre sur elles** — un contrôle de recevabilité des
+données, jamais un veto de plus.
 
 ⚠️ **Une expérience porte sur une année passée, donc tout y est décidé
 mécaniquement** : le classement, les ordres et les dates sortent d'un score écrit

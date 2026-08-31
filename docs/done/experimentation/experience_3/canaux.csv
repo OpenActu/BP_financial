@@ -1,0 +1,41 @@
+TICKER,CANAL,GRANDEUR,MOTIF
+ACA.PA,collateral et credit,P_B et DETTE_EBITDA point-in-time,"banque, idem"
+AI.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+AIR.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+ALO.PA,acces au primaire,ACTIONS et DETTE_EBITDA point-in-time,"integration lourde financee par dette, dependance au marche primaire"
+ATO.PA,acces au primaire,ACTIONS et DETTE_EBITDA point-in-time,"acquereur en serie finance par dette et par titres, dependance au marche primaire"
+BN.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+BNP.PA,collateral et credit,P_B et DETTE_EBITDA point-in-time,banque : le cours conditionne le cout du capital reglementaire et la capacite a lever
+CA.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+CAP.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+CS.PA,confiance des tiers,P_B point-in-time,assureur : la solvabilite percue conditionne la collecte
+DG.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+DSY.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+EL.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+EN.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+ENGI.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+ERF.PA,acquisitions relutives,ACTIONS et DETTE_EBITDA point-in-time,acquereur en serie finance par dette et par titres
+GLE.PA,collateral et credit,P_B et DETTE_EBITDA point-in-time,"banque, idem"
+HO.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+KER.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+LR.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+MC.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+ML.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+MT.AS,acces au primaire,ACTIONS et DETTE_EBITDA point-in-time,"siderurgie cyclique et endettee, historiquement emettrice en bas de cycle"
+OR.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+ORA.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+PUB.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+RI.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+RMS.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+RNO.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+SAF.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+SAN.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+SGO.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+STLAP.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+STMPA.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+SU.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+TEP.PA,acquisitions relutives,ACTIONS et DETTE_EBITDA point-in-time,acquereur en serie finance par dette
+TTE.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+VIE.PA,aucun,,"megacapitalisation autofinancee : le cours ne conditionne ni le financement, ni la monnaie d'acquisition, ni la capacite d'emprunt"
+VIV.PA,acquisitions relutives,ACTIONS point-in-time,portefeuille remanie par cessions et distributions de titres
+WLN.PA,acquisitions relutives,ACTIONS point-in-time,acquereur en serie payant en actions

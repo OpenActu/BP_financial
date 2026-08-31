@@ -1,0 +1,921 @@
+DATE,RANG,TICKER,S1,S2,S3,S4,S5,SCORE,POSITION,MOMENTUM,TAU,VETOS,VERDICT_REGLE
+2020-12-31,1,SU.PA,2,1,0,2,1,6,47.8,30.31,"15,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.3 séances,ATTENTE
+2020-12-31,2,MC.PA,2,1,0,2,0,5,37.2,19.88,"14,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 14.5 séances,ATTENTE
+2020-12-31,3,STMPA.PA,2,-1,1,2,0,4,15.1,40.33,"628,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,4,TEP.PA,2,0,0,2,0,4,45.4,25.85,"13,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.0 séances,ATTENTE
+2020-12-31,5,RMS.PA,2,1,-1,2,0,4,74.7,21.02,"44,7",aucun,ATTENTE
+2020-12-31,6,ALO.PA,0,1,1,2,0,4,26.5,14.24,"2,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 2.8 séances,ATTENTE
+2020-12-31,7,SGO.PA,2,-1,1,2,0,4,3.0,11.64,"88,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,8,VIV.PA,2,1,0,1,0,4,44.1,5.11,"2 143,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,9,RI.PA,2,0,1,1,0,4,3.6,2.23,"25,9",aucun,ATTENTE
+2020-12-31,10,OR.PA,2,0,-1,2,0,3,79.6,18.81,"21,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,11,CAP.PA,2,1,-1,1,0,3,85.0,7.93,"23,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,12,MT.AS,2,1,-1,1,0,3,82.5,6.76,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,13,DSY.PA,2,1,-1,1,0,3,90.1,2.51,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,14,LR.PA,2,1,1,-1,0,3,33.4,-0.71,"11,4",veto 2 : canal se refermant en 11.4 séances,ATTENTE
+2020-12-31,15,PUB.PA,2,1,1,-1,0,3,1.0,-3.03,"18,7",veto 2 : canal se refermant en 18.7 séances,ATTENTE
+2020-12-31,16,EL.PA,2,1,1,-1,0,3,0.0,-9.47,"8,0",veto 2 : canal se refermant en 8.0 séances,ATTENTE
+2020-12-31,17,WLN.PA,0,1,-1,2,0,2,76.6,16.45,"9,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 9.1 séances,ATTENTE
+2020-12-31,18,KER.PA,2,0,-1,1,0,2,98.4,3.3,"25,9",aucun,ATTENTE
+2020-12-31,19,ML.PA,2,0,1,-1,0,2,0.0,-1.26,"41,1",aucun,ATTENTE
+2020-12-31,20,ATO.PA,0,1,1,-1,0,1,5.7,-1.69,"6,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 6.4 séances,ATTENTE
+2020-12-31,21,EN.PA,2,-1,1,-1,0,1,4.3,-4.98,"20,6",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,22,CS.PA,2,0,1,-2,0,1,2.9,-18.52,"8,9",veto 2 : canal se refermant en 8.9 séances,ATTENTE
+2020-12-31,23,RNO.PA,2,0,1,-2,0,1,9.1,-19.7,"15,0",veto 2 : canal se refermant en 15.0 séances,ATTENTE
+2020-12-31,24,AI.PA,-2,0,0,2,0,0,38.3,11.76,"13,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.3 séances,ATTENTE
+2020-12-31,25,DG.PA,2,-1,1,-2,0,0,0.0,-10.5,"50,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,26,SAF.PA,2,-1,1,-2,0,0,14.6,-10.69,"59,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,27,ENGI.PA,2,0,0,-2,0,0,37.9,-15.87,"17,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 17.5 séances,ATTENTE
+2020-12-31,28,BNP.PA,2,-1,1,-2,0,0,9.8,-16.25,"16,9",veto 2 : canal se refermant en 16.9 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,29,HO.PA,2,-1,1,-2,0,0,7.9,-18.81,"33,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,30,ACA.PA,2,-1,1,-2,0,0,2.9,-21.53,"14,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 14.6 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,31,TTE.PA,2,-1,1,-2,0,0,2.7,-22.92,"25,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,32,AIR.PA,2,-1,1,-2,0,0,18.0,-33.47,"37,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,33,GLE.PA,2,-1,1,-2,0,0,15.8,-44.77,"22,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,34,CA.PA,0,1,-1,-1,0,-1,66.9,-7.94,"68,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2020-12-31,35,VIE.PA,0,0,0,-2,0,-2,53.8,-13.24,"15,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.9 séances,ATTENTE
+2020-12-31,36,ORA.PA,0,-1,1,-2,0,-2,10.4,-17.46,"25,8",aucun,ATTENTE
+2020-12-31,37,BN.PA,-2,1,0,-2,0,-3,44.0,-24.63,"9,8",veto 2 : canal se refermant en 9.8 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2020-12-31,38,SAN.PA,-2,-1,0,-1,0,-4,38.0,-4.54,"117,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,1,SU.PA,2,0,1,2,1,6,7.8,30.57,"69,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,2,MC.PA,2,0,1,2,0,5,0.0,24.96,"463,9",aucun,ATTENTE
+2021-01-29,3,TEP.PA,2,0,1,2,0,5,13.4,17.83,"92,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,4,STMPA.PA,2,0,1,2,0,5,34.1,12.46,∞,aucun,ATTENTE
+2021-01-29,5,VIV.PA,2,0,1,2,0,5,0.3,12.25,∞,aucun,ATTENTE
+2021-01-29,6,MT.AS,2,-1,1,2,0,4,16.6,33.73,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,7,RMS.PA,2,-1,1,2,0,4,4.7,27.11,"132,0",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,8,OR.PA,2,-1,1,2,0,4,0.0,20.61,"59,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,9,CAP.PA,2,-1,1,2,0,4,21.2,12.03,"63,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,10,SGO.PA,2,0,1,1,0,4,26.8,8.44,"150,9",aucun,ATTENTE
+2021-01-29,11,PUB.PA,2,0,1,1,0,4,26.7,6.77,"296,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,12,RI.PA,2,0,1,1,0,4,17.6,2.96,"488,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,13,LR.PA,2,0,1,1,0,4,1.4,1.93,"61,3",aucun,ATTENTE
+2021-01-29,14,ALO.PA,2,-1,1,1,0,3,25.9,6.62,"63,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,15,KER.PA,2,-1,1,1,0,3,19.9,3.43,"35,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,16,RNO.PA,2,-1,1,1,0,3,22.4,2.86,"146,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,17,ML.PA,2,1,-1,1,0,3,95.9,0.93,"48,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,18,WLN.PA,0,-1,1,2,0,2,10.7,17.8,"99,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,19,DSY.PA,2,0,-1,1,0,2,81.6,5.38,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,20,CA.PA,2,0,1,-1,0,2,11.7,-7.01,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,21,EN.PA,2,-1,1,-1,0,1,7.4,-3.73,"86,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,22,EL.PA,2,-1,1,-1,0,1,2.8,-5.67,"647,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,23,TTE.PA,2,0,1,-2,0,1,0.0,-16.5,"17,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 17.4 séances,ATTENTE
+2021-01-29,24,ENGI.PA,2,0,1,-2,0,1,21.5,-18.28,"69,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,25,HO.PA,2,0,1,-2,0,1,26.2,-22.56,"21,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,26,VIE.PA,2,1,0,-2,0,1,38.4,-22.9,"49,2",aucun,ATTENTE
+2021-01-29,27,BNP.PA,2,-1,1,-2,0,0,0.2,-12.71,"133,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,28,CS.PA,2,-1,1,-2,0,0,2.9,-17.23,"64,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,29,ORA.PA,2,-1,1,-2,0,0,13.3,-17.66,"204,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,30,DG.PA,2,-1,1,-2,0,0,9.0,-19.03,"34,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,31,SAF.PA,2,-1,1,-2,0,0,2.0,-19.32,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,32,ACA.PA,2,-1,1,-2,0,0,4.1,-20.54,"137,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,33,AIR.PA,2,-1,1,-2,0,0,12.4,-33.34,"23,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,34,GLE.PA,2,-1,1,-2,0,0,4.3,-43.94,"380,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-01-29,35,ATO.PA,0,-1,1,-1,0,-1,10.6,-4.68,"394,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,36,AI.PA,-2,0,-1,1,0,-2,65.8,2.57,"30,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,37,SAN.PA,-2,0,1,-1,0,-2,0.0,-9.08,"50,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-01-29,38,BN.PA,-2,1,0,-2,0,-3,47.7,-23.24,"21,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-02-26,1,MT.AS,2,1,1,2,0,6,24.4,41.5,"15,1",veto 2 : canal se refermant en 15.1 séances,ATTENTE
+2021-02-26,2,MC.PA,2,1,1,2,0,6,17.8,35.65,"38,6",aucun,ACHAT
+2021-02-26,3,RMS.PA,2,1,1,2,0,6,34.8,32.53,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,4,OR.PA,2,1,1,2,0,6,31.7,16.11,"96,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,5,RNO.PA,2,0,1,2,0,5,12.5,41.26,"57,3",aucun,ATTENTE
+2021-02-26,6,STMPA.PA,2,0,1,2,0,5,15.5,34.71,"132,2",aucun,ATTENTE
+2021-02-26,7,SU.PA,2,0,1,2,0,5,1.4,33.04,"100,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,8,CAP.PA,2,1,0,2,0,5,50.8,26.75,"162,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,9,VIV.PA,2,1,0,2,0,5,38.6,17.09,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,10,PUB.PA,2,1,-1,2,0,4,81.1,27.08,"55,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,11,SGO.PA,2,1,-1,2,0,4,86.4,25.56,"25,5",aucun,ATTENTE
+2021-02-26,12,ML.PA,2,1,-1,2,0,4,79.5,16.59,"131,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,13,LR.PA,2,-1,1,2,0,4,4.1,15.18,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-02-26,14,RI.PA,2,0,1,1,0,4,4.5,7.23,"54,2",aucun,ATTENTE
+2021-02-26,15,TEP.PA,2,0,-1,2,0,3,85.3,17.04,"127,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,16,DSY.PA,2,0,-1,2,0,3,71.7,15.97,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,17,ALO.PA,2,-1,1,1,0,3,6.8,5.71,"539,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-02-26,18,WLN.PA,2,0,1,-1,0,2,33.9,-0.29,"51,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,19,TTE.PA,2,1,0,-1,0,2,63.9,-2.61,"42,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,20,EN.PA,2,0,1,-1,0,2,10.6,-4.94,"162,8",aucun,ATTENTE
+2021-02-26,21,BNP.PA,2,1,-1,-1,0,1,73.8,-2.47,"108,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,22,ACA.PA,2,1,-1,-1,0,1,79.3,-5.48,"69,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,23,EL.PA,2,1,-1,-1,0,1,66.9,-7.47,"1 538,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,24,CS.PA,2,1,-1,-1,0,1,67.3,-7.64,"30,8",aucun,ATTENTE
+2021-02-26,25,SAF.PA,2,1,0,-2,0,1,41.5,-16.27,"41,6",aucun,ATTENTE
+2021-02-26,26,ORA.PA,2,0,1,-2,0,1,0.8,-17.25,∞,aucun,ATTENTE
+2021-02-26,27,VIE.PA,2,0,1,-2,0,1,0.0,-18.93,"56,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,28,HO.PA,2,1,0,-2,0,1,46.1,-19.29,"14,9",veto 2 : canal se refermant en 14.9 séances,ATTENTE
+2021-02-26,29,AIR.PA,2,1,0,-2,0,1,46.1,-23.26,"65,9",aucun,ATTENTE
+2021-02-26,30,BN.PA,0,1,0,-1,0,0,51.8,-9.06,"50,5",aucun,ATTENTE
+2021-02-26,31,CA.PA,2,1,-1,-2,0,0,78.2,-13.79,"10,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 10.9 séances,ATTENTE
+2021-02-26,32,DG.PA,2,1,-1,-2,0,0,66.7,-16.14,"52,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,33,ENGI.PA,2,-1,1,-2,0,0,2.8,-18.64,"1 097,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-02-26,34,GLE.PA,2,1,-1,-2,0,0,85.5,-34.78,"253,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,35,KER.PA,-2,-1,1,1,0,-1,21.0,9.7,"59,9",aucun,ATTENTE
+2021-02-26,36,AI.PA,-2,-1,1,1,0,-1,3.6,8.34,"117,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-02-26,37,ATO.PA,0,-1,-1,-1,0,-3,79.3,-4.44,"7,5",veto 2 : canal se refermant en 7.5 séances,ATTENTE
+2021-02-26,38,SAN.PA,-2,-1,1,-1,0,-3,11.8,-8.46,"108,9",aucun,ATTENTE
+2021-03-31,1,CAP.PA,2,1,1,2,0,6,16.1,99.7,"23,1",aucun,ACHAT
+2021-03-31,2,GLE.PA,2,1,1,2,0,6,20.6,48.37,"16,5",veto 2 : canal se refermant en 16.5 séances,ATTENTE
+2021-03-31,3,BNP.PA,2,0,1,2,0,5,27.5,96.72,"42,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,4,ACA.PA,2,0,1,2,0,5,30.9,91.78,"27,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,5,PUB.PA,2,1,0,2,0,5,45.6,72.84,"34,1",aucun,ATTENTE
+2021-03-31,6,VIV.PA,2,1,0,2,0,5,45.5,57.11,"1,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 1.7 séances,ATTENTE
+2021-03-31,7,RMS.PA,2,0,1,2,0,5,31.5,53.97,∞,aucun,ATTENTE
+2021-03-31,8,ML.PA,2,1,0,2,0,5,35.7,50.82,"29,5",aucun,ATTENTE
+2021-03-31,9,DG.PA,2,0,1,2,0,5,19.4,26.91,"26,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,10,RI.PA,2,0,1,2,0,5,17.9,19.42,"76,7",aucun,ATTENTE
+2021-03-31,11,MT.AS,2,1,-1,2,0,4,86.2,138.6,"199,8",aucun,ATTENTE
+2021-03-31,12,RNO.PA,2,-1,1,2,0,4,6.0,107.29,"128,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,13,AIR.PA,2,-1,1,2,0,4,14.4,85.13,"57,6",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,14,SGO.PA,2,1,-1,2,0,4,82.3,84.54,"388,2",aucun,ATTENTE
+2021-03-31,15,SAF.PA,2,-1,1,2,0,4,19.3,73.92,"57,2",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,16,TEP.PA,2,1,-1,2,0,4,88.1,67.34,"2 128,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,17,MC.PA,2,1,-1,2,0,4,71.4,60.43,"69,3",aucun,ATTENTE
+2021-03-31,18,SU.PA,2,1,-1,2,0,4,96.7,60.19,"36,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,19,STMPA.PA,2,1,-1,2,0,4,95.7,57.81,"28,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,20,DSY.PA,2,1,-1,2,0,4,87.9,41.92,"26,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,21,WLN.PA,2,-1,1,2,0,4,31.9,35.49,"84,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,22,OR.PA,2,1,-1,2,0,4,92.0,32.95,"181,2",aucun,ATTENTE
+2021-03-31,23,EL.PA,2,0,0,2,0,4,47.6,30.7,"144,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,24,VIE.PA,2,-1,1,2,0,4,5.9,27.6,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,25,ENGI.PA,2,1,-1,2,0,4,84.6,27.43,"14,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 14.1 séances,ATTENTE
+2021-03-31,26,LR.PA,2,1,-1,2,0,4,92.9,24.05,"53,4",aucun,ATTENTE
+2021-03-31,27,EN.PA,2,-1,1,2,0,4,33.6,23.73,"26,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,28,CS.PA,2,0,-1,2,0,3,70.6,51.99,"63,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,29,TTE.PA,2,-1,0,2,0,3,42.2,22.37,"53,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,30,ALO.PA,2,-1,-1,2,0,2,82.7,22.51,"15,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.6 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,31,AI.PA,0,1,-1,2,0,2,92.0,11.44,"349,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,32,HO.PA,2,0,-1,1,0,2,68.0,8.12,"19,6",veto 2 : canal se refermant en 19.6 séances,ATTENTE
+2021-03-31,33,BN.PA,2,1,0,-1,0,2,37.9,-0.74,"142,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,34,CA.PA,2,1,-1,-1,0,1,85.8,-4.72,"18,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 18.5 séances,ATTENTE
+2021-03-31,35,ORA.PA,2,1,-1,-2,0,0,78.4,-10.25,"103,9",aucun,ATTENTE
+2021-03-31,36,KER.PA,-2,0,-1,2,0,-1,79.1,20.71,"368,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-03-31,37,ATO.PA,-2,1,-1,1,0,-1,81.5,4.09,"15,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.3 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-03-31,38,SAN.PA,-2,1,-1,-1,0,-3,95.6,-6.69,"744,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,1,PUB.PA,2,1,1,2,0,6,5.0,117.51,"48,9",aucun,ACHAT
+2021-04-30,2,SGO.PA,2,1,1,2,0,6,22.1,111.1,"32,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,3,CAP.PA,2,1,1,2,0,6,14.4,64.2,"29,2",aucun,ACHAT
+2021-04-30,4,TEP.PA,2,1,1,2,0,6,12.1,39.62,"33,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,5,DSY.PA,2,1,1,2,0,6,14.9,30.36,"11,2",veto 2 : canal se refermant en 11.2 séances,ATTENTE
+2021-04-30,6,EL.PA,2,1,1,2,0,6,3.0,25.81,"124,1",aucun,ACHAT
+2021-04-30,7,AIR.PA,2,0,1,2,0,5,31.8,75.25,"29,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,8,SU.PA,2,1,0,2,0,5,48.3,61.69,∞,aucun,ATTENTE
+2021-04-30,9,CS.PA,2,0,1,2,0,5,25.6,47.69,"29,8",aucun,ATTENTE
+2021-04-30,10,VIV.PA,2,1,0,2,0,5,47.4,43.13,"6,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 6.9 séances,ATTENTE
+2021-04-30,11,RI.PA,2,1,0,2,0,5,55.2,21.73,∞,aucun,ATTENTE
+2021-04-30,12,MT.AS,2,0,0,2,0,4,49.5,139.13,"898,3",aucun,ATTENTE
+2021-04-30,13,RNO.PA,2,-1,1,2,0,4,2.7,120.25,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,14,GLE.PA,2,0,0,2,0,4,63.7,72.7,"77,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,15,MC.PA,2,1,-1,2,0,4,80.0,67.74,∞,aucun,ATTENTE
+2021-04-30,16,ML.PA,2,-1,1,2,0,4,4.2,51.23,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,17,RMS.PA,2,1,-1,2,0,4,87.9,41.17,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,18,LR.PA,2,1,-1,2,0,4,68.8,40.07,∞,aucun,ATTENTE
+2021-04-30,19,STMPA.PA,2,-1,1,2,0,4,22.6,38.81,"31,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,20,KER.PA,2,1,-1,2,0,4,94.8,35.18,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,21,TTE.PA,2,-1,1,2,0,4,4.6,33.61,"2 874,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,22,OR.PA,2,1,-1,2,0,4,91.0,33.38,∞,aucun,ATTENTE
+2021-04-30,23,EN.PA,2,1,-1,2,0,4,91.6,32.32,"46,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,24,HO.PA,2,-1,1,2,0,4,9.7,22.35,"56,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-04-30,25,DG.PA,2,1,-1,2,0,4,92.7,21.36,"22,7",aucun,ATTENTE
+2021-04-30,26,AI.PA,0,1,1,2,0,4,0.0,18.59,"6,7",veto 2 : canal se refermant en 6.7 séances,ATTENTE
+2021-04-30,27,CA.PA,2,1,-1,2,0,4,93.9,17.06,"32,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,28,VIE.PA,2,1,-1,2,0,4,90.5,15.68,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,29,ORA.PA,2,0,1,1,0,4,6.4,4.57,"26,8",aucun,ATTENTE
+2021-04-30,30,BNP.PA,2,0,-1,2,0,3,69.6,84.66,"27,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,31,ACA.PA,2,0,-1,2,0,3,81.9,73.86,"20,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,32,SAF.PA,0,1,-1,2,0,2,88.6,43.75,"27,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,33,ALO.PA,0,1,-1,2,0,2,71.6,30.74,"145,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,34,BN.PA,2,0,1,-1,0,2,10.0,-3.3,"233,7",aucun,ATTENTE
+2021-04-30,35,WLN.PA,0,1,-1,1,0,1,87.3,8.03,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-04-30,36,SAN.PA,0,1,0,-1,0,0,43.4,-7.59,"10,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 10.1 séances,ATTENTE
+2021-04-30,37,ENGI.PA,-2,0,-1,2,0,-1,66.8,24.2,"5,9",veto 2 : canal se refermant en 5.9 séances,ATTENTE
+2021-04-30,38,ATO.PA,-2,-1,0,1,0,-2,48.8,2.42,"266,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,1,VIE.PA,2,1,1,2,0,6,5.8,20.52,"22,5",aucun,ACHAT
+2021-05-31,2,PUB.PA,2,0,1,2,0,5,14.5,75.27,"176,2",aucun,ATTENTE
+2021-05-31,3,SGO.PA,2,0,1,2,0,5,10.5,60.85,"164,7",aucun,ATTENTE
+2021-05-31,4,MC.PA,2,1,0,2,0,5,55.2,57.56,"132,2",aucun,ATTENTE
+2021-05-31,5,CAP.PA,2,0,1,2,0,5,2.6,55.89,"126,7",aucun,ATTENTE
+2021-05-31,6,TEP.PA,2,0,1,2,0,5,6.6,44.36,∞,aucun,ATTENTE
+2021-05-31,7,ACA.PA,2,0,1,2,0,5,30.2,41.51,"49,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,8,BNP.PA,2,1,0,2,0,5,61.4,36.49,"52,6",aucun,ATTENTE
+2021-05-31,9,SU.PA,2,0,1,2,0,5,24.1,35.21,∞,aucun,ATTENTE
+2021-05-31,10,RMS.PA,2,1,-1,2,1,5,91.7,33.01,"68,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,11,CS.PA,2,0,1,2,0,5,22.0,22.02,"81,0",aucun,ATTENTE
+2021-05-31,12,AI.PA,2,0,1,2,0,5,23.8,10.55,"22,2",aucun,ATTENTE
+2021-05-31,13,MT.AS,2,0,0,2,0,4,42.2,131.97,"227,0",aucun,ATTENTE
+2021-05-31,14,GLE.PA,2,1,-1,2,0,4,84.6,40.49,"139,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,15,OR.PA,2,1,-1,2,0,4,75.0,29.86,"62,2",aucun,ATTENTE
+2021-05-31,16,KER.PA,2,1,-1,2,0,4,82.6,26.0,"10,8",veto 2 : canal se refermant en 10.8 séances,ATTENTE
+2021-05-31,17,DSY.PA,2,0,0,2,0,4,36.3,25.78,"161,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,18,AIR.PA,2,1,-1,2,0,4,79.1,23.41,"231,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,19,EN.PA,2,-1,1,2,0,4,18.3,22.34,"220,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-05-31,20,SAF.PA,2,0,0,2,0,4,58.4,21.8,"54,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,21,LR.PA,2,1,-1,2,0,4,89.7,21.55,∞,aucun,ATTENTE
+2021-05-31,22,ML.PA,2,1,-1,2,0,4,95.8,20.84,"22,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,23,RI.PA,2,1,-1,2,0,4,73.4,18.45,"45,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,24,EL.PA,2,1,-1,2,0,4,77.4,11.48,"26,8",aucun,ATTENTE
+2021-05-31,25,CA.PA,2,1,-1,2,0,4,89.9,10.04,"92,5",aucun,ATTENTE
+2021-05-31,26,HO.PA,2,0,1,1,0,4,17.1,9.23,"686,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,27,TTE.PA,2,0,1,1,0,4,8.4,3.86,"26,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,28,VIV.PA,2,0,-1,2,0,3,72.6,27.81,"18,4",veto 2 : canal se refermant en 18.4 séances,ATTENTE
+2021-05-31,29,DG.PA,2,-1,1,1,0,3,14.6,5.03,"49,3",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-05-31,30,SAN.PA,2,1,1,-1,0,3,19.7,-2.12,"15,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.3 séances,ATTENTE
+2021-05-31,31,WLN.PA,0,0,0,2,0,2,43.2,16.32,"104,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,32,BN.PA,2,1,0,-1,0,2,35.0,-4.4,"106,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,33,ORA.PA,2,0,1,-1,0,2,3.7,-6.74,"28,4",aucun,ATTENTE
+2021-05-31,34,STMPA.PA,-2,0,0,2,0,0,55.1,25.11,"107,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,35,ENGI.PA,-2,1,0,1,0,0,42.4,5.82,"43,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-05-31,36,RNO.PA,-2,0,-1,2,0,-1,75.2,29.29,"30,6",aucun,ATTENTE
+2021-05-31,37,ALO.PA,-2,0,-1,2,0,-1,78.1,11.37,"41,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-05-31,38,ATO.PA,-2,0,-1,-2,0,-5,97.2,-20.1,"142,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,1,MC.PA,2,1,1,2,0,6,0.0,64.93,"149,5",aucun,ACHAT
+2021-06-30,2,KER.PA,2,1,1,2,0,6,2.5,50.64,"61,5",aucun,ACHAT
+2021-06-30,3,SU.PA,2,1,1,2,0,6,16.7,35.11,"21,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,4,LR.PA,2,1,1,2,0,6,34.0,23.24,"25,6",aucun,ACHAT
+2021-06-30,5,PUB.PA,2,0,1,2,0,5,7.6,104.7,∞,aucun,ATTENTE
+2021-06-30,6,AIR.PA,2,0,1,2,0,5,28.2,61.6,"56,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,7,RMS.PA,2,1,-1,2,1,5,73.0,50.68,"152,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,8,SAF.PA,2,0,1,2,0,5,19.3,36.62,"128,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,9,OR.PA,2,0,1,2,0,5,3.6,29.85,"308,1",aucun,ATTENTE
+2021-06-30,10,TTE.PA,2,0,1,2,0,5,7.8,18.66,"53,6",aucun,ATTENTE
+2021-06-30,11,MT.AS,2,-1,1,2,0,4,34.0,171.28,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,12,GLE.PA,2,-1,1,2,0,4,11.9,74.4,"722,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,13,SGO.PA,2,-1,1,2,0,4,1.4,69.38,"2 991,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,14,BNP.PA,2,-1,1,2,0,4,10.0,55.35,"186,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,15,ACA.PA,2,-1,1,2,0,4,9.9,49.09,"160,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,16,CAP.PA,2,1,-1,2,0,4,80.1,47.01,"56,2",aucun,ATTENTE
+2021-06-30,17,TEP.PA,2,1,-1,2,0,4,77.1,41.94,"112,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,18,ML.PA,2,1,-1,2,0,4,69.2,39.45,"475,9",aucun,ATTENTE
+2021-06-30,19,VIE.PA,2,-1,1,2,0,4,12.8,32.86,"158,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,20,CS.PA,2,-1,1,2,0,4,3.4,31.1,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,21,RI.PA,2,1,-1,2,0,4,67.8,30.02,"175,9",aucun,ATTENTE
+2021-06-30,22,CA.PA,2,-1,1,2,0,4,19.2,27.07,"31,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,23,VIV.PA,2,1,-1,2,0,4,75.4,26.27,"22,8",aucun,ATTENTE
+2021-06-30,24,EL.PA,2,1,-1,2,0,4,85.0,21.59,"263,9",aucun,ATTENTE
+2021-06-30,25,DSY.PA,2,1,-1,2,0,4,85.4,21.07,"272,3",aucun,ATTENTE
+2021-06-30,26,HO.PA,2,0,0,2,0,4,54.1,16.3,"22,8",aucun,ATTENTE
+2021-06-30,27,DG.PA,2,-1,1,2,0,4,7.6,15.08,"17 594,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,28,EN.PA,2,-1,1,2,0,4,10.4,12.34,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,29,AI.PA,2,1,0,1,0,4,50.0,7.82,"80,7",aucun,ATTENTE
+2021-06-30,30,BN.PA,2,0,0,1,0,3,49.2,1.74,"181,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,31,ORA.PA,2,-1,1,1,0,3,13.4,1.26,"180,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-06-30,32,SAN.PA,2,1,1,-1,0,3,22.6,-2.72,"35,2",aucun,ATTENTE
+2021-06-30,33,ALO.PA,0,-1,1,2,0,2,8.0,17.3,"67,1",aucun,ATTENTE
+2021-06-30,34,WLN.PA,2,1,0,-1,0,2,52.5,-3.03,"24,5",aucun,ATTENTE
+2021-06-30,35,RNO.PA,-2,0,0,2,0,0,52.3,47.37,"148,0",aucun,ATTENTE
+2021-06-30,36,ENGI.PA,-2,-1,1,2,0,0,14.7,13.21,"89,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-06-30,37,STMPA.PA,-2,0,-1,2,0,-1,73.2,24.86,"78,8",aucun,ATTENTE
+2021-06-30,38,ATO.PA,-2,-1,1,-2,0,-4,19.9,-30.43,"9,2",veto 2 : canal se refermant en 9.2 séances,ATTENTE
+2021-07-30,1,MC.PA,2,1,1,2,0,6,28.1,79.4,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,2,RMS.PA,2,1,0,2,1,6,52.1,78.53,"43,1",aucun,ATTENTE
+2021-07-30,3,TEP.PA,2,1,1,2,0,6,11.6,33.5,"17,5",veto 2 : canal se refermant en 17.5 séances,ATTENTE
+2021-07-30,4,RI.PA,2,1,1,2,0,6,30.3,30.64,"513,2",aucun,ACHAT
+2021-07-30,5,WLN.PA,2,0,1,2,0,5,24.0,10.75,"123,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,6,MT.AS,2,1,-1,2,0,4,88.7,162.95,"380,4",aucun,ATTENTE
+2021-07-30,7,PUB.PA,2,0,0,2,0,4,42.8,104.87,"574,7",aucun,ATTENTE
+2021-07-30,8,SGO.PA,2,1,-1,2,0,4,98.0,73.53,"50,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,9,KER.PA,2,1,-1,2,0,4,86.3,54.97,"20,7",aucun,ATTENTE
+2021-07-30,10,ML.PA,2,0,0,2,0,4,43.9,49.72,"67,1",aucun,ATTENTE
+2021-07-30,11,CAP.PA,2,1,-1,2,0,4,96.0,48.61,∞,aucun,ATTENTE
+2021-07-30,12,VIE.PA,2,1,-1,2,0,4,83.5,38.6,"103,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,13,OR.PA,2,1,-1,2,0,4,83.4,36.12,"18,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 18.4 séances,ATTENTE
+2021-07-30,14,DSY.PA,2,1,-1,2,0,4,95.4,36.11,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,15,HO.PA,2,0,0,2,0,4,51.0,34.72,"221,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,16,SU.PA,2,1,-1,2,0,4,84.1,33.28,"175,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,17,LR.PA,2,1,-1,2,0,4,89.6,32.34,"68,0",aucun,ATTENTE
+2021-07-30,18,VIV.PA,2,0,0,2,0,4,60.4,27.89,"48,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,19,CA.PA,2,-1,1,2,0,4,0.0,27.33,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-07-30,20,DG.PA,2,-1,1,2,0,4,19.1,19.18,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-07-30,21,AI.PA,2,0,1,1,0,4,14.2,8.28,"712,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,22,SAN.PA,2,0,1,1,0,4,28.4,6.32,"27,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,23,GLE.PA,2,0,-1,2,0,3,75.1,97.35,"18,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 18.4 séances,ATTENTE
+2021-07-30,24,AIR.PA,2,0,-1,2,0,3,66.0,60.84,"247,7",aucun,ATTENTE
+2021-07-30,25,BNP.PA,2,0,-1,2,0,3,69.5,52.24,"30,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,26,ACA.PA,2,0,-1,2,0,3,79.2,51.06,"28,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,27,EL.PA,2,0,-1,2,0,3,76.1,42.95,"184,3",aucun,ATTENTE
+2021-07-30,28,CS.PA,2,0,-1,2,0,3,85.9,35.38,"15,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.6 séances,ATTENTE
+2021-07-30,29,BN.PA,2,0,-1,2,0,3,99.6,12.17,"293,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,30,STMPA.PA,0,1,-1,2,0,2,80.2,26.81,"70,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,31,SAF.PA,0,-1,1,2,0,2,17.2,20.98,∞,aucun,ATTENTE
+2021-07-30,32,TTE.PA,0,-1,0,2,0,1,36.6,26.44,"541,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,33,EN.PA,0,1,-1,1,0,1,77.2,8.92,"84,5",aucun,ATTENTE
+2021-07-30,34,ORA.PA,0,0,0,1,0,1,47.4,8.34,"27,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,35,ENGI.PA,0,-1,1,1,0,1,32.2,5.39,"41,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-07-30,36,RNO.PA,-2,-1,0,2,0,-1,56.7,58.48,"141,6",aucun,ATTENTE
+2021-07-30,37,ALO.PA,-2,-1,1,-1,0,-3,3.6,-1.86,∞,aucun,ATTENTE
+2021-07-30,38,ATO.PA,-2,-1,1,-2,0,-4,16.4,-29.13,"380,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,1,CAP.PA,2,1,1,2,0,6,5.2,58.42,"26,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,2,DSY.PA,2,1,1,2,0,6,3.8,50.71,"37,8",aucun,ACHAT
+2021-08-31,3,LR.PA,2,1,1,2,0,6,30.8,35.9,"96,2",aucun,ACHAT
+2021-08-31,4,RMS.PA,2,-1,1,2,1,5,12.9,77.96,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,5,CS.PA,2,0,1,2,0,5,18.5,40.05,"15,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.6 séances,ATTENTE
+2021-08-31,6,CA.PA,2,1,0,2,0,5,57.4,15.76,"72,9",aucun,ATTENTE
+2021-08-31,7,SAN.PA,2,1,1,1,0,5,34.7,5.33,"160,2",aucun,ACHAT
+2021-08-31,8,MT.AS,2,-1,1,2,0,4,5.6,172.41,"37,0",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,9,SGO.PA,2,-1,1,2,0,4,3.7,74.88,"72,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,10,MC.PA,2,-1,1,2,0,4,11.6,69.84,"553,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,11,AIR.PA,2,0,0,2,0,4,39.6,58.3,"283,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,12,ML.PA,2,-1,1,2,0,4,5.4,48.59,"135,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,13,STMPA.PA,2,1,-1,2,0,4,86.3,46.02,"683,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,14,VIE.PA,2,1,-1,2,0,4,86.2,43.64,"155,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,15,KER.PA,2,-1,1,2,0,4,14.1,39.81,"884,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,16,TEP.PA,2,1,-1,2,0,4,69.8,38.82,"23,5",aucun,ATTENTE
+2021-08-31,17,SU.PA,2,1,-1,2,0,4,73.2,37.24,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,18,HO.PA,2,-1,1,2,0,4,19.7,35.09,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,19,RI.PA,2,-1,1,2,0,4,14.4,32.65,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,20,VIV.PA,2,1,-1,2,0,4,85.6,23.95,∞,aucun,ATTENTE
+2021-08-31,21,BN.PA,2,0,0,2,0,4,55.8,15.23,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,22,DG.PA,2,0,0,2,0,4,62.7,12.56,"7,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 7.3 séances,ATTENTE
+2021-08-31,23,PUB.PA,2,0,-1,2,0,3,67.6,89.25,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,24,EL.PA,2,-1,0,2,0,3,62.9,49.47,"50 899,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,25,ACA.PA,2,0,-1,2,0,3,95.4,42.63,"205,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,26,OR.PA,2,-1,0,2,0,3,40.5,42.62,"51,2",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,27,BNP.PA,2,0,-1,2,0,3,96.2,38.97,"115,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,28,AI.PA,2,1,-1,1,0,3,73.9,4.8,"37,6",aucun,ATTENTE
+2021-08-31,29,WLN.PA,2,-1,1,1,0,3,14.1,4.61,"613,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,30,GLE.PA,2,-1,-1,2,0,2,67.2,87.77,"208,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,31,EN.PA,0,1,-1,1,0,1,81.6,5.29,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,32,ORA.PA,-2,1,-1,2,0,0,71.4,11.35,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,33,SAF.PA,-2,-1,1,2,0,0,12.2,10.87,∞,aucun,ATTENTE
+2021-08-31,34,TTE.PA,-2,0,-1,2,0,-1,86.1,17.8,"155,2",aucun,ATTENTE
+2021-08-31,35,ENGI.PA,0,1,-1,-1,0,-1,83.6,-1.6,"2 451,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,36,RNO.PA,-2,-1,-1,2,-1,-3,70.6,30.19,"169,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-08-31,37,ALO.PA,-2,1,-1,-2,0,-4,89.2,-19.39,"39,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-08-31,38,ATO.PA,-2,0,-1,-2,0,-5,98.6,-42.26,"101,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,1,RMS.PA,2,-1,1,2,1,5,2.1,68.56,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,2,DSY.PA,2,0,1,2,0,5,4.2,59.3,∞,aucun,ATTENTE
+2021-09-30,3,EL.PA,2,0,1,2,0,5,7.2,42.51,∞,aucun,ATTENTE
+2021-09-30,4,STMPA.PA,2,0,1,2,0,5,14.3,34.97,"71,3",aucun,ATTENTE
+2021-09-30,5,EN.PA,2,0,1,2,0,5,15.8,25.97,"22,3",aucun,ATTENTE
+2021-09-30,6,MT.AS,2,-1,1,2,0,4,23.1,132.84,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,7,PUB.PA,2,1,-1,2,0,4,82.3,99.94,"80,5",aucun,ATTENTE
+2021-09-30,8,CAP.PA,2,-1,1,2,0,4,8.4,82.26,"145,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,9,AIR.PA,2,0,0,2,0,4,58.0,76.91,"38,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,10,ERF.PA,2,-1,1,2,0,4,3.8,73.37,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,11,SGO.PA,2,-1,1,2,0,4,10.7,68.29,"18,4",veto 2 : canal se refermant en 18.4 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,12,VIE.PA,2,-1,1,2,0,4,11.2,63.44,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,13,MC.PA,2,-1,1,2,0,4,11.3,59.14,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,14,OR.PA,2,-1,1,2,0,4,0.0,45.35,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,15,SU.PA,2,-1,1,2,0,4,6.6,44.84,"1 452,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,16,TEP.PA,2,-1,1,2,0,4,0.0,41.57,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,17,VIV.PA,2,-1,1,2,0,4,24.5,40.99,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,18,LR.PA,2,-1,1,2,0,4,8.2,40.26,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,19,RI.PA,2,1,-1,2,0,4,81.1,37.08,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,20,AI.PA,2,-1,1,2,0,4,0.0,17.3,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,21,BN.PA,2,-1,1,2,0,4,33.8,17.04,"6,8",veto 2 : canal se refermant en 6.8 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,22,GLE.PA,2,0,-1,2,0,3,90.1,123.65,"83,3",aucun,ATTENTE
+2021-09-30,23,CS.PA,2,0,-1,2,0,3,90.1,58.43,"52,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,24,ACA.PA,0,0,0,2,0,2,65.0,71.07,"295,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,25,BNP.PA,0,1,-1,2,0,2,91.9,68.87,"90,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,26,ML.PA,2,-1,-1,2,0,2,70.5,51.6,"11,0",veto 2 : canal se refermant en 11.0 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,27,TTE.PA,0,1,-1,2,0,2,86.6,33.99,"170,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,28,CA.PA,0,0,0,2,0,2,35.6,21.93,"3 035,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,29,KER.PA,0,-1,1,2,0,2,4.3,19.54,∞,aucun,ATTENTE
+2021-09-30,30,HO.PA,0,0,-1,2,0,1,72.9,36.41,"61,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,31,SAN.PA,0,-1,1,1,0,1,18.7,9.07,∞,aucun,ATTENTE
+2021-09-30,32,SAF.PA,-2,1,-1,2,0,0,65.7,26.89,"327,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-09-30,33,ORA.PA,-2,-1,1,2,0,0,26.8,15.95,"81,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,34,RNO.PA,-2,0,-1,2,0,-1,79.8,32.41,"115,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,35,DG.PA,-2,0,-1,2,0,-1,69.3,26.18,"259,0",aucun,ATTENTE
+2021-09-30,36,WLN.PA,-2,-1,1,1,0,-1,1.9,8.56,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,37,ENGI.PA,-2,-1,1,1,0,-1,5.3,5.85,"97,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-09-30,38,ALO.PA,-2,0,-1,-1,0,-4,91.3,-3.06,"71,8",aucun,ATTENTE
+2021-10-29,1,LR.PA,2,1,1,2,0,6,30.2,40.35,∞,aucun,ACHAT
+2021-10-29,2,SU.PA,2,1,1,2,0,6,31.1,29.16,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,3,VIV.PA,2,1,1,2,0,6,30.8,11.24,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,4,ERF.PA,2,0,1,2,0,5,0.7,53.21,∞,aucun,ATTENTE
+2021-10-29,5,DSY.PA,2,1,0,2,0,5,39.8,47.48,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,6,RMS.PA,2,1,-1,2,1,5,100.0,42.16,"180,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,7,EN.PA,2,0,1,2,0,5,27.7,26.02,"234,4",aucun,ATTENTE
+2021-10-29,8,MT.AS,2,1,-1,2,0,4,95.5,116.89,"129,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,9,GLE.PA,2,1,-1,2,0,4,86.7,109.99,"1 157,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,10,PUB.PA,2,0,0,2,0,4,49.0,87.87,"105,3",aucun,ATTENTE
+2021-10-29,11,BNP.PA,2,1,-1,2,0,4,88.6,71.64,"182,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,12,ACA.PA,2,1,-1,2,0,4,95.0,68.41,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,13,CAP.PA,2,1,-1,2,0,4,98.9,65.29,"179,0",aucun,ATTENTE
+2021-10-29,14,AIR.PA,2,-1,1,2,0,4,30.4,63.54,"59,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,15,VIE.PA,2,1,-1,2,0,4,77.4,63.49,"70,9",aucun,ATTENTE
+2021-10-29,16,CS.PA,2,1,-1,2,0,4,100.0,62.6,"119,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,17,SGO.PA,2,1,-1,2,0,4,70.4,60.48,"58,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,18,EL.PA,2,1,-1,2,0,4,98.9,51.11,"405,2",aucun,ATTENTE
+2021-10-29,19,ML.PA,2,1,-1,2,0,4,96.1,37.89,"18,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 18.2 séances,ATTENTE
+2021-10-29,20,STMPA.PA,2,1,-1,2,0,4,90.6,31.96,"249,6",aucun,ATTENTE
+2021-10-29,21,RI.PA,2,1,-1,2,0,4,86.6,31.51,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,22,TTE.PA,2,0,-1,2,0,3,71.5,61.13,"5 036,4",aucun,ATTENTE
+2021-10-29,23,OR.PA,0,1,-1,2,0,2,100.0,20.84,"159,2",aucun,ATTENTE
+2021-10-29,24,AI.PA,0,1,-1,1,0,1,99.2,3.07,"35,0",aucun,ATTENTE
+2021-10-29,25,MC.PA,-2,1,-1,2,0,0,100.0,43.49,"110,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,26,HO.PA,-2,-1,1,2,0,0,22.1,37.55,"54,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,27,DG.PA,-2,1,-1,2,0,0,92.0,24.11,"511,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,28,BN.PA,0,-1,-1,2,0,0,66.0,21.38,"12,1",veto 2 : canal se refermant en 12.1 séances,ATTENTE
+2021-10-29,29,KER.PA,-2,1,-1,2,0,0,95.0,10.39,"39,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,30,ORA.PA,-2,1,0,1,0,0,43.9,6.72,"103,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,31,SAF.PA,-2,0,-1,2,0,-1,86.4,10.2,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,32,ENGI.PA,-2,1,-1,1,0,-1,86.7,5.1,"163,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,33,SAN.PA,-2,1,-1,1,0,-1,95.8,0.71,"178,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-10-29,34,RNO.PA,-2,0,-1,2,-1,-2,70.2,31.75,"593,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,35,CA.PA,-2,-1,-1,2,0,-2,87.0,17.88,"161,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,36,WLN.PA,-2,-1,1,-1,0,-3,1.0,-3.8,"338,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-10-29,37,ALO.PA,-2,0,0,-1,0,-3,49.6,-8.1,"5,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 5.5 séances,ATTENTE
+2021-11-30,1,RI.PA,2,1,1,2,0,6,7.5,28.98,"77,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,2,RMS.PA,2,1,-1,2,1,5,90.8,67.25,∞,aucun,ATTENTE
+2021-11-30,3,DSY.PA,2,0,1,2,0,5,26.7,64.9,"45,8",aucun,ATTENTE
+2021-11-30,4,PUB.PA,2,0,1,2,0,5,10.3,52.53,"347,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,5,EL.PA,2,0,1,2,0,5,8.9,46.55,"160,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,6,OR.PA,2,0,1,2,0,5,11.8,32.53,"44,9",aucun,ATTENTE
+2021-11-30,7,CAP.PA,2,-1,1,2,0,4,28.7,76.0,"67,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,8,GLE.PA,2,-1,1,2,0,4,24.9,68.94,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,9,ERF.PA,2,1,-1,2,0,4,74.8,65.69,"67,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,10,SGO.PA,2,-1,1,2,0,4,6.4,57.85,"82,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,11,VIE.PA,2,-1,1,2,0,4,17.5,54.52,"265,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,12,BNP.PA,2,-1,1,2,0,4,16.2,40.63,"340,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,13,MC.PA,2,0,0,2,0,4,44.0,39.32,"188,0",aucun,ATTENTE
+2021-11-30,14,LR.PA,2,0,0,2,0,4,47.7,39.16,"34,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,15,CS.PA,2,-1,1,2,0,4,14.4,36.13,"945,0",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,16,SU.PA,2,0,0,2,0,4,44.1,32.84,"45,7",aucun,ATTENTE
+2021-11-30,17,ACA.PA,2,-1,1,2,0,4,13.6,30.85,"229,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,18,TTE.PA,2,-1,1,2,0,4,7.8,25.6,"403,6",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,19,STMPA.PA,2,0,0,2,0,4,35.1,20.21,"93,1",aucun,ATTENTE
+2021-11-30,20,ENGI.PA,2,0,1,1,0,4,15.5,3.05,"42,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,21,TEP.PA,2,0,-1,2,0,3,68.7,33.96,"28,8",aucun,ATTENTE
+2021-11-30,22,VIV.PA,0,1,0,2,0,3,45.7,16.98,"5,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 5.1 séances,ATTENTE
+2021-11-30,23,EN.PA,2,-1,1,1,0,3,5.7,6.89,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,24,MT.AS,0,-1,1,2,0,2,12.0,73.04,"439,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,25,AIR.PA,0,-1,1,2,0,2,14.7,15.18,∞,aucun,ATTENTE
+2021-11-30,26,DG.PA,0,-1,1,2,0,2,5.8,10.57,∞,aucun,ATTENTE
+2021-11-30,27,AI.PA,0,0,1,1,0,2,12.0,8.62,"45,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,28,ML.PA,-2,0,1,2,0,1,31.2,31.38,"1 216,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,29,CA.PA,-2,0,1,2,0,1,0.0,18.65,"111,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,30,BN.PA,-2,-1,1,2,0,0,10.3,13.63,"83,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,31,KER.PA,-2,1,-1,2,0,0,80.7,11.99,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-11-30,32,SAN.PA,-2,-1,1,2,0,0,1.1,10.72,"74,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,33,ORA.PA,0,0,0,-1,0,-1,37.5,-1.56,"402,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,34,HO.PA,-2,-1,1,1,-1,-2,5.8,1.27,"994,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,35,SAF.PA,-2,-1,1,-1,0,-3,7.4,-5.59,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,36,ALO.PA,-2,0,1,-2,0,-3,26.8,-29.27,"34,7",aucun,ATTENTE
+2021-11-30,37,WLN.PA,-2,-1,1,-2,0,-4,26.3,-35.05,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-11-30,38,RNO.PA,-2,-1,1,-2,-1,-5,6.9,-11.05,"221,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,1,EL.PA,2,1,1,2,0,6,33.9,38.33,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,2,RI.PA,2,1,1,2,0,6,21.2,31.71,"224,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,3,RMS.PA,2,-1,1,2,1,5,8.4,82.87,"256,3",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,4,CAP.PA,2,1,0,2,0,5,41.8,67.92,"114,3",aucun,ATTENTE
+2021-12-31,5,DSY.PA,2,0,1,2,0,5,7.0,57.53,"210,5",aucun,ATTENTE
+2021-12-31,6,PUB.PA,2,1,0,2,0,5,47.0,37.62,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,7,OR.PA,2,0,1,2,0,5,24.5,32.04,"48,3",aucun,ATTENTE
+2021-12-31,8,STMPA.PA,2,0,1,2,0,5,23.6,26.23,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,9,GLE.PA,2,1,-1,2,0,4,94.1,66.08,"61,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,10,VIE.PA,2,1,-1,2,0,4,87.9,39.65,"667,6",aucun,ATTENTE
+2021-12-31,11,TEP.PA,2,1,-1,2,0,4,82.1,34.53,"131,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,12,MC.PA,2,1,-1,2,0,4,74.0,32.85,"165,0",aucun,ATTENTE
+2021-12-31,13,CS.PA,2,1,-1,2,0,4,79.1,31.77,"63,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,14,BNP.PA,2,1,-1,2,0,4,97.7,31.64,"39,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,15,SU.PA,2,1,-1,2,0,4,87.5,29.58,"76,8",aucun,ATTENTE
+2021-12-31,16,ACA.PA,2,1,-1,2,0,4,95.2,24.22,"25,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,17,LR.PA,2,1,-1,2,0,4,88.5,24.0,"49,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,18,TTE.PA,2,1,-1,2,0,4,75.3,19.78,"57,3",aucun,ATTENTE
+2021-12-31,19,AI.PA,2,0,0,1,0,3,42.1,9.24,"52,9",aucun,ATTENTE
+2021-12-31,20,ML.PA,0,1,-1,2,0,2,91.3,25.34,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,21,SAN.PA,0,1,-1,2,0,2,81.7,10.33,"46,3",aucun,ATTENTE
+2021-12-31,22,ENGI.PA,2,0,-1,1,0,2,70.3,1.63,"9,7",veto 2 : canal se refermant en 9.7 séances,ATTENTE
+2021-12-31,23,DG.PA,0,1,-1,1,0,1,100.0,8.29,"176,7",aucun,ATTENTE
+2021-12-31,24,ERF.PA,-2,1,-1,2,0,0,74.4,40.88,"109,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,25,SGO.PA,-2,1,-1,2,0,0,91.0,38.38,"125,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,26,MT.AS,-2,1,-1,2,0,0,84.5,24.25,"418,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,27,KER.PA,-2,0,0,2,0,0,57.4,20.44,"25,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,28,VIV.PA,-2,1,-1,2,0,0,80.0,12.99,"25,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,29,AIR.PA,-2,1,-1,2,0,0,93.1,12.61,"752,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,30,BN.PA,-2,1,-1,1,0,-1,92.3,4.63,"101,0",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,31,ORA.PA,0,1,-1,-1,0,-1,66.8,-2.94,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,32,CA.PA,-2,1,-1,-1,0,-3,100.0,-1.66,"106,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,33,EN.PA,-2,1,-1,-1,0,-3,99.6,-9.95,"27,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2021-12-31,34,SAF.PA,0,0,-1,-2,0,-3,100.0,-12.02,"34,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,35,ALO.PA,-2,0,0,-2,0,-4,58.1,-33.59,"1 532,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,36,HO.PA,-2,0,-1,-1,-1,-5,91.8,-2.16,"71,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,37,WLN.PA,-2,0,-1,-2,0,-5,99.7,-37.71,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2021-12-31,38,RNO.PA,-2,0,-1,-2,-1,-6,100.0,-19.94,"17,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 17.3 séances,ATTENTE
+2022-01-31,1,DG.PA,2,1,1,2,0,6,28.4,11.38,"12,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 12.9 séances,ATTENTE
+2022-01-31,2,SAN.PA,2,1,0,2,0,5,61.0,14.16,"59,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,3,CA.PA,2,0,1,2,0,5,6.4,13.82,"48,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,4,GLE.PA,2,0,0,2,0,4,62.8,77.27,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,5,RMS.PA,2,-1,1,2,0,4,8.8,68.51,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,6,CAP.PA,2,-1,1,2,0,4,28.6,64.19,"192,0",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,7,VIE.PA,2,-1,1,2,0,4,30.1,54.07,"160,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,8,MT.AS,2,-1,1,2,0,4,10.0,49.65,"287,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,9,BNP.PA,2,0,0,2,0,4,52.0,45.13,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,10,SU.PA,2,-1,1,2,0,4,11.6,42.79,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,11,EL.PA,2,-1,1,2,0,4,18.0,41.67,"221,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,12,TTE.PA,2,1,-1,2,0,4,75.1,35.85,∞,aucun,ATTENTE
+2022-01-31,13,STLAP.PA,2,-1,1,2,0,4,15.2,35.08,"108,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,14,OR.PA,2,-1,1,2,0,4,16.4,34.87,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,15,LR.PA,2,-1,1,2,0,4,15.6,34.34,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,16,ACA.PA,2,0,0,2,0,4,61.0,31.73,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,17,RI.PA,2,-1,1,2,0,4,1.2,31.21,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,18,KER.PA,2,-1,1,2,0,4,23.1,28.3,"221,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,19,ML.PA,2,-1,1,2,0,4,22.1,25.31,"33,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,20,AI.PA,2,-1,1,2,0,4,13.4,13.71,"124,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,21,CS.PA,2,0,-1,2,0,3,68.4,44.25,∞,aucun,ATTENTE
+2022-01-31,22,MC.PA,2,-1,0,2,0,3,55.4,36.84,"1 958,3",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,23,PUB.PA,2,-1,0,2,0,3,52.3,32.76,"913,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,24,STMPA.PA,2,-1,0,2,0,3,40.0,26.25,"93,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,25,ORA.PA,2,1,-1,1,0,3,93.3,5.0,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,26,ENGI.PA,2,0,0,1,0,3,47.9,3.52,"50,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,27,SGO.PA,0,-1,1,2,0,2,25.5,49.4,"7 621,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,28,DSY.PA,0,-1,1,2,0,2,10.6,38.8,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,29,TEP.PA,0,-1,1,2,0,2,16.3,37.69,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,30,ERF.PA,-2,-1,1,2,0,0,20.5,36.91,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,31,AIR.PA,-2,-1,1,2,0,0,34.0,21.51,"66,2",aucun,ATTENTE
+2022-01-31,32,VIV.PA,-2,-1,0,2,0,-1,48.0,21.24,"35,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,33,HO.PA,-2,1,1,-1,0,-1,23.0,-1.91,"9,4",veto 2 : canal se refermant en 9.4 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-01-31,34,RNO.PA,2,0,-1,-2,0,-1,77.4,-23.2,∞,aucun,ATTENTE
+2022-01-31,35,BN.PA,-2,0,-1,1,0,-2,78.0,5.58,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,36,SAF.PA,0,-1,0,-1,0,-2,64.9,-3.24,"241,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,37,ALO.PA,-2,-1,1,-2,0,-4,7.0,-28.01,"162,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,38,WLN.PA,-2,-1,1,-2,0,-4,25.2,-34.5,"35,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-01-31,39,EN.PA,-2,-1,-1,-1,0,-5,79.4,-1.34,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,1,PUB.PA,2,0,1,2,0,5,30.4,22.89,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,2,KER.PA,2,0,1,2,0,5,19.3,16.66,∞,aucun,ATTENTE
+2022-02-28,3,DG.PA,2,0,1,2,0,5,19.1,11.35,"269,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,4,GLE.PA,2,-1,1,2,0,4,5.8,53.86,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,5,VIE.PA,2,-1,1,2,0,4,29.4,46.81,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,6,CAP.PA,2,-1,1,2,0,4,26.7,35.86,"4 838,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,7,STMPA.PA,2,-1,1,2,0,4,30.4,34.77,"409,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,8,TTE.PA,2,-1,1,2,0,4,8.2,34.56,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,9,MC.PA,2,-1,1,2,0,4,22.1,33.92,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,10,CS.PA,2,-1,1,2,0,4,11.3,30.52,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,11,CA.PA,2,1,-1,2,0,4,68.3,27.74,"21,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,12,BNP.PA,2,-1,1,2,0,4,5.1,25.21,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,13,SGO.PA,2,-1,1,2,0,4,13.9,24.8,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,14,SAN.PA,2,0,0,2,0,4,59.7,23.2,"302,6",aucun,ATTENTE
+2022-02-28,15,ML.PA,2,-1,1,2,0,4,10.2,19.32,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,16,ENGI.PA,2,0,0,2,0,4,56.5,18.92,"158,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,17,AI.PA,2,0,0,2,0,4,37.1,18.1,∞,aucun,ATTENTE
+2022-02-28,18,ORA.PA,2,1,-1,2,0,4,82.3,14.62,∞,aucun,ATTENTE
+2022-02-28,19,ACA.PA,2,-1,1,2,0,4,5.8,14.0,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,20,STLAP.PA,0,0,1,2,0,3,16.5,26.38,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,21,MT.AS,2,-1,-1,2,0,2,95.6,22.57,"18,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 18.0 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,22,EL.PA,0,-1,1,2,0,2,11.1,21.98,"1 104,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,23,SU.PA,2,-1,-1,2,0,2,74.9,20.13,"14,8",veto 2 : canal se refermant en 14.8 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,24,AIR.PA,0,0,0,2,0,2,62.6,11.09,"78,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,25,VIV.PA,2,-1,0,1,0,2,36.1,9.05,"44,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,26,RI.PA,0,0,-1,2,0,1,89.6,23.31,"19,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.2 séances,ATTENTE
+2022-02-28,27,HO.PA,0,1,-1,1,0,1,85.6,2.77,"1 739,7",aucun,ATTENTE
+2022-02-28,28,RMS.PA,0,-1,-1,2,0,0,94.5,42.89,"11,8",veto 2 : canal se refermant en 11.8 séances,ATTENTE
+2022-02-28,29,OR.PA,0,-1,-1,2,0,0,95.0,19.72,"16,1",veto 2 : canal se refermant en 16.1 séances,ATTENTE
+2022-02-28,30,LR.PA,-2,-1,1,2,0,0,20.6,18.48,∞,aucun,ATTENTE
+2022-02-28,31,BN.PA,-2,0,1,1,0,0,18.5,0.82,"69,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,32,RNO.PA,2,-1,1,-2,0,0,13.5,-15.35,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-02-28,33,DSY.PA,-2,0,-1,2,0,-1,95.8,19.73,"29,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,34,ERF.PA,-2,-1,-1,2,0,-2,91.4,17.27,"46,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,35,TEP.PA,-2,0,-1,1,0,-2,94.8,9.79,"19,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.5 séances,ATTENTE
+2022-02-28,36,SAF.PA,0,1,-1,-2,0,-2,86.0,-15.34,"55,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,37,EN.PA,-2,0,0,-1,0,-3,62.0,-4.97,"40,6",aucun,ATTENTE
+2022-02-28,38,ALO.PA,-2,-1,1,-2,0,-4,10.3,-32.21,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-02-28,39,WLN.PA,-2,1,-1,-2,0,-4,71.6,-43.64,"79,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,1,ORA.PA,2,1,1,2,0,6,32.2,14.6,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,2,TTE.PA,2,1,0,2,0,5,50.0,33.04,"23,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,3,HO.PA,2,1,-1,2,0,4,70.2,22.89,∞,aucun,ATTENTE
+2022-03-31,4,CA.PA,2,1,-1,2,0,4,97.3,21.86,"208,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,5,MT.AS,2,1,-1,2,0,4,69.4,21.09,"114,7",aucun,ATTENTE
+2022-03-31,6,SAN.PA,2,0,0,2,0,4,61.4,12.94,"4 229,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,7,DG.PA,2,1,0,1,0,4,46.2,5.45,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,8,VIE.PA,0,1,0,2,0,3,46.2,23.46,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,9,CS.PA,2,1,-1,1,0,3,95.4,4.59,"170,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,10,VIV.PA,2,1,-1,1,0,3,85.1,1.85,∞,aucun,ATTENTE
+2022-03-31,11,PUB.PA,0,1,-1,2,0,2,75.9,12.39,"84,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,12,AIR.PA,0,1,-1,2,0,2,69.9,11.46,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,13,ENGI.PA,0,1,0,1,0,2,43.0,2.65,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,14,AI.PA,0,1,-1,1,0,1,90.4,7.25,∞,aucun,ATTENTE
+2022-03-31,15,RMS.PA,-2,1,-1,2,0,0,90.7,24.56,"103,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,16,CAP.PA,-2,1,-1,2,0,0,95.0,21.75,"728,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,17,DSY.PA,-2,1,-1,2,0,0,85.6,15.34,"244,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,18,RI.PA,-2,1,-1,2,0,0,91.3,14.78,"582,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,19,STMPA.PA,-2,1,-1,2,0,0,78.7,12.8,"558,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,20,EL.PA,-2,1,-1,2,0,0,86.4,10.19,"587,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,21,SGO.PA,-2,1,0,1,0,0,38.2,4.26,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,22,STLAP.PA,-2,1,0,1,0,0,36.8,3.9,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,23,MC.PA,-2,1,-1,1,0,-1,84.4,8.42,"203,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,24,GLE.PA,-2,1,-1,1,0,-1,88.3,7.81,"36,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,25,SU.PA,-2,1,-1,1,0,-1,92.2,4.89,"184,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,26,ERF.PA,-2,1,-1,1,0,-1,83.9,4.79,"240,7",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,27,LR.PA,-2,1,-1,1,0,-1,81.6,4.4,"105,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,28,OR.PA,-2,1,-1,1,0,-1,82.3,3.7,"107,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,29,BNP.PA,-2,1,-1,1,0,-1,83.8,1.49,"52,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,30,TEP.PA,-2,1,-1,1,0,-1,90.8,1.44,"223,1",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,31,EN.PA,-2,1,0,-1,0,-2,64.4,-4.21,"414,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,32,ML.PA,-2,1,-1,-1,0,-3,89.5,-3.01,"66,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,33,SAF.PA,-2,1,-1,-1,0,-3,70.2,-6.72,"3 246,7",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,34,BN.PA,-2,0,0,-1,0,-3,36.3,-8.31,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-03-31,35,ACA.PA,-2,1,-1,-1,0,-3,87.8,-8.76,"59,6",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,36,RNO.PA,-2,1,1,-2,-1,-3,25.1,-26.77,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-03-31,37,WLN.PA,-2,0,0,-2,0,-4,53.9,-41.14,"81,9",aucun,ATTENTE
+2022-03-31,38,ALO.PA,-2,1,-1,-2,0,-4,89.3,-52.24,"79,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,1,HO.PA,2,1,1,2,0,6,12.8,32.86,"38,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,2,CA.PA,2,1,0,2,0,5,37.2,17.87,"27,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,3,AI.PA,2,1,-1,2,0,4,87.0,13.13,"10,5",veto 2 : canal se refermant en 10.5 séances,ATTENTE
+2022-04-29,4,ORA.PA,2,1,-1,2,0,4,71.5,10.32,"9,5",veto 2 : canal se refermant en 9.5 séances,ATTENTE
+2022-04-29,5,MT.AS,2,0,1,1,0,4,33.3,9.67,"55,7",aucun,ATTENTE
+2022-04-29,6,TTE.PA,2,0,-1,2,0,3,84.5,24.1,"29,3",aucun,ATTENTE
+2022-04-29,7,CS.PA,0,0,1,2,0,3,4.7,16.34,"11,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 11.7 séances,ATTENTE
+2022-04-29,8,SAN.PA,2,1,-1,1,0,3,67.6,6.52,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,9,VIV.PA,2,-1,1,1,0,3,0.0,4.65,"32,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,10,DG.PA,2,1,-1,1,0,3,91.4,1.28,"146,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,11,EL.PA,-2,0,1,2,0,1,29.1,23.72,"15,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.0 séances,ATTENTE
+2022-04-29,12,ERF.PA,-2,0,1,2,0,1,11.5,14.55,"22,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,13,EN.PA,2,1,-1,-1,0,1,82.4,-9.09,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,14,STMPA.PA,-2,-1,1,2,0,0,22.4,38.34,"49,8",aucun,ATTENTE
+2022-04-29,15,RMS.PA,-2,-1,1,2,0,0,20.9,23.62,"13,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.3 séances,ATTENTE
+2022-04-29,16,SU.PA,-2,-1,1,2,0,0,30.2,18.21,"30,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,17,VIE.PA,-2,0,0,2,0,0,39.0,17.88,"9,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 9.7 séances,ATTENTE
+2022-04-29,18,AIR.PA,-2,0,0,2,0,0,59.5,15.45,"13,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.4 séances,ATTENTE
+2022-04-29,19,DSY.PA,-2,-1,0,2,0,-1,64.0,24.36,"59,6",aucun,ATTENTE
+2022-04-29,20,TEP.PA,-2,0,-1,2,0,-1,92.7,10.07,∞,aucun,ATTENTE
+2022-04-29,21,PUB.PA,-2,1,-1,1,0,-1,94.3,6.29,"836,3",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,22,SGO.PA,-2,1,-1,1,0,-1,90.0,5.81,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,23,ML.PA,-2,0,0,1,0,-1,57.3,4.09,"7,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 7.3 séances,ATTENTE
+2022-04-29,24,GLE.PA,-2,0,0,1,0,-1,51.0,3.64,"1,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 1.7 séances,ATTENTE
+2022-04-29,25,CAP.PA,-2,-1,-1,2,0,-2,65.8,31.85,"27,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,26,RI.PA,-2,-1,-1,2,0,-2,69.8,12.64,"11,9",veto 2 : canal se refermant en 11.9 séances,ATTENTE
+2022-04-29,27,MC.PA,-2,-1,0,1,0,-2,35.7,7.95,"10,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 10.7 séances,ATTENTE
+2022-04-29,28,LR.PA,-2,0,-1,1,0,-2,88.3,5.8,"787,5",aucun,ATTENTE
+2022-04-29,29,OR.PA,-2,-1,0,1,0,-2,64.2,4.78,"19,0",veto 2 : canal se refermant en 19.0 séances,ATTENTE
+2022-04-29,30,BNP.PA,-2,0,-1,1,0,-2,90.0,2.11,"83,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-04-29,31,STLAP.PA,-2,0,-1,1,0,-2,71.3,2.01,"13,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 13.8 séances,ATTENTE
+2022-04-29,32,ENGI.PA,-2,1,-1,-1,0,-3,93.8,-0.41,"422,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,33,BN.PA,-2,1,-1,-1,0,-3,97.9,-9.97,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-04-29,34,SAF.PA,-2,0,1,-2,0,-3,17.7,-12.13,"16,3",veto 2 : canal se refermant en 16.3 séances,ATTENTE
+2022-04-29,35,ACA.PA,-2,0,-1,-1,0,-4,96.9,-9.85,"97,7",aucun,ATTENTE
+2022-04-29,36,ALO.PA,-2,0,-1,-2,0,-5,65.9,-51.49,"4,5",veto 2 : canal se refermant en 4.5 séances,ATTENTE
+2022-04-29,37,RNO.PA,-2,0,-1,-2,-1,-6,83.9,-27.2,"8,4",veto 2 : canal se refermant en 8.4 séances,ATTENTE
+2022-04-29,38,WLN.PA,-2,-1,-1,-2,0,-6,85.5,-44.04,"60,8",aucun,VENTE
+2022-05-31,1,SAN.PA,2,1,1,2,0,6,18.1,16.79,"29,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,2,HO.PA,2,0,1,2,0,5,0.0,41.3,∞,aucun,ATTENTE
+2022-05-31,3,AI.PA,2,1,0,2,0,5,57.8,14.82,"26,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,4,TTE.PA,2,1,-1,2,0,4,96.5,25.12,∞,aucun,ATTENTE
+2022-05-31,5,CA.PA,2,-1,1,2,0,4,11.6,18.89,"655,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,6,ORA.PA,2,0,-1,2,0,3,74.5,15.47,"471,7",aucun,ATTENTE
+2022-05-31,7,CS.PA,-2,1,1,2,0,2,28.7,12.13,"19,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.4 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,8,CAP.PA,-2,0,1,2,0,1,21.3,27.31,"54,8",aucun,ATTENTE
+2022-05-31,9,RI.PA,-2,0,1,2,0,1,33.4,10.6,"95,8",aucun,ATTENTE
+2022-05-31,10,MT.AS,0,1,-1,1,0,1,84.1,2.86,"221,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,11,EN.PA,2,1,-1,-1,0,1,67.5,-5.04,"70,4",aucun,ATTENTE
+2022-05-31,12,STMPA.PA,-2,1,-1,2,0,0,82.0,14.81,"52,2",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,13,EL.PA,-2,0,0,2,0,0,39.9,10.28,"71,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,14,BN.PA,0,0,1,-1,0,0,17.5,-2.57,"15,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 15.3 séances,ATTENTE
+2022-05-31,15,VIE.PA,-2,0,0,1,0,-1,45.8,8.86,"19,4",veto 2 : canal se refermant en 19.4 séances,ATTENTE
+2022-05-31,16,TEP.PA,-2,-1,1,1,0,-1,32.8,6.4,"59,8",aucun,ATTENTE
+2022-05-31,17,PUB.PA,-2,-1,1,1,0,-1,20.6,4.67,"38,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,18,ERF.PA,-2,1,-1,1,0,-1,78.9,3.2,"21,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,19,VIV.PA,-2,0,0,1,0,-1,57.3,1.19,"531,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,20,SU.PA,-2,1,-1,1,0,-1,77.0,0.9,"23,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,21,DG.PA,0,0,0,-1,0,-1,42.3,-1.77,"19,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.7 séances,ATTENTE
+2022-05-31,22,DSY.PA,-2,0,-1,1,0,-2,70.4,9.82,"48,5",aucun,ATTENTE
+2022-05-31,23,AIR.PA,-2,1,0,-1,0,-2,53.4,-4.64,"27,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,24,ENGI.PA,-2,1,-1,-1,0,-3,79.0,-1.62,"39,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,25,ML.PA,-2,1,-1,-1,0,-3,86.8,-9.58,"16,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 16.9 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,26,SGO.PA,-2,0,-1,-1,0,-4,73.3,-1.88,"15,8",veto 2 : canal se refermant en 15.8 séances,ATTENTE
+2022-05-31,27,RMS.PA,-2,0,-1,-1,0,-4,81.0,-2.72,"42,1",aucun,ATTENTE
+2022-05-31,28,LR.PA,-2,0,-1,-1,0,-4,79.1,-5.69,"42,8",aucun,ATTENTE
+2022-05-31,29,MC.PA,-2,0,-1,-1,0,-4,76.8,-6.98,"55,6",aucun,ATTENTE
+2022-05-31,30,OR.PA,-2,0,-1,-1,0,-4,77.0,-9.69,"71,3",aucun,ATTENTE
+2022-05-31,31,BNP.PA,-2,1,-1,-2,0,-4,78.7,-10.76,"29,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,32,GLE.PA,-2,1,-1,-2,0,-4,86.8,-13.31,"19,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.0 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,33,ACA.PA,-2,1,-1,-2,0,-4,91.3,-15.58,"25,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,34,SAF.PA,-2,0,0,-2,0,-4,35.7,-20.1,"82,4",aucun,ATTENTE
+2022-05-31,35,STLAP.PA,-2,1,-1,-2,0,-4,84.0,-20.96,"23,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,36,WLN.PA,-2,1,-1,-2,0,-4,81.2,-50.99,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,37,ALO.PA,-2,1,-1,-2,0,-4,84.2,-53.63,"31,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-05-31,38,KER.PA,-2,0,-1,-2,0,-5,98.9,-31.95,"216,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-05-31,39,RNO.PA,-2,1,-1,-2,-1,-5,93.9,-32.8,"23,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,1,ORA.PA,2,1,0,2,0,5,54.6,26.74,"3 225,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,2,SAN.PA,2,0,1,2,0,5,17.1,18.62,"122,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,3,TTE.PA,2,-1,1,2,0,4,25.7,51.47,"279,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,4,CA.PA,2,-1,1,2,0,4,8.9,18.01,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,5,HO.PA,2,0,-1,2,0,3,75.6,30.54,"10,1",veto 2 : canal se refermant en 10.1 séances,ATTENTE
+2022-06-30,6,AI.PA,2,-1,1,1,0,3,2.5,9.94,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,7,EN.PA,2,-1,1,1,0,3,8.1,6.41,"727,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-06-30,8,STMPA.PA,-2,-1,1,2,0,0,10.0,15.89,"120,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,9,ENGI.PA,-2,-1,1,2,0,0,10.2,15.67,"58,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,10,CS.PA,-2,-1,1,2,0,0,12.4,14.89,"50,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,11,BNP.PA,-2,-1,1,2,0,0,13.6,14.5,"46,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,12,MT.AS,-2,-1,1,2,0,0,4.9,14.39,∞,aucun,ATTENTE
+2022-06-30,13,CAP.PA,-2,0,1,1,0,0,3.6,6.84,"51,8",aucun,ATTENTE
+2022-06-30,14,GLE.PA,-2,-1,1,1,0,-1,11.6,8.14,"20,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,15,VIE.PA,-2,-1,1,1,0,-1,25.5,3.6,"44,1",aucun,ATTENTE
+2022-06-30,16,DG.PA,-2,-1,1,1,0,-1,26.8,0.43,"40,3",aucun,ATTENTE
+2022-06-30,17,RI.PA,-2,0,-1,1,0,-2,65.2,0.4,"32,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,18,BN.PA,0,-1,0,-1,0,-2,42.3,-4.73,"106,3",aucun,ATTENTE
+2022-06-30,19,VIV.PA,-2,-1,1,-1,0,-3,11.0,-0.64,"428,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,20,AIR.PA,-2,-1,1,-1,0,-3,10.8,-2.61,"227,1",aucun,ATTENTE
+2022-06-30,21,PUB.PA,-2,-1,1,-1,0,-3,25.6,-3.57,"83,7",aucun,ATTENTE
+2022-06-30,22,SU.PA,-2,-1,1,-1,0,-3,25.6,-4.74,"37,2",aucun,ATTENTE
+2022-06-30,23,ACA.PA,-2,-1,1,-1,0,-3,13.3,-5.23,"31,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,24,SGO.PA,-2,-1,1,-1,0,-3,7.2,-5.3,"455,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,25,STLAP.PA,-2,-1,1,-1,0,-3,7.2,-7.26,"50,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,26,ML.PA,-2,-1,1,-1,0,-3,15.4,-8.14,"46,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,27,EL.PA,-2,0,-1,-1,0,-4,69.3,-2.27,"27,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,28,MC.PA,-2,0,-1,-1,0,-4,73.0,-8.32,"52,8",aucun,ATTENTE
+2022-06-30,29,DSY.PA,-2,-1,0,-1,0,-4,52.2,-8.54,"58,8",aucun,ATTENTE
+2022-06-30,30,LR.PA,-2,-1,1,-2,0,-4,28.9,-11.73,"287,9",aucun,ATTENTE
+2022-06-30,31,RNO.PA,-2,-1,1,-2,0,-4,25.9,-21.84,"20,8",aucun,ATTENTE
+2022-06-30,32,ALO.PA,-2,-1,1,-2,0,-4,9.0,-32.11,"37,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,33,WLN.PA,-2,0,0,-2,0,-4,54.8,-52.88,"106,1",aucun,ATTENTE
+2022-06-30,34,RMS.PA,-2,0,-1,-2,0,-5,85.8,-10.46,"54,5",aucun,ATTENTE
+2022-06-30,35,OR.PA,-2,0,-1,-2,0,-5,74.3,-12.16,"357,0",aucun,ATTENTE
+2022-06-30,36,ERF.PA,-2,-1,0,-2,0,-5,47.2,-16.13,"48,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,37,SAF.PA,-2,0,-1,-2,0,-5,69.2,-19.02,"50,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,38,TEP.PA,-2,-1,-1,-2,0,-6,96.9,-12.46,"26,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-06-30,39,KER.PA,-2,-1,-1,-2,0,-6,87.1,-28.73,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,1,HO.PA,2,1,0,2,0,5,59.5,36.86,"23,7",aucun,ATTENTE
+2022-07-29,2,SAN.PA,2,0,1,2,0,5,3.2,15.13,"16,2",veto 2 : canal se refermant en 16.2 séances,ATTENTE
+2022-07-29,3,ORA.PA,2,-1,1,2,0,4,11.4,26.0,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,4,TTE.PA,2,0,-1,2,0,3,94.5,41.47,"16,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 16.2 séances,ATTENTE
+2022-07-29,5,BN.PA,2,1,1,-2,0,2,25.5,-12.0,"40,8",aucun,ATTENTE
+2022-07-29,6,CA.PA,0,0,0,1,0,1,35.0,5.34,"11,9",veto 2 : canal se refermant en 11.9 séances,ATTENTE
+2022-07-29,7,ENGI.PA,0,1,-1,1,0,1,85.6,1.22,"89,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,8,ALO.PA,2,0,1,-2,0,1,20.1,-38.54,"93,6",aucun,ATTENTE
+2022-07-29,9,AI.PA,0,1,-1,-1,0,-1,92.7,-2.5,"26,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,10,EN.PA,0,1,-1,-1,0,-1,93.0,-7.04,"26,7",aucun,ATTENTE
+2022-07-29,11,VIV.PA,-2,1,1,-2,0,-2,22.1,-16.62,"35,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,12,DG.PA,-2,1,-1,-1,0,-3,94.1,-2.13,"90,6",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,13,CS.PA,-2,1,-1,-1,0,-3,93.4,-2.81,"41,1",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,14,RI.PA,-2,1,-1,-1,0,-3,92.5,-5.41,"1 292,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,15,BNP.PA,-2,0,-1,-1,0,-4,90.0,-7.65,"30,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,16,VIE.PA,-2,1,-1,-2,0,-4,96.4,-12.0,"53,2",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,17,EL.PA,-2,1,-1,-2,0,-4,78.8,-12.5,"107,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,18,CAP.PA,-2,1,-1,-2,0,-4,98.7,-12.93,"278,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,19,PUB.PA,-2,1,-1,-2,0,-4,92.6,-13.75,"274,4",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,20,SAF.PA,-2,1,-1,-2,0,-4,98.1,-14.0,"613,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,21,MC.PA,-2,1,-1,-2,0,-4,96.5,-15.27,"699,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,22,OR.PA,-2,1,-1,-2,0,-4,94.5,-16.3,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,23,STMPA.PA,-2,1,-1,-2,0,-4,96.1,-17.28,"4 089,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,24,TEP.PA,-2,1,-1,-2,0,-4,89.8,-17.53,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,25,AIR.PA,-2,1,-1,-2,0,-4,90.3,-18.29,"119,1",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,26,GLE.PA,-2,1,-1,-2,0,-4,92.1,-19.04,"22,2",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,27,RMS.PA,-2,1,-1,-2,0,-4,94.1,-19.52,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,28,SU.PA,-2,1,-1,-2,0,-4,94.7,-21.84,"321,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,29,ML.PA,-2,1,-1,-2,0,-4,66.0,-23.97,"40,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,30,LR.PA,-2,1,-1,-2,0,-4,93.5,-24.34,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,31,MT.AS,-2,1,-1,-2,0,-4,96.5,-26.11,"28,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,32,DSY.PA,-2,1,-1,-2,0,-4,96.1,-26.46,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,33,STLAP.PA,-2,1,-1,-2,0,-4,98.2,-29.13,"147,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,34,RNO.PA,-2,1,-1,-2,0,-4,90.5,-29.21,"61,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,35,SGO.PA,-2,1,-1,-2,0,-4,93.9,-34.14,"34,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,36,ERF.PA,-2,0,0,-2,0,-4,60.9,-34.68,"125,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-07-29,37,KER.PA,-2,1,-1,-2,0,-4,90.0,-36.12,"39,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,38,WLN.PA,-2,1,-1,-2,0,-4,99.0,-55.28,"1 435,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-07-29,39,ACA.PA,-2,0,-1,-2,0,-5,94.6,-21.64,"28,5",aucun,ATTENTE
+2022-08-31,1,HO.PA,2,0,1,2,0,5,17.4,53.93,"48,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,2,TTE.PA,2,1,0,2,0,5,45.8,38.68,"102,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,3,ENGI.PA,2,0,1,2,0,5,0.3,12.07,"33,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,4,RMS.PA,2,0,1,1,0,4,3.3,3.82,"28,1",aucun,ATTENTE
+2022-08-31,5,MC.PA,2,-1,1,1,0,3,0.0,4.77,"36,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,6,RNO.PA,2,-1,1,1,0,3,32.7,2.04,"54,1",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,7,DG.PA,0,0,1,1,0,2,31.0,4.79,"29,0",aucun,ATTENTE
+2022-08-31,8,RI.PA,0,-1,1,1,0,1,0.0,2.78,"29,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,9,SAF.PA,0,-1,1,1,0,1,6.9,2.73,"58,3",aucun,ATTENTE
+2022-08-31,10,BN.PA,2,-1,1,-1,0,1,16.7,-6.93,"126,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,11,SAN.PA,-2,-1,1,2,0,0,30.1,21.06,∞,aucun,ATTENTE
+2022-08-31,12,ALO.PA,2,-1,1,-2,0,0,5.5,-28.16,"115,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,13,ORA.PA,-2,0,-1,2,0,-1,76.7,14.0,"25,0",aucun,ATTENTE
+2022-08-31,14,STMPA.PA,-2,-1,1,1,0,-1,0.1,0.58,"19,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.1 séances,ATTENTE
+2022-08-31,15,OR.PA,0,-1,1,-1,0,-1,12.3,-7.21,"50,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,16,STLAP.PA,0,-1,1,-1,0,-1,0.0,-7.6,"39,9",aucun,ATTENTE
+2022-08-31,17,WLN.PA,2,-1,0,-2,0,-1,47.0,-39.33,"29,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-08-31,18,CA.PA,-2,0,-1,1,0,-2,66.7,8.91,"38,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,19,CS.PA,-2,0,-1,1,0,-2,78.2,1.29,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,20,GLE.PA,0,-1,1,-2,0,-2,31.5,-12.42,"21,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,21,KER.PA,0,-1,1,-2,0,-2,0.0,-20.18,"56,9",aucun,ATTENTE
+2022-08-31,22,CAP.PA,-2,-1,1,-1,0,-3,0.0,-0.79,"31,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,23,AI.PA,-2,-1,1,-1,0,-3,0.0,-1.61,"26,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,24,BNP.PA,-2,-1,1,-1,0,-3,25.5,-4.71,"23,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,25,PUB.PA,-2,-1,1,-1,0,-3,10.6,-6.15,"14,4",veto 2 : canal se refermant en 14.4 séances,ATTENTE
+2022-08-31,26,EL.PA,-2,-1,1,-1,0,-3,1.9,-7.17,"42,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,27,VIE.PA,-2,-1,1,-1,0,-3,10.8,-7.82,"115,0",aucun,ATTENTE
+2022-08-31,28,AIR.PA,-2,-1,1,-1,0,-3,0.4,-9.54,"50,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,29,EN.PA,-2,0,1,-2,0,-3,28.0,-14.72,"23,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,30,SU.PA,-2,-1,1,-2,0,-4,1.2,-11.18,"47,9",aucun,ATTENTE
+2022-08-31,31,TEP.PA,-2,-1,1,-2,0,-4,9.8,-13.06,"125,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,32,DSY.PA,-2,-1,1,-2,0,-4,4.8,-14.39,"34,9",aucun,ATTENTE
+2022-08-31,33,LR.PA,-2,-1,1,-2,0,-4,7.6,-16.29,"61,0",aucun,ATTENTE
+2022-08-31,34,ACA.PA,-2,-1,1,-2,0,-4,15.4,-18.49,"30,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,35,ML.PA,-2,-1,1,-2,0,-4,21.3,-20.12,"84,8",aucun,ATTENTE
+2022-08-31,36,SGO.PA,-2,-1,1,-2,0,-4,14.1,-25.87,"22,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,37,ERF.PA,-2,-1,1,-2,0,-4,11.0,-38.81,"44,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-08-31,38,MT.AS,-2,-1,-1,-2,0,-6,65.5,-15.61,"11,2",veto 2 : canal se refermant en 11.2 séances,ATTENTE
+2022-08-31,39,VIV.PA,-2,-1,-1,-2,0,-6,66.9,-28.65,"15,0",veto 2 : canal se refermant en 15.0 séances,ATTENTE
+2022-09-30,1,ENGI.PA,2,-1,1,1,0,3,4.8,9.86,"80,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,2,RMS.PA,2,-1,1,1,0,3,17.3,2.63,"209,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,3,MC.PA,2,-1,1,1,0,3,9.9,1.76,"902,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,4,HO.PA,0,-1,1,2,0,2,24.2,41.75,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,5,TTE.PA,0,-1,1,2,0,2,28.8,18.49,"115,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,6,DG.PA,0,-1,1,1,0,1,11.4,4.27,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,7,CS.PA,0,-1,1,1,0,1,6.5,2.98,"126,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,8,OR.PA,2,-1,1,-1,0,1,27.2,-3.56,"60,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,9,RI.PA,2,0,0,-1,0,1,52.7,-5.14,"51,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,10,RNO.PA,2,0,1,-2,0,1,14.7,-12.69,"570,8",aucun,ATTENTE
+2022-09-30,11,ORA.PA,-2,-1,1,2,0,0,2.5,14.91,"55,5",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,12,SAF.PA,2,-1,1,-2,0,0,17.8,-13.63,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,13,KER.PA,2,-1,1,-2,0,0,9.2,-20.7,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,14,WLN.PA,2,-1,1,-2,0,0,17.8,-35.91,"446,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-09-30,15,CA.PA,-2,-1,1,1,0,-1,14.6,9.12,"350,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,16,AI.PA,-2,-1,1,1,0,-1,21.6,0.02,"80,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,17,STMPA.PA,0,-1,1,-1,0,-1,11.9,-4.28,"179,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,18,EL.PA,0,-1,1,-1,0,-1,11.7,-6.34,"192,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,19,PUB.PA,0,-1,1,-2,0,-2,28.2,-11.2,"79,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,20,DSY.PA,0,-1,1,-2,0,-2,16.9,-14.12,"1 154,0",aucun,ATTENTE
+2022-09-30,21,STLAP.PA,0,-1,1,-2,0,-2,6.5,-15.77,"1 060,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,22,GLE.PA,0,-1,1,-2,0,-2,7.3,-16.79,"125,7",aucun,ATTENTE
+2022-09-30,23,ACA.PA,0,-1,1,-2,0,-2,10.5,-22.33,"248,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,24,CAP.PA,-2,-1,1,-1,0,-3,34.5,-1.55,"938,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,25,BN.PA,-2,-1,1,-1,0,-3,13.5,-4.78,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,26,SAN.PA,-2,-1,0,-1,0,-4,64.4,-0.32,"4,1",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 4.1 séances,ATTENTE
+2022-09-30,27,EN.PA,-2,-1,1,-2,0,-4,11.7,-11.31,"415,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,28,SU.PA,-2,-1,1,-2,0,-4,24.5,-13.02,"209,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,29,VIE.PA,-2,-1,1,-2,0,-4,14.5,-13.73,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,30,BNP.PA,-2,-1,1,-2,0,-4,18.2,-13.92,"111,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,31,TEP.PA,-2,-1,1,-2,0,-4,16.3,-15.0,∞,aucun,ATTENTE
+2022-09-30,32,AIR.PA,-2,-1,1,-2,0,-4,9.4,-15.36,"7 058,4",aucun,ATTENTE
+2022-09-30,33,LR.PA,-2,-1,1,-2,0,-4,14.6,-17.98,"1 337,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,34,VIV.PA,-2,-1,1,-2,0,-4,28.3,-18.67,"63,0",aucun,ATTENTE
+2022-09-30,35,ML.PA,-2,-1,1,-2,0,-4,28.6,-23.57,"119,3",aucun,ATTENTE
+2022-09-30,36,ALO.PA,-2,-1,1,-2,0,-4,8.5,-33.5,"6 038,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,37,ERF.PA,-2,-1,1,-2,0,-4,21.2,-35.87,"1 007,8",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-09-30,38,MT.AS,-2,-1,0,-2,0,-5,37.9,-13.86,"41,8",aucun,ATTENTE
+2022-09-30,39,SGO.PA,-2,-1,0,-2,0,-5,35.9,-32.21,"42,4",aucun,ATTENTE
+2022-10-31,1,ENGI.PA,2,1,-1,1,0,3,93.3,0.16,"79,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,2,HO.PA,0,1,-1,2,0,2,95.4,38.6,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,3,TTE.PA,0,1,-1,2,0,2,92.5,17.38,"489,3",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,4,CS.PA,2,1,-1,-1,0,1,95.5,-5.46,"66,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,5,RI.PA,2,-1,1,-1,0,1,20.6,-6.4,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,6,MC.PA,2,1,0,-2,0,1,60.9,-12.33,"35,6",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,7,RMS.PA,2,1,0,-2,0,1,58.9,-14.96,"39,9",aucun,ATTENTE
+2022-10-31,8,RNO.PA,2,1,0,-2,0,1,51.5,-16.89,"133,7",aucun,ATTENTE
+2022-10-31,9,PUB.PA,2,1,-1,-2,0,0,78.5,-10.4,"257,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,10,WLN.PA,2,1,-1,-2,0,0,68.3,-18.72,"29,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,11,SAF.PA,2,1,-1,-2,0,0,92.6,-21.67,"46 839,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,12,EL.PA,2,1,-1,-2,0,0,76.6,-22.69,"713,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,13,ORA.PA,-2,1,-1,1,0,-1,95.1,2.6,"97,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,14,DG.PA,0,1,-1,-1,0,-1,97.4,-9.15,"166,1",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,15,STMPA.PA,0,0,1,-2,0,-1,26.9,-26.68,"40,3",aucun,ATTENTE
+2022-10-31,16,OR.PA,0,-1,1,-2,0,-2,30.5,-19.19,"116,1",aucun,ATTENTE
+2022-10-31,17,SU.PA,0,1,-1,-2,0,-2,76.5,-22.44,"220,7",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,18,STLAP.PA,0,1,-1,-2,0,-2,95.8,-24.02,"47,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,19,CA.PA,-2,1,-1,-1,0,-3,97.6,-7.55,"1 761,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,20,SAN.PA,-2,1,-1,-1,0,-3,93.1,-7.96,"50,8",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,21,BN.PA,-2,1,-1,-2,0,-4,95.9,-12.13,"71,3",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,22,AI.PA,-2,1,-1,-2,0,-4,92.0,-12.75,"372,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,23,EN.PA,-2,1,-1,-2,0,-4,95.6,-14.81,"120,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,24,BNP.PA,-2,1,-1,-2,0,-4,96.1,-20.5,"54,3",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,25,CAP.PA,-2,0,0,-2,0,-4,64.1,-20.96,"78,1",aucun,ATTENTE
+2022-10-31,26,AIR.PA,-2,1,-1,-2,0,-4,98.3,-22.49,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,27,MT.AS,-2,1,-1,-2,0,-4,84.9,-24.42,"77,9",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,28,GLE.PA,-2,1,-1,-2,0,-4,76.6,-26.04,"162,5",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,29,TEP.PA,-2,1,-1,-2,0,-4,87.3,-26.33,"56,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,30,LR.PA,-2,1,-1,-2,0,-4,89.8,-28.05,"1 192,5",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,31,ML.PA,-2,1,-1,-2,0,-4,93.1,-28.95,"913,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,32,ACA.PA,-2,1,-1,-2,0,-4,95.1,-29.58,"61,4",veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,33,VIE.PA,-2,1,-1,-2,0,-4,93.7,-30.41,"236,6",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,34,DSY.PA,-2,0,0,-2,0,-4,44.6,-34.52,"34,0",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-10-31,35,SGO.PA,-2,1,-1,-2,0,-4,96.1,-37.1,"104,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,36,ERF.PA,-2,1,-1,-2,0,-4,90.0,-39.72,"144,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,37,ALO.PA,-2,1,-1,-2,0,-4,95.2,-46.99,"626,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-10-31,38,VIV.PA,-2,0,-1,-2,0,-5,97.0,-25.72,"164,1",aucun,ATTENTE
+2022-10-31,39,KER.PA,-2,0,-1,-2,0,-5,78.5,-31.26,"26,4",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,1,ENGI.PA,2,1,1,1,0,5,34.2,9.45,"6,8",veto 2 : canal se refermant en 6.8 séances,ATTENTE
+2022-11-30,2,CS.PA,2,1,1,1,0,5,16.9,5.9,"8,8",veto 2 : canal se refermant en 8.8 séances,ATTENTE
+2022-11-30,3,PUB.PA,2,1,1,1,0,5,10.9,4.6,"16,9",veto 2 : canal se refermant en 16.9 séances,ATTENTE
+2022-11-30,4,TTE.PA,2,1,-1,2,0,4,95.9,36.06,"17,9",veto 2 : canal se refermant en 17.9 séances,ATTENTE
+2022-11-30,5,DG.PA,2,1,-1,2,0,4,95.5,11.88,∞,aucun,ATTENTE
+2022-11-30,6,AIR.PA,2,0,1,1,0,4,10.7,8.18,"20,2",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,7,SAF.PA,2,1,-1,1,0,3,72.1,7.58,"4,4",veto 2 : canal se refermant en 4.4 séances,ATTENTE
+2022-11-30,8,RNO.PA,2,1,-1,1,0,3,86.0,6.6,"346,7",aucun,ATTENTE
+2022-11-30,9,GLE.PA,2,1,1,-2,0,2,12.4,-14.18,"19,9",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 19.9 séances,ATTENTE
+2022-11-30,10,HO.PA,0,0,-1,2,0,1,65.8,76.19,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,11,AI.PA,0,1,1,-1,0,1,0.0,-4.66,"6,2",veto 2 : canal se refermant en 6.2 séances,ATTENTE
+2022-11-30,12,MC.PA,2,1,-1,-1,0,1,100.0,-7.93,"369,7",aucun,ATTENTE
+2022-11-30,13,STLAP.PA,2,1,-1,-1,0,1,90.6,-9.54,"6,2",veto 2 : canal se refermant en 6.2 séances,ATTENTE
+2022-11-30,14,WLN.PA,2,0,1,-2,0,1,30.5,-10.12,"50,9",veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,15,BNP.PA,2,1,0,-2,0,1,43.6,-10.57,"3,7",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 3.7 séances,ATTENTE
+2022-11-30,16,ACA.PA,2,0,1,-2,0,1,19.6,-16.69,"5,2",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 5.2 séances,ATTENTE
+2022-11-30,17,ORA.PA,-2,1,-1,2,0,0,86.4,13.27,"1 118,8",veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,18,MT.AS,2,1,-1,-2,0,0,91.6,-10.21,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,19,EL.PA,2,1,-1,-2,0,0,96.8,-11.69,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,20,RI.PA,2,1,-1,-2,0,0,99.2,-13.99,"141,9",aucun,ATTENTE
+2022-11-30,21,RMS.PA,2,1,-1,-2,0,0,87.9,-14.67,"511,6",aucun,ATTENTE
+2022-11-30,22,SU.PA,2,1,-1,-2,0,0,83.4,-20.95,∞,aucun,ATTENTE
+2022-11-30,23,VIE.PA,0,1,1,-2,0,0,33.7,-22.35,"6,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 6.0 séances,ATTENTE
+2022-11-30,24,STMPA.PA,2,1,-1,-2,0,0,72.9,-25.29,"139,2",aucun,ATTENTE
+2022-11-30,25,CA.PA,-2,0,0,1,0,-1,38.0,9.81,"4,6",veto 2 : canal se refermant en 4.6 séances,ATTENTE
+2022-11-30,26,BN.PA,-2,1,1,-1,0,-1,22.7,-1.96,"6,0",veto 1 : moins de 3 épisodes de contact d'un côté; veto 2 : canal se refermant en 6.0 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,27,SAN.PA,-2,0,-1,1,0,-2,77.0,7.44,"74,7",aucun,ATTENTE
+2022-11-30,28,EN.PA,-2,0,-1,1,0,-2,78.8,1.86,∞,aucun,ATTENTE
+2022-11-30,29,CAP.PA,0,1,-1,-2,0,-2,65.3,-18.45,"260,2",aucun,ATTENTE
+2022-11-30,30,LR.PA,0,1,-1,-2,0,-2,80.0,-21.63,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,31,OR.PA,0,1,-1,-2,0,-2,96.9,-23.15,"293,7",aucun,ATTENTE
+2022-11-30,32,SGO.PA,0,1,-1,-2,0,-2,85.1,-30.12,∞,aucun,ATTENTE
+2022-11-30,33,KER.PA,0,1,-1,-2,0,-2,97.3,-31.28,∞,aucun,ATTENTE
+2022-11-30,34,ML.PA,-2,1,0,-2,0,-3,60.0,-25.75,"4,5",veto 2 : canal se refermant en 4.5 séances; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,35,VIV.PA,-2,1,-1,-2,0,-4,93.7,-24.37,∞,veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,36,ALO.PA,-2,1,-1,-2,0,-4,92.8,-32.25,∞,veto 1 : moins de 3 épisodes de contact d'un côté; veto 3 : critères 1 et 2 de signes opposés,ATTENTE
+2022-11-30,37,DSY.PA,-2,0,0,-2,0,-4,63.0,-37.66,"69,6",aucun,ATTENTE
+2022-11-30,38,TEP.PA,-2,-1,0,-2,0,-5,60.2,-28.78,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
+2022-11-30,39,ERF.PA,-2,0,-1,-2,0,-5,77.2,-39.19,∞,veto 1 : moins de 3 épisodes de contact d'un côté,ATTENTE
