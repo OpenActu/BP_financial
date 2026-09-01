@@ -4,9 +4,7 @@
 
 > **La question traitée.** Le quotient $\dfrac{\langle u,v\rangle}{\|u\|\,\|v\|}$ a-t-il un sens géométrique ? Autrement dit : peut-on parler d'**angle** entre deux vecteurs de $\mathbb R^n$,  alors que rien dans la définition du § 1.1 ne mentionne d'angle ?
 
-**Ce qui est en jeu.** La réponse est oui, et elle repose sur une unique inégalité. C'est elle
-qui, transposée aux données, donne $|\rho|\le 1$ — et qui explique ce que signifie *exactement*
-le cas d'égalité.
+**Ce qui est en jeu.** La réponse est oui, et elle repose sur une unique inégalité. C'est elle qui, transposée aux données, donne $|\rho|\le 1$ — et qui explique ce que signifie *exactement* le cas d'égalité.
 
 ---
 
@@ -16,22 +14,39 @@ le cas d'égalité.
 > $$|\langle u,v\rangle|\;\le\;\|u\|\,\|v\|$$
 > avec **égalité si et seulement si** $u$ et $v$ sont colinéaires.
 
-**Démonstration (le trinôme).** Pour $v\ne 0$ et tout $t\in\mathbb R$, développons par
-l'identité du § 1.2 :
+> 📐 **Rappel — colinéaires.** $u$ et $v$ sont **colinéaires** lorsque l'un est un multiple de
+> l'autre : il existe $\lambda\in\mathbb R$ tel que $u=\lambda v$, **ou** il existe $\mu\in\mathbb R$ tel que $v=\mu u$. La disjonction n'est pas une coquetterie d'écriture : si $v=0$ et $u\ne 0$, seule la seconde forme convient — $v=0\cdot u$ — car aucun $\lambda$ ne vérifie $u=\lambda\cdot 0$. La formulation **symétrique** équivalente évite ce cas d'espèce : il existe $(\alpha,\beta)\ne(0,0)$ tel que $\alpha u+\beta v=0$, autrement dit la famille $\{u,v\}$ est **liée**. Géométriquement : $u$ et $v$ sont portés par une même droite passant par l'origine, le vecteur nul étant colinéaire à tout vecteur.
 
+**Démonstration (le trinôme).** Pour $v\ne 0$ et tout $t\in\mathbb R$, développons par l'identité du § 1.2 :
 $$P(t)=\|u+tv\|^2=\|v\|^2\,t^2+2\langle u,v\rangle\,t+\|u\|^2\;\ge\;0$$
+Trois points à vérifier, et c'est toute la démonstration.
 
-$P$ est un trinôme du second degré (son coefficient dominant $\|v\|^2$ est non nul) de signe
-constant : son discriminant est donc $\le 0$.
+**1. $P$ est bien du second degré.** 
+Son coefficient dominant est $\|v\|^2$, et l'hypothèse $v\ne 0$ jointe à la propriété **définie positive** du [§ 1.1](01-produit-scalaire-et-norme.md) donne $\|v\|^2>0$ — strictement, et pas seulement $\ge 0$. C'est là, et nulle part ailleurs, que sert l'exclusion du cas $v=0$ : sans elle $P$ dégénère en la constante $\|u\|^2$, dont le discriminant ne veut plus rien dire (exercice **E2.1**).
 
-$$4\langle u,v\rangle^2-4\|u\|^2\|v\|^2\le 0
+**2. $P$ est de signe constant.** 
+$P(t)=\|u+tv\|^2$ est un carré de norme : il est $\ge 0$ pour **tout** $t$ réel, sans condition. Encore la même propriété — c'est la seule hypothèse de fond de toute la démonstration.
+
+**3. Un trinôme positif a un discriminant $\le 0$.** 
+Ce n'est pas une règle à retenir, cela se relit sur la **forme canonique**. Pour $P(t)=at^2+bt+c$ avec $a>0$ :
+$$P(t)=a\Bigl(t+\frac{b}{2a}\Bigr)^2-\frac{b^2-4ac}{4a}
+=a\Bigl(t+\frac{b}{2a}\Bigr)^2-\frac{\Delta}{4a}$$
+Le carré est $\ge 0$ et s'annule en $t_0=-\dfrac{b}{2a}$ : c'est donc là que $P$ atteint son minimum, et ce minimum vaut
+$$\min_{t\in\mathbb R}P=P(t_0)=-\frac{\Delta}{4a}$$
+Si $P\ge 0$ partout, alors en particulier $P(t_0)\ge 0$, soit $-\dfrac{\Delta}{4a}\ge 0$ ; comme $4a>0$, cela force $\Delta\le 0$. (La réciproque est vraie de la même façon : $a>0$ et $\Delta\le 0$ donnent $P\ge 0$.)
+
+Appliqué à $P$, avec $a=\|v\|^2$, $b=2\langle u,v\rangle$ et $c=\|u\|^2$ :
+$$\Delta=b^2-4ac=4\langle u,v\rangle^2-4\|u\|^2\|v\|^2\le 0
 \quad\Longrightarrow\quad \langle u,v\rangle^2\le\|u\|^2\|v\|^2$$
+et en prenant la racine carrée, $|\langle u,v\rangle|\le\|u\|\,\|v\|$.
 
-L'égalité correspond à un discriminant nul, donc à une racine double $t_0$ telle que
-$\|u+t_0v\|=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
+L'égalité correspond à un discriminant nul, donc à un minimum nul : la racine double
+$t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2=P(t_0)=0$, donc $\|u+t_0v\|=0$, donc — par la **réciproque** du cas d'égalité du § 1.1 — $u+t_0v=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
 
 > 🔑 **La positivité du trinôme n'est rien d'autre que la propriété « définie positive » du
 > § 1.1.** Toute l'inégalité tient dans le fait qu'un carré de norme ne peut pas être négatif.
+
+> 🔑 **Le point $t_0$ n'est pas un artefact de calcul.** $t_0=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ est le réel qui rend $\|u+tv\|$ minimal : $-t_0v$ est la **projection orthogonale** de $u$ sur la droite engendrée par $v$, et $\min P$ est le carré de la distance de $u$ à cette droite. La démonstration ci-dessus est donc, sans le dire, celle du [module 4](04-projection-orthogonale.md) — Cauchy–Schwarz dit simplement que cette distance existe, et le cas d'égalité qu'elle est nulle.
 
 ---
 
@@ -42,9 +57,7 @@ il existe donc un **unique** $\theta\in[0,\pi]$ tel que
 
 $$\langle u,v\rangle=\|u\|\,\|v\|\cos\theta$$
 
-C'est la **définition** de l'angle entre deux vecteurs de $\mathbb R^n$ — et non un théorème
-importé de la géométrie du plan. En dimension 2 elle redonne l'angle usuel ; en dimension $n$
-elle l'étend sans rien changer aux formules.
+C'est la **définition** de l'angle entre deux vecteurs de $\mathbb R^n$ — et non un théorème importé de la géométrie du plan. En dimension 2 elle redonne l'angle usuel ; en dimension $n$ elle l'étend sans rien changer aux formules.
 
 | $\cos\theta$ | $\theta$ | Lecture                                                                |
 | ------------ | -------- | ---------------------------------------------------------------------- |

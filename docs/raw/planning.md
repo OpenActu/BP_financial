@@ -167,6 +167,8 @@ qui précède sur l'incertitude.
   [`import_societe.py`](../../python/import_societe.md) et
   [`import_fondamentaux.py`](../../python/import_fondamentaux.md).
 - **Un semestre d'environ 30 h se tient en 13 semaines à 2 h 30**, README compris.
+- **Ce qui est acquis se coche** dans
+  [`avancement.md`](concept/sommaire/avancement.md) : un module par ligne, dans l'ordre ci-dessus.
 
 ## Ce que ce planning ne prétend pas être
 

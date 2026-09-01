@@ -19,6 +19,9 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 > 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les dix cours en quatre
 > semestres. L'arborescence ci-dessous porte ce découpage.
 
+> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 106 modules
+> ligne à ligne, dans l'ordre du parcours.
+
 ## Arborescence
 
 ```
