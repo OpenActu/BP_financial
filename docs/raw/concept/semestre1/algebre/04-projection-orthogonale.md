@@ -13,61 +13,36 @@ n'est qu'une façon coûteuse de retrouver la figure de ce module.
 
 ## 4.1 Sous-espace, et sous-espace engendré
 
-La question du module parle d'un **sous-espace** $F$. Ce n'est pas un mot de décor : c'est
-l'hypothèse qui rend la question bien posée, et tout ce qui suit s'appuie sur elle.
+La question du module parle d'un **sous-espace** $F$. Ce n'est pas un mot de décor : c'est l'hypothèse qui rend la question bien posée, et tout ce qui suit s'appuie sur elle.
 
-> **Définition (sous-espace vectoriel).** Une partie $F\subseteq\mathbb R^n$ est un **sous-espace
-> vectoriel** si elle est non vide et **stable par combinaison linéaire** :
+> **Définition (sous-espace vectoriel).** Une partie $F\subseteq\mathbb R^n$ est un **sous-espace vectoriel** si elle est non vide et **stable par combinaison linéaire** :
 > $$y,z\in F\ \text{ et }\ \alpha,\beta\in\mathbb R\quad\Longrightarrow\quad \alpha y+\beta z\in F$$
 
-Prendre $\alpha=\beta=0$ montre qu'un sous-espace **contient toujours $0$** ; « non vide et
-stable » et « contient $0$ et stable » sont donc deux formulations de la même chose. Il n'y a
-rien d'autre à retenir : la stabilité est la seule propriété de $F$ utilisée dans tout le module
-— au § 4.3, elle sert à affirmer que $p(x)-y$ appartient encore à $F$.
+Prendre $\alpha=\beta=0$ montre qu'un sous-espace **contient toujours $0$** ; « non vide et stable » et « contient $0$ et stable » sont donc deux formulations de la même chose. Il n'y a rien d'autre à retenir : la stabilité est la seule propriété de $F$ utilisée dans tout le module — au § 4.3, elle sert à affirmer que $p(x)-y$ appartient encore à $F$.
 
 > **Définition (sous-espace engendré).** Pour $u_1,\dots,u_d\in\mathbb R^n$,
 > $$\text{Vect}(u_1,\dots,u_d)=\bigl\{\lambda_1u_1+\dots+\lambda_du_d\ :\ \lambda_1,\dots,\lambda_d\in\mathbb R\bigr\}$$
 > — l'ensemble de **toutes** leurs combinaisons linéaires.
 
-C'est bien un sous-espace : une combinaison linéaire de combinaisons linéaires des $u_j$ est
-encore une combinaison linéaire des $u_j$, en regroupant les coefficients. Et c'est le **plus
-petit** qui contienne les $u_j$ : tout sous-espace les contenant contient, par stabilité, chacune
-de leurs combinaisons. D'où le nom : le sous-espace **engendré** par $u_1,\dots,u_d$.
+C'est bien un sous-espace : une combinaison linéaire de combinaisons linéaires des $u_j$ est encore une combinaison linéaire des $u_j$, en regroupant les coefficients. Et c'est le **plus petit** qui contienne les $u_j$ : tout sous-espace les contenant contient, par stabilité, chacune de leurs combinaisons. D'où le nom : le sous-espace **engendré** par $u_1,\dots,u_d$.
 
-**Le cas $d=1$ — la droite.** $\text{Vect}(u)=\{\lambda u\ :\ \lambda\in\mathbb R\}$ est la
-**droite** passant par l'origine et dirigée par $u$ : c'est le $D$ du § 4.2. L'hypothèse
-$u\ne 0$ y est indispensable, et pour une raison de géométrie avant d'être de calcul —
-$\text{Vect}(0)=\{0\}$ est un sous-espace parfaitement légitime, mais réduit à un point : ce
-n'est pas une droite, et le projeté d'un $x$ dessus vaut $0$ sans qu'aucune direction ne soit en
-jeu.
+**Le cas $d=1$ — la droite.** $\text{Vect}(u)=\{\lambda u\ :\ \lambda\in\mathbb R\}$ est la **droite** passant par l'origine et dirigée par $u$ : c'est le $D$ du § 4.2. L'hypothèse $u\ne 0$ y est indispensable, et pour une raison de géométrie avant d'être de calcul — $\text{Vect}(0)=\{0\}$ est un sous-espace parfaitement légitime, mais réduit à un point : ce n'est pas une droite, et le projeté d'un $x$ dessus vaut $0$ sans qu'aucune direction ne soit en jeu.
 
-**Dimension.** Le nombre $d$ de générateurs n'est pas la dimension de $\text{Vect}(u_1,\dots,u_d)$ :
-il la majore. Les deux coïncident exactement quand la famille est **libre** — et le
-[§ 3.3](03-orthogonalite-et-pythagore.md) donne un critère commode pour s'en assurer : une
-famille orthogonale de vecteurs non nuls est libre. C'est ce que le § 4.4 exploite en travaillant
-dans une base orthonormée.
+**Dimension.** Le nombre $d$ de générateurs n'est pas la dimension de $\text{Vect}(u_1,\dots,u_d)$ : il la majore. Les deux coïncident exactement quand la famille est **libre** — et le [§ 3.3](03-orthogonalite-et-pythagore.md) donne un critère commode pour s'en assurer : une famille orthogonale de vecteurs non nuls est libre. C'est ce que le § 4.4 exploite en travaillant dans une base orthonormée.
 
 Les sous-espaces qui reviennent dans tout ce cours sont peu nombreux :
 
-| Sous-espace | Ce qu'il contient | Où il sert |
-|---|---|---|
-| $\text{Vect}(\mathbf 1)$ | les vecteurs **constants** $(c,\dots,c)$ | la moyenne — [module 5](05-supplementaire-orthogonal-et-dimension.md) |
-| $\text{Vect}(\mathbf 1)^{\perp}$ | les vecteurs de **somme nulle** (exercice E3.2) | les écarts à la moyenne, les $n-1$ degrés de liberté |
-| $\text{Vect}(\mathbf 1,t)$ | les suites **affines** $v_0+r\,t_i$ | la droite des moindres carrés — [`modele.md`](../../../modele.md) |
-| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables | la régression multiple — simulation S4.2 |
+| Sous-espace                         | Ce qu'il contient                               | Où il sert                                                            |
+| ----------------------------------- | ----------------------------------------------- | --------------------------------------------------------------------- |
+| $\text{Vect}(\mathbf 1)$            | les vecteurs **constants** $(c,\dots,c)$        | la moyenne — [module 5](05-supplementaire-orthogonal-et-dimension.md) |
+| $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** (exercice E3.2) | les écarts à la moyenne, les $n-1$ degrés de liberté                  |
+| $\text{Vect}(\mathbf 1,t)$          | les suites **affines** $v_0+r\,t_i$             | la droite des moindres carrés — [`modele.md`](../../../modele.md)     |
+| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                    | la régression multiple — simulation S4.2                              |
 
 > ⚠️ **« Sous-espace » n'est pas « sous-ensemble », et un sous-espace passe toujours par
-> l'origine.** Une droite du plan qui ne passe pas par $0$ n'est pas un sous-espace. Cela n'a
-> rien de contradictoire avec la régression : la droite d'équation $v=v_0+rt$ est **affine dans
-> le plan $(t,v)$**, mais le vecteur $v_0\mathbf 1+r\,t$ qu'elle produit vit dans $\mathbb R^n$,
-> où il appartient bel et bien au sous-espace $\text{Vect}(\mathbf 1,t)$. Le sous-espace n'est
-> pas la droite qu'on dessine ; c'est l'ensemble des **séries de $n$ valeurs** qu'une telle
-> droite peut engendrer.
+> l'origine.** Une droite du plan qui ne passe pas par $0$ n'est pas un sous-espace. Cela n'a rien de contradictoire avec la régression : la droite d'équation $v=v_0+rt$ est **affine dans le plan $(t,v)$**, mais le vecteur $v_0\mathbf 1+r\,t$ qu'elle produit vit dans $\mathbb R^n$, où il appartient bel et bien au sous-espace $\text{Vect}(\mathbf 1,t)$. Le sous-espace n'est pas la droite qu'on dessine ; c'est l'ensemble des **séries de $n$ valeurs** qu'une telle droite peut engendrer.
 
-> 🔑 **C'est la stabilité qui garantit une réponse.** Sur une partie quelconque de
-> $\mathbb R^n$ — une sphère, un segment, un ensemble fini — « l'élément le plus proche de $x$ »
-> peut ne pas exister, ou en exister plusieurs. Le § 4.3 montre que sur un sous-espace il existe
-> et qu'il est unique, et la démonstration n'invoque rien d'autre que la stabilité et Pythagore.
+> 🔑 **C'est la stabilité qui garantit une réponse.** Sur une partie quelconque de $\mathbb R^n$ — une sphère, un segment, un ensemble fini — « l'élément le plus proche de $x$ » peut ne pas exister, ou en exister plusieurs. Le § 4.3 montre que sur un sous-espace il existe et qu'il est unique, et la démonstration n'invoque rien d'autre que la stabilité et Pythagore.
 
 ---
 
@@ -96,8 +71,7 @@ Le vecteur $x-p(x)$ s'appelle le **résidu**. Par construction il est orthogonal
 **Démonstration.** Écrivons $x-y=\underbrace{(x-p(x))}_{\perp\,D}+\underbrace{(p(x)-y)}_{\in\,D}$.
 Ces deux vecteurs sont orthogonaux, donc par Pythagore :
 $$\|x-y\|^2=\|x-p(x)\|^2+\|p(x)-y\|^2\;\ge\;\|x-p(x)\|^2 \qquad\blacksquare$$
-> 🔑 **Les moindres carrés ne sont rien d'autre que ce théorème.** Minimiser
-> $\sum_i(v_i-v_0-rt_i)^2$, c'est minimiser $\|v-y\|^2$ sur le sous-espace $y\in\text{Vect}(\mathbf 1,t)$ : la solution **est** la projection orthogonale. Tout le calcul différentiel de [`modele.md`](../../../modele.md) (annuler deux dérivées partielles) retrouve cette figure par un autre chemin.
+> 🔑 **Les moindres carrés ne sont rien d'autre que ce théorème.** Minimiser $\sum_i(v_i-v_0-rt_i)^2$, c'est minimiser $\|v-y\|^2$ sur le sous-espace $y\in\text{Vect}(\mathbf 1,t)$ : la solution **est** la projection orthogonale. Tout le calcul différentiel de [`modele.md`](../../../modele.md) (annuler deux dérivées partielles) retrouve cette figure par un autre chemin.
 
 **Deux définitions, une seule notion.** « Le résidu est orthogonal » et « la distance est minimale » caractérisent le même vecteur. La première est commode pour **calculer**, la seconde pour **comprendre**.
 
@@ -109,8 +83,7 @@ Si $(e_1,\dots,e_d)$ est une base **orthonormée** de $F$ ($\langle e_j,e_k\rang
 $$P_F(x)=\sum_{j=1}^d \langle x,e_j\rangle\,e_j$$
 C'est la formule de la droite, appliquée à chaque direction et sommée — licite **parce que** les directions sont orthogonales entre elles. Le [module 6](06-bases-orthonormees-et-isometries.md) montre qu'une telle base existe toujours.
 
-Le théorème de meilleure approximation du § 4.3 vaut à l'identique : la démonstration n'utilise
-que l'orthogonalité du résidu, jamais la dimension de $F$.
+Le théorème de meilleure approximation du § 4.3 vaut à l'identique : la démonstration n'utilise que l'orthogonalité du résidu, jamais la dimension de $F$.
 
 ---
 
@@ -176,24 +149,15 @@ compte des degrés de liberté sans jamais construire de base.
 
 ## 4.7 Exercices
 
-**E4.1.** Vérifier directement, à partir de la formule du § 4.2, que $p(p(x))=p(x)$ et que
-$\langle p(x),x-p(x)\rangle=0$.
+**E4.1.** Vérifier directement, à partir de la formule du § 4.2, que $p(p(x))=p(x)$ et que $\langle p(x),x-p(x)\rangle=0$.
 
-**E4.2.** Écrire la matrice du projecteur sur $D=\text{Vect}(u)$ sous la forme
-$P=\frac{uu^{\top}}{\|u\|^2}$. Vérifier $P^{\top}=P$, $P^2=P$, puis calculer
-$\operatorname{tr}(P)$. *Que vaut-elle, et pourquoi était-ce prévisible ?*
+**E4.2.** Écrire la matrice du projecteur sur $D=\text{Vect}(u)$ sous la forme $P=\frac{uu^{\top}}{\|u\|^2}$. Vérifier $P^{\top}=P$, $P^2=P$, puis calculer $\operatorname{tr}(P)$. *Que vaut-elle, et pourquoi était-ce prévisible ?*
 
-**E4.3.** Montrer que $\|p(x)\|\le\|x\|$, avec égalité si et seulement si $x\in D$. *(Piste :
-Pythagore.) Quel résultat du [module 2](02-cauchy-schwarz-et-angle.md) retrouve-t-on en
-explicitant cette inégalité ?*
+**E4.3.** Montrer que $\|p(x)\|\le\|x\|$, avec égalité si et seulement si $x\in D$. *(Piste : Pythagore.) Quel résultat du [module 2](02-cauchy-schwarz-et-angle.md) retrouve-t-on en explicitant cette inégalité ?*
 
-**E4.4.** Soit $F$ engendré par deux vecteurs $u,v$ **non orthogonaux**. Montrer sur un exemple
-en dimension 3 que $\frac{\langle x,u\rangle}{\|u\|^2}u+\frac{\langle x,v\rangle}{\|v\|^2}v$
-n'est **pas** la projection de $x$ sur $F$. *Où la démonstration du § 4.4 échoue-t-elle ?*
+**E4.4.** Soit $F$ engendré par deux vecteurs $u,v$ **non orthogonaux**. Montrer sur un exemple en dimension 3 que $\frac{\langle x,u\rangle}{\|u\|^2}u+\frac{\langle x,v\rangle}{\|v\|^2}v$ n'est **pas** la projection de $x$ sur $F$. *Où la démonstration du § 4.4 échoue-t-elle ?*
 
-**E4.5.** Une matrice vérifie $P^2=P$ mais pas $P^{\top}=P$. Construire un tel exemple en
-dimension 2 et représenter géométriquement l'application. *(Réponse attendue : une projection
-oblique.)*
+**E4.5.** Une matrice vérifie $P^2=P$ mais pas $P^{\top}=P$. Construire un tel exemple en dimension 2 et représenter géométriquement l'application. *(Réponse attendue : une projection oblique.)*
 
 ---
 
@@ -201,13 +165,11 @@ oblique.)*
 
 - **Un sous-espace est une partie stable par combinaison linéaire**, donc contenant $0$ ;
   $\text{Vect}(u_1,\dots,u_d)$ est le plus petit qui contienne les $u_j$.
-- **$p(x)=\frac{\langle x,u\rangle}{\|u\|^2}u$** sur une droite ;
-  $P_F(x)=\sum_j\langle x,e_j\rangle e_j$ sur un sous-espace, **en base orthonormée**.
+- **$p(x)=\frac{\langle x,u\rangle}{\|u\|^2}u$** sur une droite ; $P_F(x)=\sum_j\langle x,e_j\rangle e_j$ sur un sous-espace, **en base orthonormée**.
 - **Le résidu est orthogonal au sous-espace** — c'est la définition opérationnelle.
 - ⭐ **La projection est le point le plus proche** : les moindres carrés ne sont que cela.
 - **$P^{\top}=P$ et $P^2=P$** caractérisent un projecteur orthogonal.
-- **$\operatorname{tr}(P)=\operatorname{rang}(P)=\dim F$** : les dimensions se lisent sur la
-  trace.
+- **$\operatorname{tr}(P)=\operatorname{rang}(P)=\dim F$** : les dimensions se lisent sur la trace.
 
 ---
 

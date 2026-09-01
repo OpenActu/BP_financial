@@ -1,16 +1,11 @@
 # Module 5 — Supplémentaire orthogonal, dimension, degrés de liberté ⭐
 
-**Durée : 1 h.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à
-[4](04-projection-orthogonale.md). ⭐ **Le module qui donne son sens au « $n-1$ ».**
+**Durée : 1 h.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à [4](04-projection-orthogonale.md). ⭐ **Le module qui donne son sens au « $n-1$ ».**
 
-> **La question traitée.** Dans $\mathbb R^n$, soit $\mathbf 1=(1,\dots,1)$ et
-> $x=(x_1,\dots,x_n)$. Montrer que la projection orthogonale de $x$ sur $\text{Vect}(\mathbf 1)$
-> est $\bar x\,\mathbf 1$ ; en déduire que le vecteur des écarts $(x_i-\bar x)_i$ appartient à
+> **La question traitée.** Dans $\mathbb R^n$, soit $\mathbf 1=(1,\dots,1)$ et $x=(x_1,\dots,x_n)$. Montrer que la projection orthogonale de $x$ sur $\text{Vect}(\mathbf 1)$ est $\bar x\,\mathbf 1$ ; en déduire que le vecteur des écarts $(x_i-\bar x)_i$ appartient à
 > $\text{Vect}(\mathbf 1)^\perp$ ; donner la dimension de ce sous-espace.
 
-**Ce qui est en jeu.** La réponse au troisième point est $n-1$ — et c'est la réponse à la
-question *« pourquoi divise-t-on par $n-1$ ? »*. Ce n'est pas une convention de calcul mais une
-**contrainte géométrique**. À la fin de ce module, ce doit être une évidence visuelle.
+**Ce qui est en jeu.** La réponse au troisième point est $n-1$ — et c'est la réponse à la question *« pourquoi divise-t-on par $n-1$ ? »*. Ce n'est pas une convention de calcul mais une **contrainte géométrique**. À la fin de ce module, ce doit être une évidence visuelle.
 
 ---
 
@@ -23,14 +18,9 @@ question *« pourquoi divise-t-on par $n-1$ ? »*. Ce n'est pas une convention d
 > et tout $x$ s'écrit de **manière unique** $x=P_F(x)+P_{F^\perp}(x)$, avec
 > $$\|x\|^2=\|P_F(x)\|^2+\|P_{F^\perp}(x)\|^2$$
 
-La dernière égalité est le [Pythagore du module 3](03-orthogonalite-et-pythagore.md), appliqué à
-la décomposition ci-dessus. L'existence de la décomposition est la
-[projection du module 4](04-projection-orthogonale.md) ; l'unicité vient de
-$F\cap F^\perp=\{0\}$, conséquence immédiate du caractère défini positif du produit scalaire.
+La dernière égalité est le [Pythagore du module 3](03-orthogonalite-et-pythagore.md), appliqué à la décomposition ci-dessus. L'existence de la décomposition est la [projection du module 4](04-projection-orthogonale.md) ; l'unicité vient de $F\cap F^\perp=\{0\}$, conséquence immédiate du caractère défini positif du produit scalaire.
 
-> 🔑 **Décomposer, c'est répartir des dimensions.** $n=\dim F+\dim F^\perp$ : chaque dimension
-> de $\mathbb R^n$ est affectée à l'un des deux morceaux, jamais aux deux. C'est cette
-> comptabilité — et rien d'autre — que les statisticiens appellent « degrés de liberté ».
+> 🔑 **Décomposer, c'est répartir des dimensions.** $n=\dim F+\dim F^\perp$ : chaque dimension de $\mathbb R^n$ est affectée à l'un des deux morceaux, jamais aux deux. C'est cette comptabilité — et rien d'autre — que les statisticiens appellent « degrés de liberté ».
 
 ---
 
@@ -39,87 +29,60 @@ $F\cap F^\perp=\{0\}$, conséquence immédiate du caractère défini positif du 
 ### 1. La projection sur $\text{Vect}(\mathbf 1)$ est $\bar x\,\mathbf 1$
 
 Appliquons la formule du § 4.2 avec $u=\mathbf 1$. Deux calculs :
-
 $$\langle x,\mathbf 1\rangle=\sum_i x_i=n\bar x
 \qquad\text{et}\qquad \|\mathbf 1\|^2=\langle\mathbf 1,\mathbf 1\rangle=n$$
-
 D'où
-
 $$p(x)=\frac{\langle x,\mathbf 1\rangle}{\|\mathbf 1\|^2}\,\mathbf 1=\frac{n\bar x}{n}\,\mathbf 1
 =\boxed{\;\bar x\,\mathbf 1\;}$$
-
 > 🔑 **La moyenne n'est pas un résumé arbitraire des données : c'est l'ombre de $x$ sur la
-> direction $\mathbf 1$.** Autrement dit, c'est le vecteur constant le plus proche de $x$ — le
-> point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 4.3 formalise :
-> $\bar x = \arg\min_c \sum_i (x_i-c)^2$.
+> direction $\mathbf 1$.** Autrement dit, c'est le vecteur constant le plus proche de $x$ — le point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 4.3 formalise : $\bar x = \arg\min_c \sum_i (x_i-c)^2$.
 
 ### 2. Le vecteur des écarts est dans $\text{Vect}(\mathbf 1)^\perp$
 
 Le vecteur des écarts est exactement le **résidu** de la projection :
-
 $$\tilde x = x-p(x)=x-\bar x\,\mathbf 1=(x_i-\bar x)_i$$
-
 Et un résidu de projection orthogonale est orthogonal au sous-espace, par construction. Le calcul
 direct le confirme :
 
 $$\langle \tilde x,\mathbf 1\rangle=\sum_i (x_i-\bar x)=\sum_i x_i-n\bar x=n\bar x-n\bar x=0$$
 
-> ⚠️ **Retenez cette identité $\sum_i(x_i-\bar x)=0$ pour ce qu'elle est** : non pas une astuce de
-> calcul, mais **une contrainte linéaire** que les écarts subissent. Elle dit que le vecteur des
-> écarts n'est pas libre dans $\mathbb R^n$ : il est confiné à un hyperplan.
+> ⚠️ **Retenez cette identité $\sum_i(x_i-\bar x)=0$ pour ce qu'elle est** : non pas une astuce de calcul, mais **une contrainte linéaire** que les écarts subissent. Elle dit que le vecteur des écarts n'est pas libre dans $\mathbb R^n$ : il est confiné à un hyperplan.
 
 ### 3. La dimension : $n-1$
 
-$\text{Vect}(\mathbf 1)^\perp=\{u\in\mathbb R^n:\;\sum_i u_i=0\}$ est le noyau de la forme
-linéaire **non nulle** $u\mapsto\sum_i u_i$. Le théorème du rang donne
-
+$\text{Vect}(\mathbf 1)^\perp=\{u\in\mathbb R^n:\;\sum_i u_i=0\}$ est le noyau de la forme linéaire **non nulle** $u\mapsto\sum_i u_i$. Le théorème du rang donne
 $$\dim \text{Vect}(\mathbf 1)^\perp = n-1$$
-
 C'est le cas particulier $\dim F=1$ de la formule générale $\dim F^\perp=n-\dim F$ du § 5.1.
 
 ---
 
 ## 5.3 La figure complète
-
 $$\mathbb R^n=\underbrace{\text{Vect}(\mathbf 1)}_{\dim\,1}\;\oplus\;\underbrace{\text{Vect}(\mathbf 1)^\perp}_{\dim\,n-1},
 \qquad x=\underbrace{\bar x\,\mathbf 1}_{\text{la moyenne}}+\underbrace{\tilde x}_{\text{la dispersion}}$$
-
 Et Pythagore relie les deux morceaux :
-
 $$\|x\|^2=\|\bar x\,\mathbf 1\|^2+\|\tilde x\|^2
 \qquad\text{soit}\qquad \sum_i x_i^2=n\bar x^2+\sum_i(x_i-\bar x)^2$$
-
 On reconnaît la formule de **König–Huygens** — qui n'est donc que le théorème de Pythagore dans
 la bonne base.
 
-> 🔑 **Voici la réponse à « pourquoi $n-1$ ? ».** L'information sur la **dispersion** vit dans un
-> sous-espace de dimension $n-1$, pas $n$ : une dimension a été consommée par la moyenne. Le
-> nombre de degrés de liberté n'est **pas** un compteur de paramètres estimés que l'on
-> retrancherait par convention — c'est **la dimension du sous-espace dans lequel le vecteur des
-> écarts est contraint de vivre**.
+> 🔑 **Voici la réponse à « pourquoi $n-1$ ? ».** L'information sur la **dispersion** vit dans un sous-espace de dimension $n-1$, pas $n$ : une dimension a été consommée par la moyenne. Le nombre de degrés de liberté n'est **pas** un compteur de paramètres estimés que l'on retrancherait par convention — c'est **la dimension du sous-espace dans lequel le vecteur des écarts est contraint de vivre**.
 
-**Le contrôle décisif.** Si l'on vous impose $n=5$ écarts dont la somme doit être nulle, combien
-en choisissez-vous librement ? Quatre — le cinquième est déterminé. C'est $n-1$, et c'est tout ce
-que l'expression « degrés de liberté » a jamais voulu dire.
+**Le contrôle décisif.** Si l'on vous impose $n=5$ écarts dont la somme doit être nulle, combien en choisissez-vous librement ? Quatre — le cinquième est déterminé. C'est $n-1$, et c'est tout ce que l'expression « degrés de liberté » a jamais voulu dire.
 
 ---
 
 ## 5.4 La matrice de centrage
 
-Dans le cas $F=\text{Vect}(\mathbf 1)$, les deux projecteurs s'écrivent explicitement. Avec
-$J=\mathbf 1\mathbf 1^{\top}$ la matrice remplie de 1 :
-
+Dans le cas $F=\text{Vect}(\mathbf 1)$, les deux projecteurs s'écrivent explicitement. Avec $J=\mathbf 1\mathbf 1^{\top}$ la matrice remplie de 1 :
 $$P_{\text{Vect}(\mathbf 1)}=\frac{1}{n}J
 \qquad\text{et}\qquad
 M=I_n-\frac{1}{n}J$$
+$M$ est la **matrice de centrage** : $Mx$ n'est autre que le vecteur des écarts $\tilde x$. Vérifiez ces trois points — c'est l'exercice E5.4 :
 
-$M$ est la **matrice de centrage** : $Mx$ n'est autre que le vecteur des écarts $\tilde x$.
-Vérifiez ces trois points — c'est l'exercice E5.4 :
-
-| Propriété | Lecture |
-|---|---|
-| $M^{\top}=M$ | projecteur **orthogonal** |
-| $M^2=M$ | centrer deux fois = centrer une fois |
+| Propriété                  | Lecture                                                       |
+| -------------------------- | ------------------------------------------------------------- |
+| $M^{\top}=M$               | projecteur **orthogonal**                                     |
+| $M^2=M$                    | centrer deux fois = centrer une fois                          |
 | $\operatorname{tr}(M)=n-1$ | rang $n-1$ : **les degrés de liberté se lisent sur la trace** |
 
 ---
