@@ -70,30 +70,16 @@ C'est la **définition** de l'angle entre deux vecteurs de $\mathbb R^n$ — et 
 
 ## 2.3 Ce que l'inégalité devient sur des données
 
-> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en
-> énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens
-> exact des trois propriétés du [§ 1.1](01-produit-scalaire-et-norme.md). Ce n'est ni une
-> analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance
-> est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son
-> noyau étant la droite des séries constantes. Le
-> [**module 8**](08-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente
-> section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois
-> traduit.
+> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens exact des trois propriétés du [§ 1.1](01-produit-scalaire-et-norme.md). Ce n'est ni une analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son noyau étant la droite des séries constantes. Le [**module 8**](08-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois traduit.
 
 > ⚠️ **C'est exactement l'origine de $|\rho|\le 1$.** Appliquée aux vecteurs **centrés**
 > $\tilde x=x-\bar x\mathbf 1$ et $\tilde y=y-\bar y\mathbf 1$, Cauchy–Schwarz donne
 > $$\operatorname{Cov}(x,y)^2\le\operatorname{Var}(x)\operatorname{Var}(y)$$
-> et le cas d'égalité — colinéarité de $\tilde x$ et $\tilde y$ — signifie que les points sont
-> **exactement alignés**.
+> et le cas d'égalité — colinéarité de $\tilde x$ et $\tilde y$ — signifie que les points sont **exactement alignés**.
 
-Le dictionnaire qui autorise cette traduction est dressé au
-[module 7](07-dictionnaire-geometrique-des-statistiques.md) et démontré au
-[module 8](08-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la
-seule raison d'être de ce module dans un cours orienté statistique.
+Le dictionnaire qui autorise cette traduction est dressé au [module 7](07-dictionnaire-geometrique-des-statistiques.md) et démontré au [module 8](08-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la seule raison d'être de ce module dans un cours orienté statistique.
 
-> 🔑 Le document [`modele.md`](../../../modele.md) obtient $|\rho|\le 1$ à son étape 6 par un argument
-> de variance positive. C'est la **même démonstration** que celle du § 2.1, écrite deux fois :
-> « une variance est positive » et « un carré de norme est positif » sont le même énoncé.
+> 🔑 Le document [`modele.md`](../../../modele.md) obtient $|\rho|\le 1$ à son étape 6 par un argument de variance positive. C'est la **même démonstration** que celle du § 2.1, écrite deux fois : « une variance est positive » et « un carré de norme est positif » sont le même énoncé.
 
 ---
 
@@ -123,45 +109,30 @@ print(f"|cos| max observé sur 10 000 tirages : {np.abs(cos).max():.3f}")
 print(f"angle moyen à l'orthogonalité : {np.degrees(np.arccos(np.abs(cos))).mean():.1f}°")
 ```
 
-**Le résultat est contre-intuitif et vaut le détour** : en dimension 50, deux vecteurs tirés au
-hasard sont presque toujours **quasi orthogonaux**. Sur 10 000 tirages, $|\cos\theta|$ ne dépasse
-pas $0{,}50$ et l'angle reste en moyenne à moins de $7°$ de la perpendiculaire. Relancez avec
-`n = 2`, puis `n = 500` : plus la dimension monte, plus l'inégalité de Cauchy–Schwarz est loin
-d'être atteinte.
+**Le résultat est contre-intuitif et vaut le détour** : en dimension 50, deux vecteurs tirés au hasard sont presque toujours **quasi orthogonaux**. Sur 10 000 tirages, $|\cos\theta|$ ne dépasse pas $0{,}50$ et l'angle reste en moyenne à moins de $7°$ de la perpendiculaire. Relancez avec `n = 2`, puis `n = 500` : plus la dimension monte, plus l'inégalité de Cauchy–Schwarz est loin d'être atteinte.
 
-> ⚠️ **Conséquence directe en finance.** Une corrélation de $0{,}30$ mesurée sur $n$ points est
-> d'autant moins remarquable que $n$ est petit : c'est l'angle qu'on obtiendrait souvent par pur
-> hasard. C'est le point de départ du module 8 du
-> [cours sur la loi de Student](../../semestre3/statistique/loi-de-student/08-robustesse-et-limites.md).
+> ⚠️ **Conséquence directe en finance.** Une corrélation de $0{,}30$ mesurée sur $n$ points est d'autant moins remarquable que $n$ est petit : c'est l'angle qu'on obtiendrait souvent par pur hasard. C'est le point de départ du module 8 du [cours sur la loi de Student](../../semestre3/statistique/loi-de-student/08-robustesse-et-limites.md).
 
 ---
 
 ## 2.5 Exercices
 
-**E2.1.** Refaire la démonstration du § 2.1 en traitant explicitement le cas $v=0$. *Pourquoi
-faut-il l'écarter, et pourquoi l'inégalité reste-t-elle vraie ?*
+**E2.1.** Refaire la démonstration du § 2.1 en traitant explicitement le cas $v=0$. *Pourquoi faut-il l'écarter, et pourquoi l'inégalité reste-t-elle vraie ?*
 
 **E2.2.** Déduire de Cauchy–Schwarz l'**inégalité triangulaire** $\|u+v\|\le\|u\|+\|v\|$.
 *(Piste : partir de l'identité de développement du § 1.2 et majorer le terme croisé.)*
 
-**E2.3.** Deux séries de rendements ont une corrélation de $0{,}30$. Quel angle sépare leurs
-vecteurs centrés ? Et pour $0{,}90$ ? *Commenter l'écart entre l'intuition « 0,9 c'est presque
-1 » et la réalité géométrique.* **(Réponses : $72{,}5°$ et $25{,}8°$.)**
+**E2.3.** Deux séries de rendements ont une corrélation de $0{,}30$. Quel angle sépare leurs vecteurs centrés ? Et pour $0{,}90$ ? *Commenter l'écart entre l'intuition « 0,9 c'est presque 1 » et la réalité géométrique.* **(Réponses : $72{,}5°$ et $25{,}8°$.)**
 
-**E2.4.** Appliquer Cauchy–Schwarz à $u=x$ et $v=\mathbf 1$. Quelle inégalité classique entre
-$\sum_i x_i$ et $\sum_i x_i^2$ obtient-on ? *Quand y a-t-il égalité, et que cela signifie-t-il
-sur les données ?*
+**E2.4.** Appliquer Cauchy–Schwarz à $u=x$ et $v=\mathbf 1$. Quelle inégalité classique entre $\sum_i x_i$ et $\sum_i x_i^2$ obtient-on ? *Quand y a-t-il égalité, et que cela signifie-t-il sur les données ?*
 
 ---
 
 ## 2.6 À retenir
 
-- **$|\langle u,v\rangle|\le\|u\|\|v\|$**, démonstration par le discriminant d'un trinôme
-  positif.
-- **Égalité $\iff$ colinéarité** — c'est le cas d'égalité qui porte l'information, pas
-  l'inégalité.
-- **L'angle est défini par $\cos\theta=\frac{\langle u,v\rangle}{\|u\|\|v\|}$**, licite
-  précisément parce que ce quotient est dans $[-1,1]$.
+- **$|\langle u,v\rangle|\le\|u\|\|v\|$**, démonstration par le discriminant d'un trinôme positif.
+- **Égalité $\iff$ colinéarité** — c'est le cas d'égalité qui porte l'information, pas l'inégalité.
+- **L'angle est défini par $\cos\theta=\frac{\langle u,v\rangle}{\|u\|\|v\|}$**, licite précisément parce que ce quotient est dans $[-1,1]$.
 - Transposé aux vecteurs centrés : **$|\rho|\le1$**, avec égalité ⟺ alignement parfait.
 
 ---

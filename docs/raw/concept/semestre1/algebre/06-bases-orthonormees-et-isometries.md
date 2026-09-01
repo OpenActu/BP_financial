@@ -182,7 +182,7 @@ chaque cas en dimension 2 et l'interpréter (rotation / symétrie).*
 
 **E6.5.** Soit $P$ le projecteur sur $F$ et $O$ une BON adaptée. Écrire la matrice de $P$ dans
 cette base. *(Réponse : un bloc diagonal de $d$ uns suivi de $n-d$ zéros.) Retrouver ainsi
-$\operatorname{tr}(P)=\dim F$ du § 4.4 — sans calcul.*
+$\operatorname{tr}(P)=\dim F$ du § 4.5 — sans calcul.*
 
 ---
 

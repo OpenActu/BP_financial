@@ -38,7 +38,7 @@ $F\cap F^\perp=\{0\}$, conséquence immédiate du caractère défini positif du 
 
 ### 1. La projection sur $\text{Vect}(\mathbf 1)$ est $\bar x\,\mathbf 1$
 
-Appliquons la formule du § 4.1 avec $u=\mathbf 1$. Deux calculs :
+Appliquons la formule du § 4.2 avec $u=\mathbf 1$. Deux calculs :
 
 $$\langle x,\mathbf 1\rangle=\sum_i x_i=n\bar x
 \qquad\text{et}\qquad \|\mathbf 1\|^2=\langle\mathbf 1,\mathbf 1\rangle=n$$
@@ -50,7 +50,7 @@ $$p(x)=\frac{\langle x,\mathbf 1\rangle}{\|\mathbf 1\|^2}\,\mathbf 1=\frac{n\bar
 
 > 🔑 **La moyenne n'est pas un résumé arbitraire des données : c'est l'ombre de $x$ sur la
 > direction $\mathbf 1$.** Autrement dit, c'est le vecteur constant le plus proche de $x$ — le
-> point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 4.2 formalise :
+> point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 4.3 formalise :
 > $\bar x = \arg\min_c \sum_i (x_i-c)^2$.
 
 ### 2. Le vecteur des écarts est dans $\text{Vect}(\mathbf 1)^\perp$
@@ -217,7 +217,7 @@ $\sum_i\tilde x_i=0$ et König–Huygens numériquement.
 
 **E5.4.** Vérifier à la main que $M=I_n-\frac1nJ$ est symétrique, idempotente, et que
 $\operatorname{tr}(M)=n-1$. En déduire son rang **sans calculer de déterminant**. *(Piste : pour
-un projecteur, rang = trace — voir § 4.4.)*
+un projecteur, rang = trace — voir § 4.5.)*
 
 **E5.5.** Soit $t=(1,2,\dots,n)$ et $F=\text{Vect}(\mathbf 1,\,t)$.
 1. Montrer que $\dim F=2$ dès que $n\ge 2$.
