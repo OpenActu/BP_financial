@@ -1,7 +1,7 @@
 # Module 7 — Convexité en dimension $n$
 
 **Durée : 1 h 15.** Prérequis : [module 6](06-minimisation-convexe.md), et le
-[module 8 d'algèbre](../../algebre/08-covariance-et-produit-scalaire.md) ($\Sigma$ est une matrice de
+[module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md) ($\Sigma$ est une matrice de
 Gram).
 
 > **La question traitée.** Comment reconnaître une fonction convexe de plusieurs variables — et
@@ -82,7 +82,7 @@ $A=\begin{pmatrix}0&0\\0&-1\end{pmatrix}$ a ses mineurs dominants nuls et n'est 
 
 *Démonstration.* $H_q=2\Sigma$, et $\Sigma\succeq0$ **toujours** — parce que $\Sigma$ est la
 matrice de **Gram** des vecteurs centrés
-([module 8 d'algèbre](../../algebre/08-covariance-et-produit-scalaire.md)) : pour tout $w$,
+([module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md)) : pour tout $w$,
 $w^{\top}\Sigma w=\operatorname{Var}\big(\sum_iw_iX_i\big)\ge0$, une variance ne pouvant pas être
 négative. $\blacksquare$
 

@@ -14,8 +14,7 @@
 > $$|\langle u,v\rangle|\;\le\;\|u\|\,\|v\|$$
 > avec **égalité si et seulement si** $u$ et $v$ sont colinéaires.
 
-> 📐 **Rappel — colinéaires.** $u$ et $v$ sont **colinéaires** lorsque l'un est un multiple de
-> l'autre : il existe $\lambda\in\mathbb R$ tel que $u=\lambda v$, **ou** il existe $\mu\in\mathbb R$ tel que $v=\mu u$. La disjonction n'est pas une coquetterie d'écriture : si $v=0$ et $u\ne 0$, seule la seconde forme convient — $v=0\cdot u$ — car aucun $\lambda$ ne vérifie $u=\lambda\cdot 0$. La formulation **symétrique** équivalente évite ce cas d'espèce : il existe $(\alpha,\beta)\ne(0,0)$ tel que $\alpha u+\beta v=0$, autrement dit la famille $\{u,v\}$ est **liée**. Géométriquement : $u$ et $v$ sont portés par une même droite passant par l'origine, le vecteur nul étant colinéaire à tout vecteur.
+> 📐 **Rappel — colinéaires.** $u$ et $v$ sont **colinéaires** lorsque l'un est un multiple de l'autre : il existe $\lambda\in\mathbb R$ tel que $u=\lambda v$, **ou** il existe $\mu\in\mathbb R$ tel que $v=\mu u$. La disjonction n'est pas une coquetterie d'écriture : si $v=0$ et $u\ne 0$, seule la seconde forme convient — $v=0\cdot u$ — car aucun $\lambda$ ne vérifie $u=\lambda\cdot 0$. La formulation **symétrique** équivalente évite ce cas d'espèce : il existe $(\alpha,\beta)\ne(0,0)$ tel que $\alpha u+\beta v=0$, autrement dit la famille $\{u,v\}$ est **liée**. Géométriquement : $u$ et $v$ sont portés par une même droite passant par l'origine, le vecteur nul étant colinéaire à tout vecteur.
 
 **Démonstration (le trinôme).** Pour $v\ne 0$ et tout $t\in\mathbb R$, développons par l'identité du § 1.2 :
 $$P(t)=\|u+tv\|^2=\|v\|^2\,t^2+2\langle u,v\rangle\,t+\|u\|^2\;\ge\;0$$
@@ -40,8 +39,8 @@ $$\Delta=b^2-4ac=4\langle u,v\rangle^2-4\|u\|^2\|v\|^2\le 0
 \quad\Longrightarrow\quad \langle u,v\rangle^2\le\|u\|^2\|v\|^2$$
 et en prenant la racine carrée, $|\langle u,v\rangle|\le\|u\|\,\|v\|$.
 
-L'égalité correspond à un discriminant nul, donc à un minimum nul : la racine double
-$t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2=P(t_0)=0$, donc $\|u+t_0v\|=0$, donc — par la **réciproque** du cas d'égalité du § 1.1 — $u+t_0v=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
+**Cas particulier :** 
+Observons spécifiquement le cas où $|\langle u,v \rangle|=\|u\|\|v\|$. Dans ce cas $\Delta=0$ et l'égalité correspond à un discriminant nul, donc à un minimum nul : la racine double $t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2=P(t_0)=0$, donc $\|u+t_0v\|=0$, donc — par la **réciproque** du cas d'égalité du § 1.1 — $u+t_0v=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
 
 > 🔑 **La positivité du trinôme n'est rien d'autre que la propriété « définie positive » du
 > § 1.1.** Toute l'inégalité tient dans le fait qu'un carré de norme ne peut pas être négatif.
@@ -52,8 +51,7 @@ $t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2
 
 ## 2.2 L'angle est bien défini
 
-Le quotient $\dfrac{\langle u,v\rangle}{\|u\|\|v\|}$ appartient à $[-1,1]$ pour $u,v$ non nuls :
-il existe donc un **unique** $\theta\in[0,\pi]$ tel que
+De l'inégalité on obtient immédiatement que le quotient $-1 \leq \dfrac{\langle u,v\rangle}{\|u\|\|v\|}\leq 1$ donc appartient à $[-1,1]$ pour $u,v$ non nuls : il existe donc un **unique** $\theta\in[0,\pi]$ tel que
 
 $$\langle u,v\rangle=\|u\|\,\|v\|\cos\theta$$
 
@@ -70,14 +68,14 @@ C'est la **définition** de l'angle entre deux vecteurs de $\mathbb R^n$ — et 
 
 ## 2.3 Ce que l'inégalité devient sur des données
 
-> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens exact des trois propriétés du [§ 1.1](01-produit-scalaire-et-norme.md). Ce n'est ni une analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son noyau étant la droite des séries constantes. Le [**module 8**](08-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois traduit.
+> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens exact des trois propriétés du [§ 1.1](01-produit-scalaire-et-norme.md). Ce n'est ni une analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son noyau étant la droite des séries constantes. Le [**module 9**](09-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois traduit.
 
 > ⚠️ **C'est exactement l'origine de $|\rho|\le 1$.** Appliquée aux vecteurs **centrés**
 > $\tilde x=x-\bar x\mathbf 1$ et $\tilde y=y-\bar y\mathbf 1$, Cauchy–Schwarz donne
 > $$\operatorname{Cov}(x,y)^2\le\operatorname{Var}(x)\operatorname{Var}(y)$$
 > et le cas d'égalité — colinéarité de $\tilde x$ et $\tilde y$ — signifie que les points sont **exactement alignés**.
 
-Le dictionnaire qui autorise cette traduction est dressé au [module 7](07-dictionnaire-geometrique-des-statistiques.md) et démontré au [module 8](08-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la seule raison d'être de ce module dans un cours orienté statistique.
+Le dictionnaire qui autorise cette traduction est dressé au [module 8](08-dictionnaire-geometrique-des-statistiques.md) et démontré au [module 9](09-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la seule raison d'être de ce module dans un cours orienté statistique.
 
 > 🔑 Le document [`modele.md`](../../../modele.md) obtient $|\rho|\le 1$ à son étape 6 par un argument de variance positive. C'est la **même démonstration** que celle du § 2.1, écrite deux fois : « une variance est positive » et « un carré de norme est positif » sont le même énoncé.
 

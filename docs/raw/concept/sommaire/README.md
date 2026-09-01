@@ -6,7 +6,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
 | Question | Cours | Volume |
 |---|---|---|
-| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 7 h 30 |
+| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 8 h |
 | Comment **dérive**-t-on et **intègre**-t-on ces quantités ? | [Analyse](analyse.md) | 20 h |
 | Le résultat est-il **réel**, ou du hasard d'échantillonnage ? | [Statistique](statistique.md) | 56 h |
 | Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../semestre4/finance/README.md) | 12 h 45 |
@@ -19,7 +19,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 > 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les dix cours en quatre
 > semestres. L'arborescence ci-dessous porte ce découpage.
 
-> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 106 modules
+> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 107 modules
 > ligne à ligne, dans l'ordre du parcours.
 
 ## Arborescence
@@ -27,7 +27,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 ```
 concept/
 ├── semestre1/                           les outils mathématiques
-│   ├── algebre/                         8 modules — produit scalaire, projection, dimension
+│   ├── algebre/                         9 modules — produit scalaire, projection, dimension
 │   └── analyse/
 │       ├── derivation-et-integration/   9 modules — Taylor, intégrale, jacobien
 │       └── convexite/                   9 modules — Jensen, minimisation, mesures de risque
@@ -94,7 +94,7 @@ modele.md  →  finance 1→4 (levier)  →  finance 5→7 (couverture)  →  fi
 
 | Ce que vous cherchez | Où aller |
 |---|---|
-| Pourquoi le diviseur $n-1$ | [Algèbre § 5](../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) puis [Statistique § 16](../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md) |
+| Pourquoi le diviseur $n-1$ | [Algèbre § 6](../semestre1/algebre/06-degres-de-liberte-et-centrage.md) puis [Statistique § 16](../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md) |
 | D'où vient le $1{,}96$ | [Statistique § 18](../semestre2/statistique/mathematique/18-intervalle-de-confiance.md) |
 | Quand l'approximation normale tient | [Statistique § 11 bis](../semestre2/statistique/mathematique/11bis-convergence-en-loi.md) et [§ 13](../semestre2/statistique/mathematique/13-portee-et-limites-du-tcl.md) |
 | Pourquoi la moyenne des rendements ment | [Analyse/convexité § 5](../semestre1/analyse/convexite/05-jensen-probabiliste.md) |

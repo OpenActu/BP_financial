@@ -56,11 +56,12 @@ C'est le maillon faible le plus fréquent, et il est **rédhibitoire pour Fisher
 | Ligne du tableau ci-dessous | Module d'algèbre |
 |---|---|
 | Produit scalaire | [1 — Produit scalaire, norme, distance](../../../semestre1/algebre/01-produit-scalaire-et-norme.md) |
-| Sous-espace vectoriel, dimension | [5 — Supplémentaire orthogonal et dimension](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
+| Sous-espace vectoriel, dimension | [5 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
 | Projection orthogonale | [4 — La projection orthogonale](../../../semestre1/algebre/04-projection-orthogonale.md) |
-| Supplémentaire orthogonal | [5 — Supplémentaire orthogonal et dimension](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
+| Supplémentaire orthogonal | [5 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
+| Degrés de liberté, le $n-1$ | [6 — Degrés de liberté : le cas Vect(1)](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md) |
 | Théorème de Pythagore | [3 — Orthogonalité et Pythagore](../../../semestre1/algebre/03-orthogonalite-et-pythagore.md) |
-| Base orthonormée, isométrie | [6 — Bases orthonormées et isométries](../../../semestre1/algebre/06-bases-orthonormees-et-isometries.md) |
+| Base orthonormée, isométrie | [7 — Bases orthonormées et isométries](../../../semestre1/algebre/07-bases-orthonormees-et-isometries.md) |
 
 | Notion                              | Ce qu'il faut savoir faire                                                                   |
 | ----------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -87,8 +88,8 @@ Dans $\mathbb R^n$, soit $\mathbf 1=(1,\dots,1)$ et $x=(x_1,\dots,x_n)$.
 > une **contrainte géométrique**, pas une convention de calcul.
 
 > ➡️ Le corrigé complet de cet exercice — les trois points, la figure d'ensemble et la lecture de
-> Pythagore qui en découle — est au § 5.2 du
-> [module 5 du cours d'algèbre](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md).
+> Pythagore qui en découle — est au § 6.1 du
+> [module 6 du cours d'algèbre](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md).
 
 ---
 

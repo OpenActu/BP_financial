@@ -1,8 +1,8 @@
-# Module 7 — Le dictionnaire géométrique des statistiques ⭐
+# Module 8 — Le dictionnaire géométrique des statistiques ⭐
 
 **Durée : 1 h.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à
-[6](06-bases-orthonormees-et-isometries.md). C'est ici que l'algèbre linéaire devient de la
-statistique ; le [module 8](08-covariance-et-produit-scalaire.md) démontre ensuite que la
+[7](07-bases-orthonormees-et-isometries.md). C'est ici que l'algèbre linéaire devient de la
+statistique ; le [module 9](09-covariance-et-produit-scalaire.md) démontre ensuite que la
 traduction est légitime.
 
 > **La question traitée.** Moyenne, variance, covariance, corrélation : ces quatre formules
@@ -15,7 +15,7 @@ Fisher–Cochran se lit comme un théorème de Pythagore.
 
 ---
 
-## 7.1 Le renversement de perspective
+## 8.1 Le renversement de perspective
 
 Prenons $n$ observations $x=(x_1,\dots,x_n)$, vues comme **un seul point de $\mathbb R^n$** — et
 non comme $n$ points de $\mathbb R$.
@@ -26,11 +26,11 @@ des mesures géométriques sur ce vecteur.
 
 Posons $\mathbf 1=(1,\dots,1)$, dont la norme vaut $\|\mathbf 1\|^2=n$, et notons
 $\tilde x = x-\bar x\,\mathbf 1$ le **vecteur centré** — le résidu de la projection du
-[module 5](05-supplementaire-orthogonal-et-dimension.md).
+[module 6](06-degres-de-liberte-et-centrage.md).
 
 ---
 
-## 7.2 Le dictionnaire ⭐
+## 8.2 Le dictionnaire ⭐
 
 | Statistique             | Écriture géométrique                                                                         |
 | ----------------------- | -------------------------------------------------------------------------------------------- |
@@ -44,7 +44,7 @@ $\tilde x = x-\bar x\,\mathbf 1$ le **vecteur centré** — le résidu de la pro
 Trois lectures s'imposent immédiatement :
 
 1. **La moyenne est un produit scalaire** — plus précisément, à un facteur près, la coordonnée de
-   $x$ sur la direction $\mathbf 1$ ([module 5](05-supplementaire-orthogonal-et-dimension.md)).
+   $x$ sur la direction $\mathbf 1$ ([module 6](06-degres-de-liberte-et-centrage.md)).
 2. **La variance est un carré de longueur** — celle du vecteur centré. « Dispersion » et
    « distance à la moyenne » sont littéralement le même mot.
 3. **La corrélation est un cosinus d'angle** ([module 2](02-cauchy-schwarz-et-angle.md)). Deux
@@ -53,35 +53,35 @@ Trois lectures s'imposent immédiatement :
 
 > 📐 **Ce tableau est une liste d'égalités, pas de définitions.** Que la ligne « Covariance » ait
 > le droit d'être lue comme un **produit scalaire** — bilinéarité comprise — se *démontre*, et
-> c'est l'objet du [module 8](08-covariance-et-produit-scalaire.md), qui prolonge directement
+> c'est l'objet du [module 9](09-covariance-et-produit-scalaire.md), qui prolonge directement
 > cette section.
 
 > ⚠️ **Les deux variances diffèrent par le seul diviseur.** $\|\tilde x\|^2$ est la même quantité
 > géométrique dans les deux lignes ; $n$ ou $n-1$ relève d'une finalité — décrire ou estimer — et
-> non de la géométrie. Le [module 5](05-supplementaire-orthogonal-et-dimension.md) explique
+> non de la géométrie. Le [module 6](06-degres-de-liberte-et-centrage.md) explique
 > pourquoi $n-1$ est la dimension effective ; le document [`modele.md`](../../../modele.md), purement
 > descriptif, normalise par $n$.
 
 ---
 
-## 7.3 Ce que chaque théorème du cours devient
+## 8.3 Ce que chaque théorème du cours devient
 
 | Résultat d'algèbre | Traduction statistique |
 |---|---|
 | Cauchy–Schwarz ([m. 2](02-cauchy-schwarz-et-angle.md)) | $\lvert\rho\rvert\le 1$, égalité ⟺ points alignés |
 | Pythagore ([m. 3](03-orthogonalite-et-pythagore.md)) | Décomposition de la variance, table d'ANOVA |
 | Projection = point le plus proche ([m. 4](04-projection-orthogonale.md)) | Moindres carrés |
-| $p(x)=\bar x\mathbf 1$ ([m. 5](05-supplementaire-orthogonal-et-dimension.md)) | $\bar x=\arg\min_c\sum_i(x_i-c)^2$ |
-| $\dim\text{Vect}(\mathbf 1)^\perp=n-1$ ([m. 5](05-supplementaire-orthogonal-et-dimension.md)) | Degrés de liberté |
+| $p(x)=\bar x\mathbf 1$ ([m. 6](06-degres-de-liberte-et-centrage.md)) | $\bar x=\arg\min_c\sum_i(x_i-c)^2$ |
+| $\dim\text{Vect}(\mathbf 1)^\perp=n-1$ ([m. 6](06-degres-de-liberte-et-centrage.md)) | Degrés de liberté |
 | $\operatorname{tr}(P)=\dim F$ ([m. 4](04-projection-orthogonale.md)) | Degrés de liberté lus sur une matrice |
-| BON adaptée, isométrie ([m. 6](06-bases-orthonormees-et-isometries.md)) | Transformation de Helmert, invariance gaussienne |
+| BON adaptée, isométrie ([m. 7](07-bases-orthonormees-et-isometries.md)) | Transformation de Helmert, invariance gaussienne |
 
 > 🔑 **Aucune de ces traductions n'est une analogie.** Ce sont des égalités : le membre de gauche
 > et le membre de droite désignent le même nombre.
 
 ---
 
-## 7.4 Où cela resurgit
+## 8.4 Où cela resurgit
 
 | Objet géométrique | Objet statistique | Où |
 |---|---|---|
@@ -102,9 +102,9 @@ figure déjà entièrement construite.
 
 ---
 
-## 7.5 Simulation
+## 8.5 Simulation
 
-### S7.1 — Le dictionnaire du § 7.2, vérifié terme à terme
+### S8.1 — Le dictionnaire du § 8.2, vérifié terme à terme
 
 ```python
 import numpy as np
@@ -132,12 +132,12 @@ mémoriser : $\rho=1\to 0°$, $\rho=0\to 90°$, $\rho=-1\to 180°$, et $\rho=0{,
 
 ---
 
-## 7.6 Exercices
+## 8.6 Exercices
 
-**E7.1.** Démontrer chaque ligne du dictionnaire du § 7.2 à partir des définitions statistiques
+**E8.1.** Démontrer chaque ligne du dictionnaire du § 8.2 à partir des définitions statistiques
 usuelles. *Aucune ne demande plus de deux lignes.*
 
-**E7.2 — orientée finance.** Le script `import_societe.py` calcule `CORR_20`, corrélation
+**E8.2 — orientée finance.** Le script `import_societe.py` calcule `CORR_20`, corrélation
 glissante entre la colonne `Close` et le compteur `INDICE` sur 20 séances.
 1. Montrer que `CORR_20` est le **cosinus de l'angle** entre le vecteur des 20 cours **centrés**
    et le vecteur $(1,\dots,20)$ **centré**.
@@ -148,21 +148,21 @@ glissante entre la colonne `Close` et le compteur `INDICE` sur 20 séances.
    c'est une mesure d'alignement, non un estimateur — voir l'étape 7 de
    [`modele.md`](../../../modele.md).)*
 
-**E7.3.** Le script calcule aussi `VAL_20 = E_20 + sqrt(3·VAR_20)·CORR_20`. Réécrire cette formule
+**E8.3.** Le script calcule aussi `VAL_20 = E_20 + sqrt(3·VAR_20)·CORR_20`. Réécrire cette formule
 entièrement en langage géométrique (produits scalaires, normes, cosinus). *Que mesure-t-elle,
 lue ainsi ?*
 
-**E7.4.** Deux séries ont même moyenne et même variance mais une corrélation de $0$. Que peut-on
+**E8.4.** Deux séries ont même moyenne et même variance mais une corrélation de $0$. Que peut-on
 dire de leurs vecteurs dans $\mathbb R^n$ ? *Faire un dessin en dimension 3 avec
 $\text{Vect}(\mathbf 1)$ comme axe vertical.*
 
-**E7.5.** Montrer que $\rho$ est invariante par transformation affine croissante
+**E8.5.** Montrer que $\rho$ est invariante par transformation affine croissante
 $x\mapsto ax+b$ ($a>0$). *(Piste : que deviennent $\tilde x$ et son angle ?) Quelle propriété
-géométrique du § 6.2 est en jeu ?*
+géométrique du § 7.2 est en jeu ?*
 
 ---
 
-## 7.7 À retenir
+## 8.7 À retenir
 
 - **Une série de $n$ observations est UN vecteur de $\mathbb R^n$**, pas $n$ nombres.
 - **Le dictionnaire** : moyenne = produit scalaire avec $\mathbf 1$ ; variance = carré de longueur
@@ -175,6 +175,6 @@ géométrique du § 6.2 est en jeu ?*
 
 ---
 
-⬅️ [Module 6 — Bases orthonormées et isométries](06-bases-orthonormees-et-isometries.md) ·
-➡️ [Module 8 — La covariance comme produit scalaire](08-covariance-et-produit-scalaire.md) ·
+⬅️ [Module 7 — Bases orthonormées et isométries](07-bases-orthonormees-et-isometries.md) ·
+➡️ [Module 9 — La covariance comme produit scalaire](09-covariance-et-produit-scalaire.md) ·
 🏠 [Sommaire](README.md)

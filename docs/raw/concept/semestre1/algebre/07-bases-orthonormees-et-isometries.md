@@ -1,7 +1,7 @@
-# Module 6 — Bases orthonormées, isométries, Gram–Schmidt
+# Module 7 — Bases orthonormées, isométries, Gram–Schmidt
 
 **Durée : 1 h.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à
-[5](05-supplementaire-orthogonal-et-dimension.md).
+[6](06-degres-de-liberte-et-centrage.md).
 
 > **La question traitée.** Le [module 4](04-projection-orthogonale.md) suppose une base
 > orthonormée pour projeter. En existe-t-il toujours une ? Peut-on en choisir une **adaptée** à
@@ -13,7 +13,7 @@ est une **isométrie**, et une isométrie laisse invariante la loi gaussienne st
 
 ---
 
-## 6.1 Bases orthonormées
+## 7.1 Bases orthonormées
 
 > **Définition.** $(e_1,\dots,e_n)$ est une **base orthonormée** (BON) de $\mathbb R^n$ si
 > $\langle e_j,e_k\rangle=\delta_{jk}$.
@@ -34,7 +34,7 @@ Deux conséquences immédiates :
 
 ---
 
-## 6.2 Matrices orthogonales et isométries
+## 7.2 Matrices orthogonales et isométries
 
 Soit $O$ la matrice dont les **lignes** sont les $e_j$. Alors
 
@@ -54,7 +54,7 @@ signe du déterminant, qui vaut $\pm1$).
 
 ---
 
-## 6.3 Gram–Schmidt : une BON adaptée existe toujours
+## 7.3 Gram–Schmidt : une BON adaptée existe toujours
 
 > **Théorème.** Étant donné $F$ de dimension $d$, il existe une BON $(e_1,\dots,e_n)$ de
 > $\mathbb R^n$ dont les $d$ premiers vecteurs engendrent $F$ et les $n-d$ suivants $F^\perp$.
@@ -75,7 +75,7 @@ tout l'intérêt.
 
 ---
 
-## 6.4 L'exemple à connaître : la base de Helmert
+## 7.4 L'exemple à connaître : la base de Helmert
 
 Pour $F=\text{Vect}(\mathbf 1)$ en dimension 3 :
 
@@ -88,7 +88,7 @@ $$\langle x,e_1\rangle=\sqrt3\,\bar x
 \langle x,e_2\rangle^2+\langle x,e_3\rangle^2=\sum_i(x_i-\bar x)^2$$
 
 **Une coordonnée pour la moyenne, $n-1$ pour la dispersion.** La décomposition du
-[module 5](05-supplementaire-orthogonal-et-dimension.md) devient une simple séparation de
+[module 6](06-degres-de-liberte-et-centrage.md) devient une simple séparation de
 coordonnées.
 
 > 🔑 **Vous venez de faire tout le travail géométrique du théorème de Fisher–Cochran.** Il ne
@@ -100,9 +100,9 @@ coordonnées.
 
 ---
 
-## 6.5 Simulations
+## 7.5 Simulations
 
-### S6.1 — Une base adaptée (Helmert) sépare moyenne et dispersion
+### S7.1 — Une base adaptée (Helmert) sépare moyenne et dispersion
 
 ```python
 import numpy as np
@@ -132,7 +132,7 @@ print("Parseval :", np.allclose(c @ c, x @ x))
 **Gardez cette fonction `helmert`** : c'est celle qu'utilise le
 [module 11 du cours de statistique](../../semestre2/statistique/mathematique/11-invariance-par-rotation-et-lemme-de-projection.md).
 
-### S6.2 — Une isométrie conserve tout
+### S7.2 — Une isométrie conserve tout
 
 ```python
 u, v = rng.normal(size=n), rng.normal(size=n)
@@ -142,7 +142,7 @@ print("normes             :", np.allclose(np.linalg.norm(O @ u), np.linalg.norm(
 print("déterminant        :", round(abs(np.linalg.det(O)), 12))   # 1
 ```
 
-### S6.3 — Gram–Schmidt, et la BON n'est pas unique
+### S7.3 — Gram–Schmidt, et la BON n'est pas unique
 
 ```python
 A = np.column_stack([np.ones(n), np.arange(1., n + 1.)])   # base de F = Vect(1, t)
@@ -165,28 +165,28 @@ légitime.
 
 ---
 
-## 6.6 Exercices
+## 7.6 Exercices
 
-**E6.1.** Vérifier que la base de Helmert du § 6.4 est bien orthonormée, et démontrer à la main
+**E7.1.** Vérifier que la base de Helmert du § 7.4 est bien orthonormée, et démontrer à la main
 les deux identités qui la suivent.
 
-**E6.2.** Orthonormaliser $(1,1,1)$ puis $(1,0,0)$ par **Gram–Schmidt**, et comparer le résultat
-à la base de Helmert du § 6.4. *Sont-elles identiques ? Pourquoi la BON adaptée à
+**E7.2.** Orthonormaliser $(1,1,1)$ puis $(1,0,0)$ par **Gram–Schmidt**, et comparer le résultat
+à la base de Helmert du § 7.4. *Sont-elles identiques ? Pourquoi la BON adaptée à
 $\text{Vect}(\mathbf 1)$ n'est-elle pas unique — et pourquoi cela n'a-t-il aucune importance ?*
 
-**E6.3.** Montrer que $OO^{\top}=I_n\iff O^{\top}O=I_n$, et en déduire que les **colonnes** d'une
+**E7.3.** Montrer que $OO^{\top}=I_n\iff O^{\top}O=I_n$, et en déduire que les **colonnes** d'une
 matrice orthogonale forment aussi une BON.
 
-**E6.4.** Montrer que le déterminant d'une matrice orthogonale vaut $\pm1$. *Donner un exemple de
+**E7.4.** Montrer que le déterminant d'une matrice orthogonale vaut $\pm1$. *Donner un exemple de
 chaque cas en dimension 2 et l'interpréter (rotation / symétrie).*
 
-**E6.5.** Soit $P$ le projecteur sur $F$ et $O$ une BON adaptée. Écrire la matrice de $P$ dans
+**E7.5.** Soit $P$ le projecteur sur $F$ et $O$ une BON adaptée. Écrire la matrice de $P$ dans
 cette base. *(Réponse : un bloc diagonal de $d$ uns suivi de $n-d$ zéros.) Retrouver ainsi
 $\operatorname{tr}(P)=\dim F$ du § 4.5 — sans calcul.*
 
 ---
 
-## 6.7 À retenir
+## 7.7 À retenir
 
 - **BON** : $\langle e_j,e_k\rangle=\delta_{jk}$ ; coordonnées = produits scalaires ;
   **Parseval** $\|x\|^2=\sum_j\langle x,e_j\rangle^2$.
@@ -198,6 +198,6 @@ $\operatorname{tr}(P)=\dim F$ du § 4.5 — sans calcul.*
 
 ---
 
-⬅️ [Module 5 — Supplémentaire orthogonal et dimension](05-supplementaire-orthogonal-et-dimension.md) ·
-➡️ [Module 7 — Le dictionnaire géométrique des statistiques](07-dictionnaire-geometrique-des-statistiques.md) ·
+⬅️ [Module 6 — Degrés de liberté et centrage](06-degres-de-liberte-et-centrage.md) ·
+➡️ [Module 8 — Le dictionnaire géométrique des statistiques](08-dictionnaire-geometrique-des-statistiques.md) ·
 🏠 [Sommaire](README.md)

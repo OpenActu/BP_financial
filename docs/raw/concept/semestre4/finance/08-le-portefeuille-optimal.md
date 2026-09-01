@@ -14,7 +14,7 @@ $n$ actifs de rendements espérés $\mu=(\mu_i)$ et de matrice de covariance $\S
 
 $$E[r_w]=w^{\top}\mu,\qquad \operatorname{Var}(r_w)=w^{\top}\Sigma\,w .$$
 
-> 📐 **$w\mapsto w^{\top}\Sigma w$ est convexe** parce que $\Sigma$ est une **matrice de Gram** — celle des produits scalaires entre rendements centrés ([algèbre § 8](../../semestre1/algebre/08-covariance-et-produit-scalaire.md), [convexité § 7](../../semestre1/analyse/convexite/07-convexite-en-dimension-n.md)). Le problème est donc
+> 📐 **$w\mapsto w^{\top}\Sigma w$ est convexe** parce que $\Sigma$ est une **matrice de Gram** — celle des produits scalaires entre rendements centrés ([algèbre § 9](../../semestre1/algebre/09-covariance-et-produit-scalaire.md), [convexité § 7](../../semestre1/analyse/convexite/07-convexite-en-dimension-n.md)). Le problème est donc
 > **convexe** : tout minimum local est global, et annuler le gradient **suffit** ([convexité § 6](../../semestre1/analyse/convexite/06-minimisation-convexe.md)). C'est ce qui rend le résultat utilisable — sans convexité, un optimum numérique ne prouverait rien.
 
 ---

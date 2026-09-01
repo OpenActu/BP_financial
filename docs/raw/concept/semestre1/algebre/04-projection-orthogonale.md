@@ -81,7 +81,7 @@ $$\|x-y\|^2=\|x-p(x)\|^2+\|p(x)-y\|^2\;\ge\;\|x-p(x)\|^2 \qquad\blacksquare$$
 
 Si $(e_1,\dots,e_d)$ est une base **orthonormée** de $F$ ($\langle e_j,e_k\rangle=\delta_{jk}$) :
 $$P_F(x)=\sum_{j=1}^d \langle x,e_j\rangle\,e_j$$
-C'est la formule de la droite, appliquée à chaque direction et sommée — licite **parce que** les directions sont orthogonales entre elles. Le [module 6](06-bases-orthonormees-et-isometries.md) montre qu'une telle base existe toujours.
+C'est la formule de la droite, appliquée à chaque direction et sommée — licite **parce que** les directions sont orthogonales entre elles. Le [module 7](07-bases-orthonormees-et-isometries.md) montre qu'une telle base existe toujours.
 
 Le théorème de meilleure approximation du § 4.3 vaut à l'identique : la démonstration n'utilise que l'orthogonalité du résidu, jamais la dimension de $F$.
 

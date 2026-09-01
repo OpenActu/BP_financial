@@ -139,7 +139,7 @@ l'homogénéité$\lVert\alpha u\rVert=\lvert\alpha\rvert \lVert u\rVert$, elle d
 > $$\lVert\lambda u+(1-\lambda)v\rVert\le\lambda\lVert u\rVert+(1-\lambda)\lVert v\rVert$$
 
 > 🔑 **Cette proposition est le socle du module 8.** L'écart type d'un portefeuille est une norme
-> ([module 8 d'algèbre](../../algebre/08-covariance-et-produit-scalaire.md) : $\Sigma$ est une
+> ([module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md) : $\Sigma$ est une
 > matrice de Gram, donc $\sigma(w)=\sqrt{w^{\top}\Sigma w}$ est la norme d'un vecteur). **Donc
 > $\sigma$ est convexe** — et « la diversification ne peut pas augmenter le risque au-delà de la
 > moyenne des risques » est un théorème, pas un slogan.

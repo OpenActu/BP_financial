@@ -1,8 +1,8 @@
-# Module 8 — La covariance comme produit scalaire ⭐
+# Module 9 — La covariance comme produit scalaire ⭐
 
-**Durée : 1 h 15.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à[7](07-dictionnaire-geometrique-des-statistiques.md). **Module de sortie du cours.**
+**Durée : 1 h 15.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à[8](08-dictionnaire-geometrique-des-statistiques.md). **Module de sortie du cours.**
 
-> **La question traitée.** Le [module 7](07-dictionnaire-geometrique-des-statistiques.md) affirme que $\operatorname{Cov}(x,y)=\frac1n\langle\tilde x,\tilde y\rangle$. Est-ce une **notation
+> **La question traitée.** Le [module 8](08-dictionnaire-geometrique-des-statistiques.md) affirme que $\operatorname{Cov}(x,y)=\frac1n\langle\tilde x,\tilde y\rangle$. Est-ce une **notation
 > commode**, ou la covariance **est-elle** un produit scalaire, au sens exact des trois propriétés
 > du § 1.1 ?
 
@@ -13,9 +13,9 @@ contraintes qu'une corrélation impose aux autres.
 
 ---
 
-## 8.1 Le préalable : le centrage
+## 9.1 Le préalable : le centrage
 
-La covariance ne porte pas sur $x$ mais sur son **vecteur centré** $\tilde x = x-\bar x\,\mathbf 1$, qui est le résidu de la projection sur $\text{Vect}(\mathbf 1)$ ([§ 5.2](05-supplementaire-orthogonal-et-dimension.md)). Matriciellement, $\tilde x = Mx$ avec $M=I_n-\frac1nJ$ la matrice de centrage.
+La covariance ne porte pas sur $x$ mais sur son **vecteur centré** $\tilde x = x-\bar x\,\mathbf 1$, qui est le résidu de la projection sur $\text{Vect}(\mathbf 1)$ ([§ 6.1](06-degres-de-liberte-et-centrage.md)). Matriciellement, $\tilde x = Mx$ avec $M=I_n-\frac1nJ$ la matrice de centrage.
 
 Les vecteurs centrés vivent donc tous dans l'hyperplan
 
@@ -32,7 +32,7 @@ suit.
 
 ---
 
-## 8.2 La vérification ⭐
+## 9.2 La vérification ⭐
 
 Posons, pour $x,y\in\mathbb R^n$ :
 
@@ -66,7 +66,7 @@ n'est donc pas $\{0\}$ mais la droite $\text{Vect}(\mathbf 1)$ tout entière.
 
 ---
 
-## 8.3 Ce qui tombe immédiatement
+## 9.3 Ce qui tombe immédiatement
 
 Une fois la vérification faite, **tout théorème des modules 1 à 4 se relit en statistique**, sans
 la moindre démonstration nouvelle.
@@ -108,7 +108,7 @@ $y=ax+b$ exactement.
 
 ---
 
-## 8.4 La bilinéarité au travail : la variance d'un portefeuille
+## 9.4 La bilinéarité au travail : la variance d'un portefeuille
 
 C'est l'usage le plus rentable de la propriété. Soient $x_1,\dots,x_p$ des séries et
 $w_1,\dots,w_p$ des poids. Par **bilinéarité seule** :
@@ -130,7 +130,7 @@ $\bigl\|\sum_j w_j\tilde x_j\bigr\|^2$, exactement comme on développerait un ca
 
 ---
 
-## 8.5 La matrice de covariance est une matrice de Gram
+## 9.5 La matrice de covariance est une matrice de Gram
 
 Rangeons les $p$ séries centrées en colonnes d'une matrice $\tilde X$ ($n$ lignes, $p$ colonnes).
 Alors
@@ -149,7 +149,7 @@ trois propriétés, et **toutes trois sont des faits sur les matrices de covaria
 | $\operatorname{rang}(\Sigma)=\dim\text{Vect}(\tilde x_1,\dots,\tilde x_p)$ | Le rang compte les séries **réellement distinctes** |
 
 **La deuxième ligne n'est pas une hypothèse, c'est un théorème** — et sa démonstration tient en
-une ligne, déjà écrite au § 8.4 :
+une ligne, déjà écrite au § 9.4 :
 
 $$w^{\top}\Sigma w=\frac{1}{n}\Bigl\|\sum_j w_j\tilde x_j\Bigr\|^2\;\ge\;0$$
 
@@ -175,7 +175,7 @@ indépendants.**
 
 ---
 
-## 8.6 La corrélation : la matrice de Gram des vecteurs **normés**
+## 9.6 La corrélation : la matrice de Gram des vecteurs **normés**
 
 Normalisons : $e_j=\tilde x_j/\|\tilde x_j\|$. Alors
 
@@ -208,7 +208,7 @@ $25{,}8°$ d'un même troisième sont au plus à $51{,}7°$ l'un de l'autre.
 
 ---
 
-## 8.7 La régression : une pente est un coefficient de projection
+## 9.7 La régression : une pente est un coefficient de projection
 
 Dernier dividende. Le coefficient de la droite des moindres carrés de $y$ sur $x$ vaut
 
@@ -233,9 +233,9 @@ $$\tilde y=\underbrace{\hat r\,\tilde x}_{\text{expliqué}}+\underbrace{\tilde e
 
 ---
 
-## 8.8 Simulations
+## 9.8 Simulations
 
-### S8.1 — Les trois propriétés, et celle qui manque
+### S9.1 — Les trois propriétés, et celle qui manque
 
 ```python
 import numpy as np
@@ -260,11 +260,11 @@ print("noyau = Vect(1) :", np.isclose(cov(np.ones(n) * 3.2, y), 0))
 print("Cov(x+1000, y) = Cov(x, y) :", np.isclose(cov(x + 1000, y), cov(x, y)))
 ```
 
-La quatrième ligne est le cœur du § 8.2 : **une variance nulle ne signifie pas un vecteur nul**,
+La quatrième ligne est le cœur du § 9.2 : **une variance nulle ne signifie pas un vecteur nul**,
 elle signifie un vecteur **constant**. C'est toute la différence entre « positive » et « définie
 positive ».
 
-### S8.2 — L'identité de développement, lue deux fois
+### S9.2 — L'identité de développement, lue deux fois
 
 ```python
 print("Var(x+y) = Var(x) + 2Cov(x,y) + Var(y) :",
@@ -278,7 +278,7 @@ print("Var(x + y_perp) = Var(x) + Var(y_perp) :",
       np.isclose(cov(x + yperp, x + yperp), cov(x, x) + cov(yperp, yperp)))
 ```
 
-### S8.3 — La matrice de covariance est une matrice de Gram
+### S9.3 — La matrice de covariance est une matrice de Gram
 
 ```python
 p = 4
@@ -304,7 +304,7 @@ print(f"rang avec serie redondante : {np.linalg.matrix_rank(Sd)} / {Sd.shape[0]}
 **La ligne des valeurs propres est la démonstration visuelle** : aucune n'est négative, et il ne
 peut pas en être autrement — c'est une matrice de Gram.
 
-### S8.4 — Trois corrélations ne se choisissent pas librement
+### S9.4 — Trois corrélations ne se choisissent pas librement
 
 ```python
 def bornes(r12, r13):
@@ -327,7 +327,7 @@ for r23 in (0.62, 0.30, -0.50):
 La seconde boucle est le contrôle décisif : dès qu'on descend sous $0{,}62$, une valeur propre
 devient **négative**. Aucune donnée au monde ne peut produire cette matrice.
 
-### S8.5 — La pente est un coefficient de projection
+### S9.5 — La pente est un coefficient de projection
 
 ```python
 t = np.arange(1., n + 1.)
@@ -346,56 +346,56 @@ print(f"angle = {np.degrees(np.arccos(abs(rho))):.1f}°   -> rho² = cos² = {rh
 ```
 
 Les trois pentes coïncident à la sixième décimale, et la variance résiduelle **est** le
-$\sin^2\theta$ annoncé au § 8.7.
+$\sin^2\theta$ annoncé au § 9.7.
 
 ---
 
-## 8.9 Exercices
+## 9.9 Exercices
 
-**E8.1.** Démontrer que $x\mapsto\tilde x$ est linéaire, puis en déduire la bilinéarité de la
+**E9.1.** Démontrer que $x\mapsto\tilde x$ est linéaire, puis en déduire la bilinéarité de la
 covariance à partir de celle du produit scalaire. *Combien de lignes ?*
 
-**E8.2.** Montrer que $\operatorname{Cov}(x,y)=\frac1n x^{\top}My$ et que cette écriture est
+**E9.2.** Montrer que $\operatorname{Cov}(x,y)=\frac1n x^{\top}My$ et que cette écriture est
 symétrique en $x$ et $y$ malgré les apparences. *(Piste : $M^{\top}=M$ et $M^2=M$.)*
 
-**E8.3.** Caractériser exactement les $x$ tels que $\operatorname{Var}(x)=0$. *Pourquoi cela
+**E9.3.** Caractériser exactement les $x$ tels que $\operatorname{Var}(x)=0$. *Pourquoi cela
 empêche-t-il la covariance d'être un produit scalaire sur $\mathbb R^n$, et pourquoi cela cesse
 d'être un problème sur $H$ ?*
 
-**E8.4.** Montrer que $\operatorname{Cov}(ax+b,\;cy+d)=ac\operatorname{Cov}(x,y)$ pour tous
+**E9.4.** Montrer que $\operatorname{Cov}(ax+b,\;cy+d)=ac\operatorname{Cov}(x,y)$ pour tous
 réels $a,b,c,d$. *Quelle propriété géométrique du centrage explique la disparition de $b$ et
 $d$ ?*
 
-**E8.5.** Deux actifs ont pour écarts-types $\sigma_1=20\,\%$ et $\sigma_2=30\,\%$. Calculer la
+**E9.5.** Deux actifs ont pour écarts-types $\sigma_1=20\,\%$ et $\sigma_2=30\,\%$. Calculer la
 volatilité d'un portefeuille $50/50$ pour $\rho=1$, $\rho=0$, $\rho=-1$. *Représenter les trois
 cas par un triangle de côtés $\sigma_1/2$ et $\sigma_2/2$ : quel théorème du
 [module 3](03-orthogonalite-et-pythagore.md) donne le cas central ?*
 
-**E8.6.** Montrer que la variance d'un portefeuille équipondéré de $p$ actifs de même variance
+**E9.6.** Montrer que la variance d'un portefeuille équipondéré de $p$ actifs de même variance
 $\sigma^2$ et de corrélation commune $\rho$ vaut
 $\frac{\sigma^2}{p}\bigl(1+(p-1)\rho\bigr)$. *En déduire la limite quand $p\to\infty$, et le
 $\rho$ minimal possible pour $p$ actifs.* **(Réponse : $\rho\sigma^2$, et $\rho\ge-\frac{1}{p-1}$
 — la semi-définie positivité borne la corrélation commune par le bas.)**
 
-**E8.7.** Démontrer l'encadrement du § 8.6 à partir de l'inégalité triangulaire sur les angles.
+**E9.7.** Démontrer l'encadrement du § 9.6 à partir de l'inégalité triangulaire sur les angles.
 *Puis vérifier, avec $\rho_{12}=\rho_{13}=0{,}5$, que $\rho_{23}$ peut être négatif — et jusqu'où.*
 
-**E8.8.** Pourquoi $p$ séries ne peuvent-elles pas être linéairement indépendantes dès que
+**E9.8.** Pourquoi $p$ séries ne peuvent-elles pas être linéairement indépendantes dès que
 $p>n-1$ ? *(Piste : $\dim H$.) Quelle conséquence pour une régression à plus de prédicteurs que
 d'observations ?*
 
-**E8.9 — orientée finance.** À partir de trois séries obtenues avec `import_societe.py` :
+**E9.9 — orientée finance.** À partir de trois séries obtenues avec `import_societe.py` :
 1. construire $\Sigma$ et $R$ à la main par produits scalaires, et vérifier avec `np.cov` /
    `np.corrcoef` ;
 2. vérifier que les valeurs propres de $R$ sont toutes positives ;
-3. remplacer un coefficient de $R$ par une valeur « intuitive » hors des bornes du § 8.6 et
+3. remplacer un coefficient de $R$ par une valeur « intuitive » hors des bornes du § 9.6 et
    observer l'apparition d'une valeur propre négative ;
 4. calculer la volatilité du portefeuille équipondéré et la comparer à la moyenne des
    volatilités. *D'où vient l'écart, géométriquement ?*
 
 ---
 
-## 8.10 À retenir
+## 9.10 À retenir
 
 - **La covariance est une forme bilinéaire symétrique positive** — un produit scalaire à une
   réserve près : elle n'est **pas définie**, son noyau est $\text{Vect}(\mathbf 1)$.
@@ -415,6 +415,6 @@ d'observations ?*
 
 ---
 
-⬅️ [Module 7 — Le dictionnaire géométrique des statistiques](07-dictionnaire-geometrique-des-statistiques.md) ·
+⬅️ [Module 8 — Le dictionnaire géométrique des statistiques](08-dictionnaire-geometrique-des-statistiques.md) ·
 🏠 [Sommaire](README.md) ·
 ➡️ **Suite** : [Cours de statistique mathématique](../../semestre2/statistique/mathematique/README.md)

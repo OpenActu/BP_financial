@@ -91,7 +91,7 @@ $$\underbrace{\|\mathbf Z\|^2}_{\sum_i Z_i^2}
 +\underbrace{\|P_H(\mathbf Z)\|^2}_{\sum_i (Z_i-\bar Z)^2}$$
 
 ➡️ **Cette étape est purement algébrique** : elle est établie en détail, sans aucune probabilité,
-au [module 5 du cours d'algèbre](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md).
+au [module 6 du cours d'algèbre](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md).
 
 ### Étape 3 — Le lemme gaussien
 

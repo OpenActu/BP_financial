@@ -54,7 +54,7 @@ $$\int_{A(D)}f(y)\,dy=\lvert\det A\rvert\int_Df(Ax)\,dx .$$
 | $A$ | $\det A$ | Effet |
 |---|---|---|
 | $\lambda I_n$ | $\lambda^n$ | Dilate d'un facteur $\lambda^n$ |
-| Rotation | $1$ | **Conserve** les volumes ([algèbre § 6](../../algebre/06-bases-orthonormees-et-isometries.md)) |
+| Rotation | $1$ | **Conserve** les volumes ([algèbre § 7](../../algebre/07-bases-orthonormees-et-isometries.md)) |
 | Projection | $0$ | Écrase : l'image est de volume nul |
 | $\operatorname{diag}(\sigma_1,\dots,\sigma_n)$ | $\prod\sigma_i$ | Étire chaque axe séparément |
 

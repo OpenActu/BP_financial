@@ -118,7 +118,7 @@ Les six tests affichent `True`. **Refaites-les en dimension 2** et dessinez les 
 
 **E1.1.** Démontrer l'identité de polarisation du § 1.3 à partir de la seule identité de développement. *Quelle propriété du produit scalaire a-t-on utilisée pour égaler les deux termes croisés ?*
 
-**E1.2.** Démontrer l'identité du parallélogramme $\|u+v\|^2+\|u-v\|^2=2\bigl(\|u\|^2+\|v\|^2\bigr)$. Puis l'appliquer à $u=(a,b)$, $v=(b,a)$ et interpréter. *(Piste : on retrouve $\operatorname{Var}$ et $\operatorname{Cov}$ de deux observations — voir le [module 7](07-dictionnaire-geometrique-des-statistiques.md).)*
+**E1.2.** Démontrer l'identité du parallélogramme $\|u+v\|^2+\|u-v\|^2=2\bigl(\|u\|^2+\|v\|^2\bigr)$. Puis l'appliquer à $u=(a,b)$, $v=(b,a)$ et interpréter. *(Piste : on retrouve $\operatorname{Var}$ et $\operatorname{Cov}$ de deux observations — voir le [module 8](08-dictionnaire-geometrique-des-statistiques.md).)*
 
 **Preuve** : $\|u+v\|^2+\|u-v\|^2=2(\|u\|^2+\|v\|^2)$ par calcul direct ; $\|u\|^2=\langle u,u \rangle = a^2+b^2=\|v\|^2$
 d'où $\|u+v\|^2+\|u-v\|^2=4(a^2+b^2)=4\|u\|$

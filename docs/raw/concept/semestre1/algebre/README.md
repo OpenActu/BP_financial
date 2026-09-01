@@ -26,8 +26,8 @@ Une seule opération — $\langle u,v\rangle=\sum_i u_iv_i$ — et l'examen syst
 - quand il est **maximal** → Cauchy–Schwarz, l'angle, la corrélation (module 2) ;
 - quand il est **nul** → Pythagore, la décomposition de la variance (module 3) ;
 - quand on le **rend nul** → la projection, les moindres carrés (module 4) ;
-- ce qu'il en **coûte en dimensions** → les degrés de liberté (module 5) ;
-- et ce qu'il **est**, sur des données → la covariance elle-même (module 8).
+- ce qu'il en **coûte en dimensions** → le noyau, le rang, les degrés de liberté (modules 5 et 6) ;
+- et ce qu'il **est**, sur des données → la covariance elle-même (module 9).
 
 ## Progression
 
@@ -37,36 +37,37 @@ Une seule opération — $\langle u,v\rangle=\sum_i u_iv_i$ — et l'examen syst
 | 2   | [Cauchy–Schwarz et l'angle](02-cauchy-schwarz-et-angle.md)                                            | 45 min | $\lvert\rho\rvert\le1$ et son cas d'égalité                |
 | 3   | [Orthogonalité et théorème de Pythagore](03-orthogonalite-et-pythagore.md)                            | 45 min | Toute décomposition de variance est un Pythagore           |
 | 4   | [**La projection orthogonale**](04-projection-orthogonale.md) ⭐                                       | 1 h    | Les moindres carrés sans calcul différentiel               |
-| 5   | [**Supplémentaire orthogonal et dimension**](05-supplementaire-orthogonal-et-dimension.md) ⭐          | 1 h    | Pourquoi $n-1$ — et $n-2$ en régression                    |
-| 6   | [Bases orthonormées, isométries, Gram–Schmidt](06-bases-orthonormees-et-isometries.md)                | 1 h    | Base de Helmert, invariance par rotation                   |
-| 7   | [**Le dictionnaire géométrique des statistiques**](07-dictionnaire-geometrique-des-statistiques.md) ⭐ | 1 h    | Moyenne = projection, corrélation = cosinus                |
-| 8   | [**La covariance comme produit scalaire**](08-covariance-et-produit-scalaire.md) ⭐                    | 1 h 15 | $\Sigma$ est une matrice de Gram — et ce que cela interdit |
+| 5   | [Supplémentaire orthogonal, noyau, rang](05-supplementaire-orthogonal-et-dimension.md)                | 45 min | Ce qu'une contrainte linéaire coûte en dimensions          |
+| 6   | [**Degrés de liberté : le cas $\text{Vect}(\mathbf 1)$**](06-degres-de-liberte-et-centrage.md) ⭐      | 45 min | Pourquoi $n-1$ — et $n-2$ en régression                    |
+| 7   | [Bases orthonormées, isométries, Gram–Schmidt](07-bases-orthonormees-et-isometries.md)                | 1 h    | Base de Helmert, invariance par rotation                   |
+| 8   | [**Le dictionnaire géométrique des statistiques**](08-dictionnaire-geometrique-des-statistiques.md) ⭐ | 1 h    | Moyenne = projection, corrélation = cosinus                |
+| 9   | [**La covariance comme produit scalaire**](09-covariance-et-produit-scalaire.md) ⭐                    | 1 h 15 | $\Sigma$ est une matrice de Gram — et ce que cela interdit |
 
-**Volume total** : ≈ 7 h 30. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
+**Volume total** : ≈ 8 h. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
 
 ## Les quatre modules décisifs
 
 - **Module 4 — La projection.** Le point de bascule. « Le point le plus proche » est la définition des moindres carrés ; tout le calcul différentiel de [`modele.md`](../../../modele.md) en est une reformulation coûteuse.
-- **Module 5 — La dimension.** Celui qui répond à « pourquoi $n-1$ ? » : les degrés de liberté sont la **dimension** du sous-espace où vit le vecteur des écarts, jamais un compteur de paramètres.
-- **Module 7 — Le dictionnaire.** Celui qui rend le reste utilisable : il traduit chaque théorème d'algèbre en énoncé statistique — par **égalité**, non par analogie.
-- **Module 8 — La covariance.** Celui qui **démontre** que le dictionnaire a le droit d'exister, et qui en tire le plus de conséquences concrètes : variance d'un portefeuille, positivité d'une matrice de covariance, bornes qu'une corrélation impose aux autres.
+- **Module 6 — Les degrés de liberté.** Celui qui répond à « pourquoi $n-1$ ? » : les degrés de liberté sont la **dimension** du sous-espace où vit le vecteur des écarts, jamais un compteur de paramètres.
+- **Module 8 — Le dictionnaire.** Celui qui rend le reste utilisable : il traduit chaque théorème d'algèbre en énoncé statistique — par **égalité**, non par analogie.
+- **Module 9 — La covariance.** Celui qui **démontre** que le dictionnaire a le droit d'exister, et qui en tire le plus de conséquences concrètes : variance d'un portefeuille, positivité d'une matrice de covariance, bornes qu'une corrélation impose aux autres.
 
 ## Ce que ce cours ne contient pas
 
 Aucune probabilité. Vecteurs gaussiens, invariance en loi par rotation, indépendance de $\bar X$ et $S^2$ : tout cela suppose un **modèle génératif** et relève du [cours de statistique mathématique](../../semestre2/statistique/mathematique/README.md), qui commence exactement là où celui-ci s'arrête — puis du [cours sur la loi de Student](../../semestre3/statistique/loi-de-student/README.md).
 
-⚠️ Le [module 8](08-covariance-et-produit-scalaire.md) parle de covariance **empirique**, celle d'un jeu de $n$ nombres. La covariance **théorique** $\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)$ de deux variables aléatoires est un autre objet — qui obéit d'ailleurs à la même géométrie, pour la même raison.
+⚠️ Le [module 9](09-covariance-et-produit-scalaire.md) parle de covariance **empirique**, celle d'un jeu de $n$ nombres. La covariance **théorique** $\operatorname{Cov}(X,Y)=E(XY)-E(X)E(Y)$ de deux variables aléatoires est un autre objet — qui obéit d'ailleurs à la même géométrie, pour la même raison.
 
 ## Suite naturelle
 
 | Après ce cours                                  | Module                                                                                                              | Pourquoi                                                                        |
 | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
-| Ajouter l'hypothèse gaussienne                  | [Vecteurs gaussiens](../../semestre2/statistique/mathematique/11-invariance-par-rotation-et-lemme-de-projection.md) | Reprend la base de Helmert du module 6 mot pour mot                             |
-| La loi de la dispersion                         | [Loi du $\chi^2$](../../semestre2/statistique/mathematique/15-loi-du-chi2.md)                                       | Donne une loi au $\lVert\tilde x\rVert^2$ du module 5                           |
-| Le théorème central du cours                    | [Fisher–Cochran](../../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md)                         | Est la version probabiliste des modules 5 et 6                                  |
-| Tester une pente                                | [Student en régression](../../semestre3/statistique/loi-de-student/07-student-en-regression.md)                     | Rejoue le module 5 avec $\dim F=2$                                              |
+| Ajouter l'hypothèse gaussienne                  | [Vecteurs gaussiens](../../semestre2/statistique/mathematique/11-invariance-par-rotation-et-lemme-de-projection.md) | Reprend la base de Helmert du module 7 mot pour mot                             |
+| La loi de la dispersion                         | [Loi du $\chi^2$](../../semestre2/statistique/mathematique/15-loi-du-chi2.md)                                       | Donne une loi au $\lVert\tilde x\rVert^2$ du module 6                           |
+| Le théorème central du cours                    | [Fisher–Cochran](../../semestre2/statistique/mathematique/16-theoreme-de-fisher-cochran.md)                         | Est la version probabiliste des modules 6 et 7                                  |
+| Tester une pente                                | [Student en régression](../../semestre3/statistique/loi-de-student/07-student-en-regression.md)                     | Rejoue le module 6 avec $\dim F=2$                                              |
 | Généraliser la projection                       | [Projection sur un convexe](../analyse/convexite/01-ensembles-convexes.md)                                          | Le module 4 sans hypothèse de linéarité — c'est la convexité qui portait tout   |
-| Optimiser un portefeuille                       | [Convexité en dimension $n$](../analyse/convexite/07-convexite-en-dimension-n.md)                                   | Utilise le module 8 : $\Sigma$ est de Gram, donc $w^{\top}\Sigma w$ est convexe |
+| Optimiser un portefeuille                       | [Convexité en dimension $n$](../analyse/convexite/07-convexite-en-dimension-n.md)                                   | Utilise le module 9 : $\Sigma$ est de Gram, donc $w^{\top}\Sigma w$ est convexe |
 | Le déterminant comme volume, sous une intégrale | [Le jacobien, facteur de volume](../analyse/derivation-et-integration/08-integrales-multiples-et-jacobien.md)       | Reprend le déterminant-volume et en fait le changement de variables             |
 
 ## Outillage
@@ -90,8 +91,8 @@ pip install numpy
 | $F^\perp$            | Supplémentaire orthogonal de $F$                                              |
 | $P_F$                | Projecteur orthogonal sur $F$                                                 |
 | $J$, $M$             | $\mathbf 1\mathbf 1^{\top}$, et la matrice de centrage $I_n-\frac1nJ$         |
-| $H$                  | L'hyperplan $\text{Vect}(\mathbf 1)^\perp$ des vecteurs centrés, $\dim H=n-1$ |
-| $\Sigma$, $R$        | Matrices de covariance et de corrélation (module 8)                           |
+| $\ker f$, $H$        | Noyau d'une application linéaire ; l'hyperplan $\text{Vect}(\mathbf 1)^\perp$, $\dim H=n-1$ |
+| $\Sigma$, $R$        | Matrices de covariance et de corrélation (module 9)                           |
 | $\delta_{jk}$        | Symbole de Kronecker                                                          |
 
 ## Références
