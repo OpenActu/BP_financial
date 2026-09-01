@@ -107,7 +107,7 @@ print("définie pos. :", ps(u, u) > 0 and np.isclose(ps(np.zeros(n), np.zeros(n)
 print("norme        :", np.allclose(np.sqrt(ps(u, u)), np.linalg.norm(u)))
 print("développement:", np.allclose(ps(u+v, u+v), ps(u,u) + 2*ps(u,v) + ps(v,v)))
 print("polarisation :", np.allclose(ps(u, v),
-      0.5 * (np.linalg.no\ rm(u+v)**2 - np.linalg.norm(u)**2 - np.linalg.norm(v)**2)))
+      0.5 * (np.linalg.norm(u+v)**2 - np.linalg.norm(u)**2 - np.linalg.norm(v)**2)))
 ```
 
 Les six tests affichent `True`. **Refaites-les en dimension 2** et dessinez les vecteurs : rien de ce qui suit n'est propre à la grande dimension, tout se voit déjà dans le plan.
