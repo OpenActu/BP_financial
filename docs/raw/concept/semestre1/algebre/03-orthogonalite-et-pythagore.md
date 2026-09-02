@@ -56,6 +56,15 @@ Deux remarques sur cette démonstration :
 
 > 🔑 **Une infinité de vérifications se ramène à $m$ produits scalaires.** $F$ est infini dès qu'il n'est pas $\{0\}$ ; la proposition remplace « pour tout $f\in F$ » par $m$ égalités numériques. C'est exactement le mécanisme réutilisé au § 3.2 pour l'hérédité — où $S$ est engendré par $w_1,\dots,w_{k-1}$ — et au [module 4](04-projection-orthogonale.md) pour caractériser la projection.
 
+**Exemple — un vecteur orthogonal à $\text{Vect}(\mathbf 1)$.** C'est le cas $m=1$, avec $g_1=\mathbf 1$ : la proposition dit que $u\perp\text{Vect}(\mathbf 1)$ se ramène à **une seule** égalité,
+$$\langle u,\mathbf 1\rangle=\sum_{i=1}^n u_i\cdot 1=\sum_{i=1}^n u_i=0$$
+Prenons dans $\mathbb R^4$ le vecteur $u=(-2,\,0,\,-1,\,3)$, dont la somme des composantes est bien nulle. La proposition affirme qu'il est orthogonal à la droite $\text{Vect}(\mathbf 1)$ **tout entière**, et la réciproque le redonne à la main : pour $f=\lambda\mathbf 1$ quelconque,
+$$\langle u,\lambda\mathbf 1\rangle=\lambda\langle u,\mathbf 1\rangle=\lambda\cdot 0=0$$
+Une addition de quatre nombres a couvert une infinité de vecteurs $f$.
+
+Ce $u$ n'est pas tombé du ciel : c'est le vecteur **centré** de la série $x=(10,\,12,\,11,\,15)$, de moyenne $\bar x=12$, soit $u=x-\bar x\mathbf 1$. Ce n'est pas une coïncidence — *tout* vecteur centré est orthogonal à $\mathbf 1$, puisque $\sum_i(x_i-\bar x)=\sum_ix_i-n\bar x=0$ par définition de la moyenne. C'est l'objet de l'exercice E3.2, la décomposition $x=\bar x\mathbf 1+\tilde x$ du § 3.4, et tout le [module 6](06-degres-de-liberte-et-centrage.md).
+
+À l'inverse, $v=(1,\,1,\,2,\,-1)$ n'est **pas** orthogonal à $\text{Vect}(\mathbf 1)$ : $\langle v,\mathbf 1\rangle=3\neq0$. Conformément à la seconde remarque, un seul produit scalaire non nul suffit à le disqualifier, et le témoin est $\mathbf 1$ lui-même.
 
 ---
 
