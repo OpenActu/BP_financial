@@ -17,13 +17,22 @@ Dans le vocabulaire du [module 2](02-cauchy-schwarz-et-angle.md), c'est le cas $
 
 **Orthogonalité à un sous-espace.** $u\perp F$ signifie $u\perp f$ pour **tout** $f\in F$. Par bilinéarité, il suffit de le vérifier sur une famille génératrice de $F$ : c'est ce qui rend la vérification praticable.
 
-> **Définition.** Une famille $g_1,\dots,g_m$ de vecteurs de $F$ est **génératrice** de $F$ si
-> tout élément de $F$ est une combinaison linéaire des $g_i$ : $F=\text{Vect}(g_1,\dots,g_m)$.
+> **Définition.** Une famille $g_1,\dots,g_m$ de vecteurs de $F$ est **génératrice** de $F$ si tout élément de $F$ est une combinaison linéaire des $g_i$ : $F=\text{Vect}(g_1,\dots,g_m)$.
 
-Une telle famille est un **jeu de paramètres** pour $F$ : elle le décrit tout entier par un
-nombre fini de vecteurs, sans être tenue d'être libre — un $g_i$ redondant ne retire rien au
-caractère générateur, il rend seulement l'écriture non unique. Une famille génératrice **et**
-libre est une base ; c'est le cas particulier où l'écriture est unique.
+**Exemple.** Dans $\mathbb R^n$ — l'espace d'une série de $n$ observations —, posons $\mathbf 1=(1,1,\dots,1)$ et $t=(1,2,\dots,n)$. Alors :
+
+| Sous-espace                | Ce qu'il contient                                                                        |
+| -------------------------- | ---------------------------------------------------------------------------------------- |
+| $\text{Vect}(\mathbf 1)$   | $\{\lambda\mathbf 1:\lambda\in\mathbb R\}$ — les séries **constantes**, une droite       |
+| $\text{Vect}(t)$           | $\{\mu t:\mu\in\mathbb R\}$ — les séries **proportionnelles au temps**, une autre droite |
+| $\text{Vect}(\mathbf 1,t)$ | $\{a\mathbf 1+bt\}$ — les séries **affines** $(a+bi)_{i=1,\dots,n}$, un plan             |
+
+Le troisième est le sous-espace du cours : la droite ajustée d'une série de clôtures est
+l'élément de $\text{Vect}(\mathbf 1,t)$ le plus proche de cette série ([module 4](04-projection-orthogonale.md)) — deux paramètres, $a$ et $b$, pour un plan de dimension 2 dans un espace de dimension $n$. Et la proposition ci-dessous y prend un sens concret : $u\perp\text{Vect}(\mathbf 1,t)$ ne demande que **deux** vérifications, $\sum_iu_i=0$ et $\sum_i i\,u_i=0$, au lieu d'une infinité.
+
+Une telle famille est un **jeu de paramètres** pour $F$ : elle le décrit tout entier par un nombre fini de vecteurs, sans être tenue d'être libre — un $g_i$ redondant ne retire rien au caractère générateur, il rend seulement l'écriture non unique. Une famille génératrice **et** libre est une base ; c'est le cas particulier où l'écriture est unique.
+
+Ainsi, dans $\mathbb R^2$, $\text{Vect}\bigl((1,0),(0,1),(1,1)\bigr)=\mathbb R^2$ : la famille est génératrice, mais le troisième vecteur est de trop, et $(2,3)$ s'y écrit de deux façons — $2(1,0)+3(0,1)$ ou $(1,0)+2(0,1)+(1,1)$. Retirer $(1,1)$ ne change rien à l'espace engendré et rend l'écriture unique : on obtient une base.
 
 > **Proposition.** Soit $g_1,\dots,g_m$ une famille génératrice de $F$. Alors
 > $$u\perp F\quad\Longleftrightarrow\quad \langle u,g_i\rangle=0\ \text{ pour tout } i\in\{1,\dots,m\}$$
@@ -46,6 +55,7 @@ Deux remarques sur cette démonstration :
 - **Un seul produit scalaire non nul ruine tout.** Si $\langle u,g_j\rangle=c\neq 0$, alors $g_j$ est lui-même un $f\in F$ avec $\langle u,f\rangle=c$ : l'équivalence est stricte, il n'y a pas de $u$ « presque orthogonal » à $F$.
 
 > 🔑 **Une infinité de vérifications se ramène à $m$ produits scalaires.** $F$ est infini dès qu'il n'est pas $\{0\}$ ; la proposition remplace « pour tout $f\in F$ » par $m$ égalités numériques. C'est exactement le mécanisme réutilisé au § 3.2 pour l'hérédité — où $S$ est engendré par $w_1,\dots,w_{k-1}$ — et au [module 4](04-projection-orthogonale.md) pour caractériser la projection.
+
 
 ---
 
@@ -94,19 +104,13 @@ $$\Bigl\|\sum_{j=1}^{k}w_j\Bigr\|^2=\sum_{j=1}^{k-1}\|w_j\|^2+\|w_k\|^2=\sum_{j=
 
 ## 3.3 Familles orthogonales et indépendance linéaire
 
-> **Définition.** Une famille $w_1,\dots,w_k$ est **libre** — on dit aussi *linéairement
-> indépendante* — si la seule combinaison linéaire qui donne le vecteur nul est celle dont
-> **tous** les coefficients sont nuls :
-> $$\sum_{j=1}^k\lambda_jw_j=0\quad\Longrightarrow\quad\lambda_1=\dots=\lambda_k=0$$
+> **Définition.** Une famille $w_1,\dots,w_k$ est **libre** — on dit aussi *linéairement indépendante* — si la seule combinaison linéaire qui donne le vecteur nul est celle dont **tous** les coefficients sont nuls:
+>$$\sum_{j=1}^k\lambda_jw_j=0\quad\Longrightarrow\quad\lambda_1=\dots=\lambda_k=0$$
 > Une famille qui ne l'est pas est dite **liée**.
 
 Trois formulations du même fait :
-
-- **aucune redondance** — aucun $w_j$ ne s'écrit comme combinaison des autres ; s'il le faisait,
-  l'isoler produirait une relation nulle à coefficients non tous nuls ;
-- **écriture unique** — tout vecteur de $\text{Vect}(w_1,\dots,w_k)$ s'y décompose d'une seule
-  façon. C'est précisément ce qui manquait à la famille génératrice quelconque du § 3.1, où seule
-  l'*existence* des coefficients était acquise ;
+- **aucune redondance** — aucun $w_j$ ne s'écrit comme combinaison des autres ; s'il le faisait, l'isoler produirait une relation nulle à coefficients non tous nuls ;
+- **écriture unique** — tout vecteur de $\text{Vect}(w_1,\dots,w_k)$ s'y décompose d'une seule façon. C'est précisément ce qui manquait à la famille génératrice quelconque du § 3.1, où seule l'*existence* des coefficients était acquise ;
 - **libre et génératrice = base**, le cas où les deux qualités sont réunies.
 
 > **Proposition.** Une famille orthogonale de vecteurs **non nuls** est libre.
