@@ -17,6 +17,36 @@ Dans le vocabulaire du [module 2](02-cauchy-schwarz-et-angle.md), c'est le cas $
 
 **Orthogonalité à un sous-espace.** $u\perp F$ signifie $u\perp f$ pour **tout** $f\in F$. Par bilinéarité, il suffit de le vérifier sur une famille génératrice de $F$ : c'est ce qui rend la vérification praticable.
 
+> **Définition.** Une famille $g_1,\dots,g_m$ de vecteurs de $F$ est **génératrice** de $F$ si
+> tout élément de $F$ est une combinaison linéaire des $g_i$ : $F=\text{Vect}(g_1,\dots,g_m)$.
+
+Une telle famille est un **jeu de paramètres** pour $F$ : elle le décrit tout entier par un
+nombre fini de vecteurs, sans être tenue d'être libre — un $g_i$ redondant ne retire rien au
+caractère générateur, il rend seulement l'écriture non unique. Une famille génératrice **et**
+libre est une base ; c'est le cas particulier où l'écriture est unique.
+
+> **Proposition.** Soit $g_1,\dots,g_m$ une famille génératrice de $F$. Alors
+> $$u\perp F\quad\Longleftrightarrow\quad \langle u,g_i\rangle=0\ \text{ pour tout } i\in\{1,\dots,m\}$$
+
+**Démonstration.** Les deux sens, dont un seul demande un calcul.
+
+*Sens direct ($\Rightarrow$).* Chaque $g_i$ est un vecteur **de** $F$. L'hypothèse $u\perp F$ portant sur *tout* $f\in F$, il suffit de l'appliquer à $f=g_i$, ce qui donne $\langle u,g_i\rangle=0$. Ce sens n'utilise pas que la famille engendre $F$, seulement qu'elle y vit.
+
+*Réciproque ($\Leftarrow$).* C'est le sens utile, et le seul où le caractère générateur sert.
+Donnons-nous $f\in F$ **quelconque**. Par définition d'une famille génératrice, il existe des
+réels $\lambda_1,\dots,\lambda_m$ tels que $f=\sum_{i=1}^m\lambda_ig_i$. La **linéarité à droite** du produit scalaire (§ 1.1 — la moitié de la bilinéarité que la symétrie offre gratuitement), étendue de deux à $m$ termes par récurrence immédiate, permet de sortir la somme du crochet :
+$$\langle u,f\rangle=\Bigl\langle u,\;\sum_{i=1}^m\lambda_ig_i\Bigr\rangle
+=\sum_{i=1}^m\lambda_i\,\langle u,g_i\rangle
+=\sum_{i=1}^m\lambda_i\cdot 0=0$$
+Le vecteur $f$ étant arbitraire dans $F$, on a bien $u\perp F$. $\blacksquare$
+
+Deux remarques sur cette démonstration :
+
+- **Les $\lambda_i$ n'ont pas à être uniques.** Seule leur *existence* a servi : si $f$ admet deux décompositions, l'une et l'autre donnent $0$. C'est pourquoi la famille n'a pas besoin d'être libre — une base convient, mais n'est pas requise.
+- **Un seul produit scalaire non nul ruine tout.** Si $\langle u,g_j\rangle=c\neq 0$, alors $g_j$ est lui-même un $f\in F$ avec $\langle u,f\rangle=c$ : l'équivalence est stricte, il n'y a pas de $u$ « presque orthogonal » à $F$.
+
+> 🔑 **Une infinité de vérifications se ramène à $m$ produits scalaires.** $F$ est infini dès qu'il n'est pas $\{0\}$ ; la proposition remplace « pour tout $f\in F$ » par $m$ égalités numériques. C'est exactement le mécanisme réutilisé au § 3.2 pour l'hérédité — où $S$ est engendré par $w_1,\dots,w_{k-1}$ — et au [module 4](04-projection-orthogonale.md) pour caractériser la projection.
+
 ---
 
 ## 3.2 Le théorème
@@ -51,8 +81,7 @@ une famille génératrice suffit à l'être à tout ce qu'elle engendre, et $S$ 
 Le théorème du § 3.2 s'applique alors au **couple** $(S,w_k)$ :
 $$\Bigl\|\sum_{j=1}^{k}w_j\Bigr\|^2=\|S+w_k\|^2=\|S\|^2+\|w_k\|^2$$
 Enfin $w_1,\dots,w_{k-1}$ est encore deux à deux orthogonale — une sous-famille d'une famille
-orthogonale l'est —, donc l'hypothèse de récurrence s'y applique et donne
-$\|S\|^2=\sum_{j<k}\|w_j\|^2$ :
+orthogonale l'est —, donc l'hypothèse de récurrence s'y applique et donne $\|S\|^2=\sum_{j<k}\|w_j\|^2$ :
 $$\Bigl\|\sum_{j=1}^{k}w_j\Bigr\|^2=\sum_{j=1}^{k-1}\|w_j\|^2+\|w_k\|^2=\sum_{j=1}^{k}\|w_j\|^2
 \qquad\blacksquare$$
 
@@ -65,9 +94,30 @@ $$\Bigl\|\sum_{j=1}^{k}w_j\Bigr\|^2=\sum_{j=1}^{k-1}\|w_j\|^2+\|w_k\|^2=\sum_{j=
 
 ## 3.3 Familles orthogonales et indépendance linéaire
 
+> **Définition.** Une famille $w_1,\dots,w_k$ est **libre** — on dit aussi *linéairement
+> indépendante* — si la seule combinaison linéaire qui donne le vecteur nul est celle dont
+> **tous** les coefficients sont nuls :
+> $$\sum_{j=1}^k\lambda_jw_j=0\quad\Longrightarrow\quad\lambda_1=\dots=\lambda_k=0$$
+> Une famille qui ne l'est pas est dite **liée**.
+
+Trois formulations du même fait :
+
+- **aucune redondance** — aucun $w_j$ ne s'écrit comme combinaison des autres ; s'il le faisait,
+  l'isoler produirait une relation nulle à coefficients non tous nuls ;
+- **écriture unique** — tout vecteur de $\text{Vect}(w_1,\dots,w_k)$ s'y décompose d'une seule
+  façon. C'est précisément ce qui manquait à la famille génératrice quelconque du § 3.1, où seule
+  l'*existence* des coefficients était acquise ;
+- **libre et génératrice = base**, le cas où les deux qualités sont réunies.
+
 > **Proposition.** Une famille orthogonale de vecteurs **non nuls** est libre.
 
 **Démonstration.** Si $\sum_j \lambda_j w_j=0$, le produit scalaire des deux membres avec $w_k$ donne $\lambda_k\|w_k\|^2=0$ — tous les autres termes s'annulent par orthogonalité — donc $\lambda_k=0$. $\blacksquare$
+
+> ⚠️ **« Non nuls » est une hypothèse, pas un ornement.** Le vecteur nul est orthogonal à tout le
+> monde (§ 3.1) : $\{w_1,0\}$ est donc une famille orthogonale parfaitement valide, et **liée**,
+> puisque $1\cdot 0=0$ est une relation à coefficient non nul. La démonstration le fait voir à
+> l'endroit exact où elle s'appuie dessus : de $\lambda_k\|w_k\|^2=0$ on ne conclut $\lambda_k=0$
+> que si $\|w_k\|^2\neq0$, c'est-à-dire $w_k\neq0$ — la propriété « définie positive » du § 1.1.
 
 > 🔑 **L'orthogonalité est une forme forte, et vérifiable en un produit scalaire, de  l'indépendance linéaire.** C'est ce qui la rend commode : prouver qu'une famille est libre
 > demande en général de résoudre un système ; ici, il suffit de $k(k-1)/2$ produits scalaires
@@ -141,12 +191,15 @@ chacun d'eux ? *Justifier par le théorème, puis par un dessin en dimension 2.*
 
 ## 3.7 À retenir
 
-- **$u\perp v\iff\langle u,v\rangle=0$** ; orthogonal à $F$ = orthogonal à une famille génératrice de $F$.
+- **$u\perp v\iff\langle u,v\rangle=0$** ; orthogonal à $F$ = orthogonal à une famille
+  génératrice de $F$ — une famille finie dont les combinaisons linéaires remplissent $F$.
 - **Pythagore $\|u+v\|^2=\|u\|^2+\|v\|^2\iff u\perp v$** — une **équivalence**, et sa démonstration tient en une ligne de développement.
 - **L'écart à Pythagore est le terme croisé** $2\langle u,v\rangle$.
 - **La généralisation à $k$ termes n'est qu'une implication** : au-delà du couple, l'identité
   n'exige que l'annulation de la **somme** des termes croisés.
-- **Une famille orthogonale de vecteurs non nuls est libre.**
+- **Une famille orthogonale de vecteurs non nuls est libre** — libre : la seule combinaison
+  linéaire nulle est celle à coefficients tous nuls. L'hypothèse « non nuls » est nécessaire, le
+  vecteur nul étant orthogonal à tout.
 - Toute décomposition de la variance en statistique est une instance de ce théorème.
 
 ---
