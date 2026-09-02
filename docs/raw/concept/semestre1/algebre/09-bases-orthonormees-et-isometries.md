@@ -1,9 +1,9 @@
-# Module 7 — Bases orthonormées, isométries, Gram–Schmidt
+# Module 9 — Bases orthonormées, isométries, Gram–Schmidt
 
-**Durée : 1 h.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à
-[6](06-degres-de-liberte-et-centrage.md).
+**Durée : 1 h.** Prérequis : modules [1](01-espace-vectoriel.md) à
+[8](08-degres-de-liberte-et-centrage.md).
 
-> **La question traitée.** Le [module 4](04-projection-orthogonale.md) suppose une base
+> **La question traitée.** Le [module 6](06-projection-orthogonale.md) suppose une base
 > orthonormée pour projeter. En existe-t-il toujours une ? Peut-on en choisir une **adaptée** à
 > une décomposition $F\oplus F^\perp$ donnée ?
 
@@ -13,20 +13,20 @@ est une **isométrie**, et une isométrie laisse invariante la loi gaussienne st
 
 ---
 
-## 7.1 Bases orthonormées
+## 9.1 Bases orthonormées
 
 > **Définition.** $(e_1,\dots,e_n)$ est une **base orthonormée** (BON) de $\mathbb R^n$ si
 > $\langle e_j,e_k\rangle=\delta_{jk}$.
 
 C'est bien une base : la famille est orthogonale et sans vecteur nul, donc libre
-([§ 3.3](03-orthogonalite-et-pythagore.md)), et elle compte $n$ vecteurs.
+([§ 5.3](05-orthogonalite-et-pythagore.md)), et elle compte $n$ vecteurs.
 
 Deux conséquences immédiates :
 
 - **Coordonnées gratuites** : $x=\sum_j\langle x,e_j\rangle\,e_j$ — chaque coordonnée est un
   simple produit scalaire, sans résolution de système.
 - **Identité de Parseval** : $\|x\|^2=\sum_j\langle x,e_j\rangle^2$ — un Pythagore à $n$ termes
-  (§ 3.2), appliqué à la décomposition ci-dessus.
+  (§ 5.2), appliqué à la décomposition ci-dessus.
 
 > 🔑 **En base orthonormée, tout devient une somme de carrés.** C'est la raison technique pour
 > laquelle les sommes de carrés sont omniprésentes en statistique : ce sont les normes, lues dans
@@ -34,7 +34,7 @@ Deux conséquences immédiates :
 
 ---
 
-## 7.2 Matrices orthogonales et isométries
+## 9.2 Matrices orthogonales et isométries
 
 Soit $O$ la matrice dont les **lignes** sont les $e_j$. Alors
 
@@ -54,7 +54,7 @@ signe du déterminant, qui vaut $\pm1$).
 
 ---
 
-## 7.3 Gram–Schmidt : une BON adaptée existe toujours
+## 9.3 Gram–Schmidt : une BON adaptée existe toujours
 
 > **Théorème.** Étant donné $F$ de dimension $d$, il existe une BON $(e_1,\dots,e_n)$ de
 > $\mathbb R^n$ dont les $d$ premiers vecteurs engendrent $F$ et les $n-d$ suivants $F^\perp$.
@@ -62,7 +62,7 @@ signe du déterminant, qui vaut $\pm1$).
 Le procédé de **Gram–Schmidt** le construit explicitement : partant d'une base $(u_1,\dots,u_d)$
 de $F$, on pose $e_1=u_1/\|u_1\|$, puis à chaque étape on retranche à $u_k$ ses projections sur
 les $e_j$ déjà construits — c'est la
-[projection du module 4](04-projection-orthogonale.md) — et on normalise :
+[projection du module 6](06-projection-orthogonale.md) — et on normalise :
 
 $$w_k=u_k-\sum_{j<k}\langle u_k,e_j\rangle\,e_j,\qquad e_k=\frac{w_k}{\|w_k\|}$$
 
@@ -75,7 +75,7 @@ tout l'intérêt.
 
 ---
 
-## 7.4 L'exemple à connaître : la base de Helmert
+## 9.4 L'exemple à connaître : la base de Helmert
 
 Pour $F=\text{Vect}(\mathbf 1)$ en dimension 3 :
 
@@ -88,7 +88,7 @@ $$\langle x,e_1\rangle=\sqrt3\,\bar x
 \langle x,e_2\rangle^2+\langle x,e_3\rangle^2=\sum_i(x_i-\bar x)^2$$
 
 **Une coordonnée pour la moyenne, $n-1$ pour la dispersion.** La décomposition du
-[module 6](06-degres-de-liberte-et-centrage.md) devient une simple séparation de
+[module 8](08-degres-de-liberte-et-centrage.md) devient une simple séparation de
 coordonnées.
 
 > 🔑 **Vous venez de faire tout le travail géométrique du théorème de Fisher–Cochran.** Il ne
@@ -100,9 +100,9 @@ coordonnées.
 
 ---
 
-## 7.5 Simulations
+## 9.5 Simulations
 
-### S7.1 — Une base adaptée (Helmert) sépare moyenne et dispersion
+### S9.1 — Une base adaptée (Helmert) sépare moyenne et dispersion
 
 ```python
 import numpy as np
@@ -132,7 +132,7 @@ print("Parseval :", np.allclose(c @ c, x @ x))
 **Gardez cette fonction `helmert`** : c'est celle qu'utilise le
 [module 11 du cours de statistique](../../semestre2/statistique/mathematique/11-invariance-par-rotation-et-lemme-de-projection.md).
 
-### S7.2 — Une isométrie conserve tout
+### S9.2 — Une isométrie conserve tout
 
 ```python
 u, v = rng.normal(size=n), rng.normal(size=n)
@@ -142,7 +142,7 @@ print("normes             :", np.allclose(np.linalg.norm(O @ u), np.linalg.norm(
 print("déterminant        :", round(abs(np.linalg.det(O)), 12))   # 1
 ```
 
-### S7.3 — Gram–Schmidt, et la BON n'est pas unique
+### S9.3 — Gram–Schmidt, et la BON n'est pas unique
 
 ```python
 A = np.column_stack([np.ones(n), np.arange(1., n + 1.)])   # base de F = Vect(1, t)
@@ -165,28 +165,28 @@ légitime.
 
 ---
 
-## 7.6 Exercices
+## 9.6 Exercices
 
-**E7.1.** Vérifier que la base de Helmert du § 7.4 est bien orthonormée, et démontrer à la main
+**E9.1.** Vérifier que la base de Helmert du § 9.4 est bien orthonormée, et démontrer à la main
 les deux identités qui la suivent.
 
-**E7.2.** Orthonormaliser $(1,1,1)$ puis $(1,0,0)$ par **Gram–Schmidt**, et comparer le résultat
-à la base de Helmert du § 7.4. *Sont-elles identiques ? Pourquoi la BON adaptée à
+**E9.2.** Orthonormaliser $(1,1,1)$ puis $(1,0,0)$ par **Gram–Schmidt**, et comparer le résultat
+à la base de Helmert du § 9.4. *Sont-elles identiques ? Pourquoi la BON adaptée à
 $\text{Vect}(\mathbf 1)$ n'est-elle pas unique — et pourquoi cela n'a-t-il aucune importance ?*
 
-**E7.3.** Montrer que $OO^{\top}=I_n\iff O^{\top}O=I_n$, et en déduire que les **colonnes** d'une
+**E9.3.** Montrer que $OO^{\top}=I_n\iff O^{\top}O=I_n$, et en déduire que les **colonnes** d'une
 matrice orthogonale forment aussi une BON.
 
-**E7.4.** Montrer que le déterminant d'une matrice orthogonale vaut $\pm1$. *Donner un exemple de
+**E9.4.** Montrer que le déterminant d'une matrice orthogonale vaut $\pm1$. *Donner un exemple de
 chaque cas en dimension 2 et l'interpréter (rotation / symétrie).*
 
-**E7.5.** Soit $P$ le projecteur sur $F$ et $O$ une BON adaptée. Écrire la matrice de $P$ dans
+**E9.5.** Soit $P$ le projecteur sur $F$ et $O$ une BON adaptée. Écrire la matrice de $P$ dans
 cette base. *(Réponse : un bloc diagonal de $d$ uns suivi de $n-d$ zéros.) Retrouver ainsi
-$\operatorname{tr}(P)=\dim F$ du § 4.5 — sans calcul.*
+$\operatorname{tr}(P)=\dim F$ du § 6.5 — sans calcul.*
 
 ---
 
-## 7.7 À retenir
+## 9.7 À retenir
 
 - **BON** : $\langle e_j,e_k\rangle=\delta_{jk}$ ; coordonnées = produits scalaires ;
   **Parseval** $\|x\|^2=\sum_j\langle x,e_j\rangle^2$.
@@ -198,6 +198,6 @@ $\operatorname{tr}(P)=\dim F$ du § 4.5 — sans calcul.*
 
 ---
 
-⬅️ [Module 6 — Degrés de liberté et centrage](06-degres-de-liberte-et-centrage.md) ·
-➡️ [Module 8 — Le dictionnaire géométrique des statistiques](08-dictionnaire-geometrique-des-statistiques.md) ·
+⬅️ [Module 8 — Degrés de liberté et centrage](08-degres-de-liberte-et-centrage.md) ·
+➡️ [Module 10 — Le dictionnaire géométrique des statistiques](10-dictionnaire-geometrique-des-statistiques.md) ·
 🏠 [Sommaire](README.md)

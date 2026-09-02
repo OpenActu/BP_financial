@@ -1,26 +1,26 @@
-# Module 6 — Degrés de liberté : le cas $\text{Vect}(\mathbf 1)$ ⭐
+# Module 8 — Degrés de liberté : le cas $\text{Vect}(\mathbf 1)$ ⭐
 
-**Durée : 45 min.** Prérequis : modules [1](01-produit-scalaire-et-norme.md) à [5](05-supplementaire-orthogonal-et-dimension.md). ⭐ **Le module qui donne son sens au « $n-1$ ».**
+**Durée : 45 min.** Prérequis : modules [1](01-espace-vectoriel.md) à [7](07-supplementaire-orthogonal-et-dimension.md). ⭐ **Le module qui donne son sens au « $n-1$ ».**
 
 > **La question traitée.** Dans $\mathbb R^n$, soit $\mathbf 1=(1,\dots,1)$ et $x=(x_1,\dots,x_n)$. Montrer que la projection orthogonale de $x$ sur $\text{Vect}(\mathbf 1)$ est $\bar x\,\mathbf 1$ ; en déduire que le vecteur des écarts $(x_i-\bar x)_i$ appartient à
 > $\text{Vect}(\mathbf 1)^\perp$ ; donner la dimension de ce sous-espace.
 
-**Ce qui est en jeu.** La réponse au troisième point est $n-1$ — et c'est la réponse à la question *« pourquoi divise-t-on par $n-1$ ? »*. Ce n'est pas une convention de calcul mais une **contrainte géométrique**, celle du [§ 5.3](05-supplementaire-orthogonal-et-dimension.md) appliquée à une seule direction. À la fin de ce module, ce doit être une évidence visuelle.
+**Ce qui est en jeu.** La réponse au troisième point est $n-1$ — et c'est la réponse à la question *« pourquoi divise-t-on par $n-1$ ? »*. Ce n'est pas une convention de calcul mais une **contrainte géométrique**, celle du [§ 7.3](07-supplementaire-orthogonal-et-dimension.md) appliquée à une seule direction. À la fin de ce module, ce doit être une évidence visuelle.
 
 ---
 
-## 6.1 Le cas décisif : $F=\text{Vect}(\mathbf 1)$
+## 8.1 Le cas décisif : $F=\text{Vect}(\mathbf 1)$
 
 ### 1. La projection sur $\text{Vect}(\mathbf 1)$ est $\bar x\,\mathbf 1$
 
-Appliquons la formule du § 4.2 avec $u=\mathbf 1$. Deux calculs :
+Appliquons la formule du § 6.2 avec $u=\mathbf 1$. Deux calculs :
 $$\langle x,\mathbf 1\rangle=\sum_i x_i=n\bar x
 \qquad\text{et}\qquad \|\mathbf 1\|^2=\langle\mathbf 1,\mathbf 1\rangle=n$$
 D'où
 $$p(x)=\frac{\langle x,\mathbf 1\rangle}{\|\mathbf 1\|^2}\,\mathbf 1=\frac{n\bar x}{n}\,\mathbf 1
 =\boxed{\;\bar x\,\mathbf 1\;}$$
 > 🔑 **La moyenne n'est pas un résumé arbitraire des données : c'est l'ombre de $x$ sur la
-> direction $\mathbf 1$.** Autrement dit, c'est le vecteur constant le plus proche de $x$ — le point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 4.3 formalise : $\bar x = \arg\min_c \sum_i (x_i-c)^2$.
+> direction $\mathbf 1$.** Autrement dit, c'est le vecteur constant le plus proche de $x$ — le point le plus proche parmi tous les « tous égaux à $c$ ». Ce que le § 6.3 formalise : $\bar x = \arg\min_c \sum_i (x_i-c)^2$.
 
 ### 2. Le vecteur des écarts est dans $\text{Vect}(\mathbf 1)^\perp$
 
@@ -31,18 +31,18 @@ direct le confirme :
 
 $$\langle \tilde x,\mathbf 1\rangle=\sum_i (x_i-\bar x)=\sum_i x_i-n\bar x=n\bar x-n\bar x=0$$
 
-> ⚠️ **Retenez cette identité $\sum_i(x_i-\bar x)=0$ pour ce qu'elle est** : non pas une astuce de calcul, mais **une contrainte linéaire** que les écarts subissent. Elle dit que le vecteur des écarts n'est pas libre dans $\mathbb R^n$ : il est confiné à un **hyperplan** ([§ 5.3](05-supplementaire-orthogonal-et-dimension.md)) — celui d'équation $\sum_i u_i=0$.
+> ⚠️ **Retenez cette identité $\sum_i(x_i-\bar x)=0$ pour ce qu'elle est** : non pas une astuce de calcul, mais **une contrainte linéaire** que les écarts subissent. Elle dit que le vecteur des écarts n'est pas libre dans $\mathbb R^n$ : il est confiné à un **hyperplan** ([§ 7.3](07-supplementaire-orthogonal-et-dimension.md)) — celui d'équation $\sum_i u_i=0$.
 
 ### 3. La dimension : $n-1$
 
-$\text{Vect}(\mathbf 1)^\perp=\{u\in\mathbb R^n:\;\sum_i u_i=0\}$ est le noyau de la forme linéaire **non nulle** $u\mapsto\sum_i u_i$ — c'est donc un hyperplan au sens du [§ 5.3](05-supplementaire-orthogonal-et-dimension.md), avec $a=\mathbf 1$. Le théorème du rang ([§ 5.2](05-supplementaire-orthogonal-et-dimension.md)) donne
+$\text{Vect}(\mathbf 1)^\perp=\{u\in\mathbb R^n:\;\sum_i u_i=0\}$ est le noyau de la forme linéaire **non nulle** $u\mapsto\sum_i u_i$ — c'est donc un hyperplan au sens du [§ 7.3](07-supplementaire-orthogonal-et-dimension.md), avec $a=\mathbf 1$. Le théorème du rang ([§ 7.2](07-supplementaire-orthogonal-et-dimension.md)) donne
 $$\dim \text{Vect}(\mathbf 1)^\perp = n-1$$
-C'est le cas particulier $\dim F=1$ de la formule générale $\dim F^\perp=n-\dim F$ du [§ 5.1](05-supplementaire-orthogonal-et-dimension.md). Cet hyperplan — celui des vecteurs de somme nulle, donc des vecteurs centrés — est noté $H$ dans toute la suite du cours ([module 9](09-covariance-et-produit-scalaire.md)) :
+C'est le cas particulier $\dim F=1$ de la formule générale $\dim F^\perp=n-\dim F$ du [§ 7.1](07-supplementaire-orthogonal-et-dimension.md). Cet hyperplan — celui des vecteurs de somme nulle, donc des vecteurs centrés — est noté $H$ dans toute la suite du cours ([module 11](11-covariance-et-produit-scalaire.md)) :
 $$H=\text{Vect}(\mathbf 1)^\perp=\Bigl\{u\in\mathbb R^n:\ \sum_i u_i=0\Bigr\},\qquad \dim H=n-1$$
 
 ---
 
-## 6.2 La figure complète
+## 8.2 La figure complète
 $$\mathbb R^n=\underbrace{\text{Vect}(\mathbf 1)}_{\dim\,1}\;\oplus\;\underbrace{\text{Vect}(\mathbf 1)^\perp}_{\dim\,n-1},
 \qquad x=\underbrace{\bar x\,\mathbf 1}_{\text{la moyenne}}+\underbrace{\tilde x}_{\text{la dispersion}}$$
 Et Pythagore relie les deux morceaux :
@@ -57,13 +57,13 @@ la bonne base.
 
 ---
 
-## 6.3 La matrice de centrage
+## 8.3 La matrice de centrage
 
 Dans le cas $F=\text{Vect}(\mathbf 1)$, les deux projecteurs s'écrivent explicitement. Avec $J=\mathbf 1\mathbf 1^{\top}$ la matrice remplie de 1 :
 $$P_{\text{Vect}(\mathbf 1)}=\frac{1}{n}J
 \qquad\text{et}\qquad
 M=I_n-\frac{1}{n}J$$
-$M$ est la **matrice de centrage** : $Mx$ n'est autre que le vecteur des écarts $\tilde x$. Vérifiez ces trois points — c'est l'exercice E6.2 :
+$M$ est la **matrice de centrage** : $Mx$ n'est autre que le vecteur des écarts $\tilde x$. Vérifiez ces trois points — c'est l'exercice E8.2 :
 
 | Propriété                  | Lecture                                                       |
 | -------------------------- | ------------------------------------------------------------- |
@@ -73,7 +73,7 @@ $M$ est la **matrice de centrage** : $Mx$ n'est autre que le vecteur des écarts
 
 ---
 
-## 6.4 Généralisation : quand $\dim F=2$
+## 8.4 Généralisation : quand $\dim F=2$
 
 Rien dans ce module n'est propre à $\dim F=1$. Prenons $t=(1,2,\dots,n)$ et
 $F=\text{Vect}(\mathbf 1,\,t)$ — le sous-espace des droites $y=a+bt$ :
@@ -91,9 +91,9 @@ pente. Le $n-2$ d'une régression linéaire simple n'a pas d'autre origine.
 
 ---
 
-## 6.5 Simulations
+## 8.5 Simulations
 
-### S6.1 — La projection sur $\text{Vect}(\mathbf 1)$ et Pythagore
+### S8.1 — La projection sur $\text{Vect}(\mathbf 1)$ et Pythagore
 
 ```python
 import numpy as np
@@ -117,7 +117,7 @@ print(f"   ‖x‖² = {x @ x:.2f} = {p @ p:.2f} (moyenne) + {r @ r:.2f} (disper
 La dernière ligne est König–Huygens, lue comme un Pythagore. **Refaites-la avec des données
 centrées** : le premier terme s'annule, et toute la norme passe dans la dispersion.
 
-### S6.2 — La matrice de centrage et la trace qui compte les degrés de liberté
+### S8.2 — La matrice de centrage et la trace qui compte les degrés de liberté
 
 ```python
 M = np.eye(n) - np.ones((n, n)) / n
@@ -135,7 +135,7 @@ print("valeurs propres :", np.unique(vp, return_counts=True))   # 0 (×1) et 1 (
 écrasée — et $n-1$ valeurs propres 1 — l'hyperplan, laissé intact. Les degrés de liberté sont là,
 littéralement comptés.
 
-### S6.3 — Le passage à $\dim F=2$
+### S8.3 — Le passage à $\dim F=2$
 
 ```python
 t = np.arange(1., n + 1.)
@@ -153,28 +153,28 @@ Les résidus d'une régression subissent **deux** contraintes linéaires, pas un
 
 ---
 
-## 6.6 Exercices
+## 8.6 Exercices
 
-**E6.1.** Refaire le § 6.1 avec $n=5$ et $x=(2,4,4,4,6)$ : calculer $p(x)$, $\tilde x$, vérifier
+**E8.1.** Refaire le § 8.1 avec $n=5$ et $x=(2,4,4,4,6)$ : calculer $p(x)$, $\tilde x$, vérifier
 $\sum_i\tilde x_i=0$ et König–Huygens numériquement.
 
-**E6.2.** Vérifier à la main que $M=I_n-\frac1nJ$ est symétrique, idempotente, et que
+**E8.2.** Vérifier à la main que $M=I_n-\frac1nJ$ est symétrique, idempotente, et que
 $\operatorname{tr}(M)=n-1$. En déduire son rang **sans calculer de déterminant**. *(Piste : pour
-un projecteur, rang = trace — voir § 4.5.)*
+un projecteur, rang = trace — voir § 6.5.)*
 
-**E6.3.** Déterminer $\ker M$ et $\operatorname{im}M$, puis vérifier le théorème du rang
-([§ 5.2](05-supplementaire-orthogonal-et-dimension.md)) sur $M$. *Pourquoi
+**E8.3.** Déterminer $\ker M$ et $\operatorname{im}M$, puis vérifier le théorème du rang
+([§ 7.2](07-supplementaire-orthogonal-et-dimension.md)) sur $M$. *Pourquoi
 $\ker M=\operatorname{im}(I_n-M)$ ? Que devient cette égalité pour un projecteur orthogonal
 quelconque ?*
 
-**E6.4.** Soit $t=(1,2,\dots,n)$ et $F=\text{Vect}(\mathbf 1,\,t)$.
+**E8.4.** Soit $t=(1,2,\dots,n)$ et $F=\text{Vect}(\mathbf 1,\,t)$.
 1. Montrer que $\dim F=2$ dès que $n\ge 2$.
 2. En déduire $\dim F^\perp$.
 3. Quel nombre de degrés de liberté un test sur la pente d'une régression simple doit-il donc
    utiliser ? *(Réponse au module 7 du
    [cours sur la loi de Student](../../semestre3/statistique/loi-de-student/07-student-en-regression.md).)*
 
-**E6.5 — orientée finance.** `import_societe.py` calcule `VAR_20` et `VAR_120` en variance de
+**E8.5 — orientée finance.** `import_societe.py` calcule `VAR_20` et `VAR_120` en variance de
 **population** (`ddof=0`, diviseur $n$). Recalculer les deux colonnes avec le diviseur $n-1$ sur
 un CSV de `docs/raw/data/quotes/`. *De quel facteur diffèrent-elles ? Laquelle des deux fenêtres
 est la plus sensible au choix du diviseur, et pourquoi le script a-t-il raison de diviser par $n$
@@ -182,7 +182,7 @@ pour une quantité purement descriptive ?*
 
 ---
 
-## 6.7 À retenir
+## 8.7 À retenir
 
 - **Sur $\text{Vect}(\mathbf 1)$** : $p(x)=\bar x\,\mathbf 1$, résidu = vecteur des écarts,
   contraint par $\sum_i(x_i-\bar x)=0$.
@@ -195,6 +195,6 @@ pour une quantité purement descriptive ?*
 
 ---
 
-⬅️ [Module 5 — Supplémentaire orthogonal, noyau, rang](05-supplementaire-orthogonal-et-dimension.md) ·
-➡️ [Module 7 — Bases orthonormées et isométries](07-bases-orthonormees-et-isometries.md) ·
+⬅️ [Module 7 — Supplémentaire orthogonal, noyau, rang](07-supplementaire-orthogonal-et-dimension.md) ·
+➡️ [Module 9 — Bases orthonormées et isométries](09-bases-orthonormees-et-isometries.md) ·
 🏠 [Sommaire](README.md)

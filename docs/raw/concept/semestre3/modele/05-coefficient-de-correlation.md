@@ -18,7 +18,7 @@ $$\underbrace{\operatorname{Var}(V)}_{\text{variance totale}} = \underbrace{ r_{
 
 et $\rho_{V,T}^2 = \cos^2\theta$, où $\theta$ est l'angle entre les vecteurs **centrés** $t=(t_i)$ et $v=(v_i)$ de $\mathbb{R}^n$ : c'est la part de variance expliquée, autrement dit le $R^2$ de la régression simple. Les moindres carrés ne sont rien d'autre que la **projection orthogonale** de $v$ sur la droite engendrée par $t$.
 
-> 📐 La projection orthogonale et l'identité de Pythagore qui sous-tendent cette décomposition sont traitées aux modules [3](../../semestre1/algebre/03-orthogonalite-et-pythagore.md) et [4](../../semestre1/algebre/04-projection-orthogonale.md) du cours d'algèbre.
+> 📐 La projection orthogonale et l'identité de Pythagore qui sous-tendent cette décomposition sont traitées aux modules [5](../../semestre1/algebre/05-orthogonalite-et-pythagore.md) et [6](../../semestre1/algebre/06-projection-orthogonale.md) du cours d'algèbre.
 
 ---
 

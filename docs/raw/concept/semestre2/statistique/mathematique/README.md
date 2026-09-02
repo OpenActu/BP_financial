@@ -175,7 +175,7 @@ L'**inégalité de Jensen**, énoncée et admise au [§ 2.5](02-esperance.md), r
 biais de $S$, le drag de volatilité, la prime de risque.
 
 > 📐 **Le module 4 a un jumeau déterministe.** Le
-> [module 9 du cours d'algèbre](../../../semestre1/algebre/09-covariance-et-produit-scalaire.md) traite la
+> [module 11 du cours d'algèbre](../../../semestre1/algebre/11-covariance-et-produit-scalaire.md) traite la
 > covariance **empirique** — celle de $n$ nombres déjà observés — et démontre qu'elle est un
 > produit scalaire. Le module 4 ci-dessus traite la covariance **théorique**, celle de deux
 > variables aléatoires. Mêmes propriétés, mêmes conséquences, deux objets distincts : ne les

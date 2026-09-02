@@ -1,7 +1,7 @@
 # Module 7 — Convexité en dimension $n$
 
 **Durée : 1 h 15.** Prérequis : [module 6](06-minimisation-convexe.md), et le
-[module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md) ($\Sigma$ est une matrice de
+[module 11 d'algèbre](../../algebre/11-covariance-et-produit-scalaire.md) ($\Sigma$ est une matrice de
 Gram).
 
 > **La question traitée.** Comment reconnaître une fonction convexe de plusieurs variables — et
@@ -82,7 +82,7 @@ $A=\begin{pmatrix}0&0\\0&-1\end{pmatrix}$ a ses mineurs dominants nuls et n'est 
 
 *Démonstration.* $H_q=2\Sigma$, et $\Sigma\succeq0$ **toujours** — parce que $\Sigma$ est la
 matrice de **Gram** des vecteurs centrés
-([module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md)) : pour tout $w$,
+([module 11 d'algèbre](../../algebre/11-covariance-et-produit-scalaire.md)) : pour tout $w$,
 $w^{\top}\Sigma w=\operatorname{Var}\big(\sum_iw_iX_i\big)\ge0$, une variance ne pouvant pas être
 négative. $\blacksquare$
 
@@ -122,7 +122,7 @@ L'inégalité ci-dessus **est** l'énoncé, et il vaut la peine de le lire lente
 **Le cas d'égalité.** Il y a égalité si et seulement si les deux vecteurs de rendements sont
 **colinéaires de même sens** — c'est-à-dire $\rho=1$. La diversification ne rapporte rien
 exactement quand il n'y a rien à diversifier ; la géométrie et l'intuition coïncident, via le cas
-d'égalité de Cauchy–Schwarz ([module 2 d'algèbre](../../algebre/02-cauchy-schwarz-et-angle.md)).
+d'égalité de Cauchy–Schwarz ([module 3 d'algèbre](../../algebre/03-cauchy-schwarz-et-angle.md)).
 
 > ⚠️ **Ce théorème ne protège que contre un excès de risque, jamais contre la perte.** Il porte
 > sur $\sigma$, pas sur le rendement ; et $\sigma$ n'est un bon résumé du risque que si les queues

@@ -44,7 +44,7 @@ $$\boxed{\;\operatorname{Var}(r_V-h\,r_M)=\underbrace{\operatorname{Var}(r_V)(1-
 | Projection orthogonale ([lecture géométrique](../../semestre3/modele/05-coefficient-de-correlation.md)) | On **retranche la composante commune**, on garde l'orthogonale |
 
 > ⭐ **Couvrir, c'est projeter.** Le portefeuille couvert est le **résidu** de la projection
-> orthogonale de $r_V$ sur $r_M$ ([algèbre § 4](../../semestre1/algebre/04-projection-orthogonale.md)). Ce qui
+> orthogonale de $r_V$ sur $r_M$ ([algèbre § 6](../../semestre1/algebre/06-projection-orthogonale.md)). Ce qui
 > reste est, par construction, **non corrélé** à l'instrument de couverture : c'est la définition
 > même de « avoir enlevé le marché ».
 

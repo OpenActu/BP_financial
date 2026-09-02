@@ -37,7 +37,7 @@ littéralement inchangée. Les surfaces de niveau sont des **sphères**, et une 
 elle-même.
 
 > 🔑 **C'est la rencontre exacte entre l'algèbre et la probabilité.** Le
-> [module 7 du cours d'algèbre](../../../semestre1/algebre/07-bases-orthonormees-et-isometries.md) a établi
+> [module 9 du cours d'algèbre](../../../semestre1/algebre/09-bases-orthonormees-et-isometries.md) a établi
 > qu'une matrice orthogonale conserve les normes ; le § 9.2 a établi que la densité gaussienne ne
 > dépend que de la norme. La proposition ci-dessus est la simple mise bout à bout des deux.
 
@@ -70,7 +70,7 @@ n'est que la mise en forme des § 11.1 et 7.2.
 **Démonstration.** Choisissons une base orthonormée $(u_1,\dots,u_n)$ **adaptée** : les $d$
 premiers vecteurs engendrent $F$, les $n-d$ suivants engendrent $F^\perp$ — son existence est
 garantie par Gram–Schmidt
-([§ 7.3 du cours d'algèbre](../../../semestre1/algebre/07-bases-orthonormees-et-isometries.md)). Soit $O$ la
+([§ 9.3 du cours d'algèbre](../../../semestre1/algebre/09-bases-orthonormees-et-isometries.md)). Soit $O$ la
 matrice orthogonale dont les lignes sont ces vecteurs, et $\mathbf Y=O\mathbf Z$.
 
 Par le § 11.1, $Y_1,\dots,Y_n$ sont i.i.d. $\mathcal N(0,1)$. Or $Y_j=\langle\mathbf Z,u_j\rangle$,

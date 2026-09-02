@@ -54,7 +54,7 @@ $$\int_{A(D)}f(y)\,dy=\lvert\det A\rvert\int_Df(Ax)\,dx .$$
 | $A$ | $\det A$ | Effet |
 |---|---|---|
 | $\lambda I_n$ | $\lambda^n$ | Dilate d'un facteur $\lambda^n$ |
-| Rotation | $1$ | **Conserve** les volumes ([algèbre § 7](../../algebre/07-bases-orthonormees-et-isometries.md)) |
+| Rotation | $1$ | **Conserve** les volumes ([algèbre § 9](../../algebre/09-bases-orthonormees-et-isometries.md)) |
 | Projection | $0$ | Écrase : l'image est de volume nul |
 | $\operatorname{diag}(\sigma_1,\dots,\sigma_n)$ | $\prod\sigma_i$ | Étire chaque axe séparément |
 
@@ -137,7 +137,7 @@ $$\int_0^{2\pi}\!\!\int_0^{\pi}\!\!\int_0^{R}r^2\sin\theta\,dr\,d\theta\,d\phi
 
 Le facteur $r^2$ — encore un jacobien — est ce qui explique que **le volume se concentre près de
 la surface en grande dimension**, phénomène qui rend l'intuition géométrique trompeuse dès
-$n\ge5$ (voir S2.1 du [cours d'algèbre](../../algebre/02-cauchy-schwarz-et-angle.md)).
+$n\ge5$ (voir S3.1 du [cours d'algèbre](../../algebre/03-cauchy-schwarz-et-angle.md)).
 
 ---
 

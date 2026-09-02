@@ -55,13 +55,14 @@ C'est le maillon faible le plus fréquent, et il est **rédhibitoire pour Fisher
 
 | Ligne du tableau ci-dessous | Module d'algèbre |
 |---|---|
-| Produit scalaire | [1 — Produit scalaire, norme, distance](../../../semestre1/algebre/01-produit-scalaire-et-norme.md) |
-| Sous-espace vectoriel, dimension | [5 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
-| Projection orthogonale | [4 — La projection orthogonale](../../../semestre1/algebre/04-projection-orthogonale.md) |
-| Supplémentaire orthogonal | [5 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md) |
-| Degrés de liberté, le $n-1$ | [6 — Degrés de liberté : le cas Vect(1)](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md) |
-| Théorème de Pythagore | [3 — Orthogonalité et Pythagore](../../../semestre1/algebre/03-orthogonalite-et-pythagore.md) |
-| Base orthonormée, isométrie | [7 — Bases orthonormées et isométries](../../../semestre1/algebre/07-bases-orthonormees-et-isometries.md) |
+| Produit scalaire | [2 — Produit scalaire, norme, distance](../../../semestre1/algebre/02-produit-scalaire-et-norme.md) |
+| Sous-espace vectoriel, $\text{Vect}$ | [4 — Sous-espaces, Vect et familles génératrices](../../../semestre1/algebre/04-sous-espaces-et-familles-generatrices.md) |
+| Dimension | [7 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/07-supplementaire-orthogonal-et-dimension.md) |
+| Projection orthogonale | [6 — La projection orthogonale](../../../semestre1/algebre/06-projection-orthogonale.md) |
+| Supplémentaire orthogonal | [7 — Supplémentaire orthogonal, noyau, rang](../../../semestre1/algebre/07-supplementaire-orthogonal-et-dimension.md) |
+| Degrés de liberté, le $n-1$ | [7 — Degrés de liberté : le cas Vect(1)](../../../semestre1/algebre/08-degres-de-liberte-et-centrage.md) |
+| Théorème de Pythagore | [5 — Orthogonalité et Pythagore](../../../semestre1/algebre/05-orthogonalite-et-pythagore.md) |
+| Base orthonormée, isométrie | [9 — Bases orthonormées et isométries](../../../semestre1/algebre/09-bases-orthonormees-et-isometries.md) |
 
 | Notion                              | Ce qu'il faut savoir faire                                                                   |
 | ----------------------------------- | -------------------------------------------------------------------------------------------- |
@@ -89,7 +90,7 @@ Dans $\mathbb R^n$, soit $\mathbf 1=(1,\dots,1)$ et $x=(x_1,\dots,x_n)$.
 
 > ➡️ Le corrigé complet de cet exercice — les trois points, la figure d'ensemble et la lecture de
 > Pythagore qui en découle — est au § 6.1 du
-> [module 6 du cours d'algèbre](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md).
+> [module 8 du cours d'algèbre](../../../semestre1/algebre/08-degres-de-liberte-et-centrage.md).
 
 ---
 

@@ -31,7 +31,7 @@ $$\boxed{\;\operatorname{Var}(X)=E(X^2)-E(X)^2\;}$$
 $$E\bigl((X-\mu)^2\bigr)=E\bigl(X^2-2\mu X+\mu^2\bigr)=E(X^2)-2\mu E(X)+\mu^2=E(X^2)-\mu^2
 \qquad\blacksquare$$
 
-> 🔑 **On y reconnaît le Pythagore du [cours d'algèbre](../../../semestre1/algebre/README.md)**  ([§ 6.2](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md)) : $\|x\|^2=\|\bar x\mathbf 1\|^2+\|\tilde x\|^2$. Même identité, écrite dans deux cadres — l'un descriptif, l'autre probabiliste.
+> 🔑 **On y reconnaît le Pythagore du [cours d'algèbre](../../../semestre1/algebre/README.md)**  ([§ 8.2](../../../semestre1/algebre/08-degres-de-liberte-et-centrage.md)) : $\|x\|^2=\|\bar x\mathbf 1\|^2+\|\tilde x\|^2$. Même identité, écrite dans deux cadres — l'un descriptif, l'autre probabiliste.
 
 **Corollaire immédiat** : $E(X^2)\ge E(X)^2$, puisqu'une variance est positive. C'est le cas
 $g(x)=x^2$ de l'inégalité de Jensen ([§ 2.5](02-esperance.md)).
@@ -49,7 +49,7 @@ la loi de [TCL](12-theoreme-central-limite.md).
 Deux lectures :
 
 - **$b$ disparaît.** Translater ne change pas la dispersion. C'est exactement l'invariance par
-  translation de la covariance empirique du [§ 9.2 du cours d'algèbre](../../../semestre1/algebre/09-covariance-et-produit-scalaire.md) : les deux formes
+  translation de la covariance empirique du [§ 11.2 du cours d'algèbre](../../../semestre1/algebre/11-covariance-et-produit-scalaire.md) : les deux formes
   sont aveugles au niveau.
 - **$a$ entre au carré.** La variance n'est **pas** homogène à $X$ ; l'écart-type l'est. C'est
   pourquoi on rapporte toujours un $\sigma$, jamais un $\sigma^2$, quand on parle en unités

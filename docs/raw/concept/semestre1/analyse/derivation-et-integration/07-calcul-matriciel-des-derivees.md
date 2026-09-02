@@ -157,7 +157,7 @@ Si de plus $X$ est de rang plein, $H_f\succ0$ : le minimum est **unique**.
 
 📐 **Et géométriquement**, l'équation normale $X^{\top}(y-X\hat\beta)=0$ dit exactement que **le
 résidu est orthogonal aux colonnes de $X$** : c'est la
-[projection orthogonale](../../algebre/04-projection-orthogonale.md), obtenue ici par le calcul, là
+[projection orthogonale](../../algebre/06-projection-orthogonale.md), obtenue ici par le calcul, là
 sans aucun calcul.
 
 ---
@@ -264,7 +264,7 @@ coefficient, puis par la différentielle du § 7.3. *Combien de lignes chacune ?
 
 **E7.2.** Calculer $\nabla_\beta\lVert y-X\beta\rVert^2$ et $H_\beta$, puis retrouver les
 équations normales. *Que devient l'unicité si deux colonnes de $X$ sont proportionnelles ?
-Interpréter en termes de [rang](../../algebre/05-supplementaire-orthogonal-et-dimension.md).*
+Interpréter en termes de [rang](../../algebre/07-supplementaire-orthogonal-et-dimension.md).*
 
 **E7.3.** Vérifier que le formulaire redonne, pour $p=2$ et $X=[\mathbf 1\ \ T]$, exactement les
 deux équations partielles de [`modele.md`](../../../../modele.md), étape 1.

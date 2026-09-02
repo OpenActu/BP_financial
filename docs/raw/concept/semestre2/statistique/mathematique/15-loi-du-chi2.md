@@ -129,7 +129,7 @@ géométrique du § 15.1, le carré de sa norme suit un $\chi^2(n-1)$.
 > 🔑 **Un degré de liberté a été consommé par l'estimation de $\mu$.** C'est la formulation qui
 > se généralise : estimer $p$ paramètres coûte $p$ degrés de liberté. La géométrie sous-jacente
 > est celle du
-> [module 6 du cours d'algèbre](../../../semestre1/algebre/06-degres-de-liberte-et-centrage.md).
+> [module 8 du cours d'algèbre](../../../semestre1/algebre/08-degres-de-liberte-et-centrage.md).
 
 ### Conséquence : pourquoi le diviseur $n-1$
 

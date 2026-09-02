@@ -59,7 +59,7 @@ La minimisation se fait en deux temps : $$\min_{v_0,r} S(v_0,r) \;=\; \min_r\Big
 |---|---|
 | [Convexité](concept/semestre1/analyse/convexite/06-minimisation-convexe.md) | Les trois théorèmes admis à l'étape 1 : local $=$ global, unicité, point critique suffisant (le § 6.6 relit la preuve entière) |
 | [Dérivation et intégration](concept/semestre1/analyse/derivation-et-integration/07-calcul-matriciel-des-derivees.md) | Les équations normales $\hat\beta=(X^\top X)^{-1}X^\top y$, Hessienne comprise |
-| [Algèbre linéaire](concept/semestre1/algebre/04-projection-orthogonale.md) | La projection orthogonale et Pythagore, derrière la lecture géométrique de l'étape 5 |
+| [Algèbre linéaire](concept/semestre1/algebre/06-projection-orthogonale.md) | La projection orthogonale et Pythagore, derrière la lecture géométrique de l'étape 5 |
 | [Loi de Student](concept/semestre3/statistique/loi-de-student/07-student-en-regression.md) | La loi exacte de la statistique de l'étape 8 |
 
 ## Ce que cette preuve alimente

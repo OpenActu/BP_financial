@@ -1,6 +1,6 @@
 # Module 1 — Ensembles convexes
 
-**Durée : 45 min.** Prérequis : aucun, hormis le produit scalaire du[module 1 d'algèbre](../../algebre/01-produit-scalaire-et-norme.md).
+**Durée : 45 min.** Prérequis : aucun, hormis le produit scalaire du[module 2 d'algèbre](../../algebre/02-produit-scalaire-et-norme.md).
 
 > **La question traitée.** Avant les fonctions convexes, les ensembles : lesquels, et pourquoi
 > ceux-là ?
@@ -102,7 +102,7 @@ $$\operatorname{conv}(A)=\Big\{\sum_{k=1}^m\lambda_k a_k\ :\ m\in\mathbb N^*,\ a
 
 ## 1.5 Projection sur un convexe fermé
 
-Le [module 4 d'algèbre](../../algebre/04-projection-orthogonale.md) projette sur un **sous-espace**. Le résultat vaut en réalité sur n'importe quel convexe fermé, et c'est la convexité — non la linéarité — qui le porte.
+Le [module 6 d'algèbre](../../algebre/06-projection-orthogonale.md) projette sur un **sous-espace**. Le résultat vaut en réalité sur n'importe quel convexe fermé, et c'est la convexité — non la linéarité — qui le porte.
 
 > **Théorème (projection).** Soit $C\subset\mathbb R^d$ **convexe fermé non vide** et $x\in\mathbb R^d$. Il existe un **unique** $p_C(x)\in C$ tel que $\|x-p_C(x)\|=\min_{y\in C}\|x-y\|$. Il est caractérisé par
 > $$\big\langle\, x-p_C(x),\ y-p_C(x)\,\big\rangle\;\le\;0\qquad\text{pour tout }y\in C .$$

@@ -122,7 +122,7 @@ $$\sum_{i=1}^n\lvert u_iv_i\rvert\;\le\;\Big(\sum_i\lvert u_i\rvert^p\Big)^{1/p}
 Young terme à terme, sommer : le membre de droite devient $\frac1p+\frac1q=1$. $\blacksquare$
 
 > 🔑 **Le cas $p=q=2$ est Cauchy–Schwarz** — donc $\lvert\rho\rvert\le1$, démontré au
-> [module 2 d'algèbre](../../algebre/02-cauchy-schwarz-et-angle.md) par le discriminant. Deux
+> [module 3 d'algèbre](../../algebre/03-cauchy-schwarz-et-angle.md) par le discriminant. Deux
 > chemins, un seul théorème : le discriminant est la trace de la **convexité** de
 > $t\mapsto\lVert u+tv\rVert^2$, qui est une parabole de coefficient dominant positif.
 
@@ -139,7 +139,7 @@ l'homogénéité$\lVert\alpha u\rVert=\lvert\alpha\rvert \lVert u\rVert$, elle d
 > $$\lVert\lambda u+(1-\lambda)v\rVert\le\lambda\lVert u\rVert+(1-\lambda)\lVert v\rVert$$
 
 > 🔑 **Cette proposition est le socle du module 8.** L'écart type d'un portefeuille est une norme
-> ([module 9 d'algèbre](../../algebre/09-covariance-et-produit-scalaire.md) : $\Sigma$ est une
+> ([module 11 d'algèbre](../../algebre/11-covariance-et-produit-scalaire.md) : $\Sigma$ est une
 > matrice de Gram, donc $\sigma(w)=\sqrt{w^{\top}\Sigma w}$ est la norme d'un vecteur). **Donc
 > $\sigma$ est convexe** — et « la diversification ne peut pas augmenter le risque au-delà de la
 > moyenne des risques » est un théorème, pas un slogan.
@@ -206,7 +206,7 @@ PER surestime toujours le PER du panier.
 
 **E4.4.** Déduire Cauchy–Schwarz de Hölder, puis retrouver $\lvert\rho\rvert\le1$. *Comparer avec
 la démonstration par le discriminant du
-[module 2 d'algèbre](../../algebre/02-cauchy-schwarz-et-angle.md) : laquelle donne le cas d'égalité
+[module 3 d'algèbre](../../algebre/03-cauchy-schwarz-et-angle.md) : laquelle donne le cas d'égalité
 le plus vite ?*
 
 **E4.5.** Montrer que $w\mapsto\lVert w\rVert_1=\sum_i\lvert w_i\rvert$ est convexe. *(C'est la

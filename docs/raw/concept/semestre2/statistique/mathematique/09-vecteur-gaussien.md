@@ -1,7 +1,7 @@
 # Module 9 — Le vecteur gaussien
 
 **Durée : 1 h.** Prérequis : module [8](08-addition-de-lois-et-stabilite-gaussienne.md), et la
-notion de norme dans $\mathbb R^n$ (module 1 du [cours d'algèbre](../../../semestre1/algebre/01-produit-scalaire-et-norme.md)).
+notion de norme dans $\mathbb R^n$ (module 2 du [cours d'algèbre](../../../semestre1/algebre/02-produit-scalaire-et-norme.md)).
 
 > **La question traitée.** Le [§ 8.5](08-addition-de-lois-et-stabilite-gaussienne.md) a laissé
 > une hypothèse en suspens : que faut-il exiger d'un couple de gaussiennes **dépendantes** pour

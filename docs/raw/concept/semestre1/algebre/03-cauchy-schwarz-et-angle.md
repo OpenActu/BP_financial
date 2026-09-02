@@ -1,14 +1,14 @@
-# Module 2 — Cauchy–Schwarz et l'angle
+# Module 3 — Cauchy–Schwarz et l'angle
 
-**Durée : 45 min.** Prérequis : [module 1](01-produit-scalaire-et-norme.md).
+**Durée : 45 min.** Prérequis : modules [1](01-espace-vectoriel.md) et [2](02-produit-scalaire-et-norme.md).
 
-> **La question traitée.** Le quotient $\dfrac{\langle u,v\rangle}{\|u\|\,\|v\|}$ a-t-il un sens géométrique ? Autrement dit : peut-on parler d'**angle** entre deux vecteurs de $\mathbb R^n$,  alors que rien dans la définition du § 1.1 ne mentionne d'angle ?
+> **La question traitée.** Le quotient $\dfrac{\langle u,v\rangle}{\|u\|\,\|v\|}$ a-t-il un sens géométrique ? Autrement dit : peut-on parler d'**angle** entre deux vecteurs de $\mathbb R^n$,  alors que rien dans la définition du § 2.1 ne mentionne d'angle ?
 
 **Ce qui est en jeu.** La réponse est oui, et elle repose sur une unique inégalité. C'est elle qui, transposée aux données, donne $|\rho|\le 1$ — et qui explique ce que signifie *exactement* le cas d'égalité.
 
 ---
 
-## 2.1 L'inégalité
+## 3.1 L'inégalité
 
 > **Inégalité de Cauchy–Schwarz.**
 > $$|\langle u,v\rangle|\;\le\;\|u\|\,\|v\|$$
@@ -16,12 +16,12 @@
 
 > 📐 **Rappel — colinéaires.** $u$ et $v$ sont **colinéaires** lorsque l'un est un multiple de l'autre : il existe $\lambda\in\mathbb R$ tel que $u=\lambda v$, **ou** il existe $\mu\in\mathbb R$ tel que $v=\mu u$. La disjonction n'est pas une coquetterie d'écriture : si $v=0$ et $u\ne 0$, seule la seconde forme convient — $v=0\cdot u$ — car aucun $\lambda$ ne vérifie $u=\lambda\cdot 0$. La formulation **symétrique** équivalente évite ce cas d'espèce : il existe $(\alpha,\beta)\ne(0,0)$ tel que $\alpha u+\beta v=0$, autrement dit la famille $\{u,v\}$ est **liée**. Géométriquement : $u$ et $v$ sont portés par une même droite passant par l'origine, le vecteur nul étant colinéaire à tout vecteur.
 
-**Démonstration (le trinôme).** Pour $v\ne 0$ et tout $t\in\mathbb R$, développons par l'identité du § 1.2 :
+**Démonstration (le trinôme).** Pour $v\ne 0$ et tout $t\in\mathbb R$, développons par l'identité du § 2.2 :
 $$P(t)=\|u+tv\|^2=\|v\|^2\,t^2+2\langle u,v\rangle\,t+\|u\|^2\;\ge\;0$$
 Trois points à vérifier, et c'est toute la démonstration.
 
 **1. $P$ est bien du second degré.** 
-Son coefficient dominant est $\|v\|^2$, et l'hypothèse $v\ne 0$ jointe à la propriété **définie positive** du [§ 1.1](01-produit-scalaire-et-norme.md) donne $\|v\|^2>0$ — strictement, et pas seulement $\ge 0$. C'est là, et nulle part ailleurs, que sert l'exclusion du cas $v=0$ : sans elle $P$ dégénère en la constante $\|u\|^2$, dont le discriminant ne veut plus rien dire (exercice **E2.1**).
+Son coefficient dominant est $\|v\|^2$, et l'hypothèse $v\ne 0$ jointe à la propriété **définie positive** du [§ 2.1](02-produit-scalaire-et-norme.md) donne $\|v\|^2>0$ — strictement, et pas seulement $\ge 0$. C'est là, et nulle part ailleurs, que sert l'exclusion du cas $v=0$ : sans elle $P$ dégénère en la constante $\|u\|^2$, dont le discriminant ne veut plus rien dire (exercice **E3.1**).
 
 **2. $P$ est de signe constant.** 
 $P(t)=\|u+tv\|^2$ est un carré de norme : il est $\ge 0$ pour **tout** $t$ réel, sans condition. Encore la même propriété — c'est la seule hypothèse de fond de toute la démonstration.
@@ -40,16 +40,16 @@ $$\Delta=b^2-4ac=4\langle u,v\rangle^2-4\|u\|^2\|v\|^2\le 0
 et en prenant la racine carrée, $|\langle u,v\rangle|\le\|u\|\,\|v\|$.
 
 **Cas particulier :** 
-Observons spécifiquement le cas où $|\langle u,v \rangle|=\|u\|\|v\|$. Dans ce cas $\Delta=0$ et l'égalité correspond à un discriminant nul, donc à un minimum nul : la racine double $t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2=P(t_0)=0$, donc $\|u+t_0v\|=0$, donc — par la **réciproque** du cas d'égalité du § 1.1 — $u+t_0v=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
+Observons spécifiquement le cas où $|\langle u,v \rangle|=\|u\|\|v\|$. Dans ce cas $\Delta=0$ et l'égalité correspond à un discriminant nul, donc à un minimum nul : la racine double $t_0=-\dfrac{b}{2a}=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ vérifie $\|u+t_0v\|^2=P(t_0)=0$, donc $\|u+t_0v\|=0$, donc — par la **réciproque** du cas d'égalité du § 2.1 — $u+t_0v=0$, c'est-à-dire $u=-t_0v$ : colinéarité. $\blacksquare$
 
 > 🔑 **La positivité du trinôme n'est rien d'autre que la propriété « définie positive » du
-> § 1.1.** Toute l'inégalité tient dans le fait qu'un carré de norme ne peut pas être négatif.
+> § 2.1.** Toute l'inégalité tient dans le fait qu'un carré de norme ne peut pas être négatif.
 
-> 🔑 **Le point $t_0$ n'est pas un artefact de calcul.** $t_0=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ est le réel qui rend $\|u+tv\|$ minimal : $-t_0v$ est la **projection orthogonale** de $u$ sur la droite engendrée par $v$, et $\min P$ est le carré de la distance de $u$ à cette droite. La démonstration ci-dessus est donc, sans le dire, celle du [module 4](04-projection-orthogonale.md) — Cauchy–Schwarz dit simplement que cette distance existe, et le cas d'égalité qu'elle est nulle.
+> 🔑 **Le point $t_0$ n'est pas un artefact de calcul.** $t_0=-\dfrac{\langle u,v\rangle}{\|v\|^2}$ est le réel qui rend $\|u+tv\|$ minimal : $-t_0v$ est la **projection orthogonale** de $u$ sur la droite engendrée par $v$, et $\min P$ est le carré de la distance de $u$ à cette droite. La démonstration ci-dessus est donc, sans le dire, celle du [module 6](06-projection-orthogonale.md) — Cauchy–Schwarz dit simplement que cette distance existe, et le cas d'égalité qu'elle est nulle.
 
 ---
 
-## 2.2 L'angle est bien défini
+## 3.2 L'angle est bien défini
 
 De l'inégalité on obtient immédiatement que le quotient $-1 \leq \dfrac{\langle u,v\rangle}{\|u\|\|v\|}\leq 1$ donc appartient à $[-1,1]$ pour $u,v$ non nuls : il existe donc un **unique** $\theta\in[0,\pi]$ tel que
 
@@ -61,29 +61,29 @@ C'est la **définition** de l'angle entre deux vecteurs de $\mathbb R^n$ — et 
 | ------------ | -------- | ---------------------------------------------------------------------- |
 | $1$          | $0°$     | même direction, même sens                                              |
 | $0{,}71$     | $45°$    | —                                                                      |
-| $0$          | $90°$    | **orthogonaux** — voir le [module 3](03-orthogonalite-et-pythagore.md) |
+| $0$          | $90°$    | **orthogonaux** — voir le [module 5](05-orthogonalite-et-pythagore.md) |
 | $-1$         | $180°$   | même direction, sens opposé                                            |
 
 ---
 
-## 2.3 Ce que l'inégalité devient sur des données
+## 3.3 Ce que l'inégalité devient sur des données
 
-> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens exact des trois propriétés du [§ 1.1](01-produit-scalaire-et-norme.md). Ce n'est ni une analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son noyau étant la droite des séries constantes. Le [**module 9**](09-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois traduit.
+> 📐 **Préambule — ce qui autorise cette section.** Traduire une inégalité **vectorielle** en énoncé **statistique** n'est licite que si la covariance *est* un produit scalaire, au sens exact des trois propriétés du [§ 2.1](02-produit-scalaire-et-norme.md). Ce n'est ni une analogie ni une commodité de notation, et la vérification réserve une surprise : la covariance est bien symétrique et bilinéaire, mais seulement **positive** — pas *définie* positive, son noyau étant la droite des séries constantes. Le [**module 11**](11-covariance-et-produit-scalaire.md) lui est entièrement consacré ; la présente section en admet le résultat pour montrer tout de suite ce que Cauchy–Schwarz devient une fois traduit.
 
 > ⚠️ **C'est exactement l'origine de $|\rho|\le 1$.** Appliquée aux vecteurs **centrés**
 > $\tilde x=x-\bar x\mathbf 1$ et $\tilde y=y-\bar y\mathbf 1$, Cauchy–Schwarz donne
 > $$\operatorname{Cov}(x,y)^2\le\operatorname{Var}(x)\operatorname{Var}(y)$$
 > et le cas d'égalité — colinéarité de $\tilde x$ et $\tilde y$ — signifie que les points sont **exactement alignés**.
 
-Le dictionnaire qui autorise cette traduction est dressé au [module 8](08-dictionnaire-geometrique-des-statistiques.md) et démontré au [module 9](09-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la seule raison d'être de ce module dans un cours orienté statistique.
+Le dictionnaire qui autorise cette traduction est dressé au [module 10](10-dictionnaire-geometrique-des-statistiques.md) et démontré au [module 11](11-covariance-et-produit-scalaire.md) ; le résultat est annoncé ici parce qu'il est la seule raison d'être de ce module dans un cours orienté statistique.
 
-> 🔑 Le document [`modele.md`](../../../modele.md) obtient $|\rho|\le 1$ à son étape 6 par un argument de variance positive. C'est la **même démonstration** que celle du § 2.1, écrite deux fois : « une variance est positive » et « un carré de norme est positif » sont le même énoncé.
+> 🔑 Le document [`modele.md`](../../../modele.md) obtient $|\rho|\le 1$ à son étape 6 par un argument de variance positive. C'est la **même démonstration** que celle du § 3.1, écrite deux fois : « une variance est positive » et « un carré de norme est positif » sont le même énoncé.
 
 ---
 
-## 2.4 Simulation
+## 3.4 Simulation
 
-### S2.1 — L'inégalité, le cas d'égalité, et l'angle
+### S3.1 — L'inégalité, le cas d'égalité, et l'angle
 
 ```python
 import numpy as np
@@ -113,20 +113,20 @@ print(f"angle moyen à l'orthogonalité : {np.degrees(np.arccos(np.abs(cos))).me
 
 ---
 
-## 2.5 Exercices
+## 3.5 Exercices
 
-**E2.1.** Refaire la démonstration du § 2.1 en traitant explicitement le cas $v=0$. *Pourquoi faut-il l'écarter, et pourquoi l'inégalité reste-t-elle vraie ?*
+**E3.1.** Refaire la démonstration du § 3.1 en traitant explicitement le cas $v=0$. *Pourquoi faut-il l'écarter, et pourquoi l'inégalité reste-t-elle vraie ?*
 
-**E2.2.** Déduire de Cauchy–Schwarz l'**inégalité triangulaire** $\|u+v\|\le\|u\|+\|v\|$.
-*(Piste : partir de l'identité de développement du § 1.2 et majorer le terme croisé.)*
+**E3.2.** Déduire de Cauchy–Schwarz l'**inégalité triangulaire** $\|u+v\|\le\|u\|+\|v\|$.
+*(Piste : partir de l'identité de développement du § 2.2 et majorer le terme croisé.)*
 
-**E2.3.** Deux séries de rendements ont une corrélation de $0{,}30$. Quel angle sépare leurs vecteurs centrés ? Et pour $0{,}90$ ? *Commenter l'écart entre l'intuition « 0,9 c'est presque 1 » et la réalité géométrique.* **(Réponses : $72{,}5°$ et $25{,}8°$.)**
+**E3.3.** Deux séries de rendements ont une corrélation de $0{,}30$. Quel angle sépare leurs vecteurs centrés ? Et pour $0{,}90$ ? *Commenter l'écart entre l'intuition « 0,9 c'est presque 1 » et la réalité géométrique.* **(Réponses : $72{,}5°$ et $25{,}8°$.)**
 
-**E2.4.** Appliquer Cauchy–Schwarz à $u=x$ et $v=\mathbf 1$. Quelle inégalité classique entre $\sum_i x_i$ et $\sum_i x_i^2$ obtient-on ? *Quand y a-t-il égalité, et que cela signifie-t-il sur les données ?*
+**E3.4.** Appliquer Cauchy–Schwarz à $u=x$ et $v=\mathbf 1$. Quelle inégalité classique entre $\sum_i x_i$ et $\sum_i x_i^2$ obtient-on ? *Quand y a-t-il égalité, et que cela signifie-t-il sur les données ?*
 
 ---
 
-## 2.6 À retenir
+## 3.6 À retenir
 
 - **$|\langle u,v\rangle|\le\|u\|\|v\|$**, démonstration par le discriminant d'un trinôme positif.
 - **Égalité $\iff$ colinéarité** — c'est le cas d'égalité qui porte l'information, pas l'inégalité.
@@ -135,6 +135,6 @@ print(f"angle moyen à l'orthogonalité : {np.degrees(np.arccos(np.abs(cos))).me
 
 ---
 
-⬅️ [Module 1 — Produit scalaire, norme, distance](01-produit-scalaire-et-norme.md) ·
-➡️ [Module 3 — Orthogonalité et Pythagore](03-orthogonalite-et-pythagore.md) ·
+⬅️ [Module 2 — Produit scalaire, norme, distance](02-produit-scalaire-et-norme.md) ·
+➡️ [Module 4 — Sous-espaces, Vect et familles génératrices](04-sous-espaces-et-familles-generatrices.md) ·
 🏠 [Sommaire](README.md)

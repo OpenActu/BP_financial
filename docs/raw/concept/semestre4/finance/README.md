@@ -17,8 +17,8 @@ applications d'énoncés déjà prouvés ailleurs dans le dépôt.
 | La forme canonique $\varphi(r)=\operatorname{Var}(T)(r-r_{\min})^2+\operatorname{Var}_{\min}$ | [`modele.md`](../../semestre3/modele/04-forme-canonique.md) | **Module 6** : la pénalité exacte d'une couverture mal dimensionnée |
 | $\operatorname{SE}$ de la pente, loi de Student | [Student § 7](../../semestre3/statistique/loi-de-student/07-student-en-regression.md) | **Module 6** : l'intervalle de confiance sur $\beta$ |
 | Jensen, $E[\log X]\le\log E[X]$ | [Convexité § 5](../../semestre1/analyse/convexite/05-jensen-probabiliste.md) | **Module 4** : le drag de volatilité |
-| $w^{\top}\Sigma w$ convexe, $\Sigma$ matrice de Gram | [Convexité § 7](../../semestre1/analyse/convexite/07-convexite-en-dimension-n.md), [Algèbre § 9](../../semestre1/algebre/09-covariance-et-produit-scalaire.md) | **Module 8** : Markowitz est un problème convexe |
-| Projection orthogonale et Pythagore | [Algèbre § 4](../../semestre1/algebre/04-projection-orthogonale.md) | **Module 6** : couvrir, c'est projeter |
+| $w^{\top}\Sigma w$ convexe, $\Sigma$ matrice de Gram | [Convexité § 7](../../semestre1/analyse/convexite/07-convexite-en-dimension-n.md), [Algèbre § 11](../../semestre1/algebre/11-covariance-et-produit-scalaire.md) | **Module 8** : Markowitz est un problème convexe |
+| Projection orthogonale et Pythagore | [Algèbre § 6](../../semestre1/algebre/06-projection-orthogonale.md) | **Module 6** : couvrir, c'est projeter |
 | Loi normale, premier passage, queues épaisses | [Statistique § 6f](../../semestre2/statistique/mathematique/06f-loi-normale.md), [§ 13](../../semestre2/statistique/mathematique/13-portee-et-limites-du-tcl.md) | **Module 3** : probabilité d'appel de marge |
 | Corrélations en régime de crise | [Statistique § 14](../../semestre2/statistique/mathematique/14-dependance-et-echec-du-tcl.md) | **Modules 3 et 9** : la diversification qui s'évapore |
 

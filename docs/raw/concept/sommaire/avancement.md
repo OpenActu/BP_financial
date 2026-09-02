@@ -1,4 +1,4 @@
-# Avancement — les 107 modules du parcours
+# Avancement — les 109 modules du parcours
 
 Un module par ligne, dans l'ordre où [`planning.md`](../../planning.md) demande de les suivre.
 La colonne **Fait** se coche à la main — `[ ]` devient `[x]` quand le module est acquis,
@@ -16,23 +16,25 @@ exercices compris.
 
 ## Semestre 1 — Les outils mathématiques
 
-**Volume : ≈ 28 h.**
+**Volume : ≈ 29 h 30.**
 
 ### [Algèbre linéaire euclidienne](../semestre1/algebre/README.md)
 
-**9 modules · 8 h.**
+**11 modules · 9 h 30.**
 
 | Fait | #   | Module                                                                                                                 | Durée  |
 | ---- | --- | ---------------------------------------------------------------------------------------------------------------------- | ------ |
-| [x]  | 1   | [Produit scalaire, norme, distance](../semestre1/algebre/01-produit-scalaire-et-norme.md)                              | 45 min |
-| [x ] | 2   | [Cauchy–Schwarz et l'angle](../semestre1/algebre/02-cauchy-schwarz-et-angle.md)                                        | 45 min |
-| [ ]  | 3   | [Orthogonalité et théorème de Pythagore](../semestre1/algebre/03-orthogonalite-et-pythagore.md)                        | 45 min |
-| [ ]  | 4   | [La projection orthogonale ⭐](../semestre1/algebre/04-projection-orthogonale.md)                                       | 1 h    |
-| [ ]  | 5   | [Supplémentaire orthogonal, noyau, rang](../semestre1/algebre/05-supplementaire-orthogonal-et-dimension.md)            | 45 min |
-| [ ]  | 6   | [Degrés de liberté : le cas $\text{Vect}(\mathbf 1)$ ⭐](../semestre1/algebre/06-degres-de-liberte-et-centrage.md)      | 45 min |
-| [ ]  | 7   | [Bases orthonormées, isométries, Gram–Schmidt](../semestre1/algebre/07-bases-orthonormees-et-isometries.md)            | 1 h    |
-| [ ]  | 8   | [Le dictionnaire géométrique des statistiques ⭐](../semestre1/algebre/08-dictionnaire-geometrique-des-statistiques.md) | 1 h    |
-| [ ]  | 9   | [La covariance comme produit scalaire ⭐](../semestre1/algebre/09-covariance-et-produit-scalaire.md)                    | 1 h 15 |
+| [ ]  | 1   | [L'espace vectoriel $\mathbb R^n$](../semestre1/algebre/01-espace-vectoriel.md)                                         | 45 min |
+| [x]  | 2   | [Produit scalaire, norme, distance](../semestre1/algebre/02-produit-scalaire-et-norme.md)                               | 45 min |
+| [x ] | 3   | [Cauchy–Schwarz et l'angle](../semestre1/algebre/03-cauchy-schwarz-et-angle.md)                                         | 45 min |
+| [ ]  | 4   | [Sous-espaces, $\text{Vect}$ et familles génératrices](../semestre1/algebre/04-sous-espaces-et-familles-generatrices.md) | 45 min |
+| [ ]  | 5   | [Orthogonalité et théorème de Pythagore](../semestre1/algebre/05-orthogonalite-et-pythagore.md)                         | 45 min |
+| [ ]  | 6   | [La projection orthogonale ⭐](../semestre1/algebre/06-projection-orthogonale.md)                                        | 1 h    |
+| [ ]  | 7   | [Supplémentaire orthogonal, noyau, rang](../semestre1/algebre/07-supplementaire-orthogonal-et-dimension.md)             | 45 min |
+| [ ]  | 8   | [Degrés de liberté : le cas $\text{Vect}(\mathbf 1)$ ⭐](../semestre1/algebre/08-degres-de-liberte-et-centrage.md)       | 45 min |
+| [ ]  | 9   | [Bases orthonormées, isométries, Gram–Schmidt](../semestre1/algebre/09-bases-orthonormees-et-isometries.md)             | 1 h    |
+| [ ]  | 10  | [Le dictionnaire géométrique des statistiques ⭐](../semestre1/algebre/10-dictionnaire-geometrique-des-statistiques.md)  | 1 h    |
+| [ ]  | 11  | [La covariance comme produit scalaire ⭐](../semestre1/algebre/11-covariance-et-produit-scalaire.md)                     | 1 h 15 |
 
 ### [Dérivation et intégration](../semestre1/analyse/derivation-et-integration/README.md)
 

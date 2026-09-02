@@ -54,9 +54,9 @@ corrélation résout (§ 4.4).
 | **Indépendance ⟹ nullité** | $X\perp\!\!\!\perp Y\Rightarrow\operatorname{Cov}(X,Y)=0$ | indépendance |
 
 > 🔑 **Symétrique, bilinéaire, positive : ce sont exactement les trois propriétés d'un produit
-> scalaire** ([§ 1.1 du cours d'algèbre](../../../semestre1/algebre/01-produit-scalaire-et-norme.md)). Ce n'est
+> scalaire** ([§ 2.1 du cours d'algèbre](../../../semestre1/algebre/02-produit-scalaire-et-norme.md)). Ce n'est
 > pas une coïncidence, et ce n'est pas une analogie : le
-> [module 9 du cours d'algèbre](../../../semestre1/algebre/09-covariance-et-produit-scalaire.md) démontre
+> [module 11 du cours d'algèbre](../../../semestre1/algebre/11-covariance-et-produit-scalaire.md) démontre
 > l'identification — avec la même réserve qu'ici, la positivité n'est pas **définie** ($X$
 > constante donne une variance nulle sans être nulle).
 
@@ -99,7 +99,7 @@ La normalisation par les deux écarts-types élimine les unités : $\rho$ est **
 donc comparable d'un couple de variables à un autre — ce que la covariance n'est pas.
 
 **Pourquoi $|\rho|\le 1$.** C'est l'inégalité de **Cauchy–Schwarz**
-([module 2 du cours d'algèbre](../../../semestre1/algebre/02-cauchy-schwarz-et-angle.md)) appliquée à la forme
+([module 3 du cours d'algèbre](../../../semestre1/algebre/03-cauchy-schwarz-et-angle.md)) appliquée à la forme
 bilinéaire du § 4.2 :
 
 $$\operatorname{Cov}(X,Y)^2\;\le\;\operatorname{Var}(X)\operatorname{Var}(Y)$$
@@ -113,7 +113,7 @@ signifie donc pas « très fort lien » : elle signifie **lien affine exact**.
 |---|---|
 | Invariance affine | $\rho_{aX+b,\;cY+d}=\operatorname{sgn}(ac)\,\rho_{X,Y}$ |
 | Cas extrêmes | $\rho=\pm1\iff Y=aX+b$ p.s. |
-| Lecture géométrique | $\rho=\cos\theta$ ([cours d'algèbre](../../../semestre1/algebre/09-covariance-et-produit-scalaire.md)) |
+| Lecture géométrique | $\rho=\cos\theta$ ([cours d'algèbre](../../../semestre1/algebre/11-covariance-et-produit-scalaire.md)) |
 
 > ⚠️ **$\rho=0{,}9$ n'est pas « presque 1 ».** Lu comme un cosinus, c'est un angle de $25{,}8°$ —
 > pas $0°$. Et $\rho^2=0{,}81$ : 19 % de la variance reste inexpliquée. L'intuition linéaire sur
@@ -262,7 +262,7 @@ volatilités.*
 
 **E4.6.** Montrer que $\operatorname{Cov}(X,Y)^2\le\operatorname{Var}(X)\operatorname{Var}(Y)$
 en étudiant le signe de $t\mapsto\operatorname{Var}(X+tY)$. *(Piste : c'est un trinôme positif —
-la démonstration exacte du [§ 2.1 du cours d'algèbre](../../../semestre1/algebre/02-cauchy-schwarz-et-angle.md).)*
+la démonstration exacte du [§ 3.1 du cours d'algèbre](../../../semestre1/algebre/03-cauchy-schwarz-et-angle.md).)*
 
 **E4.7.** Une corrélation vaut $0{,}7$. Quelle **part de la variance** est expliquée ? Quel angle
 géométrique cela représente-t-il ? *(Réponses : $49\,\%$ et $45{,}6°$.)*
@@ -282,7 +282,7 @@ géométrique cela représente-t-il ? *(Réponses : $49\,\%$ et $45{,}6°$.)*
   la variance est un cas particulier.
 - **Symétrique, bilinéaire, positive** — les trois propriétés d'un produit scalaire, ce qui n'est
   pas une image : voir le
-  [module 9 du cours d'algèbre](../../../semestre1/algebre/09-covariance-et-produit-scalaire.md).
+  [module 11 du cours d'algèbre](../../../semestre1/algebre/11-covariance-et-produit-scalaire.md).
 - **La bilinéarité donne $\operatorname{Var}(w^{\top}X)=w^{\top}\Sigma w$** sans aucune
   hypothèse — c'est la variance d'un portefeuille, et toute la diversification.
 - **$\rho=\operatorname{Cov}/(\sigma_X\sigma_Y)\in[-1,1]$** par Cauchy–Schwarz, sans dimension,

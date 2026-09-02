@@ -90,7 +90,7 @@ et le graphe de $h\mapsto f(a)+\langle\nabla f(a),h\rangle$ est le **plan tangen
 | Lecture | Énoncé | Conséquence |
 |---|---|---|
 | **Dérivée directionnelle** | $\partial_uf(a)=\langle\nabla f(a),u\rangle$ pour $\lVert u\rVert=1$ | Une seule quantité donne toutes les directions |
-| **Plus forte pente** | Le maximum de $\langle\nabla f,u\rangle$ est atteint en $u=\frac{\nabla f}{\lVert\nabla f\rVert}$ | Par **Cauchy–Schwarz** ([algèbre § 2](../../algebre/02-cauchy-schwarz-et-angle.md)) |
+| **Plus forte pente** | Le maximum de $\langle\nabla f,u\rangle$ est atteint en $u=\frac{\nabla f}{\lVert\nabla f\rVert}$ | Par **Cauchy–Schwarz** ([algèbre § 3](../../algebre/03-cauchy-schwarz-et-angle.md)) |
 | **Orthogonalité** | $\nabla f(a)\perp$ la ligne de niveau passant par $a$ | Les courbes de niveau coupent le gradient à angle droit |
 
 > 🔑 **La direction de plus forte pente est un cas d'égalité de Cauchy–Schwarz.** Le gradient
@@ -99,7 +99,7 @@ et le graphe de $h\mapsto f(a)+\langle\nabla f(a),h\rangle$ est le **plan tangen
 
 ⚠️ **Le gradient dépend du produit scalaire choisi.** Avec le produit scalaire canonique, c'est le
 vecteur des partielles ; avec un autre, ce serait autre chose. Dans tout ce cours, le produit
-scalaire est celui de l'[algèbre](../../algebre/01-produit-scalaire-et-norme.md) : $\sum_iu_iv_i$.
+scalaire est celui de l'[algèbre](../../algebre/02-produit-scalaire-et-norme.md) : $\sum_iu_iv_i$.
 
 ---
 

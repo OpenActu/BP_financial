@@ -49,13 +49,13 @@ Deux conséquences qu'il faut accepter d'emblée :
 
 | Semestre | Thème | Cours | Modules | Volume |
 |---|---|---|---|---|
-| **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 27 | ≈ 28 h |
+| **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 29 | ≈ 29 h 30 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, modèle, canal, encadrement | 27 | ≈ 38 h |
 | **4** | La décision | alpha, fondamentaux, trading, finance | 27 | ≈ 29 h 45 |
-| | | **10 cours** | **107** | **≈ 127 h 30** |
+| | | **10 cours** | **109** | **≈ 129 h** |
 
-> ℹ️ **Le nombre de modules est presque constant — 27, 26, 27, 27 — mais pas le
+> ℹ️ **Le nombre de modules est presque constant — 29, 26, 27, 27 — mais pas le
 > volume.** Le semestre 3 est le plus dense, parce que la loi de Student pèse
 > 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
@@ -70,7 +70,7 @@ lequel tout le reste se lit comme une suite de recettes.
 
 | Ordre | Cours | Modules | Volume |
 |---|---|---|---|
-| 1 | [Algèbre linéaire euclidienne](concept/semestre1/algebre/README.md) | 9 | 8 h |
+| 1 | [Algèbre linéaire euclidienne](concept/semestre1/algebre/README.md) | 11 | 9 h 30 |
 | 2 | [Dérivation et intégration](concept/semestre1/analyse/derivation-et-integration/README.md) | 9 | 10 h |
 | 3 | [La convexité](concept/semestre1/analyse/convexite/README.md) | 9 | 10 h |
 
@@ -81,7 +81,7 @@ parce que la convexité s'énonce avec des dérivées secondes.
 > 🔑 **À la fin du semestre 1, on sait lire une régression comme une projection**
 > — pas encore la démontrer, pas encore la tester, mais voir de quoi il s'agit.
 > C'est le module
-> [Dictionnaire géométrique des statistiques](concept/semestre1/algebre/08-dictionnaire-geometrique-des-statistiques.md)
+> [Dictionnaire géométrique des statistiques](concept/semestre1/algebre/10-dictionnaire-geometrique-des-statistiques.md)
 > qui fait cette bascule ; c'est le plus important du semestre.
 
 ---
