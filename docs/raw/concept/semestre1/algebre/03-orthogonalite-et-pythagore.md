@@ -66,6 +66,18 @@ Ce $u$ n'est pas tombé du ciel : c'est le vecteur **centré** de la série $x=(
 
 À l'inverse, $v=(1,\,1,\,2,\,-1)$ n'est **pas** orthogonal à $\text{Vect}(\mathbf 1)$ : $\langle v,\mathbf 1\rangle=3\neq0$. Conformément à la seconde remarque, un seul produit scalaire non nul suffit à le disqualifier, et le témoin est $\mathbf 1$ lui-même.
 
+**Exemple — un vecteur orthogonal à $\text{Vect}(\mathbf 1,t)$.** Cette fois $m=2$, et la proposition demande **deux** égalités, une par générateur :
+$$\langle u,\mathbf 1\rangle=\sum_{i=1}^n u_i=0
+\qquad\text{et}\qquad
+\langle u,t\rangle=\sum_{i=1}^n i\,u_i=0$$
+Toujours dans $\mathbb R^4$, avec $t=(1,2,3,4)$, prenons $u=(1,\,-1,\,-1,\,1)$ : sa somme est nulle, et $1-2-3+4=0$ également. Pour un élément quelconque $f=a\mathbf 1+bt$ du plan, la réciproque donne alors
+$$\langle u,f\rangle=a\,\langle u,\mathbf 1\rangle+b\,\langle u,t\rangle=a\cdot 0+b\cdot 0=0$$
+et ce, pour **tout** couple $(a,b)$ — deux additions ont couvert un plan entier.
+
+> ⚠️ **Plus le sous-espace grandit, plus son orthogonal rétrécit.** $\text{Vect}(\mathbf 1)\subset\text{Vect}(\mathbf 1,t)$, donc être orthogonal au second est **plus** exigeant. Le $u=(-2,\,0,\,-1,\,3)$ de l'exemple précédent le montre : il passe la première condition, mais $\langle u,t\rangle=-2+0-3+12=7\neq 0$ — orthogonal à la droite $\text{Vect}(\mathbf 1)$, pas au plan $\text{Vect}(\mathbf 1,t)$.
+
+D'où vient ce $u$, là encore : c'est le **résidu** d'un ajustement affine. La série $x=(12,\,12,\,14,\,18)$ a pour droite des moindres carrés $\hat x_i=9+2i$, soit $\hat x=9\,\mathbf 1+2\,t=(11,\,13,\,15,\,17)$, et $u=x-\hat x=(1,\,-1,\,-1,\,1)$. Que le résidu soit orthogonal aux **deux** générateurs n'est pas un hasard de cet exemple : c'est la définition même de l'ajustement au sens des moindres carrés — ce sont ses *équations normales*, démontrées au [module 4](04-projection-orthogonale.md). Le § 3.1 en donne déjà la moitié pratique : il n'y a que deux produits scalaires à annuler, quel que soit $n$.
+
 ---
 
 ## 3.2 Le théorème
