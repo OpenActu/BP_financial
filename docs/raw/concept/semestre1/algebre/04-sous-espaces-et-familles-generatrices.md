@@ -17,12 +17,12 @@ Prendre $\alpha=\beta=0$ montre qu'un sous-espace **contient toujours $0$** ; «
 
 Quelques exemples, et un contre-exemple, à garder en tête :
 
-| Partie de $\mathbb R^n$                                 | Sous-espace ?                                                              |
-| ------------------------------------------------------- | -------------------------------------------------------------------------- |
-| $\{0\}$ et $\mathbb R^n$ lui-même                       | Oui — les deux cas extrêmes, toujours licites                              |
-| $\{u:\sum_i u_i=0\}$, les vecteurs de **somme nulle**   | Oui — une somme de sommes nulles est nulle                                 |
-| $\{\lambda u:\lambda\in\mathbb R\}$ pour $u$ fixé       | Oui — c'est la droite dirigée par $u$                                      |
-| $\{u:\sum_i u_i=1\}$, les vecteurs de **somme $1$**     | **Non** — il ne contient pas $0$, et la somme de deux éléments en sort     |
+| Partie de $\mathbb R^n$                               | Sous-espace ?                                                          |
+| ----------------------------------------------------- | ---------------------------------------------------------------------- |
+| $\{0\}$ et $\mathbb R^n$ lui-même                     | Oui — les deux cas extrêmes, toujours licites                          |
+| $\{u:\sum_i u_i=0\}$, les vecteurs de **somme nulle** | Oui — une somme de sommes nulles est nulle                             |
+| $\{\lambda u:\lambda\in\mathbb R\}$ pour $u$ fixé     | Oui — c'est la droite dirigée par $u$                                  |
+| $\{u:\sum_i u_i=1\}$, les vecteurs de **somme $1$**   | **Non** — il ne contient pas $0$, et la somme de deux éléments en sort |
 
 > ⚠️ **« Sous-espace » n'est pas « sous-ensemble », et un sous-espace passe toujours par l'origine.** Une droite du plan qui ne passe pas par $0$ n'est pas un sous-espace. Cela n'a rien de contradictoire avec la régression : la droite d'équation $v=v_0+rt$ est **affine dans le plan $(t,v)$**, mais le vecteur $v_0\mathbf 1+r\,t$ qu'elle produit vit dans $\mathbb R^n$, où il appartient bel et bien au sous-espace $\text{Vect}(\mathbf 1,t)$. Le sous-espace n'est pas la droite qu'on dessine ; c'est l'ensemble des **séries de $n$ valeurs** qu'une telle droite peut engendrer.
 
@@ -72,13 +72,13 @@ Retirer $(1,1)$ ne change rien à l'espace engendré et rend l'écriture unique.
 
 Ils sont peu nombreux, et ce sont toujours les mêmes. Dans $\mathbb R^n$ — l'espace d'une série de $n$ observations —, avec $\mathbf 1=(1,1,\dots,1)$ et $t=(1,2,\dots,n)$ :
 
-| Sous-espace                         | Ce qu'il contient                                                         | Où il sert                                                            |
-| ----------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| $\text{Vect}(\mathbf 1)$            | $\{\lambda\mathbf 1\}$ — les séries **constantes**, une droite            | la moyenne — [module 8](08-degres-de-liberte-et-centrage.md)          |
-| $\text{Vect}(t)$                    | $\{\mu t\}$ — les séries **proportionnelles au temps**, une autre droite  | rarement seule, mais elle éclaire la précédente                       |
-| $\text{Vect}(\mathbf 1,t)$          | $\{a\mathbf 1+bt\}$ — les séries **affines** $(a+bi)_{i=1,\dots,n}$       | la droite des moindres carrés — [`modele.md`](../../../modele.md)     |
-| $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** ($^{\perp}$ : [module 5](05-orthogonalite-et-pythagore.md)) | les écarts à la moyenne, les $n-1$ degrés de liberté     |
-| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                                              | la régression multiple — [§ 6.6](06-projection-orthogonale.md)        |
+| Sous-espace                         | Ce qu'il contient                                                                           | Où il sert                                                        |
+| ----------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| $\text{Vect}(\mathbf 1)$            | $\{\lambda\mathbf 1\}$ — les séries **constantes**, une droite                              | la moyenne — [module 8](08-degres-de-liberte-et-centrage.md)      |
+| $\text{Vect}(t)$                    | $\{\mu t\}$ — les séries **proportionnelles au temps**, une autre droite                    | rarement seule, mais elle éclaire la précédente                   |
+| $\text{Vect}(\mathbf 1,t)$          | $\{a\mathbf 1+bt\}$ — les séries **affines** $(a+bi)_{i=1,\dots,n}$                         | la droite des moindres carrés — [`modele.md`](../../../modele.md) |
+| $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** ($^{\perp}$ : [module 5](05-orthogonalite-et-pythagore.md)) | les écarts à la moyenne, les $n-1$ degrés de liberté              |
+| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                                                                | la régression multiple — [§ 6.6](06-projection-orthogonale.md)    |
 
 Le troisième est **le** sous-espace du cours. Deux paramètres, $a$ et $b$, décrivent un plan de dimension $2$ logé dans un espace de dimension $n$ : c'est tout l'écart entre une série quelconque de $n$ clôtures et la droite qu'on lui ajuste.
 

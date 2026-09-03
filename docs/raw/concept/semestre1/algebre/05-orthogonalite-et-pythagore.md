@@ -28,9 +28,7 @@ Les sous-espaces en jeu sont ceux du [§ 4.4](04-sous-espaces-et-familles-genera
 
 *Sens direct ($\Rightarrow$).* Chaque $g_i$ est un vecteur **de** $F$. L'hypothèse $u\perp F$ portant sur *tout* $f\in F$, il suffit de l'appliquer à $f=g_i$, ce qui donne $\langle u,g_i\rangle=0$. Ce sens n'utilise pas que la famille engendre $F$, seulement qu'elle y vit.
 
-*Réciproque ($\Leftarrow$).* C'est le sens utile, et le seul où le caractère générateur sert.
-Donnons-nous $f\in F$ **quelconque**. Par définition d'une famille génératrice, il existe des
-réels $\lambda_1,\dots,\lambda_m$ tels que $f=\sum_{i=1}^m\lambda_ig_i$. La **linéarité à droite** du produit scalaire (§ 2.1 — la moitié de la bilinéarité que la symétrie offre gratuitement), étendue de deux à $m$ termes par récurrence immédiate, permet de sortir la somme du crochet :
+*Réciproque ($\Leftarrow$).* C'est le sens utile, et le seul où le caractère générateur sert. Donnons-nous $f\in F$ **quelconque**. Par définition d'une famille génératrice, il existe des réels $\lambda_1,\dots,\lambda_m$ tels que $f=\sum_{i=1}^m\lambda_ig_i$. La **linéarité à droite** du produit scalaire (§ 2.1 — la moitié de la bilinéarité que la symétrie offre gratuitement), étendue de deux à $m$ termes par récurrence immédiate, permet de sortir la somme du crochet :
 $$\langle u,f\rangle=\Bigl\langle u,\;\sum_{i=1}^m\lambda_ig_i\Bigr\rangle
 =\sum_{i=1}^m\lambda_i\,\langle u,g_i\rangle
 =\sum_{i=1}^m\lambda_i\cdot 0=0$$
