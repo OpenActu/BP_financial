@@ -11,7 +11,9 @@
 ## 4.1 Sous-espace vectoriel
 
 > **Définition (sous-espace vectoriel).** Une partie $F\subseteq\mathbb R^n$ est un **sous-espace vectoriel** si elle est non vide et **stable par combinaison linéaire** :
-> $$y,z\in F\ \text{ et }\ \alpha,\beta\in\mathbb R\quad\Longrightarrow\quad \alpha y+\beta z\in F$$
+> $$F \neq \mathbb 0;y,z\in F\ \text{ et }\ \alpha,\beta\in\mathbb R\quad\Longrightarrow\quad \alpha y+\beta z\in F$$
+
+**Ce que « stable » veut dire.** Une partie $F$ est dite **stable** par une opération lorsque cette opération, appliquée à des éléments de $F$, ne fait jamais sortir de $F$ : les données sont dans $F$, le résultat y est encore. Ici l'opération est la combinaison linéaire $(y,z,\alpha,\beta)\mapsto\alpha y+\beta z$, et la stabilité s'énonce donc : *toute combinaison linéaire d'éléments de $F$ est encore un élément de $F$*. Deux points à noter. C'est une propriété de $F$ **tout entier**, jamais d'un vecteur pris isolément — « ce vecteur est stable » n'a pas de sens. Et l'implication doit valoir pour **tous** les $y,z\in F$ et **tous** les $\alpha,\beta\in\mathbb R$ : un seul quadruplet qui en sort suffit à ruiner la stabilité, comme le montre la dernière ligne du tableau ci-dessous.
 
 Prendre $\alpha=\beta=0$ montre qu'un sous-espace **contient toujours $0$** ; « non vide et stable » et « contient $0$ et stable » sont donc deux formulations de la même chose. Il n'y a rien d'autre à retenir : la stabilité est, à elle seule, tout ce que les modules suivants utiliseront de $F$ — au [§ 6.3](06-projection-orthogonale.md), c'est elle qui autorise à dire que $p(x)-y$ appartient encore à $F$.
 
@@ -80,6 +82,18 @@ Ils sont peu nombreux, et ce sont toujours les mêmes. Dans $\mathbb R^n$ — l'
 | $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** ($^{\perp}$ : [module 5](05-orthogonalite-et-pythagore.md)) | les écarts à la moyenne, les $n-1$ degrés de liberté              |
 | $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                                                                | la régression multiple — [§ 6.6](06-projection-orthogonale.md)    |
 
+**Un exemple, sur la première ligne du tableau.** Prenons $n=5$ clôtures :
+$$x=(98,\;101,\;99,\;103,\;104)$$
+
+$\text{Vect}(\mathbf 1)$ est l'ensemble des **séries constantes** $\lambda\mathbf 1=(\lambda,\lambda,\lambda,\lambda,\lambda)$ : il y en a une infinité — $(0,\dots,0)$, $(100,\dots,100)$, $(101,\dots,101)$… — mais **un seul nombre $\lambda$ suffit à les désigner toutes**, ce qui est exactement le § 4.3 : la famille $(\mathbf 1)$ est génératrice, et ici libre, donc une base ; l'écriture est unique.
+
+« Ajuster une constante à $x$ », c'est choisir dans cet ensemble infini l'élément le plus proche de $x$. La réponse — démontrée au [module 6](06-projection-orthogonale.md), utilisée au [module 8](08-degres-de-liberte-et-centrage.md) — est $\lambda=\bar x=101$ :
+$$\hat x=101\,\mathbf 1=(101,101,101,101,101)\qquad\text{et}\qquad x-\hat x=(-3,\;0,\;-2,\;2,\;3)$$
+
+Le résidu est de **somme nulle** : il appartient à $\text{Vect}(\mathbf 1)^{\perp}$, la quatrième ligne du tableau. Une série de $5$ nombres s'est ainsi scindée en **$1$ nombre** — le niveau — et **$4$ degrés de liberté** — les écarts ; c'est tout le [module 7](07-supplementaire-orthogonal-et-dimension.md) en un exemple.
+
+**Où cela se voit dans le dépôt.** Les colonnes `E_20` et `E_120` de [`import_societe.py`](../../../../../python/import_societe.md) ne sont rien d'autre que ce $\lambda$, recalculé sur chaque fenêtre glissante. Et le test de Student du même script oppose précisément deux sous-espaces de ce tableau : sous l'hypothèse nulle, la pente est nulle et la droite ajustée se réduit à un élément de $\text{Vect}(\mathbf 1)$ ; un verdict `TEND_n = 0` dit donc « rien ne prouve qu'il faille sortir de $\text{Vect}(\mathbf 1)$ », et un verdict $\pm1$ dit « le plan $\text{Vect}(\mathbf 1,t)$ apporte quelque chose que la constante seule n'a pas ».
+
 Le troisième est **le** sous-espace du cours. Deux paramètres, $a$ et $b$, décrivent un plan de dimension $2$ logé dans un espace de dimension $n$ : c'est tout l'écart entre une série quelconque de $n$ clôtures et la droite qu'on lui ajuste.
 
 > 🔑 **Choisir un modèle linéaire, c'est choisir un sous-espace — rien de plus.** « Ajuster une constante » est le choix de $\text{Vect}(\mathbf 1)$, « ajuster une droite » celui de $\text{Vect}(\mathbf 1,t)$, « ajuster $p$ variables explicatives » celui de $\text{Vect}(\text{colonnes de }A)$. La méthode qui suit — projeter — est la **même** dans les trois cas ; seul le sous-espace change. C'est ce qui explique qu'un seul module, le [module 6](06-projection-orthogonale.md), suffise à traiter toutes les régressions du dépôt.
@@ -127,6 +141,9 @@ Les deux dernières lignes sont le § 4.3 en action : `G3` engendre exactement l
 ## 4.6 Exercices
 
 **E4.1.** Montrer que l'intersection de deux sous-espaces est un sous-espace. *Puis montrer, par un contre-exemple dans $\mathbb R^2$, que leur réunion n'en est généralement pas un.*
+**Preuve** : Soit $F$ et $G$ deux sous-espaces , $x \in F + G \implies x \in F, x \in G$
+
+$\beta u + \alpha v = 1$
 
 **E4.2.** Démontrer que $\text{Vect}(u_1,\dots,u_d)$ est le plus petit sous-espace contenant $u_1,\dots,u_d$, au sens de l'inclusion. *(La démonstration du § 4.2 tient en deux lignes : les réécrire sans les relire.)*
 
@@ -142,7 +159,7 @@ Les deux dernières lignes sont le § 4.3 en action : `G3` engendre exactement l
 
 ## 4.7 À retenir
 
-- **Sous-espace = non vide et stable par combinaison linéaire.** Il contient donc $0$ : un sous-espace passe toujours par l'origine, un sous-ensemble quelconque non.
+- **Sous-espace = non vide et stable par combinaison linéaire** — *stable* : appliquée à des éléments de $F$, l'opération ne fait pas sortir de $F$. Il contient donc $0$ : un sous-espace passe toujours par l'origine, un sous-ensemble quelconque non.
 - **$\text{Vect}(u_1,\dots,u_d)$ est l'ensemble de toutes les combinaisons linéaires** des $u_j$ — le plus petit sous-espace qui les contienne.
 - **Une famille génératrice décrit un ensemble infini par une liste finie**, et c'est le seul point qui compte : elle garantit l'**existence** des coefficients, jamais leur unicité.
 - **Le nombre de générateurs majore la dimension** ; les deux coïncident quand la famille est libre — une famille libre et génératrice est une **base**.
