@@ -63,6 +63,8 @@ et ce, pour **tout** couple $(a,b)$ — deux additions ont couvert un plan entie
 
 D'où vient ce $u$, là encore : c'est le **résidu** d'un ajustement affine. La série $x=(12,\,12,\,14,\,18)$ a pour droite des moindres carrés $\hat x_i=9+2i$, soit $\hat x=9\,\mathbf 1+2\,t=(11,\,13,\,15,\,17)$, et $u=x-\hat x=(1,\,-1,\,-1,\,1)$. Que le résidu soit orthogonal aux **deux** générateurs n'est pas un hasard de cet exemple : c'est la définition même de l'ajustement au sens des moindres carrés — ce sont ses *équations normales*, démontrées au [module 6](06-projection-orthogonale.md). Le § 5.1 en donne déjà la moitié pratique : il n'y a que deux produits scalaires à annuler, quel que soit $n$.
 
+**Orthogonalité d'une famille.** Une famille de vecteurs $w_1,\dots,w_k$ est **orthogonale** si ses vecteurs sont **deux à deux orthogonaux** : $w_i\perp w_j$ pour tous $i\neq j$. Elle est **orthonormée** si elle est orthogonale et chacun de ses vecteurs a pour norme $1$.
+
 ---
 
 ## 5.2 Le théorème
@@ -110,9 +112,7 @@ $$\Bigl\|\sum_{j=1}^{k}w_j\Bigr\|^2=\sum_{j=1}^{k-1}\|w_j\|^2+\|w_k\|^2=\sum_{j=
 
 ## 5.3 Familles orthogonales et indépendance linéaire
 
-> **Définition.** Une famille $w_1,\dots,w_k$ est **libre** — on dit aussi *linéairement indépendante* — si la seule combinaison linéaire qui donne le vecteur nul est celle dont **tous** les coefficients sont nuls:
->$$\sum_{j=1}^k\lambda_jw_j=0\quad\Longrightarrow\quad\lambda_1=\dots=\lambda_k=0$$
-> Une famille qui ne l'est pas est dite **liée**.
+Rappelons (§ [4.3](04-sous-espaces-et-familles-generatrices.md)) qu'une famille $w_1,\dots,w_k$ est **libre** si la seule combinaison linéaire qui donne $0$ est celle à coefficients tous nuls. Une famille qui ne l'est pas est dite **liée**.
 
 Trois formulations du même fait :
 - **aucune redondance** — aucun $w_j$ ne s'écrit comme combinaison des autres ; s'il le faisait, l'isoler produirait une relation nulle à coefficients non tous nuls ;
@@ -121,15 +121,18 @@ Trois formulations du même fait :
 
 > **Proposition.** Une famille orthogonale de vecteurs **non nuls** est libre.
 
-**Démonstration.** Si $\sum_j \lambda_j w_j=0$, le produit scalaire des deux membres avec $w_k$ donne $\lambda_k\|w_k\|^2=0$ — tous les autres termes s'annulent par orthogonalité — donc $\lambda_k=0$. $\blacksquare$
+**Démonstration.** Supposons que $\sum_j \lambda_j w_j = 0$. Prenons le produit scalaire des deux membres avec un vecteur $w_k$ quelconque de la famille :
+$$\left\langle \sum_j \lambda_j w_j, w_k\right\rangle = \langle 0, w_k \rangle = 0$$
+Par bilinéarité du produit scalaire, le membre de gauche devient
+$$\sum_j \lambda_j \langle w_j, w_k \rangle = 0$$
+Or, par l'hypothèse d'orthogonalité, $\langle w_j, w_k \rangle = 0$ pour tous $j \neq k$, et $\langle w_k, w_k \rangle = \|w_k\|^2$. Il reste donc
+$$\lambda_k \|w_k\|^2 = 0$$
+Puisque $w_k \neq 0$ par hypothèse, on a $\|w_k\|^2 > 0$ (propriété définie positive du § 2.1), donc $\lambda_k = 0$. Ceci valant pour tout $k$, on a bien $\lambda_1 = \dots = \lambda_k = 0$. $\blacksquare$
 
 > ⚠️ **« Non nuls » est une hypothèse, pas un ornement.** Le vecteur nul est orthogonal à tout le
-> monde (§ 5.1) : $\{w_1,0\}$ est donc une famille orthogonale parfaitement valide, et **liée**,
-> puisque $1\cdot 0=0$ est une relation à coefficient non nul. La démonstration le fait voir à
-> l'endroit exact où elle s'appuie dessus : de $\lambda_k\|w_k\|^2=0$ on ne conclut $\lambda_k=0$
-> que si $\|w_k\|^2\neq0$, c'est-à-dire $w_k\neq0$ — la propriété « définie positive » du § 2.1.
+> monde (§ 5.1) : $\{w_1,0\}$ est donc une famille orthogonale parfaitement valide, et **liée**, puisque $1\cdot 0=0$ est une relation à coefficient non nul. La démonstration le fait voir à l'endroit exact où elle s'appuie dessus : de $\lambda_k\|w_k\|^2=0$ on ne conclut $\lambda_k=0$ que si $\|w_k\|^2\neq0$, c'est-à-dire $w_k\neq0$ — la propriété « définie positive » du § 2.1.
 
-> 🔑 **L'orthogonalité est une forme forte, et vérifiable en un produit scalaire, de  l'indépendance linéaire.** C'est ce qui la rend commode : prouver qu'une famille est libre
+> 🔑 **L'orthogonalité est une forme forte, et vérifiable en un produit scalaire, de l'indépendance linéaire.** C'est ce qui la rend commode : prouver qu'une famille est libre
 > demande en général de résoudre un système ; ici, il suffit de $k(k-1)/2$ produits scalaires
 > nuls.
 
@@ -186,9 +189,15 @@ La ligne centrale est la plus parlante : **l'écart à Pythagore vaut exactement
 
 **E5.1.** Montrer que si $u\perp v$ alors $\|u-v\|=\|u+v\|$. *Interpréter avec les diagonales d'un parallélogramme (voir E2.2).*
 
+**Preuve:** 
+* $\|u-v\|^2=\|u\|^2+\|v\|^2-2\langle u,v\rangle=\|u\|^2+\|v\|^2$
+* $\|u+v\|^2=\|u\|^2+\|v\|^2+2\langle u,v\rangle=\|u\|^2+\|v\|^2$
+D'où l'égalité
+
 **E5.2.** Soit $\mathbf 1=(1,\dots,1)$. Caractériser les vecteurs $u$ tels que $u\perp\mathbf 1$.
-*(Réponse : $\sum_i u_i=0$.)* **C'est l'ensemble le plus important de tout le cours** — voir le
-[module 7](07-supplementaire-orthogonal-et-dimension.md).
+Soit l'ensemble $F$ contenant les vecteurs $u \in F.u\perp\mathbf 1$
+$\forall u_$
+*(Réponse : $\sum_i u_i=0$.)* **C'est l'ensemble le plus important de tout le cours** — voir le [module 7](07-supplementaire-orthogonal-et-dimension.md).
 
 **E5.3.** Retrouver König–Huygens $\sum_i(x_i-\bar x)^2=\sum_i x_i^2-n\bar x^2$ **par Pythagore seul**, sans développer le carré. *(Piste : admettre provisoirement que $x-\bar x\mathbf 1$ est orthogonal à $\bar x\mathbf 1$ — l'exercice E5.2 le donne.) Comparer la longueur des deux démonstrations.*
 
