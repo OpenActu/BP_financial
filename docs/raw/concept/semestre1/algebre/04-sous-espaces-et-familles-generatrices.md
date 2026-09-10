@@ -141,19 +141,109 @@ Les deux dernières lignes sont le § 4.3 en action : `G3` engendre exactement l
 ## 4.6 Exercices
 
 **E4.1.** Montrer que l'intersection de deux sous-espaces est un sous-espace. *Puis montrer, par un contre-exemple dans $\mathbb R^2$, que leur réunion n'en est généralement pas un.*
-**Preuve** : Soit $F$ et $G$ deux sous-espaces , $x \in F + G \implies x \in F, x \in G$
 
-$\beta u + \alpha v = 1$
+**Preuve.** Soient $F$ et $G$ deux sous-espaces de $\mathbb R^n$.
+
+*L'intersection.* Elle est non vide : $0\in F$ et $0\in G$ (§ 4.1), donc $0\in F\cap G$. Soient maintenant $x,y\in F\cap G$ et $\alpha,\beta\in\mathbb R$. De $x,y\in F$ et de la stabilité de $F$ vient $\alpha x+\beta y\in F$ ; de $x,y\in G$ et de la stabilité de $G$ vient $\alpha x+\beta y\in G$. Le vecteur $\alpha x+\beta y$ appartient donc aux deux, c'est-à-dire à $F\cap G$ : l'intersection est stable, c'est un sous-espace.
+
+*La réunion.* Prenons dans $\mathbb R^2$ les deux axes, $F=\text{Vect}\bigl((1,0)\bigr)$ et $G=\text{Vect}\bigl((0,1)\bigr)$. On a $(1,0)\in F\cup G$ et $(0,1)\in F\cup G$, mais leur somme $(1,1)$ a ses deux coordonnées non nulles : elle n'est ni dans $F$ ni dans $G$, donc pas dans $F\cup G$. La réunion n'est pas stable.
+
+> La différence tient à ceci : dans $F\cap G$, les deux hypothèses portent sur **le même** vecteur, et chaque sous-espace conclut de son côté ; dans $F\cup G$, chaque vecteur n'est garanti que dans **l'un des deux**, et aucun des deux ne sait quoi faire du couple. On montre d'ailleurs que $F\cup G$ est un sous-espace exactement lorsque $F\subseteq G$ ou $G\subseteq F$ — d'où le « généralement » de l'énoncé.
 
 **E4.2.** Démontrer que $\text{Vect}(u_1,\dots,u_d)$ est le plus petit sous-espace contenant $u_1,\dots,u_d$, au sens de l'inclusion. *(La démonstration du § 4.2 tient en deux lignes : les réécrire sans les relire.)*
 
+**Preuve.** Notons $V=\text{Vect}(u_1,\dots,u_d)=\bigl\{\lambda_1u_1+\dots+\lambda_du_d\ :\ \lambda_1,\dots,\lambda_d\in\mathbb R\bigr\}$. « Le plus petit sous-espace contenant les $u_j$ » demande deux choses, et il faut les établir toutes les deux.
+
+*$V$ est un sous-espace, et il contient les $u_j$.* La stabilité est le calcul du § 4.2 : une combinaison de deux combinaisons des $u_j$ se regroupe en une combinaison des $u_j$. Et $u_k\in V$ en prenant $\lambda_k=1$, les autres coefficients nuls.
+
+*Il est contenu dans tout sous-espace qui contient les $u_j$.* Soit $G$ un sous-espace tel que $u_1,\dots,u_d\in G$, et soit $x=\lambda_1u_1+\dots+\lambda_du_d$ un élément quelconque de $V$. Par stabilité, $G$ contient $\lambda_1u_1+\lambda_2u_2$ ; le combinant avec $\lambda_3u_3\in G$, il contient $\lambda_1u_1+\lambda_2u_2+\lambda_3u_3$ ; et ainsi de suite jusqu'à $x$. Donc $V\subseteq G$.
+
+$V$ est ainsi un sous-espace contenant les $u_j$ et inclus dans tous ceux qui les contiennent : c'est le plus petit au sens de l'inclusion, et il est le seul à l'être — deux minimaux $V$ et $V'$ vérifieraient $V\subseteq V'$ et $V'\subseteq V$.
+
+> Le second point est **tout** l'exercice : il fait intervenir un sous-espace $G$ *autre* que $V$. Une démonstration qui ne parle que de $V$ ne peut rien dire d'une minimalité, qui est une comparaison. Noter aussi que la stabilité est énoncée pour **deux** vecteurs : passer à $d$ termes est une récurrence, expédiée ci-dessus par « et ainsi de suite ».
+
 **E4.3.** Soit $t=(1,\dots,n)$ et $\bar t$ sa moyenne. Montrer que $\text{Vect}(\mathbf 1,t)=\text{Vect}(\mathbf 1,\,t-\bar t\,\mathbf 1)$. *Les deux familles engendrent le même plan ; qu'est-ce que la seconde a de mieux ? (Piste : calculer $\langle\mathbf 1,\,t-\bar t\,\mathbf 1\rangle$ — la notion est au [§ 5.1](05-orthogonalite-et-pythagore.md), le bénéfice au [§ 6.4](06-projection-orthogonale.md).)*
 
+**Preuve.** Posons $w=t-\bar t\,\mathbf 1$, et rappelons que $\bar t=\frac1n\sum_{i=1}^n i=\frac{n+1}{2}$.
+
+*Les deux plans sont le même.* On passe d'une famille à l'autre dans les deux sens, ce qui donne les deux inclusions :
+$$a\mathbf 1+b\,t=(a+b\bar t)\,\mathbf 1+b\,w\qquad\text{et}\qquad a\mathbf 1+b\,w=(a-b\bar t)\,\mathbf 1+b\,t$$
+La première égalité met tout élément de $\text{Vect}(\mathbf 1,t)$ dans $\text{Vect}(\mathbf 1,w)$, la seconde fait l'inverse ; les deux ensembles sont donc égaux. Le fait général est celui-ci : **retrancher à un générateur un multiple d'un autre ne change pas l'espace engendré**, parce que l'opération se défait — c'est un simple changement de paramètres $(a,b)$, pas un changement de plan.
+
+*Ce que la seconde famille a de mieux.* Le calcul de la piste :
+$$\langle\mathbf 1,\,t-\bar t\,\mathbf 1\rangle=\sum_{i=1}^n(i-\bar t)=\sum_{i=1}^n i-n\bar t=n\bar t-n\bar t=0$$
+Les deux générateurs sont **orthogonaux**, alors que les premiers ne l'étaient pas : $\langle\mathbf 1,t\rangle=\sum_i i=n(n+1)/2\neq 0$. Le bénéfice est au [§ 6.4](06-projection-orthogonale.md) : sur une famille orthogonale, la projection sur le plan se scinde en deux projections indépendantes sur des droites. Les deux coefficients cessent de s'influencer — le niveau ajusté vaut $\bar x$ quelle que soit la pente — et il n'y a plus de système $2\times2$ à résoudre.
+
+> ⚠️ $\sum_i(i-\bar t)=\sum_i i-n\bar t$, et non $n\sum_i i-n\bar t$ : c'est $\bar t$ qui est retranché $n$ fois, pas $\sum_i i$ qui est multiplié par $n$. La nullité vient ensuite de la définition même de la moyenne, $\sum_i i=n\bar t$ — elle vaut donc pour n'importe quel vecteur centré, et pas seulement pour $t=(1,\dots,n)$.
+
 **E4.4.** Déterminer $\text{Vect}(\mathbf 1)\cap\{u\in\mathbb R^n:\sum_i u_i=0\}$. *(Réponse : $\{0\}$.) En déduire qu'aucun vecteur constant non nul n'est de somme nulle — l'énoncé sera réutilisé tel quel au [module 7](07-supplementaire-orthogonal-et-dimension.md).*
+**Preuve.** Rappelons que $\text{Vect}(\mathbf 1)=\{\lambda\mathbf 1:\lambda\in\mathbb R\}$, et ajoutons la contrainte. La somme des composantes de $\lambda\mathbf 1$ vaut $\sum_{i=1}^n\lambda=n\lambda$, si bien qu'un élément de l'intersection est un $\lambda\mathbf 1$ vérifiant $n\lambda=0$. Comme $n\geq 1$, cette équation ne laisse que $\lambda=0$, donc le vecteur nul — qui, lui, appartient bien aux deux ensembles, puisque tout sous-espace contient $0$. D'où
+$$\text{Vect}(\mathbf 1)\cap\Bigl\{u\in\mathbb R^n:\sum_i u_i=0\Bigr\}=\{0\}$$
+
+*La conséquence demandée.* Soit $u$ un vecteur constant et de somme nulle : il est dans les deux ensembles, donc dans leur intersection, donc $u=0$. Par contraposée, **aucun vecteur constant non nul n'est de somme nulle**.
+
+> Le seul fait utilisé sur $\mathbf 1$ est que la somme de ses composantes, $n$, n'est pas nulle — pour un $v$ quelconque, $\text{Vect}(v)$ rencontre les vecteurs de somme nulle en $\{0\}$ seul si $\sum_i v_i\neq 0$. Et c'est cette intersection réduite à $\{0\}$ qui fera de $\text{Vect}(\mathbf 1)$ et $\text{Vect}(\mathbf 1)^{\perp}$ des supplémentaires au [module 7](07-supplementaire-orthogonal-et-dimension.md) : deux sous-espaces qui se recoupent ailleurs qu'en l'origine ne peuvent pas décomposer un vecteur de façon unique.
 
 **E4.5.** Les colonnes d'une matrice $A$ de taille $n\times p$ engendrent $\text{Vect}(\text{colonnes de }A)\subseteq\mathbb R^n$. *Que vaut ce sous-espace si deux colonnes de $A$ sont identiques ? Et si $p>n$ ?*
+**Solution.** Notons $c_1,\dots,c_p$ les colonnes de $A$, vecteurs de $\mathbb R^n$.
+
+*Deux colonnes identiques.* Le sous-espace **ne change pas** : si $c_j=c_k$ avec $j\neq k$, alors
+$$\text{Vect}(c_1,\dots,c_p)=\text{Vect}(c_1,\dots,c_p\ \text{privé de}\ c_k)$$
+car toute combinaison où figure $\lambda_kc_k$ se réécrit avec $(\lambda_j+\lambda_k)c_j$ et sans $c_k$. C'est le § 4.3 : un générateur redondant n'ajoute rien à l'espace engendré. Ce qu'il coûte, c'est l'**unicité de l'écriture** — de $\lambda_jc_j+\lambda_kc_k=(\lambda_j+\mu)c_j+(\lambda_k-\mu)c_k$ pour tout $\mu\in\mathbb R$, il suit que chaque élément admet une infinité de jeux de coefficients.
+
+La famille est bien **liée**, comme tu l'écris : $1\cdot c_j+(-1)\cdot c_k=0$ est une combinaison nulle à coefficients non tous nuls. Mais ce constat porte sur la *famille*, quand la question porte sur l'*espace* — et c'est justement le point du § 4.3 : générateur et libre sont deux qualités indépendantes. La liberté se perd, l'espace engendré est intact.
+
+*Le cas $p>n$.* Chaque colonne vit dans $\mathbb R^n$, donc toutes leurs combinaisons aussi : $\text{Vect}(\text{colonnes de }A)\subseteq\mathbb R^n$, quel que soit $p$. Deux conséquences.
+
+- La famille ne peut plus être libre : plus de $n$ vecteurs de $\mathbb R^n$ sont toujours liés — c'est un comptage de dimension, établi au [module 7](07-supplementaire-orthogonal-et-dimension.md). L'écriture est donc, là encore, non unique.
+- **Mais $p>n$ ne donne pas $\mathbb R^n$.** Le nombre de générateurs majore la dimension sans jamais la garantir (§ 4.2) : une matrice dont les $p$ colonnes valent toutes $\mathbf 1$ engendre une droite, que $p$ vaille $2$ ou $1000$. Ajouter des colonnes ne remplit rien.
+
+> C'est la colinéarité de la régression multiple ([§ 6.6](06-projection-orthogonale.md)) vue depuis l'algèbre : deux variables explicatives identiques — ou combinaison l'une de l'autre — laissent l'ajustement **exactement inchangé**, puisque le sous-espace sur lequel on projette est le même. Seuls les coefficients cessent d'être définis. Un modèle qui « ajoute une variable » sans agrandir $\text{Vect}(\text{colonnes de }A)$ n'a rien ajouté du tout.
 
 **E4.6 — orientée finance.** Prendre 20 clôtures consécutives dans un CSV de `docs/raw/data/quotes/`, poser $t=(1,\dots,20)$ et calculer la droite des moindres carrés $\hat x=a\mathbf 1+b\,t$. *Vérifier avec le critère de rang du § 4.5 que $\hat x$ appartient à $\text{Vect}(\mathbf 1,t)$ et que le résidu $x-\hat x$ n'y appartient pas — sauf si le résidu est nul. Que signifierait un résidu nul sur des cours de bourse ?*
+**Solution.**
+
+*Pourquoi $\hat x$ appartient au plan — sans rien calculer.* $\hat x=a\mathbf 1+b\,t$ **est** une combinaison linéaire de $\mathbf 1$ et $t$ : l'appartenance est acquise par construction, quels que soient $a$ et $b$, donc même pour une droite mal ajustée. Ce n'est pas un résultat sur les moindres carrés, c'est la définition du § 4.2 ; le critère de rang ne fait que confirmer une ligne d'algèbre.
+
+*Pourquoi le résidu n'y appartient pas, sauf s'il est nul.* Supposons $r=x-\hat x\in\text{Vect}(\mathbf 1,t)$. Comme $\hat x$ y est aussi, la **stabilité** du § 4.1 donne $x=\hat x+r\in\text{Vect}(\mathbf 1,t)$. Or $\hat x$ réalise le minimum de $\|x-y\|$ quand $y$ parcourt le plan : ce minimum vaut alors $0$, atteint en $y=x$. Donc $\|r\|=\|x-\hat x\|=0$, c'est-à-dire $r=0$. Toute la démonstration tient dans la stabilité — aucune propriété fine de l'ajustement n'est utilisée.
+
+```python
+import csv
+import numpy as np
+
+# un CSV produit par : python python/import_societe.py AIR.PA --periode 1y
+CHEMIN = "docs/raw/data/quotes/AIR_PA_2023-01-03_2023-12-29.csv"
+
+with open(CHEMIN, newline="", encoding="utf-8") as f:
+    closes = [float(r["Close"]) for r in csv.DictReader(f) if r["Close"]]
+
+x = np.array(closes[:20])                        # 20 clôtures consécutives
+t = np.arange(1.0, 21.0)
+un = np.ones(20)
+G = np.column_stack([un, t])                     # les générateurs du plan
+
+b = np.cov(t, x, ddof=0)[0, 1] / np.var(t)       # la droite des moindres carrés
+a = x.mean() - b * t.mean()
+xchap = a * un + b * t
+r = x - xchap
+
+rang = np.linalg.matrix_rank
+dans = lambda G, v: rang(np.column_stack([G, v])) == rang(G)
+
+print("x̂ dans Vect(1,t) :", dans(G, xchap))      # True — par construction
+print("r  dans Vect(1,t) :", dans(G, r))          # False — sauf résidu nul
+print("norme du résidu   :", np.linalg.norm(r))
+print("⟨1,r⟩ et ⟨t,r⟩    :", un @ r, t @ r)       # nuls : le § 6.4 en avance
+```
+
+Les deux dernières lignes disent plus que le critère de rang : le résidu est orthogonal à **chacun** des deux générateurs. C'est ce qui définit l'ajustement, et c'est le [§ 6.4](06-projection-orthogonale.md).
+
+*Ce que signifierait un résidu nul.* Que les vingt clôtures soient **exactement alignées** — $x_i=a+b\,i$ au centime près, la même variation absolue à chaque séance, vingt fois de suite. Deux lectures, et c'est la seconde qui sert.
+
+- **Marché** : cela n'arrive pas. Un cours porte du bruit à chaque séance ; un alignement parfait sur vingt séances serait une trajectoire déterministe, donc une machine à prédire, et un tel titre serait arbitré avant la fin de la fenêtre. Le résidu **est** l'information : c'est ce que la droite ne dit pas, et tout le semestre 3 consiste à mesurer sa taille.
+- **Données** : si on l'observe, c'est un défaut de données bien avant un phénomène de marché — cotation suspendue et cours reporté à l'identique (le cas $b=0$, la série constante), remplissage en avant d'un jour non coté, série synthétique.
+
+Le dépôt le signale à sa façon : un résidu nul sur la fenêtre de 20 signifie $\texttt{CORR\_20}=\pm1$, cas que [`import_societe.md`](../../../../../python/import_societe.md) prévoit explicitement — $\texttt{T\_20}$ vaut alors $\pm\infty$ et $\texttt{P\_20}$ vaut $0$. Une $p$-valeur nulle sur des cours de bourse ne se lit pas comme une tendance parfaitement établie, mais comme une fenêtre à inspecter.
 
 ---
 

@@ -8,52 +8,52 @@
 
 ## 1. Le compte
 
-| | |
-|---|---|
-| Dotation | 10 000,00 € au 2022-01-03 |
-| Valeur finale | **9 764,22 €** |
-| Performance | **-2,36 %** |
-| TR39, même convention | -10,18 % |
-| **Alpha sur l'année** | **+7,82 pt** — *indiscernable de zéro* |
-| Ordres | 16 (9 achats, 7 ventes) |
-| Frais cumulés | 75,24 €, soit 0,75 % de la dotation |
-| Repli maximal | -11,26 %, creux au 2022-05-12 |
-| Espèces au 2022-12-30 | 5 891,89 € |
-| Part investie moyenne | 45,3 % |
-| Séances intégralement en espèces | 0 / 257 |
+|                                  |                                        |
+| -------------------------------- | -------------------------------------- |
+| Dotation                         | 10 000,00 € au 2022-01-03              |
+| Valeur finale                    | **9 764,22 €**                         |
+| Performance                      | **-2,36 %**                            |
+| TR39, même convention            | -10,18 %                               |
+| **Alpha sur l'année**            | **+7,82 pt** — *indiscernable de zéro* |
+| Ordres                           | 16 (9 achats, 7 ventes)                |
+| Frais cumulés                    | 75,24 €, soit 0,75 % de la dotation    |
+| Repli maximal                    | -11,26 %, creux au 2022-05-12          |
+| Espèces au 2022-12-30            | 5 891,89 €                             |
+| Part investie moyenne            | 45,3 %                                 |
+| Séances intégralement en espèces | 0 / 257                                |
 
 ## 2. Mois par mois
 
-| Mois | Valeur | Base 100 | TR39 | Alpha du mois | Alpha cumulé | Ordres |
-|---|---|---|---|---|---|---|
-| Janvier | [9 460,49 €](rapports/2022-01.md) | 94,60 | 96,91 | -2,30 pt | -2,30 pt | 2 |
-| Février | [9 381,15 €](rapports/2022-02.md) | 93,81 | 93,67 | +2,51 pt | +0,14 pt | 1 |
-| Mars | [9 345,41 €](rapports/2022-03.md) | 93,45 | 92,89 | +0,45 pt | +0,56 pt | 1 |
-| Avril | [9 245,57 €](rapports/2022-04.md) | 92,46 | 92,09 | -0,20 pt | +0,37 pt | 3 |
-| Mai | [9 305,78 €](rapports/2022-05.md) | 93,06 | 92,44 | +0,27 pt | +0,62 pt | — |
-| Juin | [9 229,35 €](rapports/2022-06.md) | 92,29 | 83,80 | +8,52 pt | +8,49 pt | 3 |
-| Juillet | [9 280,54 €](rapports/2022-07.md) | 92,81 | 90,64 | -7,60 pt | +2,16 pt | — |
-| Août | [9 246,44 €](rapports/2022-08.md) | 92,46 | 86,74 | +3,94 pt | +5,73 pt | 1 |
-| Septembre | [8 993,95 €](rapports/2022-09.md) | 89,94 | 80,85 | +4,06 pt | +9,09 pt | 2 |
-| Octobre | [9 575,55 €](rapports/2022-10.md) | 95,76 | 88,42 | -2,89 pt | +7,34 pt | — |
-| Novembre | [9 867,10 €](rapports/2022-11.md) | 98,67 | 93,61 | -2,83 pt | +5,06 pt | — |
-| Décembre | [9 764,22 €](rapports/2022-12.md) | 97,64 | 89,82 | +3,00 pt | +7,82 pt | 3 |
+| Mois      | Valeur                            | Base 100 | TR39  | Alpha du mois | Alpha cumulé | Ordres |
+| --------- | --------------------------------- | -------- | ----- | ------------- | ------------ | ------ |
+| Janvier   | [9 460,49 €](rapports/2022-01.md) | 94,60    | 96,91 | -2,30 pt      | -2,30 pt     | 2      |
+| Février   | [9 381,15 €](rapports/2022-02.md) | 93,81    | 93,67 | +2,51 pt      | +0,14 pt     | 1      |
+| Mars      | [9 345,41 €](rapports/2022-03.md) | 93,45    | 92,89 | +0,45 pt      | +0,56 pt     | 1      |
+| Avril     | [9 245,57 €](rapports/2022-04.md) | 92,46    | 92,09 | -0,20 pt      | +0,37 pt     | 3      |
+| Mai       | [9 305,78 €](rapports/2022-05.md) | 93,06    | 92,44 | +0,27 pt      | +0,62 pt     | —      |
+| Juin      | [9 229,35 €](rapports/2022-06.md) | 92,29    | 83,80 | +8,52 pt      | +8,49 pt     | 3      |
+| Juillet   | [9 280,54 €](rapports/2022-07.md) | 92,81    | 90,64 | -7,60 pt      | +2,16 pt     | —      |
+| Août      | [9 246,44 €](rapports/2022-08.md) | 92,46    | 86,74 | +3,94 pt      | +5,73 pt     | 1      |
+| Septembre | [8 993,95 €](rapports/2022-09.md) | 89,94    | 80,85 | +4,06 pt      | +9,09 pt     | 2      |
+| Octobre   | [9 575,55 €](rapports/2022-10.md) | 95,76    | 88,42 | -2,89 pt      | +7,34 pt     | —      |
+| Novembre  | [9 867,10 €](rapports/2022-11.md) | 98,67    | 93,61 | -2,83 pt      | +5,06 pt     | —      |
+| Décembre  | [9 764,22 €](rapports/2022-12.md) | 97,64    | 89,82 | +3,00 pt      | +7,82 pt     | 3      |
 
 ## 3. Les positions
 
 > Alpha d'une position : son rendement moins celui de TR39 sur **la même période de détention**. La contribution en euros est nette des frais des deux sens.
 
-| Valeur | Achat | Sortie | Séances | Prix d'achat | Prix de sortie | +/− value | Alpha | Contribution |
-|---|---|---|---|---|---|---|---|---|
-| `CAP.PA` Capgemini | 2022-01-03 | 2022-04-01 | 65 | 194,20 € | 182,68 € | **-5,93 %** | +1,07 pt | -125,40 € |
-| `DSY.PA` Dassault Systèmes | 2022-01-03 | 2022-02-01 | 22 | 50,13 € | 41,05 € | **-18,12 %** | -16,43 pt | -364,10 € |
-| `KER.PA` Kering | 2022-03-01 | 2022-06-01 | 65 | 558,25 € | 454,99 € | **-18,50 %** | -20,44 pt | -318,30 € |
-| `HO.PA` Thales | 2022-04-01 | 2022-12-01 | 173 | 103,16 € | 112,75 € | **+9,29 %** | +7,95 pt | +162,48 € |
-| `MT.AS` ArcelorMittal | 2022-04-01 | 2022-06-01 | 42 | 26,84 € | 28,27 € | **+5,32 %** | +6,36 pt | +98,17 € |
-| `TTE.PA` TotalEnergies | 2022-06-01 | 2022-12-30 *(ouverte)* | 152 | 43,30 € | 48,12 € | **+11,12 %** | +13,51 pt | +194,64 € |
-| `BN.PA` Danone | 2022-08-01 | 2022-09-01 | 24 | 46,97 € | 45,67 € | **-2,76 %** | +2,86 pt | -60,22 € |
-| `RMS.PA` Hermès International | 2022-09-01 | 2022-12-01 | 66 | 1 226,95 € | 1 493,52 € | **+21,73 %** | +11,50 pt | +259,75 € |
-| `DG.PA` Vinci | 2022-12-01 | 2022-12-30 *(ouverte)* | 21 | 83,75 € | 80,49 € | **-3,88 %** | +0,80 pt | -82,81 € |
+| Valeur                        | Achat      | Sortie                 | Séances | Prix d'achat | Prix de sortie | +/− value    | Alpha     | Contribution |
+| ----------------------------- | ---------- | ---------------------- | ------- | ------------ | -------------- | ------------ | --------- | ------------ |
+| `CAP.PA` Capgemini            | 2022-01-03 | 2022-04-01             | 65      | 194,20 €     | 182,68 €       | **-5,93 %**  | +1,07 pt  | -125,40 €    |
+| `DSY.PA` Dassault Systèmes    | 2022-01-03 | 2022-02-01             | 22      | 50,13 €      | 41,05 €        | **-18,12 %** | -16,43 pt | -364,10 €    |
+| `KER.PA` Kering               | 2022-03-01 | 2022-06-01             | 65      | 558,25 €     | 454,99 €       | **-18,50 %** | -20,44 pt | -318,30 €    |
+| `HO.PA` Thales                | 2022-04-01 | 2022-12-01             | 173     | 103,16 €     | 112,75 €       | **+9,29 %**  | +7,95 pt  | +162,48 €    |
+| `MT.AS` ArcelorMittal         | 2022-04-01 | 2022-06-01             | 42      | 26,84 €      | 28,27 €        | **+5,32 %**  | +6,36 pt  | +98,17 €     |
+| `TTE.PA` TotalEnergies        | 2022-06-01 | 2022-12-30 *(ouverte)* | 152     | 43,30 €      | 48,12 €        | **+11,12 %** | +13,51 pt | +194,64 €    |
+| `BN.PA` Danone                | 2022-08-01 | 2022-09-01             | 24      | 46,97 €      | 45,67 €        | **-2,76 %**  | +2,86 pt  | -60,22 €     |
+| `RMS.PA` Hermès International | 2022-09-01 | 2022-12-01             | 66      | 1 226,95 €   | 1 493,52 €     | **+21,73 %** | +11,50 pt | +259,75 €    |
+| `DG.PA` Vinci                 | 2022-12-01 | 2022-12-30 *(ouverte)* | 21      | 83,75 €      | 80,49 €        | **-3,88 %**  | +0,80 pt  | -82,81 €     |
 
 **4 positions sur 9** finissent en gain net de frais. La contribution la plus forte est +259,75 €, la plus faible -364,10 €.
 
@@ -63,12 +63,12 @@ Le contrefactuel qui isole l'apport des ordres suivant janvier : **garder le por
 
 > L'expérience 1 et l'expérience 2 tournaient sur douze valeurs choisies parmi celles qui étaient au CAC 40 en 2022, et les y retrouver ensuite n'avait rien d'un hasard. Ici l'univers est **la composition réelle de l'indice à chaque date de décision**, lue dans [`univers.csv`](univers.csv).
 
-| | |
-|---|---|
-| Dates de décision | 24 |
-| Valeurs distinctes passées par l'univers | 40 |
+|                                                |         |
+| ---------------------------------------------- | ------- |
+| Dates de décision                              | 24      |
+| Valeurs distinctes passées par l'univers       | 40      |
 | Évaluations de la règle sur la fenêtre d'audit | **923** |
-| Évaluations sur l'année narrée | 467 |
+| Évaluations sur l'année narrée                 | 467     |
 
 Les mouvements de **l'univers effectif** — celui que la règle évalue, exclusions déduites. Un mouvement de l'indice portant sur une valeur jamais retenue n'y figure pas, faute d'avoir changé quoi que ce soit :
 
