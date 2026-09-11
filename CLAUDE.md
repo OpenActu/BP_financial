@@ -174,7 +174,28 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   corriger, et les cinq pistes retenues par
   [`experience_2/review.md`](docs/done/experimentation/experience_2/review.md) y
   sont appliquées. Le protocole est dans son
-  [`README.md`](docs/done/experimentation/experience_3/README.md).
+  [`README.md`](docs/done/experimentation/experience_3/README.md). L'analyse
+  après coup de ses deux plus lourdes pertes est dans
+  [`pistes-pertes.md`](docs/done/experimentation/experience_3/pistes-pertes.md).
+- `experience_4/` — **2022, une règle réduite à deux bandes, lue à chaque
+  séance** : TOP 10 des taux de pente sur 120 séances, achat sous
+  `VAL_120 − 1 s` si la pente sur 20 séances monte, vente au-dessus de
+  `VAL_120 + 1 s`. La règle a été formulée après avoir vu 2022, et le protocole
+  la déclare de catégorie B. Son [`review.md`](docs/done/experimentation/experience_4/review.md)
+  a retenu cinq pistes, toutes de catégorie A. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_4/README.md).
+- `experience_5/` — **l'expérience 4 remesurée** par ces cinq pistes : même
+  portefeuille, vérifié ordre par ordre, mais intervalles par grappes de dates,
+  vingt phases et correction de Holm, portefeuille fictif `MENSUEL` séparant la
+  règle de sa cadence, bande jugée contre deux références simulées, dimensionnement
+  projeté sur la règle elle-même, témoin aléatoire. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_5/README.md).
+
+> L'expérience 5 a fait tomber le seul résultat positif de l'expérience 4 : un
+> écart « significatif » mesuré sur 39 valeurs **le même jour contre le même
+> indice** ne l'est plus quand on compte les dates, pas les valeurs. **Un
+> intervalle d'issue se calcule par grappes de dates**, et se publie sur toutes
+> les phases du sous-échantillon.
 
 ⚠️ **L'univers d'une expérience est le CAC 40 entier, en composition
 point-in-time.** Une liste de valeurs choisies aujourd'hui parmi celles qui
