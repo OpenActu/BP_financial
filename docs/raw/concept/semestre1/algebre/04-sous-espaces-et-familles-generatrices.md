@@ -11,7 +11,7 @@
 ## 4.1 Sous-espace vectoriel
 
 > **Définition (sous-espace vectoriel).** Une partie $F\subseteq\mathbb R^n$ est un **sous-espace vectoriel** si elle est non vide et **stable par combinaison linéaire** :
-> $$F \neq \mathbb 0;y,z\in F\ \text{ et }\ \alpha,\beta\in\mathbb R\quad\Longrightarrow\quad \alpha y+\beta z\in F$$
+> $$F\neq\emptyset\qquad\text{et}\qquad\bigl(\,y,z\in F\ \text{ et }\ \alpha,\beta\in\mathbb R\quad\Longrightarrow\quad \alpha y+\beta z\in F\,\bigr)$$
 
 **Ce que « stable » veut dire.** Une partie $F$ est dite **stable** par une opération lorsque cette opération, appliquée à des éléments de $F$, ne fait jamais sortir de $F$ : les données sont dans $F$, le résultat y est encore. Ici l'opération est la combinaison linéaire $(y,z,\alpha,\beta)\mapsto\alpha y+\beta z$, et la stabilité s'énonce donc : *toute combinaison linéaire d'éléments de $F$ est encore un élément de $F$*. Deux points à noter. C'est une propriété de $F$ **tout entier**, jamais d'un vecteur pris isolément — « ce vecteur est stable » n'a pas de sens. Et l'implication doit valoir pour **tous** les $y,z\in F$ et **tous** les $\alpha,\beta\in\mathbb R$ : un seul quadruplet qui en sort suffit à ruiner la stabilité, comme le montre la dernière ligne du tableau ci-dessous.
 
@@ -19,12 +19,12 @@ Prendre $\alpha=\beta=0$ montre qu'un sous-espace **contient toujours $0$** ; «
 
 Quelques exemples, et un contre-exemple, à garder en tête :
 
-| Partie de $\mathbb R^n$                               | Sous-espace ?                                                          |
-| ----------------------------------------------------- | ---------------------------------------------------------------------- |
-| $\{0\}$ et $\mathbb R^n$ lui-même                     | Oui — les deux cas extrêmes, toujours licites                          |
-| $\{u:\sum_i u_i=0\}$, les vecteurs de **somme nulle** | Oui — une somme de sommes nulles est nulle                             |
-| $\{\lambda u:\lambda\in\mathbb R\}$ pour $u$ fixé     | Oui — c'est la droite dirigée par $u$                                  |
-| $\{u:\sum_i u_i=1\}$, les vecteurs de **somme $1$**   | **Non** — il ne contient pas $0$, et la somme de deux éléments en sort |
+| Partie de $\mathbb R^n$                                                                        | Sous-espace ?                                                          |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| $\{0\}$ et $\mathbb R^n$ lui-même                                                              | Oui — les deux cas extrêmes, toujours licites                          |
+| $\{u:\sum_i u_i=0\}$, les vecteurs de **somme nulle** — la somme de leurs composantes vaut $0$ | Oui — une somme de sommes nulles est nulle                             |
+| $\{\lambda u:\lambda\in\mathbb R\}$ pour $u$ fixé                                              | Oui — c'est la droite dirigée par $u$                                  |
+| $\{u:\sum_i u_i=1\}$, les vecteurs de **somme $1$**                                            | **Non** — il ne contient pas $0$, et la somme de deux éléments en sort |
 
 > ⚠️ **« Sous-espace » n'est pas « sous-ensemble », et un sous-espace passe toujours par l'origine.** Une droite du plan qui ne passe pas par $0$ n'est pas un sous-espace. Cela n'a rien de contradictoire avec la régression : la droite d'équation $v=v_0+rt$ est **affine dans le plan $(t,v)$**, mais le vecteur $v_0\mathbf 1+r\,t$ qu'elle produit vit dans $\mathbb R^n$, où il appartient bel et bien au sous-espace $\text{Vect}(\mathbf 1,t)$. Le sous-espace n'est pas la droite qu'on dessine ; c'est l'ensemble des **séries de $n$ valeurs** qu'une telle droite peut engendrer.
 
@@ -46,6 +46,10 @@ $$\alpha\sum_{j=1}^d\lambda_ju_j+\beta\sum_{j=1}^d\mu_ju_j=\sum_{j=1}^d(\alpha\l
 **Le cas $d=1$ — la droite.** $\text{Vect}(u)=\{\lambda u:\lambda\in\mathbb R\}$ est la **droite** passant par l'origine et dirigée par $u$. L'hypothèse $u\ne 0$ y est indispensable, et pour une raison de géométrie avant d'être de calcul : $\text{Vect}(0)=\{0\}$ est un sous-espace parfaitement légitime, mais réduit à un point — ce n'est pas une droite, et aucune direction n'y est en jeu.
 
 **Le cas $d=2$ — le plan.** $\text{Vect}(u,v)$ est le plan contenant $u$, $v$ et l'origine — *pourvu que $u$ et $v$ ne soient pas colinéaires* (au sens du [§ 3.1](03-cauchy-schwarz-et-angle.md)). S'ils le sont, les deux vecteurs décrivent la même droite et $\text{Vect}(u,v)$ est cette droite. **Le nombre de générateurs ne dit donc pas la dimension : il la majore**, et le § 4.3 explique ce qui sépare les deux.
+
+![Vect(u, v) dans ℝ³ : un plan quand v n'est pas colinéaire à u, la seule droite Vect(u) quand v = −1,5 u](figures/vect-plan-ou-droite.svg)
+
+Les deux panneaux ont le **même** $u$ et tracent les **mêmes** neuf combinaisons $\lambda u+\mu v$, avec $\lambda,\mu\in\{-1,0,1\}$ ; seul $v$ change. À gauche, les neuf points sont les nœuds d'une grille qui couvre un plan : il y a deux directions indépendantes. À droite, $v=-1{,}5\,u$ ramène chaque combinaison à $(\lambda-1{,}5\,\mu)\,u$. Les neuf points restent distincts mais sont tous sur la droite : **c'est l'alignement qui fait perdre la dimension**, pas des points qui se confondraient. *(Le demi-axe $e_3$, passé derrière le plan, est en tirets. La figure est produite par [`figures/generer_figures.py`](figures/generer_figures.md).)*
 
 ---
 
@@ -74,13 +78,13 @@ Retirer $(1,1)$ ne change rien à l'espace engendré et rend l'écriture unique.
 
 Ils sont peu nombreux, et ce sont toujours les mêmes. Dans $\mathbb R^n$ — l'espace d'une série de $n$ observations —, avec $\mathbf 1=(1,1,\dots,1)$ et $t=(1,2,\dots,n)$ :
 
-| Sous-espace                         | Ce qu'il contient                                                                           | Où il sert                                                        |
-| ----------------------------------- | ------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| $\text{Vect}(\mathbf 1)$            | $\{\lambda\mathbf 1\}$ — les séries **constantes**, une droite                              | la moyenne — [module 8](08-degres-de-liberte-et-centrage.md)      |
-| $\text{Vect}(t)$                    | $\{\mu t\}$ — les séries **proportionnelles au temps**, une autre droite                    | rarement seule, mais elle éclaire la précédente                   |
-| $\text{Vect}(\mathbf 1,t)$          | $\{a\mathbf 1+bt\}$ — les séries **affines** $(a+bi)_{i=1,\dots,n}$                         | la droite des moindres carrés — [`modele.md`](../../../modele.md) |
-| $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** ($^{\perp}$ : [module 5](05-orthogonalite-et-pythagore.md)) | les écarts à la moyenne, les $n-1$ degrés de liberté              |
-| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                                                                | la régression multiple — [§ 6.6](06-projection-orthogonale.md)    |
+| Sous-espace                         | Ce qu'il contient                                                                           | Où il sert                                                                                             |
+| ----------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| $\text{Vect}(\mathbf 1)$            | $\{\lambda\mathbf 1\}$ — les séries **constantes**, une droite                              | la moyenne — [module 8](08-degres-de-liberte-et-centrage.md)                                           |
+| $\text{Vect}(t)$                    | $\{\mu t\}$ — les séries **proportionnelles au temps**, une autre droite                    | rarement seule, mais elle éclaire la précédente                                                        |
+| $\text{Vect}(\mathbf 1,t)$          | $\{a\mathbf 1+bt\}$ — les séries **affines** $(a+bi)_{i=1,\dots,n}$                         | la droite des moindres carrés — [`modele.md`](../../../modele.md)                                      |
+| $\text{Vect}(\mathbf 1)^{\perp}$    | les vecteurs de **somme nulle** ($^{\perp}$ : [module 5](05-orthogonalite-et-pythagore.md)) | les écarts à la moyenne, les $n-1$ degrés de liberté — [module 8](08-degres-de-liberte-et-centrage.md) |
+| $\text{Vect}(\text{colonnes de }A)$ | les ajustements atteignables                                                                | la régression multiple — [§ 6.6](06-projection-orthogonale.md)                                         |
 
 **Un exemple, sur la première ligne du tableau.** Prenons $n=5$ clôtures :
 $$x=(98,\;101,\;99,\;103,\;104)$$
@@ -91,6 +95,18 @@ $\text{Vect}(\mathbf 1)$ est l'ensemble des **séries constantes** $\lambda\math
 $$\hat x=101\,\mathbf 1=(101,101,101,101,101)\qquad\text{et}\qquad x-\hat x=(-3,\;0,\;-2,\;2,\;3)$$
 
 Le résidu est de **somme nulle** : il appartient à $\text{Vect}(\mathbf 1)^{\perp}$, la quatrième ligne du tableau. Une série de $5$ nombres s'est ainsi scindée en **$1$ nombre** — le niveau — et **$4$ degrés de liberté** — les écarts ; c'est tout le [module 7](07-supplementaire-orthogonal-et-dimension.md) en un exemple.
+
+**Pourquoi « $n-1$ degrés de liberté » sur la quatrième ligne du tableau.** Trois constats s'enchaînent ; le module les établit par un simple décompte, les modules 7 et 8 en donnent la version rigoureuse.
+
+1. **Les écarts à la moyenne sont toujours de somme nulle.** Pour toute série $x$,
+   $$\sum_{i=1}^n(x_i-\bar x)=\sum_{i=1}^n x_i-n\bar x=0,$$
+   puisque $\bar x$ est défini par $n\bar x=\sum_i x_i$. Le vecteur des écarts $x-\bar x\,\mathbf 1$ appartient donc à $\{u:\sum_i u_i=0\}$ **quelle que soit la série** : ce n'est pas une propriété des données, c'est une conséquence de la définition de la moyenne.
+2. **Une seule contrainte laisse $n-1$ composantes libres.** Dans cet ensemble, on choisit $u_1,\dots,u_{n-1}$ à sa guise, et la dernière est imposée :
+   $$u_n=-(u_1+\dots+u_{n-1})$$
+   Sur l'exemple, les quatre premiers écarts $(-3,\;0,\;-2,\;2)$ fixent le cinquième : il vaut $3$, et rien d'autre. Ce décompte deviendra un énoncé de **dimension** — les vecteurs de somme nulle forment un hyperplan, de dimension $n-1$ — au [§ 7.3](07-supplementaire-orthogonal-et-dimension.md).
+3. **« Degrés de liberté » désigne exactement cette dimension.** Pas un nombre de paramètres qu'on retrancherait par convention, mais la dimension du sous-espace dans lequel le vecteur des écarts est contraint de vivre ([§ 8.2](08-degres-de-liberte-et-centrage.md)). La moyenne a consommé une dimension sur $n$ ; c'est ce qui justifie, au module 8, de diviser la somme des carrés des écarts par $n-1$ et non par $n$.
+
+> ⚠️ **La contrainte vient de la moyenne, pas du marché.** Cinq clôtures sont cinq nombres libres ; leurs cinq écarts à la moyenne n'en sont que quatre. Ajuster une droite au lieu d'une constante — $\text{Vect}(\mathbf 1,t)$, deux dimensions — imposera deux contraintes aux écarts et en laissera $n-2$ : c'est le $n-2$ de la régression, au [§ 8.4](08-degres-de-liberte-et-centrage.md).
 
 **Où cela se voit dans le dépôt.** Les colonnes `E_20` et `E_120` de [`import_societe.py`](../../../../../python/import_societe.md) ne sont rien d'autre que ce $\lambda$, recalculé sur chaque fenêtre glissante. Et le test de Student du même script oppose précisément deux sous-espaces de ce tableau : sous l'hypothèse nulle, la pente est nulle et la droite ajustée se réduit à un élément de $\text{Vect}(\mathbf 1)$ ; un verdict `TEND_n = 0` dit donc « rien ne prouve qu'il faille sortir de $\text{Vect}(\mathbf 1)$ », et un verdict $\pm1$ dit « le plan $\text{Vect}(\mathbf 1,t)$ apporte quelque chose que la constante seule n'a pas ».
 

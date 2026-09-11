@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="1200" height="650" font-family="ui-monospace,Consolas,monospace">
+<rect width="1200" height="650" fill="#fcfcfb"/>
+<text x="40.0" y="34.0" font-size="19" fill="#0b0b0b" font-weight="600" font-family="Georgia,serif">4.2 — Vect(u, v) : un plan, ou seulement une droite</text>
+<text x="40.0" y="56.0" font-size="12" fill="#52514e">dans ℝ³ · le même u dans les deux panneaux, seul v change · points : les 9 combinaisons λu + μv, λ et μ parcourant {−1, 0, 1}</text>
+<line x1="600.0" y1="84.0" x2="600.0" y2="580.0" stroke="#e1e0d9" stroke-width="1.0" opacity="1.0"/>
+<text x="40.0" y="104.0" font-size="14" fill="#0b0b0b" font-weight="600">v non colinéaire à u  →  Vect(u, v) est un plan</text>
+<text x="40.0" y="124.0" font-size="12" fill="#52514e">9 combinaisons, 9 points, non alignés : dimension 2</text>
+<line x1="300.0" y1="372.0" x2="300.0" y2="225.2" stroke="#a9a89e" stroke-width="1.2" opacity="1.0" stroke-dasharray="4 3"/>
+<text x="300.0" y="211.1" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">3</tspan></text>
+<polygon points="270.4,545.5 550.9,467.1 329.6,198.5 49.1,276.9" fill="#8b5cd6" fill-opacity="0.10" stroke="#8b5cd6" stroke-width="1.4" stroke-opacity="0.8"/>
+<line x1="317.1" y1="532.4" x2="95.8" y2="263.8" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="233.5" y1="500.7" x2="514.1" y2="422.3" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="410.6" y1="506.3" x2="189.4" y2="237.7" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="159.7" y1="411.2" x2="440.3" y2="332.8" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="504.2" y1="480.2" x2="282.9" y2="211.6" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="85.9" y1="321.7" x2="366.5" y2="243.3" stroke="#8b5cd6" stroke-width="1.0" opacity="0.45" stroke-dasharray="4 4"/>
+<line x1="300.0" y1="372.0" x2="219.0" y2="431.3" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="208.5" y="444.0" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">1</tspan></text>
+<line x1="300.0" y1="372.0" x2="440.3" y2="406.2" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="458.5" y="415.7" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">2</tspan></text>
+<text x="49.1" y="242.9" font-size="16" fill="#8b5cd6" font-weight="600" font-family="Georgia,serif">Vect(u, v)</text>
+<circle cx="280.2" cy="487.6" r="3.6" fill="#8b5cd6"/>
+<circle cx="206.5" cy="398.1" r="3.6" fill="#8b5cd6"/>
+<circle cx="132.7" cy="308.6" r="3.6" fill="#8b5cd6"/>
+<circle cx="373.8" cy="461.5" r="3.6" fill="#8b5cd6"/>
+<circle cx="300.0" cy="372.0" r="3.6" fill="#8b5cd6"/>
+<circle cx="226.2" cy="282.5" r="3.6" fill="#8b5cd6"/>
+<circle cx="467.3" cy="435.4" r="3.6" fill="#8b5cd6"/>
+<circle cx="393.5" cy="345.9" r="3.6" fill="#8b5cd6"/>
+<circle cx="319.8" cy="256.4" r="3.6" fill="#8b5cd6"/>
+<text x="328.8" y="248.4" font-size="13" fill="#8b5cd6" font-family="Georgia,serif" font-style="italic">u + v</text>
+<line x1="300.0" y1="372.0" x2="380.0" y2="349.6" stroke="#2a78d6" stroke-width="2.6" opacity="1.0"/>
+<polygon points="393.5,345.9 381.5,354.9 378.6,344.3" fill="#2a78d6"/>
+<line x1="300.0" y1="372.0" x2="235.1" y2="293.3" stroke="#eb6834" stroke-width="2.6" opacity="1.0"/>
+<polygon points="226.2,282.5 239.4,289.8 230.9,296.8" fill="#eb6834"/>
+<text x="411.8" y="346.8" font-size="20" fill="#2a78d6" text-anchor="middle" font-weight="600" font-family="Georgia,serif" font-style="italic">u</text>
+<text x="214.2" y="273.8" font-size="20" fill="#eb6834" text-anchor="middle" font-weight="600" font-family="Georgia,serif" font-style="italic">v</text>
+<circle cx="300.0" cy="372.0" r="3.2" fill="#0b0b0b"/>
+<text x="292.0" y="389.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="600">0</text>
+<text x="640.0" y="104.0" font-size="14" fill="#0b0b0b" font-weight="600">v = −1,5 u  →  Vect(u, v) est la droite Vect(u)</text>
+<text x="640.0" y="124.0" font-size="12" fill="#52514e">λu + μv = (λ − 1,5 μ) u : 9 points, tous alignés — dimension 1</text>
+<line x1="900.0" y1="372.0" x2="819.0" y2="431.3" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="808.5" y="444.0" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">1</tspan></text>
+<line x1="900.0" y1="372.0" x2="1040.3" y2="406.2" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="1058.5" y="415.7" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">2</tspan></text>
+<line x1="900.0" y1="372.0" x2="900.0" y2="225.2" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="900.0" y="211.1" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">3</tspan></text>
+<line x1="628.8" y1="447.7" x2="1171.2" y2="296.3" stroke="#8b5cd6" stroke-width="2.0" opacity="0.8"/>
+<text x="1171.2" y="276.3" font-size="16" fill="#8b5cd6" text-anchor="end" font-weight="600" font-family="Georgia,serif">Vect(u, v) = Vect(u)</text>
+<circle cx="946.8" cy="358.9" r="3.6" fill="#8b5cd6"/>
+<circle cx="806.5" cy="398.1" r="3.6" fill="#8b5cd6"/>
+<circle cx="666.2" cy="437.3" r="3.6" fill="#8b5cd6"/>
+<circle cx="1040.3" cy="332.8" r="3.6" fill="#8b5cd6"/>
+<circle cx="900.0" cy="372.0" r="3.6" fill="#8b5cd6"/>
+<circle cx="759.7" cy="411.2" r="3.6" fill="#8b5cd6"/>
+<circle cx="1133.8" cy="306.7" r="3.6" fill="#8b5cd6"/>
+<circle cx="993.5" cy="345.9" r="3.6" fill="#8b5cd6"/>
+<circle cx="853.2" cy="385.1" r="3.6" fill="#8b5cd6"/>
+<text x="857.2" y="411.1" font-size="13" fill="#8b5cd6">u + v = −0,5 u</text>
+<line x1="900.0" y1="372.0" x2="773.2" y2="407.4" stroke="#eb6834" stroke-width="2.6" opacity="1.0"/>
+<polygon points="759.7,411.2 771.7,402.1 774.7,412.7" fill="#eb6834"/>
+<line x1="900.0" y1="372.0" x2="980.0" y2="349.6" stroke="#2a78d6" stroke-width="2.6" opacity="1.0"/>
+<polygon points="993.5,345.9 981.5,354.9 978.6,344.3" fill="#2a78d6"/>
+<text x="1011.8" y="346.8" font-size="20" fill="#2a78d6" text-anchor="middle" font-weight="600" font-family="Georgia,serif" font-style="italic">u</text>
+<text x="741.4" y="422.3" font-size="20" fill="#eb6834" text-anchor="middle" font-weight="600" font-family="Georgia,serif" font-style="italic">v</text>
+<circle cx="900.0" cy="372.0" r="3.2" fill="#0b0b0b"/>
+<text x="892.0" y="389.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="600">0</text>
+<text x="600.0" y="612.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">deux générateurs dans les deux panneaux, et pourtant dimension 2 à gauche, 1 à droite</text>
+<text x="600.0" y="632.0" font-size="13" fill="#52514e" text-anchor="middle">le nombre de générateurs majore la dimension, il ne la donne pas</text>
+</svg>
