@@ -79,6 +79,17 @@ conventions et les pièges déjà rencontrés.
   24 ans. La sortie propre est `construire_indice_total.py`, qui fabrique un
   indice de même convention. Le signaler en note de bas de page ne suffit pas,
   ce biais renverse les verdicts.
+- ⚠️ **Une scission n'est pas une division, et le fournisseur ne la répercute
+  pas.** Quand une société distribue les titres d'une **autre** société, la série
+  encaisse la chute sans jamais créditer ce qui a été reçu : elle fabrique une
+  perte que le porteur n'a pas subie — le même vice que l'indice nu comparé à un
+  indice en rendement total. Vivendi perd **77,8 % au 2024-12-09** sans qu'aucune
+  division ne soit déclarée, son ouverture à 1,896 € succédant à une clôture de
+  8,595 € la veille. Le contrôle qui l'attrape : **tout saut de clôture supérieur
+  à 50 % en une séance sans division déclarée** vaut opération sur titre
+  présumée, donc **série irrecevable**. Le seuil sépare ce cas des mouvements de
+  marché — deux valeurs qui décrochent de 17 % le même jour sont un krach, pas
+  une opération sur titre.
 - **Une convention ne se devine pas depuis des nombres.** Un indice nu et un
   indice en rendement total sont deux séries de niveaux, formellement
   indiscernables. Quand une convention change un résultat, la faire **déclarer**
@@ -211,6 +222,27 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   Il n'y a **pas d'`experience_7/`** : elle portait les mêmes règles avec un
   **ordre stop**, et a été supprimée avant d'être jouée — l'expérience 8 la
   remplace par son inversion.
+- `experience_9/` — **les six règles de l'expérience 8, inchangées, sur cinq
+  valeurs** : Air Liquide, plus quatre **tirées au sort** dans le CAC 40 du
+  2019-01-02. Le tirage est déclaré avant d'être fait — 39 candidates triées par
+  ISIN croissant, `random.Random(9)`, **les quatre premières recevables** — et le
+  moteur **rejoue la permutation à chaque exécution**, s'arrêtant si
+  [`univers.csv`](docs/done/experimentation/experience_9/univers.csv) en diffère.
+  Chaque ligne vaut 10 % du portefeuille, aucun levier, et l'**écart le plus
+  négatif est servi le premier** quand les espèces manquent. Vivendi, tirée au
+  rang 1, a été **écartée sur ses données** — voir l'invariant sur les scissions
+  — et ENGIE l'a remplacée, comme la règle le prévoyait. Le protocole est dans
+  son [`README.md`](docs/done/experimentation/experience_9/README.md).
+
+> L'expérience 9 a rendu mesurable ce que l'expérience 8 ne pouvait pas juger, en
+> portant la part investie de 1,39 % à 18,19 % : son alpha officiel de
+> **−9,61 pt dépasse son effet minimal détectable de ± 7,7**. C'est le premier
+> verdict tranché du dépôt, et il est **défavorable à la règle**. Surtout,
+> l'ordre des quatre variantes annoncé par l'étalonnage s'est **reproduit à
+> l'identique** sur des données qu'il n'avait pas vues — −0,89, −2,80, −7,98,
+> −9,61 à mesure qu'on ajoute les achats à la baisse. **Moyenner à la baisse
+> achète de l'exposition, pas de l'alpha** : les mêmes règles qui coûtent sept
+> points d'alpha *ajoutent* +3,89 points de performance brute.
 
 > L'expérience 8 a joué **245 décisions pour 10 ordres**, et sa règle 6 ne s'est
 > **jamais** déclenchée : la variante « sans la règle 6 » est rigoureusement
