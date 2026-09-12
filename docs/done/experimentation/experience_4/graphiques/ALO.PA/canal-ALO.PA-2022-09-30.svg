@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="470" viewBox="0 0 900 470" font-family="Segoe UI, Helvetica, sans-serif">
+<rect width="900" height="470" fill="#ffffff"/>
+<text x="72" y="26" font-size="15" font-weight="600" fill="#1a1a1a">Alstom (ALO.PA) &#8212; canal au 2022-09-30</text>
+<text x="72" y="46" font-size="11.5" fill="#444444">pente nulle ou négative, hors classement &#183; TAUX_120 -0,133 %/s&#233;ance &#183; cl&#244;ture 16,60 &#8364;, -2,05 s &#183; TAUX_20 -1,287 %/s&#233;ance</text>
+<text x="72" y="63" font-size="11.5" fill="#444444">bande 120 &#177; 1,0 s : 18,61 &#8211; 22,42 &#8364; &#183; enveloppe 20 : 4,29 s, 17,5 % &#183; verdict : <tspan font-weight="600" fill="#1a1a1a">sous le bord bas</tspan></text>
+<line x1="72" y1="395.0" x2="878" y2="395.0" stroke="#eeeeee" stroke-width="1"/>
+<text x="64" y="399.0" font-size="10.5" fill="#666666" text-anchor="end">15</text>
+<line x1="72" y1="328.2" x2="878" y2="328.2" stroke="#eeeeee" stroke-width="1"/>
+<text x="64" y="332.2" font-size="10.5" fill="#666666" text-anchor="end">18</text>
+<line x1="72" y1="261.4" x2="878" y2="261.4" stroke="#eeeeee" stroke-width="1"/>
+<text x="64" y="265.4" font-size="10.5" fill="#666666" text-anchor="end">20</text>
+<line x1="72" y1="194.5" x2="878" y2="194.5" stroke="#eeeeee" stroke-width="1"/>
+<text x="64" y="198.5" font-size="10.5" fill="#666666" text-anchor="end">22</text>
+<line x1="72" y1="127.7" x2="878" y2="127.7" stroke="#eeeeee" stroke-width="1"/>
+<text x="64" y="131.7" font-size="10.5" fill="#666666" text-anchor="end">25</text>
+<polygon points="72.0,102.8 878.0,196.7 878.0,298.6 72.0,204.6" fill="#1f5f8b" fill-opacity="0.08"/>
+<line x1="72.0" y1="102.8" x2="878.0" y2="196.7" stroke="#1f5f8b" stroke-width="1.3" stroke-dasharray="6 4"/>
+<line x1="72.0" y1="204.6" x2="878.0" y2="298.6" stroke="#1f5f8b" stroke-width="1.3" stroke-dasharray="6 4"/>
+<line x1="72.0" y1="153.7" x2="878.0" y2="247.7" stroke="#1f5f8b" stroke-width="1.3"/>
+<line x1="749.3" y1="180.9" x2="878.0" y2="305.1" stroke="#b35c1e" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="749.3" y1="269.9" x2="878.0" y2="394.1" stroke="#b35c1e" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="749.3" y1="226.0" x2="878.0" y2="350.2" stroke="#b35c1e" stroke-width="1.5"/>
+<polyline points="72.0,238.9 78.8,231.0 85.5,236.8 92.3,218.7 99.1,224.5 105.9,222.4 112.6,256.2 119.4,258.1 126.2,248.1 133.0,241.8 139.7,244.7 146.5,214.8 153.3,208.0 160.1,214.2 166.8,210.1 173.6,198.8 180.4,191.4 187.1,222.6 193.9,194.8 200.7,185.4 207.5,196.7 214.2,180.7 221.0,168.1 227.8,168.3 234.6,167.3 241.3,157.6 248.1,167.3 254.9,152.6 261.6,143.9 268.4,113.5 275.2,120.0 282.0,129.5 288.7,126.6 295.5,95.9 302.3,98.8 309.1,105.3 315.8,101.9 322.6,102.7 329.4,101.9 336.2,118.2 342.9,136.6 349.7,139.7 356.5,138.4 363.2,152.8 370.0,154.7 376.8,144.4 383.6,150.0 390.3,169.1 397.1,187.7 403.9,178.8 410.7,169.4 417.4,162.0 424.2,179.3 431.0,229.5 437.7,222.1 444.5,213.5 451.3,232.6 458.1,205.6 464.8,164.1 471.6,157.8 478.4,170.9 485.2,163.6 491.9,180.7 498.7,185.6 505.5,171.5 512.3,145.5 519.0,162.6 525.8,180.2 532.6,186.5 539.3,190.2 546.1,185.5 552.9,205.6 559.7,204.5 566.4,175.6 573.2,182.5 580.0,184.9 586.8,180.7 593.5,177.0 600.3,171.1 607.1,166.6 613.8,159.0 620.6,163.2 627.4,124.8 634.2,124.8 640.9,153.7 647.7,151.5 654.5,159.2 661.3,202.7 668.0,205.1 674.8,215.7 681.6,230.8 688.4,232.4 695.1,229.2 701.9,239.3 708.7,249.9 715.4,248.8 722.2,240.3 729.0,251.2 735.8,259.4 742.5,243.2 749.3,269.9 756.1,257.8 762.9,251.7 769.6,255.7 776.4,234.0 783.2,213.5 789.9,239.5 796.7,254.1 803.5,255.2 810.3,279.0 817.0,286.0 823.8,299.7 830.6,296.0 837.4,322.3 844.1,331.5 850.9,331.1 857.7,332.3 864.5,333.5 871.2,366.6 878.0,352.3" fill="none" stroke="#333333" stroke-width="1.3"/>
+<circle cx="749.3" cy="269.9" r="4.5" fill="none" stroke="#b35c1e" stroke-width="1.5"/>
+<circle cx="783.2" cy="213.5" r="4.5" fill="none" stroke="#b35c1e" stroke-width="1.5"/>
+<circle cx="878.0" cy="352.3" r="4" fill="#1a1a1a"/>
+<text x="72" y="436" font-size="10.5" fill="#666666">2022-04-14</text>
+<text x="878" y="436" font-size="10.5" fill="#666666" text-anchor="end">2022-09-30</text>
+<text x="72" y="458" font-size="10.5" fill="#444444"><tspan fill="#333333">&#9472;</tspan> cl&#244;tures &#183; <tspan fill="#1f5f8b">&#9472;</tspan> droite sur 120 s&#233;ances et bande &#177; 1,0 s &#183; <tspan fill="#b35c1e">&#9472;</tspan> droite sur 20 s&#233;ances et enveloppe des r&#233;sidus, les deux cl&#244;tures qui la fixent cercl&#233;es</text>
+</svg>

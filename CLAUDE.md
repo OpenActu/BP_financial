@@ -174,7 +174,43 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   corriger, et les cinq pistes retenues par
   [`experience_2/review.md`](docs/done/experimentation/experience_2/review.md) y
   sont appliquées. Le protocole est dans son
-  [`README.md`](docs/done/experimentation/experience_3/README.md).
+  [`README.md`](docs/done/experimentation/experience_3/README.md). L'analyse
+  après coup de ses deux plus lourdes pertes est dans
+  [`pistes-pertes.md`](docs/done/experimentation/experience_3/pistes-pertes.md).
+- `experience_4/` — **2022, une règle réduite à deux bandes, lue à chaque
+  séance** : TOP 10 des taux de pente sur 120 séances, achat sous
+  `VAL_120 − 1 s` si la pente sur 20 séances monte, vente au-dessus de
+  `VAL_120 + 1 s`. La règle a été formulée après avoir vu 2022, et le protocole
+  la déclare de catégorie B. Son [`review.md`](docs/done/experimentation/experience_4/review.md)
+  a retenu cinq pistes, toutes de catégorie A. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_4/README.md).
+- `experience_5/` — **l'expérience 4 remesurée** par ces cinq pistes : même
+  portefeuille, vérifié ordre par ordre, mais intervalles par grappes de dates,
+  vingt phases et correction de Holm, portefeuille fictif `MENSUEL` séparant la
+  règle de sa cadence, bande jugée contre deux références simulées, dimensionnement
+  projeté sur la règle elle-même, témoin aléatoire. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_5/README.md).
+- `experience_6/` — la même règle **à dix lignes, avec un achat persistant** —
+  deux clôtures consécutives sous le bord bas —, et un **alpha officiel mesuré
+  contre une référence à exposition appariée**. Trois pistes tirées des cinq
+  bilans : réduire les frais, séparer l'alpha du bêta, diluer le risque propre.
+  Les quatre combinaisons lignes × persistance tournent en parallèle, et
+  `L5-P1` **doit retrouver la règle de l'expérience 4 ordre par ordre**, sinon le
+  moteur s'arrête. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_6/README.md).
+
+> L'expérience 6 a réduit les frais de 0,77 point de dotation — le seul gain
+> certain — et perdu son alpha : **+4,54 pt d'alpha officiel pour la règle de
+> l'expérience 4, −3,65 pt pour elle.** Surtout, son écart brut à l'indice reste
+> positif, +4,32 points, alors que l'exposition à elle seule en explique +7,97 :
+> **un écart brut à l'indice n'est pas un alpha**, et une règle moins exposée
+> paraît bonne dans une année qui baisse.
+
+> L'expérience 5 a fait tomber le seul résultat positif de l'expérience 4 : un
+> écart « significatif » mesuré sur 39 valeurs **le même jour contre le même
+> indice** ne l'est plus quand on compte les dates, pas les valeurs. **Un
+> intervalle d'issue se calcule par grappes de dates**, et se publie sur toutes
+> les phases du sous-échantillon.
 
 ⚠️ **L'univers d'une expérience est le CAC 40 entier, en composition
 point-in-time.** Une liste de valeurs choisies aujourd'hui parmi celles qui
