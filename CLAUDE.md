@@ -233,6 +233,26 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   rang 1, a été **écartée sur ses données** — voir l'invariant sur les scissions
   — et ENGIE l'a remplacée, comme la règle le prévoyait. Le protocole est dans
   son [`README.md`](docs/done/experimentation/experience_9/README.md).
+- `experience_10/` — les six règles de l'expérience 9 **plus une septième, qui
+  vend dès que le repli depuis le prix d'achat atteint −15 %**, sur **dix valeurs**
+  tirées avec la graine 10. Le seuil sort de l'analyse des replis de
+  l'expérience 9 : c'est une piste de **catégorie B**, et le protocole la soumet à
+  un univers **inédit à huit valeurs sur dix**. La règle 7 se constate à **chaque
+  clôture** — entorse déclarée à la cadence hebdomadaire —, depuis le prix de la
+  **première tranche**, figé, avec **quatre semaines de carence** avant tout
+  rachat. Trois valeurs tirées sont écartées sur leurs seules données : Vivendi,
+  Technip et Unibail, faute de série exploitable en euros. Le protocole est dans
+  son [`README.md`](docs/done/experimentation/experience_10/README.md).
+
+> L'expérience 10 a soumis une piste de **catégorie B** au seul test qui vaille —
+> un univers qu'elle n'avait pas servi à fabriquer — et **la piste n'y a pas
+> survécu**. Le seuil de coupe à −15 %, lu sur les replis de l'expérience 9, a
+> produit **9 coupes dont 8 mauvaises, pour −1 783 €**, et coûté **4,00 points
+> d'alpha**. Son mérite apparent à l'étalonnage — +4,60 pt — ne venait pas de la
+> protection, qui y coûtait déjà 208 €, mais d'une **exposition réduite pendant un
+> seul krach**, celui de mars 2020. **Un garde-fou éprouvé sur un unique épisode
+> n'est pas éprouvé**, et un gain d'alpha peut n'être qu'une absence du marché au
+> bon moment.
 
 > L'expérience 9 a rendu mesurable ce que l'expérience 8 ne pouvait pas juger, en
 > portant la part investie de 1,39 % à 18,19 % : son alpha officiel de
@@ -286,6 +306,15 @@ doit donc porter son objet déclaré sur ce qu'elle peut établir, et le dire
 > L'expérience 3 a mesuré 15,6 %/an là où elle en déclarait 8,2 : **le
 > dimensionnement publié avant peut être trop optimiste d'un facteur deux.** Le
 > publier reste ce qui permet de s'en apercevoir.
+
+> L'expérience 10 a montré à quoi sert vraiment ce contrôle. En refusant de
+> retrouver ses propres nombres publiés, il a rendu **37 écarts** qui menaient
+> tous à un bug : une carence de rachat armée uniquement les jours de décision,
+> alors que la règle se constatait à chaque clôture. **Un étalonnage confronté
+> attrape des défauts de logique, pas seulement des divergences de mesure.**
+> Corriger l'étalonnage reste permis tant que **rien n'est publié ni joué** et que
+> la **cause est identifiée** — et la correction se déclare. Après la fenêtre
+> jouée, un tel écart ne se corrige plus : il se publie.
 
 ⚠️ **Une série ajustée peut porter une opération postérieure à la fenêtre.** Les
 divisions et regroupements d'actions sont répercutés rétroactivement par le
