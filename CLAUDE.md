@@ -198,6 +198,28 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   `L5-P1` **doit retrouver la règle de l'expérience 4 ordre par ordre**, sinon le
   moteur s'arrête. Le protocole est dans son
   [`README.md`](docs/done/experimentation/experience_6/README.md).
+- `experience_8/` — **une seule valeur, Air Liquide, une décision par semaine**, et
+  six règles dont la quatrième **supprime toute sortie en perte** : sous
+  `prix d'achat − 1 s`, la règle n'allège pas, elle **rachète** 10 %. La seule
+  vente est celle du bord haut. La règle se lit sur la série **ajustée**, mais les
+  quantités, les espèces et la valorisation passent en **cours réels**, divisions
+  postérieures retirées. Les quatre variantes — avec et sans les règles 4 et 6 —
+  sont **étalonnées sur 2019-2021 et publiées au protocole avant de jouer
+  2022-2026** ; le moteur les recalcule et signale tout écart. Le protocole est
+  dans son [`README.md`](docs/done/experimentation/experience_8/README.md).
+
+  Il n'y a **pas d'`experience_7/`** : elle portait les mêmes règles avec un
+  **ordre stop**, et a été supprimée avant d'être jouée — l'expérience 8 la
+  remplace par son inversion.
+
+> L'expérience 8 a joué **245 décisions pour 10 ordres**, et sa règle 6 ne s'est
+> **jamais** déclenchée : la variante « sans la règle 6 » est rigoureusement
+> identique à la règle déclarée, au centime. **Un contrefactuel qui ne diffère
+> d'aucun chiffre mesure une règle morte, pas une règle neutre** — encore
+> faut-il compter les déclenchements pour s'en apercevoir. Et avec **1,39 % de
+> part investie moyenne**, son alpha officiel de +0,17 pt est indiscernable de
+> zéro (EMD ± 0,5) : **une règle si peu exposée ne peut rien démontrer, quel que
+> soit son résultat.**
 
 > L'expérience 6 a réduit les frais de 0,77 point de dotation — le seul gain
 > certain — et perdu son alpha : **+4,54 pt d'alpha officiel pour la règle de
@@ -240,6 +262,14 @@ nombre de titres achetables ne l'est pas**, et acheter sur un cours rétro-ajust
 laisserait une opération future façonner le portefeuille. Déclarer les valeurs
 concernées et **refuser tout ordre sur elles** — un contrôle de recevabilité des
 données, jamais un veto de plus.
+
+> Sur un univers d'une seule valeur, l'expérience 8 pousse la parade plus loin :
+> elle **retire les divisions postérieures** — `réel = ajusté × Π(ratios
+> postérieurs)` — pour acheter au cours réellement coté, et ne garde la série
+> ajustée que pour ce que la règle **lit**. Séparer les deux unités est ce qui
+> permet d'acheter une valeur qui se divise, au lieu de l'exclure ; mais le seuil
+> d'une règle doit alors être comparé dans la même unité que ce qu'il seuille —
+> c'est exactement la faute trouvée dans l'expérience 7 avant qu'elle soit jouée.
 
 ⚠️ **Une expérience porte sur une année passée, donc tout y est décidé
 mécaniquement** : le classement, les ordres et les dates sortent d'un score écrit
