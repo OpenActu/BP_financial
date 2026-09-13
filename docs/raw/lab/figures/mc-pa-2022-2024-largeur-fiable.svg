@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="ui-monospace,Consolas,monospace">
+<rect width="1200" height="720" fill="#fcfcfb"/>
+<text x="66" y="36" font-size="19" font-weight="600" fill="#0b0b0b" font-family="Georgia,serif">MC.PA &#8212; la largeur qu'il faut vraiment donner &#224; la bande</text>
+<text x="66" y="58" font-size="12" fill="#52514e">&#233;talonnage 2022-01-03 &#8594; 2024-12-31, 768 s&#233;ances &#183; largeur relative contenant 95 % des cl&#244;tures projet&#233;es, par longueur de fen&#234;tre et par horizon &#183; abscisse &#224; pas constant, les fen&#234;tres ne sont pas r&#233;guli&#232;rement espac&#233;es</text>
+<line x1="66" y1="524.0" x2="1104" y2="524.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="528.0" text-anchor="end" font-size="11" fill="#52514e">0 %</text>
+<line x1="66" y1="445.6" x2="1104" y2="445.6" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="449.6" text-anchor="end" font-size="11" fill="#52514e">50 %</text>
+<line x1="66" y1="367.2" x2="1104" y2="367.2" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="371.2" text-anchor="end" font-size="11" fill="#52514e">100 %</text>
+<line x1="66" y1="288.8" x2="1104" y2="288.8" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="292.8" text-anchor="end" font-size="11" fill="#52514e">150 %</text>
+<line x1="66" y1="210.3" x2="1104" y2="210.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="214.3" text-anchor="end" font-size="11" fill="#52514e">200 %</text>
+<line x1="66" y1="131.9" x2="1104" y2="131.9" stroke="#e1e0d9" stroke-width="1"/>
+<text x="56" y="135.9" text-anchor="end" font-size="11" fill="#52514e">250 %</text>
+<line x1="66" y1="524" x2="1104" y2="524" stroke="#c3c2b7" stroke-width="1"/>
+<line x1="66.0" y1="92" x2="66.0" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="66.0" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">20</text>
+<line x1="160.4" y1="92" x2="160.4" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="160.4" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">40</text>
+<line x1="254.7" y1="92" x2="254.7" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="254.7" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">60</text>
+<line x1="349.1" y1="92" x2="349.1" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="349.1" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">90</text>
+<line x1="443.5" y1="92" x2="443.5" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="443.5" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">120</text>
+<line x1="537.8" y1="92" x2="537.8" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="537.8" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">180</text>
+<line x1="632.2" y1="92" x2="632.2" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="632.2" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">250</text>
+<line x1="726.5" y1="92" x2="726.5" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="726.5" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">375</text>
+<line x1="820.9" y1="92" x2="820.9" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="820.9" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">500</text>
+<line x1="915.3" y1="92" x2="915.3" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="915.3" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">750</text>
+<line x1="1009.6" y1="92" x2="1009.6" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="1009.6" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">1000</text>
+<line x1="1104.0" y1="92" x2="1104.0" y2="524" stroke="#e1e0d9" stroke-width="1"/>
+<text x="1104.0" y="542.0" text-anchor="middle" font-size="11" fill="#52514e">1275</text>
+<text x="585" y="562" text-anchor="middle" font-size="11" fill="#52514e">longueur de la fen&#234;tre, en s&#233;ances</text>
+<polyline points="66.0,506.8 160.4,501.2 254.7,495.6 349.1,491.9 443.5,488.2 537.8,479.5 632.2,463.9 726.5,446.5 820.9,470.2" fill="none" stroke="#1baf7a" stroke-width="1.8"/>
+<circle cx="66.0" cy="506.8" r="4.4" fill="#1baf7a"/>
+<text x="828.9" y="474.2" font-size="11" fill="#1baf7a" font-weight="600">h = 1</text>
+<polyline points="66.0,497.7 160.4,495.4 254.7,490.6 349.1,488.4 443.5,484.0 537.8,475.3 632.2,459.9 726.5,442.9 820.9,468.8" fill="none" stroke="#2a78d6" stroke-width="1.8"/>
+<circle cx="66.0" cy="497.7" r="4.4" fill="#2a78d6"/>
+<text x="828.9" y="472.8" font-size="11" fill="#2a78d6" font-weight="600">h = 5</text>
+<polyline points="66.0,468.3 160.4,475.2 254.7,477.3 349.1,476.4 443.5,471.6 537.8,462.8 632.2,446.7 726.5,431.3 820.9,464.7" fill="none" stroke="#8b5cd6" stroke-width="1.8"/>
+<circle cx="254.7" cy="477.3" r="4.4" fill="#8b5cd6"/>
+<text x="828.9" y="468.7" font-size="11" fill="#8b5cd6" font-weight="600">h = 20</text>
+<polyline points="66.0,408.7 160.4,433.0 254.7,441.9 349.1,451.5 443.5,437.2 537.8,418.7 632.2,412.2 726.5,407.9 820.9,452.6" fill="none" stroke="#eb6834" stroke-width="1.8"/>
+<circle cx="820.9" cy="452.6" r="4.4" fill="#eb6834"/>
+<text x="828.9" y="456.6" font-size="11" fill="#eb6834" font-weight="600">h = 60</text>
+<polyline points="66.0,138.3 160.4,213.1 254.7,243.9 349.1,289.1 443.5,290.4 537.8,319.9 632.2,350.0 726.5,367.6" fill="none" stroke="#b3123a" stroke-width="1.8"/>
+<circle cx="726.5" cy="367.6" r="4.4" fill="#b3123a"/>
+<text x="734.5" y="371.6" font-size="11" fill="#b3123a" font-weight="600">h = 250</text>
+<rect x="66" y="566" width="1038" height="68" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1"/>
+<text x="78" y="587" font-size="12" fill="#1baf7a" font-weight="600">horizon   1 s&#233;ances   minimum &#224; n =   20   largeur fiable 11,00 %</text>
+<text x="78" y="605" font-size="12" fill="#2a78d6" font-weight="600">horizon   5 s&#233;ances   minimum &#224; n =   20   largeur fiable 16,75 %</text>
+<text x="78" y="623" font-size="12" fill="#8b5cd6" font-weight="600">horizon  20 s&#233;ances   minimum &#224; n =   60   largeur fiable 29,76 %</text>
+<text x="597" y="587" font-size="12" fill="#eb6834" font-weight="600">horizon  60 s&#233;ances   minimum &#224; n =  500   largeur fiable 45,51 %</text>
+<text x="597" y="605" font-size="12" fill="#b3123a" font-weight="600">horizon 250 s&#233;ances   minimum &#224; n =  375   largeur fiable 99,75 %</text>
+<text x="66" y="704" font-size="10.5" fill="#999999">Les dates d'ancrage se recouvrent massivement : ces proportions sont descriptives, elles ne portent aucun intervalle de confiance.</text>
+</svg>

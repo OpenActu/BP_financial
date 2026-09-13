@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" font-family="Segoe UI, Helvetica, sans-serif">
+<rect width="1200" height="620" fill="#fbfbfa"/>
+<text x="66" y="30" font-size="17" font-weight="600" fill="#1a1a1a">AI.PA — canal au 2025-12-31</text>
+<text x="66" y="50" font-size="11.5" fill="#666666">2025-01-02 &#8594; 2025-12-31 &#183; 255 s&#233;ances affich&#233;es (&#233;chelle construite sur 766, depuis le 2023-01-02) &#183; cl&#244;ture 142,63 &#8364;</text>
+<line x1="66" y1="539.2" x2="1112" y2="539.2" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="543.2" font-size="10.5" fill="#888888" text-anchor="end">100</text>
+<line x1="66" y1="475.7" x2="1112" y2="475.7" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="479.7" font-size="10.5" fill="#888888" text-anchor="end">110</text>
+<line x1="66" y1="412.2" x2="1112" y2="412.2" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="416.2" font-size="10.5" fill="#888888" text-anchor="end">120</text>
+<line x1="66" y1="348.7" x2="1112" y2="348.7" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="352.7" font-size="10.5" fill="#888888" text-anchor="end">130</text>
+<line x1="66" y1="285.2" x2="1112" y2="285.2" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="289.2" font-size="10.5" fill="#888888" text-anchor="end">140</text>
+<line x1="66" y1="221.7" x2="1112" y2="221.7" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="225.7" font-size="10.5" fill="#888888" text-anchor="end">150</text>
+<line x1="66" y1="158.3" x2="1112" y2="158.3" stroke="#ececec" stroke-width="1"/>
+<text x="58" y="162.3" font-size="10.5" fill="#888888" text-anchor="end">160</text>
+<line x1="156.6" y1="96" x2="156.6" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="160.6" y="562.0" font-size="10.5" fill="#888888">02</text>
+<line x1="239.0" y1="96" x2="239.0" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="243.0" y="562.0" font-size="10.5" fill="#888888">03</text>
+<line x1="325.4" y1="96" x2="325.4" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="329.4" y="562.0" font-size="10.5" fill="#888888">04</text>
+<line x1="407.8" y1="96" x2="407.8" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="411.8" y="562.0" font-size="10.5" fill="#888888">05</text>
+<line x1="494.3" y1="96" x2="494.3" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="498.3" y="562.0" font-size="10.5" fill="#888888">06</text>
+<line x1="580.8" y1="96" x2="580.8" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="584.8" y="562.0" font-size="10.5" fill="#888888">07</text>
+<line x1="675.5" y1="96" x2="675.5" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="679.5" y="562.0" font-size="10.5" fill="#888888">08</text>
+<line x1="762.0" y1="96" x2="762.0" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="766.0" y="562.0" font-size="10.5" fill="#888888">09</text>
+<line x1="852.6" y1="96" x2="852.6" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="856.6" y="562.0" font-size="10.5" fill="#888888">10</text>
+<line x1="947.3" y1="96" x2="947.3" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="951.3" y="562.0" font-size="10.5" fill="#888888">11</text>
+<line x1="1029.6" y1="96" x2="1029.6" y2="546" stroke="#e6e6e6" stroke-width="1" stroke-dasharray="3 4"/>
+<text x="1033.6" y="562.0" font-size="10.5" fill="#888888">12</text>
+<polygon points="86.6,153.0 1112.0,165.1 1112.0,248.0 86.6,235.9" fill="#7a8ba6" fill-opacity="0.06"/>
+<line x1="86.6" y1="153.0" x2="1112.0" y2="165.1" stroke="#7a8ba6" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="86.6" y1="235.9" x2="1112.0" y2="248.0" stroke="#7a8ba6" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="86.6" y1="194.4" x2="1112.0" y2="206.6" stroke="#7a8ba6" stroke-width="1.5"/>
+<polygon points="621.9,139.7 1112.0,233.2 1112.0,276.3 621.9,182.8" fill="#1f5f8b" fill-opacity="0.08"/>
+<line x1="621.9" y1="139.7" x2="1112.0" y2="233.2" stroke="#1f5f8b" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="621.9" y1="182.8" x2="1112.0" y2="276.3" stroke="#1f5f8b" stroke-width="1.5" stroke-dasharray="6 4"/>
+<line x1="621.9" y1="161.2" x2="1112.0" y2="254.8" stroke="#1f5f8b" stroke-width="1.5"/>
+<line x1="1033.8" y1="245.8" x2="1112.0" y2="262.1" stroke="#b35c1e" stroke-width="1.8" stroke-dasharray="4 3"/>
+<line x1="1033.8" y1="274.1" x2="1112.0" y2="290.4" stroke="#b35c1e" stroke-width="1.8" stroke-dasharray="4 3"/>
+<line x1="1033.8" y1="259.3" x2="1112.0" y2="275.6" stroke="#b35c1e" stroke-width="1.8"/>
+<path d="M66.0 309.0 L70.1 315.7 L74.2 296.1 L78.4 290.1 L82.5 299.1 L86.6 295.2 L90.7 307.7 L94.8 305.5 L98.9 308.7 L103.1 306.0 L107.2 295.5 L111.3 277.7 L115.4 274.8 L119.5 281.2 L123.7 272.7 L127.8 276.4 L131.9 265.1 L136.0 253.0 L140.1 248.8 L144.2 245.0 L148.4 235.2 L152.5 238.2 L156.6 242.7 L160.7 240.0 L164.8 243.6 L169.0 228.7 L173.1 235.4 L177.2 231.7 L181.3 226.9 L185.4 225.9 L189.5 213.4 L193.7 207.7 L197.8 208.3 L201.9 206.3 L206.0 217.2 L210.1 215.0 L214.3 183.8 L218.4 203.9 L222.5 199.9 L226.6 197.5 L230.7 205.3 L234.8 193.7 L239.0 176.7 L243.1 186.8 L247.2 169.9 L251.3 172.2 L255.4 173.3 L259.6 156.9 L263.7 188.4 L267.8 176.6 L271.9 179.0 L276.0 173.4 L280.1 172.2 L284.3 175.1 L288.4 174.2 L292.5 187.3 L296.6 188.7 L300.7 189.7 L304.9 182.1 L309.0 193.1 L313.1 194.7 L317.2 195.4 L321.3 201.9 L325.4 190.9 L329.6 185.4 L333.7 206.6 L337.8 212.7 L341.9 282.7 L346.0 252.6 L350.1 282.0 L354.3 247.1 L358.4 239.7 L362.5 227.1 L366.6 206.8 L370.7 204.5 L374.9 212.8 L379.0 203.4 L383.1 204.4 L387.2 182.8 L391.3 183.6 L395.4 185.0 L399.6 181.5 L403.7 171.9 L407.8 145.9 L411.9 153.2 L416.0 155.6 L420.2 161.0 L424.3 159.9 L428.4 153.3 L432.5 167.9 L436.6 163.2 L440.7 159.4 L444.9 145.2 L449.0 138.1 L453.1 128.3 L457.2 123.6 L461.3 125.3 L465.5 126.9 L469.6 134.8 L473.7 125.8 L477.8 126.6 L481.9 142.2 L486.0 145.8 L490.2 143.4 L494.3 140.1 L498.4 145.7 L502.5 132.7 L506.6 132.6 L510.8 137.4 L514.9 141.3 L519.0 135.4 L523.1 133.4 L527.2 133.2 L531.3 141.2 L535.5 137.1 L539.6 144.3 L543.7 150.5 L547.8 166.4 L551.9 164.0 L556.1 187.5 L560.2 177.8 L564.3 188.7 L568.4 190.4 L572.5 176.3 L576.6 184.4 L580.8 181.0 L584.9 180.3 L589.0 179.9 L593.1 185.1 L597.2 183.0 L601.4 185.2 L605.5 174.4 L609.6 176.8 L613.7 184.7 L617.8 186.0 L621.9 192.0 L626.1 195.7 L630.2 191.0 L634.3 202.2 L638.4 201.4 L642.5 204.3 L646.7 200.8 L650.8 197.1 L654.9 204.0 L659.0 199.9 L663.1 183.4 L667.2 189.1 L671.4 197.7 L675.5 212.2 L679.6 200.8 L683.7 196.5 L687.8 203.5 L692.0 193.3 L696.1 192.1 L700.2 199.4 L704.3 192.7 L708.4 181.0 L712.5 164.8 L716.7 155.7 L720.8 157.0 L724.9 138.6 L729.0 128.7 L733.1 138.3 L737.3 139.3 L741.4 153.1 L745.5 175.8 L749.6 167.9 L753.7 171.7 L757.8 178.3 L762.0 177.9 L766.1 185.8 L770.2 181.0 L774.3 178.4 L778.4 183.1 L782.6 174.4 L786.7 174.0 L790.8 188.2 L794.9 172.7 L799.0 172.6 L803.1 173.0 L807.3 188.2 L811.4 190.0 L815.5 187.4 L819.6 181.4 L823.7 187.5 L827.9 183.3 L832.0 194.7 L836.1 190.9 L840.2 182.6 L844.3 177.2 L848.4 174.7 L852.6 180.0 L856.7 176.3 L860.8 204.0 L864.9 213.1 L869.0 216.5 L873.1 214.6 L877.3 205.2 L881.4 215.7 L885.5 206.4 L889.6 205.5 L893.7 206.5 L897.9 190.9 L902.0 197.6 L906.1 195.2 L910.2 196.3 L914.3 199.9 L918.4 197.2 L922.6 199.4 L926.7 200.2 L930.8 191.7 L934.9 215.6 L939.0 210.4 L943.2 225.2 L947.3 226.1 L951.4 219.7 L955.5 219.7 L959.6 223.7 L963.7 217.3 L967.9 215.0 L972.0 204.4 L976.1 200.5 L980.2 195.4 L984.3 207.4 L988.5 215.7 L992.6 236.4 L996.7 238.9 L1000.8 237.8 L1004.9 236.4 L1009.0 245.0 L1013.2 245.0 L1017.3 241.7 L1021.4 244.3 L1025.5 241.1 L1029.6 236.5 L1033.8 245.8 L1037.9 248.8 L1042.0 251.9 L1046.1 252.7 L1050.2 261.4 L1054.3 278.4 L1058.5 277.0 L1062.6 278.7 L1066.7 277.9 L1070.8 272.4 L1074.9 273.4 L1079.1 273.7 L1083.2 271.7 L1087.3 272.8 L1091.4 270.0 L1095.5 270.9 L1099.6 269.9 L1103.8 267.4 L1107.9 266.5 L1112.0 268.5" fill="none" stroke="#2a78d6" stroke-width="1.4"/>
+<circle cx="1054.3" cy="278.4" r="4.5" fill="none" stroke="#b35c1e" stroke-width="1.6"/>
+<circle cx="1033.8" cy="245.8" r="4.5" fill="none" stroke="#b35c1e" stroke-width="1.6"/>
+<circle cx="1112.0" cy="268.5" r="4.5" fill="#2a78d6"/>
+<text x="1118" y="168.6" font-size="10.5" fill="#7a8ba6">158,92</text>
+<text x="1118" y="251.5" font-size="10.5" fill="#7a8ba6">145,86</text>
+<text x="1118" y="236.7" font-size="10.5" fill="#1f5f8b">148,20</text>
+<text x="1118" y="279.8" font-size="10.5" fill="#1f5f8b">141,40</text>
+<text x="1118" y="265.6" font-size="10.5" fill="#b35c1e">143,64</text>
+<text x="1118" y="293.9" font-size="10.5" fill="#b35c1e">139,19</text>
+<rect x="60" y="58" width="470" height="82" fill="#ffffff" fill-opacity="0.82" stroke="#e4e4e4"/>
+<text x="66" y="70" font-size="10.5" fill="#888888">fen&#234;tre &#183; encadrement &#183; largeur &#183; pente &#183; &#233;cart r&#233;duit</text>
+<text x="66" y="88" font-size="11" fill="#7a8ba6">250 &#177; 1 s : 145,86 &#8211; 158,92 &#8364; &#183; 13,06 &#8364; (9,16 %) &#183; -0,0050 %/s&#233;ance &#183; -1,49 s (CORR faible)</text>
+<text x="66" y="106" font-size="11" fill="#1f5f8b">120 &#177; 1 s : 141,40 &#8211; 148,20 &#8364; &#183; 6,80 &#8364; (4,76 %) &#183; -0,0813 %/s&#233;ance &#183; -0,64 s</text>
+<text x="66" y="124" font-size="11" fill="#b35c1e"> 20 enveloppe : 139,19 &#8211; 143,64 &#8364; &#183; 4,45 &#8364; (3,12 %) &#183; -0,0947 %/s&#233;ance &#183; contacts 2025-12-09 / 2025-12-02</text>
+<text x="66" y="590" font-size="10.5" fill="#555555"><tspan fill="#2a78d6">&#9472;</tspan> cl&#244;tures &#183; <tspan fill="#7a8ba6">&#9472;</tspan> bande 250 &#177; 1 s &#183; <tspan fill="#1f5f8b">&#9472;</tspan> bande 120 &#177; 1 s &#183; <tspan fill="#b35c1e">&#9472;</tspan> enveloppe des r&#233;sidus sur 20 s&#233;ances (asym&#233;trique, deux contacts)</text>
+<text x="66" y="606" font-size="10" fill="#999999">Figure descriptive : aucun verdict, aucune r&#232;gle, aucun conseil en investissement. Chaque droite n'existe que sur sa fen&#234;tre.</text>
+</svg>

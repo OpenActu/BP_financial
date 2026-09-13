@@ -1,16 +1,23 @@
 # Cours — Statistique
 
-Deux cours autonomes, à lire dans cet ordre : la statistique mathématique construit tout
-l'appareil probabiliste jusqu'à l'intervalle de confiance **à $\sigma$ connu** ; le cours sur la
-loi de Student reprend exactement là où le premier s'arrête, au moment où l'on remplace ce
-$\sigma$ par la variable aléatoire $S$.
+Trois cours. Les deux premiers se lisent dans l'ordre : la statistique mathématique construit
+tout l'appareil probabiliste jusqu'à l'intervalle de confiance **à $\sigma$ connu** ; le cours sur
+la loi de Student reprend exactement là où le premier s'arrête, au moment où l'on remplace ce
+$\sigma$ par la variable aléatoire $S$. Le troisième est **autonome** : il prend des $p$-valeurs
+en entrée, d'où qu'elles viennent, et se lit avant comme après Student.
 
 | # | Cours | Modules | Volume | Ce qu'on en sort |
 |---|---|---|---|---|
 | 1 | [**Statistique mathématique**](../semestre2/statistique/mathematique/README.md) | 25 | 32 h | Loi, moments, transformées, catalogue des lois, TCL, $\chi^2$, Fisher–Cochran, intervalle de confiance |
 | 2 | [**La loi de Student**](../semestre3/statistique/loi-de-student/README.md) | 8 | 24 h | Construction de $\mathcal T(\nu)$, inférence à $\sigma$ inconnu, tests, régression, robustesse |
+| 3 | [**Tests multiples — Bonferroni et Holm**](../semestre3/statistique/tests-multiples/README.md) | 4 | 8 h | FWER et FDR, Bonferroni, **Holm**, Benjamini–Hochberg, et le choix de la famille |
 
-**Volume total** : ≈ 56 h.
+**Volume total** : ≈ 64 h.
+
+> 🔑 **Le troisième cours existe parce qu'un risque de 5 % n'est pas attaché à un test, mais à
+> une famille de tests.** Le [module 8 de Student](../semestre3/statistique/loi-de-student/08-robustesse-et-limites.md#88-tests-multiples)
+> pose le problème en dix-huit lignes et nomme les procédures sans les construire ; ce cours-là
+> les démontre, et dit laquelle employer.
 
 ## La ligne de partage entre les deux
 

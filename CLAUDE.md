@@ -13,7 +13,7 @@ convention dans toute modification.
 
 Deux choses, également importantes :
 
-1. **Dix utilitaires Python en ligne de commande** qui récupèrent et analysent
+1. **Onze utilitaires Python en ligne de commande** qui récupèrent et analysent
    des données de la Bourse de Paris. Pas de paquet, pas de tests, pas de
    `__init__.py` — chaque script se lance depuis la racine du dépôt.
 2. **Un cours en quatre semestres**, dans `docs/raw/concept/`, qui démontre tout
@@ -42,7 +42,7 @@ aligner le script dessus. Jamais l'inverse.
 La skill `/python-sync` détecte les markdown modifiés et répercute les
 changements dans les scripts correspondants.
 
-## Les dix scripts
+## Les onze scripts
 
 | Script | Ce qu'il produit |
 |---|---|
@@ -51,6 +51,7 @@ changements dans les scripts correspondants.
 | `reconstituer_fondamentaux.py` | ratios **point-in-time** sur 3 à 4 ans, chaque exercice daté par sa publication |
 | `import_dividendes.py` | dividendes et divisions depuis `bnains.org`, confrontés à yfinance |
 | `generer_graph_supp_resistance.py` | SVG : encadrement support/résistance sur les **clôtures** |
+| `generer_graph_canal.py` | SVG : les **trois derniers encadrements** ancrés à une date — bandes à ± 1 s sur 250 et 120, **enveloppe des résidus** sur 20 |
 | `generer_graph_decision.py` | SVG : encadrement sur **High/Low**, cinq critères et verdict |
 | `couts_transaction.py` | coût d'exécution d'une règle, et l'alpha qu'il faudrait pour le couvrir |
 | `evaluer_portefeuille.py` | alpha d'un **panier** contre son indice, coûts et biais d'indice nu compris |
@@ -135,7 +136,8 @@ coup, pour un gain nul.
 
 **Toutes les données produites par les scripts vivent sous `docs/raw/data/`** —
 `quotes/`, `graphs/`, `fondamentaux/`, `dividendes/`. `docs/raw/` ne contient donc
-plus que le cours (`concept/`, `planning.md`, `modele.md`) et ce répertoire.
+plus que le cours (`concept/`, `planning.md`, `modele.md`), le laboratoire
+(`lab/`) et ce répertoire.
 
 `docs/raw/data/quotes/`, `docs/raw/data/graphs/`, les CSV du jour de
 `docs/raw/data/fondamentaux/` et le cache HTML de `docs/raw/data/dividendes/` sont
@@ -153,7 +155,7 @@ docs/raw/modele.md                l'énoncé de la démonstration centrale
 docs/raw/concept/
 ├── semestre1/  algèbre · dérivation-intégration · convexité
 ├── semestre2/  statistique mathématique
-├── semestre3/  loi de Student · modèle · canal · encadrement
+├── semestre3/  loi de Student · tests multiples · modèle · canal · encadrement
 ├── semestre4/  alpha · fondamentaux · trading · finance
 └── sommaire/   les index, hors parcours
 ```
@@ -161,6 +163,49 @@ docs/raw/concept/
 Un répertoire contient **soit** des sous-répertoires, **soit** des fichiers.
 Les liens entre cours sont **relatifs** ; après tout déplacement, vérifier qu'ils
 résolvent tous.
+
+## Le laboratoire
+
+`docs/raw/lab/` est le troisième objet de `docs/raw/`, et il ne se confond ni avec
+le cours ni avec une expérience : **une question, mesurée une fois, sur des
+données déclarées**, avec le générateur qui la refait versionné à côté d'elle. Pas
+de portefeuille, pas d'ordre, aucun verdict. Le protocole est dans son
+[`README.md`](docs/raw/lab/README.md).
+
+- [`largeur-de-bande-fiable.md`](docs/raw/lab/largeur-de-bande-fiable.md) — la
+  bande la plus étroite qui **encadre encore**, cherchée en balayant la longueur
+  de fenêtre, sur LVMH étalonné 2019-2024 et jugé sur 2025.
+
+> ⚠️ **La convention `± 2 s` n'a pas le taux de couverture qu'elle annonce, et
+> l'écart est d'un ordre de grandeur.** Dès la **séance suivante** celle de
+> l'ajustement, elle contient 76 à 88 % des clôtures au lieu de 95,5 % : il
+> faudrait `± 2,9 s`. Un seuil posé à `± 2 s` ne sélectionne donc pas un événement
+> à 4,5 % mais à 12-20 % — ce n'est pas un argument contre les règles des
+> expériences 4 à 12, c'est la correction de ce qu'on croit mesurer en les
+> appliquant. Et la bande de six ans qui contenait **67,8 %** de son propre
+> ajustement — pour 68,3 % attendus, la conformité de manuel — n'a contenu que
+> **0,8 %** de l'année suivante. **Compter les points dedans dans la fenêtre qui a
+> servi à l'ajuster ne mesure rien.** Et `± 3 s`, la largeur que ce même balayage
+> désigne comme honnête, enferme **100,0 %** de l'ajustement pour **29,4 %** de
+> l'année suivante : **tripler la largeur ne rend pas fiable, cela déplace le seuil
+> où l'on échoue.**
+>
+> ⚠️ **Un `CORR` élevé n'est pas un permis d'extrapoler.** Des deux bandes
+> mesurées sur LVMH, celle qui affichait `CORR` = +0,868 a projeté **0,8 %** de
+> l'année suivante dans `± 1 s` ; celle qui affichait +0,244 — à peine au-dessus
+> du seuil `CORR_FAIBLE` — en a projeté **15,3 %**. Les deux ont le même `s` à
+> 0,2 % près : ce qui les sépare est la **pente**, et la mieux ajustée a
+> fidèlement prolongé une tendance qui avait cessé. `CORR_FAIBLE` écarte les
+> droites qui n'expliquent rien ; **il ne promeut pas celles qui expliquent
+> beaucoup.**
+>
+> ⚠️ **Changer la date de début déplace la prévision d'une bande entière.** Deux
+> étalonnages également défendables de la même série — depuis 2019, depuis 2022 —,
+> arrêtés à la **même** charnière, annoncent pour le 2025-12-31 **869,51 €** et
+> **725,64 €**, quand le cours cote **634,65 €** : 143,87 € d'écart entre eux, soit
+> **88 % de la largeur `± 1 s`**. Un encadrement dont la position dépend à ce point
+> du moment où l'on a commencé à regarder n'encadre pas — il enregistre la pente du
+> morceau de passé qu'on lui a donné.
 
 ## Les expériences
 
@@ -243,6 +288,51 @@ journal en temps réel de la deuxième partie de *L'Alchimie de la finance*.
   rachat. Trois valeurs tirées sont écartées sur leurs seules données : Vivendi,
   Technip et Unibail, faute de série exploitable en euros. Le protocole est dans
   son [`README.md`](docs/done/experimentation/experience_10/README.md).
+- `experience_11/` — **l'expérience 10 privée de sa règle 7** : mêmes dix valeurs,
+  même tirage, même dimensionnement, six règles au lieu de sept, et la règle 5
+  redevenue seule sortie. Son résultat était **déjà publié** — c'est la variante
+  « sans la règle 7 » du bilan de l'expérience 10 —, aussi le protocole le **donne
+  en tête** plutôt que de le ménager pour la fin. Ce qu'elle ajoute est le détail
+  que l'autre résumait en une ligne, et un **contrôle de reproduction ordre par
+  ordre** : ses 112 ordres sont confrontés un par un à ceux du moteur voisin,
+  quantités et prix compris. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_11/README.md).
+- `experience_13/` — **la première qui ne joue aucun portefeuille.** Elle ne passe
+  aucun ordre et ne mesure aucun alpha : elle mesure une **grandeur sur des
+  événements datés**, parce que l'alpha ne peut rien trancher sur un an. Objet :
+  l'écart réduit à une droite extrapolée porte-t-il ce qu'une standardisation
+  **sans droite** ne porte pas ? Quatre bras — régression, sans droite, marche
+  aléatoire, dates au hasard — sur le **CAC 40 point-in-time 2010-2018**, 115
+  ancrages, 28 911 événements. Le protocole est dans son
+  [`README.md`](docs/done/experimentation/experience_13/README.md), le verdict
+  dans son [`bilan.md`](docs/done/experimentation/experience_13/bilan.md).
+
+> L'expérience 13 a **réfuté** la piste qui l'avait fait naître : +2,37 points
+> mesurés sur 2019-2026 deviennent **+0,11, IC₉₅ [−0,84 ; +1,03]**, sur les neuf
+> années précédentes — l'intervalle **exclut** l'effet annoncé. **Aucune des
+> dix-huit cellules ne survit à Holm.** C'est le second échec de réplication d'une
+> piste de **catégorie B** après la coupe à −15 % de l'expérience 10, et le
+> mécanisme est le même : une piste mesurée sur les données qui l'ont suggérée ne
+> survit pas à un univers qu'elle n'a pas servi à fabriquer.
+>
+> ⚠️ **Elle a aussi montré qu'un contrôle de validité se corrige comme un test.**
+> Son témoin nul a d'abord fermé la vanne et arrêté l'expérience : six intervalles
+> à 95 % **sans correction de multiplicité** se déclenchent à tort **26,5 % du
+> temps**, soit plus souvent que le test qu'ils protègent. Le témoin valait
+> −0,054 point sur 12 482 tirages — nul, comme sa construction l'exige. **Un
+> garde-fou non corrigé n'est pas un garde-fou**, et la correction ne fut
+> recevable que parce qu'elle était démontrablement **neutre sur le verdict**.
+
+> L'expérience 11 a ajouté deux disciplines que les suivantes reprennent. **Quand
+> le résultat est connu avant d'écrire l'expérience, il se publie en tête du
+> protocole** : le ménager pour la fin serait mimer une prédiction qu'on ne fait
+> pas. Et **quand deux expériences partagent le même portefeuille, la reproduction
+> s'exige sur les quantités, pas seulement sur les dates** — 112 ordres confrontés
+> un par un, zéro écart, là où l'expérience 9 ne pouvait comparer que des dates à
+> l'expérience 8. Elle a aussi rendu visible un coût qu'aucun tableau de synthèse
+> ne montrait : **11 ordres refusés faute d'espèces** contre un seul avec la
+> règle 7, parce qu'un portefeuille qui ne coupe jamais reste investi et manque de
+> liquidités au moment où un signal se présente.
 
 > L'expérience 10 a soumis une piste de **catégorie B** au seul test qui vaille —
 > un univers qu'elle n'avait pas servi à fabriquer — et **la piste n'y a pas
@@ -356,12 +446,16 @@ règle du miroir markdown s'y applique comme partout ailleurs (`journal.py` ⇔
 python -m ruff check python/ docs/
 ```
 
-L'autre script hors `python/` est
+Les deux autres scripts hors `python/` sont
 [`concept/semestre3/canal/figures/generer_figures.py`](docs/raw/concept/semestre3/canal/figures/generer_figures.md),
-qui trace les trois figures du module 2 sur le canal. Même principe que les
-`journal.py` : **le générateur est versionné à côté de ce qu'il produit**, parce
-qu'une figure de cours qu'on ne peut pas refaire ne peut pas être corrigée. Il ne
-lit aucune donnée de marché et ne compte pas parmi les dix utilitaires.
+qui trace les trois figures du module 2 sur le canal, et
+[`lab/figures/generer_largeur_fiable.py`](docs/raw/lab/figures/generer_largeur_fiable.md),
+qui balaie les largeurs de bande et trace les trois figures du laboratoire. Même
+principe que les `journal.py` : **le générateur est versionné à côté de ce qu'il
+produit**, parce qu'une figure qu'on ne peut pas refaire ne peut pas être
+corrigée. Aucun des deux ne compte parmi les onze utilitaires — le premier ne lit
+aucune donnée de marché, le second lit un CSV de `quotes/` mais n'appelle jamais
+le réseau.
 
 ## Agents
 

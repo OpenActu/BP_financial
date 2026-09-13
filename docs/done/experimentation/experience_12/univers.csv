@@ -1,0 +1,41 @@
+RANG_TIRAGE,ISIN,SICOVAM,NOM,TICKER,EXAMINEE,RETENUE,MOTIF
+1,FR0010208488,1020848,ENGIE (ex-GDF Suez),ENGI.PA,oui,oui,
+2,FR0000120404,12040,ACCOR,AC.PA,oui,oui,
+3,FR0000120503,12050,BOUYGUES,EN.PA,oui,oui,
+4,FR0000127771,12777,Vivendi,VIV.PA,oui,non,"saut de -77,8 % au 2024-12-09 sans division declaree : scissions de Canal+, Havas et Louis Hachette, jamais creditees par la serie"
+5,FR0000120271,12027,Total,TTE.PA,oui,oui,
+6,FR0000073272,7327,Safran,SAF.PA,oui,oui,deja presente dans l'experience 9
+7,NL0000235190,5730,Airbus Group (ex-EADS),AIR.PA,oui,oui,societe neerlandaise : exemptee de TTF
+8,FR0000130577,13057,Publicis Groupe SA,PUB.PA,oui,oui,
+9,FR0000131708,13170,Technip,,oui,non,"aucune serie en euros chez le fournisseur : FTI.PA et TEC.PA ne rendent rien, seul FTI existe et cote en USD"
+10,FR0000125007,12500,SAINT-GOBAIN,SGO.PA,oui,oui,
+11,FR0000124711,12471,Unibail-Rodamco,,oui,non,"aucune serie en euros chez le fournisseur (seul UNBLF, en dollars)"
+12,FR0000121014,12101,LVMH MOET HENESSY,MC.PA,oui,oui,
+13,FR0000125338,12533,Cap Gémini,CAP.PA,oui,oui,"retenue au dixieme rang, apres trois rejets"
+14,FR0000131906,13190,Renault,,non,,
+15,FR0000121501,12150,Peugeot S.A.,,non,,
+16,FR0000121667,12166,EssilorLuxottica,,non,,
+17,FR0000120644,12064,DANONE,,non,,
+18,FR0000124141,12414,Veolia Environnement,,non,,
+19,FR0000120073,12007,AIR LIQUIDE,,non,,
+20,FR0000133308,13330,Orange (ex: France Télécom),,non,,
+21,LU0323134006,32313400,ArcelorMittal,,non,,
+22,FR0000120628,12062,Axa,,non,,
+23,FR0000120321,12032,L'Oréal,,non,,
+24,NL0000226223,12970,STMicroelectronics,,non,,
+25,FR0000120578,12057,Sanofi,,non,,
+26,FR0000121220,12122,Sodexo (ex: Sodexho),,non,,
+27,FR0000121261,12126,Michelin B,,non,,
+28,FR0000051732,5173,Atos,,non,,
+29,FR0000120172,12017,CARREFOUR,,non,,
+30,FR0000125486,12548,Vinci,,non,,
+31,FR0000121972,12197,Schneider (Ex-Spie Batignolles),,non,,
+32,FR0000121485,12148,Kering (ex: Pinault-Printemps-Redoute),,non,,
+33,FR0000131104,13110,BNP,,non,,
+34,FR0000130650,13065,Dassault Systèmes,,non,,
+35,FR0000120693,12069,Pernod Ricard,,non,,
+36,FR0000045072,4507,CREDIT AGRICOLE,,non,,
+37,FR0000130809,13080,Société Générale,,non,,
+38,FR0000130338,13033,Valeo,,non,,
+39,FR0000052292,5229,Hermes International,,non,,
+40,FR0010307819,1030781,Legrand,,non,,

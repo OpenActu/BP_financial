@@ -51,13 +51,13 @@ Deux conséquences qu'il faut accepter d'emblée :
 |---|---|---|---|---|
 | **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 29 | ≈ 29 h 30 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
-| **3** | L'inférence et le modèle | Student, modèle, canal, encadrement | 27 | ≈ 38 h |
+| **3** | L'inférence et le modèle | Student, tests multiples, modèle, canal, encadrement | 31 | ≈ 46 h |
 | **4** | La décision | alpha, fondamentaux, trading, finance | 27 | ≈ 29 h 45 |
-| | | **10 cours** | **109** | **≈ 129 h** |
+| | | **11 cours** | **113** | **≈ 137 h** |
 
-> ℹ️ **Le nombre de modules est presque constant — 29, 26, 27, 27 — mais pas le
-> volume.** Le semestre 3 est le plus dense, parce que la loi de Student pèse
-> 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
+> ℹ️ **Le nombre de modules reste régulier — 29, 26, 31, 27 — mais pas le
+> volume.** Le semestre 3 est de loin le plus dense, parce que la loi de Student
+> pèse 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
 > déjà énoncée dans [`modele.md`](modele.md).
 
@@ -119,9 +119,12 @@ la droite de tendance et les bandes qui l'entourent.
 | 2 | [Le modèle](concept/semestre3/modele/01-elimination-de-l-ordonnee.md) — les 9 étapes | 9 | ≈ 4 h |
 | 3 | [Le canal de régression](concept/semestre3/canal/README.md) | 6 | 6 h |
 | 4 | [L'encadrement](concept/semestre3/encadrement/README.md) | 4 | 4 h |
+| 5 | [Tests multiples — Bonferroni et Holm](concept/semestre3/statistique/tests-multiples/README.md) | 4 | 8 h |
 
-L'ordre est ici une contrainte stricte : le canal cite les étapes 7 et 8 du
-modèle, et l'encadrement cite le module 2 du canal.
+L'ordre est ici une contrainte stricte pour les quatre premiers : le canal cite
+les étapes 7 et 8 du modèle, et l'encadrement cite le module 2 du canal. Le
+cinquième est **autonome** — il ne prend en entrée que des $p$-valeurs, et se lit
+à n'importe quel moment du semestre, y compris avant Student.
 
 > 🔑 **C'est le semestre où le dépôt devient exécutable.** À la fin, les colonnes
 > `E_n`, `VAR_n`, `CORR_n`, `VAL_n`, `T_n`, `P_n`, `TEND_n` produites par
