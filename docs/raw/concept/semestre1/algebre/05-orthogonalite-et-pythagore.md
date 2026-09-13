@@ -59,7 +59,7 @@ Toujours dans $\mathbb R^4$, avec $t=(1,2,3,4)$, prenons $u=(1,\,-1,\,-1,\,1)$ :
 $$\langle u,f\rangle=a\,\langle u,\mathbf 1\rangle+b\,\langle u,t\rangle=a\cdot 0+b\cdot 0=0$$
 et ce, pour **tout** couple $(a,b)$ — deux additions ont couvert un plan entier.
 
-> ⚠️ **Une condition sur $u$, pas une formule pour $u$.** $u\perp\text{Vect}(\mathbf 1,t)$ ne dit pas ce que *vaut* $u$ : elle dit ce qu'il doit vérifier. L'écriture matricielle le rend visible. Rangeons les deux générateurs en **colonnes** d'une matrice $n\times 2$ :
+> ⚠️ **Une condition sur $u$, pas une formule pour $u$.** Pour $u=(u_1,\dots,u_n)\in\mathbb R^n$, $u\perp\text{Vect}(\mathbf 1,t)$ ne dit pas ce que *vaut* $u$ : elle dit ce qu'il doit vérifier. L'écriture matricielle le rend visible. Rangeons les deux générateurs en **colonnes** d'une matrice $n\times 2$ :
 > $$X=\begin{pmatrix}\mathbf 1 & t\end{pmatrix}=\begin{pmatrix}1&1\\1&2\\\vdots&\vdots\\1&n\end{pmatrix}
 > \qquad\text{alors}\qquad
 > X^Tu=\begin{pmatrix}\langle\mathbf 1,u\rangle\\\langle t,u\rangle\end{pmatrix}=\begin{pmatrix}\sum_iu_i\\\sum_i i\,u_i\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}$$
