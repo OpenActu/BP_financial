@@ -59,6 +59,16 @@ Toujours dans $\mathbb R^4$, avec $t=(1,2,3,4)$, prenons $u=(1,\,-1,\,-1,\,1)$ :
 $$\langle u,f\rangle=a\,\langle u,\mathbf 1\rangle+b\,\langle u,t\rangle=a\cdot 0+b\cdot 0=0$$
 et ce, pour **tout** couple $(a,b)$ — deux additions ont couvert un plan entier.
 
+> ⚠️ **Une condition sur $u$, pas une formule pour $u$.** $u\perp\text{Vect}(\mathbf 1,t)$ ne dit pas ce que *vaut* $u$ : elle dit ce qu'il doit vérifier. L'écriture matricielle le rend visible. Rangeons les deux générateurs en **colonnes** d'une matrice $n\times 2$ :
+> $$X=\begin{pmatrix}\mathbf 1 & t\end{pmatrix}=\begin{pmatrix}1&1\\1&2\\\vdots&\vdots\\1&n\end{pmatrix}
+> \qquad\text{alors}\qquad
+> X^Tu=\begin{pmatrix}\langle\mathbf 1,u\rangle\\\langle t,u\rangle\end{pmatrix}=\begin{pmatrix}\sum_iu_i\\\sum_i i\,u_i\end{pmatrix}=\begin{pmatrix}0\\0\end{pmatrix}$$
+> ou, de façon équivalente, $u^TX=(0\ \ 0)$ — un $1\times n$ par un $n\times 2$ donne un $1\times 2$. Le facteur qui multiplie $u$ est la matrice $X$ **entière**, pas un vecteur, et le produit est **nul**.
+>
+> Ce sont **deux** équations pour **$n$** inconnues : les $u$ qui les satisfont ne forment pas un vecteur, mais un sous-espace — celui des vecteurs que $X^T$ envoie sur $0$, de dimension $n-2$ ([module 7](07-supplementaire-orthogonal-et-dimension.md), théorème du rang). Dans $\mathbb R^4$ c'est un plan, engendré par exemple par
+> $$a=(1,\,-2,\,1,\,0)\qquad\text{et}\qquad b=(0,\,1,\,-2,\,1)$$
+> qui vérifient chacun les deux égalités ($1-2+1=0$ et $1-4+3=0$ ; $1-2+1=0$ et $2-6+4=0$). Le $u=(1,-1,-1,1)$ ci-dessus n'est que $a+b$ ; tout $\lambda a+\mu b$ convenait aussi. Au [module 6](06-projection-orthogonale.md), c'est exactement la forme des équations normales : $X^T(x-\hat x)=0$.
+
 > ⚠️ **Plus le sous-espace grandit, plus son orthogonal rétrécit.** $\text{Vect}(\mathbf 1)\subset\text{Vect}(\mathbf 1,t)$, donc être orthogonal au second est **plus** exigeant. Le $u=(-2,\,0,\,-1,\,3)$ de l'exemple précédent le montre : il passe la première condition, mais $\langle u,t\rangle=-2+0-3+12=7\neq 0$ — orthogonal à la droite $\text{Vect}(\mathbf 1)$, pas au plan $\text{Vect}(\mathbf 1,t)$.
 
 D'où vient ce $u$, là encore : c'est le **résidu** d'un ajustement affine. La série $x=(12,\,12,\,14,\,18)$ a pour droite des moindres carrés $\hat x_i=9+2i$, soit $\hat x=9\,\mathbf 1+2\,t=(11,\,13,\,15,\,17)$, et $u=x-\hat x=(1,\,-1,\,-1,\,1)$. Que le résidu soit orthogonal aux **deux** générateurs n'est pas un hasard de cet exemple : c'est la définition même de l'ajustement au sens des moindres carrés — ce sont ses *équations normales*, démontrées au [module 6](06-projection-orthogonale.md). Le § 5.1 en donne déjà la moitié pratique : il n'y a que deux produits scalaires à annuler, quel que soit $n$.
