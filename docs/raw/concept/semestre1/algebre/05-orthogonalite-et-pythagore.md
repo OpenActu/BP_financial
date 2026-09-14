@@ -206,12 +206,30 @@ D'où l'égalité
 
 **E5.2.** Soit $\mathbf 1=(1,\dots,1)$. Caractériser les vecteurs $u$ tels que $u\perp\mathbf 1$.
 Soit l'ensemble $F$ contenant les vecteurs $u \in F.u\perp\mathbf 1$
-$\forall u_$
-*(Réponse : $\sum_i u_i=0$.)* **C'est l'ensemble le plus important de tout le cours** — voir le [module 7](07-supplementaire-orthogonal-et-dimension.md).
+**Réponse** $<\mathbf u,\mathbf 1> = \sum u_i = 0$
+ C'est l'ensemble le plus important de tout le cours** — voir le [module 7](07-supplementaire-orthogonal-et-dimension.md).
 
 **E5.3.** Retrouver König–Huygens $\sum_i(x_i-\bar x)^2=\sum_i x_i^2-n\bar x^2$ **par Pythagore seul**, sans développer le carré. *(Piste : admettre provisoirement que $x-\bar x\mathbf 1$ est orthogonal à $\bar x\mathbf 1$ — l'exercice E5.2 le donne.) Comparer la longueur des deux démonstrations.*
 
+**Preuve par Pythagore.** Posons $\tilde x=x-\bar x\mathbf 1$, de sorte que
+$$x=\bar x\mathbf 1+\tilde x$$
+* *Orthogonalité.* $\langle\tilde x,\mathbf 1\rangle=\sum_i(x_i-\bar x)=\sum_ix_i-n\bar x=0$, donc $\tilde x\perp\mathbf 1$ (E5.2), et par linéarité $\langle\tilde x,\bar x\mathbf 1\rangle=\bar x\cdot 0=0$ : $\tilde x\perp\bar x\mathbf 1$.
+* *Pythagore* (§ 5.2) sur le couple $(\bar x\mathbf 1,\tilde x)$ :
+$$\|x\|^2=\|\bar x\mathbf 1\|^2+\|\tilde x\|^2$$
+* *Lecture en coordonnées.* $\|x\|^2=\sum_ix_i^2$, $\|\bar x\mathbf 1\|^2=\bar x^2\|\mathbf 1\|^2=n\bar x^2$ et $\|\tilde x\|^2=\sum_i(x_i-\bar x)^2$. D'où
+$$\sum_i(x_i-\bar x)^2=\sum_ix_i^2-n\bar x^2\qquad\blacksquare$$
+
+**Preuve par développement, pour comparer.** Par l'identité du § 2.2 appliquée à $x-\bar x\mathbf 1$ :
+$$\|x-\bar x\mathbf 1\|^2=\|x\|^2-2\langle x,\bar x\mathbf 1\rangle+\|\bar x\mathbf 1\|^2
+=\sum_ix_i^2-2\bar x\sum_ix_i+n\bar x^2
+=\sum_ix_i^2-2n\bar x^2+n\bar x^2
+=\sum_ix_i^2-n\bar x^2$$
+en utilisant $\sum_ix_i=n\bar x$.
+
+**Comparaison.** Les deux preuves utilisent le même fait, $\sum_ix_i=n\bar x$, mais pas au même endroit. Le développement le consomme **dans le calcul**, pour faire tomber le terme croisé $-2n\bar x^2$ en le combinant à $+n\bar x^2$. Pythagore le consomme **en amont**, sous la forme géométrique $\tilde x\perp\mathbf 1$ : une fois l'orthogonalité acquise, il n'y a plus de terme croisé du tout, et l'identité se lit directement — il ne reste qu'à traduire trois normes en sommes. La preuve est plus courte, et surtout elle dit *pourquoi* le résultat est vrai : c'est une décomposition orthogonale, la même que celle de l'ANOVA (§ 5.4).
+
 **E5.4.** Montrer qu'une famille orthogonale de $\mathbb R^n$ comporte au plus $n$ vecteurs non nuls. *Quel résultat du § 5.3 utilise-t-on ?*
+
 
 **E5.5.** Deux vecteurs sont orthogonaux ; leur somme peut-elle être de norme inférieure à
 chacun d'eux ? *Justifier par le théorème, puis par un dessin en dimension 2.*
