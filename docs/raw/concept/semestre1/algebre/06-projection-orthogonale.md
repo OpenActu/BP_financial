@@ -29,10 +29,14 @@ La question du module parle d'un **sous-espace** $F$. Ce n'est pas un mot de dé
 
 ## 6.2 Projection sur une droite
 
-> **Proposition.** Soit $u\ne 0$ et $D=\text{Vect}(u)$. La projection orthogonale de $x$ sur $D$ est
+> **Définition.** Soit $u\ne 0$ et $D=\text{Vect}(u)$. On appelle **projection orthogonale** de $x$ sur $D$ tout vecteur $p\in D$ tel que $x-p\perp D$.
+
+La définition ne dit pas qu'un tel vecteur existe, ni qu'il n'y en a qu'un : c'est ce qu'il faut établir avant d'écrire « **la** projection » et de la noter comme une fonction de $x$.
+
+> **Proposition.** La projection orthogonale de $x$ sur $D$ existe et elle est unique ; on la note $p(x)$, et
 > $$p(x)=\frac{\langle x,u\rangle}{\|u\|^2}\,u$$
 
-**Démonstration.** Cherchons $p(x)=\lambda u$ tel que le résidu $x-\lambda u$ soit orthogonal à $u$ :
+**Démonstration.** Un élément de $D$ s'écrit $\lambda u$. Être orthogonal à $D$ revient à être orthogonal à $u$ seul, puisque $\langle x-\lambda u,\;\mu u\rangle=\mu\,\langle x-\lambda u,\;u\rangle$ pour tout $\mu$. La condition s'écrit donc
 $$\langle x-\lambda u,\;u\rangle=0
 \;\Longleftrightarrow\;\langle x,u\rangle=\lambda\|u\|^2
 \;\Longleftrightarrow\;\lambda=\frac{\langle x,u\rangle}{\|u\|^2}$$
@@ -54,7 +58,7 @@ Ces deux vecteurs sont orthogonaux, donc par Pythagore :
 $$\|x-y\|^2=\|x-p(x)\|^2+\|p(x)-y\|^2\;\ge\;\|x-p(x)\|^2 \qquad\blacksquare$$
 > 🔑 **Les moindres carrés ne sont rien d'autre que ce théorème.** Minimiser $\sum_i(v_i-v_0-rt_i)^2$, c'est minimiser $\|v-y\|^2$ sur le sous-espace $y\in\text{Vect}(\mathbf 1,t)$ : la solution **est** la projection orthogonale. Tout le calcul différentiel de [`modele.md`](../../../modele.md) (annuler deux dérivées partielles) retrouve cette figure par un autre chemin.
 
-**Deux définitions, une seule notion.** « Le résidu est orthogonal » et « la distance est minimale » caractérisent le même vecteur. La première est commode pour **calculer**, la seconde pour **comprendre**.
+**Une définition, une caractérisation.** « Le résidu est orthogonal » est la définition du § 6.2 ; « la distance est minimale » est le théorème ci-dessus, et il désigne le même vecteur. La première est commode pour **calculer**, la seconde pour **comprendre**.
 
 ---
 
