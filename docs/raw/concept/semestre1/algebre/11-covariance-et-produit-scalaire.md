@@ -1,6 +1,6 @@
 # Module 11 — La covariance comme produit scalaire ⭐
 
-**Durée : 1 h 15.** Prérequis : modules [1](01-espace-vectoriel.md) à[10](10-dictionnaire-geometrique-des-statistiques.md). **Module de sortie du cours.**
+**Durée : 1 h 15.** Prérequis : modules [1](01-espace-vectoriel.md) à[10](10-dictionnaire-geometrique-des-statistiques.md). **Module pivot du cours** : le [module 12](12-analyse-en-composantes-principales.md) en tire l'analyse en composantes principales.
 
 > **La question traitée.** Le [module 10](10-dictionnaire-geometrique-des-statistiques.md) affirme que $\operatorname{Cov}(x,y)=\frac1n\langle\tilde x,\tilde y\rangle$. Est-ce une **notation
 > commode**, ou la covariance **est-elle** un produit scalaire, au sens exact des trois propriétés
@@ -416,5 +416,5 @@ d'observations ?*
 ---
 
 ⬅️ [Module 10 — Le dictionnaire géométrique des statistiques](10-dictionnaire-geometrique-des-statistiques.md) ·
-🏠 [Sommaire](README.md) ·
-➡️ **Suite** : [Cours de statistique mathématique](../../semestre2/statistique/mathematique/README.md)
+➡️ [Module 12 — L'analyse en composantes principales](12-analyse-en-composantes-principales.md) ·
+🏠 [Sommaire](README.md)

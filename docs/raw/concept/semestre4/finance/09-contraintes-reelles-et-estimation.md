@@ -61,6 +61,8 @@ Simulation honnête : 10 actifs, $\sigma=28\,\%$, $\bar\rho=0{,}45$, rendements 
 
 **Le comptage des paramètres explique le reste.** Estimer $\Sigma$ sur $n$ actifs demande $\frac{n(n+1)}2$ nombres : **55** pour 10 actifs, **820** pour les 40 du CAC 40. Avec 60 rendements mensuels, on estime 820 paramètres à partir de 2 400 observations dépendantes. La matrice obtenue est numériquement inversible et statistiquement vide.
 
+> 📐 **Pire : la matrice estimée invente de la structure.** Sur des séries **indépendantes**, l'éboulis empirique des valeurs propres n'est pas plat — le plus grand dépasse largement sa valeur théorique dès que le nombre d'actifs n'est pas petit devant le nombre de dates ([algèbre § 12.7](../../semestre1/algebre/12-analyse-en-composantes-principales.md)). Ce que l'optimiseur prend pour un axe de risque peut n'être que cet effet.
+
 ---
 
 ## 9.3 Les remèdes, par ordre d'efficacité
@@ -70,6 +72,7 @@ Simulation honnête : 10 actifs, $\sigma=28\,\%$, $\bar\rho=0{,}45$, rendements 
 | **Renoncer à $\mu$** — utiliser $w_{\text{mv}}$              | La variance minimale n'utilise que $\Sigma$, mieux estimée que $\mu$                                             | Le plus rentable des remèdes                                   |
 | **Contraindre $w\ge0$**                                      | Interdit les poids extrêmes que produit le bruit                                                                 | Équivaut à un *shrinkage* de $\Sigma$ (Jagannathan & Ma, 2003) |
 | **Rétrécir $\Sigma$ (*shrinkage*)**                          | $\hat\Sigma_{\text{shrunk}}=\lambda\,\Sigma_{\text{cible}}+(1-\lambda)\hat\Sigma$, cible = corrélation constante | Stabilise l'inverse                                            |
+| **Réduire $\Sigma$ à quelques facteurs** ([ACP](../../semestre1/algebre/12-analyse-en-composantes-principales.md))                 | Ne garder que les premiers axes principaux : $\hat\Sigma=\sum_{k\le d}\lambda_kw_kw_k^{\top}$, le reste renvoyé à une diagonale | Impose une structure au lieu de l'estimer ; $d$ est un **choix**, pas un résultat |
 | **Réduire $n$**                                              | 10 lignes bien choisies plutôt que 40                                                                            | Moins de paramètres, cf. § 9.1                                 |
 | **Partir de $1/N$** et n'en dévier qu'avec de bonnes raisons | Aucun paramètre estimé                                                                                           | Difficile à battre                                             |
 

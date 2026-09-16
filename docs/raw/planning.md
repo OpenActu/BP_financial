@@ -49,13 +49,13 @@ Deux conséquences qu'il faut accepter d'emblée :
 
 | Semestre | Thème | Cours | Modules | Volume |
 |---|---|---|---|---|
-| **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 29 | ≈ 29 h 30 |
+| **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 30 | ≈ 31 h |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, tests multiples, modèle, canal, encadrement | 31 | ≈ 46 h |
 | **4** | La décision | alpha, fondamentaux, trading, finance | 27 | ≈ 29 h 45 |
-| | | **11 cours** | **113** | **≈ 137 h** |
+| | | **11 cours** | **114** | **≈ 138 h 30** |
 
-> ℹ️ **Le nombre de modules reste régulier — 29, 26, 31, 27 — mais pas le
+> ℹ️ **Le nombre de modules reste régulier — 30, 26, 31, 27 — mais pas le
 > volume.** Le semestre 3 est de loin le plus dense, parce que la loi de Student
 > pèse 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
@@ -70,7 +70,7 @@ lequel tout le reste se lit comme une suite de recettes.
 
 | Ordre | Cours | Modules | Volume |
 |---|---|---|---|
-| 1 | [Algèbre linéaire euclidienne](concept/semestre1/algebre/README.md) | 11 | 9 h 30 |
+| 1 | [Algèbre linéaire euclidienne](concept/semestre1/algebre/README.md) | 12 | 11 h |
 | 2 | [Dérivation et intégration](concept/semestre1/analyse/derivation-et-integration/README.md) | 9 | 10 h |
 | 3 | [La convexité](concept/semestre1/analyse/convexite/README.md) | 9 | 10 h |
 

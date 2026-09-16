@@ -27,7 +27,8 @@ Une seule opération — $\langle u,v\rangle=\sum_i u_iv_i$ — et l'examen syst
 - quand il est **nul** → Pythagore, la décomposition de la variance (module 5) ;
 - quand on le **rend nul** → la projection, les moindres carrés (module 6) ;
 - ce qu'il en **coûte en dimensions** → le noyau, le rang, les degrés de liberté (modules 7 et 8) ;
-- et ce qu'il **est**, sur des données → la covariance elle-même (module 11).
+- et ce qu'il **est**, sur des données → la covariance elle-même (module 11) ;
+- enfin, quand on cherche les directions qui le rendent nul **partout à la fois** → les axes principaux (module 12).
 
 Deux modules préalables portent ce sur quoi l'opération s'exerce : le **module 1** définit l'espace
 $\mathbb R^n$ et la combinaison linéaire — une série de $n$ nombres vue comme un seul objet —, et le
@@ -48,8 +49,9 @@ $\mathbb R^n$ et la combinaison linéaire — une série de $n$ nombres vue comm
 | 9   | [Bases orthonormées, isométries, Gram–Schmidt](09-bases-orthonormees-et-isometries.md)                | 1 h    | Base de Helmert, invariance par rotation                   |
 | 10  | [**Le dictionnaire géométrique des statistiques**](10-dictionnaire-geometrique-des-statistiques.md) ⭐ | 1 h    | Moyenne = projection, corrélation = cosinus                |
 | 11  | [**La covariance comme produit scalaire**](11-covariance-et-produit-scalaire.md) ⭐                    | 1 h 15 | $\Sigma$ est une matrice de Gram — et ce que cela interdit |
+| 12  | [L'analyse en composantes principales](12-analyse-en-composantes-principales.md)                       | 1 h 30 | Le module 6 retourné : le sous-espace devient l'inconnue   |
 
-**Volume total** : ≈ 9 h 30. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
+**Volume total** : ≈ 11 h. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
 
 ## Les quatre modules décisifs
 

@@ -16,11 +16,11 @@ exercices compris.
 
 ## Semestre 1 — Les outils mathématiques
 
-**Volume : ≈ 29 h 30.**
+**Volume : ≈ 31 h.**
 
 ### [Algèbre linéaire euclidienne](../semestre1/algebre/README.md)
 
-**11 modules · 9 h 30.**
+**12 modules · 11 h.**
 
 | Fait | #   | Module                                                                                                                 | Durée  |
 | ---- | --- | ---------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -35,6 +35,7 @@ exercices compris.
 | [ ]  | 9   | [Bases orthonormées, isométries, Gram–Schmidt](../semestre1/algebre/09-bases-orthonormees-et-isometries.md)             | 1 h    |
 | [ ]  | 10  | [Le dictionnaire géométrique des statistiques ⭐](../semestre1/algebre/10-dictionnaire-geometrique-des-statistiques.md)  | 1 h    |
 | [ ]  | 11  | [La covariance comme produit scalaire ⭐](../semestre1/algebre/11-covariance-et-produit-scalaire.md)                     | 1 h 15 |
+| [ ]  | 12  | [L'analyse en composantes principales](../semestre1/algebre/12-analyse-en-composantes-principales.md)                   | 1 h 30 |
 
 ### [Dérivation et intégration](../semestre1/analyse/derivation-et-integration/README.md)
 
