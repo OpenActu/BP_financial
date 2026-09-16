@@ -147,7 +147,22 @@ La quantité placée sous ce minimum est exactement celle que le § 6.3 sait dé
 
 ## 6.5 Le projecteur comme matrice
 
-$P_F$ est une application **linéaire** ; sa matrice vérifie deux propriétés caractéristiques :
+Jusqu'ici $P_F(x)$ a été calculé pour **un** $x$. On regarde maintenant $P_F$ comme une fonction de $\mathbb R^n$ dans $\mathbb R^n$.
+
+> 📐 **Rappel du [module 4 bis](04bis-matrices.md).** Une application $f$ est **linéaire** si $f(\alpha x+\beta y)=\alpha f(x)+\beta f(y)$ pour tous $x,y,\alpha,\beta$ ([§ 4bis.3](04bis-matrices.md)). Toute matrice en définit une, puisque $M(\alpha x+\beta y)=\alpha Mx+\beta My$ ([§ 4bis.2](04bis-matrices.md)) ; et réciproquement, toute application linéaire s'écrit $f(x)=Mx$, où la $j$-ième colonne de $M$ est l'image $f(e_j)$ du $j$-ième vecteur de la base canonique. Le produit $P^2=PP$, la transposée $P^{\top}$ et la trace sont définis aux § 4bis.4 à 4bis.6.
+
+> **Proposition.** $P_F$ est linéaire.
+
+**Démonstration.** Soit $x,y\in\mathbb R^n$ et $\alpha,\beta\in\mathbb R$. Posons $q=\alpha P_F(x)+\beta P_F(y)$ ; il s'agit de montrer que $q$ est la projection de $\alpha x+\beta y$, et, grâce à l'unicité du § 6.4, il suffit de vérifier les deux conditions de la définition :
+
+- $q\in F$, parce que $P_F(x)$ et $P_F(y)$ sont dans $F$ et que $F$ est **stable** ;
+- $(\alpha x+\beta y)-q=\alpha\,(x-P_F(x))+\beta\,(y-P_F(y))$ est orthogonal à $F$ : pour tout $z\in F$, par linéarité du produit scalaire, $\langle(\alpha x+\beta y)-q,\,z\rangle=\alpha\cdot 0+\beta\cdot 0=0$.
+
+Donc $P_F(\alpha x+\beta y)=q=\alpha P_F(x)+\beta P_F(y)$. $\blacksquare$
+
+Comme au § 6.4, aucun calcul et aucune base : la stabilité et l'unicité suffisent. On note désormais $P$ la matrice de $P_F$, et $P_F(x)=Px$. Sur une droite, la formule du § 6.2 la donne sans effort, $P=\frac{uu^{\top}}{\|u\|^2}$ (exercice E6.2).
+
+Cette matrice vérifie deux propriétés caractéristiques :
 $$P^{\top}=P \quad\text{(symétrie)}\qquad\text{et}\qquad P^2=P\quad\text{(idempotence)}$$
 - **Idempotence** : projeter ce qui est déjà projeté ne change rien.
 - **Symétrie** : c'est elle qui distingue une projection **orthogonale** d'une projection oblique. Sans elle, $P^2=P$ décrit encore une projection, mais parallèlement à une direction arbitraire.
@@ -209,6 +224,13 @@ compte des degrés de liberté sans jamais construire de base.
 
 **E6.1.** Vérifier directement, à partir de la formule du § 6.2, que $p(p(x))=p(x)$ et que $\langle p(x),x-p(x)\rangle=0$.
 
+**Preuve.** Soit $u\ne 0$ et $D=\text{Vect}(u)$. Posons $\theta=\dfrac{\langle x,u\rangle}{\|u\|^2}$, de sorte que $p(x)=\theta\,u$.
+* *Idempotence.* Posons $y=p(x)=\theta u$. Par linéarité, $\langle y,u\rangle=\theta\langle u,u\rangle=\theta\|u\|^2$, donc
+$$p(p(x))=p(y)=\frac{\langle y,u\rangle}{\|u\|^2}\,u=\frac{\theta\|u\|^2}{\|u\|^2}\,u=\theta\,u=p(x)$$
+* *Orthogonalité du résidu.* Par linéarité, $\langle p(x),x-p(x)\rangle=\theta\,\langle x-\theta u,\,u\rangle$, et
+$$\langle x-\theta u,\,u\rangle=\langle x,u\rangle-\theta\|u\|^2=\langle x,u\rangle-\frac{\langle x,u\rangle}{\|u\|^2}\,\|u\|^2=0$$
+d'où $\langle p(x),x-p(x)\rangle=0$. On a retrouvé par le calcul que $x-p(x)\perp u$ : la formule satisfait bien la définition. $\blacksquare$
+
 **E6.2.** Écrire la matrice du projecteur sur $D=\text{Vect}(u)$ sous la forme $P=\frac{uu^{\top}}{\|u\|^2}$. Vérifier $P^{\top}=P$, $P^2=P$, puis calculer $\operatorname{tr}(P)$. *Que vaut-elle, et pourquoi était-ce prévisible ?*
 
 **E6.3.** Montrer que $\|p(x)\|\le\|x\|$, avec égalité si et seulement si $x\in D$. *(Piste : Pythagore.) Quel résultat du [module 3](03-cauchy-schwarz-et-angle.md) retrouve-t-on en explicitant cette inégalité ?*
@@ -227,6 +249,7 @@ compte des degrés de liberté sans jamais construire de base.
 - **Sans base orthogonale**, les coefficients sont couplés : ils résolvent les équations normales $A^{\top}A\lambda=A^{\top}x$.
 - **Le résidu est orthogonal au sous-espace** — c'est la définition opérationnelle.
 - ⭐ **La projection est le point le plus proche** : les moindres carrés ne sont que cela.
+- **$P_F$ est linéaire**, donc c'est une matrice ([module 4 bis](04bis-matrices.md)) : la stabilité et l'unicité suffisent à le montrer.
 - **$P^{\top}=P$ et $P^2=P$** caractérisent un projecteur orthogonal.
 - **$\operatorname{tr}(P)=\operatorname{rang}(P)=\dim F$** : les dimensions se lisent sur la trace.
 

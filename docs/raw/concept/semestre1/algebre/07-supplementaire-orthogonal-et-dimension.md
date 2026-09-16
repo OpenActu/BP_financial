@@ -24,7 +24,9 @@ La dernière égalité est le [Pythagore du module 5](05-orthogonalite-et-pythag
 
 ## 7.2 Forme linéaire, noyau, théorème du rang
 
-> **Définition.** Une application $f:\mathbb R^n\to\mathbb R^m$ est **linéaire** si $f(u+v)=f(u)+f(v)$ et $f(\lambda u)=\lambda f(u)$ pour tous $u,v$ et tout réel $\lambda$. Quand l'arrivée est $\mathbb R$ tout court ($m=1$), on parle de **forme linéaire**
+> 📐 **Rappel du [§ 4bis.3](04bis-matrices.md).** Une application $f:\mathbb R^n\to\mathbb R^m$ est **linéaire** si $f(\alpha u+\beta v)=\alpha f(u)+\beta f(v)$ pour tous $u,v$ et tous réels $\alpha,\beta$ — c'est alors une matrice $m\times n$.
+
+> **Définition.** Quand l'arrivée est $\mathbb R$ tout court ($m=1$), on parle de **forme linéaire**.
 
 > **Définition.** Le **noyau** de $f$ est l'ensemble des vecteurs que $f$ envoie sur $0$ :
 > $$\ker f=\{u\in\mathbb R^n:\ f(u)=0\}$$

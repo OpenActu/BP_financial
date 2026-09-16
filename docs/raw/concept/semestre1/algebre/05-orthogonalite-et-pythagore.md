@@ -1,6 +1,6 @@
 # Module 5 — Orthogonalité et théorème de Pythagore
 
-**Durée : 45 min.** Prérequis : modules [1](01-espace-vectoriel.md) à [4](04-sous-espaces-et-familles-generatrices.md).
+**Durée : 45 min.** Prérequis : modules [1](01-espace-vectoriel.md) à [4](04-sous-espaces-et-familles-generatrices.md), et le [module 4 bis](04bis-matrices.md) pour l'écriture matricielle.
 
 > **La question traitée.** Que se passe-t-il quand le terme croisé $2\langle u,v\rangle$ de  l'identité de développement s'annule ?
 
@@ -251,6 +251,6 @@ chacun d'eux ? *Justifier par le théorème, puis par un dessin en dimension 2.*
 
 ---
 
-⬅️ [Module 4 — Sous-espaces, Vect et familles génératrices](04-sous-espaces-et-familles-generatrices.md) ·
+⬅️ [Module 4 bis — Les matrices](04bis-matrices.md) ·
 ➡️ [Module 6 — La projection orthogonale](06-projection-orthogonale.md) ·
 🏠 [Sommaire](README.md)

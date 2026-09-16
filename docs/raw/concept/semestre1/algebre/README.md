@@ -32,7 +32,7 @@ Une seule opération — $\langle u,v\rangle=\sum_i u_iv_i$ — et l'examen syst
 
 Deux modules préalables portent ce sur quoi l'opération s'exerce : le **module 1** définit l'espace
 $\mathbb R^n$ et la combinaison linéaire — une série de $n$ nombres vue comme un seul objet —, et le
-**module 4** en tire le **sous-espace**, décrit tout entier par une liste finie de vecteurs.
+**module 4** en tire le **sous-espace**, décrit tout entier par une liste finie de vecteurs. Le **module 4 bis** range ces listes en **matrices** et donne les règles de calcul — produit, transposée, trace, inverse — que les modules suivants emploient sans les redéfinir.
 
 ## Progression
 
@@ -42,6 +42,7 @@ $\mathbb R^n$ et la combinaison linéaire — une série de $n$ nombres vue comm
 | 2   | [Produit scalaire, norme, distance](02-produit-scalaire-et-norme.md)                                  | 45 min | Les trois propriétés, l'identité de développement          |
 | 3   | [Cauchy–Schwarz et l'angle](03-cauchy-schwarz-et-angle.md)                                            | 45 min | $\lvert\rho\rvert\le1$ et son cas d'égalité                |
 | 4   | [Sous-espaces, $\text{Vect}$ et familles génératrices](04-sous-espaces-et-familles-generatrices.md)   | 45 min | Décrire un espace infini par une liste finie               |
+| 4 bis | [Les matrices](04bis-matrices.md)                                                                  | 1 h 15 | $Ax$ est une combinaison des colonnes ; transposée, trace, inverse |
 | 5   | [Orthogonalité et théorème de Pythagore](05-orthogonalite-et-pythagore.md)                            | 45 min | Toute décomposition de variance est un Pythagore           |
 | 6   | [**La projection orthogonale**](06-projection-orthogonale.md) ⭐                                       | 1 h    | Les moindres carrés sans calcul différentiel               |
 | 7   | [Supplémentaire orthogonal, noyau, rang](07-supplementaire-orthogonal-et-dimension.md)                | 45 min | Ce qu'une contrainte linéaire coûte en dimensions          |
@@ -51,7 +52,7 @@ $\mathbb R^n$ et la combinaison linéaire — une série de $n$ nombres vue comm
 | 11  | [**La covariance comme produit scalaire**](11-covariance-et-produit-scalaire.md) ⭐                    | 1 h 15 | $\Sigma$ est une matrice de Gram — et ce que cela interdit |
 | 12  | [L'analyse en composantes principales](12-analyse-en-composantes-principales.md)                       | 1 h 30 | Le module 6 retourné : le sous-espace devient l'inconnue   |
 
-**Volume total** : ≈ 11 h. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
+**Volume total** : ≈ 12 h 15. Les modules se lisent **dans l'ordre** : chacun n'utilise que les précédents.
 
 ## Les quatre modules décisifs
 
@@ -102,6 +103,7 @@ pip install numpy
 | $\ker f$, $H$        | Noyau d'une application linéaire ; l'hyperplan $\text{Vect}(\mathbf 1)^\perp$, $\dim H=n-1$ |
 | $\Sigma$, $R$        | Matrices de covariance et de corrélation (module 11)                           |
 | $\delta_{jk}$        | Symbole de Kronecker                                                          |
+| $A^{\top}$, $I_n$, $\operatorname{tr}$ | Transposée, matrice identité, trace (module 4 bis)              |
 
 ## Références
 

@@ -1,7 +1,7 @@
 # Module 7 — Le calcul matriciel des dérivées ⭐
 
 **Durée : 1 h 15.** Prérequis : [module 6](06-la-matrice-jacobienne.md), et le
-[cours d'algèbre](../../algebre/README.md) pour trace, transposée et inverse.
+[module 4 bis du cours d'algèbre](../../algebre/04bis-matrices.md) pour trace, transposée et inverse.
 
 > **La question traitée.** Comment dériver $w^{\top}\Sigma w$, $\lVert y-X\beta\rVert^2$ ou
 > $\log\det\Sigma$ **sans écrire une seule somme indexée** ?

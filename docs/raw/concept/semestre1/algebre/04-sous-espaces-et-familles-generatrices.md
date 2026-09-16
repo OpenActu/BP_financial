@@ -274,5 +274,5 @@ Le dépôt le signale à sa façon : un résidu nul sur la fenêtre de 20 signif
 ---
 
 ⬅️ [Module 3 — Cauchy–Schwarz et l'angle](03-cauchy-schwarz-et-angle.md) ·
-➡️ [Module 5 — Orthogonalité et Pythagore](05-orthogonalite-et-pythagore.md) ·
+➡️ [Module 4 bis — Les matrices](04bis-matrices.md) ·
 🏠 [Sommaire](README.md)

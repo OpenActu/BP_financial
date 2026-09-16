@@ -16,11 +16,11 @@ exercices compris.
 
 ## Semestre 1 — Les outils mathématiques
 
-**Volume : ≈ 31 h.**
+**Volume : ≈ 32 h 15.**
 
 ### [Algèbre linéaire euclidienne](../semestre1/algebre/README.md)
 
-**12 modules · 11 h.**
+**13 modules · 12 h 15.**
 
 | Fait | #   | Module                                                                                                                 | Durée  |
 | ---- | --- | ---------------------------------------------------------------------------------------------------------------------- | ------ |
@@ -28,6 +28,7 @@ exercices compris.
 | [x]  | 2   | [Produit scalaire, norme, distance](../semestre1/algebre/02-produit-scalaire-et-norme.md)                               | 45 min |
 | [x ] | 3   | [Cauchy–Schwarz et l'angle](../semestre1/algebre/03-cauchy-schwarz-et-angle.md)                                         | 45 min |
 | [ ]  | 4   | [Sous-espaces, $\text{Vect}$ et familles génératrices](../semestre1/algebre/04-sous-espaces-et-familles-generatrices.md) | 45 min |
+| [ ]  | 4 bis | [Les matrices](../semestre1/algebre/04bis-matrices.md) | 1 h 15 |
 | [ ]  | 5   | [Orthogonalité et théorème de Pythagore](../semestre1/algebre/05-orthogonalite-et-pythagore.md)                         | 45 min |
 | [ ]  | 6   | [La projection orthogonale ⭐](../semestre1/algebre/06-projection-orthogonale.md)                                        | 1 h    |
 | [ ]  | 7   | [Supplémentaire orthogonal, noyau, rang](../semestre1/algebre/07-supplementaire-orthogonal-et-dimension.md)             | 45 min |

@@ -6,7 +6,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
 | Question | Cours | Volume |
 |---|---|---|
-| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 9 h 30 |
+| Que **calcule**-t-on, géométriquement ? | [Algèbre linéaire euclidienne](../semestre1/algebre/README.md) | 12 h 15 |
 | Comment **dérive**-t-on et **intègre**-t-on ces quantités ? | [Analyse](analyse.md) | 20 h |
 | Le résultat est-il **réel**, ou du hasard d'échantillonnage ? | [Statistique](statistique.md) | 56 h |
 | Quelle **décision** en tirer — taille, protection, composition ? | [Finance](../semestre4/finance/README.md) | 12 h 45 |
@@ -27,7 +27,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 ```
 concept/
 ├── semestre1/                           les outils mathématiques
-│   ├── algebre/                         11 modules — espace vectoriel, produit scalaire, projection, dimension
+│   ├── algebre/                         13 modules — espace vectoriel, matrices, produit scalaire, projection, dimension
 │   └── analyse/
 │       ├── derivation-et-integration/   9 modules — Taylor, intégrale, jacobien
 │       └── convexite/                   9 modules — Jensen, minimisation, mesures de risque
