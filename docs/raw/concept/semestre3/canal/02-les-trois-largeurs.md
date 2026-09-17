@@ -5,16 +5,11 @@
 
 ---
 
-Trois conventions coexistent. Elles produisent des dessins voisins et des
-affirmations très différentes.
+Trois conventions coexistent. Elles produisent des dessins voisins et des affirmations très différentes.
 
 ## 2.0 — La série qui sert aux trois figures
 
-Les trois illustrations de ce module portent sur **la même série** : une marche
-aléatoire gaussienne de **100 pas** partant de 100, $V_i = V_{i-1} + z_i$ avec
-$z_i \sim \mathcal N(0,1)$. Le cas d'école — un processus où **aucune tendance
-n'existe** —, choisi pour que tout ce qu'on lit sur les figures soit, par
-construction, un artefact de la mesure et non une propriété du monde.
+Les trois illustrations de ce module portent sur **la même série** : une marche aléatoire gaussienne de **100 pas** partant de 100, $V_i = V_{i-1} + z_i$ avec $z_i \sim \mathcal N(0,1)$. Le cas d'école — un processus où **aucune tendance n'existe** —, choisi pour que tout ce qu'on lit sur les figures soit, par construction, un artefact de la mesure et non une propriété du monde.
 
 Elle se reproduit sans dépendance, générateur compris :
 
@@ -37,8 +32,7 @@ for i in range(0, 100, 2):             # Box-Muller : deux normales par paire
         valeurs.append(v)
 ```
 
-Repères de contrôle : $V_1 = 98{,}8432$, $V_{50} = 96{,}6119$,
-$V_{100} = 103{,}2872$.
+Repères de contrôle : $V_1 = 98{,}8432$, $V_{50} = 96{,}6119$, $V_{100} = 103{,}2872$.
 
 Les trois figures elles-mêmes se refont d'un appel, sans dépendance :
 
@@ -47,50 +41,34 @@ python docs/raw/concept/semestre3/canal/figures/generer_figures.py
 python docs/raw/concept/semestre3/canal/figures/generer_figures.py --stats
 ```
 
-Le second appel imprime tous les nombres cités dans ce module — ce sont eux qu'il
-faut revérifier, pas les dessins. Le script est décrit par son miroir
-[`generer_figures.md`](figures/generer_figures.md).
+Le second appel imprime tous les nombres cités dans ce module — ce sont eux qu'il faut revérifier, pas les dessins. Le script est décrit par son miroir [`generer_figures.md`](figures/generer_figures.md).
 
-La droite ajustée sur ces 100 points a une pente de $+0{,}1265$ par pas et laisse
-$s = 2{,}612$. **Cette pente n'existe pas** — le processus n'en a aucune. Les
-figures la tracent quand même, parce que c'est ce que fait un canal ; savoir
-combien de tendance apparaît sur du bruit pur est le sujet du
+La droite ajustée sur ces 100 points a une pente de $+0{,}1265$ par pas et laisse $s = 2{,}612$. **Cette pente n'existe pas** — le processus n'en a aucune. Les figures la tracent quand même, parce que c'est ce que fait un canal ; savoir combien de tendance apparaît sur du bruit pur est le sujet du
 [module 4](04-sorties-de-canal.md).
 
-> ⚠️ **Une marche aléatoire n'a pas des résidus i.i.d.** Ils sont fortement
-> autocorrélés, ce qui viole l'hypothèse de l'[étape 8](../modele/08-test-de-tendance.md).
-> Les figures illustrent donc la **géométrie** des trois conventions, pas la
-> validité de leurs garanties probabilistes — laquelle est traitée au module 4.
+> ⚠️ **Une marche aléatoire n'a pas des résidus i.i.d.** Ils sont fortement autocorrélés, ce qui viole l'hypothèse de l'[étape 8](../modele/08-test-de-tendance.md). Les figures illustrent donc la **géométrie** des trois conventions, pas la validité de leurs garanties probabilistes — laquelle est traitée au module 4.
 
 ## 2.1 — L'enveloppe des résidus
 
-Le canal le plus étroit qui contienne **tous** les points de la fenêtre, à pente
-fixée. Connu sous le nom de *canal de Raff*.
+Le canal le plus étroit qui contienne **tous** les points de la fenêtre, à pente fixée. Connu sous le nom de *canal de Raff*.
 
-**Ce qu'il garantit :** exactement ce qu'on lui a demandé — les $n$ points sont
-dedans, par construction. C'est une propriété descriptive, pas probabiliste.
+**Ce qu'il garantit :** exactement ce qu'on lui a demandé — les $n$ points sont dedans, par construction. C'est une propriété descriptive, pas probabiliste.
 
-**Le piège, et il est sévère.** Sa largeur est l'**étendue** des résidus, une
-statistique d'extrême : elle croît mécaniquement avec le nombre de points, même
-si le processus est rigoureusement inchangé. Pour $n$ tirages gaussiens
-d'écart-type $\sigma$ :
+**Le piège, et il est sévère.** Sa largeur est l'**étendue** des résidus, une statistique d'extrême : elle croît mécaniquement avec le nombre de points, même si le processus est rigoureusement inchangé. Pour $n$ tirages gaussiens d'écart-type $\sigma$ :
 
-| $n$ | $\mathbb E[\text{étendue}]$ | Demi-largeur |
-|---|---|---|
-| 10 | $3{,}08\,\sigma$ | $1{,}54\,\sigma$ |
-| 20 | $3{,}74\,\sigma$ | $1{,}87\,\sigma$ |
-| 60 | $4{,}64\,\sigma$ | $2{,}32\,\sigma$ |
-| 120 | $5{,}14\,\sigma$ | $2{,}57\,\sigma$ |
-| 250 | $5{,}64\,\sigma$ | $2{,}82\,\sigma$ |
+| $n$ | $\mathbb E[\text{étendue}]$ | Demi-largeur     |
+| --- | --------------------------- | ---------------- |
+| 10  | $3{,}08\,\sigma$            | $1{,}54\,\sigma$ |
+| 20  | $3{,}74\,\sigma$            | $1{,}87\,\sigma$ |
+| 60  | $4{,}64\,\sigma$            | $2{,}32\,\sigma$ |
+| 120 | $5{,}14\,\sigma$            | $2{,}57\,\sigma$ |
+| 250 | $5{,}64\,\sigma$            | $2{,}82\,\sigma$ |
 
-*(valeurs Monte-Carlo, 200 000 tirages ; la table classique donne $3{,}735$ pour
-$n=20$)*
+*(valeurs Monte-Carlo, 200 000 tirages ; la table classique donne $3{,}735$ pour $n=20$)*
 
 La croissance est en $2\sqrt{2\ln n}$ — lente, mais suffisante pour tout fausser :
 
-> ⚠️ **Un canal-enveloppe sur 120 séances est ~37 % plus large qu'un canal-enveloppe
-> sur 20 séances tirées du même processus.** Conclure « le titre est devenu plus
-> volatil » de cette comparaison est une erreur de lecture, pas une observation.
+> ⚠️ **Un canal-enveloppe sur 120 séances est ~37 % plus large qu'un canal-enveloppe sur 20 séances tirées du même processus.** Conclure « le titre est devenu plus volatil » de cette comparaison est une erreur de lecture, pas une observation.
 > **Les largeurs d'enveloppe ne se comparent qu'à $n$ égal.**
 
 ![Enveloppe des résidus sur 100 pas et sur les 20 derniers, même marche aléatoire](figures/brownien-enveloppe.svg)

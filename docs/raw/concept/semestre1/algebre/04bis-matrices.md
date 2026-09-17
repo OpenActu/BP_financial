@@ -149,12 +149,12 @@ Contrôle par la règle lignes × colonnes, coefficient $(3,2)$ : $3\cdot1+(-1)\
 
 **Les règles de calcul, et d'où elles viennent.**
 
-| Règle                                   | Pourquoi elle est vraie                                                                                                 |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
-| $(AB)C=A(BC)$ — **associativité**       | les deux matrices envoient $x$ sur $A(B(Cx))$, donc sont égales (critère du § 4bis.3)                                   |
-| $A(B+C)=AB+AC$ et $(A+B)C=AC+BC$        | même argument, avec la linéarité du § 4bis.2 pour la première                                                           |
-| $A(\lambda B)=\lambda(AB)=(\lambda A)B$ | idem                                                                                                                    |
-| $I_nA=A=AI_p$ pour $A$ de taille $n\times p$ | $I_n(Ax)=Ax$ et $A(I_px)=Ax$                                                                                        |
+| Règle                                        | Pourquoi elle est vraie                                                               |
+| -------------------------------------------- | ------------------------------------------------------------------------------------- |
+| $(AB)C=A(BC)$ — **associativité**            | les deux matrices envoient $x$ sur $A(B(Cx))$, donc sont égales (critère du § 4bis.3) |
+| $A(B+C)=AB+AC$ et $(A+B)C=AC+BC$             | même argument, avec la linéarité du § 4bis.2 pour la première                         |
+| $A(\lambda B)=\lambda(AB)=(\lambda A)B$      | idem                                                                                  |
+| $I_nA=A=AI_p$ pour $A$ de taille $n\times p$ | $I_n(Ax)=Ax$ et $A(I_px)=Ax$                                                          |
 
 L'associativité autorise à écrire $ABC$ sans parenthèses, et $A^2=AA$, $A^3=AAA$ pour une matrice carrée. **C'est tout ce qu'il faut pour lire $P^2=P$** au [§ 6.5](06-projection-orthogonale.md) : appliquer $P$ deux fois revient à l'appliquer une fois.
 
