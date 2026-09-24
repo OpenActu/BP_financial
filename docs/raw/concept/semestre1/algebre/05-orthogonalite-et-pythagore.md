@@ -205,19 +205,45 @@ La ligne centrale est la plus parlante : **l'écart à Pythagore vaut exactement
 D'où l'égalité
 
 **E5.2.** Soit $\mathbf 1=(1,\dots,1)$. Caractériser les vecteurs $u$ tels que $u\perp\mathbf 1$.
-Soit l'ensemble $F$ contenant les vecteurs $u \in F.u\perp\mathbf 1$
-**Réponse** $<\mathbf u,\mathbf 1> = \sum u_i = 0$
- C'est l'ensemble le plus important de tout le cours** — voir le [module 7](07-supplementaire-orthogonal-et-dimension.md).
+
+**Réponse.** Notons $H=\{u\in\mathbb R^n : u\perp\mathbf 1\}$ l'ensemble cherché.
+
+* *Caractérisation.* Par définition (§ 5.1), $u\perp\mathbf 1\iff\langle u,\mathbf 1\rangle=0$, et
+$$\langle u,\mathbf 1\rangle=\sum_{i=1}^n u_i\cdot 1=\sum_{i=1}^n u_i$$
+donc
+$$u\perp\mathbf 1\quad\Longleftrightarrow\quad\sum_{i=1}^n u_i=0\quad\Longleftrightarrow\quad\bar u=0$$
+en divisant par $n\neq 0$. Les vecteurs orthogonaux à $\mathbf 1$ sont exactement ceux dont les composantes sont **de somme nulle**, c'est-à-dire **de moyenne nulle**.
+* *Ce sont les vecteurs centrés.* Le centré d'une série $x$ est $\tilde x=x-\bar x\mathbf 1$.
+  - Tout centré est dans $H$ : $\sum_i(x_i-\bar x)=\sum_ix_i-n\bar x=0$ par définition de $\bar x$.
+  - Réciproquement, tout $u\in H$ est un centré — le sien : $\bar u=0$ donne $\tilde u=u-0\cdot\mathbf 1=u$.
+
+  $H$ est donc l'ensemble des vecteurs centrés, et centrer un vecteur, c'est l'envoyer dans $H$.
+* *Structure.* Par la proposition du § 5.1 (cas $m=1$, $g_1=\mathbf 1$), $u\perp\mathbf 1$ équivaut à $u\perp\text{Vect}(\mathbf 1)$ : $H$ est l'orthogonal de la droite $\text{Vect}(\mathbf 1)$. C'est un **sous-espace vectoriel** — une seule équation linéaire homogène, stable par somme et par multiplication par un scalaire —, un **hyperplan** de dimension $n-1$ : $u_1,\dots,u_{n-1}$ se choisissent librement, et $u_n=-\sum_{i<n}u_i$ est alors imposé. C'est la perte d'un degré de liberté au centrage du [module 8](08-degres-de-liberte-et-centrage.md).
+
+*Exemple.* Dans $\mathbb R^4$, $u=(-2,\,0,\,-1,\,3)$ est dans $H$ (somme nulle) ; $v=(1,\,1,\,2,\,-1)$ n'y est pas ($\langle v,\mathbf 1\rangle=3$) — les deux vecteurs du § 5.1.
+
+![Dans ℝ³, le plan H des vecteurs de somme nulle, orthogonal à la droite Vect(1) ; la série x = (0, 4, 2) se décompose en x̄ 1 = (2, 2, 2) sur la droite et x̃ = (−2, 2, 0) dans le plan](figures/orthogonal-a-un.svg)
+
+*Figure.* En dimension $3$, $H$ est un **plan**, et $\text{Vect}(\mathbf 1)$ le traverse à angle droit en $0$. La série $x=(0,\,4,\,2)$ n'est pas dans $H$ — sa somme vaut $6$ ; lui retirer $\bar x\,\mathbf 1=(2,\,2,\,2)$ la fait **glisser parallèlement à $\mathbf 1$** jusqu'au plan, où elle arrive en $\tilde x=(-2,\,2,\,0)$, de somme nulle. Les quatre points $0$, $\bar x\,\mathbf 1$, $x$, $\tilde x$ forment un rectangle : c'est la décomposition $x=\bar x\mathbf 1+\tilde x$ dont E5.3 tire König–Huygens. *(La moitié négative de $\text{Vect}(\mathbf 1)$, passée derrière $H$, est en tirets. La figure est produite par [`figures/generer_figures.py`](figures/generer_figures.md).)*
 
 **E5.3.** Retrouver König–Huygens $\sum_i(x_i-\bar x)^2=\sum_i x_i^2-n\bar x^2$ **par Pythagore seul**, sans développer le carré. *(Piste : admettre provisoirement que $x-\bar x\mathbf 1$ est orthogonal à $\bar x\mathbf 1$ — l'exercice E5.2 le donne.) Comparer la longueur des deux démonstrations.*
 
 **Preuve par Pythagore.** Posons $\tilde x=x-\bar x\mathbf 1$, de sorte que
 $$x=\bar x\mathbf 1+\tilde x$$
-* *Orthogonalité.* $\langle\tilde x,\mathbf 1\rangle=\sum_i(x_i-\bar x)=\sum_ix_i-n\bar x=0$, donc $\tilde x\perp\mathbf 1$ (E5.2), et par linéarité $\langle\tilde x,\bar x\mathbf 1\rangle=\bar x\cdot 0=0$ : $\tilde x\perp\bar x\mathbf 1$.
-* *Pythagore* (§ 5.2) sur le couple $(\bar x\mathbf 1,\tilde x)$ :
-$$\|x\|^2=\|\bar x\mathbf 1\|^2+\|\tilde x\|^2$$
-* *Lecture en coordonnées.* $\|x\|^2=\sum_ix_i^2$, $\|\bar x\mathbf 1\|^2=\bar x^2\|\mathbf 1\|^2=n\bar x^2$ et $\|\tilde x\|^2=\sum_i(x_i-\bar x)^2$. D'où
+* *Orthogonalité.* $\tilde x$ est un vecteur centré, donc $\tilde x\perp\mathbf 1$ par E5.2. Par linéarité à droite du produit scalaire, $\langle\tilde x,\bar x\mathbf 1\rangle=\bar x\,\langle\tilde x,\mathbf 1\rangle=\bar x\cdot 0=0$ : $\tilde x\perp\bar x\mathbf 1$.
+* *Pythagore* (§ 5.2, sens $\Rightarrow$) sur le couple $(\bar x\mathbf 1,\tilde x)$, dont la somme est $x$ :
+$$\|x\|^2=\|\bar x\mathbf 1\|^2+\|\tilde x\|^2
+\qquad\text{soit}\qquad
+\|\tilde x\|^2=\|x\|^2-\|\bar x\mathbf 1\|^2$$
+* *Lecture en coordonnées.* Trois normes à traduire en sommes :
+  - $\|\tilde x\|^2=\sum_i(x_i-\bar x)^2$ ;
+  - $\|x\|^2=\sum_ix_i^2$ ;
+  - $\|\bar x\mathbf 1\|^2=\bar x^2\|\mathbf 1\|^2=n\bar x^2$, puisque $\|\lambda u\|^2=\lambda^2\|u\|^2$ et $\|\mathbf 1\|^2=\sum_{i=1}^n1^2=n$.
+
+  D'où
 $$\sum_i(x_i-\bar x)^2=\sum_ix_i^2-n\bar x^2\qquad\blacksquare$$
+
+C'est le rectangle de la figure de E5.2 : $x$ en est la **diagonale**, $\bar x\mathbf 1$ et $\tilde x$ les deux **côtés**, et König–Huygens dit que le carré de la diagonale est la somme des carrés des côtés.
 
 **Preuve par développement, pour comparer.** Par l'identité du § 2.2 appliquée à $x-\bar x\mathbf 1$ :
 $$\|x-\bar x\mathbf 1\|^2=\|x\|^2-2\langle x,\bar x\mathbf 1\rangle+\|\bar x\mathbf 1\|^2
@@ -226,10 +252,20 @@ $$\|x-\bar x\mathbf 1\|^2=\|x\|^2-2\langle x,\bar x\mathbf 1\rangle+\|\bar x\mat
 =\sum_ix_i^2-n\bar x^2$$
 en utilisant $\sum_ix_i=n\bar x$.
 
-**Comparaison.** Les deux preuves utilisent le même fait, $\sum_ix_i=n\bar x$, mais pas au même endroit. Le développement le consomme **dans le calcul**, pour faire tomber le terme croisé $-2n\bar x^2$ en le combinant à $+n\bar x^2$. Pythagore le consomme **en amont**, sous la forme géométrique $\tilde x\perp\mathbf 1$ : une fois l'orthogonalité acquise, il n'y a plus de terme croisé du tout, et l'identité se lit directement — il ne reste qu'à traduire trois normes en sommes. La preuve est plus courte, et surtout elle dit *pourquoi* le résultat est vrai : c'est une décomposition orthogonale, la même que celle de l'ANOVA (§ 5.4).
+**Comparaison.** Les deux preuves ont à peu près la **même longueur** si l'on compte tout. La preuve par Pythagore paraît plus courte parce qu'elle a déplacé ses calculs en amont :
+- l'orthogonalité $\tilde x\perp\mathbf 1$ est le calcul $\sum_i(x_i-\bar x)=\sum_ix_i-n\bar x=0$, fait une fois pour toutes dans E5.2 ;
+- le théorème de Pythagore est lui-même un développement (§ 2.2), fait une fois pour toutes au § 5.2.
+
+Le fait utilisé est le même des deux côtés, $\sum_ix_i=n\bar x$. Ce qui change, c'est **le couple de vecteurs qu'on développe** :
+- le développement prend le couple $(x,\ \bar x\mathbf 1)$, qui **n'est pas** orthogonal : $\langle x,\bar x\mathbf 1\rangle=n\bar x^2\neq0$ dès que $\bar x\neq0$. Son terme croisé $-2n\bar x^2$ ne disparaît pas, il se **compense** avec le $+n\bar x^2$ ;
+- Pythagore prend le couple $(\bar x\mathbf 1,\ \tilde x)$, qui **est** orthogonal. Il n'y a plus de terme croisé à compenser.
+
+Le calcul n'est donc pas plus court ; ce que gagne la preuve par Pythagore, c'est de dire **pourquoi** l'identité est vraie. $x$ se décompose en deux morceaux orthogonaux, et König–Huygens est le Pythagore de ce rectangle — la même décomposition que celle de l'ANOVA (§ 5.4). Le développement le cache même dans son terme croisé : $\langle x,\bar x\mathbf 1\rangle=\|\bar x\mathbf 1\|^2$, c'est-à-dire que $x$ et $\bar x\mathbf 1$ ont le même produit scalaire avec $\mathbf 1$. C'est la marque d'une projection orthogonale ([module 6](06-projection-orthogonale.md)).
 
 **E5.4.** Montrer qu'une famille orthogonale de $\mathbb R^n$ comporte au plus $n$ vecteurs non nuls. *Quel résultat du § 5.3 utilise-t-on ?*
-
+**Preuve**
+Soit $F=Vect(u_1, \dots, u_p) \in \mathbb R^n$ une famille orthogonale. On a en conséquence $u_i \perp u_j$ pour tout élément de Vect. F est donc libre car orthogonalité .
+$$u=\sum_i^p \lambda_i u_i$$
 
 **E5.5.** Deux vecteurs sont orthogonaux ; leur somme peut-elle être de norme inférieure à
 chacun d'eux ? *Justifier par le théorème, puis par un dessin en dimension 2.*

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 680" width="900" height="680" font-family="ui-monospace,Consolas,monospace">
+<rect width="900" height="680" fill="#fcfcfb"/>
+<text x="40.0" y="34.0" font-size="19" fill="#0b0b0b" font-weight="600" font-family="Georgia,serif">E5.2 — les vecteurs orthogonaux à 1 sont les vecteurs centrés</text>
+<text x="40.0" y="56.0" font-size="12" fill="#52514e">dans ℝ³ · H = { u : u₁ + u₂ + u₃ = 0 } est le plan orthogonal à la droite Vect(1)</text>
+<line x1="450.0" y1="390.0" x2="422.3" y2="539.5" stroke="#2a78d6" stroke-width="2.0" opacity="0.6" stroke-dasharray="5 4"/>
+<line x1="422.3" y1="539.5" x2="415.6" y2="575.7" stroke="#2a78d6" stroke-width="2.0" opacity="0.8"/>
+<polygon points="191.8,226.6 660.5,248.0 708.2,553.4 239.5,532.0" fill="#8b5cd6" fill-opacity="0.10" stroke="#8b5cd6" stroke-width="1.4" stroke-opacity="0.8"/>
+<line x1="450.0" y1="390.0" x2="329.5" y2="345.5" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="313.9" y="344.7" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">1</tspan></text>
+<line x1="450.0" y1="390.0" x2="622.0" y2="358.8" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="644.4" y="359.8" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">2</tspan></text>
+<line x1="450.0" y1="390.0" x2="450.0" y2="187.2" stroke="#a9a89e" stroke-width="1.2" opacity="1.0"/>
+<text x="450.0" y="165.8" text-anchor="middle" font-size="14" fill="#a9a89e" font-family="Georgia,serif" font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" font-family="ui-monospace,Consolas,monospace">3</tspan></text>
+<text x="696.2" y="523.4" font-size="16" fill="#8b5cd6" text-anchor="end" font-weight="600" font-family="Georgia,serif">H = Vect(1)⊥</text>
+<text x="696.2" y="541.4" font-size="12" fill="#8b5cd6" text-anchor="end">somme nulle · moyenne nulle</text>
+<line x1="450.0" y1="390.0" x2="501.6" y2="111.5" stroke="#2a78d6" stroke-width="2.0" opacity="0.8"/>
+<text x="511.6" y="115.5" font-size="16" fill="#2a78d6" font-weight="600" font-family="Georgia,serif">Vect(1)</text>
+<line x1="484.4" y1="204.3" x2="679.4" y2="213.2" stroke="#52514e" stroke-width="1.2" opacity="1.0" stroke-dasharray="4 3"/>
+<line x1="679.4" y1="213.2" x2="649.4" y2="375.1" stroke="#52514e" stroke-width="1.4" opacity="1.0"/>
+<polygon points="647.4,385.9 644.0,374.1 654.8,376.1" fill="#52514e"/>
+<text x="672.2" y="300.1" font-size="13" fill="#52514e">− x̄ 1 = − 2 · 1</text>
+<polyline points="453.5,371.2 477.6,372.3 474.1,391.1" fill="none" stroke="#0b0b0b" stroke-width="1.2"/>
+<line x1="450.0" y1="390.0" x2="481.8" y2="218.1" stroke="#2a78d6" stroke-width="2.6" opacity="1.0"/>
+<polygon points="484.4,204.3 487.2,219.1 476.4,217.1" fill="#2a78d6"/>
+<line x1="450.0" y1="390.0" x2="631.0" y2="398.3" stroke="#eb6834" stroke-width="2.6" opacity="1.0"/>
+<polygon points="645.0,398.9 630.7,403.8 631.2,392.8" fill="#eb6834"/>
+<line x1="450.0" y1="390.0" x2="668.3" y2="221.8" stroke="#0b0b0b" stroke-width="2.6" opacity="1.0"/>
+<polygon points="679.4,213.2 671.6,226.1 664.9,217.4" fill="#0b0b0b"/>
+<text x="691.4" y="209.2" font-size="16" fill="#0b0b0b" font-weight="600" font-family="Georgia,serif">x = (0, 4, 2)</text>
+<text x="444.4" y="209.3" font-size="15" fill="#2a78d6" text-anchor="end" font-weight="600" font-family="Georgia,serif">x̄ 1 = (2, 2, 2)</text>
+<text x="639.0" y="424.9" font-size="16" fill="#eb6834" text-anchor="end" font-weight="600" font-family="Georgia,serif">x̃ = (−2, 2, 0)</text>
+<circle cx="450.0" cy="390.0" r="3.2" fill="#0b0b0b"/>
+<text x="442.0" y="407.0" font-size="14" fill="#0b0b0b" text-anchor="end" font-weight="600">0</text>
+<text x="450.0" y="632.0" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="600">⟨x̃, 1⟩ = (−2) + 2 + 0 = 0 : x̃ ∈ H, et tout u ∈ H est son propre centré</text>
+<text x="450.0" y="652.0" font-size="13" fill="#52514e" text-anchor="middle">centrer, c'est glisser parallèlement à 1 jusqu'à H — une équation, une dimension de moins : dim H = 3 − 1 = 2</text>
+</svg>

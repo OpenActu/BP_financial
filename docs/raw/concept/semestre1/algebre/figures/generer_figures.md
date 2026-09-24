@@ -7,10 +7,15 @@ décrite ici.
 
 ## Rôle
 
-Tracer la figure du [§ 4.2](../04-sous-espaces-et-familles-generatrices.md) —
-le cas $d=2$ de $\text{Vect}$ — qui montre, dans $\mathbb R^3$, que **deux
-générateurs donnent un plan ou seulement une droite** selon qu'ils sont
-colinéaires ou non.
+Tracer deux figures du cours d'algèbre :
+
+- celle du [§ 4.2](../04-sous-espaces-et-familles-generatrices.md) — le cas $d=2$
+  de $\text{Vect}$ — qui montre, dans $\mathbb R^3$, que **deux générateurs donnent
+  un plan ou seulement une droite** selon qu'ils sont colinéaires ou non ;
+- celle de l'exercice [E5.2](../05-orthogonalite-et-pythagore.md) qui montre, dans
+  $\mathbb R^3$, que **les vecteurs orthogonaux à $\mathbf 1$ forment le plan des
+  vecteurs centrés**, et que centrer une série revient à la faire glisser
+  parallèlement à $\mathbf 1$ jusqu'à ce plan.
 
 Le script est versionné **à côté de la figure qu'il produit**, sur le modèle de
 [`semestre3/canal/figures/generer_figures.py`](../../../semestre3/canal/figures/generer_figures.md) :
@@ -24,10 +29,10 @@ une figure de cours qu'on ne peut pas refaire ne peut pas être corrigée.
 
 | Argument | Défaut | Effet |
 |---|---|---|
-| `--sortie RÉPERTOIRE` | le répertoire du script (`Path(__file__).resolve().parent`) | où écrire le SVG ; créé s'il n'existe pas |
+| `--sortie RÉPERTOIRE` | le répertoire du script (`Path(__file__).resolve().parent`) | où écrire les SVG ; créé s'il n'existe pas |
 
-Pas d'invite interactive : sans argument, le script écrit la figure à côté de
-lui-même. C'est le mode normal, et il est idempotent.
+Pas d'invite interactive : sans argument, le script écrit les deux figures à côté
+de lui-même. C'est le mode normal, et il est idempotent.
 
 ## Les constantes — la figure entière en découle
 
@@ -40,8 +45,13 @@ lui-même. C'est le mode normal, et il est idempotent.
 | `BORD` | $1{,}5$ | le morceau de plan dessiné : $\lambda,\mu\in[-1{,}5\,;\,1{,}5]$ |
 | `DEMI_DROITE` | $2{,}9$ | le morceau de droite dessiné : $t\,u$, $t\in[-2{,}9\,;\,2{,}9]$ |
 | `AXE_LONGUEUR` | $3$ | longueur des demi-axes $e_1, e_2, e_3$ |
-| `AZIMUT`, `ELEVATION` | $30°$, $25°$ | direction d'observation |
-| `ECHELLE` | $54$ | pixels par unité |
+| `VUE_VECT` | $(30°,\ 25°,\ 54,\ 372)$ | la vue du § 4.2 : azimut, élévation, pixels par unité, ordonnée écran de l'origine |
+| `SERIE` | $(0,\,4,\,2)$ | la série $x$ de E5.2, de moyenne $\bar x=2$ |
+| `BORD_H` | $3{,}4$ | le morceau de $H$ dessiné : $s\,a+t\,b$, $s,t\in[-3{,}4\,;\,3{,}4]$ |
+| `UN_BAS`, `UN_HAUT` | $2$, $3$ | le morceau de $\text{Vect}(\mathbf 1)$ dessiné : $t\,\mathbf 1$, $t\in[-2\,;\,3]$ |
+| `ANGLE_DROIT` | $0{,}35$ | côté, en unités, du repère d'angle droit en $0$ |
+| `VUE_CENTRES` | $(35°,\ -15°,\ 70,\ 390)$ | la vue de E5.2 — élévation **négative** : on regarde $H$ par-dessous, ce qui dresse $\text{Vect}(\mathbf 1)$ presque à la verticale |
+| `L_CENTRES`, `H_CENTRES` | $900$, $680$ | le cadre de la figure de E5.2 |
 
 > ⚠️ **Les deux panneaux ne diffèrent que par $v$.** C'est tout le propos : même
 > $u$, mêmes coefficients, même nombre de générateurs — seule la colinéarité
@@ -75,18 +85,21 @@ Valeurs rendues :
 
 ## Projection
 
-`vers_camera()` rend le vecteur unitaire de l'origine vers l'observateur :
+Chaque fonction de projection prend une **vue** `(azimut, élévation, échelle, cy)`,
+`VUE_VECT` par défaut. `vers_camera(vue)` rend le vecteur unitaire de l'origine
+vers l'observateur :
 
-$$d = (\cos\theta\cos\varphi,\ \cos\theta\sin\varphi,\ \sin\theta), \qquad \varphi = 30°,\ \theta = 25°$$
+$$d = (\cos\theta\cos\varphi,\ \cos\theta\sin\varphi,\ \sin\theta), \qquad \varphi = 30°,\ \theta = 25°\ \text{au § 4.2}$$
 
-`ecran(p, cx)` est la projection **orthographique** sur le plan orthogonal à $d$,
+`ecran(p, cx, vue)` est la projection **orthographique** sur le plan orthogonal à $d$,
 avec pour axes écran
 
 $$r = (-\sin\varphi,\ \cos\varphi,\ 0), \qquad h = (-\cos\varphi\sin\theta,\ -\sin\varphi\sin\theta,\ \cos\theta)$$
 
 — $r$ vers la droite, $h$ vers le haut, et $r\times h = d$ : le repère est direct.
-Le point $p$ va en $\bigl(c_x + 54\,\langle p,r\rangle,\ 372 - 54\,\langle p,h\rangle\bigr)$ ;
-l'origine est en $(300, 372)$ à gauche, $(900, 372)$ à droite. Pas de
+Le point $p$ va en $\bigl(c_x + e\,\langle p,r\rangle,\ c_y - e\,\langle p,h\rangle\bigr)$,
+$e$ l'échelle de la vue. Au § 4.2, $e=54$ et l'origine est en $(300, 372)$ à
+gauche, $(900, 372)$ à droite. Pas de
 perspective : deux segments parallèles dans $\mathbb R^3$ restent parallèles à
 l'écran, ce qui garde la grille du plan lisible comme une grille.
 
@@ -104,8 +117,8 @@ gris `#a9a89e`.
 | `fleche(p0, p1, couleur)` | un vecteur : segment raccourci de 14 px et pointe triangulaire pleine — **sans `<marker>`**, que certains moteurs de rendu ignorent |
 | `nom_vecteur(...)` | le nom du vecteur, en Georgia italique, posé 19 px au-delà de la pointe dans son prolongement |
 | `dans_polygone(p, poly)` | vrai si le point écran est dans le polygone **convexe** (bord compris) : tous les produits vectoriels arête × point ont le même signe |
-| `axes(cx, normale, plan)` | les trois demi-axes positifs et leurs étiquettes $e_1, e_2, e_3$ ; voir ci-dessous |
-| `origine(cx)` | le point noir et le « 0 » |
+| `axes(cx, normale, plan, vue)` | les trois demi-axes positifs et leurs étiquettes $e_1, e_2, e_3$ ; voir ci-dessous |
+| `origine(cx, vue)` | le point noir et le « 0 » |
 
 > ⚠️ **Le « 0 » et les indices des axes sont en chasse fixe, pas en Georgia.**
 > Georgia a des chiffres elzéviriens : son « 0 » est un « o », et l'origine y
@@ -185,6 +198,51 @@ Assemble les deux panneaux et ajoute le pied, **calculé** à partir des deux ra
 > deux générateurs dans les deux panneaux, et pourtant dimension 2 à gauche, 1 à droite
 > le nombre de générateurs majore la dimension, il ne la donne pas
 
+### `figure_centres(sortie)` → `orthogonal-a-un.svg`
+
+Illustre [E5.2](../05-orthogonalite-et-pythagore.md). Cadre de **900 × 680**,
+origine en $(450, 390)$, vue `VUE_CENTRES`. Les quantités sont **calculées** :
+
+| Quantité | Calcul | Valeur |
+|---|---|---|
+| $\bar x$ | `moyenne(SERIE)` | $2$ |
+| $\bar x\,\mathbf 1$ | | $(2,\,2,\,2)$ |
+| $\tilde x = x-\bar x\,\mathbf 1$ | | $(-2,\,2,\,0)$ |
+| $\langle\tilde x,\mathbf 1\rangle$ | `scalaire(centre, un)` | $0$ |
+
+$H$ est dessiné dans la base orthonormée $a=(-1,1,0)/\sqrt2$,
+$b=(1,1,-2)/\sqrt6$ — deux vecteurs de somme nulle, orthogonaux entre eux.
+
+Dans l'ordre de superposition :
+
+1. titre « E5.2 — les vecteurs orthogonaux à 1 sont les vecteurs centrés » et
+   sous-titre définissant $H$ ;
+2. les demi-axes situés derrière $H$ — avec $n=\mathbf 1$ et $\langle\mathbf 1,d\rangle>0$,
+   **aucun** : les trois sont devant ;
+3. la moitié **négative** de $\text{Vect}(\mathbf 1)$, derrière $H$ : en tirets sur la
+   part que le morceau de plan recouvre (même échantillonnage en 200 pas que pour
+   les axes), en trait plein au-delà ;
+4. le **morceau de $H$**, carré $[-3{,}4\,;\,3{,}4]^2$ dans la base $(a,b)$, rempli à
+   10 %, bordé en violet ;
+5. les demi-axes devant, puis l'étiquette « H = Vect(1)⊥ — somme nulle · moyenne
+   nulle » dans le coin bas-droit de l'écran ;
+6. la moitié **positive** de $\text{Vect}(\mathbf 1)$, étiquetée « Vect(1) » ;
+7. le **rectangle du centrage** : un tiret de $\bar x\,\mathbf 1$ à $x$, et une
+   flèche grise de $x$ à $\tilde x$ (arrêtée à 93 % pour ne pas couvrir la pointe),
+   étiquetée « − x̄ 1 = − 2 · 1 » ;
+8. le **repère d'angle droit** en $0$ entre $\mathbf 1$ et $\tilde x$ ;
+9. les flèches $\bar x\,\mathbf 1$ (bleu), $\tilde x$ (orange), $x$ (encre), leurs
+   étiquettes avec coordonnées, l'origine ;
+10. le pied, **calculé** : « ⟨x̃, 1⟩ = (−2) + 2 + 0 = 0 : x̃ ∈ H, et tout u ∈ H est
+    son propre centré », puis « centrer, c'est glisser parallèlement à 1 jusqu'à H —
+    une équation, une dimension de moins : dim H = 3 − 1 = 2 ».
+
+Rend `(x̄, x̃, ⟨x̃, 1⟩)`.
+
+> Les quatre points $0$, $\bar x\,\mathbf 1$, $x$, $\tilde x$ forment un **rectangle** :
+> c'est la décomposition $x=\bar x\,\mathbf 1+\tilde x$ du § 5.4, et le Pythagore
+> qu'exploite E5.3.
+
 ## Affichage console
 
 ```
@@ -192,21 +250,26 @@ Graphique écrit dans : …/vect-plan-ou-droite.svg
 
 gauche  u = (0.0, 2.0, 1.0)  v = (1.0, -1.0, 2.0)  u x v = (5.0, 1.0, -2.0)  rang 2  9 points distincts
 droite  u = (0.0, 2.0, 1.0)  v = (0.0, -3.0, -1.5)  u x v = (0.0, 0.0, 0.0)  rang 1  9 points distincts
+E5.2    x = (0.0, 4.0, 2.0)  moyenne 2  centré (-2.0, 2.0, 0.0)  <centré, 1> = 0
 ```
+
+(La ligne « Graphique écrit dans » de `orthogonal-a-un.svg` suit celle de
+`vect-plan-ou-droite.svg`, avant le bilan.)
 
 **Si le rang de gauche n'est plus 2, ou celui de droite plus 1, la figure
 contredit le cours** — c'est le contrôle à faire après toute modification des
-constantes.
+constantes. De même, **`<centré, 1>` doit valoir 0**.
 
 ## Fichiers écrits
 
-Un seul, dans `--sortie` :
+Deux, dans `--sortie` :
 
 | Fichier | Section illustrée |
 |---|---|
 | `vect-plan-ou-droite.svg` | § 4.2, le cas $d=2$ |
+| `orthogonal-a-un.svg` | § 5.6, exercice E5.2 |
 
-**Toujours écrasé.** Il est suivi par git, et une régénération ne doit produire
+**Toujours écrasés.** Ils sont suivis par git, et une régénération ne doit produire
 **aucun diff**.
 
 ## Codes de sortie
@@ -226,9 +289,14 @@ volontairement) et un argument inconnu (`2`, rendu par `argparse`).
   entre la normale et la direction d'observation est d'environ $50°$.
 - **Origine hors du morceau de plan** — impossible tant que `BORD > 0` ; c'est ce
   qui garantit que le `max` de `axes` n'est jamais pris sur une suite vide.
+- **`SERIE` de somme nulle** — alors $\bar x=0$, $\tilde x=x$ : le rectangle se
+  réduit à un segment, et la flèche du centrage est de longueur nulle (`fleche`
+  divise par zéro). La série doit rester **non centrée**.
+- **`SERIE` de composantes égales** — $\tilde x=0$ : `unitaire(centre)` divise par
+  zéro. La série doit rester **non constante**.
 - **Régénération répétée** — idempotente à l'octet près.
 
 ## Ce que ce script n'est pas
 
 Ce n'est **pas** un utilitaire du dépôt : il ne lit aucune donnée de marché et ne
-compte pas parmi les dix scripts de `python/`.
+compte pas parmi les onze scripts de `python/`.

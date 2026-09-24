@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Trace la figure du § 4.2 du cours d'algèbre, en SVG : Vect(u, v) dans R^3.
+Trace les figures du cours d'algèbre, en SVG : Vect(u, v) dans R^3 (§ 4.2), et
+l'orthogonal de 1 dans R^3 (exercice E5.2).
 
 Dépendance :
     aucune — la projection et le tracé sont en Python pur.
@@ -13,6 +14,9 @@ Deux panneaux, le MÊME u. À gauche, v n'est pas colinéaire à u : Vect(u, v) 
 un plan. À droite, v = -1,5 u : Vect(u, v) n'est plus que la droite Vect(u). Les
 points tracés sont, dans les deux panneaux, les mêmes neuf combinaisons
 λu + μv, λ et μ parcourant {-1, 0, 1} — seul v change.
+
+E5.2 : le plan H = {u : u1 + u2 + u3 = 0}, orthogonal à la droite Vect(1), et une
+série x envoyée dans H par le centrage x ↦ x - x̄ 1.
 
 Le miroir d'exécution est dans generer_figures.md.
 """
@@ -29,12 +33,18 @@ BORD = 1.5          # morceau de plan tracé : λ, μ dans [-BORD, BORD]
 DEMI_DROITE = 2.9   # morceau de droite tracé : t u, t dans [-DEMI_DROITE, DEMI_DROITE]
 AXE_LONGUEUR = 3.0
 
-AZIMUT = math.radians(30)
-ELEVATION = math.radians(25)
-ECHELLE = 54        # pixels par unité
+# Une vue : (azimut, élévation, pixels par unité, ordonnée écran de l'origine).
+VUE_VECT = (math.radians(30), math.radians(25), 54, 372)
 
 L, H = 1200, 650
-CY = 372
+
+# E5.2 : la série, et une vue par-dessous H, où Vect(1) monte presque droit.
+SERIE = (0.0, 4.0, 2.0)
+BORD_H = 3.4        # morceau de H tracé : s a + t b, s et t dans [-BORD_H, BORD_H]
+UN_BAS, UN_HAUT = 2.0, 3.0  # morceau de Vect(1) tracé : t 1, t dans [-UN_BAS, UN_HAUT]
+ANGLE_DROIT = 0.35  # côté du repère d'angle droit, en unités
+VUE_CENTRES = (math.radians(35), math.radians(-15), 70, 390)
+L_CENTRES, H_CENTRES = 900, 680
 CX_GAUCHE, CX_DROITE = 300, 900
 
 VECT_U = "#2a78d6"
@@ -80,19 +90,21 @@ def distincts(a, b):
 # --- Projection ---------------------------------------------------------------
 
 
-def vers_camera():
+def vers_camera(vue=VUE_VECT):
     """Vecteur unitaire pointant de l'origine vers l'observateur."""
-    return (math.cos(ELEVATION) * math.cos(AZIMUT), math.cos(ELEVATION) * math.sin(AZIMUT),
-            math.sin(ELEVATION))
+    azimut, elevation = vue[0], vue[1]
+    return (math.cos(elevation) * math.cos(azimut), math.cos(elevation) * math.sin(azimut),
+            math.sin(elevation))
 
 
-def ecran(p, cx):
-    """Projection orthographique de R^3 sur l'écran, l'origine en (cx, CY)."""
-    sa, ca = math.sin(AZIMUT), math.cos(AZIMUT)
-    se, ce = math.sin(ELEVATION), math.cos(ELEVATION)
+def ecran(p, cx, vue=VUE_VECT):
+    """Projection orthographique de R^3 sur l'écran, l'origine en (cx, cy)."""
+    azimut, elevation, echelle, cy = vue
+    sa, ca = math.sin(azimut), math.cos(azimut)
+    se, ce = math.sin(elevation), math.cos(elevation)
     x = -sa * p[0] + ca * p[1]
     y = -ca * se * p[0] - sa * se * p[1] + ce * p[2]
-    return cx + ECHELLE * x, CY - ECHELLE * y
+    return cx + echelle * x, cy - echelle * y
 
 
 # --- Primitives de tracé ------------------------------------------------------
@@ -162,17 +174,17 @@ def dans_polygone(p, poly):
     return len(signes) <= 1
 
 
-def axes(cx, normale=None, plan=None):
+def axes(cx, normale=None, plan=None, vue=VUE_VECT):
     """Les trois demi-axes positifs. Rend (derrière, devant) : un demi-axe situé du
     côté du plan opposé à l'observateur passe derrière, et la part que le morceau de
     plan `plan` (polygone écran contenant l'origine) recouvre est tracée en tirets.
     Sans plan, tout est « devant »."""
     derriere, devant = [], []
-    o = ecran((0, 0, 0), cx)
-    cote_camera = scalaire(normale, vers_camera()) if normale else 0.0
+    o = ecran((0, 0, 0), cx, vue)
+    cote_camera = scalaire(normale, vers_camera(vue)) if normale else 0.0
     for k in range(3):
         e = tuple(AXE_LONGUEUR if i == k else 0.0 for i in range(3))
-        bout = ecran(e, cx)
+        bout = ecran(e, cx, vue)
         cache = normale is not None and normale[k] * cote_camera < 0
         couche = derriere if cache else devant
         if cache:
@@ -184,7 +196,7 @@ def axes(cx, normale=None, plan=None):
                 couche.append(segment(m, bout, AXE, 1.2))
         else:
             couche.append(segment(o, bout, AXE, 1.2))
-        lx, ly = ecran(tuple(1.13 * c for c in e), cx)
+        lx, ly = ecran(tuple(1.13 * c for c in e), cx, vue)
         couche.append(f'<text x="{lx:.1f}" y="{ly + 5:.1f}" text-anchor="middle" '
                       f'font-size="14" fill="{AXE}" font-family="Georgia,serif" '
                       f'font-style="italic">e<tspan dy="4" font-size="10" font-style="normal" '
@@ -192,9 +204,9 @@ def axes(cx, normale=None, plan=None):
     return derriere, devant
 
 
-def origine(cx):
+def origine(cx, vue=VUE_VECT):
     """Le « 0 » en chasse fixe : les chiffres elzéviriens de Georgia en font un « o »."""
-    o = ecran((0, 0, 0), cx)
+    o = ecran((0, 0, 0), cx, vue)
     return [point(o, ENCRE, 3.2),
             texte(o[0] - 8, o[1] + 17, "0", 14, ENCRE, "end", gras=True)]
 
@@ -313,18 +325,128 @@ def figure_vect(sortie):
     return r_plan, n, r_droite, v_col
 
 
+# --- § 5.6, E5.2 : l'orthogonal de 1 -----------------------------------------
+
+
+def moyenne(x):
+    return sum(x) / len(x)
+
+
+def norme(a):
+    return math.sqrt(scalaire(a, a))
+
+
+def unitaire(a):
+    return tuple(c / norme(a) for c in a)
+
+
+def figure_centres(sortie):
+    """E5.2 — H = {u : u ⊥ 1} dans R^3, et le centrage x ↦ x - x̄ 1 qui y envoie x."""
+    vue, cx = VUE_CENTRES, L_CENTRES / 2
+    un = (1.0, 1.0, 1.0)
+    x_bar = moyenne(SERIE)
+    moy = tuple(x_bar * c for c in un)
+    centre = tuple(xi - x_bar for xi in SERIE)
+    a, b = unitaire((-1.0, 1.0, 0.0)), unitaire((1.0, 1.0, -2.0))  # base orthonormée de H
+
+    def e(p):
+        return ecran(p, cx, vue)
+
+    coins = [e(combinaison(s, a, t, b))
+             for s, t in ((-BORD_H, -BORD_H), (BORD_H, -BORD_H), (BORD_H, BORD_H),
+                          (-BORD_H, BORD_H))]
+    derriere, devant = axes(cx, un, coins, vue)
+    o = e((0, 0, 0))
+
+    out = [
+        (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {L_CENTRES} {H_CENTRES}" '
+         f'width="{L_CENTRES}" height="{H_CENTRES}" '
+         f'font-family="ui-monospace,Consolas,monospace">'),
+        f'<rect width="{L_CENTRES}" height="{H_CENTRES}" fill="{FOND}"/>',
+        texte(40, 34, "E5.2 — les vecteurs orthogonaux à 1 sont les vecteurs centrés", 19,
+              ENCRE, gras=True, serif=True),
+        texte(40, 56, "dans ℝ³ · H = { u : u₁ + u₂ + u₃ = 0 } est le plan orthogonal "
+              "à la droite Vect(1)"),
+    ]
+    out += derriere
+
+    # Vect(1), moitié négative : derrière H, masquée tant qu'elle est sous le plan.
+    bas = e(tuple(-UN_BAS * c for c in un))
+    t = max(j / 200 for j in range(201) if dans_polygone(interpole(o, bas, j / 200), coins))
+    m = interpole(o, bas, t)
+    out.append(segment(o, m, VECT_U, 2.0, "5 4", 0.6))
+    if t < 1:
+        out.append(segment(m, bas, VECT_U, 2.0, opacite=0.8))
+
+    pts = " ".join(f"{px:.1f},{py:.1f}" for px, py in coins)
+    out.append(f'<polygon points="{pts}" fill="{SOUS_ESPACE}" fill-opacity="0.10" '
+               f'stroke="{SOUS_ESPACE}" stroke-width="1.4" stroke-opacity="0.8"/>')
+    out += devant
+    lx, ly = max(coins, key=lambda c: c[0] + c[1])  # le coin en bas à droite
+    out.append(texte(lx - 12, ly - 30, "H = Vect(1)⊥", 16, SOUS_ESPACE, "end", gras=True,
+                     serif=True))
+    out.append(texte(lx - 12, ly - 12, "somme nulle · moyenne nulle", 12, SOUS_ESPACE,
+                     "end"))
+
+    # Vect(1), moitié positive : devant H.
+    haut = e(tuple(UN_HAUT * c for c in un))
+    out.append(segment(o, haut, VECT_U, 2.0, opacite=0.8))
+    out.append(texte(haut[0] + 10, haut[1] + 4, "Vect(1)", 16, VECT_U, gras=True, serif=True))
+
+    # Le rectangle 0, x̄ 1, x, x̃ : le centrage glisse x parallèlement à 1 jusqu'à H.
+    px, pm, pc = e(SERIE), e(moy), e(centre)
+    out.append(segment(pm, px, ENCRE2, 1.2, "4 3"))
+    out += fleche(px, interpole(px, pc, 0.93), ENCRE2, 1.4, 11)
+    milieu = interpole(px, pc, 0.5)
+    out.append(texte(milieu[0] + 10, milieu[1] - 6, f"− x̄ 1 = − {nombre(x_bar)} · 1", 13,
+                     ENCRE2))
+
+    # L'angle droit en 0, entre Vect(1) et x̃.
+    c1, c2 = unitaire(un), unitaire(centre)
+    q1, q2 = e(tuple(ANGLE_DROIT * c for c in c1)), e(tuple(ANGLE_DROIT * c for c in c2))
+    q3 = e(combinaison(ANGLE_DROIT, c1, ANGLE_DROIT, c2))
+    out.append(f'<polyline points="{q1[0]:.1f},{q1[1]:.1f} {q3[0]:.1f},{q3[1]:.1f} '
+               f'{q2[0]:.1f},{q2[1]:.1f}" fill="none" stroke="{ENCRE}" stroke-width="1.2"/>')
+
+    out += fleche(o, pm, VECT_U) + fleche(o, pc, VECT_V) + fleche(o, px, ENCRE)
+    serie = ", ".join(nombre(c) for c in SERIE)
+    out.append(texte(px[0] + 12, px[1] - 4, f"x = ({serie})", 16, ENCRE, gras=True,
+                     serif=True))
+    out.append(texte(pm[0] - 40, pm[1] + 5, f"x̄ 1 = ({', '.join(nombre(c) for c in moy)})",
+                     15, VECT_U, "end", gras=True, serif=True))
+    out.append(texte(pc[0] - 6, pc[1] + 26,
+                     f"x̃ = ({', '.join(nombre(c) for c in centre)})", 16, VECT_V, "end",
+                     gras=True, serif=True))
+    out += origine(cx, vue)
+
+    somme = " + ".join(f"({nombre(c)})" if c < 0 else nombre(c) for c in centre)
+    produit = scalaire(centre, un)
+    out.append(texte(L_CENTRES / 2, H_CENTRES - 48,
+                     f"⟨x̃, 1⟩ = {somme} = {nombre(produit)} : x̃ ∈ H, et tout u ∈ H est son "
+                     "propre centré", 13, ENCRE, "middle", gras=True))
+    out.append(texte(L_CENTRES / 2, H_CENTRES - 28,
+                     "centrer, c'est glisser parallèlement à 1 jusqu'à H — "
+                     "une équation, une dimension de moins : dim H = 3 − 1 = 2", 13, ENCRE2,
+                     "middle"))
+    ecrire(sortie, "orthogonal-a-un.svg", out)
+    return x_bar, centre, produit
+
+
 def main():
     parser = argparse.ArgumentParser(
-        description="Trace la figure du § 4.2 du cours d'algèbre : Vect(u, v) dans R^3.")
+        description="Trace les figures du cours d'algèbre : Vect(u, v) dans R^3 (§ 4.2), "
+                    "l'orthogonal de 1 (E5.2).")
     parser.add_argument("--sortie", type=Path, default=Path(__file__).resolve().parent,
-                        help="repertoire ou ecrire le SVG (defaut : celui du script)")
+                        help="repertoire ou ecrire les SVG (defaut : celui du script)")
     args = parser.parse_args()
 
     r_plan, n, r_droite, v_col = figure_vect(args.sortie)
+    x_bar, centre, produit = figure_centres(args.sortie)
     print(f"\ngauche  u = {U}  v = {V_LIBRE}  u x v = {n}  rang {r_plan}  "
           f"{distincts(U, V_LIBRE)} points distincts")
     print(f"droite  u = {U}  v = {v_col}  u x v = {vectoriel(U, v_col)}  rang {r_droite}  "
           f"{distincts(U, v_col)} points distincts")
+    print(f"E5.2    x = {SERIE}  moyenne {x_bar:g}  centré {centre}  <centré, 1> = {produit:g}")
 
 
 if __name__ == "__main__":
