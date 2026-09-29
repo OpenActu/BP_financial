@@ -1,4 +1,4 @@
-# Planning — les dix cours en quatre semestres
+# Planning — les douze cours en quatre semestres
 
 Ce document organise le parcours. Les cours de [`concept/`](concept/sommaire/README.md)
 sont autonomes et pouvaient jusqu'ici se lire dans n'importe quel ordre ; ce
@@ -31,6 +31,8 @@ convexité ───────────────────────
                                             │      │                      │
                                             └──► finance                  │
                                                    fondamentaux ──────────┘
+                                                        │
+                                                        └──► macro (et alpha)
       S1                    S2                  S3                  S4
 ```
 
@@ -52,12 +54,14 @@ Deux conséquences qu'il faut accepter d'emblée :
 | **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 31 | ≈ 32 h 15 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, tests multiples, modèle, canal, encadrement | 31 | ≈ 46 h |
-| **4** | La décision | alpha, fondamentaux, trading, finance | 27 | ≈ 29 h 45 |
-| | | **11 cours** | **115** | **≈ 139 h 45** |
+| **4** | La décision | alpha, fondamentaux, macro, trading, finance | 38 | ≈ 39 h 45 |
+| | | **12 cours** | **126** | **≈ 149 h 45** |
 
-> ℹ️ **Le nombre de modules reste régulier — 31, 26, 31, 27 — mais pas le
-> volume.** Le semestre 3 est de loin le plus dense, parce que la loi de Student
-> pèse 24 h à elle seule et ne se coupe pas en deux. En compensation, ses neuf étapes
+> ℹ️ **Le nombre de modules reste proche d'un semestre à l'autre — 31, 26, 31,
+> 38 — mais pas le volume.** Le semestre 4 a gagné onze modules avec le cours
+> macro, qui reste léger en mathématiques. Le semestre 3 est de loin le plus
+> dense, parce que la loi de Student pèse 24 h à elle seule et ne se coupe pas
+> en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
 > déjà énoncée dans [`modele.md`](modele.md).
 
@@ -143,11 +147,14 @@ longue, de ce qu'on n'a pas le droit de conclure.
 |---|---|---|---|
 | 1 | [L'alpha](concept/semestre4/alpha/README.md) | 5 | 5 h |
 | 2 | [Les fondamentaux](concept/semestre4/fondamentaux/README.md) | 5 | 5 h |
-| 3 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
-| 4 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
+| 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 11 | 10 h |
+| 4 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
+| 5 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
 
 L'alpha d'abord : le cours fondamentaux s'appuie sur son module 4, et le cours
-trading sur ses modules 2 à 4. La finance en dernier — c'est le seul cours qui
+trading sur ses modules 2 à 4. Le cours macro vient après les deux premiers : il
+réutilise la régression et les tests multiples de l'alpha, et les dates d'une
+donnée publiée du module 2 des fondamentaux. La finance en dernier — c'est le seul cours qui
 parle de **dimensionner** une position, et il n'a de sens qu'une fois su tout ce
 qui précède sur l'incertitude.
 

@@ -1,4 +1,4 @@
-# Avancement — les 109 modules du parcours
+# Avancement — les 122 modules du parcours
 
 Un module par ligne, dans l'ordre où [`planning.md`](../../planning.md) demande de les suivre.
 La colonne **Fait** se coche à la main — `[ ]` devient `[x]` quand le module est acquis,
@@ -174,7 +174,7 @@ exercices compris.
 
 ## Semestre 4 — La décision
 
-**Volume : ≈ 29 h 45.**
+**Volume : ≈ 39 h 45.**
 
 ### [L'alpha](../semestre4/alpha/README.md)
 
@@ -199,6 +199,24 @@ exercices compris.
 | [ ] | 3 | [Ce que la comptabilité laisse au choix ⭐](../semestre4/fondamentaux/03-ce-que-la-comptabilite-laisse-au-choix.md) |  |
 | [ ] | 4 | [Un ratio n'existe que relatif ⭐](../semestre4/fondamentaux/04-un-ratio-n-existe-que-relatif.md) |  |
 | [ ] | 5 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/fondamentaux/05-exemple-chiffre-huit-valeurs.md) |  |
+
+### [Le cours et la macroéconomie](../semestre4/macro/README.md)
+
+**11 modules · 10 h.**
+
+| Fait  | #   | Module | Durée |
+| ----- | --- | ------ | ----- |
+| [ ] | 1 | [Le taux d'actualisation ⭐](../semestre4/macro/01-le-taux-d-actualisation.md) |  |
+| [ ] | 2 | [La politique monétaire](../semestre4/macro/02-la-politique-monetaire.md) |  |
+| [ ] | 3 | [L'inflation](../semestre4/macro/03-l-inflation.md) |  |
+| [ ] | 4 | [La pente de la courbe des taux](../semestre4/macro/04-la-pente-de-la-courbe.md) |  |
+| [ ] | 5 | [La croissance : PIB et PMI](../semestre4/macro/05-la-croissance.md) |  |
+| [ ] | 6 | [Le change](../semestre4/macro/06-le-change.md) |  |
+| [ ] | 7 | [Le pétrole](../semestre4/macro/07-le-petrole.md) |  |
+| [ ] | 8 | [Le crédit](../semestre4/macro/08-le-credit.md) |  |
+| [ ] | 9 | [La corrélation actions-obligations ⭐](../semestre4/macro/09-la-correlation-actions-obligations.md) |  |
+| [ ] | 10 | [Des facteurs à la prévision ⭐](../semestre4/macro/10-des-facteurs-a-la-prevision.md) |  |
+| [ ] | 11 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/macro/11-exemple-chiffre-huit-valeurs.md) |  |
 
 ### [De la figure à la décision](../semestre4/trading/README.md)
 

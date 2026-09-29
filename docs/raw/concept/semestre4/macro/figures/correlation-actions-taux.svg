@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="Helvetica, Arial, sans-serif">
+<rect width="1200" height="560" fill="#fcfcfb"/>
+<text x="80" y="36" font-size="22" fill="#0b0b0b" font-weight="bold">Corrélation annuelle : CAC 40 et variation du taux américain à 10 ans</text>
+<text x="80" y="60" font-size="15" fill="#52514e">Rendements hebdomadaires. Au-dessus de zéro, actions et obligations évoluent en sens contraire.</text>
+<line x1="80" x2="1160" y1="480.0" y2="480.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="70" y="485,0" font-size="14" fill="#52514e" text-anchor="end">-0,8</text>
+<line x1="80" x2="1160" y1="380.0" y2="380.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="70" y="385,0" font-size="14" fill="#52514e" text-anchor="end">-0,4</text>
+<line x1="80" x2="1160" y1="280.0" y2="280.0" stroke="#8a8984" stroke-width="1.5"/>
+<text x="70" y="285,0" font-size="14" fill="#52514e" text-anchor="end">+0,0</text>
+<line x1="80" x2="1160" y1="180.0" y2="180.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="70" y="185,0" font-size="14" fill="#52514e" text-anchor="end">+0,4</text>
+<line x1="80" x2="1160" y1="80.0" y2="80.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="70" y="85,0" font-size="14" fill="#52514e" text-anchor="end">+0,8</text>
+<rect x="91.4" y="220.3" width="37.2" height="59.7" fill="#2a78d6" rx="2"/>
+<text x="110,0" y="212,3" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,24</text>
+<text x="110.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2008</text>
+<rect x="151.4" y="159.7" width="37.2" height="120.3" fill="#2a78d6" rx="2"/>
+<text x="170,0" y="151,7" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,48</text>
+<text x="170.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2009</text>
+<rect x="211.4" y="140.3" width="37.2" height="139.7" fill="#2a78d6" rx="2"/>
+<text x="230,0" y="132,3" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,56</text>
+<text x="230.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2010</text>
+<rect x="271.4" y="104.7" width="37.2" height="175.3" fill="#2a78d6" rx="2"/>
+<text x="290,0" y="96,7" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,70</text>
+<text x="290.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2011</text>
+<rect x="331.4" y="106.0" width="37.2" height="174.0" fill="#2a78d6" rx="2"/>
+<text x="350,0" y="98,0" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,70</text>
+<text x="350.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2012</text>
+<rect x="391.4" y="268.8" width="37.2" height="11.2" fill="#2a78d6" rx="2"/>
+<text x="410,0" y="260,8" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,04</text>
+<text x="410.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2013</text>
+<rect x="451.4" y="134.2" width="37.2" height="145.8" fill="#2a78d6" rx="2"/>
+<text x="470,0" y="126,2" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,58</text>
+<text x="470.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2014</text>
+<rect x="511.4" y="218.8" width="37.2" height="61.2" fill="#2a78d6" rx="2"/>
+<text x="530,0" y="210,8" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,24</text>
+<text x="530.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2015</text>
+<rect x="571.4" y="191.3" width="37.2" height="88.7" fill="#2a78d6" rx="2"/>
+<text x="590,0" y="183,3" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,35</text>
+<text x="590.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2016</text>
+<rect x="631.4" y="207.4" width="37.2" height="72.6" fill="#2a78d6" rx="2"/>
+<text x="650,0" y="199,4" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,29</text>
+<text x="650.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2017</text>
+<rect x="691.4" y="189.1" width="37.2" height="90.9" fill="#2a78d6" rx="2"/>
+<text x="710,0" y="181,1" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,36</text>
+<text x="710.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2018</text>
+<rect x="751.4" y="149.7" width="37.2" height="130.3" fill="#2a78d6" rx="2"/>
+<text x="770,0" y="141,7" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,52</text>
+<text x="770.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2019</text>
+<rect x="811.4" y="210.3" width="37.2" height="69.7" fill="#2a78d6" rx="2"/>
+<text x="830,0" y="202,3" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,28</text>
+<text x="830.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2020</text>
+<rect x="871.4" y="215.4" width="37.2" height="64.6" fill="#2a78d6" rx="2"/>
+<text x="890,0" y="207,4" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,26</text>
+<text x="890.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2021</text>
+<rect x="931.4" y="280.0" width="37.2" height="20.7" fill="#eb6834" rx="2"/>
+<text x="950,0" y="318,7" font-size="13" fill="#0b0b0b" text-anchor="middle">-0,08</text>
+<text x="950.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2022</text>
+<rect x="991.4" y="280.0" width="37.2" height="59.9" fill="#eb6834" rx="2"/>
+<text x="1010,0" y="357,9" font-size="13" fill="#0b0b0b" text-anchor="middle">-0,24</text>
+<text x="1010.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2023</text>
+<rect x="1051.4" y="250.2" width="37.2" height="29.8" fill="#2a78d6" rx="2"/>
+<text x="1070,0" y="242,2" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,12</text>
+<text x="1070.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2024</text>
+<rect x="1111.4" y="248.7" width="37.2" height="31.3" fill="#2a78d6" rx="2"/>
+<text x="1130,0" y="240,7" font-size="13" fill="#0b0b0b" text-anchor="middle">+0,13</text>
+<text x="1130.0" y="506" font-size="14" fill="#52514e" text-anchor="middle">2025</text>
+<text x="80" y="542" font-size="13" fill="#52514e">Source : ^FCHI et ^TNX (Yahoo Finance), généré par mesurer_macro.py</text>
+</svg>

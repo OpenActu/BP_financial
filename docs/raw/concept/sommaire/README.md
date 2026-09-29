@@ -1,6 +1,6 @@
 # Concepts — les mathématiques derrière `import_societe.py`
 
-Dix cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
+Douze cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
 répondent, dans l'ordre, aux questions que pose une droite de régression tracée sur une série de
 cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
@@ -15,11 +15,12 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../semestre4/alpha/README.md) | 5 h |
 | Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 7 h |
 | Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
+| Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 10 h |
 
-> 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les dix cours en quatre
+> 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les douze cours en quatre
 > semestres. L'arborescence ci-dessous porte ce découpage.
 
-> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 109 modules
+> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 122 modules
 > ligne à ligne, dans l'ordre du parcours.
 
 ## Arborescence
@@ -46,6 +47,7 @@ concept/
 ├── semestre4/                           la décision
 │   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
 │   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
+│   ├── macro/                           11 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit
 │   ├── trading/                         7 modules — des objets du chartiste à la règle écrite et son verdict
 │   └── finance/                         10 modules — levier, couverture, portefeuille optimal
 │
