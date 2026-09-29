@@ -398,7 +398,40 @@ ce que confirme la lecture directe : $J$ porte $n$ coefficients égaux à $1$ su
 
 **E4bis.3.** Montrer que $M=I_n-\frac1nJ$ vérifie $Mx=x-\bar x\,\mathbf 1$. *En déduire, sans aucun calcul supplémentaire, que le centrage est une application linéaire, et donner $\operatorname{tr}(M)$.*
 
+**Solution.**
+
+*Par les coefficients.* $(I_n)_{ik}=\delta_{ik}$ et $J_{ik}=1$ (§ 4bis.1), donc, par les opérations coefficient par coefficient,
+$$M=I_n-\tfrac1nJ=\Bigl(\delta_{ik}-\tfrac1n\Bigr)_{i,k}$$
+La définition du produit donne alors, pour chaque $i$ :
+$$(Mx)_i=\sum_{k=1}^n\Bigl(\delta_{ik}-\frac1n\Bigr)x_k=\sum_{k=1}^n\delta_{ik}\,x_k-\frac1n\sum_{k=1}^nx_k=x_i-\bar x$$
+Dans la première somme, seul le terme $k=i$ survit, puisque $\delta_{ik}=0$ pour $k\ne i$. Or $x_i-\bar x$ est aussi la $i$-ième coordonnée de $x-\bar x\,\mathbf 1$ : les deux vecteurs ont les mêmes coordonnées, donc $Mx=x-\bar x\,\mathbf 1$.
+
+*Par les règles de calcul.* La distributivité (§ 4bis.4), $I_nx=x$ (§ 4bis.3) et $\frac1nJx=\bar x\,\mathbf 1$ (§ 4bis.5) donnent directement
+$$Mx=\Bigl(I_n-\frac1nJ\Bigr)x=I_nx-\frac1nJx=x-\bar x\,\mathbf 1$$
+
+*Le centrage est linéaire.* Le centrage $x\mapsto x-\bar x\,\mathbf 1$ est donc l'application $x\mapsto Mx$. Or toute application de cette forme est linéaire, par la proposition du § 4bis.2 : c'est terminé. Il n'y a plus à vérifier $\overline{\alpha x+\beta y}=\alpha\bar x+\beta\bar y$, comme le faisait le tableau du § 4bis.3 : l'écriture matricielle en dispense.
+
+*La trace.* Par linéarité de la trace, puis $\operatorname{tr}(I_n)=n$ et $\operatorname{tr}(J)=n$ (E4bis.2) :
+$$\operatorname{tr}(M)=\operatorname{tr}(I_n)-\frac1n\operatorname{tr}(J)=n-\frac1n\cdot n=n-1$$
+La lecture directe le confirme : chacun des $n$ coefficients diagonaux vaut $1-\frac1n$, et $n\bigl(1-\frac1n\bigr)=n-1$. C'est le $n-1$ du [module 8](08-degres-de-liberte-et-centrage.md) : centrer fait perdre **un degré de liberté**, et le § 6.5 dira pourquoi la trace de $M$ le compte.
+
 **E4bis.4.** Montrer que si $A$ est carrée, inversible, et vérifie $A^2=A$, alors $A=I_n$. *Qu'en conclut-on sur un projecteur qui ne serait pas l'identité ? (Piste : multiplier $A^2=A$ par $A^{-1}$.)*
+
+**Solution.**
+
+⚠️ **$A^2$ n'est pas la matrice des carrés des coefficients.** $A^2=AA$ est un produit matriciel (§ 4bis.4), de coefficients $(A^2)_{ij}=\sum_ka_{ik}a_{kj}$, et non $a_{ij}^2$. L'hypothèse $A^2=A$ s'écrit donc $\sum_ka_{ik}a_{kj}=a_{ij}$ pour tous $i,j$ : $n^2$ équations couplées, que l'on ne résoudra pas coefficient par coefficient.
+
+*Par l'inverse.* $A$ étant inversible, on multiplie les deux membres de $A^2=A$ **à gauche** par $A^{-1}$ :
+$$A^{-1}(AA)=A^{-1}A$$
+À droite, $A^{-1}A=I_n$. À gauche, l'associativité permet de regrouper autrement : $A^{-1}(AA)=(A^{-1}A)A=I_nA=A$. Il reste
+$$A=I_n\qquad\blacksquare$$
+Le côté compte, puisque le produit n'est pas commutatif ; ici, multiplier à droite par $A^{-1}$ aboutirait au même résultat par le même calcul.
+
+*Par les vecteurs.* La lecture par colonnes du § 4bis.4 dit que la $j$-ième colonne de $A^2$ est $Aa_j$ : l'hypothèse $A^2=A$ signifie donc $Aa_j=a_j$ pour chaque colonne, et plus généralement $A(Ax)=Ax$ pour tout $x$. **$A$ laisse fixe tout vecteur de la forme $Ax$.** Il reste à voir que tout vecteur $y\in\mathbb R^n$ est de cette forme — c'est là qu'intervient l'inversibilité : $y=A(A^{-1}y)$. Donc $Ay=y$ pour tout $y$, c'est-à-dire $A=I_n$ par le critère d'égalité du § 4bis.3. Sans l'inversibilité, $A$ ne fixe que les vecteurs de la forme $Ax$ — le sous-espace $\text{Vect}(a_1,\dots,a_n)$, par le 🔑 du § 4bis.2 — et rien n'oblige ce sous-espace à être $\mathbb R^n$ tout entier.
+
+*Ce qu'on en conclut.* Par contraposée : **un projecteur ($P^2=P$) qui n'est pas l'identité n'est pas inversible.** Par la proposition du § 4bis.6, il existe donc un $x\ne0$ tel que $Px=0$ : le projecteur écrase au moins une direction sur $0$, et l'information qu'elle portait est perdue — aucune matrice ne peut la restituer.
+
+La matrice de centrage $M=I_n-\frac1nJ$ de E4bis.3 en est l'exemple : centrer deux fois revient à centrer une fois, donc $M^2=M$, et $M\ne I_n$. Elle n'est donc pas inversible, et l'on voit la direction écrasée : $M\mathbf 1=\mathbf 1-1\cdot\mathbf 1=0$. **Une série centrée ne permet pas de retrouver sa moyenne** — c'est le degré de liberté perdu, déjà visible dans $\operatorname{tr}(M)=n-1$. D'autres projecteurs non inversibles : la matrice nulle, et $D=\begin{pmatrix}1&0\\0&0\end{pmatrix}$ du § 4bis.4, qui vérifie $D^2=D$ et envoie $(0,1)$ sur $0$.
 
 **E4bis.5.** Soit $A$ de taille $n\times p$. Montrer que le **noyau** $\ker A=\{x\in\mathbb R^p:\ Ax=0\}$ est un sous-espace de $\mathbb R^p$, en n'utilisant que la linéarité du § 4bis.2. *Le décrire pour $A=K=\begin{pmatrix}1&1\\1&1\end{pmatrix}$.*
 
