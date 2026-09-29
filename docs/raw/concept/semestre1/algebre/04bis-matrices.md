@@ -355,12 +355,46 @@ La dernière ligne de coefficients doit afficher $(9,2)$ : la droite ajustée du
 
 ## 4bis.8 Exercices
 
-**E4bis.1.** Calculer $AB$ et $BA$ pour $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ et $B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, une fois par la règle lignes × colonnes, une fois par la lecture par colonnes. *Décrire en mots ce que fait $B$ à une matrice selon qu'on la multiplie à gauche ou à droite.
-**Calcul** 
-règle lignes x colonnes : $AB=\begin{pmatrix}a_{11} b_{11}+a_{12} b_{21}&a_{11} b_{12}+a_{12} b_{22}\\a_{21} b_{11}+a_{22} b_{21}&a_{21} b_{12}+a_{22} b_{22}\end{pmatrix}=\begin{pmatrix}2&1\\4&3\end{pmatrix}$
-règle colonnes : $AB=\begin{pmatrix}\end{pmatrix}$
+**E4bis.1.** Calculer $AB$ et $BA$ pour $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ et $B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, une fois par la règle lignes × colonnes, une fois par la lecture par colonnes. *Décrire en mots ce que fait $B$ à une matrice selon qu'on la multiplie à gauche ou à droite.*
+
+**Solution.** Notons $a_1=(1,3)$, $a_2=(2,4)$ les colonnes de $A$, et $b_1=(0,1)$, $b_2=(1,0)$ celles de $B$. Les deux matrices sont $2\times2$ : $AB$ et $BA$ existent toutes deux et sont $2\times2$.
+
+*$AB$, règle lignes × colonnes.*
+$$AB=\begin{pmatrix}a_{11}b_{11}+a_{12}b_{21}&a_{11}b_{12}+a_{12}b_{22}\\a_{21}b_{11}+a_{22}b_{21}&a_{21}b_{12}+a_{22}b_{22}\end{pmatrix}=\begin{pmatrix}1\cdot0+2\cdot1&1\cdot1+2\cdot0\\3\cdot0+4\cdot1&3\cdot1+4\cdot0\end{pmatrix}=\begin{pmatrix}2&1\\4&3\end{pmatrix}$$
+
+*$AB$, lecture par colonnes.* La $k$-ième colonne de $AB$ est $Ab_k$, combinaison des colonnes de $A$ de coefficients les coordonnées de $b_k$ :
+$$Ab_1=0\,a_1+1\,a_2=(2,4),\qquad Ab_2=1\,a_1+0\,a_2=(1,3)\qquad\text{d'où}\qquad AB=\begin{pmatrix}2&1\\4&3\end{pmatrix}$$
+
+*$BA$, règle lignes × colonnes.*
+$$BA=\begin{pmatrix}0\cdot1+1\cdot3&0\cdot2+1\cdot4\\1\cdot1+0\cdot3&1\cdot2+0\cdot4\end{pmatrix}=\begin{pmatrix}3&4\\1&2\end{pmatrix}$$
+
+*$BA$, lecture par colonnes.* Cette fois on combine les colonnes de $B$, de coefficients les coordonnées de $a_k$ :
+$$Ba_1=1\,b_1+3\,b_2=(0,1)+(3,0)=(3,1),\qquad Ba_2=2\,b_1+4\,b_2=(0,2)+(4,0)=(4,2)\qquad\text{d'où}\qquad BA=\begin{pmatrix}3&4\\1&2\end{pmatrix}$$
+
+Les deux lectures donnent bien le même résultat, et $AB\ne BA$ : un nouvel exemple de non-commutativité (§ 4bis.4).
+
+*Interprétation.*
+- **À droite, $B$ échange les colonnes** : $AB=(a_2\ \ a_1)$. En effet $Be_1=e_2$ et $Be_2=e_1$, donc la colonne $k$ de $AB$, qui vaut $A(Be_k)$, est la colonne de $A$ d'indice échangé.
+- **À gauche, $B$ échange les lignes** : $BA$ a pour lignes $(3,4)$ puis $(1,2)$. En effet $B$ appliquée à un vecteur $(y_1,y_2)$ rend $(y_2,y_1)$ ; appliquée à chaque colonne de $A$, elle permute les deux coordonnées de chacune, c'est-à-dire les deux lignes de $A$.
+
+$B$ est une **matrice de permutation** : multiplier à droite agit sur les colonnes, à gauche sur les lignes. Et comme échanger deux fois revient à ne rien faire, $B^2=I_2$.
 
 **E4bis.2.** Soit $u,v\in\mathbb R^n$. Montrer que $\operatorname{tr}(uv^{\top})=\langle u,v\rangle$, de deux façons : par les coefficients, puis par la proposition $\operatorname{tr}(AB)=\operatorname{tr}(BA)$. *Que vaut $\operatorname{tr}(J)$ ?*
+
+**Solution.**
+
+*Par les coefficients.* $u$ est une colonne $n\times1$, $v^{\top}$ une ligne $1\times n$ : leur produit est $n\times n$, et la règle lignes × colonnes (une seule colonne dans $u$, une seule ligne dans $v^{\top}$, donc un seul terme par somme) donne
+$$uv^{\top}=\begin{pmatrix}u_1\\\vdots\\u_n\end{pmatrix}\begin{pmatrix}v_1&\cdots&v_n\end{pmatrix}=\begin{pmatrix}u_1v_1&\cdots&u_1v_n\\\vdots&&\vdots\\u_nv_1&\cdots&u_nv_n\end{pmatrix},\qquad(uv^{\top})_{ij}=u_iv_j$$
+La trace ne retient que la diagonale, $i=j$ :
+$$\operatorname{tr}(uv^{\top})=\sum_{i=1}^n(uv^{\top})_{ii}=\sum_{i=1}^nu_iv_i=\langle u,v\rangle$$
+
+*Par la proposition.* On l'applique avec $A=u$, de taille $n\times1$, et $B=v^{\top}$, de taille $1\times n$ — ici $p=1$. Alors $AB=uv^{\top}$ est $n\times n$ et $BA=v^{\top}u$ est $1\times1$, dont la trace est l'unique coefficient :
+$$\operatorname{tr}(uv^{\top})=\operatorname{tr}(v^{\top}u)=v^{\top}u=\sum_{i=1}^nv_iu_i=\langle v,u\rangle=\langle u,v\rangle$$
+La dernière égalité est la symétrie du produit scalaire ([§ 2.1](02-produit-scalaire-et-norme.md)). La preuve ne calcule aucun des $n^2$ coefficients de $uv^{\top}$ : elle remplace une trace $n\times n$ par celle d'un nombre.
+
+*$\operatorname{tr}(J)$.* Comme $J=\mathbf 1\mathbf 1^{\top}$ (§ 4bis.5), le résultat avec $u=v=\mathbf 1$ donne
+$$\operatorname{tr}(J)=\langle\mathbf 1,\mathbf 1\rangle=\sum_{i=1}^n1\cdot1=n$$
+ce que confirme la lecture directe : $J$ porte $n$ coefficients égaux à $1$ sur sa diagonale.
 
 **E4bis.3.** Montrer que $M=I_n-\frac1nJ$ vérifie $Mx=x-\bar x\,\mathbf 1$. *En déduire, sans aucun calcul supplémentaire, que le centrage est une application linéaire, et donner $\operatorname{tr}(M)$.*
 
