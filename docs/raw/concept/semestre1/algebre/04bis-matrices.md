@@ -355,7 +355,10 @@ La dernière ligne de coefficients doit afficher $(9,2)$ : la droite ajustée du
 
 ## 4bis.8 Exercices
 
-**E4bis.1.** Calculer $AB$ et $BA$ pour $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ et $B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, une fois par la règle lignes × colonnes, une fois par la lecture par colonnes. *Décrire en mots ce que fait $B$ à une matrice selon qu'on la multiplie à gauche ou à droite.*
+**E4bis.1.** Calculer $AB$ et $BA$ pour $A=\begin{pmatrix}1&2\\3&4\end{pmatrix}$ et $B=\begin{pmatrix}0&1\\1&0\end{pmatrix}$, une fois par la règle lignes × colonnes, une fois par la lecture par colonnes. *Décrire en mots ce que fait $B$ à une matrice selon qu'on la multiplie à gauche ou à droite.
+**Calcul** 
+règle lignes x colonnes : $AB=\begin{pmatrix}a_{11} b_{11}+a_{12} b_{21}&a_{11} b_{12}+a_{12} b_{22}\\a_{21} b_{11}+a_{22} b_{21}&a_{21} b_{12}+a_{22} b_{22}\end{pmatrix}=\begin{pmatrix}2&1\\4&3\end{pmatrix}$
+règle colonnes : $AB=\begin{pmatrix}\end{pmatrix}$
 
 **E4bis.2.** Soit $u,v\in\mathbb R^n$. Montrer que $\operatorname{tr}(uv^{\top})=\langle u,v\rangle$, de deux façons : par les coefficients, puis par la proposition $\operatorname{tr}(AB)=\operatorname{tr}(BA)$. *Que vaut $\operatorname{tr}(J)$ ?*
 
