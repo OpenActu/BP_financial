@@ -134,5 +134,6 @@ légèrement les coefficients, sans changer, sauf erreur, les conclusions du
 ---
 
 ⬅️ [Module 10 — Des facteurs à la prévision](10-des-facteurs-a-la-prevision.md) ·
+➡️ [Module 12 — Cas d'étude : la livre sterling, 1992](12-cas-d-etude-livre-sterling-1992.md) ·
 🏠 [Le cours](README.md) ·
 🏠 [Sommaire du dépôt](../../sommaire/README.md)

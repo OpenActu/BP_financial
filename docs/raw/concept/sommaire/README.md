@@ -15,7 +15,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../semestre4/alpha/README.md) | 5 h |
 | Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 7 h |
 | Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
-| Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 10 h |
+| Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 12 h |
 
 > 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les douze cours en quatre
 > semestres. L'arborescence ci-dessous porte ce découpage.
@@ -47,7 +47,7 @@ concept/
 ├── semestre4/                           la décision
 │   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
 │   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
-│   ├── macro/                           11 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit
+│   ├── macro/                           13 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit ; deux cas d'étude, la livre sterling en 1992 et la livre turque en 2025
 │   ├── trading/                         7 modules — des objets du chartiste à la règle écrite et son verdict
 │   └── finance/                         10 modules — levier, couverture, portefeuille optimal
 │

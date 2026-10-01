@@ -160,7 +160,7 @@ Jusqu'ici $P_F(x)$ a été calculé pour **un** $x$. On regarde maintenant $P_F$
 
 Donc $P_F(\alpha x+\beta y)=q=\alpha P_F(x)+\beta P_F(y)$. $\blacksquare$
 
-Comme au § 6.4, aucun calcul et aucune base : la stabilité et l'unicité suffisent. On note désormais $P$ la matrice de $P_F$, et $P_F(x)=Px$. Sur une droite, la formule du § 6.2 la donne sans effort, $P=\frac{uu^{\top}}{\|u\|^2}$ (exercice E6.2).
+Comme au § 6.4, aucun calcul et aucune base : la stabilité et l'unicité suffisent. On note désormais $P$ la matrice de $P_F$, et $P_F(x)=Px$. Sur une droite, la formule du § 6.2 la donne sans effort, $P=\dfrac{uu^{\top}}{\|u\|^2}$ (exercice E6.2).
 
 Cette matrice vérifie deux propriétés caractéristiques :
 $$P^{\top}=P \quad\text{(symétrie)}\qquad\text{et}\qquad P^2=P\quad\text{(idempotence)}$$
@@ -233,10 +233,49 @@ d'où $\langle p(x),x-p(x)\rangle=0$. On a retrouvé par le calcul que $x-p(x)\p
 
 **E6.2.** Écrire la matrice du projecteur sur $D=\text{Vect}(u)$ sous la forme $P=\frac{uu^{\top}}{\|u\|^2}$. Vérifier $P^{\top}=P$, $P^2=P$, puis calculer $\operatorname{tr}(P)$. *Que vaut-elle, et pourquoi était-ce prévisible ?*
 
+**Preuve.** Soit $u\ne 0$, vu comme une colonne $n\times1$. On part de la formule du § 6.2, $p(x)=\dfrac{\langle x,u\rangle}{\|u\|^2}\,u$, et l'on cherche **la** matrice $P$ telle que $p(x)=Px$ pour tout $x$. On la trouve de deux façons.
+
+*Première façon — par les colonnes.* Le [§ 4bis.3](04bis-matrices.md) dit comment fabriquer la matrice d'une application linéaire : sa $j$-ième colonne est l'image du $j$-ième vecteur de la base canonique, $e_j=(0,\dots,1,\dots,0)$. Or $\langle e_j,u\rangle=u_j$ (le produit scalaire avec $e_j$ ne garde que la $j$-ième coordonnée), donc
+$$\text{colonne } j \text{ de } P\;=\;p(e_j)=\frac{u_j}{\|u\|^2}\,u=\frac{1}{\|u\|^2}\begin{pmatrix}u_1u_j\\\vdots\\u_nu_j\end{pmatrix}$$
+Le coefficient de $P$ en ligne $i$, colonne $j$, vaut donc $P_{ij}=\dfrac{u_iu_j}{\|u\|^2}$. Reste à reconnaître la matrice de coefficients $u_iu_j$ : c'est exactement $uu^{\top}$, une colonne fois une ligne ([§ 4bis.5](04bis-matrices.md), $(uv^{\top})_{ij}=u_iv_j$ avec $v=u$) :
+$$uu^{\top}=\begin{pmatrix}u_1\\\vdots\\u_n\end{pmatrix}\begin{pmatrix}u_1&\cdots&u_n\end{pmatrix}=\begin{pmatrix}u_1u_1&\cdots&u_1u_n\\\vdots&&\vdots\\u_nu_1&\cdots&u_nu_n\end{pmatrix}$$
+D'où $P=\dfrac{uu^{\top}}{\|u\|^2}$.
+
+*Seconde façon — en réécrivant la formule.* Trois remarques suffisent :
+1. un nombre multipliant un vecteur peut s'écrire **à droite** de celui-ci : $\lambda u=u\,\lambda$, en voyant $\lambda$ comme une matrice $1\times1$ (le produit $(n\times1)\times(1\times1)$ multiplie chaque coordonnée de $u$ par $\lambda$) ;
+2. le produit scalaire est un produit matriciel : $\langle x,u\rangle=u^{\top}x$, ligne $1\times n$ fois colonne $n\times1$ ([§ 4bis.5](04bis-matrices.md)) ;
+3. le produit matriciel est associatif ([§ 4bis.4](04bis-matrices.md)).
+
+Alors, pour tout $x$ :
+$$p(x)=\frac{1}{\|u\|^2}\,\langle x,u\rangle\,u\;\overset{(1)}{=}\;\frac{1}{\|u\|^2}\,u\,\langle x,u\rangle\;\overset{(2)}{=}\;\frac{1}{\|u\|^2}\,u\,(u^{\top}x)\;\overset{(3)}{=}\;\frac{1}{\|u\|^2}\,(uu^{\top})\,x$$
+Le $x$ est maintenant tout à droite, seul : ce qui le précède est la matrice cherchée. Tout tient au passage $(1)$ : tant que le nombre $\langle x,u\rangle$ est écrit **devant** $u$, on ne peut pas isoler $x$ ; une fois passé derrière, $u^{\top}$ et $u$ se retrouvent côte à côte et forment une matrice. Lue de droite à gauche, $\frac{uu^{\top}}{\|u\|^2}x$ dit : **mesurer** $x$ le long de $u$ ($u^{\top}x$), **mettre à l'échelle** ($\div\|u\|^2$, c'est le $\lambda$ du § 6.2), **replacer** sur la droite (multiplier par $u$).
+
+*Exemple.* Dans $\mathbb R^2$, $u=(1,2)$, $\|u\|^2=5$. Par les colonnes, $p(e_1)=\frac15(1,2)$ et $p(e_2)=\frac25(1,2)$, donc
+$$P=\frac15\begin{pmatrix}1&2\\2&4\end{pmatrix}=\frac15\,uu^{\top}$$
+Contrôle sur $x=(3,1)$ : la formule donne $\langle x,u\rangle=5$, donc $p(x)=(1,2)$ ; la matrice donne $Px=\frac15(3+2,\;6+4)=(1,2)$.
+
+On vérifie maintenant les propriétés demandées.
+* *Symétrie.* Par la règle $(AB)^{\top}=B^{\top}A^{\top}$ et $(u^{\top})^{\top}=u$,
+$$P^{\top}=\frac{(uu^{\top})^{\top}}{\|u\|^2}=\frac{(u^{\top})^{\top}u^{\top}}{\|u\|^2}=\frac{uu^{\top}}{\|u\|^2}=P$$
+Sur les coefficients, c'est simplement $u_iu_j=u_ju_i$.
+* *Idempotence.* Par associativité, le facteur central $u^{\top}u$ est un nombre, qui vaut $\|u\|^2$ :
+$$P^2=\frac{u\,(u^{\top}u)\,u^{\top}}{\|u\|^4}=\frac{\|u\|^2\,uu^{\top}}{\|u\|^4}=\frac{uu^{\top}}{\|u\|^2}=P$$
+C'est le calcul matriciel de E6.1 : $p(p(x))=p(x)$ pour tout $x$.
+* *Trace.* Par linéarité de la trace et E4bis.2 avec $v=u$,
+$$\operatorname{tr}(P)=\frac{\operatorname{tr}(uu^{\top})}{\|u\|^2}=\frac{\langle u,u\rangle}{\|u\|^2}=1$$
+
+*Pourquoi c'était prévisible.* La trace d'un projecteur orthogonal vaut la dimension de l'espace sur lequel il projette (§ 6.5), et $D=\text{Vect}(u)$ est une droite : $\dim D=1$ parce que $u\ne 0$. On le vérifie aussi sur le rang : chaque colonne $Pe_j$ est un multiple de $u$, et l'une au moins est non nulle (prendre $j$ tel que $u_j\ne 0$) ; l'image de $P$ est donc exactement $D$, de dimension $1$. La trace **compte la dimension** sans la chercher : on n'a calculé que $\sum_i u_i^2/\|u\|^2$. $\blacksquare$
+
 **E6.3.** Montrer que $\|p(x)\|\le\|x\|$, avec égalité si et seulement si $x\in D$. *(Piste : Pythagore.) Quel résultat du [module 3](03-cauchy-schwarz-et-angle.md) retrouve-t-on en explicitant cette inégalité ?*
+**Preuve** 
+$0,x \in D. x-0=(x-P(x))-(0-P(x))$;
+D'où $\|x\|^2=\|x-P(x)\|^2+\|P(x)\|^2$ et $\|x\| \ge \|P(x)\|$
 
 **E6.4.** Soit $F$ engendré par deux vecteurs $u,v$ **non orthogonaux**. Montrer sur un exemple en dimension 3 que $\frac{\langle x,u\rangle}{\|u\|^2}u+\frac{\langle x,v\rangle}{\|v\|^2}v$ n'est **pas** la projection de $x$ sur $F$. *Où la démonstration du § 6.4 échoue-t-elle ?*
-
+**Démonstration** 
+La définition du projecteur est $x-P\perp D$ avec $D=Vect(e_1 \dots e_n)$. L'orthogonalité impose $\langle e_i , e_j \rangle=0$
+u et v non orthogonaux implique que $\exists \lambda \in \mathbb R. u=\lambda v$
+D'où $P_u(x)=\dfrac{\langle u,x\rangle}{\|u\|^2}$
 **E6.5.** Une matrice vérifie $P^2=P$ mais pas $P^{\top}=P$. Construire un tel exemple en dimension 2 et représenter géométriquement l'application. *(Réponse attendue : une projection oblique.)*
 
 ---

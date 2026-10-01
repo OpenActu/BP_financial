@@ -434,6 +434,8 @@ Le côté compte, puisque le produit n'est pas commutatif ; ici, multiplier à d
 La matrice de centrage $M=I_n-\frac1nJ$ de E4bis.3 en est l'exemple : centrer deux fois revient à centrer une fois, donc $M^2=M$, et $M\ne I_n$. Elle n'est donc pas inversible, et l'on voit la direction écrasée : $M\mathbf 1=\mathbf 1-1\cdot\mathbf 1=0$. **Une série centrée ne permet pas de retrouver sa moyenne** — c'est le degré de liberté perdu, déjà visible dans $\operatorname{tr}(M)=n-1$. D'autres projecteurs non inversibles : la matrice nulle, et $D=\begin{pmatrix}1&0\\0&0\end{pmatrix}$ du § 4bis.4, qui vérifie $D^2=D$ et envoie $(0,1)$ sur $0$.
 
 **E4bis.5.** Soit $A$ de taille $n\times p$. Montrer que le **noyau** $\ker A=\{x\in\mathbb R^p:\ Ax=0\}$ est un sous-espace de $\mathbb R^p$, en n'utilisant que la linéarité du § 4bis.2. *Le décrire pour $A=K=\begin{pmatrix}1&1\\1&1\end{pmatrix}$.*
+**Preuve**
+
 
 **E4bis.6.** Une application $g:\mathbb R^n\to\mathbb R^n$ de la forme $g(x)=Ax+b$, avec $b\ne0$, est dite **affine**. Montrer qu'elle n'est pas linéaire. *La mise en « base 100 » d'une série de cours, $x\mapsto 100\,x/x_1$, est-elle linéaire ? Et le passage des cours aux écarts à la première séance, $x\mapsto x-x_1\mathbf 1$ ?*
 

@@ -147,7 +147,7 @@ longue, de ce qu'on n'a pas le droit de conclure.
 |---|---|---|---|
 | 1 | [L'alpha](concept/semestre4/alpha/README.md) | 5 | 5 h |
 | 2 | [Les fondamentaux](concept/semestre4/fondamentaux/README.md) | 5 | 5 h |
-| 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 11 | 10 h |
+| 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 13 | 12 h |
 | 4 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
 | 5 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
 

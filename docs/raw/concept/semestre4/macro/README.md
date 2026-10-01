@@ -36,6 +36,8 @@ causales sur les cours, et où l'on en vérifie le moins.
 | « Un euro fort pénalise les exportateurs. » | Vrai pour Airbus (**−0,61**, $t = -6{,}16$) et Sanofi (**−0,32**) ; **non mesurable** pour LVMH (**+0,12**, $t = +1{,}69$), pourtant l'exemple que tout le monde cite | [06](06-le-change.md) |
 | « Le pétrole monte, les marchés baissent. » | La corrélation du CAC 40 avec le Brent vaut **+0,66** en 2010 et **−0,21** en 2022. Le signe dépend de l'**origine** du choc | [07](07-le-petrole.md) |
 | « J'ai trouvé une variable macro qui explique mes valeurs. » | Sur 24 sensibilités testées, **12** passent le seuil de 5 %, mais seulement **6** survivent à Holm | [11](11-exemple-chiffre-huit-valeurs.md) |
+| « Soros a gagné en 1992 grâce à un carry trade. » | C'était l'**inverse** : un portage négatif d'environ 0,4 point par an, contre un gain visé de 10 %. Le carry trade était dans le camp d'en face | [12](12-cas-d-etude-livre-sterling-1992.md) |
+| « La livre turque baisse chaque année, il suffit de la vendre. » | En 2025 elle perd **17,8 %** face au dollar, mais la vendre coûtait ≈ 39 points de portage : une vente ouverte au meilleur moment perd ≈ **10 %**. Le carry trade, lui, rapporte ≈ **+13 %** | [13](13-cas-d-etude-livre-turque-2025.md) |
 
 ## Le fil directeur
 
@@ -62,8 +64,10 @@ causales sur les cours, et où l'on en vérifie le moins.
 | 9 | [La corrélation actions-obligations](09-la-correlation-actions-obligations.md) ⭐ | Un signe qui dépend du régime d'inflation ; son renversement de 2022 mesuré sur le CAC 40 |
 | 10 | [Des facteurs à la prévision](10-des-facteurs-a-la-prevision.md) ⭐ | Chen-Roll-Ross ; Goyal-Welch ; le $R^2$ hors échantillon ; trois prédicteurs de taux testés sur 35 ans |
 | 11 | [Exemple chiffré : huit valeurs du CAC 40](11-exemple-chiffre-huit-valeurs.md) | Les sensibilités au taux, au change et au pétrole, corrigées par Holm, puis recalculées sur trois sous-périodes |
+| 12 | [Cas d'étude : la livre sterling, 1992](12-cas-d-etude-livre-sterling-1992.md) | Une position macro sur une parité fixe : trilemme, asymétrie, seuil de probabilité, coût de portage ; pourquoi ce n'était pas un carry trade |
+| 13 | [Cas d'étude : la livre turque, 2025](13-cas-d-etude-livre-turque-2025.md) | Un carry trade chiffré sur une année réelle : rendement, cours à terme et parité non couverte, coût du choc du 19 mars ; la position de 1992 retournée |
 
-**11 modules · 10 h.**
+**13 modules · 12 h.**
 
 ## Le fil rouge chiffré
 

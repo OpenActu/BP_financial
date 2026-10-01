@@ -202,7 +202,7 @@ exercices compris.
 
 ### [Le cours et la macroéconomie](../semestre4/macro/README.md)
 
-**11 modules · 10 h.**
+**13 modules · 12 h.**
 
 | Fait  | #   | Module | Durée |
 | ----- | --- | ------ | ----- |
@@ -217,6 +217,8 @@ exercices compris.
 | [ ] | 9 | [La corrélation actions-obligations ⭐](../semestre4/macro/09-la-correlation-actions-obligations.md) |  |
 | [ ] | 10 | [Des facteurs à la prévision ⭐](../semestre4/macro/10-des-facteurs-a-la-prevision.md) |  |
 | [ ] | 11 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/macro/11-exemple-chiffre-huit-valeurs.md) |  |
+| [ ] | 12 | [Cas d'étude : la livre sterling, 1992](../semestre4/macro/12-cas-d-etude-livre-sterling-1992.md) |  |
+| [ ] | 13 | [Cas d'étude : la livre turque, 2025](../semestre4/macro/13-cas-d-etude-livre-turque-2025.md) |  |
 
 ### [De la figure à la décision](../semestre4/trading/README.md)
 
