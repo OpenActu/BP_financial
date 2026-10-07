@@ -18,7 +18,77 @@ appelleront « degrés de liberté », et le [module 8](08-degres-de-liberte-et-
 > et tout $x$ s'écrit de **manière unique** $x=P_F(x)+P_{F^\perp}(x)$, avec
 > $$\|x\|^2=\|P_F(x)\|^2+\|P_{F^\perp}(x)\|^2$$
 
-La dernière égalité est le [Pythagore du module 5](05-orthogonalite-et-pythagore.md), appliqué à la décomposition ci-dessus. L'existence de la décomposition est la [projection du module 6](06-projection-orthogonale.md) ; l'unicité vient de $F\cap F^\perp=\{0\}$, conséquence immédiate du caractère défini positif du produit scalaire.
+**Démonstration.** Sept étapes, dans l'ordre où chacune sert à la suivante. On note $d=\dim F$.
+
+*1. $F^\perp$ est un sous-espace.* Il contient $0$, puisque $\langle 0,f\rangle=0$ pour tout $f$. Si $u,v\in F^\perp$ et $\alpha,\beta$ sont réels, la linéarité du produit scalaire ([§ 2.1](02-produit-scalaire-et-norme.md)) donne, pour tout $f\in F$,
+$$\langle\alpha u+\beta v,\,f\rangle=\alpha\langle u,f\rangle+\beta\langle v,f\rangle=\alpha\cdot 0+\beta\cdot 0=0$$
+donc $\alpha u+\beta v\in F^\perp$. Remarquons que ce point ne demande rien à $F$ : l'orthogonal d'une partie quelconque est un sous-espace.
+
+*2. $F\cap F^\perp=\{0\}$.* Si $x$ appartient aux deux, il est orthogonal à tout élément de $F$, donc **à lui-même** : $\langle x,x\rangle=\|x\|^2=0$, et le caractère **défini** positif du produit scalaire ([§ 2.1](02-produit-scalaire-et-norme.md)) force $x=0$. C'est l'exercice E7.1 ; c'est aussi le seul endroit où la positivité intervient, tout le reste en découle.
+
+*3. Tout $x$ se décompose : $\mathbb R^n=F+F^\perp$.* La [projection du module 6](06-projection-orthogonale.md) existe pour tout sous-espace, et l'on écrit
+$$x=\underbrace{P_F(x)}_{\in F}+\underbrace{\bigl(x-P_F(x)\bigr)}_{\in F^\perp}$$
+Le premier terme est dans $F$, et le second est orthogonal à $F$ **par définition** de la projection. Il n'y a rien d'autre à vérifier.
+
+*4. La décomposition est unique : la somme est directe.*
+
+> 📐 **Ce qu'est une somme directe.** Pour deux sous-espaces $F$ et $G$, la **somme** $F+G=\{f+g:\ f\in F,\ g\in G\}$ rassemble tous les vecteurs qui s'écrivent comme un morceau de $F$ plus un morceau de $G$. Elle est dite **directe**, et l'on note $F\oplus G$, quand cette écriture est **unique** : $f+g=f'+g'$ avec $f,f'\in F$ et $g,g'\in G$ force $f=f'$ et $g=g'$.
+> Cette unicité équivaut à $F\cap G=\{0\}$ : l'argument ci-dessous en fait un sens, et réciproquement un $x\neq 0$ commun aux deux s'écrirait $x+0=0+x$ de deux façons. Écrire $\mathbb R^n=F\oplus G$ affirme donc deux choses à la fois : **tout** vecteur se décompose (la somme vaut $\mathbb R^n$, étape 3), et **d'une seule façon** (elle est directe, la présente étape). Dans $\mathbb R^2$, deux droites distinctes passant par l'origine sont en somme directe ; une droite et elle-même ne le sont pas, puisque $f+0=0+f$.
+
+Si $x=f+g=f'+g'$ avec $f,f'\in F$ et $g,g'\in F^\perp$, alors
+$$f-f'=g'-g$$
+Le membre de gauche est dans $F$, celui de droite dans $F^\perp$ — chacun par stabilité. Ce vecteur commun est donc dans $F\cap F^\perp=\{0\}$ (étape 2) : $f=f'$ et $g=g'$. Avec l'étape 3, c'est exactement $\mathbb R^n=F\oplus F^\perp$.
+
+*5. Les deux morceaux sont les deux projections.* Dans l'écriture unique $x=f+g$ :
+- $f\in F$ et $x-f=g\perp F$ : $f$ vérifie la définition de la projection sur $F$, donc
+  $f=P_F(x)$ ;
+- $g\in F^\perp$ et $x-g=f$ est orthogonal à **tout** élément de $F^\perp$ — c'est la définition
+  même de $F^\perp$, lue de l'autre côté. $g$ vérifie donc la définition de la projection sur
+  $F^\perp$, et $g=P_{F^\perp}(x)$.
+
+D'où $x=P_F(x)+P_{F^\perp}(x)$, c'est-à-dire, en termes d'applications,
+$P_{F^\perp}=I_n-P_F$. Et comme $\langle P_F(x),P_{F^\perp}(x)\rangle=0$, le
+[Pythagore du module 5](05-orthogonalite-et-pythagore.md) donne
+$$\|x\|^2=\|P_F(x)\|^2+\|P_{F^\perp}(x)\|^2$$
+
+*6. $\dim F^\perp=n-d$.* Prenons une base $(f_1,\dots,f_d)$ de $F$ et une base $(g_1,\dots,g_q)$ de
+$F^\perp$, qui est un sous-espace (étape 1), et montrons que leur **concaténation**
+$(f_1,\dots,f_d,g_1,\dots,g_q)$ est une base de $\mathbb R^n$.
+
+- *Elle engendre.* Tout $x$ s'écrit $f+g$ (étape 3), $f$ est combinaison des $f_i$ et $g$ des
+  $g_j$.
+- *Elle est libre.* Si $\sum_i\lambda_if_i+\sum_j\mu_jg_j=0$, posons $a=\sum_i\lambda_if_i\in F$ et
+  $b=\sum_j\mu_jg_j\in F^\perp$. Alors $a=-b$ appartient à $F\cap F^\perp=\{0\}$ : $a=b=0$. La
+  liberté de chaque base force alors tous les $\lambda_i$, puis tous les $\mu_j$, à être nuls.
+
+Une base de $\mathbb R^n$ compte toujours $n$ vecteurs, donc $d+q=n$, soit $\dim F^\perp=n-d$. Les
+cas extrêmes sont compris, avec la convention que $\{0\}$ a pour base la famille vide :
+$F=\{0\}$ donne $F^\perp=\mathbb R^n$, et $F=\mathbb R^n$ donne $F^\perp=\{0\}$ — un vecteur
+orthogonal à tout l'espace l'est à lui-même.
+
+*7. $(F^\perp)^\perp=F$.* **L'inclusion $F\subset(F^\perp)^\perp$** est gratuite : un $f\in F$ est
+orthogonal à tout élément de $F^\perp$, par définition de ce dernier. **Réciproquement**, soit
+$x\in(F^\perp)^\perp$, décomposé en $x=P_F(x)+g$ avec $g\in F^\perp$ (étape 5). Alors
+$$\|g\|^2=\langle g,g\rangle=\langle x-P_F(x),\,g\rangle=\underbrace{\langle x,g\rangle}_{=0\ \text{car }x\perp F^\perp}-\underbrace{\langle P_F(x),g\rangle}_{=0\ \text{car }g\perp F}=0$$
+donc $g=0$ et $x=P_F(x)\in F$. $\square$
+
+> 🔑 **Tout repose sur l'étape 2.** Existence (étape 3) et dimension (étape 6) demandent de
+> savoir qu'une projection existe et qu'une base existe ; mais l'unicité, l'identification des
+> morceaux, la liberté de la base concaténée et le double orthogonal ne consomment qu'un seul
+> fait : **un vecteur orthogonal à lui-même est nul.** Sans produit scalaire défini positif, aucune
+> de ces quatre conclusions ne tient.
+
+> ⚠️ **Le double orthogonal ne se démontre pas par les dimensions seules sans un fait de plus.**
+> L'étape 6 appliquée deux fois donne $\dim(F^\perp)^\perp=n-(n-d)=d$, et l'inclusion
+> $F\subset(F^\perp)^\perp$ conclut — **à condition** d'admettre qu'un sous-espace inclus dans un autre
+> de même dimension lui est égal. L'argument de l'étape 7 s'en passe : il ne compte rien, il
+> calcule une norme.
+
+> 📐 **D'où vient l'existence de $P_F$.** Le [§ 6.4](06-projection-orthogonale.md) la construit en
+> base orthogonale de $F$, et une telle base s'obtient par **Gram–Schmidt**
+> ([module 9](09-bases-orthonormees-et-isometries.md), § 9.3) en orthogonalisant une base de $F$
+> seul. Cette étape-là ne parle ni de $F^\perp$ ni de dimension complémentaire : le raisonnement
+> ne tourne pas en rond.
 
 > 🔑 **Décomposer, c'est répartir des dimensions.** $n=\dim F+\dim F^\perp$ : chaque dimension de $\mathbb R^n$ est affectée à l'un des deux morceaux, jamais aux deux. C'est cette comptabilité — et rien d'autre — que les statisticiens appellent « degrés de liberté ».
 
@@ -72,9 +142,8 @@ est l'énoncé. $\square$
 > second tas est lu **à l'arrivée** plutôt qu'au départ.
 
 > ⚠️ **Aucune circularité.** La démonstration ci-dessus consomme $\dim F^\perp=n-\dim F$ (§ 7.1),
-> qui s'établit de son côté par **Gram–Schmidt** — une BON dont les $d$ premiers vecteurs
-> engendrent $F$ et les $n-d$ suivants $F^\perp$ ([module 9](09-bases-orthonormees-et-isometries.md),
-> § 9.3) — sans jamais invoquer le théorème du rang. La preuve algébrique usuelle, valable dans un
+> qui s'établit de son côté en **concaténant une base de $F$ et une base de $F^\perp$** (étape 6
+> de la démonstration du § 7.1) — sans jamais invoquer le théorème du rang. La preuve algébrique usuelle, valable dans un
 > espace vectoriel **sans** produit scalaire, remplace $K^\perp$ par n'importe quel supplémentaire
 > de $K$ obtenu en complétant une base du noyau ; l'argument est mot pour mot le même.
 
