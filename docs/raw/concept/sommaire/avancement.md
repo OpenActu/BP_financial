@@ -1,4 +1,4 @@
-# Avancement — les 122 modules du parcours
+# Avancement — les 135 modules du parcours
 
 Un module par ligne, dans l'ordre où [`planning.md`](../../planning.md) demande de les suivre.
 La colonne **Fait** se coche à la main — `[ ]` devient `[x]` quand le module est acquis,
@@ -163,18 +163,18 @@ exercices compris.
 
 **4 modules · 4 h.**
 
-| Fait  | #   | Module | Durée |
-| ----- | --- | ------ | ----- |
-| [ ] | 1 | [La droite qui ne coupe rien](../semestre3/encadrement/01-la-droite-qui-ne-coupe-rien.md) |  |
-| [ ] | 2 | [Portée et épisodes de contact](../semestre3/encadrement/02-portee-et-episodes-de-contact.md) |  |
-| [ ] | 3 | [Segmenter un historique long](../semestre3/encadrement/03-segmenter-un-historique-long.md) |  |
-| [ ] | 4 | [Lire l'encadrement](../semestre3/encadrement/04-lire-l-encadrement.md) |  |
+| Fait | #   | Module                                                                                        | Durée |
+| ---- | --- | --------------------------------------------------------------------------------------------- | ----- |
+| [ ]  | 1   | [La droite qui ne coupe rien](../semestre3/encadrement/01-la-droite-qui-ne-coupe-rien.md)     |       |
+| [ ]  | 2   | [Portée et épisodes de contact](../semestre3/encadrement/02-portee-et-episodes-de-contact.md) |       |
+| [ ]  | 3   | [Segmenter un historique long](../semestre3/encadrement/03-segmenter-un-historique-long.md)   |       |
+| [ ]  | 4   | [Lire l'encadrement](../semestre3/encadrement/04-lire-l-encadrement.md)                       |       |
 
 ---
 
 ## Semestre 4 — La décision
 
-**Volume : ≈ 39 h 45.**
+**Volume : ≈ 50 h 45.**
 
 ### [L'alpha](../semestre4/alpha/README.md)
 
@@ -219,6 +219,24 @@ exercices compris.
 | [ ] | 11 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/macro/11-exemple-chiffre-huit-valeurs.md) |  |
 | [ ] | 12 | [Cas d'étude : la livre sterling, 1992](../semestre4/macro/12-cas-d-etude-livre-sterling-1992.md) |  |
 | [ ] | 13 | [Cas d'étude : la livre turque, 2025](../semestre4/macro/13-cas-d-etude-livre-turque-2025.md) |  |
+
+### [Les dix indicateurs de Soros et Steinhardt](../semestre4/indicateurs/README.md)
+
+**11 modules · 11 h.**
+
+| Fait  | #   | Module | Durée |
+| ----- | --- | ------ | ----- |
+| [ ] | 1 | [L'écart à l'opinion ⭐](../semestre4/indicateurs/01-l-ecart-a-l-opinion.md) |  |
+| [ ] | 2 | [Indicateur 1 — Les attentes de bénéfices ⭐](../semestre4/indicateurs/02-les-attentes-de-benefices.md) |  |
+| [ ] | 3 | [Indicateur 4 — Le prix des attentes ⭐](../semestre4/indicateurs/03-le-prix-des-attentes.md) |  |
+| [ ] | 4 | [Indicateur 6 — Les marges](../semestre4/indicateurs/04-les-marges.md) |  |
+| [ ] | 5 | [Indicateurs 5 et 7 — Comment la hausse se finance ⭐](../semestre4/indicateurs/05-levier-et-dilution.md) |  |
+| [ ] | 6 | [Indicateurs 2 et 3 — Le prix et la quantité de l'argent](../semestre4/indicateurs/06-taux-et-credit.md) |  |
+| [ ] | 7 | [Indicateurs 8 et 9 — Le monde autour](../semestre4/indicateurs/07-change-croissance-inflation.md) |  |
+| [ ] | 8 | [Indicateur 10 — Ce que croient les autres](../semestre4/indicateurs/08-le-positionnement.md) |  |
+| [ ] | 9 | [Assembler : la séquence et la règle écrite ⭐](../semestre4/indicateurs/09-assembler-la-sequence.md) |  |
+| [ ] | 10 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/indicateurs/10-exemple-chiffre-huit-valeurs.md) |  |
+| [ ] | 11 | [La fiche, à remplir ⭐](../semestre4/indicateurs/11-la-fiche-a-remplir.md) |  |
 
 ### [De la figure à la décision](../semestre4/trading/README.md)
 

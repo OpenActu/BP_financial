@@ -1,4 +1,4 @@
-# Planning — les douze cours en quatre semestres
+# Planning — les treize cours en quatre semestres
 
 Ce document organise le parcours. Les cours de [`concept/`](concept/sommaire/README.md)
 sont autonomes et pouvaient jusqu'ici se lire dans n'importe quel ordre ; ce
@@ -32,7 +32,7 @@ convexité ───────────────────────
                                             └──► finance                  │
                                                    fondamentaux ──────────┘
                                                         │
-                                                        └──► macro (et alpha)
+                                                        └──► macro (et alpha) ──► indicateurs
       S1                    S2                  S3                  S4
 ```
 
@@ -54,12 +54,14 @@ Deux conséquences qu'il faut accepter d'emblée :
 | **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 31 | ≈ 32 h 15 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, tests multiples, modèle, canal, encadrement | 31 | ≈ 46 h |
-| **4** | La décision | alpha, fondamentaux, macro, trading, finance | 38 | ≈ 39 h 45 |
-| | | **12 cours** | **126** | **≈ 149 h 45** |
+| **4** | La décision | alpha, fondamentaux, macro, indicateurs, trading, finance | 49 | ≈ 50 h 45 |
+| | | **13 cours** | **137** | **≈ 160 h 45** |
 
-> ℹ️ **Le nombre de modules reste proche d'un semestre à l'autre — 31, 26, 31,
-> 38 — mais pas le volume.** Le semestre 4 a gagné onze modules avec le cours
-> macro, qui reste léger en mathématiques. Le semestre 3 est de loin le plus
+> ℹ️ **Le nombre de modules reste proche d'un semestre à l'autre pour les trois
+> premiers — 31, 26, 31 —, pas pour le quatrième, qui en compte 49.** Le
+> semestre 4 a gagné onze modules avec le cours macro, puis onze encore avec le
+> cours sur les indicateurs de Soros et Steinhardt ; tous deux restent légers en
+> mathématiques. Le semestre 3 est de loin le plus
 > dense, parce que la loi de Student pèse 24 h à elle seule et ne se coupe pas
 > en deux. En compensation, ses neuf étapes
 > du modèle sont courtes et se relisent vite : elles enchaînent une démonstration
@@ -148,20 +150,25 @@ longue, de ce qu'on n'a pas le droit de conclure.
 | 1 | [L'alpha](concept/semestre4/alpha/README.md) | 5 | 5 h |
 | 2 | [Les fondamentaux](concept/semestre4/fondamentaux/README.md) | 5 | 5 h |
 | 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 13 | 12 h |
-| 4 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
-| 5 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
+| 4 | [Les dix indicateurs de Soros et Steinhardt](concept/semestre4/indicateurs/README.md) | 11 | 11 h |
+| 5 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
+| 6 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |
 
 L'alpha d'abord : le cours fondamentaux s'appuie sur son module 4, et le cours
 trading sur ses modules 2 à 4. Le cours macro vient après les deux premiers : il
 réutilise la régression et les tests multiples de l'alpha, et les dates d'une
-donnée publiée du module 2 des fondamentaux. La finance en dernier — c'est le seul cours qui
+donnée publiée du module 2 des fondamentaux. Le cours sur les dix indicateurs
+de Soros et Steinhardt vient après lui : il en réutilise les modules 1, 4, 6, 8
+et 10, assemble fondamentaux et macro en une seule fiche, et dit pourquoi aucun
+critère fondamental n'entre dans la règle du cours trading qui le suit. La finance en dernier — c'est le seul cours qui
 parle de **dimensionner** une position, et il n'a de sens qu'une fois su tout ce
 qui précède sur l'incertitude.
 
 > ⚠️ **Le semestre 4 est celui des résultats négatifs, et c'est voulu.** L'alpha
 > n'est pas mesurable sur quelques années ; les fondamentaux n'ont pas
-> d'historique donc pas de backtest ; la règle de décision rend `ATTENTE`
-> 512 fois sur 515. Un lecteur qui traverse ce semestre en espérant une méthode
+> d'historique donc pas de backtest ; les dix indicateurs de Soros et
+> Steinhardt ne retiennent, sur huit grandes valeurs, qu'une seule séquence
+> candidate ; la règle de décision rend `ATTENTE` 512 fois sur 515. Un lecteur qui traverse ce semestre en espérant une méthode
 > pour gagner de l'argent l'aura mal lu.
 
 ---

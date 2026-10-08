@@ -156,7 +156,7 @@ docs/raw/concept/
 ├── semestre1/  algèbre · dérivation-intégration · convexité
 ├── semestre2/  statistique mathématique
 ├── semestre3/  loi de Student · tests multiples · modèle · canal · encadrement
-├── semestre4/  alpha · fondamentaux · macro · trading · finance
+├── semestre4/  alpha · fondamentaux · macro · indicateurs · trading · finance
 └── sommaire/   les index, hors parcours
 ```
 
@@ -446,19 +446,33 @@ règle du miroir markdown s'y applique comme partout ailleurs (`journal.py` ⇔
 python -m ruff check python/ docs/
 ```
 
-Les trois autres scripts hors `python/` sont
+Les quatre autres scripts hors `python/` sont
 [`concept/semestre3/canal/figures/generer_figures.py`](docs/raw/concept/semestre3/canal/figures/generer_figures.md),
 qui trace les trois figures du module 2 sur le canal,
 [`lab/figures/generer_largeur_fiable.py`](docs/raw/lab/figures/generer_largeur_fiable.md),
-qui balaie les largeurs de bande et trace les trois figures du laboratoire, et
+qui balaie les largeurs de bande et trace les trois figures du laboratoire,
 [`concept/semestre4/macro/figures/mesurer_macro.py`](docs/raw/concept/semestre4/macro/figures/mesurer_macro.md),
-qui mesure tous les nombres du cours macro et trace sa figure. Même principe que
+qui mesure tous les nombres du cours macro et trace sa figure, et
+[`concept/semestre4/indicateurs/figures/mesurer_indicateurs.py`](docs/raw/concept/semestre4/indicateurs/figures/mesurer_indicateurs.md),
+qui chiffre les dix indicateurs de Soros et Steinhardt pour les valeurs qu'on lui
+donne et en tire les marqueurs de boom et de bascule. Même principe que
 les `journal.py` : **le générateur est versionné à côté de ce qu'il produit**,
 parce qu'une figure qu'on ne peut pas refaire ne peut pas être corrigée. Aucun
-des trois ne compte parmi les onze utilitaires — le premier ne lit aucune donnée
+des quatre ne compte parmi les onze utilitaires — le premier ne lit aucune donnée
 de marché, le deuxième lit un CSV de `quotes/` mais n'appelle jamais le réseau,
 le troisième **appelle le réseau** (taux, change, Brent, crédit) et n'écrit
-aucune donnée, seulement sa figure.
+aucune donnée, seulement sa figure, le quatrième appelle le réseau — Yahoo, BCE,
+Eurostat, BRI, AMF — et **n'écrit rien** : il imprime une fiche par valeur.
+
+> ⚠️ **Les données du fournisseur se contrôlent avant de se lire.**
+> `mesurer_indicateurs.py` en a attrapé trois en une journée : la dette annuelle
+> 2025 d'Orange réduite à ses seuls loyers (dette/EBITDA de **0,62** au lieu de
+> **4,69**), un nombre d'actions qui varie de **5,7 %** dans le même mois pour
+> TotalEnergies, et un PER de Sanofi qui divise un BPA IFRS (**3,25 €**) quand son
+> PER prévisionnel divise le « BPA des activités » du consensus (**8,60 €**).
+> Chacun a donné un contrôle déclaré dans le miroir — confrontation des sources,
+> médiane sur 30 jours, rapport du BPA attendu au BPA récent —, et **une cellule
+> vide**, ou un avertissement, là où le chiffre est faux.
 
 ## Agents
 

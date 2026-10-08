@@ -1,6 +1,6 @@
 # Concepts — les mathématiques derrière `import_societe.py`
 
-Douze cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
+Treize cours autonomes, plus le document de référence [`modele.md`](../../modele.md). Ils
 répondent, dans l'ordre, aux questions que pose une droite de régression tracée sur une série de
 cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 
@@ -16,11 +16,12 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 7 h |
 | Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
 | Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 12 h |
+| Comment Soros et Steinhardt **lisaient**-ils les fondamentaux, et comment le refaire ? | [Les dix indicateurs de Soros et Steinhardt](../semestre4/indicateurs/README.md) | 11 h |
 
-> 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les douze cours en quatre
+> 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les treize cours en quatre
 > semestres. L'arborescence ci-dessous porte ce découpage.
 
-> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 122 modules
+> ☑️ **L'avancement se coche dans [`avancement.md`](avancement.md)**, qui reprend les 135 modules
 > ligne à ligne, dans l'ordre du parcours.
 
 ## Arborescence
@@ -48,6 +49,7 @@ concept/
 │   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
 │   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
 │   ├── macro/                           13 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit ; deux cas d'étude, la livre sterling en 1992 et la livre turque en 2025
+│   ├── indicateurs/                     11 modules — les dix indicateurs de Soros et Steinhardt : les chiffrer, les lire, les assembler en séquence boom-bust ; la fiche à remplir
 │   ├── trading/                         7 modules — des objets du chartiste à la règle écrite et son verdict
 │   └── finance/                         10 modules — levier, couverture, portefeuille optimal
 │
