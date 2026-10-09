@@ -92,6 +92,58 @@ présenté comme telle.
 
 ---
 
+## Fiche des supports — relevé du 2026-10-09, 06 h 44
+
+> Cette section a été ajoutée **après** la prévision déclarée, et ne la modifie
+> pas. Elle n'entre dans aucun critère : elle situe les supports, elle ne les
+> classe pas, et elle ne désigne aucun titre à acheter ou à vendre.
+
+| Nom | ISIN | Dernier cours | VE par action | Dernier dividende par action | PER (rendement bénéficiaire) | Si paix multilatérale | Si accord États-Unis–Russie seul |
+|---|---|---|---|---|---|---|---|
+| Raiffeisen Bank International | AT0000606306 | 57,75 € (07/10) | *(banque)* | 1,60 € (2026) | 8,0× (12,6 %) | ↑ | ↑ |
+| OTP Bank | HU0000061726 | 39 900 HUF (07/10) | *(banque)* | ≈ 1 129 HUF (2026) | 9,2× (10,9 %) | ↑ | ↑ faible |
+| BASF | DE000BASF111 | 51,18 € (07/10) | 73,24 € | 2,25 € (2026) | 21,3× (4,7 %) | ↑ | ↑ faible |
+| Rheinmetall | DE0007030033 | 926,20 € (07/10) | 1 010,33 € | 11,50 € (2026) | 36,0× (2,8 %) ⚠️ | ≈ / ↓ | **↑** |
+| Cheniere Energy | US16411R2085 | 277,88 $ (08/10) | 427,87 $ | 0,555 $ par trimestre (2026) | 21,0× (4,8 %) | ↓ | ambigu |
+| iShares MSCI Poland ETF | US46429B6065 | 43,44 $ (08/10) | *(fonds)* | 0,302 $ par semestre (2026) | 13,3× (7,5 %), selon Yahoo | ↑ | **↓** |
+| Gaz européen TTF (contrat à terme) | — | 78,85 €/MWh (08/10) | *(sans objet)* | *(sans objet)* | *(sans objet)* | ↓ | ↓ |
+
+**Sources et calculs.** Tout vient de `yfinance`, relevé le 2026-10-09 à
+06 h 44. Ces champs décrivent l'instant du relevé et ne se retrouvent pas plus
+tard : c'est un **relevé daté**, pas une mesure refaisable.
+
+| Colonne | Champ Yahoo, calcul |
+|---|---|
+| Dernier cours | dernière clôture de `history()` |
+| VE par action | `enterpriseValue / sharesOutstanding`, au cours le plus récent connu de Yahoo |
+| Dernier dividende | dernière ligne de `dividends`, datée par son détachement |
+| PER | dernier cours / `trailingEps`, bénéfice des douze derniers mois ; rendement bénéficiaire = 1 / PER |
+| Deux dernières colonnes | sens attendus, repris de la prévision déclarée et du [module 14](../concept/semestre4/macro/14-cas-d-etude-russie-2022-2026.md) ; **pas des prévisions de cours** |
+
+**Contrôles.**
+
+- **Nombre d'actions** : `sharesOutstanding` égale `marketCap` ÷ cours à moins
+  de 0,01 % près pour BASF, Rheinmetall et Cheniere.
+- **VE** : capitalisation + dette − trésorerie retrouve la VE publiée à 0,3 %
+  près pour BASF (64,6 contre 64,8 Md€), à 1,7 % pour Rheinmetall (46,4 contre
+  47,1 Md€) et à 4,9 % pour Cheniere (84,2 contre 88,4 Md$). L'écart restant est
+  vraisemblablement fait d'intérêts minoritaires, sans que ce soit vérifié.
+- **Banques** : la cellule VE reste **vide**. Les dépôts y sont une matière
+  première, pas un financement, et les composantes publiées par Yahoo ne
+  s'additionnent pas : pour OTP, la VE dépasse la capitalisation alors que dette
+  et trésorerie s'annulent.
+- ⚠️ **Rheinmetall** : le bénéfice par action attendu (`forwardEps`, 53,22 €)
+  vaut **2,07 fois** le bénéfice récent (25,75 €). Sur le bénéfice attendu, le PER
+  tombe à 17,6×. Le 36× est le passé, le 17,6× est une prévision du consensus.
+- **ISIN** : ceux de Cheniere et de l'ETF Pologne sont donnés par Yahoo. Ceux de
+  RBI, OTP, BASF et Rheinmetall sont **saisis de mémoire**, parce que Yahoo n'en
+  fournit pas de fiable : il rend pour OTP un ISIN français qui n'est pas le sien.
+  À vérifier avant tout réemploi.
+- **OTP** : le dividende publié, 1 129,085 HUF, porte des décimales qui
+  trahissent un ajustement du fournisseur ; le montant voté est à confirmer.
+
+---
+
 ## Résultat
 
 *À compléter après la publication des cours du 2026-10-09, par le générateur.
