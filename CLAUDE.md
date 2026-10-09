@@ -175,6 +175,12 @@ de portefeuille, pas d'ordre, aucun verdict. Le protocole est dans son
 - [`largeur-de-bande-fiable.md`](docs/raw/lab/largeur-de-bande-fiable.md) — la
   bande la plus étroite qui **encadre encore**, cherchée en balayant la longueur
   de fenêtre, sur LVMH étalonné 2019-2024 et jugé sur 2025.
+- [`proxy-taux-russes.md`](docs/raw/lab/proxy-taux-russes.md) — aucun support
+  légal ne suit le rouble ni le taux directeur russe ; le rouble lui-même ne suit
+  pas le taux. Contexte au module 14 du cours macro.
+- [`annonce-nord-stream.md`](docs/raw/lab/annonce-nord-stream.md) — une
+  **prévision déclarée avant la séance** : la section qui la porte ne se modifie
+  plus, le résultat s'y ajoute après la publication des cours.
 
 > ⚠️ **La convention `± 2 s` n'a pas le taux de couverture qu'elle annonce, et
 > l'écart est d'un ordre de grandeur.** Dès la **séance suivante** celle de
@@ -446,23 +452,27 @@ règle du miroir markdown s'y applique comme partout ailleurs (`journal.py` ⇔
 python -m ruff check python/ docs/
 ```
 
-Les quatre autres scripts hors `python/` sont
+Les cinq autres scripts hors `python/` sont
 [`concept/semestre3/canal/figures/generer_figures.py`](docs/raw/concept/semestre3/canal/figures/generer_figures.md),
 qui trace les trois figures du module 2 sur le canal,
 [`lab/figures/generer_largeur_fiable.py`](docs/raw/lab/figures/generer_largeur_fiable.md),
 qui balaie les largeurs de bande et trace les trois figures du laboratoire,
 [`concept/semestre4/macro/figures/mesurer_macro.py`](docs/raw/concept/semestre4/macro/figures/mesurer_macro.md),
-qui mesure tous les nombres du cours macro et trace sa figure, et
+qui mesure tous les nombres du cours macro et trace sa figure,
 [`concept/semestre4/indicateurs/figures/mesurer_indicateurs.py`](docs/raw/concept/semestre4/indicateurs/figures/mesurer_indicateurs.md),
 qui chiffre les dix indicateurs de Soros et Steinhardt pour les valeurs qu'on lui
-donne et en tire les marqueurs de boom et de bascule. Même principe que
+donne et en tire les marqueurs de boom et de bascule, et
+[`lab/figures/mesurer_russie.py`](docs/raw/lab/figures/mesurer_russie.md), qui
+refait les deux mesures du laboratoire sur la Russie. Même principe que
 les `journal.py` : **le générateur est versionné à côté de ce qu'il produit**,
 parce qu'une figure qu'on ne peut pas refaire ne peut pas être corrigée. Aucun
-des quatre ne compte parmi les onze utilitaires — le premier ne lit aucune donnée
+des cinq ne compte parmi les onze utilitaires — le premier ne lit aucune donnée
 de marché, le deuxième lit un CSV de `quotes/` mais n'appelle jamais le réseau,
 le troisième **appelle le réseau** (taux, change, Brent, crédit) et n'écrit
 aucune donnée, seulement sa figure, le quatrième appelle le réseau — Yahoo, BCE,
-Eurostat, BRI, AMF — et **n'écrit rien** : il imprime une fiche par valeur.
+Eurostat, BRI, AMF — et **n'écrit rien** : il imprime une fiche par valeur, le
+cinquième appelle Yahoo, lit le taux directeur russe dans une **donnée déclarée**
+versionnée à côté de lui (`taux-directeur-russie.csv`), et n'écrit rien non plus.
 
 > ⚠️ **Les données du fournisseur se contrôlent avant de se lire.**
 > `mesurer_indicateurs.py` en a attrapé trois en une journée : la dette annuelle

@@ -315,5 +315,6 @@ terme ?*
 ---
 
 ⬅️ [Module 12 — Cas d'étude : la livre sterling, 1992](12-cas-d-etude-livre-sterling-1992.md) ·
+➡️ [Module 14 — Cas d'étude : la Russie, 2022-2026](14-cas-d-etude-russie-2022-2026.md) ·
 🏠 [Le cours](README.md) ·
 🏠 [Sommaire du dépôt](../../sommaire/README.md)

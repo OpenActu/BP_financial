@@ -15,7 +15,7 @@ cours — la dernière étant : *et maintenant, qu'en fait-on ?*
 | Ce rendement doit-il quelque chose au **talent** ou au marché ? | [L'alpha](../semestre4/alpha/README.md) | 5 h |
 | Comment passer d'une **figure** à une décision publiable ? | [De la figure à la décision](../semestre4/trading/README.md) | 7 h |
 | Que valent les **comptes** derrière le cours ? | [Les fondamentaux](../semestre4/fondamentaux/README.md) | 5 h |
-| Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 12 h |
+| Qu'est-ce qui relie le cours aux **taux, au change, au pétrole** ? | [Le cours et la macroéconomie](../semestre4/macro/README.md) | 13 h |
 | Comment Soros et Steinhardt **lisaient**-ils les fondamentaux, et comment le refaire ? | [Les dix indicateurs de Soros et Steinhardt](../semestre4/indicateurs/README.md) | 11 h |
 
 > 🗓️ **L'ordre dans lequel les suivre est dans [`planning.md`](../../planning.md)**, qui répartit les treize cours en quatre
@@ -48,7 +48,7 @@ concept/
 ├── semestre4/                           la décision
 │   ├── alpha/                           5 modules — modèle de marché, horizon de mesure, pièges
 │   ├── fondamentaux/                    5 modules — PER, P/B, VE/EBITDA, ROE : ce qu'ils disent et ce qu'ils taisent
-│   ├── macro/                           13 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit ; deux cas d'étude, la livre sterling en 1992 et la livre turque en 2025
+│   ├── macro/                           14 modules — taux, inflation, courbe, croissance, change, pétrole, crédit : ce qui bouge ensemble, ce qui prédit ; trois cas d'étude, la livre sterling en 1992, la livre turque en 2025 et la Russie de 2022-2026
 │   ├── indicateurs/                     11 modules — les dix indicateurs de Soros et Steinhardt : les chiffrer, les lire, les assembler en séquence boom-bust ; la fiche à remplir
 │   ├── trading/                         7 modules — des objets du chartiste à la règle écrite et son verdict
 │   └── finance/                         10 modules — levier, couverture, portefeuille optimal

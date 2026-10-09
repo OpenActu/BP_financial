@@ -54,11 +54,11 @@ Deux conséquences qu'il faut accepter d'emblée :
 | **1** | Les outils mathématiques | algèbre, dérivation-intégration, convexité | 31 | ≈ 32 h 15 |
 | **2** | L'aléatoire | statistique mathématique | 26 | ≈ 32 h |
 | **3** | L'inférence et le modèle | Student, tests multiples, modèle, canal, encadrement | 31 | ≈ 46 h |
-| **4** | La décision | alpha, fondamentaux, macro, indicateurs, trading, finance | 49 | ≈ 50 h 45 |
-| | | **13 cours** | **137** | **≈ 160 h 45** |
+| **4** | La décision | alpha, fondamentaux, macro, indicateurs, trading, finance | 52 | ≈ 53 h 45 |
+| | | **13 cours** | **140** | **≈ 163 h 45** |
 
 > ℹ️ **Le nombre de modules reste proche d'un semestre à l'autre pour les trois
-> premiers — 31, 26, 31 —, pas pour le quatrième, qui en compte 49.** Le
+> premiers — 31, 26, 31 —, pas pour le quatrième, qui en compte 52.** Le
 > semestre 4 a gagné onze modules avec le cours macro, puis onze encore avec le
 > cours sur les indicateurs de Soros et Steinhardt ; tous deux restent légers en
 > mathématiques. Le semestre 3 est de loin le plus
@@ -149,7 +149,7 @@ longue, de ce qu'on n'a pas le droit de conclure.
 |---|---|---|---|
 | 1 | [L'alpha](concept/semestre4/alpha/README.md) | 5 | 5 h |
 | 2 | [Les fondamentaux](concept/semestre4/fondamentaux/README.md) | 5 | 5 h |
-| 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 13 | 12 h |
+| 3 | [Le cours et la macroéconomie](concept/semestre4/macro/README.md) | 14 | 13 h |
 | 4 | [Les dix indicateurs de Soros et Steinhardt](concept/semestre4/indicateurs/README.md) | 11 | 11 h |
 | 5 | [De la figure à la décision](concept/semestre4/trading/README.md) | 7 | 7 h |
 | 6 | [Finance](concept/semestre4/finance/README.md) | 10 | 12 h 45 |

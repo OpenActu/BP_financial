@@ -43,5 +43,7 @@ document le dit dans son corps, pas en note de bas de page.
 | Document | Question | Réponse |
 |---|---|---|
 | [`largeur-de-bande-fiable.md`](largeur-de-bande-fiable.md) | Quelle longueur de fenêtre donne la bande la plus étroite qui encadre encore les clôtures à venir ? | Une bande honnête est trop large pour servir : 11 % du cours pour la seule séance du lendemain, 30 % à un mois. Mesuré sur LVMH, sur **deux étalonnages** — le second reproduit les optimums de court horizon et réfute ceux de long horizon. |
+| [`proxy-taux-russes.md`](proxy-taux-russes.md) | Un support légal accessible depuis l'UE suit-il le rouble ou le taux directeur russe ? | **Aucun.** Le meilleur des onze partage 3,1 % de variance avec le rouble, aucun lien au taux ne survit à Holm, et le rouble lui-même ne suit pas le taux. La série `RUB=X` de Yahoo est irrecevable. |
+| [`annonce-nord-stream.md`](annonce-nord-stream.md) | Le 2026-10-09, six supports ont-ils lu la dépêche Nord Stream comme un accord russo-américain ? | **Prévision déclarée** le 2026-10-09 à 06 h 19, avant l'ouverture ; résultat à ajouter après la séance. |
 
 Les figures et leurs générateurs sont dans [`figures/`](figures/).

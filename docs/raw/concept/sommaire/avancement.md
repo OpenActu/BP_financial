@@ -174,7 +174,7 @@ exercices compris.
 
 ## Semestre 4 — La décision
 
-**Volume : ≈ 50 h 45.**
+**Volume : ≈ 53 h 45.**
 
 ### [L'alpha](../semestre4/alpha/README.md)
 
@@ -202,7 +202,7 @@ exercices compris.
 
 ### [Le cours et la macroéconomie](../semestre4/macro/README.md)
 
-**13 modules · 12 h.**
+**14 modules · 13 h.**
 
 | Fait  | #   | Module | Durée |
 | ----- | --- | ------ | ----- |
@@ -219,6 +219,7 @@ exercices compris.
 | [ ] | 11 | [Exemple chiffré : huit valeurs du CAC 40](../semestre4/macro/11-exemple-chiffre-huit-valeurs.md) |  |
 | [ ] | 12 | [Cas d'étude : la livre sterling, 1992](../semestre4/macro/12-cas-d-etude-livre-sterling-1992.md) |  |
 | [ ] | 13 | [Cas d'étude : la livre turque, 2025](../semestre4/macro/13-cas-d-etude-livre-turque-2025.md) |  |
+| [ ] | 14 | [Cas d'étude : la Russie, 2022-2026](../semestre4/macro/14-cas-d-etude-russie-2022-2026.md) |  |
 
 ### [Les dix indicateurs de Soros et Steinhardt](../semestre4/indicateurs/README.md)
 

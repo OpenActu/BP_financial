@@ -38,6 +38,7 @@ causales sur les cours, et où l'on en vérifie le moins.
 | « J'ai trouvé une variable macro qui explique mes valeurs. » | Sur 24 sensibilités testées, **12** passent le seuil de 5 %, mais seulement **6** survivent à Holm | [11](11-exemple-chiffre-huit-valeurs.md) |
 | « Soros a gagné en 1992 grâce à un carry trade. » | C'était l'**inverse** : un portage négatif d'environ 0,4 point par an, contre un gain visé de 10 %. Le carry trade était dans le camp d'en face | [12](12-cas-d-etude-livre-sterling-1992.md) |
 | « La livre turque baisse chaque année, il suffit de la vendre. » | En 2025 elle perd **17,8 %** face au dollar, mais la vendre coûtait ≈ 39 points de portage : une vente ouverte au meilleur moment perd ≈ **10 %**. Le carry trade, lui, rapporte ≈ **+13 %** | [13](13-cas-d-etude-livre-turque-2025.md) |
+| « Pour parier sur la baisse des taux russes, il suffit d'un support très corrélé. » | Sur onze proxys légaux, le meilleur partage **3,1 %** de variance avec le rouble, et **le rouble lui-même ne suit pas le taux directeur** ($r = -0{,}034$). Et un rapprochement russo-américain n'est pas une paix : la défense européenne y **monte** | [14](14-cas-d-etude-russie-2022-2026.md) |
 
 ## Le fil directeur
 
@@ -66,13 +67,17 @@ causales sur les cours, et où l'on en vérifie le moins.
 | 11 | [Exemple chiffré : huit valeurs du CAC 40](11-exemple-chiffre-huit-valeurs.md) | Les sensibilités au taux, au change et au pétrole, corrigées par Holm, puis recalculées sur trois sous-périodes |
 | 12 | [Cas d'étude : la livre sterling, 1992](12-cas-d-etude-livre-sterling-1992.md) | Une position macro sur une parité fixe : trilemme, asymétrie, seuil de probabilité, coût de portage ; pourquoi ce n'était pas un carry trade |
 | 13 | [Cas d'étude : la livre turque, 2025](13-cas-d-etude-livre-turque-2025.md) | Un carry trade chiffré sur une année réelle : rendement, cours à terme et parité non couverte, coût du choc du 19 mars ; la position de 1992 retournée |
+| 14 | [Cas d'étude : la Russie, 2022-2026](14-cas-d-etude-russie-2022-2026.md) | Une politique monétaire qu'on ne peut pas jouer : baisse des taux contre croissance, secteurs sous contrainte, ce que vaut un proxy ($ho^2$), et trois scénarios au lieu d'un « accord de paix » |
 
-**13 modules · 12 h.**
+**14 modules · 13 h.**
 
 ## Le fil rouge chiffré
 
 Tous les nombres du cours sortent d'un seul script, versionné à côté de lui :
-[`figures/mesurer_macro.py`](figures/mesurer_macro.md).
+[`figures/mesurer_macro.py`](figures/mesurer_macro.md). Seule exception, le
+[module 14](14-cas-d-etude-russie-2022-2026.md) : ses mesures sont celles du
+[laboratoire](../../../lab/proxy-taux-russes.md), refaites par
+[`mesurer_russie.py`](../../../lab/figures/mesurer_russie.md).
 
 ```bash
 python docs/raw/concept/semestre4/macro/figures/mesurer_macro.py
